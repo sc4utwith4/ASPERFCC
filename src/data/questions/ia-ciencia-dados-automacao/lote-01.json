@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "ia-dados-001",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Fundamentos de inteligência artificial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Russell e Norvig organizam as definições de inteligência artificial em quatro abordagens, conforme o foco esteja em pensar ou em agir e conforme o padrão de comparação seja o desempenho humano ou a racionalidade. Nessa classificação, o Teste de Turing, proposto em 1950, é o critério associado à abordagem de",
+      "variantesEnunciado": [
+        "Na classificação de Russell e Norvig, as definições de IA dividem-se em quatro abordagens, que combinam pensar ou agir com o padrão humano ou com a racionalidade. O jogo da imitação descrito por Alan Turing em 1950 corresponde à abordagem de",
+        "Em uma capacitação interna, um técnico explicou as quatro abordagens de definição de IA apresentadas por Russell e Norvig. O teste em que um interrogador tenta distinguir, por conversa escrita, uma pessoa de uma máquina ilustra a abordagem de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pensar racionalmente, que formaliza as leis do pensamento correto por meio da lógica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Pensar racionalmente' é a tradição logicista, que procura codificar as leis do pensamento correto (silogismos, lógica formal). Ela não usa o comportamento humano como padrão de comparação, que é a essência do Teste de Turing."
+        },
+        {
+          "id": "opt-2",
+          "texto": "agir racionalmente, que busca o melhor resultado esperado por meio de um agente racional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Agir racionalmente' é a abordagem do agente racional, que age para obter o melhor resultado esperado. É o eixo adotado pelo próprio livro de Russell e Norvig, mas mede racionalidade, e não semelhança com o comportamento humano, como faz o Teste de Turing."
+        },
+        {
+          "id": "opt-3",
+          "texto": "agir como humano, que verifica se o comportamento da máquina se torna indistinguível do de uma pessoa.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No Teste de Turing (o 'jogo da imitação', de 1950), um interrogador conversa por escrito com uma pessoa e com uma máquina; se não conseguir distingui-las de forma confiável, considera-se que a máquina exibe comportamento inteligente. Por comparar o comportamento externo com o humano, o teste corresponde à abordagem de 'agir como humano'.",
+          "versaoInvertidaFalsa": "pensar como humano, pois o Teste de Turing examina os processos internos de raciocínio da máquina e os compara aos de uma pessoa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "pensar como humano, que compara os passos de raciocínio da máquina aos de pessoas, com apoio da ciência cognitiva.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Pensar como humano' é a abordagem da modelagem cognitiva, que procura reproduzir os processos internos do raciocínio humano, com apoio de experimentos psicológicos. O Teste de Turing não examina esses processos, apenas o comportamento observável nas respostas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "aprender como humano, que mede a capacidade de a máquina generalizar a partir de poucos exemplos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Aprender como humano' não é uma das quatro abordagens, que combinam pensar ou agir com o padrão humano ou racional. O aprendizado é capacidade importante de sistemas inteligentes, mas o Teste de Turing não mede generalização a partir de poucos exemplos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca 'agir' por 'pensar': o Teste de Turing avalia só o comportamento observável (agir como humano), e não os processos internos de raciocínio (pensar como humano) nem a racionalidade ideal.",
+      "resumoFlashcard": {
+        "pergunta": "A qual das quatro abordagens de Russell e Norvig corresponde o Teste de Turing?",
+        "resposta": "À abordagem de agir como humano. O teste verifica se, em conversa escrita, um interrogador consegue distinguir a máquina de uma pessoa; avalia o comportamento externo, e não os processos internos de raciocínio."
+      },
+      "conceitosChave": ["Fundamentos de IA: quatro abordagens", "Teste de Turing"],
+      "fundamentacao": "Russell, S.; Norvig, P. Inteligência Artificial: uma abordagem moderna, 4ª ed., cap. 1, seção 1.1; Turing, A. M. Computing Machinery and Intelligence. Mind, 1950."
+    },
+    {
+      "id": "ia-dados-002",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aprendizado supervisionado, não supervisionado e por reforço",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a equipe de dados de um Tribunal de Contas planeja três projetos: (1) estimar, em reais, o valor provável do dano ao erário em processos de tomada de contas especial, a partir de processos já julgados; (2) prever se uma prestação de contas municipal será julgada regular ou irregular, com base em um histórico em que cada caso já tem o resultado registrado; (3) identificar grupos de municípios com perfis de gasto semelhantes, sem dispor de qualquer rótulo prévio. As tarefas de aprendizado de máquina adequadas aos projetos 1, 2 e 3 são, respectivamente,",
+      "variantesEnunciado": [
+        "Uma unidade técnica pretende usar aprendizado de máquina em três frentes: (1) prever o valor, em reais, do sobrepreço de obras a partir de auditorias concluídas; (2) prever se um edital de licitação será impugnado ou não, com base em editais anteriores cujo desfecho é conhecido; (3) descobrir grupos de fornecedores com comportamento semelhante de preços, sem rótulos prévios. As tarefas adequadas às frentes 1, 2 e 3 são, respectivamente,",
+        "Em um projeto piloto, analistas querem (1) estimar quantos dias um processo levará até o julgamento, a partir de processos já encerrados; (2) indicar se uma denúncia recebida é procedente ou improcedente, usando denúncias antigas já decididas; (3) segmentar jurisdicionados em perfis semelhantes, sem nenhuma classificação prévia. As tarefas de aprendizado de máquina adequadas aos itens 1, 2 e 3 são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "classificação, regressão e agrupamento (clustering).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois primeiros projetos. Estimar um valor em reais é prever uma variável numérica contínua (regressão); prever 'regular' ou 'irregular' é atribuir uma categoria (classificação). A alternativa atrai quem associa todo problema supervisionado a classificação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "regressão, classificação e agrupamento (clustering).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O projeto 1 prevê um valor numérico contínuo a partir de exemplos rotulados (regressão); o projeto 2 atribui uma de duas classes com base em histórico rotulado (classificação binária); ambos são supervisionados. O projeto 3 não tem rótulos e busca estrutura nos dados, o que caracteriza o agrupamento, tarefa típica do aprendizado não supervisionado (por exemplo, k-means).",
+          "versaoInvertidaFalsa": "classificação, regressão e agrupamento, pois estimar o valor do dano em reais é tarefa de classificação e prever o resultado do julgamento é tarefa de regressão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "regressão, agrupamento (clustering) e classificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O projeto 2 dispõe de rótulos (o resultado do julgamento) e quer prever uma categoria, o que é classificação, e não agrupamento. Já o projeto 3 não tem rótulos, de modo que não pode ser resolvido por classificação supervisionada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "regressão, classificação e aprendizado por reforço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros itens estão certos, mas o aprendizado por reforço envolve um agente que interage com um ambiente e aprende por recompensas, o que não ocorre na descoberta de grupos em uma base estática e sem rótulos. A tarefa do projeto 3 é agrupamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "agrupamento (clustering), classificação e regressão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O agrupamento não prevê valores em reais e pressupõe ausência de rótulos, o oposto do projeto 1, que parte de processos julgados com valores conhecidos. A alternativa troca as pontas: o agrupamento serve ao projeto 3, e a regressão, ao projeto 1."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte classificação e regressão: o que define a tarefa é o tipo da variável-alvo (categoria ou valor numérico), e não o simples fato de ser supervisionada. A ausência de rótulos aponta para o agrupamento, e não para o aprendizado por reforço.",
+      "resumoFlashcard": {
+        "pergunta": "Como distinguir classificação, regressão e agrupamento?",
+        "resposta": "Classificação e regressão são supervisionadas: a primeira prevê categorias e a segunda, valores numéricos contínuos. O agrupamento é não supervisionado e reúne exemplos semelhantes sem rótulos prévios."
+      },
+      "conceitosChave": ["ML: classificação × regressão", "ML: aprendizado não supervisionado"],
+      "fundamentacao": "Géron, A. Mãos à obra: aprendizado de máquina com Scikit-Learn, Keras & TensorFlow, cap. 1 (tipos de sistemas de aprendizado de máquina); documentação do scikit-learn, 'Supervised learning' e 'Unsupervised learning'."
+    },
+    {
+      "id": "ia-dados-003",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Redes neurais e deep learning",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das arquiteturas de redes neurais profundas usadas para dados com estrutura espacial ou sequencial, como imagens e textos, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre redes convolucionais, redes recorrentes e Transformers, empregadas em visão computacional e em processamento de linguagem natural, é correto afirmar que",
+        "Um técnico compara arquiteturas de deep learning para classificar fotografias de obras públicas e para resumir pareceres extensos. Sobre essas arquiteturas, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as redes LSTM eliminaram a recorrência das RNN e passaram a processar todos os elementos da sequência em paralelo, por meio de camadas convolucionais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LSTM (Hochreiter e Schmidhuber, 1997) continua sendo uma rede recorrente: processa a sequência passo a passo e acrescenta uma célula de memória controlada por portas. Quem abandonou a recorrência em favor do processamento paralelo foi o Transformer, e não por convoluções, mas por autoatenção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "as redes convolucionais (CNN) usam portas de entrada, de esquecimento e de saída para controlar o que permanece em uma célula de memória ao longo do tempo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Portas de entrada, de esquecimento e de saída são o mecanismo da LSTM. As CNN usam filtros (kernels) que deslizam sobre a entrada, com compartilhamento de pesos e pooling, o que as torna adequadas a dados com estrutura espacial, como imagens."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as RNN simples captam dependências de longo alcance com mais facilidade que as LSTM, porque não sofrem o problema do desaparecimento do gradiente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: as RNN simples sofrem com o desaparecimento (ou a explosão) do gradiente ao longo de muitos passos, o que dificulta aprender dependências longas. A LSTM foi criada justamente para mitigar esse problema, preservando informação na célula de memória."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Transformer dispensa mecanismos de atenção e depende de recorrência para preservar a ordem das palavras, o que impede o paralelismo no treinamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O artigo 'Attention Is All You Need' (Vaswani et al., 2017) propôs o Transformer com base apenas em atenção, sem recorrência nem convolução. A ordem dos tokens é informada por codificações posicionais, e a ausência de recorrência é o que permite o paralelismo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o Transformer baseia-se em autoatenção, que relaciona cada posição da sequência com as demais, o que permite paralelizar o treinamento, ao contrário das RNN.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No Transformer, a autoatenção calcula, para cada token, pesos de relevância em relação a todos os outros tokens da sequência, captando dependências longas em um único passo. Sem recorrência, as posições são processadas em paralelo no treinamento, e a ordem é informada por codificações posicionais. Nas RNN, cada passo depende do estado anterior, o que impõe processamento sequencial.",
+          "versaoInvertidaFalsa": "o Transformer baseia-se em recorrência, processando um token por vez, e por isso treina de forma menos paralelizável que as RNN."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os mecanismos entre arquiteturas: portas de memória são da LSTM (não da CNN), e quem eliminou a recorrência foi o Transformer, com autoatenção. Também inverte quem sofre mais com o desaparecimento do gradiente (a RNN simples).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença essencial entre o Transformer e as redes recorrentes?",
+        "resposta": "O Transformer usa autoatenção para relacionar cada token com todos os demais e dispensa a recorrência, o que permite treinar em paralelo e captar dependências longas. As RNN, inclusive as LSTM, processam a sequência passo a passo."
+      },
+      "conceitosChave": ["Deep learning: arquiteturas", "Transformer: autoatenção"],
+      "fundamentacao": "Vaswani, A. et al. Attention Is All You Need (NeurIPS, 2017); Hochreiter, S.; Schmidhuber, J. Long Short-Term Memory (Neural Computation, 1997); Goodfellow, I.; Bengio, Y.; Courville, A. Deep Learning (2016), caps. 9 e 10."
+    },
+    {
+      "id": "ia-dados-004",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Processamento de linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "No pré-processamento de textos de denúncias recebidas pela ouvidoria, a …… reduz as palavras a um radical por meio de regras de corte de sufixos, sem garantir que o resultado seja uma palavra existente; a …… converte cada palavra em sua forma canônica de dicionário, considerando a classe gramatical; e a remoção de …… descarta palavras muito frequentes e pouco informativas, como artigos e preposições. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na preparação de um corpus de pareceres técnicos para um classificador, a …… aplica regras de remoção de sufixos e pode gerar radicais que não são palavras do idioma; a …… obtém o lema de cada palavra com apoio de dicionário e de análise morfológica; e a eliminação de …… retira termos funcionais muito frequentes, como 'de', 'o' e 'para'. Preenchem, correta e respectivamente, as lacunas:",
+        "Em um pipeline de processamento de linguagem natural aplicado a manifestações de cidadãos, a técnica de …… transforma 'fiscalização' e 'fiscalizar' em um radical comum por corte de sufixos; a …… leva 'fiscalizaram' à forma 'fiscalizar', com base na classe gramatical; e a filtragem de …… descarta palavras como artigos e preposições. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "stemização (stemming) − lematização − stopwords",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O stemming (por exemplo, o algoritmo de Porter ou o RSLP, para o português) corta sufixos por regras e pode gerar radicais que não são palavras ('fiscaliz'). A lematização usa vocabulário e análise morfológica para chegar ao lema ('fiscalizaram' → 'fiscalizar'). A remoção de stopwords elimina palavras funcionais muito frequentes, que pouco ajudam a distinguir documentos.",
+          "versaoInvertidaFalsa": "No pré-processamento de textos, a lematização corta sufixos por regras fixas, sem garantir palavra válida, e o stemming recorre a dicionário e à classe gramatical para obter a forma canônica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "lematização − stemização (stemming) − stopwords",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois primeiros conceitos. A lematização não corta sufixos às cegas: recorre a dicionário e à classe gramatical para devolver uma palavra válida (o lema). O corte de sufixos por regras, que pode gerar radicais inexistentes, é o stemming."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tokenização − lematização − entidades nomeadas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tokenização segmenta o texto em unidades (tokens), como palavras ou subpalavras, e não reduz palavras a radicais. Entidades nomeadas (pessoas, órgãos, datas) são informação relevante que se quer extrair, e não palavras pouco informativas a descartar."
+        },
+        {
+          "id": "opt-4",
+          "texto": "stemização (stemming) − tokenização − n-gramas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas a tokenização não produz a forma de dicionário das palavras, e n-gramas são sequências de n tokens consecutivos usadas como atributos, e não palavras frequentes a eliminar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "lematização − normalização − entidades nomeadas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atribui à lematização o corte de sufixos sem garantia de palavra válida, que é próprio do stemming. Além disso, 'normalização' é termo genérico (minúsculas, remoção de acentos etc.), e entidades nomeadas não são palavras a descartar."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte stemming e lematização. O stemming corta sufixos por regras e pode gerar radical inexistente; a lematização usa dicionário e classe gramatical e devolve palavra válida.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre stemming e lematização?",
+        "resposta": "O stemming corta sufixos por regras e pode gerar um radical que não é palavra ('fiscaliz'). A lematização usa dicionário e análise morfológica para obter o lema, que é uma palavra válida ('fiscalizar')."
+      },
+      "conceitosChave": ["PLN: pré-processamento", "PLN: stemming × lematização"],
+      "fundamentacao": "Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), cap. 2 (normalização de texto, lematização e stemming); Manning, C.; Raghavan, P.; Schütze, H. Introduction to Information Retrieval, cap. 2."
+    },
+    {
+      "id": "ia-dados-005",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "IA generativa, agentes e modelos multimodais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma servidora usa um modelo de linguagem de grande porte (LLM), por meio de API institucional, para gerar resumos padronizados de relatórios de auditoria. Ela observa que, para o mesmo relatório e o mesmo prompt, o modelo produz resumos com estrutura e vocabulário bastante diferentes a cada execução, o que dificulta a conferência. Para tornar as saídas mais estáveis, a medida mais adequada é",
+      "variantesEnunciado": [
+        "Um analista usa um LLM para redigir minutas de ofícios de diligência a partir de um mesmo modelo de prompt. Cada nova execução produz textos com estrutura diferente, o que atrapalha a padronização exigida pela unidade. Para tornar as saídas mais estáveis, a medida mais adequada é",
+        "Na central de serviços de TI, um assistente baseado em LLM gera respostas para perguntas frequentes. A equipe nota que a mesma pergunta recebe respostas com estrutura e vocabulário muito variados a cada vez. Para obter saídas mais estáveis, a medida mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "reduzir a temperatura, o que elimina as alucinações e dispensa a conferência do resumo pela equipe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas a conclusão não. Temperatura baixa reduz a variação entre execuções, porém não impede que o modelo afirme, com fluência, algo falso ou sem respaldo no relatório. A alucinação decorre do modo como o modelo gera texto plausível, e a conferência humana continua necessária."
+        },
+        {
+          "id": "opt-2",
+          "texto": "aumentar a temperatura, o que concentra a probabilidade nos tokens mais prováveis e uniformiza as respostas entre execuções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o efeito do parâmetro. Temperatura mais alta achata a distribuição de probabilidades dos próximos tokens e dá mais chance a tokens menos prováveis, o que aumenta a diversidade e a variação entre execuções, e não a uniformidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aumentar o limite máximo de tokens da resposta, o que reduz a aleatoriedade na escolha das palavras.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite máximo de tokens apenas restringe o tamanho da resposta gerada. Ele não altera a forma como o próximo token é sorteado a partir da distribuição de probabilidades, que é a causa da variação observada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reduzir a temperatura, o que concentra a probabilidade nos tokens mais prováveis e torna as saídas mais previsíveis.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A temperatura reescala as probabilidades dos próximos tokens antes da amostragem: valores baixos concentram a probabilidade nos tokens mais prováveis e tornam as saídas mais repetíveis; valores altos aumentam a diversidade. Para resumos padronizados, usa-se temperatura baixa, de preferência com um modelo de resposta no próprio prompt. A revisão humana continua necessária.",
+          "versaoInvertidaFalsa": "aumentar a temperatura, pois valores mais altos concentram a probabilidade nos tokens mais prováveis e tornam as saídas mais previsíveis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "ampliar a janela de contexto, que é o parâmetro que controla o grau de aleatoriedade das respostas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A janela de contexto é a quantidade máxima de tokens (entrada mais saída) que o modelo consegue considerar de uma vez. Ampliá-la permite enviar textos maiores, mas não controla a aleatoriedade da geração, que depende de parâmetros de amostragem como temperatura e top-p."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte o efeito da temperatura e associa temperatura baixa à eliminação de alucinações. Temperatura baixa reduz a variação, mas não garante veracidade: a conferência humana continua obrigatória.",
+      "resumoFlashcard": {
+        "pergunta": "O que faz o parâmetro temperatura em um LLM?",
+        "resposta": "Reescala a distribuição de probabilidades dos próximos tokens. Temperatura baixa torna as saídas mais previsíveis e repetíveis; temperatura alta aumenta a diversidade. Nenhum valor elimina alucinações."
+      },
+      "conceitosChave": ["IA generativa: temperatura", "IA generativa: alucinação"],
+      "fundamentacao": "Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), capítulo sobre grandes modelos de linguagem (amostragem com temperatura); documentação de APIs de LLM sobre parâmetros de amostragem (temperature, top_p, max_tokens)."
+    },
+    {
+      "id": "ia-dados-006",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Engenharia de prompts e de contexto e RAG",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas avalia implantar um assistente de perguntas e respostas sobre normativos internos, com a técnica de geração aumentada por recuperação (RAG). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Para responder a dúvidas de servidores sobre resoluções e portarias, um órgão de controle estuda um assistente baseado em LLM com geração aumentada por recuperação (RAG). Considere as afirmativas abaixo.",
+        "Em projeto de modernização da central de atendimento, analistas descrevem o funcionamento de uma solução de RAG que responderá a perguntas com base em manuais e normativos. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Na preparação da base, os documentos são divididos em trechos (chunks), cada trecho é convertido em um vetor de embedding e os vetores são armazenados em um banco vetorial.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a fase de indexação do RAG: segmentação (chunking), geração de embeddings e armazenamento em banco ou índice vetorial, que viabiliza a busca por similaridade."
+        },
+        {
+          "texto": "A cada novo normativo inserido na base, os pesos do modelo de linguagem são ajustados para que ele memorize o conteúdo, o que dispensa a etapa de recuperação.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Ajustar os pesos é ajuste fino (fine-tuning), outra técnica. No RAG o modelo não é retreinado: o conhecimento novo fica na base indexada e é recuperado no momento da consulta."
+        },
+        {
+          "texto": "Na consulta, a pergunta é convertida em embedding e comparada aos vetores armazenados, por uma medida como a similaridade de cosseno, para selecionar os trechos mais relevantes, que são inseridos no contexto do modelo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a etapa de recuperação: os trechos mais próximos da pergunta no espaço vetorial entram no prompt como contexto para a geração da resposta, que pode citar as fontes recuperadas."
+        },
+        {
+          "texto": "Como a resposta é gerada a partir dos trechos recuperados, o RAG elimina por completo as alucinações e torna desnecessária a revisão humana das respostas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O RAG reduz alucinações ao ancorar a resposta em fontes, mas não as elimina: a recuperação pode trazer trechos irrelevantes ou desatualizados, e o modelo ainda pode interpretar mal o contexto."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, que é falsa: o RAG reduz, mas não elimina, as alucinações, e a resposta continua sujeita à revisão humana. As afirmativas I e III, que descrevem indexação e recuperação, estão corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas. A II descreve ajuste fino, e não RAG, e a IV atribui ao RAG uma garantia de veracidade que ele não oferece."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A afirmativa I descreve a indexação (chunking, embeddings e banco vetorial) e a III, a recuperação por similaridade e a inserção dos trechos no contexto. A II confunde RAG com ajuste fino, porque no RAG os pesos não mudam, e a IV exagera: o RAG reduz, mas não elimina, as alucinações.",
+          "versaoInvertidaFalsa": "No RAG, a cada documento novo os pesos do modelo são ajustados para memorizar seu conteúdo, o que dispensa a recuperação de trechos no momento da consulta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que confunde RAG com ajuste fino. No RAG o modelo permanece com os mesmos pesos, e o conhecimento é atualizado pela base indexada, o que é justamente a vantagem da técnica para normativos que mudam com frequência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa I, que também é verdadeira: sem a fase de indexação (chunking, embeddings e armazenamento vetorial), não haveria como recuperar os trechos por similaridade na consulta."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde RAG com ajuste fino (no RAG os pesos não mudam) e atribui ao RAG a eliminação total das alucinações, quando ele apenas as reduz ao ancorar a resposta em fontes recuperadas.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as etapas do RAG?",
+        "resposta": "Indexação: dividir os documentos em trechos, gerar embeddings e armazená-los em banco vetorial. Consulta: converter a pergunta em embedding, recuperar os trechos mais similares e inseri-los no contexto do LLM, que gera a resposta citando as fontes, sem alteração dos pesos do modelo."
+      },
+      "conceitosChave": ["RAG: indexação e recuperação", "RAG × fine-tuning"],
+      "fundamentacao": "Lewis, P. et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (NeurIPS, 2020); Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), capítulo sobre recuperação de informação e RAG."
+    },
+    {
+      "id": "ia-dados-007",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ética, IA responsável, explicabilidade e governança",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Sobre as técnicas de explicabilidade LIME e SHAP, empregadas para interpretar predições de modelos de aprendizado de máquina considerados caixa-preta, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em auditoria de um modelo que prioriza processos para fiscalização, a equipe pretende explicar as predições com LIME e SHAP. Sobre essas técnicas, é correto afirmar que",
+        "No contexto da IA explicável (XAI), a respeito das técnicas LIME e SHAP, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ambas exigem acesso aos pesos internos do modelo e, por isso, só se aplicam a redes neurais profundas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em sua formulação geral, LIME e SHAP são agnósticos ao modelo: consultam o modelo como caixa-preta, variando entradas e observando saídas (o KernelSHAP é exemplo). Há variantes específicas, como o TreeSHAP para árvores, mas nenhuma das técnicas se restringe a redes neurais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o SHAP baseia-se nos valores de Shapley, da teoria dos jogos cooperativos, para repartir entre os atributos a contribuição para uma predição.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O SHAP (Lundberg e Lee, 2017) usa os valores de Shapley, que repartem o ganho de uma coalizão entre os jogadores, para atribuir a cada atributo sua contribuição para a diferença entre a predição de uma instância e o valor esperado do modelo. As contribuições são aditivas e, agregadas sobre muitas instâncias, também dão visão global da importância dos atributos.",
+          "versaoInvertidaFalsa": "o LIME baseia-se nos valores de Shapley, da teoria dos jogos cooperativos, e o SHAP ajusta um modelo linear substituto em torno da instância perturbada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o LIME retreina o modelo original com menos atributos até que ele se torne interpretável, substituindo-o em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O LIME (Ribeiro, Singh e Guestrin, 2016) não altera o modelo original. Ele gera perturbações em torno da instância a explicar e ajusta um modelo substituto simples (por exemplo, linear), válido apenas localmente, para mostrar quais atributos pesaram naquela predição."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as duas técnicas demonstram relações de causa e efeito entre atributos e resultado, o que dispensa a análise de vieses nos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essas técnicas explicam como o modelo usa os atributos, e não como o mundo funciona: atribuir importância não demonstra causalidade. Elas ajudam a detectar vieses, mas não substituem a análise dos dados nem as métricas de equidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o SHAP só produz explicações globais, válidas para o modelo inteiro, e o LIME é a única das duas técnicas capaz de explicar uma predição individual.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SHAP é essencialmente uma técnica de explicação local, por instância, cujos valores podem ser agregados para dar visão global (importância média dos atributos). Tanto o LIME quanto o SHAP explicam predições individuais."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os fundamentos das técnicas (valores de Shapley são do SHAP; modelo substituto local é do LIME) e atribui a elas poder de provar causalidade ou dependência dos pesos internos.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre LIME e SHAP?",
+        "resposta": "O LIME explica uma predição ajustando um modelo simples e interpretável em torno da instância, a partir de perturbações. O SHAP reparte a predição entre os atributos com base nos valores de Shapley. Ambos são agnósticos ao modelo e explicam o comportamento do modelo, e não relações causais."
+      },
+      "conceitosChave": ["XAI: LIME e SHAP", "IA responsável: explicabilidade"],
+      "fundamentacao": "Ribeiro, M. T.; Singh, S.; Guestrin, C. 'Why Should I Trust You?': Explaining the Predictions of Any Classifier (KDD, 2016); Lundberg, S.; Lee, S.-I. A Unified Approach to Interpreting Model Predictions (NeurIPS, 2017); Molnar, C. Interpretable Machine Learning, capítulos sobre LIME e SHAP."
+    },
+    {
+      "id": "ia-dados-008",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "LGPD aplicada à IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma fundação estadual passou a usar um sistema que, sem intervenção humana, analisa dados pessoais de estudantes e indefere pedidos de bolsa. Um estudante que teve o pedido negado solicita a revisão da decisão e quer saber quais critérios foram usados; a fundação responde que o modelo foi fornecido por empresa privada e que seus critérios são protegidos por segredo comercial. Considerando exclusivamente o que dispõe a Lei nº 13.709/2018 (LGPD), é correto afirmar que",
+      "variantesEnunciado": [
+        "Um órgão estadual adotou um sistema que, de forma totalmente automatizada, analisa dados pessoais de requerentes e nega pedidos de isenção de taxa. Um cidadão pede a revisão da negativa e a explicação dos critérios, mas o órgão alega que o algoritmo, adquirido de empresa privada, é protegido por segredo comercial. Considerando exclusivamente a Lei nº 13.709/2018 (LGPD), é correto afirmar que",
+        "Em fiscalização sobre o uso de algoritmos, um técnico examina caso em que uma autarquia indeferiu automaticamente, sem análise humana, um pedido de auxílio com base em dados pessoais do requerente. O requerente pediu revisão e os critérios usados, e a autarquia recusou-se a informá-los alegando segredo comercial do fornecedor do modelo. Considerando exclusivamente a LGPD, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a LGPD exige expressamente que a revisão seja feita por pessoa natural, e a decisão tomada sem essa garantia é nula de pleno direito, com sanção ao controlador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A redação original do art. 20 previa revisão 'por pessoa natural', expressão retirada pela MP 869/2018; o § 3º que a reintroduzia, na Lei 13.853/2019, foi vetado. Assim, a LGPD garante a revisão, mas não exige expressamente que seja humana, nem prevê nulidade automática da decisão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o direito à revisão só alcança decisões automatizadas que envolvam dados pessoais sensíveis ou que definam o perfil de crédito do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 20 alcança decisões tomadas unicamente com base em tratamento automatizado que afetem os interesses do titular, incluídas, de forma exemplificativa, as que definem perfil pessoal, profissional, de consumo e de crédito ou aspectos da personalidade. Não há restrição a dados sensíveis."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o segredo comercial invocado afasta o dever de informar os critérios e impede qualquer verificação externa do tratamento, pois o modelo é de terceiro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O segredo comercial e industrial limita o detalhamento das informações (art. 20, § 1º), mas não afasta o controle: o § 2º permite que a autoridade nacional realize auditoria para verificar aspectos discriminatórios. Usar solução de terceiro não exime o órgão, que segue como controlador."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o controlador deve entregar ao titular o código-fonte e os dados de treinamento do modelo, pois a transparência prevalece sobre o segredo comercial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD exige informações claras e adequadas sobre critérios e procedimentos, e não a entrega de código-fonte ou de bases de treinamento, e ressalva expressamente os segredos comercial e industrial. A alternativa confunde transparência com divulgação irrestrita."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cabe pedir revisão e informações sobre os critérios da decisão, ressalvados os segredos comercial e industrial; se recusadas por esse motivo, a autoridade nacional poderá auditar o tratamento quanto a aspectos discriminatórios.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 20 assegura ao titular a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses. O § 1º obriga o controlador a fornecer, quando solicitadas, informações claras e adequadas sobre critérios e procedimentos, observados os segredos comercial e industrial. O § 2º prevê que, não oferecidas as informações com base nesse segredo, a autoridade nacional (ANPD) poderá realizar auditoria para verificar aspectos discriminatórios.",
+          "versaoInvertidaFalsa": "não cabe pedir revisão nem informações sobre os critérios, pois o segredo comercial do fornecedor afasta o art. 20 e impede auditoria da autoridade nacional."
+        }
+      ],
+      "pegadinhaFCC": "A banca resgata a expressão 'por pessoa natural', que não consta da redação vigente do art. 20 (o § 3º foi vetado), e trata o segredo comercial como barreira absoluta, quando ele só limita o detalhamento e abre espaço para auditoria da autoridade nacional.",
+      "resumoFlashcard": {
+        "pergunta": "O que garante o art. 20 da LGPD em decisões automatizadas?",
+        "resposta": "O direito de pedir revisão de decisões tomadas unicamente por tratamento automatizado que afetem os interesses do titular e de obter informações claras sobre critérios e procedimentos, ressalvado o segredo comercial e industrial. Negada a informação por esse motivo, a autoridade nacional pode auditar o tratamento quanto a aspectos discriminatórios."
+      },
+      "conceitosChave": ["LGPD: decisões automatizadas (art. 20)", "LGPD: autoridade nacional"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 20, caput e §§ 1º e 2º (redação dada pela Lei nº 13.853/2019; § 3º vetado); art. 5º, VI (controlador)."
+    },
+    {
+      "id": "ia-dados-009",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Big Data e processamento distribuído",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Para processar grandes volumes de registros de pagamentos de jurisdicionados, a equipe de TI de um Tribunal de Contas compara componentes do ecossistema Apache Hadoop e o Apache Spark. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um estudo sobre processamento distribuído de notas fiscais eletrônicas, analistas descreveram o HDFS, o modelo MapReduce e o Apache Spark. Considere as afirmativas abaixo.",
+        "Ao planejar uma plataforma de dados para cruzamentos em larga escala, a equipe de TI levantou características do Hadoop e do Spark. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No HDFS, os arquivos são divididos em blocos, de 128 MB por padrão, replicados em vários DataNodes (três réplicas, por padrão), e o NameNode mantém os metadados do sistema de arquivos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A configuração padrão do HDFS (hdfs-default.xml) define dfs.blocksize de 134.217.728 bytes (128 MB) e dfs.replication igual a 3; o NameNode guarda o espaço de nomes e o mapa de blocos, e os DataNodes armazenam os blocos."
+        },
+        {
+          "texto": "No modelo MapReduce, a fase map emite pares chave-valor intermediários, que são agrupados por chave na etapa de shuffle antes de serem consolidados na fase reduce.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o fluxo descrito por Dean e Ghemawat (2004): map gera pares intermediários, o framework os ordena e agrupa por chave (shuffle e sort) e reduce agrega os valores de cada chave."
+        },
+        {
+          "texto": "O Spark mantém dados intermediários preferencialmente em memória, o que o favorece em algoritmos iterativos, como os de aprendizado de máquina, em relação ao MapReduce, que grava resultados intermediários em disco.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O processamento em memória (RDDs e DataFrames em cache) evita a gravação em disco entre etapas, característica do MapReduce, e acelera tarefas que percorrem os mesmos dados várias vezes."
+        },
+        {
+          "texto": "O Spark só lê dados armazenados no HDFS e não oferece suporte ao processamento de fluxos contínuos de dados (streaming).",
+          "verdadeira": false,
+          "explicacao": "Falsa. O Spark lê de várias fontes (HDFS, armazenamento de objetos, bancos de dados, Kafka) e oferece o Structured Streaming para processamento de fluxos, além do Spark SQL e da MLlib."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa III, que também é verdadeira: o processamento em memória é a principal vantagem do Spark sobre o MapReduce em tarefas iterativas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, que é falsa (o Spark tem Structured Streaming e lê de várias fontes), e omite a I, que descreve corretamente os padrões do HDFS."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: o Spark não se limita ao HDFS e oferece processamento de fluxos com o Structured Streaming. Por isso, não se pode considerar corretas todas as afirmativas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I descreve os padrões do HDFS (blocos de 128 MB, três réplicas, NameNode com metadados), a II resume o fluxo map → shuffle → reduce e a III aponta a vantagem do processamento em memória do Spark. A IV é falsa, pois o Spark lê de diversas fontes e processa streaming.",
+          "versaoInvertidaFalsa": "O MapReduce mantém os resultados intermediários em memória e por isso supera o Spark em algoritmos iterativos, já que o Spark grava cada etapa em disco."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne uma afirmativa verdadeira (III) e uma falsa (IV) e deixa de fora a I e a II, que descrevem corretamente o HDFS e o modelo MapReduce."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao Spark limitações que ele não tem (só HDFS, sem streaming) e pode inverter quem processa em memória. Os padrões do HDFS (128 MB e três réplicas) também são alvo de troca de números.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o Spark costuma ser mais rápido que o MapReduce em algoritmos iterativos?",
+        "resposta": "Porque mantém dados intermediários em memória entre as etapas, enquanto o MapReduce grava resultados intermediários em disco. O Spark ainda oferece Spark SQL, MLlib e Structured Streaming."
+      },
+      "conceitosChave": ["Big Data: Hadoop (HDFS e MapReduce)", "Big Data: Spark"],
+      "fundamentacao": "Apache Hadoop, hdfs-default.xml (dfs.blocksize = 134217728; dfs.replication = 3); Dean, J.; Ghemawat, S. MapReduce: Simplified Data Processing on Large Clusters (OSDI, 2004); Zaharia, M. et al. Resilient Distributed Datasets (NSDI, 2012); README do Apache Spark."
+    },
+    {
+      "id": "ia-dados-010",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estatística aplicada e avaliação de modelos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um modelo de classificação foi treinado para sinalizar contratos com indícios de sobrepreço. Em um conjunto de teste com 1.000 contratos, dos quais 60 tinham de fato sobrepreço, o modelo sinalizou 50 contratos, sendo 40 deles realmente com sobrepreço. Considerando a classe 'com sobrepreço' como positiva, o modelo apresentou",
+      "variantesEnunciado": [
+        "Um classificador foi desenvolvido para apontar notas fiscais com indício de fraude. No teste, havia 1.000 notas, 60 delas de fato fraudulentas; o modelo apontou 50 notas, das quais 40 eram realmente fraudulentas. Tomando 'fraudulenta' como classe positiva, o modelo apresentou",
+        "Na validação de um modelo que marca processos de aposentadoria com indício de irregularidade, foram usados 1.000 processos, sendo 60 efetivamente irregulares. O modelo marcou 50 processos, 40 dos quais eram de fato irregulares. Considerando 'irregular' como classe positiva, o modelo apresentou"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "precisão de 80%, revocação de cerca de 66,7% e F1 de cerca de 72,7%.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Da matriz de confusão: VP = 40, FP = 50 − 40 = 10, FN = 60 − 40 = 20 e VN = 1.000 − 40 − 10 − 20 = 930. Precisão = VP/(VP + FP) = 40/50 = 80%; revocação = VP/(VP + FN) = 40/60 ≈ 66,7%; F1 = 2 · P · R/(P + R) = 2 · 0,8 · 0,667/1,467 ≈ 72,7%, que é a média harmônica de precisão e revocação.",
+          "versaoInvertidaFalsa": "precisão de cerca de 66,7% e revocação de 80%, pois a precisão divide os acertos pelo total de contratos com sobrepreço e a revocação, pelo total de sinalizados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "precisão de cerca de 66,7%, revocação de 80% e F1 de cerca de 72,7%.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte precisão e revocação. A precisão mede quantos dos sinalizados estavam certos (40 de 50 = 80%); a revocação mede quantos dos positivos reais foram encontrados (40 de 60 ≈ 66,7%). O F1 coincide porque é simétrico, o que torna a troca mais traiçoeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "precisão de 80%, revocação de cerca de 66,7% e F1 de cerca de 73,3%, média aritmética das duas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Precisão e revocação estão certas, mas o F1 é a média harmônica, e não a aritmética: 2 · 0,8 · 0,667/(0,8 + 0,667) ≈ 72,7%. A média aritmética (≈ 73,3%) superestima o desempenho quando as duas métricas são desiguais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "acurácia de 97%, o que mostra que o modelo identificou 97% dos contratos com sobrepreço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A acurácia é de fato (40 + 930)/1.000 = 97%, mas mede o acerto global, e não a proporção de contratos com sobrepreço identificados, que é a revocação (≈ 66,7%). Com classes desbalanceadas, um modelo que nunca sinalizasse nada teria 94% de acurácia."
+        },
+        {
+          "id": "opt-5",
+          "texto": "revocação de cerca de 98,9%, pois 930 dos 940 contratos sem sobrepreço foram corretamente descartados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A razão 930/940 ≈ 98,9% é a especificidade (taxa de verdadeiros negativos), e não a revocação. A revocação considera os positivos reais: 40 de 60, cerca de 66,7%."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca precisão por revocação, apresenta o F1 como média aritmética e usa a acurácia alta, inflada pelo desbalanceamento, como se medisse a detecção dos positivos.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular precisão, revocação e F1 a partir da matriz de confusão?",
+        "resposta": "Precisão = VP/(VP + FP): acerto entre os sinalizados. Revocação = VP/(VP + FN): proporção dos positivos reais encontrados. F1 = 2PR/(P + R), a média harmônica das duas."
+      },
+      "conceitosChave": ["Avaliação: precisão, revocação e F1", "Avaliação: matriz de confusão"],
+      "fundamentacao": "Documentação do scikit-learn, 'Model evaluation: classification metrics' (precision_score, recall_score, f1_score, confusion_matrix); contas conferidas por script (VP = 40, FP = 10, FN = 20, VN = 930)."
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "materiaSlug": "devops-engenharia-entrega",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "devops-021",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "CI/CD e pipelines",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal passou a acompanhar o desempenho de entrega de software com as métricas do programa DORA, conforme o modelo atualmente descrito no guia oficial do programa. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um diagnóstico sobre o processo de entrega dos sistemas do Tribunal, um técnico usou como referência as métricas de desempenho de entrega de software do DORA, na versão atual do guia oficial. Considere as afirmativas abaixo.",
+        "A respeito das métricas de desempenho de entrega de software propostas pelo DORA (DevOps Research and Assessment), em seu modelo atual, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O modelo atual reúne cinco métricas, agrupadas em dois fatores: throughput e instabilidade (instability).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O guia oficial passou das quatro métricas originais (four keys) para cinco, divididas entre throughput e instabilidade."
+        },
+        {
+          "texto": "O tempo de recuperação de uma implantação que falhou (failed deployment recovery time), que substituiu o antigo MTTR, é classificado como métrica de throughput.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Em 2023, o MTTR (time to restore service) foi redefinido como failed deployment recovery time, restrito a falhas causadas por mudanças; no modelo atual, ele integra o fator throughput."
+        },
+        {
+          "texto": "A taxa de retrabalho de implantação (deployment rework rate) mede a proporção de implantações não planejadas, feitas em razão de incidente em produção, e integra o fator de instabilidade.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a quinta métrica, introduzida em 2024, e compõe a instabilidade com a taxa de falha de mudanças (change fail rate)."
+        },
+        {
+          "texto": "Como velocidade e estabilidade são objetivos conflitantes, o DORA recomenda que cada equipe escolha a métrica mais importante para o seu contexto e a transforme em meta obrigatória.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A pesquisa mostra que velocidade e estabilidade não são trocas excludentes, e o guia aponta como armadilhas transformar métricas em metas (lei de Goodhart) e eleger uma única métrica."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Deixa de fora a III, que é verdadeira: a taxa de retrabalho de implantação é a quinta métrica, acrescentada em 2024, e compõe o fator de instabilidade com a taxa de falha de mudanças."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: o DORA mostra que velocidade e estabilidade andam juntas e alerta contra transformar métricas em metas e contra eleger uma única métrica. Também omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a II e inclui a IV, que é falsa. No modelo atual, o tempo de recuperação de implantação com falha integra o fator throughput, e não o de instabilidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O guia do DORA descreve cinco métricas em dois fatores. Throughput: change lead time, deployment frequency e failed deployment recovery time, sucessor do MTTR desde 2023. Instabilidade: change fail rate e deployment rework rate, incluída em 2024. A IV contraria a pesquisa, que mostra velocidade e estabilidade correlacionadas e alerta para a lei de Goodhart.",
+          "versaoInvertidaFalsa": "No modelo atual do DORA, o tempo de recuperação de uma implantação que falhou é classificado no fator de instabilidade, ao lado da taxa de falha de mudanças."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é verdadeira, mas a IV é falsa. Ficaram de fora a I e a II, ambas verdadeiras segundo o guia oficial do DORA."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a mudança recente do modelo: são cinco métricas, o MTTR virou failed deployment recovery time e passou para o fator throughput, e entrou a taxa de retrabalho. Também sugere que velocidade e estabilidade se excluem, o que a pesquisa refuta.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as cinco métricas de desempenho de entrega do DORA e como se agrupam?",
+        "resposta": "Throughput: change lead time (do commit à produção), deployment frequency e failed deployment recovery time. Instabilidade: change fail rate (implantações que exigem intervenção imediata) e deployment rework rate (implantações não planejadas por incidente em produção)."
+      },
+      "conceitosChave": ["DORA: métricas de entrega"],
+      "fundamentacao": "DORA, guia 'DORA's software delivery performance metrics' (dora.dev, atualizado em 05/01/2026) e 'A history of DORA's software delivery metrics'; Accelerate State of DevOps Report 2024."
+    },
+    {
+      "id": "devops-022",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Automação de build e de testes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao reorganizar o pipeline do sistema de fiscalização de contratos, a equipe de TI do Tribunal discutiu a ordem dos estágios e o uso de gates de qualidade. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma revisão do processo de integração contínua do portal de serviços, um técnico avaliou boas práticas sobre a ordem dos estágios do pipeline e os gates de qualidade. Considere as afirmativas abaixo.",
+        "A respeito da organização de pipelines de integração contínua e do uso de gates de qualidade, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Verificações rápidas e baratas, como compilação, análise estática e testes de unidade, devem vir antes das mais lentas, para que o pipeline falhe o mais cedo possível.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o princípio de falhar cedo: o estágio de commit dá retorno em poucos minutos e evita gastar tempo com testes lentos em uma versão que já tem defeito."
+        },
+        {
+          "texto": "Um gate de qualidade reúne critérios objetivos, como cobertura mínima de testes no código novo e ausência de vulnerabilidades críticas, e interrompe o pipeline quando não são atendidos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O gate funciona como um portão: se os critérios definidos não forem atendidos, a versão não avança para os estágios seguintes."
+        },
+        {
+          "texto": "Testes que falham de forma intermitente devem ser configurados para reexecução automática até passarem, prática que dispensa investigar a causa da instabilidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Reexecutar até passar mascara o problema, corrói a confiança na suíte e pode esconder defeitos reais, como condições de corrida. O teste intermitente deve ser isolado (quarentena) e corrigido."
+        },
+        {
+          "texto": "Quando o build do branch principal quebra, a equipe deve priorizar a correção ou reverter a alteração, em vez de continuar integrando novas mudanças sobre o build quebrado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Na integração contínua, consertar o build quebrado é prioridade, e reverter o último commit costuma ser o caminho mais rápido para restabelecer um tronco saudável."
+        },
+        {
+          "texto": "Os gates de qualidade devem ser aplicados apenas no ambiente de produção, pois avaliá-los em estágios anteriores atrasaria a entrega sem ganho de qualidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os gates servem para barrar problemas antes que avancem no pipeline; deixá-los para a produção é avaliar a qualidade no momento mais caro para corrigir."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (falhar cedo, com as verificações baratas primeiro), a II (gate de qualidade com critérios objetivos que barram o pipeline) e a IV (build quebrado no tronco é prioridade, corrigindo-se ou revertendo-se a mudança). A III mascara testes instáveis, e a V adia a verificação para o pior momento possível.",
+          "versaoInvertidaFalsa": "Verificações lentas e abrangentes, como os testes de ponta a ponta, devem vir antes da compilação e dos testes de unidade, para que o pipeline encontre primeiro os defeitos mais graves."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Das indicadas, só a II é verdadeira. A III trata o sintoma dos testes intermitentes e esconde defeitos, e a V inverte a lógica dos gates, que devem barrar problemas antes de chegarem à produção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV são verdadeiras, mas faltou a II: o gate de qualidade é justamente o conjunto de critérios objetivos que interrompe o pipeline quando não atendidos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa. Reexecutar automaticamente até o teste passar mascara a instabilidade e pode esconder defeitos reais; o teste intermitente deve ser isolado e corrigido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas: a III mascara testes instáveis, e a V leva o gate para o fim da cadeia, quando corrigir custa mais."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta como solução reexecutar testes instáveis até passarem e aplicar gates só em produção. A ideia central é falhar cedo e barrar problemas antes que avancem no pipeline.",
+      "resumoFlashcard": {
+        "pergunta": "O que é um gate de qualidade e onde ele atua no pipeline?",
+        "resposta": "É um conjunto de critérios objetivos, como cobertura mínima no código novo, ausência de vulnerabilidades críticas e testes aprovados, que interrompe o pipeline se não forem atendidos. Atua antes da promoção para os estágios seguintes, junto com a regra de falhar cedo, com as verificações baratas primeiro."
+      },
+      "conceitosChave": ["Build: gate de qualidade", "CI/CD: integração contínua"],
+      "fundamentacao": "Martin Fowler, 'Continuous Integration' (seções 'Fix Broken Builds Immediately' e 'Keep the Build Fast'); Jez Humble e David Farley, Continuous Delivery (2010), cap. 5 e 7; documentação do SonarQube, 'Quality gates'."
+    },
+    {
+      "id": "devops-023",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Infraestrutura como código e gerenciamento de configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A infraestrutura de nuvem do sistema de processo eletrônico do Tribunal é gerenciada com OpenTofu, e o arquivo de estado fica em um backend remoto com bloqueio. Durante um incidente, um analista aumentou manualmente, pelo console do provedor, o tamanho de uma instância de banco de dados declarada no código. Dias depois, outro técnico executou tofu plan para aplicar uma alteração não relacionada. Considerando o comportamento padrão da ferramenta, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico usa OpenTofu, com estado remoto e bloqueio, para gerenciar o banco de dados do sistema de auditoria. Para contornar uma lentidão, um colega ampliou pelo console do provedor o tamanho da instância do banco, que continua declarada com o valor antigo no código. Na semana seguinte, o técnico executou tofu plan para uma mudança em outro recurso. Considerando o comportamento padrão da ferramenta, é correto afirmar que",
+        "Os recursos de nuvem do portal de serviços do Tribunal são descritos em código OpenTofu, com o estado guardado em backend remoto que suporta bloqueio. Em uma emergência, o tamanho de uma instância de banco foi alterado direto no console, sem mudança no código. Ao rodar tofu plan para outra alteração, a equipe analisa o resultado. Considerando o comportamento padrão da ferramenta, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "como a alteração foi feita fora da ferramenta, ela é ignorada para sempre, pois o OpenTofu compara apenas o código com o arquivo de estado, sem consultar o provedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Por padrão, o plan atualiza o estado consultando os objetos reais no provedor (refresh) antes de comparar com a configuração. Só se o refresh fosse desativado, com -refresh=false, a mudança externa poderia ser ignorada, o que a própria documentação aponta como fonte de plano incompleto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o OpenTofu incorpora automaticamente o novo tamanho ao código-fonte e ao estado, já que o ambiente real é sempre tratado como fonte da verdade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ferramenta nunca reescreve o código-fonte. Na infraestrutura como código, a fonte da verdade é a configuração versionada, e o plano propõe levar o ambiente ao que ela declara."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o bloqueio do backend remoto impede que sejam feitas alterações manuais no console enquanto o estado estiver armazenado, de modo que a situação descrita não poderia ocorrer.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloqueio de estado só impede que duas execuções da ferramenta alterem o mesmo estado ao mesmo tempo, evitando corrompê-lo. Ele não tem nenhum efeito sobre o console ou a API do provedor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a solução recomendada é editar manualmente o arquivo de estado para registrar o novo tamanho, evitando que o plano proponha qualquer mudança na instância.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Editar o estado à mão é arriscado e não resolve: o código continuaria declarando o tamanho antigo, e o plano proporia a mudança de qualquer forma. Para manter o novo tamanho, altera-se a configuração."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o plano, ao atualizar o estado com a situação real dos recursos, detecta a divergência e propõe devolver a instância ao tamanho declarado; se a mudança manual deve ser mantida, o caminho é incorporá-la ao código, revisá-la e só então aplicar.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Por padrão, o plan atualiza o estado com a situação real dos objetos remotos antes de compará-lo à configuração. Como o código declara o tamanho antigo, o plano mostra a divergência (drift) e propõe desfazer a mudança manual. Se o novo tamanho é o desejado, altera-se o código, submete-se a mudança à revisão e aplica-se, mantendo o código como fonte da verdade. O bloqueio do backend só impede operações simultâneas da ferramenta sobre o mesmo estado.",
+          "versaoInvertidaFalsa": "o plano não detecta a divergência, pois compara apenas o código ao arquivo de estado, sem consultar os recursos reais, e a mudança manual permanece invisível para a ferramenta."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que mudanças manuais passam despercebidas, que o ambiente real vira a fonte da verdade ou que o bloqueio impede alterações no console. O plano detecta o drift e propõe voltar ao que o código declara.",
+      "resumoFlashcard": {
+        "pergunta": "O que acontece quando um recurso gerenciado por Terraform ou OpenTofu é alterado manualmente e depois se executa o plan?",
+        "resposta": "O plan atualiza o estado com a situação real (refresh) e compara com o código; como o código declara outro valor, aponta o drift e propõe desfazer a mudança manual. Para mantê-la, é preciso atualizar o código, revisar e aplicar."
+      },
+      "conceitosChave": ["IaC: drift", "IaC: estado e bloqueio"],
+      "fundamentacao": "Documentação do OpenTofu, 'State', 'State Locking' e 'Command: plan' (atualização do estado, modo -refresh-only e opção -refresh=false)."
+    },
+    {
+      "id": "devops-024",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Observabilidade: métricas, logs e traces",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O sistema de peticionamento do Tribunal é composto por um portal web, uma API de protocolo e um serviço de assinatura digital, todos instrumentados com OpenTelemetry e exportando para o mesmo backend. A equipe percebeu que cada requisição do usuário aparece como três traces independentes, um por serviço, em vez de um único trace com spans encadeados. As chamadas entre os serviços são HTTP e atravessam um proxy reverso corporativo. A causa mais provável e a correção adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Na plataforma de observabilidade do Tribunal, o sistema de emissão de certidões (front-end, API e serviço de geração de PDF) foi instrumentado com OpenTelemetry. No backend, porém, uma única ação do usuário gera traces separados para cada serviço, sem relação pai-filho entre eles; as chamadas HTTP entre os serviços passam por um proxy reverso. A causa mais provável e a correção adequada são, respectivamente,",
+        "Um técnico analisa por que os traces do sistema de protocolo, composto por três serviços instrumentados com OpenTelemetry que se comunicam por HTTP através de um proxy reverso, aparecem fragmentados: cada serviço registra seu próprio trace para a mesma requisição. A causa mais provável e a correção adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a amostragem configurada em 33% em cada serviço; aumentar a taxa de amostragem para 100%, para que os spans voltem a ser agrupados no mesmo trace pelo backend.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A amostragem decide quais traces são registrados, mas não faz um trace se partir em vários. Com contexto propagado, a decisão de amostragem acompanha o trace, e todos os serviços registram, ou descartam, os mesmos traces."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a perda do contexto entre os serviços, porque o cabeçalho traceparent não é repassado nas chamadas ou é descartado pelo proxy; garantir a propagação no padrão W3C Trace Context.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O que une spans de serviços diferentes em um mesmo trace é o contexto (trace ID e ID do span pai) propagado entre eles. No OpenTelemetry, o propagador padrão segue o W3C Trace Context, com o cabeçalho HTTP traceparent: o chamador o injeta, e o chamado o extrai. Se o cabeçalho não é injetado ou um intermediário o remove, cada serviço inicia um trace novo. A correção é garantir injeção e extração em todos os saltos e fazer o proxy preservar o cabeçalho.",
+          "versaoInvertidaFalsa": "o descompasso entre os relógios dos servidores, pois o backend agrupa spans em um mesmo trace pela proximidade dos horários, e não por identificadores propagados entre os serviços."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a dessincronização dos relógios dos servidores; ajustar o NTP em todos os hosts, pois o backend agrupa os spans em um mesmo trace pela proximidade dos horários de início de cada span.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Relógios dessincronizados distorcem a linha do tempo exibida, mas o agrupamento em um trace é feito pelo trace ID, e não pela proximidade de horários. A falta de NTP não fragmentaria os traces."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o excesso de cardinalidade nas métricas da aplicação; remover os rótulos com identificadores únicos, que impedem o backend de relacionar os spans entre si.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Alta cardinalidade é um problema de custo e de desempenho das métricas, e não afeta a ligação entre spans, que depende do contexto propagado. A alternativa mistura sinais diferentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o uso de logs estruturados em JSON; voltar aos logs em texto simples, pois o identificador do trace só é reconhecido pelo backend nesse formato.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O formato dos logs não interfere na formação dos traces. Logs estruturados, aliás, facilitam a correlação, porque permitem gravar trace_id e span_id em campos próprios."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece causas ligadas a outros aspectos da telemetria: amostragem, relógio, cardinalidade e formato de log. O que liga spans de serviços diferentes é o contexto propagado, no padrão W3C Trace Context.",
+      "resumoFlashcard": {
+        "pergunta": "O que faz spans de serviços diferentes formarem um único trace?",
+        "resposta": "A propagação de contexto: o serviço chamador injeta o trace ID e o ID do span pai na requisição, no padrão W3C Trace Context (cabeçalho traceparent), e o serviço chamado os extrai. Se o cabeçalho se perde no caminho, cada serviço inicia um trace novo."
+      },
+      "conceitosChave": ["OpenTelemetry: propagação de contexto", "Observabilidade: correlação de eventos"],
+      "fundamentacao": "Documentação do OpenTelemetry, Concepts > Context propagation; W3C Trace Context (Recomendação do W3C), cabeçalhos traceparent e tracestate."
+    },
+    {
+      "id": "devops-025",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Monitoramento, alertas e indicadores técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A central de monitoramento do Tribunal recebe, toda noite, dezenas de alertas de CPU acima de 80% e de fila de mensagens com mais de mil itens nos servidores do sistema de processo eletrônico. Na maioria das vezes, os usuários não percebem nenhum impacto, e os plantonistas passaram a ignorar as notificações. Na semana passada, um alerta relevante passou despercebido no meio dos demais. Seguindo as recomendações de SRE do Google, a revisão mais adequada da estratégia de alertas é",
+      "variantesEnunciado": [
+        "Os plantonistas de TI do Tribunal recebem alertas frequentes de CPU acima de 80% e de fila com mais de mil mensagens nos servidores do portal de serviços, quase sempre sem impacto para os usuários, e passaram a silenciá-los. Um incidente real acabou notado com atraso. Seguindo as recomendações de SRE do Google, a revisão mais adequada da estratégia de alertas é",
+        "Em uma análise pós-incidente do sistema de protocolo, constatou-se que o alerta que indicava o problema foi ignorado porque chegou junto com dezenas de avisos rotineiros de CPU alta e de fila de mensagens extensa, que raramente afetam os usuários. Seguindo as recomendações de SRE do Google, a revisão mais adequada da estratégia de alertas é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "reduzir os limiares de CPU para 60% e de fila para 500 itens, de modo que os problemas sejam detectados ainda mais cedo e com maior margem de segurança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Baixar os limiares aumentaria o número de alertas sem impacto e agravaria a fadiga que fez o alerta relevante passar despercebido. O problema está no tipo de sinal usado para acionar pessoas, e não na sensibilidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "manter todos os alertas atuais e acrescentar uma notificação por SMS e por telefone para cada um, garantindo que nenhum deles seja ignorado pelos plantonistas durante a madrugada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Multiplicar canais para alertas que não exigem ação só aumenta o ruído. Alertas que acionam pessoas devem ser acionáveis e urgentes; do contrário, serão ignorados em qualquer canal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "acionar o plantonista por sintomas percebidos pelo usuário, como erros e latência acima do SLO, e deixar métricas de causa, como CPU e fila, em painéis para diagnóstico.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O capítulo de monitoramento do SRE recomenda concentrar o esforço em detectar sintomas, isto é, o que o usuário sente, como erros e lentidão, e reservar alertas de causa para problemas definidos e iminentes. Um alerta que aciona alguém deve ser acionável e urgente. CPU alta e fila longa sem impacto são úteis para investigar, em painéis, mas como alertas geram fadiga e escondem o que importa.",
+          "versaoInvertidaFalsa": "acionar o plantonista com base em métricas de causa, como CPU e fila, e deixar os sintomas percebidos pelo usuário, como erros e latência, apenas em painéis para diagnóstico."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir os alertas por uma revisão semanal dos painéis, já que alertas automáticos sempre geram fadiga e devem ser evitados em sistemas críticos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida. Sistemas críticos precisam de alertas, desde que bem desenhados; uma revisão semanal deixaria incidentes sem resposta por dias."
+        },
+        {
+          "id": "opt-5",
+          "texto": "transformar todo alerta de causa em incidente de prioridade máxima, para que a quantidade elevada de chamados justifique a ampliação da equipe de plantão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Classificar eventos sem impacto como incidentes críticos distorce a priorização, sobrecarrega a equipe e não resolve a fadiga de alertas."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece mais alertas, limiares menores ou nenhum alerta. A recomendação do SRE é alertar por sintoma, de modo acionável, e usar as métricas de causa no diagnóstico.",
+      "resumoFlashcard": {
+        "pergunta": "Por que alertar por sintomas, e não por causas?",
+        "resposta": "Porque o sintoma (erros, latência, indisponibilidade percebidos pelo usuário) indica impacto real e exige ação, enquanto métricas de causa, como CPU alta, muitas vezes não afetam ninguém e geram fadiga de alertas. As causas ficam em painéis para diagnóstico, com alerta apenas quando o problema é definido e iminente."
+      },
+      "conceitosChave": ["Monitoramento: alerta por sintoma", "SRE: SLI, SLO e SLA"],
+      "fundamentacao": "Google, Site Reliability Engineering (2016), cap. 6 ('Monitoring Distributed Systems'), seções 'Symptoms Versus Causes' e 'Tying These Principles Together'."
+    },
+    {
+      "id": "devops-026",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Git distribuído, GitHub e GitLab",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um desenvolvedor do Tribunal publicou no branch main, compartilhado por toda a equipe, um commit que quebrou o cálculo de multas do sistema de fiscalização. Depois dele, outros colegas já enviaram commits ao mesmo branch e atualizaram suas cópias locais. É preciso desfazer o efeito do commit defeituoso preservando o trabalho dos colegas e sem reescrever o histórico publicado. O comando mais adequado é",
+      "variantesEnunciado": [
+        "No repositório do portal de transparência, um commit já enviado ao branch main, usado por toda a equipe, introduziu um erro na geração de relatórios. Vários commits posteriores de outros desenvolvedores já estão no remoto e nas cópias locais. É preciso anular o efeito do commit defeituoso sem reescrever o histórico compartilhado. O comando mais adequado é",
+        "Uma alteração publicada há dois dias no branch main do sistema de protocolo precisa ser desfeita, pois causou falhas na numeração de documentos. Desde então, outros membros da equipe enviaram commits ao main. A equipe exige que o histórico já publicado não seja reescrito. O comando mais adequado é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "git reset --hard <hash>~1 seguido de git push --force, que remove o commit defeituoso e mantém o histórico remoto limpo para toda a equipe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O reset --hard para antes do commit defeituoso descartaria também os commits posteriores dos colegas, e o push --force reescreveria o histórico remoto, obrigando todos a reconciliar suas cópias. É exatamente o que o enunciado quer evitar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "git rebase -i para excluir o commit defeituoso da sequência e, em seguida, git push --force-with-lease, opção que dispensa os colegas de qualquer ajuste em suas cópias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O rebase interativo reescreve os commits a partir do ponto alterado, gerando novos hashes. O --force-with-lease só evita sobrescrever trabalho remoto que você ainda não viu; os colegas continuariam tendo de reconciliar suas cópias. Reescrever histórico publicado contraria a regra de ouro do rebase."
+        },
+        {
+          "id": "opt-3",
+          "texto": "git checkout <hash>~1 seguido de git commit, que restaura o branch main ao estado anterior ao defeito sem criar novos commits no histórico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fazer checkout de um commit antigo deixa o repositório em HEAD destacado (detached HEAD) e não altera o branch main; um commit feito ali não desfaz o defeito no branch, e a alternativa ainda se contradiz ao falar em commit sem novos commits."
+        },
+        {
+          "id": "opt-4",
+          "texto": "git revert <hash>, que cria um novo commit aplicando as alterações inversas às do commit defeituoso.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O git revert cria um commit novo que desfaz as alterações do commit indicado, sem apagar nada do histórico. É a forma segura de desfazer algo já publicado em branch compartilhado: os colegas apenas recebem mais um commit no próximo pull, e o trabalho posterior ao defeito é preservado.",
+          "versaoInvertidaFalsa": "git revert <hash>, que remove o commit defeituoso do histórico do branch, reescrevendo os commits posteriores como se o defeito nunca tivesse existido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "git stash, que guarda o commit defeituoso em uma área temporária até que a equipe decida se ele deve ou não retornar ao branch main.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O git stash guarda alterações ainda não commitadas do diretório de trabalho e da área de preparação. Ele não atua sobre commits, muito menos sobre commits já publicados."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece comandos que reescrevem o histórico, como reset com push forçado e rebase, como se fossem limpos e seguros. Em branch compartilhado, desfaz-se com revert, que acrescenta um commit inverso.",
+      "resumoFlashcard": {
+        "pergunta": "Como desfazer um commit já publicado em um branch compartilhado?",
+        "resposta": "Com git revert, que cria um novo commit com as alterações inversas e preserva o histórico. Reset seguido de push forçado e rebase reescrevem o histórico publicado e obrigam os colegas a reconciliar suas cópias."
+      },
+      "conceitosChave": ["Git: revert × reset", "Git: reescrita de histórico"],
+      "fundamentacao": "Documentação oficial do Git, comandos git-revert, git-reset e git-push (opção --force-with-lease); Scott Chacon e Ben Straub, Pro Git, 2ª ed., seção 3.6 ('Rebasing', item 'The Perils of Rebasing')."
+    },
+    {
+      "id": "devops-027",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Estratégias de branching (Git Flow e trunk-based)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do desenvolvimento baseado em tronco (trunk-based development), é correto afirmar que",
+      "variantesEnunciado": [
+        "Para acelerar a entrega dos sistemas do Tribunal, a equipe de TI avalia adotar o desenvolvimento baseado em tronco (trunk-based development). Sobre esse modelo, é correto afirmar que",
+        "Uma equipe que hoje mantém branches de funcionalidade abertos por semanas estuda migrar para o desenvolvimento baseado em tronco (trunk-based development). Sobre esse modelo, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as integrações ao tronco são pequenas e frequentes, com branches de feature de vida curta, de poucos dias no máximo, e feature flags para ocultar funcionalidades incompletas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No trunk-based development, todos colaboram em um único branch principal (trunk ou main) e evitam branches de desenvolvimento de longa duração. Quando há branches de feature, eles duram pouco, cerca de dois dias no máximo, e funcionalidades inacabadas chegam ao tronco desligadas por feature flags ou por branch by abstraction. O modelo é um facilitador da integração e da entrega contínuas.",
+          "versaoInvertidaFalsa": "as integrações ao tronco são grandes e espaçadas, com branches de feature de vida longa, mantidos até a funcionalidade ficar completa, o que dispensa o uso de feature flags."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cada funcionalidade deve ser desenvolvida em um branch próprio, mantido isolado do tronco até ficar completa, ainda que isso leve várias semanas, para não desestabilizar o código principal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Branches isolados por semanas são justamente o que o modelo evita: acumulam divergência e produzem integrações dolorosas. A estabilidade do tronco vem de mudanças pequenas, testes automatizados e feature flags."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o modelo exige branches permanentes de develop e de release, a partir dos quais o tronco recebe, ao fim de cada ciclo, o conjunto de funcionalidades homologadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Branches permanentes de develop e de release caracterizam o Git Flow. No trunk-based, um branch de release, quando existe, é criado a partir do tronco apenas para estabilizar e corrigir uma versão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "como todos trabalham no mesmo branch, o modelo dispensa integração contínua e testes automatizados, pois os conflitos se resolvem naturalmente no momento do commit.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: integrar com frequência no tronco só é seguro com integração contínua e uma boa suíte de testes automatizados, que verificam cada mudança e protegem o branch principal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "funcionalidades incompletas não podem chegar ao tronco em hipótese alguma, o que torna o uso de feature flags incompatível com esse modelo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Feature flags são uma das técnicas centrais do modelo: permitem que código ainda incompleto chegue ao tronco, e até à produção, desligado, sem afetar o usuário."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve características do Git Flow (develop e release permanentes) ou de branches de longa duração como se fossem do trunk-based. O modelo usa branches curtos, integração frequente e feature flags.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza o trunk-based development?",
+        "resposta": "Todos integram no mesmo branch principal com frequência, ao menos diariamente; quando há branches de feature, duram no máximo cerca de dois dias. Funcionalidades inacabadas são escondidas com feature flags, e o modelo favorece a integração e a entrega contínuas."
+      },
+      "conceitosChave": ["Branching: trunk-based development", "Feature flags"],
+      "fundamentacao": "Paul Hammant, trunkbaseddevelopment.com (seções 'Introduction' e 'Short-Lived Feature Branches'); Martin Fowler, artigo 'Continuous Integration'."
+    },
+    {
+      "id": "devops-028",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Docker e Docker Compose",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Considere o Dockerfile abaixo, usado para gerar a imagem relatorio:v1 de uma ferramenta de linha de comando do Tribunal.\nFROM python:3.12-slim\nCOPY gerar.py /app/gerar.py\nENTRYPOINT [\"python\", \"/app/gerar.py\"]\nCMD [\"--formato\", \"pdf\"]\nAo executar docker run relatorio:v1 --formato csv, o processo iniciado no container é",
+      "variantesEnunciado": [
+        "Uma ferramenta de geração de relatórios de auditoria foi empacotada na imagem relatorio:v1 a partir do Dockerfile abaixo.\nFROM python:3.12-slim\nCOPY gerar.py /app/gerar.py\nENTRYPOINT [\"python\", \"/app/gerar.py\"]\nCMD [\"--formato\", \"pdf\"]\nUm técnico executa docker run relatorio:v1 --formato csv. O processo iniciado no container é",
+        "Considere a imagem relatorio:v1, construída com o seguinte Dockerfile:\nFROM python:3.12-slim\nCOPY gerar.py /app/gerar.py\nENTRYPOINT [\"python\", \"/app/gerar.py\"]\nCMD [\"--formato\", \"pdf\"]\nCom o comando docker run relatorio:v1 --formato csv, o processo iniciado no container é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "python /app/gerar.py --formato pdf --formato csv, pois os argumentos do docker run são acrescentados aos definidos em CMD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os argumentos do docker run não se somam aos do CMD: eles os substituem por completo. O resultado é python /app/gerar.py --formato csv."
+        },
+        {
+          "id": "opt-2",
+          "texto": "--formato csv, pois os argumentos do docker run substituem tanto o ENTRYPOINT quanto o CMD da imagem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os argumentos do docker run substituem apenas o CMD; o ENTRYPOINT permanece. Para trocá-lo, é preciso usar a opção --entrypoint do docker run."
+        },
+        {
+          "id": "opt-3",
+          "texto": "python /app/gerar.py --formato pdf, pois o CMD em forma exec não pode ser sobrescrito na linha de comando.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CMD define padrões que são substituídos quando o docker run recebe argumentos, em qualquer forma. Só não haveria substituição se o comando fosse executado sem argumentos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "/bin/sh -c python /app/gerar.py --formato csv, pois o ENTRYPOINT é sempre executado por meio de um shell.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ENTRYPOINT em forma exec, escrito como array JSON, executa o programa diretamente, sem shell, e ele se torna o processo principal do container (PID 1). A forma shell é que usa /bin/sh -c e, nesse caso, ignora o CMD e os argumentos do docker run."
+        },
+        {
+          "id": "opt-5",
+          "texto": "python /app/gerar.py --formato csv, pois os argumentos informados no docker run substituem os do CMD e são repassados ao ENTRYPOINT, que permanece o mesmo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Com ENTRYPOINT em forma exec, o executável da imagem fica fixo, e o CMD fornece apenas os argumentos padrão. Os argumentos passados ao docker run substituem os do CMD e são entregues ao ENTRYPOINT, resultando em python /app/gerar.py --formato csv. Sem argumentos, valeria o padrão --formato pdf; para trocar o próprio executável, seria preciso a opção --entrypoint.",
+          "versaoInvertidaFalsa": "python /app/gerar.py --formato pdf --formato csv, pois os argumentos informados no docker run são acrescentados aos do CMD e repassados ao ENTRYPOINT, que permanece o mesmo."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a interação entre ENTRYPOINT e CMD: os argumentos do docker run substituem o CMD, sem se somar a ele, e não afetam o ENTRYPOINT, que só muda com --entrypoint.",
+      "resumoFlashcard": {
+        "pergunta": "Como interagem ENTRYPOINT e CMD quando o docker run recebe argumentos?",
+        "resposta": "Com ENTRYPOINT em forma exec, o executável fica fixo e o CMD fornece argumentos padrão. Os argumentos do docker run substituem os do CMD e são passados ao ENTRYPOINT; para trocar o executável, usa-se --entrypoint."
+      },
+      "conceitosChave": ["Docker: CMD × ENTRYPOINT"],
+      "fundamentacao": "Dockerfile reference (docs.docker.com), seções 'CMD', 'ENTRYPOINT' e 'Understand how CMD and ENTRYPOINT interact'."
+    },
+    {
+      "id": "devops-029",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao migrar o sistema de gestão de pessoal para Kubernetes, a equipe de TI do Tribunal precisa decidir como fornecer aos Pods parâmetros de configuração e credenciais de acesso ao banco de dados. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico revisa os manifestos Kubernetes do portal de serviços do Tribunal, que usam ConfigMaps, Secrets e namespaces separados por ambiente. Considere as afirmativas abaixo.",
+        "A respeito do tratamento de configurações e de dados sensíveis no Kubernetes, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Em um Secret, os valores do campo data são criptografados com uma chave do cluster, de modo que nem quem tem permissão de leitura sobre o objeto consegue recuperar seu conteúdo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os valores do campo data são apenas codificados em base64, o que qualquer pessoa com acesso de leitura ao objeto reverte com facilidade. Codificação não é criptografia."
+        },
+        {
+          "texto": "Por padrão, os Secrets são armazenados sem criptografia no etcd, motivo pelo qual se recomenda habilitar a criptografia em repouso e restringir o acesso com RBAC.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação adverte que os Secrets ficam, por padrão, sem criptografia no armazenamento do API server (etcd) e recomenda criptografia em repouso e regras de RBAC com privilégio mínimo."
+        },
+        {
+          "texto": "ConfigMaps são o objeto indicado para senhas e certificados, pois o Kubernetes os cifra automaticamente ao gravá-los no etcd.",
+          "verdadeira": false,
+          "explicacao": "Falsa. ConfigMaps guardam dados não confidenciais e não oferecem sigilo nem criptografia. Dados sensíveis vão em Secrets, com as proteções adicionais recomendadas."
+        },
+        {
+          "texto": "Namespaces isolam grupos de recursos em um mesmo cluster, e os nomes dos objetos com escopo de namespace, como Deployments e Services, precisam ser únicos apenas dentro de cada namespace.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O mesmo nome pode existir em namespaces diferentes; objetos de escopo de cluster, como nós e PersistentVolumes, não pertencem a namespace."
+        },
+        {
+          "texto": "Quem tem permissão para criar Pods em um namespace pode, indiretamente, ler os Secrets desse namespace, por exemplo montando-os em um Pod que crie.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação alerta que a autorização para criar Pods, ou objetos que criam Pods, como Deployments, permite ler qualquer Secret do namespace."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: os valores de um Secret são apenas codificados em base64, o que qualquer pessoa com acesso ao objeto reverte. Também omite a V, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a II (Secrets sem criptografia no etcd por padrão, daí a criptografia em repouso e o RBAC), a IV (namespaces e unicidade de nomes por namespace) e a V (criar Pods dá acesso indireto aos Secrets do namespace, alerta feito pela própria documentação). A I confunde base64 com criptografia, e a III atribui aos ConfigMaps um sigilo que eles não têm.",
+          "versaoInvertidaFalsa": "Por padrão, os Secrets são gravados no etcd já criptografados pelo Kubernetes, o que dispensa habilitar a criptografia em repouso e restringir o acesso a eles."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a III são falsas: base64 não é criptografia, e ConfigMaps não oferecem sigilo nem cifragem, pois se destinam a dados de configuração não confidenciais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a IV estão corretas, mas faltou a V: a documentação adverte que quem pode criar Pods em um namespace pode usar esse acesso para ler qualquer Secret dele."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa: ConfigMaps não são criptografados e não devem guardar dados confidenciais. Também omite a II, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca trata base64 como criptografia e atribui sigilo a ConfigMaps. Por padrão, Secrets ficam sem criptografia no etcd; a proteção depende de criptografia em repouso e de RBAC.",
+      "resumoFlashcard": {
+        "pergunta": "Um Secret do Kubernetes é criptografado por padrão?",
+        "resposta": "Não. Os valores ficam em base64, que é só codificação, e por padrão são gravados sem criptografia no etcd. A documentação recomenda habilitar a criptografia em repouso, aplicar RBAC com privilégio mínimo e lembra que quem cria Pods no namespace pode ler os Secrets dele."
+      },
+      "conceitosChave": ["Kubernetes: ConfigMap × Secret", "Kubernetes: namespaces"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Configuration > Secrets (aviso sobre armazenamento sem criptografia no etcd) e ConfigMaps; Concepts > Overview > Working with Kubernetes Objects > Namespaces."
+    },
+    {
+      "id": "devops-030",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "GitHub Actions, GitLab CI/CD e Jenkins",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal criou o arquivo .github/workflows/ci.yml para o sistema de diárias, com os seguintes elementos: on: [push, pull_request]; um job testes com runs-on: ${{ matrix.os }} e strategy: { matrix: { os: [ubuntu-latest, windows-latest], node: [20, 22] } }; um job analise, sem a chave needs; e um job publicar, com needs: [testes, analise] e environment: producao, ambiente configurado com revisor obrigatório. Considerando o comportamento padrão do GitHub Actions, é correto afirmar que",
+      "variantesEnunciado": [
+        "No repositório do portal de dados abertos, um técnico encontrou o workflow .github/workflows/ci.yml com: on: [push, pull_request]; o job testes, com runs-on: ${{ matrix.os }} e strategy: { matrix: { os: [ubuntu-latest, windows-latest], node: [20, 22] } }; o job analise, sem needs; e o job publicar, com needs: [testes, analise] e environment: producao, ambiente que exige aprovação de revisor. Considerando o comportamento padrão do GitHub Actions, é correto afirmar que",
+        "Considere um workflow do GitHub Actions do sistema de protocolo que declara on: [push, pull_request] e três jobs: testes, com runs-on: ${{ matrix.os }} e strategy: { matrix: { os: [ubuntu-latest, windows-latest], node: [20, 22] } }; analise, que não declara needs; e publicar, que declara needs: [testes, analise] e environment: producao, ambiente com revisor obrigatório. Considerando o comportamento padrão do GitHub Actions, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os três jobs são executados em sequência, na ordem em que aparecem no arquivo, e publicar roda logo depois de analise, sem depender do resultado de testes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os jobs de um workflow rodam em paralelo por padrão, e a ordem no arquivo não cria dependência. publicar declara needs: [testes, analise] e, portanto, depende dos dois jobs."
+        },
+        {
+          "id": "opt-2",
+          "texto": "testes gera duas execuções, uma para cada item da lista node, e analise só começa depois que todas elas terminam, porque jobs sem needs aguardam os jobs declarados antes deles.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A matriz gera um job para cada combinação das variáveis: 2 sistemas × 2 versões = 4. E um job sem needs não espera os anteriores; analise roda em paralelo com testes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "testes gera quatro execuções, uma por combinação de sistema e versão, que podem rodar em paralelo com analise; publicar só começa após o sucesso de todas e aguarda a aprovação do revisor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Jobs rodam em paralelo por padrão, e needs cria dependência: publicar só começa se testes e analise terminarem com sucesso; se algum falhar, publicar é pulado. A matriz gera um job por combinação, 2 sistemas × 2 versões = 4. Como publicar referencia o environment producao, com revisor obrigatório, o job aguarda a aprovação e só então executa e acessa os segredos desse ambiente.",
+          "versaoInvertidaFalsa": "testes gera quatro execuções, que rodam em sequência, depois de analise; publicar começa assim que qualquer uma delas termina com sucesso e dispensa aprovação, pois o environment não interfere na execução do job."
+        },
+        {
+          "id": "opt-4",
+          "texto": "se uma das execuções de testes falhar, publicar será executado mesmo assim, pois a chave needs apenas define a ordem de início dos jobs no workflow, e não exige o sucesso dos jobs listados nela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. needs identifica jobs que precisam terminar com sucesso antes de o job rodar; se um deles falhar ou for pulado, os dependentes são pulados, salvo uma condição como if: always()."
+        },
+        {
+          "id": "opt-5",
+          "texto": "publicar é executado sem nenhuma pausa, porque a aprovação de revisores obrigatórios só se aplica a pull requests, e não a jobs que referenciam um environment.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Revisores obrigatórios são uma regra de proteção do environment: o job que o referencia fica aguardando aprovação, e os segredos do ambiente só ficam disponíveis depois dela. Não se confundem com a revisão de pull requests."
+        }
+      ],
+      "pegadinhaFCC": "A banca supõe execução sequencial dos jobs, conta mal as combinações da matriz e ignora que needs exige sucesso e que o environment com revisor bloqueia o job até a aprovação.",
+      "resumoFlashcard": {
+        "pergunta": "No GitHub Actions, como interagem jobs, needs, matrix e environments?",
+        "resposta": "Jobs rodam em paralelo por padrão; needs faz um job esperar o sucesso dos listados. A matriz gera um job por combinação de valores. Um job que referencia um environment com revisores obrigatórios aguarda aprovação antes de executar e de acessar os segredos do ambiente."
+      },
+      "conceitosChave": ["GitHub Actions: jobs, needs e matrix", "GitHub Actions: environments e aprovação"],
+      "fundamentacao": "Documentação do GitHub Actions, 'Workflow syntax for GitHub Actions' (on, jobs.<job_id>.needs, jobs.<job_id>.strategy.matrix e runs-on) e 'Deployments and environments' (required reviewers e environment secrets)."
+    }
+  ]
+}

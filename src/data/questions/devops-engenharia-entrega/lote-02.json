@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "devops-engenharia-entrega",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "devops-011",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "CI/CD e pipelines",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal precisa liberar uma nova versão do sistema de peticionamento eletrônico. Os requisitos são: expor a nova versão inicialmente a cerca de 5% dos usuários, ampliar essa fatia aos poucos enquanto as métricas de erro e de latência são comparadas com as da versão atual e, diante de qualquer anomalia, devolver todo o tráfego à versão anterior. A estratégia de implantação que atende diretamente a esses requisitos é a",
+      "variantesEnunciado": [
+        "Para a nova versão da API de dados abertos do Tribunal, definiu-se que apenas uma pequena parcela das requisições deve chegar à versão nova no início, parcela que será aumentada gradualmente se os indicadores de erro e de latência permanecerem iguais aos da versão em uso; havendo degradação, todas as requisições voltam para a versão anterior. A estratégia de implantação que atende diretamente a esses requisitos é a",
+        "Um técnico precisa propor a forma de liberar a nova versão do módulo de consulta de jurisprudência: começar com uma fração pequena dos usuários, crescer em etapas conforme o comportamento observado nas métricas e, se algo der errado, reencaminhar todos os usuários para a versão antiga. A estratégia de implantação que atende diretamente a esses requisitos é a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "implantação blue-green, em que dois ambientes de produção idênticos se alternam e todo o tráfego é transferido de uma vez para o ambiente com a nova versão, com retorno imediato pela troca inversa do roteador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição do blue-green está certa, mas ele transfere todo o tráfego de uma só vez e não atende à exposição inicial de 5% com ampliação gradual. O retorno rápido pela troca do roteador é uma vantagem real, e é isso que torna o distrator atraente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "liberação canário, na qual uma pequena fração do tráfego vai primeiro para a nova versão e é ampliada aos poucos conforme as métricas, com retorno pelo redirecionamento à versão anterior.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na liberação canário (canary release), a nova versão é implantada em parte da infraestrutura e recebe primeiro um pequeno subconjunto de usuários; a fatia cresce à medida que as métricas confirmam o bom comportamento. Se surgir problema, o rollback consiste em reencaminhar os usuários para a versão antiga até a correção.",
+          "versaoInvertidaFalsa": "liberação canário, na qual todo o tráfego é transferido de uma só vez para a nova versão, mantendo-se um ambiente idêntico em espera para o retorno pela troca do roteador."
+        },
+        {
+          "id": "opt-3",
+          "texto": "implantação recriada (recreate), em que todas as instâncias da versão atual são encerradas antes da subida da nova, o que simplifica o retorno e evita a convivência de versões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na estratégia recreate, a versão antiga é toda encerrada antes de a nova subir, o que causa indisponibilidade e expõe 100% dos usuários de uma vez. Não há fração inicial nem comparação de métricas entre versões."
+        },
+        {
+          "id": "opt-4",
+          "texto": "atualização gradual em lotes (rolling update), que substitui instâncias aos poucos e, por isso, garante por si só a escolha da fração de usuários e a comparação de métricas entre as versões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade. O rolling update troca instâncias em lotes, mas segue em frente sem controlar a porcentagem de usuários nem pausar para comparar métricas; por padrão, no Kubernetes, avança até concluir a troca. Controle fino da fração e análise de métricas são justamente o que caracteriza o canário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "liberação por feature flag, que dispensa nova implantação porque a versão nova do sistema é ativada diretamente no navegador de cada usuário, sem passar pelo servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Feature flags ligam e desligam funcionalidades de um código já implantado e são avaliadas pela aplicação, em geral no servidor ou por um serviço de configuração. Elas não substituem a implantação de uma nova versão do sistema nem funcionam como descrito."
+        }
+      ],
+      "pegadinhaFCC": "O blue-green também permite retorno rápido, mas troca todo o tráfego de uma vez. O detalhe decisivo é a fração pequena e crescente de usuários, com comparação de métricas, que caracteriza o canário.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre implantação blue-green e liberação canário?",
+        "resposta": "No blue-green, há dois ambientes idênticos, e todo o tráfego passa de uma vez para o novo; o rollback é trocar de volta. No canário, a nova versão recebe primeiro uma pequena fração dos usuários, ampliada aos poucos conforme as métricas; o rollback é redirecionar todos para a versão anterior."
+      },
+      "conceitosChave": ["Implantação: canary × blue-green", "Implantação: rollback"],
+      "fundamentacao": "Martin Fowler, bliki 'CanaryRelease' e 'BlueGreenDeployment' (martinfowler.com); documentação do Kubernetes, 'Deployments' (estratégias RollingUpdate e Recreate)."
+    },
+    {
+      "id": "devops-012",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Automação de build e de testes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No pipeline do sistema de gestão de diárias do Tribunal, escrito em Node.js, cada execução baixa novamente todas as dependências do projeto, cerca de 900 pacotes npm, o que consome boa parte dos 12 minutos de build. A equipe quer reduzir esse tempo sem correr o risco de usar dependências desatualizadas quando o arquivo package-lock.json for alterado. A medida mais adequada é",
+      "variantesEnunciado": [
+        "O pipeline do portal de transparência, desenvolvido em Node.js, gasta oito dos onze minutos de cada execução reinstalando os pacotes npm. A equipe deseja acelerar o build, mas exige que qualquer alteração no package-lock.json resulte na instalação das novas versões. A medida mais adequada é",
+        "Um técnico constatou que o estágio de build do sistema de protocolo, uma aplicação Node.js, refaz o download de todas as dependências a cada commit, mesmo quando nada mudou nelas. Ele precisa reduzir esse tempo sem comprometer a atualização das dependências quando o package-lock.json mudar. A medida mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "versionar a pasta node_modules no repositório Git, garantindo que o runner encontre as dependências prontas em cada execução, sem precisar de cache no servidor de integração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Versionar node_modules incha o repositório, mistura artefatos gerados com código-fonte e pode trazer binários compilados para outra plataforma. As dependências devem ser reconstituídas a partir do lockfile, e o cache do pipeline é o mecanismo adequado para acelerar isso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "usar uma chave de cache fixa, igual para todas as execuções, de modo que as dependências sejam baixadas uma única vez e reaproveitadas indefinidamente pelos builds seguintes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com chave fixa, o cache não é invalidado quando o package-lock.json muda, e o build pode usar dependências desatualizadas, exatamente o risco que a equipe quer evitar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "publicar a pasta de dependências como artefato do job de build, para que execuções futuras do pipeline a recuperem, já que artefatos são o mecanismo próprio de reaproveitamento entre execuções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Artefatos servem para guardar e repassar resultados de jobs, como pacotes gerados e relatórios, dentro do pipeline ou para download. O reaproveitamento de dependências entre execuções é papel do cache, como destacam as documentações do GitLab e do GitHub Actions."
+        },
+        {
+          "id": "opt-4",
+          "texto": "remover o package-lock.json do repositório para que o gerenciador sempre resolva as versões mais recentes, aproveitando melhor o cache do registro público de pacotes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sem o lockfile, cada build pode resolver versões diferentes, o que destrói a reprodutibilidade, e o npm ci deixa de funcionar, pois exige o arquivo. O lockfile é justamente a referência estável para a chave do cache."
+        },
+        {
+          "id": "opt-5",
+          "texto": "configurar cache das dependências com chave derivada do hash do package-lock.json, de modo que ele seja reaproveitado enquanto o arquivo não mudar e recriado quando mudar.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Uma chave de cache calculada a partir do hash do lockfile, como hashFiles('**/package-lock.json') no GitHub Actions ou cache:key:files no GitLab, faz o pipeline reaproveitar as dependências enquanto elas não mudam. Quando o arquivo é alterado, a chave muda, o cache antigo deixa de ser usado e as novas versões são baixadas.",
+          "versaoInvertidaFalsa": "configurar cache das dependências com uma chave fixa, de modo que ele seja reaproveitado indefinidamente e recriado só quando alguém o apagar manualmente."
+        }
+      ],
+      "pegadinhaFCC": "Cache com chave fixa acelera, mas pode servir dependências velhas; versionar node_modules ou apagar o lockfile compromete a reprodutibilidade. A chave baseada no hash do lockfile une velocidade e correção.",
+      "resumoFlashcard": {
+        "pergunta": "Como usar cache de dependências no pipeline sem correr o risco de usar pacotes desatualizados?",
+        "resposta": "Usando uma chave de cache derivada do hash do arquivo de lock, como o package-lock.json. Enquanto o arquivo não muda, o cache é reaproveitado; quando muda, a chave muda e as dependências são baixadas de novo."
+      },
+      "conceitosChave": ["Build: cache de dependências", "GitLab CI/CD: artifacts × cache"],
+      "fundamentacao": "Documentação do GitHub Actions, 'Dependency caching' (actions/cache e função hashFiles); documentação do GitLab, 'Caching in GitLab CI/CD' (cache:key:files e diferença entre cache e artifacts)."
+    },
+    {
+      "id": "devops-013",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Infraestrutura como código e gerenciamento de configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Ferramentas de gerenciamento de configuração diferem quanto à arquitetura de execução. Comparando o Ansible com o Puppet e o Chef em suas configurações típicas, é correto afirmar que",
+      "variantesEnunciado": [
+        "Na escolha de uma ferramenta para padronizar a configuração dos servidores do Tribunal, um técnico comparou o Ansible com o Puppet e o Chef. Considerando as arquiteturas típicas dessas ferramentas, é correto afirmar que",
+        "A respeito das diferenças de arquitetura entre Ansible, Puppet e Chef, em suas implantações mais comuns, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Ansible dispensa agente residente nos nós gerenciados e, por padrão, envia as tarefas a partir de um nó de controle, em geral via SSH, enquanto Puppet e Chef costumam usar um agente instalado em cada nó que consulta periodicamente um servidor central.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Ansible não deixa agente nem daemon nos nós: conecta-se a partir do nó de controle, por SSH em Linux ou WinRM em Windows, envia os módulos, executa-os e os remove. O modo padrão é push, embora exista o ansible-pull. Puppet e Chef, na arquitetura clássica, usam um agente em cada nó que busca periodicamente no servidor a configuração desejada e a aplica (modelo pull).",
+          "versaoInvertidaFalsa": "o Ansible depende de um agente residente em cada nó gerenciado, que consulta periodicamente um servidor central, enquanto Puppet e Chef dispensam agente e enviam as tarefas por SSH a partir de um nó de controle."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Ansible exige a instalação de um agente em cada servidor gerenciado, que consulta o nó de controle em intervalos regulares, ao contrário de Puppet e Chef, que operam sem agente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte as arquiteturas. O Ansible é conhecido justamente por não exigir agente; quem tradicionalmente usa agente nos nós, consultando um servidor, são o Puppet e o Chef."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os três operam sem agente e apenas por SSH, e a diferença entre eles se limita à linguagem: YAML no Ansible e Ruby nos outros dois.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Puppet e Chef, na arquitetura típica, usam agente. A comparação de linguagens também erra: o Puppet tem linguagem declarativa própria, nos manifestos .pp, e o Chef usa uma DSL baseada em Ruby."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Ansible descreve as configurações em Ruby, em receitas agrupadas em cookbooks, enquanto o Chef usa playbooks escritos em YAML.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os vocabulários estão trocados. O Ansible organiza as tarefas em playbooks YAML, e o Chef usa receitas (recipes) escritas em DSL Ruby e agrupadas em cookbooks."
+        },
+        {
+          "id": "opt-5",
+          "texto": "por não ter agente, o Ansible não consegue garantir idempotência, propriedade que só é obtida em ferramentas com agente, como o Puppet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A idempotência não depende de agente. Os módulos do Ansible são, em geral, idempotentes: verificam o estado atual e só alteram o necessário, de modo que reexecutar um playbook não muda um sistema que já está no estado desejado."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte as arquiteturas (com agente × sem agente) e troca os vocabulários (playbook × receita e cookbook). Também associa, sem fundamento, a idempotência à presença de agente.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença de arquitetura entre o Ansible e o Puppet ou o Chef?",
+        "resposta": "O Ansible não usa agente: o nó de controle se conecta por SSH ou WinRM e envia as tarefas, no modo push, que é o padrão. Puppet e Chef, na arquitetura clássica, têm um agente em cada nó que consulta periodicamente o servidor e aplica a configuração, no modelo pull."
+      },
+      "conceitosChave": ["Configuração: com agente × sem agente", "IaC: idempotência"],
+      "fundamentacao": "Documentação oficial do Ansible, glossário ('Push Mode', 'Pull Mode', 'Modules' e 'Idempotency'); documentações do Puppet (agente e servidor) e do Chef Infra (Chef Infra Client e Chef Infra Server)."
+    },
+    {
+      "id": "devops-014",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Observabilidade: métricas, logs e traces",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal decidiu padronizar a telemetria dos seus sistemas com o OpenTelemetry. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um projeto de observabilidade para os sistemas de fiscalização, um técnico avaliou a adoção do OpenTelemetry. Considere as afirmativas abaixo.",
+        "A respeito do OpenTelemetry, padrão aberto para geração, coleta e exportação de telemetria, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O OpenTelemetry suporta, como sinais, traces, métricas e logs, além de baggage, usado para propagar pares chave-valor entre serviços.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação lista traces, métricas, logs e baggage como sinais suportados; eventos e profiles aparecem como sinais em desenvolvimento ou em proposta."
+        },
+        {
+          "texto": "O OpenTelemetry Collector recebe, processa e exporta telemetria de forma neutra quanto a fornecedor, organizando pipelines com receivers, processors e exporters.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Collector evita manter vários agentes proprietários: recebe dados em formatos como OTLP, Jaeger e Prometheus, processa-os (lotes, filtros, enriquecimento) e os exporta para um ou mais backends."
+        },
+        {
+          "texto": "A instrumentação zero-code, antes chamada de automática, exige alterar o código-fonte para chamar a API do OpenTelemetry em cada função de interesse.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Quem exige alterar o código é a instrumentação code-based, antes chamada de manual, que usa a API e o SDK. A zero-code obtém telemetria das bibliotecas e do ambiente sem modificar a aplicação; as duas podem ser usadas juntas."
+        },
+        {
+          "texto": "O OpenTelemetry é, ele próprio, um backend completo de armazenamento e visualização, que substitui ferramentas como o Prometheus e o Jaeger.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A documentação afirma que o OpenTelemetry não é um backend de observabilidade. Ele gera, coleta e exporta telemetria, e o armazenamento e a visualização ficam com ferramentas como Prometheus, Jaeger ou soluções comerciais."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que descreve a instrumentação code-based (com alteração do código) atribuindo-a à zero-code. A zero-code não exige modificar a aplicação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está correta, mas a IV não: o OpenTelemetry não é backend de armazenamento e visualização. Além disso, ficou de fora a I, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (traces, métricas, logs e baggage como sinais suportados) e a II (Collector neutro quanto a fornecedor, com receivers, processors e exporters). A III troca zero-code por code-based, e a IV apresenta o OpenTelemetry como backend, o que a própria documentação nega.",
+          "versaoInvertidaFalsa": "O OpenTelemetry Collector depende de um fornecedor específico e apenas repassa a telemetria recebida, sem etapas de processamento entre o recebimento e a exportação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas: a III confunde os tipos de instrumentação, e a IV atribui ao OpenTelemetry o papel de backend, que ele não tem."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a II estão corretas, mas a IV não: o OpenTelemetry exporta dados para backends como Prometheus e Jaeger e não os substitui."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca zero-code por code-based e apresenta o OpenTelemetry como backend de armazenamento. Ele gera, coleta e exporta telemetria; armazenar e analisar fica com backends como Prometheus e Jaeger.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as peças centrais do OpenTelemetry e o que ele não é?",
+        "resposta": "O OpenTelemetry oferece APIs e SDKs, instrumentação zero-code e code-based, o protocolo OTLP e o Collector, que recebe, processa e exporta telemetria. Ele não é backend de armazenamento ou de visualização: envia os dados para ferramentas como Prometheus, Jaeger ou soluções comerciais."
+      },
+      "conceitosChave": ["OpenTelemetry: sinais e Collector", "OpenTelemetry: instrumentação"],
+      "fundamentacao": "Documentação do OpenTelemetry: 'What is OpenTelemetry?', Concepts > Signals, Concepts > Instrumentation (zero-code e code-based) e Collector (Introduction e Architecture)."
+    },
+    {
+      "id": "devops-015",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Monitoramento, alertas e indicadores técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Segundo o livro de Site Reliability Engineering do Google, se for possível medir apenas quatro métricas de um sistema voltado ao usuário, elas devem ser os quatro sinais de ouro: a ……, tempo necessário para atender a uma requisição; o ……, medida da demanda imposta ao sistema, como requisições por segundo; os ……, que expressam a taxa de requisições que falham; e a ……, que indica quão cheio está o serviço em relação ao recurso mais restrito. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao montar o painel de monitoramento do portal de serviços do Tribunal, um técnico seguiu os quatro sinais de ouro do SRE: a ……, que mede quanto tempo as requisições levam para ser atendidas; o ……, que indica a demanda, por exemplo em requisições por segundo; os ……, que contabilizam as requisições malsucedidas, explícitas ou implícitas; e a ……, que mostra o quanto o recurso mais restrito está próximo do limite. Preenchem, correta e respectivamente, as lacunas:",
+        "Na definição dos painéis da API de consulta processual, adotaram-se os sinais de ouro do monitoramento: a ……, observada separadamente para requisições bem-sucedidas e para as que falham; o ……, medido em chamadas por segundo; os ……, incluindo respostas com conteúdo incorreto; e a ……, cujo aumento muitas vezes se anuncia por crescimento da latência. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "latência − throughput − erros − utilização",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Utilização é um dos itens do método USE, e não um dos sinais de ouro: mede o tempo em que o recurso esteve ocupado, enquanto a saturação mede quão perto do limite o serviço está, inclusive por trabalho enfileirado. Throughput também não é o termo usado pelo SRE, que fala em tráfego."
+        },
+        {
+          "id": "opt-2",
+          "texto": "disponibilidade − tráfego − erros − saturação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Disponibilidade é um objetivo derivado, normalmente expresso em um SLO, e não o tempo para atender a uma requisição. A primeira lacuna é a latência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "latência − tráfego − incidentes − capacidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Incidentes são eventos de gestão de serviço, e não a taxa de requisições que falham, que é o sinal erros. Capacidade é o limite do recurso, enquanto a saturação mede o quanto desse limite está em uso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "latência − tráfego − erros − saturação",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os quatro sinais de ouro do capítulo 'Monitoring Distributed Systems' são latência (separando a das requisições bem-sucedidas da das que falham), tráfego (demanda, como requisições por segundo), erros (falhas explícitas, implícitas ou por política) e saturação (quão cheio está o recurso mais restrito, muitas vezes antecipada pelo aumento de latência).",
+          "versaoInvertidaFalsa": "latência − tráfego − erros − utilização"
+        },
+        {
+          "id": "opt-5",
+          "texto": "duração − volume − erros − utilização",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa mistura os métodos RED (taxa, erros e duração) e USE (utilização, saturação e erros). Os sinais de ouro do SRE são latência, tráfego, erros e saturação."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura os sinais de ouro com os métodos RED (taxa, erros, duração) e USE (utilização, saturação, erros). No SRE, os quatro sinais são latência, tráfego, erros e saturação.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os quatro sinais de ouro do monitoramento segundo o SRE do Google?",
+        "resposta": "Latência (tempo para atender a requisição, separando sucesso e falha), tráfego (demanda, como requisições por segundo), erros (taxa de falhas explícitas, implícitas ou por política) e saturação (quão cheio está o recurso mais restrito)."
+      },
+      "conceitosChave": ["Monitoramento: sinais de ouro", "Monitoramento: RED × USE"],
+      "fundamentacao": "Google, Site Reliability Engineering (2016), cap. 6 ('Monitoring Distributed Systems'), seção 'The Four Golden Signals'."
+    },
+    {
+      "id": "devops-016",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Estratégias de branching (Git Flow e trunk-based)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O sistema de controle de prazos processuais do Tribunal é desenvolvido segundo o modelo Git Flow, com os branches permanentes main (master, no texto original do modelo) e develop. A versão 3.2 está em produção, develop já acumula funcionalidades da próxima versão e não há branch de release aberto. Foi descoberta em produção uma falha grave no cálculo de prazos, que precisa ser corrigida imediatamente, sem levar junto as funcionalidades ainda não liberadas. Segundo o Git Flow, a equipe deve",
+      "variantesEnunciado": [
+        "No portal de transparência, desenvolvido com Git Flow (branches permanentes main e develop), a versão 5.0 está em produção, e develop já reúne mudanças da versão 5.1; não há branch de release aberto. Uma vulnerabilidade crítica encontrada em produção exige correção urgente, que não pode levar as mudanças ainda não liberadas. Segundo o Git Flow, a equipe deve",
+        "Uma equipe que segue o Git Flow, com main refletindo a produção e develop recebendo as funcionalidades da próxima versão, identificou um erro grave no módulo de emissão de certidões já em produção. Não existe branch de release em andamento, e a correção precisa sair antes da próxima versão planejada. Segundo o Git Flow, a equipe deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "criar um branch hotfix a partir de develop, corrigir a falha e integrá-lo a main, pois develop já contém a base de código mais atual do projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Partir de develop levaria para produção as funcionalidades ainda não liberadas que estão nesse branch, exatamente o que se quer evitar. No Git Flow, o hotfix nasce do branch que reflete a produção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "criar um branch feature a partir de develop, corrigir a falha e aguardar a abertura do próximo branch de release para levá-la à produção junto com as novas funcionalidades.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fluxo de feature e release serve ao desenvolvimento planejado e atrasaria a correção até a próxima versão. Para defeitos graves em produção, o Git Flow prevê o branch hotfix, que permite liberar a correção imediatamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "corrigir a falha diretamente em main, sem branch auxiliar, e não integrar a correção a develop, já que develop será substituído pelo próximo release.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O modelo não prevê commits diretos em main, e develop não é substituído pelo release: é dele que os releases nascem. Sem levar a correção a develop, o defeito voltaria na próxima versão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "criar um branch release a partir de main, aplicar nele a correção e integrá-lo apenas a main, porque branches de release nunca retornam a develop.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Branches de release partem de develop e, ao final, são integrados a main e de volta a develop. O branch adequado a uma correção urgente em produção é o hotfix."
+        },
+        {
+          "id": "opt-5",
+          "texto": "criar um branch hotfix a partir de main, corrigir a falha e integrá-lo a main, com nova tag de versão, e também a develop, para que a correção não se perca.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No Git Flow, o hotfix sai de main (master), que reflete o código em produção, recebe a correção e um incremento de versão e é integrado a main, com tag, e a develop, para que a próxima versão já contenha a correção. Se houvesse um branch de release aberto, a correção iria para ele em vez de develop.",
+          "versaoInvertidaFalsa": "criar um branch hotfix a partir de develop, corrigir a falha e integrá-lo somente a main, com nova tag de versão, pois develop receberá a correção automaticamente na próxima versão."
+        }
+      ],
+      "pegadinhaFCC": "O hotfix nasce de main, e não de develop, para não arrastar funcionalidades não liberadas, e precisa voltar também para develop. Esquecer esse segundo merge faz o defeito reaparecer na versão seguinte.",
+      "resumoFlashcard": {
+        "pergunta": "No Git Flow, de onde sai e para onde volta um branch hotfix?",
+        "resposta": "Sai de main (master no texto original), que reflete o que está em produção. Depois da correção, é integrado a main, com nova tag de versão, e a develop. Se houver um branch de release aberto, a correção vai para ele em vez de develop."
+      },
+      "conceitosChave": ["Branching: Git Flow"],
+      "fundamentacao": "Vincent Driessen, 'A successful Git branching model' (nvie.com, 2010), seções 'The main branches' e 'Hotfix branches'."
+    },
+    {
+      "id": "devops-017",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Pull/merge requests e revisão de código",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um repositório do Tribunal no GitHub, o arquivo .github/CODEOWNERS do branch main contém, nesta ordem, as linhas '* @tce/devs', '/infra/ @tce/plataforma' e '*.tf @tce/seguranca'. A regra de proteção de main exige a aprovação de code owners. Um desenvolvedor abre contra main, fora do modo rascunho, um pull request que altera apenas o arquivo infra/rede/main.tf. Nesse caso,",
+      "variantesEnunciado": [
+        "Um técnico configurou a revisão obrigatória em um repositório de automação de infraestrutura do Tribunal no GitHub. No branch main, o arquivo .github/CODEOWNERS traz, nesta ordem, '* @tce/devs', '/infra/ @tce/plataforma' e '*.tf @tce/seguranca', e a proteção de main exige aprovação de code owners. Um pull request que não está em rascunho, aberto contra main, modifica somente infra/rede/main.tf. Nesse caso,",
+        "Considere um repositório no GitHub cujo branch main tem proteção que exige revisão de code owners e cujo arquivo .github/CODEOWNERS contém, em sequência, as linhas '* @tce/devs', '/infra/ @tce/plataforma' e '*.tf @tce/seguranca'. Um pull request pronto para revisão, com destino a main, altera unicamente o arquivo infra/rede/main.tf. Nesse caso,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a revisão é solicitada às três equipes, porque cada linha que casa com o arquivo acrescenta seus próprios responsáveis, e o merge passa a depender da aprovação de todas elas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No GitHub, os responsáveis não se somam entre linhas: para cada arquivo vale apenas a última linha do CODEOWNERS que casa com ele. A alternativa atrai quem imagina uma união de regras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a revisão é solicitada a @tce/seguranca, pois, quando várias linhas casam com o arquivo, prevalece a última, e a aprovação dessa equipe é exigida para o merge.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O arquivo infra/rede/main.tf casa com as três linhas, mas, segundo a documentação do GitHub, a ordem importa e o último padrão que casa tem precedência. Como o CODEOWNERS está no branch base do pull request, @tce/seguranca é solicitada automaticamente, e a proteção de main exige a aprovação de um code owner do arquivo.",
+          "versaoInvertidaFalsa": "a revisão é solicitada a @tce/devs, pois, quando várias linhas casam com o arquivo, prevalece a primeira, e a aprovação dessa equipe é exigida para o merge."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a revisão é solicitada a @tce/plataforma, pois a regra de diretório, por ser mais específica que a de extensão, prevalece sobre as demais linhas do arquivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GitHub não aplica critério de especificidade entre padrões; o que decide é a posição no arquivo, e a última linha que casa prevalece. Para que @tce/plataforma fosse a responsável, a linha '/infra/' teria de vir depois de '*.tf'."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a revisão é solicitada a @tce/devs, já que a primeira linha que casa com o arquivo define o responsável, e as linhas seguintes são ignoradas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o inverso: a primeira linha que casa só valeria se nenhuma posterior também casasse. É por isso que se costuma pôr a regra genérica '*' no início e as específicas depois."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma revisão é solicitada automaticamente, pois o CODEOWNERS só tem efeito quando está na raiz do repositório, e não na pasta .github.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GitHub aceita o arquivo CODEOWNERS na pasta .github, na raiz ou em docs, e procura nessa ordem. A pasta .github é, inclusive, a localização recomendada para proteger o próprio arquivo."
+        }
+      ],
+      "pegadinhaFCC": "No GitHub, vale a última linha do CODEOWNERS que casa com o arquivo; não há soma de responsáveis nem preferência pela regra mais específica. O arquivo pode ficar em .github, na raiz ou em docs.",
+      "resumoFlashcard": {
+        "pergunta": "Quando várias linhas do CODEOWNERS casam com um arquivo, qual delas vale no GitHub?",
+        "resposta": "Vale a última linha que casa com o arquivo: a ordem importa, e a regra posterior tem precedência. Os code owners dessa linha são solicitados automaticamente como revisores, e a proteção de branch pode exigir a aprovação deles para o merge."
+      },
+      "conceitosChave": ["Revisão de código: CODEOWNERS", "GitHub: proteção de branch"],
+      "fundamentacao": "Documentação do GitHub, 'About code owners' (localização do arquivo, uso do branch base, sintaxe e precedência da última regra) e 'About protected branches' (exigência de revisão de code owners)."
+    },
+    {
+      "id": "devops-018",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Docker e Docker Compose",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico observa que o build da imagem do sistema de diárias do Tribunal leva vários minutos mesmo quando apenas um arquivo de código-fonte é alterado. O Dockerfile atual é:\nFROM node:22-alpine\nWORKDIR /app\nCOPY . .\nRUN npm ci\nCMD [\"node\", \"server.js\"]\nPara que alterações apenas no código-fonte reaproveitem o cache da instalação de dependências, o técnico deve",
+      "variantesEnunciado": [
+        "No pipeline do portal de dados abertos, todo commit que altera só arquivos .js reconstrói a imagem praticamente do zero, reinstalando todos os pacotes. O Dockerfile é:\nFROM node:22-alpine\nWORKDIR /app\nCOPY . .\nRUN npm ci\nCMD [\"node\", \"server.js\"]\nPara que alterações apenas no código-fonte reaproveitem o cache da instalação de dependências, deve-se",
+        "Uma equipe percebeu que o docker build do sistema de protocolo demora o mesmo tempo com ou sem mudança nas dependências, pois a instalação dos pacotes é sempre refeita. O Dockerfile utilizado é:\nFROM node:22-alpine\nWORKDIR /app\nCOPY . .\nRUN npm ci\nCMD [\"node\", \"server.js\"]\nPara que alterações apenas no código-fonte reaproveitem o cache da instalação de dependências, a equipe deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "trocar COPY por ADD, instrução que compara o conteúdo dos arquivos e, por isso, preserva o cache das instruções seguintes mesmo que o código-fonte tenha mudado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ADD e COPY têm o mesmo comportamento de cache para arquivos do contexto: se o conteúdo copiado muda, a camada e todas as seguintes são invalidadas. O ADD acrescenta recursos como download de URLs e extração de tar, e não preservação de cache."
+        },
+        {
+          "id": "opt-2",
+          "texto": "unir WORKDIR, COPY e RUN em uma única instrução RUN, porque o Docker só armazena em cache a última camada de cada imagem construída.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cache de build guarda o resultado de cada instrução, e não apenas da última camada. Juntar tudo em um só passo pioraria a situação, pois qualquer mudança refaria a instalação inteira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "copiar primeiro apenas package.json e package-lock.json, executar o RUN npm ci e, só depois, copiar o restante do código-fonte para a imagem.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Cada instrução gera uma camada, e, quando uma camada muda, todas as seguintes são refeitas. Com o COPY de todo o projeto antes do npm ci, qualquer alteração de código invalida a instalação. Copiando antes só os manifestos de dependência, a camada do npm ci continua em cache enquanto eles não mudam, e só a cópia final do código é refeita.",
+          "versaoInvertidaFalsa": "copiar primeiro todo o código-fonte, executar o RUN npm ci e, só depois, copiar package.json e package-lock.json para a imagem."
+        },
+        {
+          "id": "opt-4",
+          "texto": "mover a instrução CMD para o início do arquivo, pois instruções de metadados posicionadas antes do COPY evitam a invalidação do cache das camadas posteriores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A posição do CMD não protege o cache das outras instruções. O que invalida a instalação é o COPY de todo o projeto vir antes do npm ci; a solução é reordenar as cópias, do que muda menos para o que muda mais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "executar o build sempre com a opção --no-cache, garantindo que as dependências sejam reinstaladas apenas quando o package-lock.json mudar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A opção --no-cache desativa o cache por completo e força a reexecução de todas as instruções, sempre. É o contrário do que se pretende, e a alternativa se contradiz ao prometer reinstalação seletiva."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece atalhos: trocar COPY por ADD, juntar instruções, mover o CMD ou desativar o cache. O que preserva o cache é ordenar as instruções do que muda menos para o que muda mais.",
+      "resumoFlashcard": {
+        "pergunta": "Por que se copia o arquivo de dependências antes do código-fonte em um Dockerfile?",
+        "resposta": "Porque, quando uma camada muda, todas as seguintes são reconstruídas. Copiando primeiro só o manifesto e o lockfile e instalando as dependências, essa camada continua em cache enquanto eles não mudam, e alterações no código refazem apenas as camadas finais."
+      },
+      "conceitosChave": ["Docker: camadas e cache de build"],
+      "fundamentacao": "Documentação do Docker, Build > Cache ('Docker build cache' e 'Cache invalidation') e 'Building best practices'."
+    },
+    {
+      "id": "devops-019",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O serviço de consulta de processos do Tribunal roda em Pods Kubernetes. A aplicação leva até 3 minutos para carregar índices na inicialização e, em produção, eventualmente entra em deadlock: o processo continua ativo, mas para de responder. Além disso, em picos de carga, ela precisa deixar de receber novas requisições por alguns segundos, sem ser reiniciada, até esvaziar a fila interna. A configuração de probes que atende aos três requisitos é",
+      "variantesEnunciado": [
+        "Uma API do sistema de auditoria, executada em Kubernetes, demora cerca de 2 minutos para aquecer caches ao iniciar, às vezes trava sem encerrar o processo e, sob sobrecarga, deve parar temporariamente de receber tráfego sem ser reiniciada. A configuração de probes que atende aos três requisitos é",
+        "Um técnico precisa configurar as verificações de saúde de um container do sistema de protocolo em Kubernetes. A aplicação tem inicialização lenta, pode ficar travada com o processo ainda em execução e, em momentos de sobrecarga, deve sair do balanceamento por alguns segundos, sem reinício. A configuração de probes que atende aos três requisitos é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "startup probe para tolerar a carga inicial, já que liveness e readiness só passam a ser executadas depois que ela tem sucesso; liveness probe para reiniciar o container travado; e readiness probe para retirar temporariamente o Pod dos endpoints do Service.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação do Kubernetes, havendo startup probe, as probes liveness e readiness só são executadas depois que ela tem sucesso, o que protege a inicialização lenta de reinícios prematuros. A liveness que falha além da tolerância faz o kubelet reiniciar o container, o remédio para o deadlock. A readiness que falha retira o IP do Pod dos EndpointSlices dos Services, sem reinício, e o Pod volta a receber tráfego quando a probe tem sucesso de novo.",
+          "versaoInvertidaFalsa": "startup probe para tolerar a carga inicial; readiness probe para reiniciar o container travado; e liveness probe para retirar temporariamente o Pod dos endpoints do Service, sem reiniciá-lo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "liveness probe com período longo para cobrir a inicialização e o deadlock, e readiness probe para reiniciar o container nos picos de carga.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A readiness probe não reinicia o container: apenas tira o Pod do tráfego. E alongar a liveness para tolerar a inicialização atrasa a detecção do deadlock durante toda a vida do container; a documentação indica a startup probe para esse caso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "readiness probe para a inicialização, startup probe para detectar o deadlock durante toda a vida do container e liveness probe para os picos de carga.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A startup probe só é executada na inicialização e não acompanha o container depois disso, logo não detecta um deadlock posterior. Usar liveness nos picos causaria reinícios desnecessários."
+        },
+        {
+          "id": "opt-4",
+          "texto": "apenas liveness probe, pois ela também remove o Pod do Service enquanto falha e o devolve quando volta a responder, sem reinício.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A liveness probe, ao falhar além da tolerância, provoca o reinício do container; remover o Pod dos endpoints sem reiniciar é o papel da readiness. Uma única probe não atende aos três requisitos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "startup probe para a inicialização e liveness probe para os picos de carga, já que a liveness retira o Pod dos endpoints sem reiniciá-lo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas a liveness não retira o Pod dos endpoints: ela reinicia o container. Além disso, faltou tratar o deadlock e o afastamento temporário do tráfego, que pedem liveness e readiness, respectivamente."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os efeitos das probes. Liveness reinicia; readiness só tira o Pod do tráfego; startup suspende as outras duas até a aplicação iniciar. Usar liveness para picos de carga provoca reinícios desnecessários.",
+      "resumoFlashcard": {
+        "pergunta": "O que acontece quando falham as probes liveness, readiness e startup no Kubernetes?",
+        "resposta": "Se a liveness falha além da tolerância, o kubelet reinicia o container. Se a readiness falha, o Pod sai dos endpoints dos Services, sem reinício. A startup, enquanto não tem sucesso, suspende as outras duas e, se falhar, o container é encerrado e segue a política de reinício."
+      },
+      "conceitosChave": ["Kubernetes: probes liveness, readiness e startup"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Workloads > Pods > Pod Lifecycle, seção 'Container probes' (startup, liveness e readiness)."
+    },
+    {
+      "id": "devops-020",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Ambientes de desenvolvimento, homologação e produção",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A metodologia The Twelve-Factor App inclui o fator paridade entre desenvolvimento e produção (dev/prod parity). De acordo com esse fator, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao planejar os ambientes de desenvolvimento, homologação e produção de um novo sistema do Tribunal, a equipe adotou o fator 'Dev/prod parity' da metodologia Twelve-Factor App. Segundo esse fator, é correto afirmar que",
+        "Em uma avaliação da gestão de ambientes de TI, um técnico verificou a aderência ao princípio de paridade entre desenvolvimento e produção do Twelve-Factor App. Segundo esse princípio, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o ambiente de desenvolvimento deve usar serviços de apoio mais leves que os de produção, como um banco embarcado no lugar do banco relacional, para acelerar o trabalho do desenvolvedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É exatamente o que o fator desaconselha: o desenvolvedor que segue o Twelve-Factor resiste à tentação de usar serviços de apoio diferentes entre desenvolvimento e produção, porque as diferenças fazem surgir falhas que só aparecem em produção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a homologação deve ser dispensada quando desenvolvimento e produção forem idênticos, pois a paridade torna desnecessária qualquer etapa intermediária de validação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A paridade não elimina ambientes nem etapas de validação. O fator menciona desenvolvimento, staging (homologação) e produção e pede que todos sejam o mais semelhantes possível."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a paridade se refere apenas às versões do código-fonte, sendo irrelevantes as diferenças de sistema operacional, banco de dados e filas entre os ambientes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lacuna de ferramentas, com pilhas e serviços de apoio diferentes, é uma das três que o fator manda reduzir, ao lado das lacunas de tempo e de pessoal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os ambientes devem ser mantidos tão semelhantes quanto possível, reduzindo as lacunas de tempo, de pessoal e de ferramentas entre desenvolvimento e produção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O fator X do Twelve-Factor App pede que desenvolvimento, staging e produção sejam tão parecidos quanto possível e aponta três lacunas a reduzir: de tempo (código que demora a chegar à produção), de pessoal (quem escreve não acompanha a implantação) e de ferramentas (pilhas diferentes entre ambientes). Quanto menor a diferença, menor o risco de defeitos que só aparecem em produção.",
+          "versaoInvertidaFalsa": "os ambientes podem diferir livremente em ferramentas e serviços de apoio, pois o fator trata apenas de reduzir o tempo entre escrever o código e implantá-lo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cada ambiente deve ter seu próprio build do código, compilado com parâmetros específicos, para refletir com fidelidade as particularidades de cada servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Twelve-Factor separa build, release e run: o mesmo build é combinado com a configuração de cada ambiente. Compilar por ambiente aumenta as diferenças, ao contrário do que a paridade busca."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta como boa prática usar serviços de apoio mais leves em desenvolvimento ou compilar por ambiente. O fator pede o contrário: ambientes semelhantes, com os mesmos serviços de apoio e o mesmo build.",
+      "resumoFlashcard": {
+        "pergunta": "O que recomenda o fator 'Dev/prod parity' do Twelve-Factor App?",
+        "resposta": "Manter desenvolvimento, homologação e produção tão semelhantes quanto possível, reduzindo três lacunas: de tempo (implantar em horas ou minutos), de pessoal (quem desenvolve acompanha a implantação) e de ferramentas (os mesmos serviços de apoio em todos os ambientes)."
+      },
+      "conceitosChave": ["Ambientes: paridade dev/prod"],
+      "fundamentacao": "The Twelve-Factor App (12factor.net), fator X, 'Dev/prod parity', e fator V, 'Build, release, run'."
+    }
+  ]
+}

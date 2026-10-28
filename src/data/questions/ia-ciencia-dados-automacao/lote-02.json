@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "ia-dados-011",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aprendizado supervisionado, não supervisionado e por reforço",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Ao treinar uma árvore de decisão sem limite de profundidade para classificar processos de licitação quanto ao risco, um analista obteve acurácia de 99% no conjunto de treinamento e de 71% no conjunto de validação. O diagnóstico e a medida de correção mais adequados são, respectivamente,",
+      "variantesEnunciado": [
+        "Uma árvore de decisão treinada sem poda para classificar notas de empenho como regulares ou suspeitas acertou quase todos os exemplos de treinamento, mas apenas cerca de 70% dos exemplos de validação. O diagnóstico e a medida de correção mais adequados são, respectivamente,",
+        "Na homologação de um modelo de árvore de decisão que prioriza denúncias, a equipe observou desempenho quase perfeito nos dados usados no treinamento e desempenho bem inferior em dados que o modelo nunca viu. O diagnóstico e a medida de correção mais adequados são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "subajuste (underfitting) e aumento da profundidade máxima da árvore, para que ela capture mais padrões dos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No subajuste o modelo vai mal já no treinamento, porque é simples demais para os padrões dos dados. Aqui o desempenho no treino é quase perfeito; aumentar a profundidade agravaria o problema real, que é o excesso de complexidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "sobreajuste (overfitting) e incorporação do conjunto de validação ao treinamento, avaliando o modelo novamente sobre os mesmos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O diagnóstico está certo, mas a medida não: avaliar o modelo sobre os mesmos dados usados no ajuste produz estimativa otimista e esconde o sobreajuste. Os dados de validação servem justamente para medir a generalização em exemplos não vistos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "sobreajuste (overfitting) e limitação da complexidade do modelo, como a poda ou a restrição da profundidade máxima da árvore.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A grande diferença entre o desempenho no treino (99%) e na validação (71%) indica que o modelo memorizou particularidades e ruídos do treinamento: é o sobreajuste, associado a alta variância. Reduzir a complexidade (poda, profundidade máxima, mínimo de amostras por folha), regularizar, obter mais dados ou aplicar parada antecipada são formas de melhorar a generalização.",
+          "versaoInvertidaFalsa": "subajuste (underfitting), pois a acurácia muito superior no treinamento indica que o modelo é simples demais e deve ganhar profundidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "viés elevado (alto bias) e remoção de toda forma de regularização, para reduzir a diferença entre treino e validação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Viés elevado corresponde ao subajuste, em que o erro é alto tanto no treino quanto na validação. Remover a regularização aumenta a liberdade do modelo e tende a ampliar, e não a reduzir, a distância entre treino e validação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "vazamento de dados (data leakage) e aumento do número de atributos, para que a validação se aproxime do treinamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O vazamento costuma produzir o efeito inverso, com validação irrealisticamente boa, porque informação do alvo contamina os atributos. Acrescentar atributos a uma árvore já sobreajustada tende a piorar a generalização."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca sobreajuste por subajuste e oferece como remédio medidas que aumentam a complexidade ou contaminam a avaliação. Desempenho ótimo no treino e ruim na validação é sobreajuste.",
+      "resumoFlashcard": {
+        "pergunta": "Como reconhecer e tratar o sobreajuste (overfitting)?",
+        "resposta": "Há sobreajuste quando o desempenho é muito melhor no treino do que na validação. Trata-se reduzindo a complexidade (poda, profundidade máxima), regularizando, obtendo mais dados ou usando parada antecipada."
+      },
+      "conceitosChave": ["ML: overfitting × underfitting", "ML: regularização"],
+      "fundamentacao": "Géron, A. Mãos à obra: aprendizado de máquina com Scikit-Learn, Keras & TensorFlow, caps. 1, 4 e 6 (sobreajuste, regularização e árvores de decisão); documentação do scikit-learn, 'Decision Trees' (parâmetros max_depth e ccp_alpha)."
+    },
+    {
+      "id": "ia-dados-012",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "LGPD aplicada à IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Um órgão público pretende treinar um modelo de IA com diversas categorias de dados de cidadãos. Segundo a Lei nº 13.709/2018 (LGPD), são dados pessoais sensíveis, quando vinculados a uma pessoa natural,",
+      "variantesEnunciado": [
+        "Na elaboração do inventário de dados de um sistema de IA de um órgão estadual, a equipe precisa marcar quais atributos são dados pessoais sensíveis. Nos termos da LGPD, são dados pessoais sensíveis, quando vinculados a uma pessoa natural,",
+        "Em auditoria sobre o tratamento de dados em um projeto de aprendizado de máquina, um técnico verifica a classificação dos atributos usados. De acordo com a Lei nº 13.709/2018, são dados pessoais sensíveis, quando vinculados a uma pessoa natural,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o dado biométrico, como a imagem facial usada para autenticação, e o dado referente à saúde.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 5º, II, da LGPD define como sensível o dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual e dado genético ou biométrico, quando vinculado a uma pessoa natural. O tratamento desses dados segue as hipóteses mais restritas do art. 11.",
+          "versaoInvertidaFalsa": "o número do CPF e o endereço residencial, pois a LGPD qualifica como sensível todo dado que permita identificar diretamente o titular."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o número do CPF e o endereço residencial, por permitirem a identificação direta do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CPF e endereço são dados pessoais, porque identificam o titular, mas não estão no rol de dados sensíveis do art. 5º, II. A alternativa confunde capacidade de identificação com sensibilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a renda mensal e o histórico de crédito, por revelarem a situação financeira do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Renda e histórico de crédito são dados pessoais de natureza financeira e merecem cuidado, mas a LGPD não os inclui entre os sensíveis. A proteção do crédito, aliás, é base legal prevista no art. 7º, X."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a geolocalização do celular e o endereço IP, por indicarem os locais frequentados pelo titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Geolocalização e endereço IP podem ser dados pessoais e revelar hábitos, mas não constam do rol do art. 5º, II. A alternativa atrai quem associa sensibilidade a risco de vigilância."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o estado civil e a escolaridade, por integrarem o perfil socioeconômico do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Estado civil e escolaridade são dados pessoais comuns. Para serem sensíveis, os dados teriam de se referir, por exemplo, a origem racial, religião, opinião política, saúde, vida sexual, genética ou biometria."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta dados que identificam o titular ou revelam sua situação financeira e localização como se fossem sensíveis. O rol do art. 5º, II, é específico: origem racial, religião, opinião política, filiação, saúde, vida sexual, genética e biometria.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os dados pessoais sensíveis segundo a LGPD?",
+        "resposta": "Os dados sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização religiosa, filosófica ou política, saúde, vida sexual, genética ou biometria, quando vinculados a uma pessoa natural (art. 5º, II)."
+      },
+      "conceitosChave": ["LGPD: dados sensíveis"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 5º, I e II; art. 7º, X; art. 11."
+    },
+    {
+      "id": "ia-dados-013",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Redes neurais e deep learning",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do perceptron de camada única, modelo de neurônio artificial proposto por Rosenblatt, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em uma aula sobre a história das redes neurais, um instrutor apresentou o perceptron de Rosenblatt, com uma única camada de pesos ajustáveis e função degrau na saída. Sobre esse modelo, é correto afirmar que",
+        "Considerando o neurônio artificial do tipo perceptron simples, sem camadas ocultas, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aprende qualquer função lógica, inclusive o OU exclusivo (XOR), desde que receba exemplos suficientes e use taxa de aprendizado adequada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O teorema de convergência do perceptron garante aprendizado apenas quando as classes são linearmente separáveis. O XOR não é: nenhuma reta separa os casos (0,1) e (1,0) dos casos (0,0) e (1,1), qualquer que seja a quantidade de exemplos ou a taxa de aprendizado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "dispensa pesos sinápticos, pois a saída depende apenas da soma direta das entradas comparada a um limiar fixo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O perceptron calcula uma soma ponderada das entradas, com pesos ajustáveis e viés, e aplica uma função degrau. O aprendizado consiste justamente em ajustar esses pesos a partir dos erros de classificação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "exige a retropropagação do erro por várias camadas ocultas para ajustar seus parâmetros durante o treinamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O perceptron de camada única não tem camadas ocultas e usa a regra de aprendizado do perceptron, que corrige os pesos diretamente pelo erro da saída. A retropropagação é o método de treinamento das redes multicamadas (MLP)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "classifica corretamente apenas conjuntos linearmente separáveis, razão pela qual não resolve o problema do OU exclusivo (XOR).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Como calcula uma soma ponderada seguida de limiar, o perceptron de camada única traça uma fronteira de decisão linear (um hiperplano) e só separa classes linearmente separáveis. Minsky e Papert (1969) destacaram essa limitação com o XOR, que exige redes com camada oculta e ativação não linear, treinadas por retropropagação.",
+          "versaoInvertidaFalsa": "resolve o problema do OU exclusivo (XOR) com uma única camada, pois qualquer conjunto de dados se torna linearmente separável com treinamento suficiente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "usa obrigatoriamente a função softmax na saída, o que lhe permite resolver problemas não lineares com uma só camada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O perceptron clássico usa função degrau, e não softmax. Além disso, trocar a função de saída de uma única camada não cria fronteiras não lineares: a não linearidade útil vem de camadas ocultas com ativações não lineares."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que mais dados ou mais treino permitem ao perceptron simples resolver o XOR. A limitação é estrutural (fronteira linear) e só se supera com camada oculta e ativação não linear.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o perceptron de camada única não resolve o XOR?",
+        "resposta": "Porque traça apenas fronteiras de decisão lineares, e o XOR não é linearmente separável. A solução exige uma rede multicamadas, com camada oculta e ativação não linear, treinada por retropropagação."
+      },
+      "conceitosChave": ["Redes neurais: perceptron", "Redes neurais: separabilidade linear"],
+      "fundamentacao": "Rosenblatt, F. The Perceptron (Psychological Review, 1958); Minsky, M.; Papert, S. Perceptrons (1969); Goodfellow, I.; Bengio, Y.; Courville, A. Deep Learning (2016), seção 6.1 (aprendendo o XOR)."
+    },
+    {
+      "id": "ia-dados-014",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Engenharia de prompts e de contexto e RAG",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um assistente com RAG responde a dúvidas sobre os normativos de um Tribunal de Contas. Em testes, ele fundamentou uma resposta em uma resolução já revogada: a base vetorial contém tanto o texto vigente quanto versões antigas, e os trechos de ambas têm alta similaridade com a pergunta. A medida mais adequada para corrigir a causa do problema é",
+      "variantesEnunciado": [
+        "Um chatbot com geração aumentada por recuperação, usado na central de atendimento de um órgão de controle, citou um manual de procedimentos que já foi substituído. Verificou-se que o índice vetorial guarda as duas edições do manual, cujos trechos são semanticamente muito parecidos. A medida mais adequada para corrigir a causa do problema é",
+        "Em homologação, um assistente baseado em RAG que orienta servidores sobre diárias respondeu com base em portaria revogada. A base indexada mantém a portaria antiga e a nova, e ambas são recuperadas com escores de similaridade próximos. A medida mais adequada para corrigir a causa do problema é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aumentar a temperatura do modelo, para que ele explore respostas alternativas ao trecho recuperado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Temperatura mais alta só aumenta a variabilidade da geração; não muda quais trechos são recuperados. O modelo continuaria recebendo o texto revogado como contexto, agora com respostas menos previsíveis."
+        },
+        {
+          "id": "opt-2",
+          "texto": "associar metadados de vigência aos trechos indexados e filtrar a recuperação pelos textos em vigor, exibindo na resposta a fonte citada.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A causa está na base de conhecimento e na recuperação: versões antigas e vigentes competem por similaridade semântica. Marcar cada trecho com metadados (norma, versão, situação, data de vigência) e filtrar a busca pelos vigentes, ou retirar da base os revogados, resolve a origem do erro. A citação da fonte permite ao usuário conferir a resposta.",
+          "versaoInvertidaFalsa": "fazer o ajuste fino do modelo com todas as versões dos normativos, pois o RAG não permite filtrar a recuperação por metadados como a vigência do texto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "fazer o ajuste fino do modelo com todas as versões dos normativos, para que ele memorize o histórico e escolha a versão certa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ajuste fino incorpora padrões aos pesos, mas não garante que o modelo distinga versões vigentes e revogadas, além de exigir novo treinamento a cada alteração normativa. É justamente o tipo de conhecimento volátil que o RAG resolve melhor, desde que a base esteja curada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aumentar a sobreposição entre os trechos (chunks), já que a falha decorre da fragmentação excessiva dos documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sobreposição entre trechos ajuda a não cortar ideias ao meio, mas não distingue versões de um mesmo normativo. O problema descrito não é fragmentação: os dois trechos foram recuperados por serem semanticamente parecidos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "retirar das respostas a citação das fontes, para evitar que o usuário seja induzido a consultar textos revogados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Remover as citações reduziria a transparência e impediria o usuário de perceber o erro, sem corrigir a recuperação do texto revogado. Citar as fontes é boa prática do RAG, justamente por permitir a verificação."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece ajustes no modelo (temperatura, ajuste fino) para um problema que está na base e na recuperação. Em RAG, conteúdo desatualizado se corrige com curadoria e metadados, e a citação de fontes é aliada da verificação.",
+      "resumoFlashcard": {
+        "pergunta": "Como evitar que um assistente com RAG use normativo revogado?",
+        "resposta": "Curando a base de conhecimento: atribuir metadados de versão e vigência aos trechos e filtrar a recuperação pelos textos vigentes (ou retirar os revogados), mantendo a citação das fontes para conferência."
+      },
+      "conceitosChave": ["RAG: indexação e recuperação", "RAG: curadoria da base"],
+      "fundamentacao": "Lewis, P. et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (NeurIPS, 2020); documentação de bancos vetoriais sobre busca por similaridade combinada com filtros de metadados."
+    },
+    {
+      "id": "ia-dados-015",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Big Data e processamento distribuído",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Na caracterização clássica de Big Data, proposta por Doug Laney em 2001, …… refere-se à quantidade de dados acumulados; …… refere-se à rapidez com que os dados são gerados e precisam ser processados; e …… refere-se à heterogeneidade de formatos e fontes. Modelos posteriores, de cinco Vs, acrescentaram ……, relativa à confiabilidade e à qualidade dos dados, e o valor que eles geram para a organização. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Segundo a formulação de Doug Laney (2001), o Big Data caracteriza-se por ……, isto é, a grande quantidade de dados; por ……, isto é, a alta taxa de geração e de processamento; e por ……, isto é, a diversidade de formatos, como textos, imagens e registros estruturados. No modelo de cinco Vs, somam-se ……, ligada à confiabilidade e à qualidade dos dados, e o valor. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao justificar uma plataforma de dados para o controle externo, um técnico citou os três Vs originais de Laney: …… (quantidade de registros), …… (rapidez com que chegam e precisam ser tratados) e …… (heterogeneidade de formatos e fontes). Lembrou ainda que o modelo de cinco Vs inclui ……, ligada à confiabilidade e à qualidade dos dados, e o valor. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "variedade − velocidade − volume − veracidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca volume por variedade. A quantidade de dados é o volume; a variedade diz respeito à heterogeneidade de formatos (estruturados, semiestruturados e não estruturados) e de fontes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "volume − variedade − velocidade − visualização",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca velocidade por variedade nas lacunas centrais e inclui visualização, que aparece apenas em alguns modelos estendidos (de sete Vs ou mais) e não se refere à confiabilidade dos dados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "volume − velocidade − variedade − variabilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os três primeiros termos estão certos, mas a variabilidade (mudança no significado ou no fluxo dos dados ao longo do tempo) aparece em modelos mais extensos e não é o V associado à confiabilidade e à qualidade, que é a veracidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "velocidade − volume − variedade − veracidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte volume e velocidade. Volume é a quantidade de dados acumulados; velocidade é a taxa com que são gerados e precisam ser processados, como em fluxos contínuos de transações."
+        },
+        {
+          "id": "opt-5",
+          "texto": "volume − velocidade − variedade − veracidade",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os 3 Vs de Laney (2001) são volume (quantidade), velocidade (rapidez de geração e de processamento) e variedade (heterogeneidade de formatos e fontes). O modelo de 5 Vs acrescenta veracidade (confiabilidade e qualidade) e valor (utilidade para a organização). Outros autores propõem listas maiores, por isso a banca costuma indicar o modelo cobrado.",
+          "versaoInvertidaFalsa": "Na caracterização de Big Data, velocidade é a quantidade de dados acumulados e volume é a rapidez com que eles são gerados e precisam ser processados."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha volume, velocidade e variedade e oferece Vs de modelos estendidos (variabilidade, visualização) no lugar da veracidade, que é o V da confiabilidade no modelo de cinco Vs.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os 3 Vs de Laney e o que o modelo de 5 Vs acrescenta?",
+        "resposta": "Volume (quantidade), velocidade (rapidez de geração e de processamento) e variedade (heterogeneidade de formatos e fontes). O modelo de 5 Vs acrescenta veracidade (confiabilidade e qualidade) e valor (utilidade dos dados)."
+      },
+      "conceitosChave": ["Big Data: os Vs"],
+      "fundamentacao": "Laney, D. 3D Data Management: Controlling Data Volume, Velocity and Variety (META Group, 2001); literatura de Big Data sobre o modelo de cinco Vs (veracidade e valor)."
+    },
+    {
+      "id": "ia-dados-016",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Fundamentos de inteligência artificial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em um curso de formação sobre fundamentos de inteligência artificial, foram apresentadas as abordagens simbólica e conexionista e alguns marcos históricos da área. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao preparar material didático sobre a evolução da inteligência artificial, um técnico resumiu características das abordagens simbólica e conexionista e a origem da expressão 'inteligência artificial'. Considere as afirmativas abaixo.",
+        "A respeito dos paradigmas simbólico e conexionista da inteligência artificial e de sua história, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Os sistemas especialistas são exemplo da abordagem simbólica: representam o conhecimento de forma explícita, em uma base de regras, e usam um motor de inferência para derivar conclusões.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sistemas especialistas, como o MYCIN, separam a base de conhecimento (regras e fatos explícitos) do motor de inferência, que aplica as regras por encadeamento para frente ou para trás."
+        },
+        {
+          "texto": "Na abordagem conexionista, o conhecimento é escrito manualmente por especialistas na forma de regras lógicas, o que torna as decisões dos modelos facilmente rastreáveis.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Na abordagem conexionista, típica das redes neurais, o conhecimento fica distribuído nos pesos aprendidos a partir de dados, e não em regras escritas por especialistas, o que dificulta a interpretação das decisões."
+        },
+        {
+          "texto": "A IA simbólica dispensa qualquer representação explícita de conhecimento, pois aprende padrões diretamente de grandes volumes de dados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A descrição corresponde ao aprendizado de máquina, em especial à abordagem conexionista. A IA simbólica baseia-se justamente em representação explícita de conhecimento e em manipulação de símbolos por regras ou lógica."
+        },
+        {
+          "texto": "A expressão 'inteligência artificial' difundiu-se a partir da proposta de um encontro de pesquisa realizado em Dartmouth, em 1956, de que John McCarthy foi um dos autores.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A proposta, assinada em 1955 por McCarthy, Minsky, Rochester e Shannon, usou a expressão 'artificial intelligence' para o encontro de verão realizado em 1956 no Dartmouth College, considerado o marco de fundação da área."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: na abordagem conexionista o conhecimento está nos pesos aprendidos, e não em regras escritas por especialistas. Além disso, a alternativa omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas. A II atribui ao conexionismo características da IA simbólica, e a III faz o inverso, atribuindo à IA simbólica o aprendizado a partir de dados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I descreve corretamente os sistemas especialistas (base de conhecimento explícita e motor de inferência), e a IV, o marco de Dartmouth. A II e a III trocam as características das abordagens: a simbólica usa conhecimento explícito, e a conexionista aprende pesos a partir de dados.",
+          "versaoInvertidaFalsa": "Os sistemas especialistas são exemplo da abordagem conexionista, pois aprendem automaticamente pesos a partir de dados, sem base de regras explícita."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa: a IA simbólica depende de representação explícita do conhecimento. A descrição de aprendizado a partir de grandes volumes de dados corresponde ao aprendizado de máquina conexionista."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as afirmativas II e III, que são falsas, e omite a I, que descreve corretamente os sistemas especialistas como exemplo da IA simbólica."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as características das abordagens: regras explícitas e motor de inferência são da IA simbólica; aprendizado de pesos a partir de dados é do conexionismo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre as abordagens simbólica e conexionista da IA?",
+        "resposta": "A simbólica representa o conhecimento de forma explícita (regras, lógica) e raciocina por inferência, como nos sistemas especialistas. A conexionista, típica das redes neurais, aprende pesos a partir de dados, e o conhecimento fica distribuído, o que dificulta a interpretação."
+      },
+      "conceitosChave": ["Fundamentos de IA: simbólica × conexionista", "Fundamentos de IA: sistemas especialistas"],
+      "fundamentacao": "Russell, S.; Norvig, P. Inteligência Artificial: uma abordagem moderna, 4ª ed., cap. 1, seção 1.3 (história da IA, Dartmouth e sistemas especialistas); McCarthy, J. et al. A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)."
+    },
+    {
+      "id": "ia-dados-017",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Processamento de linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A ouvidoria de um Tribunal de Contas recebe milhares de manifestações em texto livre. A equipe de dados quer (1) extrair automaticamente nomes de pessoas, órgãos, municípios, datas e valores mencionados em cada manifestação e (2) identificar se o tom de cada texto é de elogio, de reclamação ou neutro. As tarefas de processamento de linguagem natural adequadas a (1) e (2) são, respectivamente,",
+      "variantesEnunciado": [
+        "Um núcleo de dados pretende processar denúncias recebidas por formulário eletrônico para (1) destacar nomes de empresas, servidores, municípios, datas e valores citados e (2) classificar cada denúncia como positiva, negativa ou neutra quanto ao tom. As tarefas de PLN adequadas a (1) e (2) são, respectivamente,",
+        "Na análise de comentários de cidadãos sobre serviços públicos, a equipe quer (1) marcar automaticamente as menções a órgãos, pessoas, locais e datas e (2) medir se cada comentário expressa satisfação, insatisfação ou neutralidade. As tarefas de processamento de linguagem natural adequadas a (1) e (2) são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "análise de sentimento e reconhecimento de entidades nomeadas (NER).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as tarefas. Localizar e classificar menções a pessoas, órgãos, lugares, datas e valores é o reconhecimento de entidades nomeadas; identificar a polaridade ou o tom do texto é a análise de sentimento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "lematização e modelagem de tópicos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lematização é etapa de pré-processamento que reduz palavras ao lema, e não extrai entidades. A modelagem de tópicos (como LDA) descobre temas recorrentes em uma coleção, e não o tom de elogio ou de reclamação de cada texto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tokenização e tradução automática.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tokenização apenas segmenta o texto em unidades e não identifica que um trecho é nome de órgão ou valor monetário. A tradução automática converte o texto para outro idioma, sem classificar seu tom."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reconhecimento de entidades nomeadas (NER) e sumarização automática.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira tarefa está certa, mas a sumarização produz versão condensada do texto e não o classifica como elogio, reclamação ou neutro. A classificação do tom é a análise de sentimento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "reconhecimento de entidades nomeadas (NER) e análise de sentimento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O reconhecimento de entidades nomeadas (NER) localiza no texto menções a entidades e as classifica em categorias como pessoa, organização, local, data e valor. A análise de sentimento classifica a polaridade ou o tom do texto (positivo, negativo, neutro). Ambas podem alimentar a triagem automática das manifestações.",
+          "versaoInvertidaFalsa": "análise de sentimento e reconhecimento de entidades nomeadas, pois a análise de sentimento extrai nomes, órgãos, datas e valores e o NER classifica o tom do texto."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte NER e análise de sentimento e oferece etapas de pré-processamento (tokenização, lematização) como se fossem tarefas de extração ou de classificação.",
+      "resumoFlashcard": {
+        "pergunta": "O que fazem o NER e a análise de sentimento?",
+        "resposta": "O NER localiza e classifica menções a entidades (pessoas, organizações, locais, datas, valores). A análise de sentimento classifica a polaridade ou o tom do texto (positivo, negativo ou neutro)."
+      },
+      "conceitosChave": ["PLN: NER", "PLN: análise de sentimento"],
+      "fundamentacao": "Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), capítulos sobre classificação de texto e análise de sentimento e sobre rotulação de sequências e reconhecimento de entidades nomeadas."
+    },
+    {
+      "id": "ia-dados-018",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ciência de dados: coleta, preparação e exploração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere o atributo 'prazo de execução', em dias, de uma base de contratos, com valor mínimo de 20, valor máximo de 120, média de 50 e desvio-padrão de 10. Após a normalização min-max para o intervalo [0, 1] e após a padronização pelo escore z, um contrato com prazo de 70 dias terá, respectivamente, os valores",
+      "variantesEnunciado": [
+        "Na preparação de dados para um modelo, um analista transformou o atributo 'dias de atraso na entrega', cujo mínimo é 20, o máximo é 120, a média é 50 e o desvio-padrão é 10. Para um registro com 70 dias, os valores após a normalização min-max (intervalo [0, 1]) e após a padronização (escore z) são, respectivamente,",
+        "Um atributo numérico de uma base de auditoria tem mínimo 20, máximo 120, média 50 e desvio-padrão 10. Aplicadas a normalização min-max para [0, 1] e a padronização por escore z, o valor 70 corresponde, respectivamente, a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "0,5 e 2,0.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Normalização min-max: (x − mín)/(máx − mín) = (70 − 20)/(120 − 20) = 50/100 = 0,5. Padronização (escore z): (x − média)/desvio-padrão = (70 − 50)/10 = 2,0. A primeira reescala os dados para [0, 1]; a segunda os centra na média 0 com desvio-padrão 1 e indica que 70 está dois desvios acima da média.",
+          "versaoInvertidaFalsa": "2,0 e 0,5, pois a normalização min-max divide a distância até a média pelo desvio-padrão e a padronização usa o mínimo e o máximo da série."
+        },
+        {
+          "id": "opt-2",
+          "texto": "2,0 e 0,5.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os resultados das duas transformações. O valor 2,0 é o escore z (dois desvios-padrão acima da média), e 0,5 é a posição relativa de 70 no intervalo entre 20 e 120."
+        },
+        {
+          "id": "opt-3",
+          "texto": "0,7 e 2,0.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor 0,7 resulta de dividir 70 pela amplitude (100) sem subtrair o mínimo. Na normalização min-max, subtrai-se o mínimo antes de dividir pela amplitude: (70 − 20)/100 = 0,5."
+        },
+        {
+          "id": "opt-4",
+          "texto": "0,5 e 0,2.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O escore z divide a distância até a média pelo desvio-padrão (10), e não pela amplitude (100). O valor 0,2 vem de (70 − 50)/100, mistura indevida das duas fórmulas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cerca de 0,58 e 2,0.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor de cerca de 0,58 resulta de dividir 70 pelo máximo (120), erro comum que ignora o mínimo da série. A normalização min-max correta é (70 − 20)/(120 − 20) = 0,5."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as fórmulas: a min-max usa o mínimo e a amplitude; o escore z usa a média e o desvio-padrão. Os distratores resultam de esquecer de subtrair o mínimo ou de dividir pela amplitude no escore z.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre normalização min-max e padronização por escore z?",
+        "resposta": "A min-max reescala os valores para [0, 1] com (x − mín)/(máx − mín) e depende diretamente dos extremos da série. O escore z centra os dados na média 0 com desvio-padrão 1, com (x − média)/desvio-padrão."
+      },
+      "conceitosChave": ["Preparação de dados: normalização × padronização"],
+      "fundamentacao": "Documentação do scikit-learn, 'Preprocessing data' (MinMaxScaler e StandardScaler); Han, J.; Kamber, M.; Pei, J. Data Mining: Concepts and Techniques, cap. 3 (normalização de dados); contas conferidas por script."
+    },
+    {
+      "id": "ia-dados-019",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ética, IA responsável, explicabilidade e governança",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um modelo foi treinado com o histórico de fiscalizações de um órgão para indicar quais estabelecimentos devem ser vistoriados. Para evitar discriminação, a equipe excluiu dos dados o atributo 'raça/cor do responsável', mas manteve o bairro e a renda média da região. Após a implantação, verificou-se que estabelecimentos de bairros periféricos são indicados com frequência muito maior, e o histórico mostra que essas regiões eram mais fiscalizadas no passado. Sobre essa situação, é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma prefeitura usa modelo treinado com vistorias anteriores para priorizar a fiscalização sanitária. A equipe removeu o atributo 'sexo do proprietário', mas manteve atributos como CEP e tipo de atividade. Após a implantação, estabelecimentos de certas regiões passaram a ser indicados com frequência muito maior, e o histórico mostra que essas regiões já eram mais vistoriadas. Sobre essa situação, é correto afirmar que",
+        "Em auditoria de um sistema que seleciona beneficiários para verificação de cadastro, constatou-se que o atributo 'raça/cor' foi excluído do treinamento, mas o modelo usa o município de residência e a renda familiar. Beneficiários de algumas regiões são selecionados com frequência muito maior, e o histórico de verificações sempre se concentrou nessas regiões. Sobre essa situação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a exclusão do atributo sensível assegura a equidade do modelo, e a diferença observada decorre exclusivamente de maior incidência real de irregularidades.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Retirar o atributo sensível (a chamada equidade por desconhecimento) não basta quando outras variáveis carregam a mesma informação. Além disso, se o histórico registra mais fiscalizações em certas regiões, também registra mais irregularidades encontradas ali, o que não prova maior incidência real."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o problema é de sobreajuste, e basta aumentar a regularização do modelo para eliminar a diferença de tratamento entre os grupos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sobreajuste diz respeito à generalização para dados novos, e não à disparidade entre grupos. Um modelo bem regularizado pode reproduzir fielmente um viés presente nos dados de treinamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a explicabilidade do modelo é irrelevante no caso, pois a disparidade só poderia ser aferida com acesso integral ao código-fonte do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A disparidade pode ser medida a partir das próprias saídas, comparando taxas de indicação e de acerto por grupo, sem acesso ao código. Técnicas de explicabilidade ajudam a identificar quais atributos, como a localização, sustentam as indicações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "atributos correlacionados ao excluído, como a localização, podem servir de proxies dele, e o histórico pode carregar viés da fiscalização passada; convém medir a equidade por grupo e revisar os dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Há dois mecanismos de viés: variáveis como localização e renda podem atuar como proxies (substitutos) do atributo sensível excluído, e o histórico reflete onde se fiscalizou mais, o que gera ciclo de retroalimentação (viés histórico ou de seleção). A resposta adequada é auditar dados e resultados, medir métricas de equidade por grupo (taxas de indicação, de falsos positivos etc.) e ajustar dados, atributos ou limiares, com supervisão humana.",
+          "versaoInvertidaFalsa": "a exclusão do atributo sensível assegura que o modelo não discrimine, pois variáveis como localização e renda não podem carregar informação sobre o atributo excluído."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a disparidade só seria preocupante se o atributo sensível tivesse sido mantido nos dados, pois sem ele não há como o modelo discriminar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: mesmo sem o atributo, o modelo pode discriminar por meio de variáveis correlacionadas. A ausência do dado sensível, aliás, dificulta medir a disparidade, e por isso muitas abordagens o mantêm separado apenas para auditoria."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que basta excluir o atributo sensível para garantir equidade. Variáveis correlacionadas funcionam como proxies, e dados históricos de fiscalização carregam o viés de onde se fiscalizou mais.",
+      "resumoFlashcard": {
+        "pergunta": "Excluir o atributo sensível garante que o modelo não discrimine?",
+        "resposta": "Não. Outras variáveis (localização, renda) podem funcionar como proxies, e o histórico pode refletir vieses de decisões passadas. É preciso medir métricas de equidade por grupo, auditar dados e resultados e manter supervisão humana."
+      },
+      "conceitosChave": ["IA responsável: vieses", "IA responsável: equidade"],
+      "fundamentacao": "Barocas, S.; Hardt, M.; Narayanan, A. Fairness and Machine Learning: Limitations and Opportunities (MIT Press, 2023); Mehrabi, N. et al. A Survey on Bias and Fairness in Machine Learning (ACM Computing Surveys, 2021); Princípios de IA da OCDE (2019, rev. 2024), princípio de respeito aos direitos humanos e valores democráticos, incluindo equidade e privacidade."
+    },
+    {
+      "id": "ia-dados-020",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estratégia Brasileira de Inteligência Artificial (EBIA)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico prepara nota sobre as políticas nacionais de inteligência artificial para subsidiar o planejamento de TI de um Tribunal de Contas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em capacitação sobre o arcabouço federal de inteligência artificial, foram comparadas a Estratégia Brasileira de Inteligência Artificial (EBIA) e o Plano Brasileiro de Inteligência Artificial (PBIA). Considere as afirmativas abaixo.",
+        "Ao elaborar estudo técnico preliminar para uma solução de IA, a equipe de um órgão de controle levantou características das políticas nacionais sobre o tema. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A Estratégia Brasileira de Inteligência Artificial (EBIA) foi instituída por lei ordinária aprovada pelo Congresso Nacional, que classifica os sistemas de IA por grau de risco e prevê sanções administrativas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A EBIA foi instituída pela Portaria MCTI nº 4.617/2021, alterada pela Portaria MCTI nº 4.979/2021. Como estratégia de governo, orienta ações e não cria classificação de risco nem sanções."
+        },
+        {
+          "texto": "A EBIA organiza-se em nove eixos temáticos, dos quais três são transversais (legislação, regulação e uso ético; governança de IA; aspectos internacionais) e seis são verticais.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os eixos transversais permeiam toda a estratégia, e os seis verticais tratam de frentes específicas, como educação, força de trabalho, PD&I, setores produtivos, poder público e segurança pública."
+        },
+        {
+          "texto": "Aplicação no poder público e segurança pública figuram entre os eixos verticais da EBIA.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os dois temas são eixos verticais da EBIA, ao lado de força de trabalho e capacitação, PD&I e empreendedorismo, aplicação nos setores produtivos e educação."
+        },
+        {
+          "texto": "O Plano Brasileiro de Inteligência Artificial (PBIA 2024–2028) limitou-se a reproduzir os eixos da EBIA, sem prever investimentos nem ações voltadas aos serviços públicos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O PBIA, conhecido como 'IA para o Bem de Todos', prevê investimentos da ordem de R$ 23 bilhões entre 2024 e 2028 e tem eixo dedicado à IA para melhoria dos serviços públicos, além de infraestrutura, formação, inovação empresarial e governança."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa: a EBIA foi instituída por portaria do MCTI e não classifica sistemas por risco nem prevê sanções. A alternativa também omite a III, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A EBIA (Portaria MCTI nº 4.617/2021) tem nove eixos: três transversais (legislação, regulação e uso ético; governança de IA; aspectos internacionais) e seis verticais, entre os quais aplicação no poder público e segurança pública. A I é falsa porque a EBIA é estratégia instituída por portaria, sem sanções, e a IV é falsa porque o PBIA prevê cerca de R$ 23 bilhões e eixo próprio para os serviços públicos.",
+          "versaoInvertidaFalsa": "A EBIA organiza-se em nove eixos, dos quais seis são transversais, entre eles aplicação no poder público e segurança pública, e três são verticais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que confunde a EBIA, estratégia instituída por portaria, com uma lei de regulação baseada em risco e com sanções, figura que não existe na EBIA."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: o PBIA 2024–2028 prevê investimentos da ordem de R$ 23 bilhões e inclui eixo de IA para melhoria dos serviços públicos. A alternativa ainda omite a II, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, que é falsa, pois o PBIA não se limitou a repetir a EBIA: tem eixos, metas e investimentos próprios, inclusive para os serviços públicos."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à EBIA características de um marco regulatório (lei, classificação de risco, sanções) e minimiza o PBIA. A EBIA é estratégia instituída por portaria, com três eixos transversais e seis verticais.",
+      "resumoFlashcard": {
+        "pergunta": "Como se organiza a EBIA e o que a distingue do PBIA?",
+        "resposta": "A EBIA (Portaria MCTI nº 4.617/2021) tem nove eixos: três transversais (legislação, regulação e uso ético; governança; aspectos internacionais) e seis verticais, como aplicação no poder público e segurança pública. O PBIA 2024–2028, 'IA para o Bem de Todos', é um plano com investimentos da ordem de R$ 23 bilhões e eixo para os serviços públicos."
+      },
+      "conceitosChave": ["EBIA: eixos transversais e verticais", "PBIA 2024–2028"],
+      "fundamentacao": "Portaria MCTI nº 4.617, de 6/4/2021 (institui a EBIA), alterada pela Portaria MCTI nº 4.979, de 13/7/2021; Plano Brasileiro de Inteligência Artificial 2024–2028, 'IA para o Bem de Todos' (MCTI/CCT, 2024)."
+    }
+  ]
+}

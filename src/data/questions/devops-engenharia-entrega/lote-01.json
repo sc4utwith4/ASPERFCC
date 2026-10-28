@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "devops-engenharia-entrega",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "devops-001",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "CI/CD e pipelines",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Uma equipe de desenvolvimento descreveu assim as práticas de engenharia de entrega que adota: na ……, cada alteração integrada ao repositório principal dispara automaticamente o build e a bateria de testes; na ……, o software é mantido sempre em condição de ser liberado, mas a ida para produção depende de uma decisão de negócio, que pode exigir aprovação manual; na ……, toda alteração aprovada em todas as etapas automatizadas do pipeline segue para produção sem intervenção humana. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um treinamento interno sobre o pipeline dos sistemas do Tribunal, explicou-se que: na ……, os desenvolvedores integram seu trabalho ao tronco com frequência, e cada integração é verificada por build e testes automatizados; na ……, cada versão aprovada fica pronta para ser implantada a qualquer momento, embora a liberação em produção seja acionada por decisão humana; na ……, a versão aprovada pelo pipeline é implantada em produção automaticamente. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao comparar três níveis de maturidade de automação, um técnico registrou: na ……, o foco é detectar cedo conflitos e defeitos, com build e testes a cada integração no branch principal; na ……, o pipeline deixa o artefato pronto para produção, e a implantação ocorre quando a área de negócio autoriza; na ……, não há etapa manual entre a aprovação no pipeline e a chegada da mudança à produção. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "entrega contínua − integração contínua − implantação contínua",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna descreve build e testes automáticos a cada integração no repositório principal, o que é integração contínua. A entrega contínua corresponde à segunda lacuna: o software permanece pronto para produção, mas a liberação depende de decisão de negócio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "integração contínua − implantação progressiva − entrega contínua",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Implantação progressiva é um termo genérico para liberar a nova versão aos poucos (canary, por exemplo) e não descreve um software mantido pronto à espera de decisão de negócio. Além disso, a terceira lacuna, sem intervenção humana, é a implantação contínua, e não a entrega contínua."
+        },
+        {
+          "id": "opt-3",
+          "texto": "integração contínua − entrega contínua − implantação contínua",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Integração contínua (CI) é integrar com frequência ao tronco, com build e testes automáticos a cada integração. Entrega contínua mantém o software sempre implantável, mas a ida para produção é uma decisão de negócio e pode exigir acionamento manual. Implantação contínua leva automaticamente para produção toda mudança que passa no pipeline e, por isso, pressupõe a entrega contínua.",
+          "versaoInvertidaFalsa": "integração contínua − implantação contínua − entrega contínua"
+        },
+        {
+          "id": "opt-4",
+          "texto": "implantação contínua − entrega contínua − integração contínua",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sequência inverte a primeira e a terceira lacunas. Build e testes a cada integração caracterizam a integração contínua, e a ida automática para produção, sem intervenção humana, caracteriza a implantação contínua."
+        },
+        {
+          "id": "opt-5",
+          "texto": "integração contínua − implantação contínua − entrega contínua",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a troca clássica explorada pela banca. Na implantação contínua não há decisão manual antes da produção, e por isso ela não corresponde à segunda lacuna. É a entrega contínua que mantém o software pronto e deixa a liberação a critério do negócio."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca entrega contínua por implantação contínua. O detalhe decisivo é a existência de decisão ou aprovação humana antes da produção: com ela, é entrega contínua; sem ela, implantação contínua.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre entrega contínua e implantação contínua?",
+        "resposta": "Na entrega contínua, o software fica sempre pronto para produção, mas a liberação é uma decisão de negócio e pode exigir aprovação manual. Na implantação contínua, toda mudança aprovada pelo pipeline vai automaticamente para produção, e por isso ela pressupõe a entrega contínua."
+      },
+      "conceitosChave": ["CI/CD: entrega × implantação contínua", "CI/CD: integração contínua"],
+      "fundamentacao": "Martin Fowler, bliki 'ContinuousDelivery' e artigo 'Continuous Integration' (martinfowler.com); Jez Humble e David Farley, Continuous Delivery (Addison-Wesley, 2010)."
+    },
+    {
+      "id": "devops-002",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "CI/CD e pipelines",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal mantém um pipeline para o sistema de acompanhamento de prestações de contas. Hoje, o código é compilado de novo em cada ambiente: um build gera o pacote de homologação e, após a aprovação nos testes de aceitação, outro build, feito a partir da mesma tag, gera o pacote de produção. Em um incidente, constatou-se que a versão em produção continha uma biblioteca diferente da homologada, porque uma dependência foi atualizada no repositório público entre os dois builds. Para eliminar a causa do problema, a prática mais adequada é",
+      "variantesEnunciado": [
+        "No pipeline do sistema de protocolo eletrônico do Tribunal, a imagem de container é reconstruída para cada ambiente a partir do mesmo commit. Depois de uma liberação, verificou-se que a imagem de produção usava uma imagem base diferente da que fora testada em homologação, pois a tag da imagem base havia sido atualizada no registro entre os dois builds. Para eliminar a causa do problema, a prática mais adequada é",
+        "Um técnico analisa por que o módulo de fiscalização de obras se comportou em produção de forma diferente do que foi validado em homologação. Ele descobre que o pipeline recompila a aplicação em cada estágio e que, entre a compilação de homologação e a de produção, o gerenciador de pacotes resolveu uma versão mais nova de uma dependência transitiva. Para eliminar a causa do problema, a prática mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "gerar o artefato uma única vez, armazená-lo versionado e imutável em um repositório de artefatos e promover exatamente esse pacote por homologação e produção, variando entre os ambientes apenas a configuração.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a prática de construir o binário uma única vez, própria do pipeline de implantação: o artefato gerado no estágio de commit é guardado com versão, sem alteração, e promovido pelos estágios seguintes. Assim, produção recebe exatamente o que foi testado, e o que muda entre ambientes é só a configuração, mantida fora do artefato, como recomendam os fatores III e V do Twelve-Factor App.",
+          "versaoInvertidaFalsa": "gerar um novo artefato em cada ambiente a partir da mesma tag, pois recompilar o código imediatamente antes de cada implantação garante que produção receba exatamente o que foi homologado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "manter um build por ambiente e repetir toda a bateria de testes de aceitação depois do build de produção, liberando a versão apenas se os resultados coincidirem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Repetir os testes pode detectar parte das diferenças, mas não remove a causa: continuam existindo dois artefatos distintos, e o de produção nunca é o mesmo que foi homologado. A medida também alonga o pipeline sem garantir equivalência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "fixar as versões das dependências somente no build de produção, deixando o de homologação livre para receber atualizações automáticas da biblioteca.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fixar versões só em produção aumenta a divergência, porque homologação passaria a testar bibliotecas que produção não usa. Fixar dependências, por exemplo com arquivo de lock, é útil, mas no mesmo artefato para todos os ambientes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir a tag por um branch de release, para que os dois builds partam sempre do mesmo commit do repositório.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois builds já partiam do mesmo código, a mesma tag. O problema está na resolução de dependências no momento de cada build, e trocar a tag por um branch não impede que dois builds gerem pacotes diferentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "adotar a implantação contínua e suprimir o ambiente de homologação, para que exista apenas um build por versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Suprimir a homologação elimina uma etapa de validação em vez de corrigir a causa. A implantação contínua também segue o princípio de gerar o artefato uma vez e promovê-lo, e não dispensa os estágios de teste."
+        }
+      ],
+      "pegadinhaFCC": "As alternativas erradas tratam o sintoma: repetem testes, trocam a tag ou eliminam um ambiente. A causa é recompilar em cada ambiente, e a solução é gerar o artefato uma vez, guardá-lo imutável e promovê-lo.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o pipeline deve promover o mesmo artefato entre os ambientes, em vez de recompilar em cada um?",
+        "resposta": "Porque cada novo build pode gerar um pacote diferente do testado, por exemplo com outra versão de dependência ou de imagem base. Gerar o artefato uma vez, armazená-lo versionado e imutável e promovê-lo garante que produção receba exatamente o que foi homologado; entre os ambientes, muda só a configuração."
+      },
+      "conceitosChave": ["CI/CD: artefato imutável e promoção", "CI/CD: pipeline de implantação"],
+      "fundamentacao": "Jez Humble e David Farley, Continuous Delivery (2010), cap. 5, prática 'Only Build Your Binaries Once'; The Twelve-Factor App, fatores III ('Config') e V ('Build, release, run')."
+    },
+    {
+      "id": "devops-003",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Automação de build e de testes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A pirâmide de testes é usada para orientar a composição da suíte automatizada executada em um pipeline de integração contínua. De acordo com esse modelo, é correto afirmar que",
+      "variantesEnunciado": [
+        "No planejamento da suíte automatizada do sistema de prestação de contas do Tribunal, um técnico recorre à pirâmide de testes para distribuir o esforço entre os tipos de teste. Segundo esse modelo, é correto afirmar que",
+        "Ao revisar o estágio de testes de um pipeline, a equipe decidiu seguir a pirâmide de testes, proposta por Mike Cohn e difundida por Martin Fowler. Sobre esse modelo, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os testes de ponta a ponta, por reproduzirem o uso real pela interface, devem formar a base da pirâmide e ser os mais numerosos da suíte.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte a pirâmide. Testes de ponta a ponta reproduzem bem o uso real, mas são lentos, caros e frágeis, e por isso ficam no topo, em menor número. Uma suíte apoiada principalmente neles é o antipadrão conhecido como casquinha de sorvete."
+        },
+        {
+          "id": "opt-2",
+          "texto": "testes de unidade e de integração devem existir em quantidades iguais, de modo que cada camada da aplicação receba a mesma cobertura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pirâmide propõe quantidades decrescentes da base para o topo, e não uma distribuição igual. O critério é o custo e a velocidade de cada tipo de teste, e não uma cobertura uniforme por camada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o modelo recomenda eliminar os testes pela interface gráfica, substituindo-os integralmente por testes de unidade, mais rápidos, executados no estágio de commit.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida: a pirâmide não elimina os testes de interface ou de ponta a ponta, apenas recomenda que sejam poucos e focados nos fluxos críticos. Testes de unidade não verificam a integração entre as partes do sistema."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a base deve concentrar muitos testes de unidade, rápidos e baratos, e o topo, poucos testes de ponta a ponta, mais lentos e frágeis.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na pirâmide, a base tem muitos testes de unidade, rápidos, baratos e isolados, que dão retorno em segundos no estágio de commit. A camada intermediária reúne testes de serviço ou de integração, e o topo, poucos testes de ponta a ponta ou de interface, que são lentos, caros e mais sujeitos a falhas intermitentes.",
+          "versaoInvertidaFalsa": "a base deve concentrar muitos testes de ponta a ponta, que reproduzem o uso real, e o topo, poucos testes de unidade, por serem os mais lentos e frágeis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os testes de unidade dispensam execução no pipeline, porque o desenvolvedor já os roda localmente, de modo que o servidor de integração executa só os testes de integração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os testes de unidade são justamente a primeira verificação do pipeline, no estágio de commit, porque a integração contínua não pode depender de execuções locais. Rodá-los no servidor garante que toda integração seja verificada no mesmo ambiente."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte a pirâmide, colocando os testes de ponta a ponta na base, ou a leva ao extremo de eliminar uma camada. A lógica é de custo e velocidade: muitos testes baratos embaixo e poucos testes caros em cima.",
+      "resumoFlashcard": {
+        "pergunta": "Como a pirâmide de testes distribui os testes automatizados?",
+        "resposta": "A base tem muitos testes de unidade, rápidos e baratos. O meio tem testes de serviço ou de integração, e o topo, poucos testes de ponta a ponta ou de interface, que são lentos, caros e frágeis."
+      },
+      "conceitosChave": ["Testes: pirâmide de testes"],
+      "fundamentacao": "Mike Cohn, Succeeding with Agile (2009); Martin Fowler, bliki 'TestPyramid'; Ham Vocke, 'The Practical Test Pyramid' (martinfowler.com, 2018)."
+    },
+    {
+      "id": "devops-004",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Infraestrutura como código e gerenciamento de configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na adoção de infraestrutura como código, uma abordagem …… recebe a descrição do estado final desejado e calcula as ações necessárias para alcançá-lo, ao passo que uma abordagem …… exige que o autor especifique a sequência de comandos a executar. Uma operação é …… quando executá-la uma ou várias vezes, sem outras alterações no intervalo, leva ao mesmo resultado. Já o ……, isto é, a divergência entre o que está declarado no código e o que de fato existe no ambiente, costuma resultar de alterações manuais feitas diretamente no console do provedor. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em uma capacitação sobre automação da infraestrutura do Tribunal, explicou-se que ferramentas de estilo …… partem da declaração do resultado esperado, enquanto scripts de estilo …… descrevem passo a passo como chegar a ele. Também se destacou que uma tarefa …… pode ser reaplicada sem efeitos colaterais, pois só altera o que estiver fora do estado desejado, e que o …… surge quando alguém altera recursos manualmente, fora do código versionado. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao comparar ferramentas de automação, um técnico anotou: no modelo ……, descreve-se o que deve existir e a ferramenta decide como chegar lá; no modelo ……, descreve-se como fazer, comando a comando; uma execução …… repetida não altera um sistema que já está no estado desejado; e o …… é a diferença entre o ambiente real e a configuração versionada, detectável, por exemplo, por um novo plano de execução. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "imperativa − declarativa − idempotente − drift",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão invertidas. Descrever o estado final e deixar a ferramenta calcular as ações é próprio da abordagem declarativa; especificar a sequência de comandos é próprio da abordagem imperativa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "declarativa − imperativa − idempotente − drift",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na abordagem declarativa (Terraform/OpenTofu, manifestos do Kubernetes, Puppet), descreve-se o estado desejado; na imperativa, os passos. Idempotência é obter o mesmo resultado com uma ou várias execuções, e drift é a divergência entre o código e o ambiente real, típica de alterações manuais e detectável, por exemplo, pelo plano de execução da ferramenta.",
+          "versaoInvertidaFalsa": "declarativa − imperativa − imutável − drift"
+        },
+        {
+          "id": "opt-3",
+          "texto": "declarativa − imperativa − imutável − drift",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Imutável descreve um componente que não é alterado depois de criado: para mudar, ele é substituído, como na infraestrutura imutável. A propriedade de produzir o mesmo resultado com uma ou várias execuções é a idempotência."
+        },
+        {
+          "id": "opt-4",
+          "texto": "declarativa − imperativa − idempotente − rollback",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Rollback é o retorno a uma versão anterior, uma ação de recuperação. A divergência entre o que está declarado no código e o que existe no ambiente chama-se drift (desvio de configuração)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "imperativa − declarativa − imutável − snapshot",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa erra três lacunas: inverte declarativa e imperativa, troca idempotente por imutável e usa snapshot, que é uma cópia do estado em um instante, para nomear a divergência entre código e ambiente."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca idempotente por imutável e inverte declarativa e imperativa. Idempotência fala da repetição da operação; imutabilidade, de não alterar o componente depois de criado.",
+      "resumoFlashcard": {
+        "pergunta": "O que significam idempotência e drift em infraestrutura como código?",
+        "resposta": "Idempotência é a propriedade de uma operação que produz o mesmo resultado se executada uma ou várias vezes, porque a ferramenta só altera o que estiver fora do estado desejado. Drift é a divergência entre o que o código declara e o que existe no ambiente, em geral causada por mudanças manuais."
+      },
+      "conceitosChave": ["IaC: declarativo × imperativo", "IaC: idempotência", "IaC: drift"],
+      "fundamentacao": "Glossário da documentação oficial do Ansible ('Idempotency'); documentação do OpenTofu, 'State' e 'Command: plan' (modo -refresh-only); Kief Morris, Infrastructure as Code, 2ª ed. (O'Reilly, 2020)."
+    },
+    {
+      "id": "devops-005",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Observabilidade: métricas, logs e traces",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Os três sinais clássicos de telemetria, que são métricas, logs e traces, respondem a perguntas diferentes sobre o comportamento de um sistema. Considerando essa distinção, é correto afirmar que",
+      "variantesEnunciado": [
+        "Na implantação de uma plataforma de observabilidade para os sistemas do Tribunal, um técnico precisa explicar à equipe a função de cada sinal de telemetria. Sobre métricas, logs e traces, é correto afirmar que",
+        "A respeito dos sinais de telemetria usados em observabilidade, como os coletados pelo OpenTelemetry, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as métricas registram, para cada requisição individual, o caminho completo percorrido entre os serviços, com o tempo gasto em cada etapa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Registrar o caminho de cada requisição pelos serviços, com a duração de cada etapa, é a função do trace. Métricas são medidas numéricas agregadas ao longo do tempo, como taxa de requisições ou uso de CPU, e não guardam o percurso de uma requisição específica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os logs são agregações numéricas compactas, ideais para alimentar painéis de tendência e alertas por limiar com baixo custo de armazenamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde às métricas. Logs são registros de eventos com carimbo de tempo, em geral textuais ou estruturados, com detalhes de cada ocorrência. São ricos para investigação, mas mais volumosos e caros de armazenar que as métricas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os traces tornam os logs dispensáveis, pois cada span já armazena todas as mensagens emitidas pela aplicação durante a requisição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os sinais são complementares. Um span pode carregar atributos e eventos, mas não substitui os logs da aplicação. A observabilidade se beneficia de correlacionar os três, por exemplo gravando o identificador do trace em cada log."
+        },
+        {
+          "id": "opt-4",
+          "texto": "métricas e traces são intercambiáveis, pois ambos são séries temporais amostradas em intervalos fixos pelo servidor de monitoramento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Métricas são séries temporais, mas traces são estruturas de spans ligados por relações pai-filho, que descrevem requisições individuais. Um não substitui o outro: a métrica mostra que a latência subiu, e o trace mostra em qual serviço o tempo foi gasto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "um trace, formado por spans relacionados, mostra o percurso de uma requisição pelos serviços e ajuda a localizar onde o tempo foi gasto.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O trace representa o caminho de uma requisição por um sistema distribuído e é formado por spans, cada um com início, duração e relação pai-filho. Ele responde onde o problema está na cadeia de chamadas, enquanto as métricas respondem quanto e com que tendência, e os logs dão o detalhe de cada evento.",
+          "versaoInvertidaFalsa": "um log, formado por spans relacionados, mostra o percurso de uma requisição pelos serviços e ajuda a localizar onde o tempo foi gasto."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as definições dos sinais, atribuindo às métricas o percurso da requisição e aos logs a agregação numérica. Também sugere que um sinal substitui o outro, quando na verdade são complementares.",
+      "resumoFlashcard": {
+        "pergunta": "Que pergunta cada sinal de telemetria (métricas, logs e traces) ajuda a responder?",
+        "resposta": "As métricas mostram quanto e com que tendência, com números agregados no tempo, bons para painéis e alertas. Os logs registram o detalhe de cada evento. Os traces mostram o caminho de uma requisição pelos serviços e onde o tempo foi gasto."
+      },
+      "conceitosChave": ["Observabilidade: métricas, logs e traces"],
+      "fundamentacao": "Documentação do OpenTelemetry, Concepts > Signals (Traces, Metrics, Logs) e 'Observability primer' (opentelemetry.io)."
+    },
+    {
+      "id": "devops-006",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Monitoramento, alertas e indicadores técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal definiu, para o portal de consulta processual, o SLI 'proporção de requisições atendidas com sucesso' e um SLO de 99,9% medido em janelas de 30 dias. Na janela atual, um incidente deixou o portal totalmente indisponível por 35 minutos, e falhas menores já haviam consumido o equivalente a outros 10 minutos de indisponibilidade total. Considerando tráfego uniforme e o orçamento de erro expresso em minutos de indisponibilidade equivalente, é correto concluir que o orçamento de erro da janela é de",
+      "variantesEnunciado": [
+        "Para a API de dados abertos do Tribunal, adotou-se um SLO de disponibilidade de 99,9% em janelas de 30 dias. Na janela corrente, uma falha de banco de dados derrubou a API por 35 minutos, e erros intermitentes somaram o equivalente a mais 10 minutos de indisponibilidade total. Considerando tráfego uniforme e o orçamento de erro expresso em minutos de indisponibilidade equivalente, é correto concluir que o orçamento de erro da janela é de",
+        "O sistema de peticionamento eletrônico tem SLO de 99,9% de requisições bem-sucedidas, apurado em janelas de 30 dias. Até agora, na janela vigente, houve 35 minutos de indisponibilidade total em uma migração malsucedida e o equivalente a 10 minutos em falhas parciais. Considerando tráfego uniforme e o orçamento de erro expresso em minutos de indisponibilidade equivalente, é correto concluir que o orçamento de erro da janela é de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "4,32 minutos, ultrapassado em mais de dez vezes, o que obriga a renegociar o SLA com os usuários e a rebaixar o SLO para 99%.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cálculo usa 0,01%, e não 0,1%: 43.200 minutos × 0,0001 = 4,32 minutos. Além disso, o SLA é o acordo com consequências perante os usuários; estourar o orçamento interno aciona a política de orçamento de erro, e não a revisão automática do SLA ou a redução do SLO."
+        },
+        {
+          "id": "opt-2",
+          "texto": "43,2 minutos e ainda há saldo, porque apenas a indisponibilidade total do incidente principal é descontada do orçamento, e não as falhas parciais registradas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor do orçamento está certo, mas todas as falhas que afetam o SLI consomem o orçamento, inclusive as parciais, aqui equivalentes a 10 minutos. Somando 35 + 10 = 45 minutos, o orçamento de 43,2 minutos já foi esgotado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "43,2 minutos, já esgotado; pela política de orçamento de erro, liberações não essenciais devem ser contidas e o esforço, direcionado à confiabilidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Trinta dias têm 43.200 minutos, e o orçamento de erro é 1 − SLO = 0,1%, ou seja, 43,2 minutos. O consumo foi de 35 + 10 = 45 minutos, acima do orçamento. Pela lógica do SRE, esgotado o orçamento, a política acordada suspende liberações não essenciais, exceto correções urgentes, e prioriza a confiabilidade até o serviço voltar à meta.",
+          "versaoInvertidaFalsa": "43,2 minutos, ainda não esgotado, de modo que as liberações podem seguir no ritmo normal, já que o SLO de 99,9% continua cumprido na janela."
+        },
+        {
+          "id": "opt-4",
+          "texto": "432 minutos, dos quais restam 387, margem suficiente para manter o ritmo normal de implantações até o fim da janela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 432 minutos corresponderiam a 1% de 30 dias, isto é, a um SLO de 99%. Com SLO de 99,9%, o orçamento é dez vezes menor, de 43,2 minutos, e já foi consumido pelos 45 minutos de falhas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cerca de 8,8 horas, que equivalem a 0,1% de um ano, das quais foram consumidos apenas 45 minutos até o momento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 0,1% de um ano (8.760 horas) dá cerca de 8,8 horas, mas o enunciado fixa a janela em 30 dias. O orçamento é calculado sobre a janela do SLO, que aqui tem 43.200 minutos."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece erros de ordem de grandeza (1% ou 0,01% em vez de 0,1%), troca a janela de 30 dias pela anual e sugere que falhas parciais não contam. Também confunde o SLO, meta interna, com o SLA, acordo com consequências.",
+      "resumoFlashcard": {
+        "pergunta": "Como se calcula o orçamento de erro de um SLO de 99,9% em janelas de 30 dias?",
+        "resposta": "O orçamento é 1 − SLO, ou seja, 0,1% da janela: 30 × 24 × 60 = 43.200 minutos, e 43.200 × 0,001 = 43,2 minutos de indisponibilidade equivalente. Esgotado o orçamento, a política de orçamento de erro contém liberações não essenciais e prioriza a confiabilidade."
+      },
+      "conceitosChave": ["SRE: SLI, SLO e SLA", "SRE: orçamento de erro"],
+      "fundamentacao": "Google, Site Reliability Engineering (2016), cap. 3 ('Embracing Risk') e cap. 4 ('Service Level Objectives'); The Site Reliability Workbook (2018), cap. 2 ('Implementing SLOs') e apêndice 'Example Error Budget Policy'."
+    },
+    {
+      "id": "devops-007",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Git distribuído, GitHub e GitLab",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O Git é classificado como sistema de controle de versão distribuído. Uma consequência direta dessa característica é que",
+      "variantesEnunciado": [
+        "Ao orientar novos servidores da área de TI do Tribunal sobre o uso do Git, um técnico explicou que se trata de um sistema de controle de versão distribuído. Uma consequência direta dessa característica é que",
+        "Diferentemente de sistemas centralizados, como o Subversion, o Git adota um modelo distribuído de controle de versão. Uma consequência direta desse modelo é que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cada commit é gravado diretamente no servidor central, razão pela qual não é possível registrar alterações no histórico sem conexão de rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve um sistema centralizado. No Git, o commit é gravado no repositório local e pode ser feito sem rede; a comunicação com o remoto só ocorre nas operações de sincronização, como push e fetch."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cada clone contém o histórico completo do repositório, o que permite registrar commits localmente e sincronizá-los depois com push e fetch.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Ao clonar, o desenvolvedor recebe uma cópia completa do repositório, com todo o histórico. Commits, branches, consulta ao log e comparações são operações locais, e push e fetch apenas trocam commits com outros repositórios. Por isso cada clone funciona também como cópia de segurança do projeto.",
+          "versaoInvertidaFalsa": "cada clone contém apenas a versão mais recente dos arquivos, de modo que registrar commits e consultar o histórico exige conexão permanente com o servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o comando git pull apenas baixa os novos commits do remoto, sem integrá-los ao branch local, tarefa que cabe ao git fetch.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os papéis estão invertidos. O git fetch baixa os commits e atualiza as referências remotas sem alterar o branch local; o git pull executa o fetch e, em seguida, integra as mudanças ao branch atual, por merge ou por rebase."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o repositório remoto mantém bloqueios exclusivos de arquivo, impedindo que dois desenvolvedores alterem o mesmo arquivo ao mesmo tempo em suas cópias locais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Git não usa bloqueio exclusivo de arquivos, o modelo travar-alterar-destravar de alguns sistemas centralizados. Cada um altera livremente sua cópia, e eventuais conflitos são resolvidos na integração, por merge ou rebase."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o histórico fica repartido entre os desenvolvedores, de modo que cada clone guarda apenas os commits feitos pelo próprio usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cada clone guarda o histórico completo, e não só os commits do próprio usuário. É essa replicação integral que caracteriza o modelo distribuído e permite trabalhar sem depender do servidor."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao Git características de sistemas centralizados, como commit direto no servidor e bloqueio de arquivo, e inverte os papéis de fetch e pull.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza o Git como controle de versão distribuído?",
+        "resposta": "Cada clone é um repositório completo, com todo o histórico, e commits, branches e consultas são operações locais, feitas sem rede. A sincronização com outros repositórios usa push, fetch e pull, que é um fetch seguido de merge ou rebase."
+      },
+      "conceitosChave": ["Git: modelo distribuído", "Git: fetch × pull"],
+      "fundamentacao": "Scott Chacon e Ben Straub, Pro Git, 2ª ed., seções 1.1 ('About Version Control') e 2.5 ('Working with Remotes'); documentação oficial dos comandos git-fetch e git-pull (git-scm.com)."
+    },
+    {
+      "id": "devops-008",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Docker e Docker Compose",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No Docker, os conceitos de imagem e de container costumam ser confundidos. Sobre eles, é correto afirmar que",
+      "variantesEnunciado": [
+        "Durante a conteinerização do sistema de gestão de processos de fiscalização, um técnico precisou explicar à equipe a diferença entre imagem e container no Docker. Sobre esses conceitos, é correto afirmar que",
+        "A respeito da relação entre imagens e containers na plataforma Docker, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a imagem é um modelo somente leitura formado por camadas, e o container é uma instância em execução dessa imagem, à qual se acrescenta uma camada gravável.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A imagem é um pacote imutável, em camadas somente leitura, com o sistema de arquivos e a configuração de que a aplicação precisa. O container é uma instância criada a partir dela, com uma camada gravável própria por cima. Várias instâncias podem nascer da mesma imagem, e o que um container grava não altera a imagem.",
+          "versaoInvertidaFalsa": "o container é um modelo somente leitura formado por camadas, e a imagem é uma instância em execução desse container, à qual se acrescenta uma camada gravável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o container é o pacote que se publica no registro, e a imagem é o processo criado quando esse pacote é executado pelo Docker Engine.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os papéis estão invertidos. O que se publica no registro, como o Docker Hub ou um registro privado, é a imagem; o container é o que resulta de executá-la."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cada imagem só pode originar um container por vez, razão pela qual escalar uma aplicação exige gerar uma nova imagem para cada réplica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma mesma imagem pode originar quantos containers forem necessários, e é assim que se escala horizontalmente. Cada container ganha sua própria camada gravável, sem duplicar as camadas da imagem."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as alterações gravadas pelo processo dentro do container são incorporadas automaticamente à imagem de origem quando o container é encerrado, ficando disponíveis para as próximas execuções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As gravações ficam na camada gravável do próprio container e não alteram a imagem. Ao remover o container, elas se perdem, a menos que estejam em volume ou bind mount. Gerar nova imagem exige novo build, ou o docker commit, prática desaconselhada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "imagem e container são sinônimos, e a diferença de nome indica apenas se o artefato está armazenado localmente ou em um registro remoto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não são sinônimos: a imagem é o modelo estático, e o container, a instância, em execução ou parada, criada a partir dela. Uma imagem também pode estar armazenada localmente sem ser um container."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte imagem e container e sugere que as mudanças feitas no container voltam para a imagem. A imagem é imutável; o container acrescenta uma camada gravável que se perde com ele.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre imagem e container no Docker?",
+        "resposta": "A imagem é um modelo somente leitura, em camadas, publicado em registros. O container é uma instância dessa imagem com uma camada gravável própria. Uma imagem pode gerar muitos containers, e o que eles gravam não altera a imagem."
+      },
+      "conceitosChave": ["Docker: imagem × container"],
+      "fundamentacao": "Documentação do Docker, Get started > Docker concepts ('What is a container?' e 'What is an image?'); Engine > Storage > Storage drivers (camada gravável do container)."
+    },
+    {
+      "id": "devops-009",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal vai migrar quatro cargas para um cluster Kubernetes: (1) uma API sem estado do portal de dados abertos, que deve manter várias réplicas idênticas e receber atualizações graduais; (2) um banco de dados replicado em que cada réplica precisa de nome de rede estável e volume persistente próprio; (3) um agente coletor de logs que deve rodar em todos os nós do cluster, inclusive nos que forem adicionados depois; (4) uma rotina que consolida indicadores de fiscalização todas as noites e termina ao concluir. Os objetos mais adequados para as cargas 1, 2, 3 e 4 são, respectivamente,",
+      "variantesEnunciado": [
+        "No planejamento da migração de sistemas do Tribunal para Kubernetes, identificaram-se quatro necessidades: (1) um serviço web sem estado, com réplicas intercambiáveis e atualização gradual; (2) um cluster de mensageria em que cada membro precisa de identidade fixa e de armazenamento próprio que sobreviva a reinícios; (3) um agente de monitoramento que deve existir em cada nó; (4) um processo de expurgo de arquivos temporários executado diariamente às 2h, que termina ao concluir. Os objetos mais adequados para as necessidades 1, 2, 3 e 4 são, respectivamente,",
+        "Um técnico precisa escolher objetos Kubernetes para: (1) o front-end sem estado do sistema de protocolo, com várias réplicas e rolling update; (2) um banco de dados distribuído com réplicas nomeadas de forma estável e volumes persistentes individuais; (3) um exportador de métricas de hardware que precisa de uma cópia em cada nó; (4) a geração semanal e agendada de um relatório, que termina ao ser concluída. Os objetos mais adequados para os itens 1, 2, 3 e 4 são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "StatefulSet, Deployment, DaemonSet e Job.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas primeiras cargas: a API sem estado, com réplicas intercambiáveis, pede Deployment, e o banco com identidade e volume próprios pede StatefulSet. Além disso, um Job avulso executa uma vez; a execução noturna recorrente pede CronJob."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Deployment, StatefulSet, ReplicaSet e CronJob.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ReplicaSet mantém um número fixo de réplicas, mas não garante uma cópia por nó nem acompanha os nós novos; esse é o papel do DaemonSet. A própria documentação recomenda usar Deployment em vez de manipular ReplicaSets diretamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ReplicaSet, Deployment, DaemonSet e Job.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ReplicaSet não faz atualização gradual por conta própria (quem orquestra o rolling update é o Deployment), e o Deployment não dá identidade estável nem volume próprio a cada réplica. A rotina recorrente pede CronJob, e não um Job avulso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Deployment, StatefulSet, DaemonSet e CronJob, este último criando um Job a cada execução agendada.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Deployment gerencia ReplicaSets e faz a atualização gradual de réplicas intercambiáveis. O StatefulSet dá a cada Pod identidade estável (nome e rede) e armazenamento persistente próprio. O DaemonSet garante uma cópia do Pod em todos os nós, ou em parte deles, inclusive nos que entrarem depois, e o CronJob cria Jobs conforme uma agenda no formato cron.",
+          "versaoInvertidaFalsa": "StatefulSet, Deployment, DaemonSet e CronJob, este último criando um Job a cada execução agendada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Deployment, DaemonSet, StatefulSet e CronJob.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca a segunda e a terceira cargas. O DaemonSet põe uma cópia em cada nó, o que serve ao coletor de logs, mas não dá identidade estável nem volume por réplica ao banco, e o StatefulSet não garante presença em todos os nós."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca Deployment por StatefulSet e DaemonSet por ReplicaSet, e oferece Job no lugar de CronJob. Identidade estável e volume próprio pedem StatefulSet; uma cópia por nó pede DaemonSet; execução agendada e recorrente pede CronJob.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar Deployment, StatefulSet, DaemonSet e CronJob no Kubernetes?",
+        "resposta": "Deployment serve a aplicações sem estado, com réplicas intercambiáveis e rolling update. StatefulSet serve a Pods que precisam de identidade estável e volume próprio. DaemonSet põe uma cópia do Pod em cada nó, e CronJob cria Jobs conforme uma agenda cron."
+      },
+      "conceitosChave": ["Kubernetes: objetos de carga de trabalho"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Workloads > Workload Management (Deployments, ReplicaSet, StatefulSets, DaemonSet, Jobs e CronJob)."
+    },
+    {
+      "id": "devops-010",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "GitHub Actions, GitLab CI/CD e Jenkins",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que a equipe de TI do Tribunal escreveu o arquivo .gitlab-ci.yml de um projeto sem declarar a palavra-chave stages. O arquivo tem três jobs: compilar, com stage: build; testar, sem a palavra-chave stage; e publicar, com stage: deploy e when: manual. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um projeto do sistema de auditoria hospedado no GitLab, o .gitlab-ci.yml não declara a lista stages e define três jobs: compilar (stage: build), testar (sem stage) e publicar (stage: deploy, com when: manual). Considere as afirmativas abaixo.",
+        "Um técnico revisa o pipeline de um projeto do Tribunal no GitLab CI/CD. No .gitlab-ci.yml, a palavra-chave stages foi omitida; o job compilar usa stage: build, o job testar não informa stage e o job publicar usa stage: deploy e when: manual. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O job testar, por não declarar stage, é atribuído ao estágio test, que é executado depois de build e antes de deploy.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sem a lista stages, valem os estágios padrão .pre, build, test, deploy e .post, nessa ordem, e o job sem stage é atribuído a test."
+        },
+        {
+          "texto": "Como stages não foi declarado, os três jobs são executados em paralelo, pois a ordem entre estágios só existe quando a lista é definida explicitamente.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A omissão de stages não elimina a ordem, porque se aplicam os estágios padrão. Só os jobs do mesmo estágio rodam em paralelo, e os do estágio seguinte aguardam o sucesso do anterior."
+        },
+        {
+          "texto": "O job publicar faz parte do pipeline, mas só é executado quando alguém o aciona manualmente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. when: manual adiciona o job ao pipeline como job manual, que precisa ser disparado por um usuário com permissão, padrão comum na implantação em produção."
+        },
+        {
+          "texto": "Para que um arquivo gerado por compilar seja usado por testar, o recurso apropriado é cache, já que artifacts se destinam a guardar as dependências baixadas da internet entre execuções.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os papéis estão invertidos. Artifacts passam resultados de um job para os estágios seguintes e ficam armazenados no GitLab; cache serve para dependências baixadas, reaproveitadas entre execuções."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, que inverte cache e artifacts. Para repassar o resultado de compilar a testar, usam-se artifacts; o cache é destinado a dependências reaproveitadas entre execuções."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas: a II ignora os estágios padrão aplicados quando stages é omitido, e a IV inverte as funções de cache e de artifacts."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I está correta, mas a II não: sem stages, o GitLab usa os estágios padrão (.pre, build, test, deploy e .post), e os jobs não rodam todos em paralelo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV inverte cache e artifacts. Além disso, ficou de fora a I, que é verdadeira: o job sem stage vai para o estágio test."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Só a I e a III são verdadeiras. Sem stages, valem os estágios padrão, e o job sem stage cai em test, entre build e deploy; when: manual põe o job no pipeline, mas exige disparo manual. A II ignora os estágios padrão, e a IV inverte cache e artifacts.",
+          "versaoInvertidaFalsa": "No GitLab CI/CD, um job que não declara stage é atribuído ao estágio build, executado antes de test e de deploy."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que, sem a lista stages, não há ordem entre os jobs, e inverte cache e artifacts. O GitLab aplica estágios padrão, e o job sem stage vai para test.",
+      "resumoFlashcard": {
+        "pergunta": "O que acontece no GitLab CI/CD quando o .gitlab-ci.yml não declara stages e um job não declara stage?",
+        "resposta": "Valem os estágios padrão .pre, build, test, deploy e .post, nessa ordem, e o job sem stage é atribuído a test. Jobs do mesmo estágio rodam em paralelo, e os do estágio seguinte esperam o sucesso do anterior."
+      },
+      "conceitosChave": ["GitLab CI/CD: stages e jobs", "GitLab CI/CD: artifacts × cache"],
+      "fundamentacao": "Documentação do GitLab, 'CI/CD YAML syntax reference' (palavras-chave stages, stage, when e artifacts) e 'Caching in GitLab CI/CD', seção 'How cache is different from artifacts'."
+    }
+  ]
+}

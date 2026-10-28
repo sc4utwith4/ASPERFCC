@@ -1,0 +1,583 @@
+{
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "ia-dados-021",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "IA generativa, agentes e modelos multimodais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No contexto dos modelos de linguagem de grande porte (LLMs), o fenômeno denominado alucinação consiste",
+      "variantesEnunciado": [
+        "Ao orientar servidores sobre o uso de ferramentas de IA generativa, a área de TI de um Tribunal de Contas alertou para o risco de alucinação, que consiste",
+        "Em relação aos riscos de assistentes baseados em modelos de linguagem de grande porte, a chamada alucinação consiste"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "na recusa do modelo em responder a perguntas que violem suas políticas de uso, mesmo quando o pedido é legítimo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A recusa indevida de pedidos legítimos é problema de calibração das salvaguardas do modelo, e não alucinação. Na alucinação o modelo responde, e com aparente segurança, mas com conteúdo falso ou sem respaldo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "na interrupção da resposta quando o texto gerado atinge o limite máximo de tokens configurado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O corte da resposta ao atingir o limite de tokens é truncamento, decorrente de configuração. A alucinação diz respeito ao conteúdo gerado, e não ao seu tamanho."
+        },
+        {
+          "id": "opt-3",
+          "texto": "no vazamento, nas respostas, de dados pessoais presentes no conjunto de treinamento do modelo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A reprodução de dados do treinamento é risco de privacidade ligado à memorização, e não alucinação. Na alucinação o conteúdo é inventado ou distorcido, e não copiado fielmente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "na geração de conteúdo fluente e plausível, mas factualmente incorreto ou sem respaldo nas fontes, como a citação de julgado inexistente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Como o LLM gera texto prevendo os tokens mais prováveis, pode produzir afirmações bem redigidas e convincentes que não correspondem aos fatos nem às fontes, como números, normas ou julgados inexistentes. RAG com citação de fontes, temperatura baixa e verificação humana reduzem o risco, mas não o eliminam.",
+          "versaoInvertidaFalsa": "na recusa do modelo em responder a perguntas fora de seu treinamento, o que garante que todo conteúdo efetivamente gerado seja verdadeiro."
+        },
+        {
+          "id": "opt-5",
+          "texto": "na degradação progressiva do desempenho do modelo em produção, causada pela mudança na distribuição estatística dos dados de entrada ao longo do tempo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A perda de desempenho por mudança na distribuição dos dados de entrada é o desvio de dados (data drift), tema de monitoramento de modelos. A alucinação pode ocorrer mesmo sem nenhuma mudança nos dados."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece outros problemas reais de LLMs (recusa indevida, truncamento, vazamento de dados, drift) no lugar da alucinação, que é a geração confiante de conteúdo falso ou sem respaldo.",
+      "resumoFlashcard": {
+        "pergunta": "O que é alucinação em LLMs?",
+        "resposta": "É a geração de conteúdo fluente e plausível, mas incorreto ou sem respaldo nas fontes, como normas ou julgados inexistentes. RAG com citações, temperatura baixa e revisão humana reduzem o risco, sem eliminá-lo."
+      },
+      "conceitosChave": ["IA generativa: alucinação"],
+      "fundamentacao": "Ji, Z. et al. Survey of Hallucination in Natural Language Generation (ACM Computing Surveys, 2023); RA TCE-GO nº 24/2024 (objetivo divulgado de precisão e veracidade das informações geradas por IA)."
+    },
+    {
+      "id": "ia-dados-022",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aplicações de IA e automação de processos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um Tribunal de Contas dispõe de milhões de registros de contratações públicas, mas não possui uma base de casos previamente rotulados como fraude ou não fraude. A equipe deseja apontar contratações com padrões atípicos, como preços muito acima dos praticados, fracionamento recorrente e fornecedores recém-criados, para priorizar auditorias. A abordagem mais adequada é",
+      "variantesEnunciado": [
+        "Para orientar a seleção de objetos de auditoria, uma unidade técnica quer identificar, entre milhares de notas de empenho, as que apresentam padrões incomuns, como valores fora da curva e fornecedores com histórico curto. Não há registros prévios classificados como regulares ou irregulares. A abordagem mais adequada é",
+        "Uma equipe de controle externo pretende vasculhar a base de folhas de pagamento de jurisdicionados em busca de situações atípicas, como acúmulos improváveis e valores muito acima da média do cargo, sem dispor de exemplos rotulados de irregularidade. A abordagem mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplicar técnicas não supervisionadas de detecção de anomalias e tratar os casos apontados como indícios para priorizar a análise humana, e não como prova de irregularidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sem rótulos, métodos não supervisionados, como isolation forest, agrupamento com análise de distância ou regras estatísticas de outliers, identificam registros que fogem do padrão. O resultado é uma lista priorizada de indícios para a equipe examinar: atipicidade não equivale a irregularidade, e a conclusão depende de análise humana e de evidências de auditoria.",
+          "versaoInvertidaFalsa": "aguardar uma base rotulada de fraudes comprovadas, pois técnicas de detecção de anomalias exigem rótulos e seus resultados já constituem prova de irregularidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "treinar um classificador supervisionado com os próprios registros, usando como rótulo o fato de a contratação já ter sido auditada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ter sido auditada não é o mesmo que ser fraudulenta: esse rótulo mediria apenas o critério de seleção passado, e o modelo aprenderia a reproduzi-lo. Além disso, a ausência de rótulos confiáveis é justamente a condição descrita no caso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "usar um robô de RPA para reprovar automaticamente as contratações atípicas, aplicando sanção sem análise de mérito pela equipe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RPA executa regras determinísticas e não substitui o julgamento profissional. Reprovar e sancionar automaticamente com base em atipicidade afrontaria o contraditório e a ampla defesa, além de transformar indício em prova."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aguardar a formação de uma base rotulada com milhares de fraudes comprovadas, pois, sem rótulos prévios, nenhum método de aprendizado de máquina pode ser aplicado aos registros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ausência de rótulos não impede o uso de aprendizado de máquina: o aprendizado não supervisionado existe justamente para encontrar estrutura e anomalias em dados sem rótulos. Os achados confirmados podem, depois, formar uma base rotulada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "usar regressão linear para prever o valor de cada contrato e excluir da base os registros com resíduos elevados, tratando-os como erros de digitação sem necessidade de verificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resíduos elevados em uma regressão podem indicar justamente os casos atípicos que interessam à auditoria, como sobrepreço. Excluí-los como erro de digitação, sem verificação, eliminaria indícios relevantes."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que sem rótulos não há aprendizado de máquina aplicável ou que a anomalia já prova a irregularidade. A detecção de anomalias é não supervisionada e gera indícios para priorizar a análise humana.",
+      "resumoFlashcard": {
+        "pergunta": "Como usar IA para apontar contratações atípicas sem base rotulada?",
+        "resposta": "Com detecção de anomalias não supervisionada (isolation forest, outliers estatísticos, agrupamento), que gera lista priorizada de indícios. A atipicidade não é prova: a conclusão depende de análise humana e de evidências."
+      },
+      "conceitosChave": ["Automação no controle: detecção de anomalias", "ML: aprendizado não supervisionado"],
+      "fundamentacao": "Liu, F. T.; Ting, K. M.; Zhou, Z.-H. Isolation Forest (IEEE ICDM, 2008); Chandola, V.; Banerjee, A.; Kumar, V. Anomaly Detection: A Survey (ACM Computing Surveys, 2009); documentação do scikit-learn, 'Novelty and Outlier Detection'."
+    },
+    {
+      "id": "ia-dados-023",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Redes neurais e deep learning",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Durante o treinamento de uma rede neural multicamadas para classificar documentos digitalizados, a equipe acompanha a evolução da função de perda a cada época. Sobre o processo de treinamento, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao revisar o treinamento de uma rede neural que classifica despesas públicas, um técnico analisou o funcionamento do gradiente descendente e da retropropagação. Considere as afirmativas abaixo.",
+        "A respeito do treinamento de redes neurais artificiais por gradiente descendente e retropropagação do erro, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No gradiente descendente, os pesos são atualizados no mesmo sentido do gradiente da função de perda, de modo a aumentar o valor dessa função a cada passo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os pesos são atualizados no sentido oposto ao gradiente (w ← w − η·∇L), que aponta a direção de maior crescimento da perda; o objetivo é reduzi-la."
+        },
+        {
+          "texto": "A retropropagação (backpropagation) calcula os gradientes da perda em relação aos pesos aplicando a regra da cadeia, da camada de saída em direção às camadas iniciais.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O erro calculado na saída é propagado para trás, camada a camada, e a regra da cadeia fornece a derivada parcial da perda em relação a cada peso, usada na atualização."
+        },
+        {
+          "texto": "Uma taxa de aprendizado muito pequena faz a perda oscilar e divergir, enquanto uma taxa muito grande torna a convergência lenta, porém estável.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os efeitos estão invertidos: taxa muito grande pode fazer a perda oscilar ou divergir, com passos que ultrapassam o mínimo; taxa muito pequena torna a convergência lenta."
+        },
+        {
+          "texto": "No gradiente descendente estocástico com minilotes (mini-batch), cada atualização dos pesos usa um subconjunto dos exemplos de treinamento, e não o conjunto inteiro.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os minilotes reduzem o custo de cada atualização e introduzem ruído que pode ajudar a escapar de regiões ruins; uma época corresponde a percorrer todos os minilotes uma vez."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa: o gradiente descendente move os pesos no sentido oposto ao gradiente, para reduzir a perda. A alternativa também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que inverte os efeitos da taxa de aprendizado: é a taxa muito grande que pode provocar oscilação ou divergência da perda."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a I inverte o sentido da atualização dos pesos, e a III inverte os efeitos da taxa de aprendizado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa II, que descreve corretamente a retropropagação: cálculo dos gradientes pela regra da cadeia, da saída para as camadas iniciais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II descreve a retropropagação, que aplica a regra da cadeia da saída para a entrada, e a IV, o gradiente descendente com minilotes. A I é falsa porque a atualização segue o sentido oposto ao gradiente (w ← w − η·∇L), e a III inverte os efeitos da taxa de aprendizado: grande demais oscila ou diverge; pequena demais converge devagar.",
+          "versaoInvertidaFalsa": "A retropropagação calcula os gradientes da perda aplicando a regra da cadeia da camada de entrada em direção à camada de saída, sem utilizar o erro calculado na saída."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte o sentido da atualização dos pesos (é contra o gradiente) e os efeitos da taxa de aprendizado (grande demais diverge; pequena demais converge devagar).",
+      "resumoFlashcard": {
+        "pergunta": "Como funcionam o gradiente descendente e a retropropagação?",
+        "resposta": "A retropropagação calcula, pela regra da cadeia, o gradiente da perda em relação a cada peso, da saída para a entrada. O gradiente descendente atualiza os pesos no sentido oposto ao gradiente, com passo dado pela taxa de aprendizado (w ← w − η·∇L)."
+      },
+      "conceitosChave": ["Redes neurais: retropropagação", "Redes neurais: gradiente descendente"],
+      "fundamentacao": "Rumelhart, D. E.; Hinton, G. E.; Williams, R. J. Learning representations by back-propagating errors (Nature, 1986); Goodfellow, I.; Bengio, Y.; Courville, A. Deep Learning (2016), seções 4.3, 6.5 e 8.1 a 8.3."
+    },
+    {
+      "id": "ia-dados-024",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estatística aplicada e avaliação de modelos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Dois modelos de regressão que estimam o valor de reajustes contratuais foram avaliados nos mesmos quatro casos de teste. Os erros (valor previsto menos valor real), em milhares de reais, foram: modelo A: 2, −2, 2 e −2; modelo B: 0, 0, 0 e 8. Com base no erro absoluto médio (MAE) e na raiz do erro quadrático médio (RMSE), é correto afirmar que",
+      "variantesEnunciado": [
+        "Para prever o prazo de conclusão de obras, dois modelos foram testados nos mesmos quatro casos, com os seguintes erros, em meses: modelo A: 2, −2, 2 e −2; modelo B: 0, 0, 0 e 8. Considerando o MAE e o RMSE, é correto afirmar que",
+        "Em um teste com quatro observações, os erros de previsão de dois modelos de regressão foram A = (2; −2; 2; −2) e B = (0; 0; 0; 8). A respeito do erro absoluto médio (MAE) e da raiz do erro quadrático médio (RMSE) desses modelos, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os dois modelos têm o mesmo MAE e o mesmo RMSE, iguais a 2, e são, portanto, equivalentes por qualquer critério de avaliação de desempenho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MAE é de fato 2 nos dois modelos, mas o RMSE de B é 4: √((0 + 0 + 0 + 64)/4) = √16 = 4. A alternativa ignora que o RMSE distingue modelos com erros concentrados em poucos casos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o MAE do modelo A é zero, porque os erros positivos e negativos se compensam, e o de B é 2.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MAE usa o valor absoluto dos erros justamente para que positivos e negativos não se compensem: (2 + 2 + 2 + 2)/4 = 2. A média simples dos erros com sinal, que é zero em A, mede viés (tendência sistemática), e não a magnitude do erro."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os dois modelos têm MAE igual a 2, mas o RMSE de B (4) é o dobro do de A (2), porque o RMSE penaliza mais os erros grandes.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. MAE de A = (2 + 2 + 2 + 2)/4 = 2; MAE de B = (0 + 0 + 0 + 8)/4 = 2. RMSE de A = √((4 + 4 + 4 + 4)/4) = √4 = 2; RMSE de B = √((0 + 0 + 0 + 64)/4) = √16 = 4. Como eleva os erros ao quadrado antes da média, o RMSE dá mais peso a erros grandes; por isso é sempre maior ou igual ao MAE, e a diferença entre ambos revela erros concentrados.",
+          "versaoInvertidaFalsa": "os dois modelos têm o mesmo RMSE, mas o MAE de B é o dobro do de A, porque o MAE eleva os erros ao quadrado e penaliza mais os erros grandes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o RMSE do modelo B é 16, valor igual à média dos erros elevados ao quadrado, e o de A é 4.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 16 é o erro quadrático médio (MSE) de B, e 4 é o MSE de A. O RMSE é a raiz quadrada do MSE: 4 para B e 2 para A, na mesma unidade da variável prevista."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o MAE do modelo B é 8, pois o MAE corresponde ao maior erro absoluto observado no conjunto de teste.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MAE é a média dos erros absolutos, e não o maior deles: em B, (0 + 0 + 0 + 8)/4 = 2. O maior erro absoluto (8) é outra medida, o erro máximo."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde o MAE com o erro médio com sinal, o RMSE com o MSE e o MAE com o erro máximo. O ponto central é que o RMSE penaliza erros grandes e separa modelos de mesmo MAE.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre MAE e RMSE?",
+        "resposta": "O MAE é a média dos erros absolutos e trata todos os erros de forma linear. O RMSE é a raiz da média dos erros ao quadrado; pondera mais os erros grandes e é sempre maior ou igual ao MAE."
+      },
+      "conceitosChave": ["Avaliação: métricas de regressão (MAE e RMSE)"],
+      "fundamentacao": "Documentação do scikit-learn, 'Regression metrics' (mean_absolute_error, mean_squared_error e root_mean_squared_error); Hyndman, R. J.; Athanasopoulos, G. Forecasting: Principles and Practice, 3ª ed., seção 5.8 (avaliação da acurácia das previsões); contas conferidas por script."
+    },
+    {
+      "id": "ia-dados-025",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aprendizado supervisionado, não supervisionado e por reforço",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "No aprendizado por reforço, um …… interage com um ……, executando ações e recebendo sinais numéricos de ……. O objetivo é aprender uma ……, isto é, uma regra que indica qual ação tomar em cada estado para maximizar o retorno acumulado ao longo do tempo. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um sistema de aprendizado por reforço, o …… escolhe ações em um ……, que responde com um novo estado e com uma ……. Ao longo das interações, busca-se aprender a melhor ……, que associa a cada estado a ação que maximiza o retorno esperado. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere um simulador usado para treinar um programa que aprende a alocar equipes de fiscalização. No aprendizado por reforço, o programa atua como ……, o simulador faz o papel de ……, cada resultado favorável gera uma …… e o que se deseja obter ao final é uma ……, que indica a ação a tomar em cada estado. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ambiente − agente − recompensa − política",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte agente e ambiente. Quem aprende e executa ações é o agente; o ambiente responde às ações com um novo estado e com a recompensa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "agente − ambiente − recompensa − política",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No aprendizado por reforço, o agente observa o estado do ambiente, escolhe uma ação, recebe uma recompensa e passa a um novo estado. A política mapeia estados em ações, e o objetivo é encontrar a política que maximize o retorno esperado, isto é, a soma (geralmente descontada) das recompensas futuras.",
+          "versaoInvertidaFalsa": "No aprendizado por reforço, o ambiente é quem aprende e executa ações, e o agente devolve a recompensa e o novo estado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "agente − ambiente − rótulo − função de perda",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Rótulos e função de perda pertencem ao aprendizado supervisionado, em que cada exemplo traz a resposta correta. No reforço não há resposta certa para cada estado, apenas recompensas, que podem ser atrasadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "agente − conjunto de treinamento − erro − matriz de confusão",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No reforço o agente aprende pela interação com um ambiente, e não a partir de um conjunto fixo de exemplos rotulados. A matriz de confusão é ferramenta de avaliação de classificadores, e não o objeto aprendido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "agente − ambiente − recompensa − função de ativação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As três primeiras lacunas estão certas, mas a função de ativação é componente dos neurônios de uma rede neural, e não o objeto aprendido pelo agente. O que se aprende é a política, que pode, inclusive, ser representada por uma rede neural."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca agente e ambiente e mistura termos do aprendizado supervisionado (rótulo, função de perda) ou de redes neurais (função de ativação) com os do reforço.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os elementos do aprendizado por reforço?",
+        "resposta": "Agente, ambiente, estados, ações, recompensas e política. O agente age no ambiente, recebe recompensas e aprende uma política (estado → ação) que maximize o retorno acumulado."
+      },
+      "conceitosChave": ["ML: aprendizado por reforço"],
+      "fundamentacao": "Sutton, R. S.; Barto, A. G. Reinforcement Learning: An Introduction, 2ª ed. (2018), caps. 1 e 3; Russell, S.; Norvig, P. Inteligência Artificial: uma abordagem moderna, 4ª ed., cap. 22."
+    },
+    {
+      "id": "ia-dados-026",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ética, IA responsável, explicabilidade e governança",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, em um Tribunal de Contas cujo normativo interno sobre uso de IA enfatiza a precisão e a veracidade das informações geradas e a proteção de dados pessoais, um servidor passou a copiar, sem conferência, os resumos de jurisprudência produzidos por uma ferramenta de IA generativa para minutas de instrução. Em uma delas, constou um precedente inexistente. O risco materializado e a conduta compatível com o uso responsável de IA são, respectivamente,",
+      "variantesEnunciado": [
+        "Em uma unidade técnica, uma analista passou a inserir, sem conferência, trechos de pareceres redigidos por um assistente de IA generativa em relatórios de auditoria. Um dos relatórios citou uma decisão judicial que nunca existiu. Considerando o uso responsável de IA no setor público, o risco materializado e a conduta adequada são, respectivamente,",
+        "Um servidor confiou integralmente em um chatbot institucional para indicar fundamentos legais de um despacho e não verificou as referências. O despacho mencionou um artigo de lei inexistente. Considerando os princípios de IA responsável, o risco materializado e a conduta adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "viés de confirmação do modelo e substituição da ferramenta por outra de maior porte, que dispensa a revisão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O viés de confirmação é tendência humana de buscar o que confirma crenças prévias; aqui o problema é a confiança acrítica na saída automatizada. Nenhum modelo, de qualquer porte, dispensa a conferência, porque todos podem alucinar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "sobreajuste do modelo e retreinamento da ferramenta pelo próprio servidor com as minutas já elaboradas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há indício de sobreajuste: o precedente inexistente é alucinação, inerente à geração de texto plausível. Retreinar a ferramenta não está ao alcance nem é atribuição do usuário, e não substitui a verificação humana."
+        },
+        {
+          "id": "opt-3",
+          "texto": "vazamento de dados e proibição de qualquer uso de IA generativa no Tribunal, por ser incompatível com a atividade de controle.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não houve vazamento de dados no caso descrito, e a proibição total contraria a adoção responsável de IA, que admite as ferramentas como apoio, com salvaguardas. A generalização ('qualquer uso') é a armadilha."
+        },
+        {
+          "id": "opt-4",
+          "texto": "alucinação do modelo e transferência da responsabilidade pelo conteúdo da minuta ao fornecedor da ferramenta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alucinação de fato ocorreu, mas a responsabilidade pelo documento oficial continua com o servidor e com a instituição. Ferramentas de IA são apoio, e a supervisão humana é justamente a salvaguarda contra esse risco."
+        },
+        {
+          "id": "opt-5",
+          "texto": "viés de automação, aliado à alucinação do modelo, e revisão crítica do conteúdo, com conferência das fontes e responsabilidade do servidor pelo texto final.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Viés de automação é a tendência de confiar excessivamente em sistemas automatizados e deixar de verificar suas saídas; somado à alucinação (geração de conteúdo plausível, mas falso), produziu o precedente inexistente. O uso responsável exige supervisão humana: conferir fontes e citações, tratar a IA como apoio e manter a responsabilidade do servidor pelo texto final.",
+          "versaoInvertidaFalsa": "viés de automação, e a conduta adequada é transferir ao fornecedor a responsabilidade pelo conteúdo, dispensando a conferência das fontes pelo servidor."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece reações extremas (proibir tudo, trocar de ferramenta, transferir a culpa ao fornecedor) no lugar da supervisão humana. O risco humano é o viés de automação; o risco do modelo é a alucinação.",
+      "resumoFlashcard": {
+        "pergunta": "O que é viés de automação e como mitigá-lo no uso de IA generativa?",
+        "resposta": "É a tendência de confiar excessivamente nas saídas de sistemas automatizados e deixar de verificá-las. Mitiga-se com supervisão humana efetiva: conferência de fontes, uso da IA como apoio e responsabilidade do servidor pelo resultado final."
+      },
+      "conceitosChave": ["IA responsável: supervisão humana", "IA generativa: alucinação"],
+      "fundamentacao": "Parasuraman, R.; Riley, V. Humans and Automation: Use, Misuse, Disuse, Abuse (Human Factors, 1997); Princípios de IA da OCDE (2019, rev. 2024), princípios de transparência, robustez e responsabilização; RA TCE-GO nº 24/2024 (objetivos divulgados: precisão e veracidade das informações geradas por IA e proteção de dados pessoais)."
+    },
+    {
+      "id": "ia-dados-027",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Engenharia de prompts e de contexto e RAG",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da engenharia de prompts e da engenharia de contexto em aplicações baseadas em modelos de linguagem de grande porte, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao projetar um assistente baseado em LLM para apoiar a instrução de processos, a equipe de TI discutiu boas práticas de prompts e de gestão do contexto. Sobre o tema, é correto afirmar que",
+        "Em relação às técnicas de engenharia de prompts e de contexto aplicadas a modelos de linguagem de grande porte, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a engenharia de contexto seleciona, ordena e resume o que entra na janela de contexto a cada chamada (instruções, documentos recuperados, histórico), pois esse espaço é limitado em tokens.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Enquanto a engenharia de prompts cuida da redação das instruções (papel, tarefa, formato, exemplos), a engenharia de contexto gerencia todo o conjunto de informações fornecido ao modelo em cada chamada: instruções de sistema, trechos recuperados, histórico resumido e resultados de ferramentas. Como a janela é finita e o excesso de informação irrelevante prejudica a resposta, selecionar e organizar o contexto é decisivo.",
+          "versaoInvertidaFalsa": "com janelas de contexto amplas, a engenharia de contexto perde a função, pois o modelo aproveita igualmente qualquer informação inserida, em qualquer posição da janela."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o uso de delimitadores para separar instruções de dados externos elimina por completo o risco de injeção de prompt, dispensando outras salvaguardas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Delimitadores (marcações que separam instruções de conteúdo) ajudam o modelo a distinguir o que é ordem do que é dado, mas não eliminam a injeção de prompt. São necessárias outras camadas, como restrição de permissões, validação de saídas e supervisão humana."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a técnica few-shot consiste em ajustar os pesos do modelo com poucos exemplos rotulados, por meio de um ciclo curto de treinamento supervisionado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No few-shot, os exemplos vão no próprio prompt e o modelo aprende em contexto, sem alteração de pesos (Brown et al., 2020). Ajustar pesos com exemplos rotulados é ajuste fino (fine-tuning)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "com janelas de contexto amplas, a seleção do conteúdo torna-se irrelevante, pois o modelo aproveita igualmente bem qualquer informação inserida, em qualquer posição, sem efeito sobre custo ou latência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Janelas maiores não tornam irrelevante a seleção: estudos mostram queda de desempenho quando a informação relevante fica no meio de contextos longos ('lost in the middle') ou se mistura a muito conteúdo irrelevante, além do aumento de custo e de latência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "atribuir um papel ao modelo, como 'atue como auditor', garante respostas corretas, pois restringe o modelo a fontes oficiais da área indicada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Definir um papel orienta tom, vocabulário e foco da resposta, mas não restringe o modelo a fontes oficiais nem garante correção. Para ancorar a resposta em fontes, usa-se RAG, com citação e verificação."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui a técnicas de prompt garantias que elas não dão (delimitadores contra injeção, papel contra erros) e confunde few-shot com ajuste fino. Janela grande não dispensa a seleção do contexto.",
+      "resumoFlashcard": {
+        "pergunta": "O que é engenharia de contexto?",
+        "resposta": "É a seleção, ordenação e compactação de tudo o que entra na janela de contexto do modelo a cada chamada: instruções, documentos recuperados, histórico e resultados de ferramentas. É necessária porque a janela é limitada e o excesso de informação irrelevante piora as respostas."
+      },
+      "conceitosChave": ["Engenharia de contexto", "Engenharia de prompts: técnicas"],
+      "fundamentacao": "Brown, T. et al. Language Models are Few-Shot Learners (NeurIPS, 2020); Liu, N. F. et al. Lost in the Middle: How Language Models Use Long Contexts (TACL, 2024); OWASP Top 10 for LLM Applications (2025), LLM01: Prompt Injection."
+    },
+    {
+      "id": "ia-dados-028",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "LGPD aplicada à IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma secretaria estadual pretende usar dados de cidadãos atendidos em seus serviços para treinar um modelo que preveja a demanda por atendimento. O encarregado de dados elaborou orientações com base na Lei nº 13.709/2018 (LGPD). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um órgão estadual de assistência social quer treinar um modelo de previsão de demanda com dados dos atendimentos realizados. Antes do projeto, a equipe consultou o encarregado sobre a aplicação da LGPD ao treinamento. Considere as afirmativas abaixo.",
+        "Em auditoria sobre um projeto de aprendizado de máquina de uma autarquia, um técnico examinou a conformidade do uso de dados pessoais com a Lei nº 13.709/2018. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Pelo princípio da necessidade, o tratamento deve limitar-se ao mínimo necessário para a finalidade, com dados pertinentes, proporcionais e não excessivos, o que recomenda excluir atributos sem utilidade para a previsão.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 6º, III, da LGPD, base da minimização de dados: atributos sem relação com a finalidade não devem ser coletados nem usados no treinamento."
+        },
+        {
+          "texto": "Por se tratar de órgão público, o consentimento do titular é a única base legal admissível para o uso dos dados no treinamento do modelo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A LGPD prevê, entre outras bases, o cumprimento de obrigação legal ou regulatória e o tratamento pela administração pública para a execução de políticas públicas (art. 7º, II e III), e o art. 23 disciplina o tratamento pelo poder público para atender à sua finalidade pública."
+        },
+        {
+          "texto": "O princípio da não discriminação veda o tratamento de dados para fins discriminatórios ilícitos ou abusivos, o que exige atenção a resultados do modelo que prejudiquem grupos de forma indevida.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 6º, IX, da LGPD, diretamente relacionado aos vieses de modelos de IA."
+        },
+        {
+          "texto": "Dados efetivamente anonimizados não são considerados dados pessoais, salvo se o processo de anonimização puder ser revertido com esforços razoáveis ou por meios próprios do controlador.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o que dispõe o art. 12 da LGPD; a anonimização é avaliada pelos meios técnicos razoáveis e disponíveis, e não como garantia absoluta."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa, pois o poder público dispõe de outras bases legais além do consentimento (arts. 7º, II e III, e 23). Também omite a IV, que reproduz corretamente o art. 12."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa, e a alternativa omite as afirmativas I e III, que expressam corretamente os princípios da necessidade e da não discriminação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, que também é verdadeira: dado anonimizado não é dado pessoal, salvo quando a anonimização puder ser revertida com esforços razoáveis ou por meios próprios (art. 12)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I expressa o princípio da necessidade (art. 6º, III), a III, o da não discriminação (art. 6º, IX), e a IV, a regra do art. 12 sobre dados anonimizados. A II é falsa: o poder público pode tratar dados para executar políticas públicas e cumprir obrigações legais (arts. 7º, II e III, e 23), sem depender exclusivamente do consentimento.",
+          "versaoInvertidaFalsa": "Dados anonimizados continuam sendo dados pessoais em qualquer hipótese, ainda que a anonimização não possa ser revertida com esforços razoáveis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não se pode considerar todas corretas, porque a afirmativa II é falsa: o consentimento é apenas uma das bases legais, e o poder público costuma fundamentar o tratamento na execução de políticas públicas e no cumprimento de obrigação legal."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que o consentimento é a única base legal para o poder público. A LGPD admite a execução de políticas públicas e o cumprimento de obrigação legal, e o art. 23 trata do tratamento pelo poder público.",
+      "resumoFlashcard": {
+        "pergunta": "Quais princípios e regras da LGPD pesam no treinamento de modelos de IA por órgãos públicos?",
+        "resposta": "Necessidade (mínimo necessário), finalidade, não discriminação, bases legais adequadas (políticas públicas, obrigação legal, art. 23) e a regra de que dado anonimizado não é dado pessoal, salvo reversão com esforços razoáveis (art. 12)."
+      },
+      "conceitosChave": ["LGPD: princípios (necessidade e não discriminação)", "LGPD: bases legais no setor público", "LGPD: anonimização"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 6º, III e IX; art. 7º, II e III; art. 12; art. 23."
+    },
+    {
+      "id": "ia-dados-029",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ciência de dados: coleta, preparação e exploração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na análise exploratória dos valores de diárias pagas por um jurisdicionado, um técnico obteve primeiro quartil (Q1) de R$ 200 e terceiro quartil (Q3) de R$ 360. Entre os registros, constam pagamentos de R$ 580, R$ 650 e R$ 1.200. Adotando o critério de Tukey, com limite de 1,5 vez a amplitude interquartil (IIQ), é correto concluir que",
+      "variantesEnunciado": [
+        "Ao examinar os valores de reembolsos de despesas de viagem de um órgão, um analista obteve Q1 = R$ 200 e Q3 = R$ 360 e identificou registros de R$ 580, R$ 650 e R$ 1.200. Pelo critério de Tukey, com 1,5 vez a amplitude interquartil, é correto concluir que",
+        "Em um diagrama de caixa (boxplot) dos valores de diárias de servidores, o primeiro quartil é R$ 200 e o terceiro quartil é R$ 360. Três pagamentos chamam a atenção: R$ 580, R$ 650 e R$ 1.200. Usando o critério usual de 1,5 IIQ para valores atípicos, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os três pagamentos são valores atípicos, pois superam o limite superior de R$ 520, e devem ser excluídos da base para não distorcer a análise.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite de R$ 520 resulta de somar só 1 IIQ ao Q3 (360 + 160), e não 1,5 IIQ. Além disso, excluir valores atípicos sem verificação é inadequado no controle externo, pois eles podem ser justamente os indícios procurados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "apenas os pagamentos de R$ 650 e de R$ 1.200 superam o limite superior de R$ 600 e devem ser investigados antes de eventual exclusão, pois podem indicar erro ou pagamento indevido.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. IIQ = Q3 − Q1 = 360 − 200 = 160. Limite superior = Q3 + 1,5 · IIQ = 360 + 240 = R$ 600; limite inferior = Q1 − 1,5 · IIQ = 200 − 240 = −R$ 40, sem efeito prático para valores positivos. Assim, R$ 650 e R$ 1.200 são atípicos, e R$ 580 não. Valores atípicos devem ser investigados, pois podem ser erro de registro ou pagamento indevido, e não descartados automaticamente.",
+          "versaoInvertidaFalsa": "apenas o pagamento de R$ 1.200 é atípico, pois pelo critério de Tukey o limite superior é calculado como Q3 + 3 · IIQ, o que resulta em R$ 840."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apenas o pagamento de R$ 1.200 é atípico, pois o limite superior é de R$ 840, e os demais estão dentro da variação esperada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. R$ 840 é o limite com 3 IIQ (360 + 480), usado por alguns autores para valores extremos. O critério pedido usa 1,5 IIQ, que leva ao limite de R$ 600; por ele, R$ 650 também é atípico."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os três pagamentos são atípicos, pois superam o limite de R$ 440, obtido somando 1,5 vez a IIQ ao primeiro quartil.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite superior parte do terceiro quartil, e não do primeiro: Q3 + 1,5 · IIQ = R$ 600. Somar 1,5 IIQ ao Q1 (200 + 240 = 440) leva a classificar indevidamente R$ 580 como atípico."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o limite inferior negativo, de −R$ 40, revela erro de cálculo, o que invalida o critério de Tukey para valores monetários e impõe, em seu lugar, o uso da média acrescida de dois desvios-padrão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite inferior negativo não é erro: apenas indica que não há valores atípicos inferiores possíveis em variável que não assume valores negativos. O critério de Tukey continua válido e é, inclusive, mais robusto que o da média com desvios-padrão, que são afetados pelos próprios extremos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o multiplicador (1 ou 3 IIQ em vez de 1,5), ancora o limite no quartil errado e sugere excluir os atípicos. No controle externo, o valor atípico é ponto de partida para investigação.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar valores atípicos pelo critério de Tukey?",
+        "resposta": "Calcula-se a amplitude interquartil (IIQ = Q3 − Q1). São atípicos os valores acima de Q3 + 1,5 · IIQ ou abaixo de Q1 − 1,5 · IIQ. Eles devem ser investigados, e não excluídos automaticamente."
+      },
+      "conceitosChave": ["Análise exploratória: outliers (IIQ)", "Preparação de dados: limpeza"],
+      "fundamentacao": "Tukey, J. W. Exploratory Data Analysis (1977), cap. 2 (box plots e limites com 1,5 IIQ); Montgomery, D. C.; Runger, G. C. Estatística Aplicada e Probabilidade para Engenheiros, cap. 6 (diagrama de caixa); contas conferidas por script."
+    },
+    {
+      "id": "ia-dados-030",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estratégia Brasileira de Inteligência Artificial (EBIA)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico de controle externo elabora nota sobre o enquadramento de um projeto de IA para triagem de processos do Tribunal nas políticas públicas de inteligência artificial vigentes no plano federal e no Estado de Goiás. Na nota, é correto registrar que",
+      "variantesEnunciado": [
+        "Ao preparar parecer sobre a adoção de IA em um órgão do Estado de Goiás, um analista precisa indicar corretamente o arcabouço federal e o estadual aplicáveis ao tema. No parecer, é correto registrar que",
+        "Em capacitação para servidores de um Tribunal de Contas sobre políticas públicas de inteligência artificial, um instrutor comparou a estratégia federal com a lei goiana sobre o tema. É correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a Lei Complementar estadual nº 205/2025 instituiu, em âmbito nacional, a Estratégia Brasileira de Inteligência Artificial e passou a classificar obrigatoriamente os sistemas de IA da administração por grau de risco, com sanções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LC nº 205/2025 é lei complementar do Estado de Goiás, que institui a política estadual de fomento à inovação em IA. A EBIA é federal e foi instituída por portaria do MCTI em 2021, sem classificação de risco nem sanções."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a EBIA, por ser estratégia nacional instituída por lei, revogou as normas estaduais sobre inteligência artificial e concentrou no governo federal toda a regulamentação do tema, inclusive a criação de ambientes regulatórios experimentais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A EBIA foi instituída por portaria, e não por lei, e não revoga normas estaduais: é estratégia de governo, sem caráter regulatório. Goiás, aliás, editou sua própria política (LC nº 205/2025), que criou um sandbox estadual permanente de IA."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a EBIA, instituída por portaria do MCTI, tem eixo vertical de aplicação no poder público, e a LC estadual nº 205/2025 assegura, na administração estadual, a possibilidade de revisão humana de decisões automatizadas que afetem direitos significativos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A EBIA (Portaria MCTI nº 4.617/2021) tem seis eixos verticais, entre eles a aplicação no poder público, ao lado dos eixos transversais de legislação, regulação e uso ético, governança e aspectos internacionais. A LC goiana nº 205/2025 instituiu a política estadual de fomento à inovação em IA e assegura, na administração pública estadual, a possibilidade de revisão humana de decisões automatizadas que afetem direitos significativos.",
+          "versaoInvertidaFalsa": "a EBIA trata a aplicação no poder público como eixo transversal, e a LC estadual nº 205/2025 veda a revisão humana de decisões automatizadas na administração estadual."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a LC estadual nº 205/2025 vedou o uso de software aberto e de modelos de código aberto em soluções de IA da administração estadual e extinguiu o ambiente regulatório experimental (sandbox) para agentes autônomos de IA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o oposto: a LC nº 205/2025 instituiu o Sandbox Estadual Permanente de IA, com ambiente específico para agentes autônomos, e atribui peso adicional a propostas com software aberto, modelos de código aberto e licenças permissivas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a EBIA classifica a governança de IA e os aspectos internacionais como eixos verticais, voltados a setores específicos, e trata a aplicação no poder público como eixo transversal, comum a toda a estratégia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a classificação: governança de IA e aspectos internacionais são eixos transversais da EBIA, ao lado de legislação, regulação e uso ético. Aplicação no poder público e segurança pública são eixos verticais."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde a natureza e o alcance das normas: a EBIA é estratégia federal instituída por portaria, sem efeito revogatório; a LC goiana nº 205/2025 é política estadual de fomento, com sandbox e garantia de revisão humana na administração estadual.",
+      "resumoFlashcard": {
+        "pergunta": "Como se relacionam a EBIA e a LC goiana nº 205/2025?",
+        "resposta": "A EBIA é a estratégia federal (Portaria MCTI nº 4.617/2021), com eixos transversais e verticais, entre eles a aplicação no poder público. A LC nº 205/2025 institui a política estadual de fomento à inovação em IA, cria o NEI-IA e o sandbox estadual e assegura revisão humana de decisões automatizadas que afetem direitos significativos na administração estadual."
+      },
+      "conceitosChave": ["EBIA: eixos transversais e verticais", "LC-GO nº 205/2025: política estadual de IA"],
+      "fundamentacao": "Portaria MCTI nº 4.617/2021 (EBIA), alterada pela Portaria MCTI nº 4.979/2021; Lei Complementar do Estado de Goiás nº 205, de 19/5/2025 (política estadual de fomento à inovação em IA, revisão humana na administração estadual, NEI-IA e sandbox), conforme levantamento em fontes oficiais do Governo de Goiás.",
+      "revisarFonteOficial": true
+    }
+  ]
+}

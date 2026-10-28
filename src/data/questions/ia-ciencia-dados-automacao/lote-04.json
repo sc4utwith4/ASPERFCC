@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "ia-dados-031",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ciência de dados: coleta, preparação e exploração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na metodologia CRISP-DM, amplamente usada em projetos de mineração e de ciência de dados, a fase em que se realizam a limpeza dos registros, a seleção de atributos, a construção de variáveis derivadas e a integração de diferentes fontes denomina-se",
+      "variantesEnunciado": [
+        "Um projeto de ciência de dados do Tribunal segue o modelo CRISP-DM. A etapa em que a equipe trata valores ausentes, elimina duplicatas, cria variáveis derivadas e une as bases de diferentes sistemas corresponde à fase de",
+        "No ciclo CRISP-DM, a fase que engloba seleção, limpeza, construção, integração e formatação dos dados que alimentarão os modelos é denominada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "entendimento dos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No entendimento dos dados ocorrem a coleta inicial, a descrição, a exploração e a verificação da qualidade dos dados. Identificam-se problemas, mas a limpeza e a transformação propriamente ditas ficam para a fase seguinte, de preparação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "modelagem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na modelagem escolhem-se e aplicam-se as técnicas (árvores, regressão, agrupamento etc.) e calibram-se parâmetros. Ela pode exigir retorno à preparação, mas não é a fase de limpeza e integração dos dados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "entendimento do negócio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O entendimento do negócio define objetivos, critérios de sucesso e o plano do projeto do ponto de vista da organização. Não envolve manipulação dos dados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "avaliação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na avaliação verifica-se se os modelos atendem aos objetivos de negócio definidos no início e decide-se sobre a implantação. Ela não trata de limpar ou de integrar dados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "preparação dos dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O CRISP-DM tem seis fases: entendimento do negócio, entendimento dos dados, preparação dos dados, modelagem, avaliação e implantação. A preparação dos dados reúne seleção, limpeza, construção de atributos, integração e formatação, e costuma consumir a maior parte do esforço do projeto.",
+          "versaoInvertidaFalsa": "entendimento dos dados, fase do CRISP-DM em que se realizam a limpeza, a integração de fontes e a construção de variáveis derivadas, antes da exploração inicial."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca fases vizinhas: no entendimento dos dados exploram-se e avaliam-se os dados; na preparação, eles são limpos, transformados e integrados.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as fases do CRISP-DM?",
+        "resposta": "Entendimento do negócio, entendimento dos dados, preparação dos dados, modelagem, avaliação e implantação. A preparação (seleção, limpeza, construção, integração e formatação) costuma consumir a maior parte do esforço."
+      },
+      "conceitosChave": ["Ciência de dados: CRISP-DM"],
+      "fundamentacao": "Chapman, P. et al. CRISP-DM 1.0: Step-by-step data mining guide (2000), fases e tarefas genéricas; Shearer, C. The CRISP-DM model: the new blueprint for data mining (Journal of Data Warehousing, 2000)."
+    },
+    {
+      "id": "ia-dados-032",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Fundamentos de inteligência artificial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere um sistema especialista que apoia a análise de admissões de pessoal. Em um modo de uso, o sistema parte dos dados informados pelo analista e aplica as regras cujas condições são satisfeitas até derivar todas as conclusões possíveis. Em outro, o analista indica a hipótese 'a admissão é ilegal' e o sistema procura as regras e os fatos que a sustentem, solicitando as informações faltantes. Esses dois modos correspondem, respectivamente, a",
+      "variantesEnunciado": [
+        "Um sistema baseado em regras apoia a verificação de conformidade de editais. Ora ele parte das informações extraídas do edital e dispara as regras aplicáveis até obter todas as conclusões, ora parte da hipótese 'o edital restringe a competitividade' e busca as regras e os fatos que a confirmem. Esses dois modos de inferência são, respectivamente,",
+        "Em um sistema especialista para análise de aposentadorias, o motor de inferência pode (1) partir dos dados do processo e derivar conclusões aplicando as regras satisfeitas ou (2) partir de uma conclusão a ser provada e procurar regras e fatos que a sustentem. Os modos (1) e (2) correspondem, respectivamente, a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "encadeamento para trás e encadeamento para frente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os modos. Partir dos fatos e aplicar regras até esgotar as conclusões é o encadeamento para frente (dirigido por dados); partir da hipótese e buscar o que a sustenta é o encadeamento para trás (dirigido por objetivos)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "encadeamento para frente e encadeamento para trás.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No encadeamento para frente, o motor de inferência dispara as regras cujas premissas são satisfeitas pelos fatos conhecidos e acrescenta as conclusões à memória de trabalho, até não haver mais regras aplicáveis. No encadeamento para trás, parte-se do objetivo e procuram-se regras que o concluam, e suas premissas viram subobjetivos, o que permite perguntar ao usuário só o que falta.",
+          "versaoInvertidaFalsa": "encadeamento para trás e encadeamento para frente, pois no encadeamento para trás o sistema parte dos fatos disponíveis e aplica as regras até esgotar as conclusões."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aprendizado supervisionado e aprendizado não supervisionado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os modos descritos são formas de inferência sobre uma base de regras já existente, e não formas de aprendizado a partir de dados. Sistemas especialistas clássicos não aprendem as regras: elas são elicitadas de especialistas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "busca em largura e busca em profundidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Busca em largura e em profundidade são estratégias de exploração de um espaço de estados. Embora o encadeamento para trás seja frequentemente implementado em profundidade, o que distingue os modos do caso é o ponto de partida: os fatos ou a hipótese."
+        },
+        {
+          "id": "opt-5",
+          "texto": "redes semânticas e quadros (frames).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Redes semânticas e quadros (frames) são formalismos de representação do conhecimento, e não modos de inferência. O caso descreve como o motor de inferência usa as regras, partindo dos fatos ou da hipótese."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte frente e trás. Para frente: dos fatos às conclusões (dirigido por dados). Para trás: da hipótese aos fatos que a sustentam (dirigido por objetivos).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre encadeamento para frente e para trás?",
+        "resposta": "Para frente parte dos fatos conhecidos e aplica as regras até derivar conclusões (dirigido por dados). Para trás parte de uma hipótese e procura regras e fatos que a sustentem, gerando subobjetivos (dirigido por objetivos)."
+      },
+      "conceitosChave": ["Fundamentos de IA: sistemas especialistas", "Fundamentos de IA: encadeamento de regras"],
+      "fundamentacao": "Russell, S.; Norvig, P. Inteligência Artificial: uma abordagem moderna, 4ª ed., caps. 7 e 9 (encadeamento para frente e para trás); Giarratano, J.; Riley, G. Expert Systems: Principles and Programming, cap. 1."
+    },
+    {
+      "id": "ia-dados-033",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "LGPD aplicada à IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Para compartilhar com uma equipe de cientistas de dados uma base de pagamentos de benefícios, um órgão substituiu o CPF de cada beneficiário pelo resultado da função de hash SHA-256 aplicada diretamente ao número, sem chave secreta nem valor aleatório (sal), e manteve na base o município, a data de nascimento e o valor recebido. À luz da LGPD e das boas práticas de proteção de dados, é correto afirmar que",
+      "variantesEnunciado": [
+        "Antes de enviar a uma universidade uma base de servidores para pesquisa, um órgão trocou o CPF de cada servidor pelo hash SHA-256 do próprio número, sem chave secreta nem sal, mantendo cargo, lotação, data de nascimento e remuneração. À luz da LGPD e das boas práticas de proteção de dados, é correto afirmar que",
+        "Em auditoria de um projeto de análise de dados, constatou-se que a base de beneficiários de um programa social foi 'anonimizada' com a substituição do CPF pelo seu hash SHA-256, sem sal nem chave, e com a manutenção de município, data de nascimento e valor recebido. À luz da LGPD e das boas práticas de proteção de dados, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a base passou a conter apenas dados anonimizados, fora do alcance da LGPD, pois as funções de hash criptográficas são unidirecionais e não podem ser invertidas por nenhum meio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O hash não se inverte matematicamente, mas o CPF tem universo pequeno e estruturado: basta calcular o hash de todos os CPFs possíveis e comparar (ataque de força bruta ou de dicionário). Pelo art. 12 da LGPD, dado cuja anonimização pode ser revertida com esforços razoáveis não é anonimizado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o procedimento configura criptografia simétrica, e a base pode ser publicada em formato aberto sem nenhum risco aos titulares.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Hash não é criptografia simétrica: não há chave nem decifração. E, como os hashes de CPF sem sal podem ser recalculados, a publicação exporia os titulares, contrariando os princípios da segurança e da prevenção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o uso de hash sobre o CPF só seria irregular se a base contivesse dados sensíveis, pois a LGPD protege apenas essa categoria de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD protege todos os dados pessoais, e não apenas os sensíveis, que recebem proteção reforçada. CPF, data de nascimento e valor de benefício são dados pessoais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os dados continuam pessoais, pois o pequeno universo de CPFs permite recalcular os hashes e reidentificar os titulares, e os demais atributos facilitam a reidentificação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O espaço de CPFs válidos é pequeno o bastante para que todos os hashes sejam pré-calculados, o que permite reverter a substituição; e a combinação de município, data de nascimento e valor funciona como quase-identificador. Pelos arts. 5º, XI, e 12 da LGPD, os dados continuam pessoais. Para pseudonimizar de fato, usa-se hash com chave secreta (HMAC) ou tokenização, com a chave guardada separadamente (art. 13, § 4º), além de reduzir os atributos indiretos.",
+          "versaoInvertidaFalsa": "a base passou a conter dados anonimizados, pois o hash SHA-256 sem sal impede o recálculo dos valores e afasta a reidentificação dos titulares."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a técnica empregada é a pseudonimização, que, por definição legal, transforma os dados em anonimizados e dispensa as medidas de segurança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pseudonimização e anonimização são distintas: na pseudonimização, a associação ao titular continua possível com informação adicional mantida separadamente pelo controlador (art. 13, § 4º), de modo que os dados seguem pessoais e sujeitos às medidas de segurança. Além disso, o procedimento descrito, sem chave secreta, nem sequer pseudonimiza de forma robusta."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa a irreversibilidade matemática do hash para sugerir anonimização. Com universo pequeno de valores, como o do CPF, o hash sem sal ou chave é recalculável, e os quase-identificadores completam a reidentificação.",
+      "resumoFlashcard": {
+        "pergunta": "Substituir o CPF pelo hash SHA-256 sem sal anonimiza a base?",
+        "resposta": "Não. O universo de CPFs é pequeno, e os hashes podem ser recalculados por força bruta; atributos como data de nascimento e município ainda permitem reidentificar. Os dados continuam pessoais (LGPD, arts. 5º, XI, e 12); para pseudonimizar, usa-se hash com chave secreta ou tokenização."
+      },
+      "conceitosChave": ["LGPD: anonimização", "LGPD: pseudonimização"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 5º, III e XI; art. 12, caput e § 1º; art. 13, § 4º; NIST SP 800-188, De-Identifying Government Datasets (2023)."
+    },
+    {
+      "id": "ia-dados-034",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Redes neurais e deep learning",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Em uma rede neural para classificar documentos em uma entre várias categorias mutuamente exclusivas, a camada de saída costuma usar a função ……, que transforma os valores em probabilidades que somam 1. Nas camadas ocultas de redes profundas, é comum usar a ……, que retorna o próprio valor quando positivo e zero caso contrário, por mitigar o desaparecimento do gradiente, problema agravado por funções como a ……, que satura próximo de 0 e de 1. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao projetar uma rede neural que classifica manifestações em uma de cinco categorias exclusivas, a equipe usou na saída a ……, que gera probabilidades que somam 1; nas camadas ocultas, a ……, definida como máx(0, x), para atenuar o desaparecimento do gradiente; e evitou nessas camadas a ……, cuja derivada se aproxima de zero quando a saída fica perto de 0 ou de 1. Preenchem, correta e respectivamente, as lacunas:",
+        "Em redes neurais profundas para classificação multiclasse, a função …… é típica da camada de saída por produzir uma distribuição de probabilidades; a …… predomina nas camadas ocultas por ter derivada 1 para entradas positivas; e a …… tende a saturar, contribuindo para o desaparecimento do gradiente. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "sigmoide − softmax − ReLU",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sigmoide produz um valor entre 0 e 1 por neurônio, adequado a classificação binária ou multirrótulo, mas não garante que as saídas de várias classes somem 1. A ReLU, por sua vez, não satura para valores positivos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ReLU − softmax − sigmoide",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ReLU não produz probabilidades: suas saídas não se limitam a [0, 1] nem somam 1. E a softmax é função de saída para classes exclusivas, e não ativação típica de camadas ocultas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "softmax − ReLU − sigmoide",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A softmax converte o vetor de saídas em distribuição de probabilidades (valores positivos que somam 1), adequada a classes mutuamente exclusivas. A ReLU, f(x) = máx(0, x), tem derivada 1 para entradas positivas e por isso não encolhe o gradiente na retropropagação. A sigmoide satura perto de 0 e de 1, onde sua derivada é quase nula, o que contribui para o desaparecimento do gradiente em redes profundas.",
+          "versaoInvertidaFalsa": "Nas redes profundas, a sigmoide é preferida nas camadas ocultas por não saturar, e a ReLU, por saturar perto de 0 e de 1, agrava o desaparecimento do gradiente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "softmax − tangente hiperbólica − ReLU",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas a tangente hiperbólica também satura (perto de −1 e de 1) e não retorna o próprio valor para entradas positivas. A ReLU, por sua vez, não satura para valores positivos, o que contraria a última lacuna."
+        },
+        {
+          "id": "opt-5",
+          "texto": "degrau − ReLU − softmax",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A função degrau não gera probabilidades nem tem derivada útil para a retropropagação; e a softmax não é a função de camadas ocultas que satura perto de 0 e de 1, papel associado à sigmoide."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis das funções de ativação: softmax na saída multiclasse (probabilidades que somam 1), ReLU nas camadas ocultas e sigmoide como exemplo de função que satura.",
+      "resumoFlashcard": {
+        "pergunta": "Onde se usam softmax, ReLU e sigmoide em redes neurais?",
+        "resposta": "Softmax na saída de classificação multiclasse exclusiva (probabilidades que somam 1); ReLU, máx(0, x), nas camadas ocultas, por mitigar o desaparecimento do gradiente; sigmoide em saídas binárias, mas ela satura perto de 0 e de 1."
+      },
+      "conceitosChave": ["Redes neurais: funções de ativação"],
+      "fundamentacao": "Goodfellow, I.; Bengio, Y.; Courville, A. Deep Learning (2016), seções 6.2.2 (unidades de saída sigmoide e softmax) e 6.3 (unidades ocultas e ReLU); Glorot, X.; Bordes, A.; Bengio, Y. Deep Sparse Rectifier Neural Networks (AISTATS, 2011)."
+    },
+    {
+      "id": "ia-dados-035",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Engenharia de prompts e de contexto e RAG",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para classificar manifestações da ouvidoria em 'denúncia', 'reclamação' ou 'pedido de informação', um servidor escreveu um prompt que apresenta a tarefa, inclui três manifestações já classificadas, cada uma acompanhada da respectiva categoria, e só então traz a manifestação nova a ser classificada. O modelo não foi retreinado. A técnica empregada é",
+      "variantesEnunciado": [
+        "Um analista quer que um LLM classifique despesas em 'pessoal', 'custeio' ou 'investimento'. No prompt, ele descreve a tarefa, apresenta quatro despesas já classificadas com as respectivas categorias e, ao final, a despesa a classificar, sem qualquer retreinamento do modelo. A técnica empregada é",
+        "Para padronizar a classificação de chamados da central de serviços em 'incidente' ou 'requisição', um técnico incluiu no prompt alguns chamados de exemplo com a classificação correta, seguidos do chamado novo. Os pesos do modelo não foram alterados. A técnica empregada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o prompt com poucos exemplos (few-shot), em que o modelo aprende o padrão a partir dos exemplos inseridos no contexto, sem alteração dos pesos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No few-shot prompting, alguns pares de entrada e saída são incluídos no próprio prompt, e o modelo infere o padrão por aprendizado em contexto (in-context learning), sem alteração de pesos. Brown et al. (2020) mostraram que modelos de grande porte melhoram em várias tarefas com esse recurso. Com zero exemplos, seria zero-shot; com um, one-shot.",
+          "versaoInvertidaFalsa": "o ajuste fino (fine-tuning), pois incluir exemplos classificados no prompt altera os pesos do modelo para a nova tarefa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o prompt sem exemplos (zero-shot), pois o modelo não passou por nenhum treinamento adicional para a tarefa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O que define o zero-shot não é a ausência de retreinamento, que também ocorre no few-shot, mas a ausência de exemplos no prompt. Aqui foram incluídos três exemplos rotulados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o ajuste fino (fine-tuning) supervisionado, já que exemplos rotulados foram fornecidos ao modelo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ajuste fino altera os pesos do modelo por meio de treinamento com exemplos rotulados. O enunciado afirma que o modelo não foi retreinado: os exemplos estão apenas no prompt."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a cadeia de raciocínio (chain-of-thought), que consiste em fornecer exemplos de entrada e saída sem etapas intermediárias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cadeia de raciocínio (Wei et al., 2022) consiste justamente em induzir ou exemplificar etapas intermediárias de raciocínio antes da resposta. Exemplos só com entrada e saída caracterizam o few-shot simples."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a geração aumentada por recuperação (RAG), pois os exemplos classificados foram buscados automaticamente em um banco vetorial e inseridos no prompt.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nada indica busca automática em base vetorial: os exemplos foram escritos pelo servidor no prompt. O RAG recupera trechos de documentos por similaridade para fundamentar a resposta, o que é outra técnica, embora combinável."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde few-shot com ajuste fino (exemplos rotulados não implicam treino) e com zero-shot (ausência de retreinamento não significa ausência de exemplos).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre zero-shot, few-shot e ajuste fino?",
+        "resposta": "Zero-shot: só a instrução, sem exemplos. Few-shot: alguns exemplos de entrada e saída no próprio prompt, com aprendizado em contexto e sem mudança de pesos. Ajuste fino: treinamento adicional que altera os pesos do modelo."
+      },
+      "conceitosChave": ["Engenharia de prompts: técnicas", "RAG × fine-tuning"],
+      "fundamentacao": "Brown, T. et al. Language Models are Few-Shot Learners (NeurIPS, 2020); Wei, J. et al. Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (NeurIPS, 2022)."
+    },
+    {
+      "id": "ia-dados-036",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ética, IA responsável, explicabilidade e governança",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao estruturar a governança do uso de inteligência artificial em um Tribunal de Contas, a equipe consultou referenciais internacionais sobre o tema. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Para elaborar a política de uso de IA de um órgão público, uma comissão analisou princípios e normas internacionais de IA responsável. Considere as afirmativas abaixo.",
+        "Sobre referenciais de ética e de governança de inteligência artificial, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Os Princípios de IA da OCDE, adotados em 2019 e atualizados em 2024, incluem transparência e explicabilidade, robustez e segurança, e responsabilização (accountability).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os cinco princípios baseados em valores são: crescimento inclusivo, desenvolvimento sustentável e bem-estar; respeito ao Estado de Direito, aos direitos humanos e aos valores democráticos, incluindo equidade e privacidade; transparência e explicabilidade; robustez, segurança e proteção; e responsabilização."
+        },
+        {
+          "texto": "A norma ISO/IEC 42001:2023 especifica requisitos para estabelecer, implementar, manter e melhorar continuamente um sistema de gestão de IA em uma organização.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É norma de sistema de gestão (AIMS), certificável, com a estrutura comum das normas ISO de gestão e controles de referência em anexo, voltada ao desenvolvimento e ao uso responsáveis de IA."
+        },
+        {
+          "texto": "A explicabilidade busca permitir que as pessoas afetadas e os responsáveis compreendam os fatores que levaram a uma saída do sistema de IA, de modo compatível com o contexto e com o risco.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Explicabilidade e transparência permitem contestar decisões e supervisionar o sistema; o grau de detalhe adequado varia com o contexto e com o impacto da decisão."
+        },
+        {
+          "texto": "A supervisão humana é mecanismo de governança que permite intervir, corrigir ou desativar um sistema de IA, e sua intensidade deve ser proporcional ao risco das decisões apoiadas pelo sistema.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A supervisão humana, com o humano no circuito ou acompanhando o circuito, é salvaguarda reconhecida nos referenciais de IA responsável e deve ser calibrada ao risco do uso."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite as afirmativas III e IV, que também são verdadeiras: explicabilidade compatível com o contexto e supervisão humana proporcional ao risco são pilares da IA responsável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II, III e IV.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As quatro afirmativas estão corretas: a I resume princípios da OCDE (2019, revisados em 2024); a II descreve a ISO/IEC 42001:2023 como norma de sistema de gestão de IA; a III define explicabilidade; e a IV trata da supervisão humana calibrada ao risco.",
+          "versaoInvertidaFalsa": "A norma ISO/IEC 42001:2023 define a arquitetura interna das redes neurais e os algoritmos de treinamento que devem ser usados nos sistemas de IA de uma organização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa II, que também é verdadeira: a ISO/IEC 42001:2023 é a norma de requisitos para sistemas de gestão de IA, aplicável a organizações que desenvolvem, fornecem ou usam IA."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite as afirmativas I e IV, também verdadeiras, que tratam dos princípios da OCDE (2019, revisados em 2024) e da supervisão humana proporcional ao risco."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa I, que também é verdadeira: transparência e explicabilidade, robustez e segurança e responsabilização estão entre os cinco princípios da OCDE."
+        }
+      ],
+      "pegadinhaFCC": "Todas as afirmativas são verdadeiras, e a banca aposta que o candidato desconfie de alguma. A ISO/IEC 42001 é norma de sistema de gestão (e não técnica de algoritmos), e os princípios da OCDE foram atualizados em 2024.",
+      "resumoFlashcard": {
+        "pergunta": "O que são os Princípios de IA da OCDE e a ISO/IEC 42001?",
+        "resposta": "Os Princípios da OCDE (2019, revisados em 2024) são cinco princípios baseados em valores, entre eles transparência e explicabilidade, robustez e segurança e responsabilização. A ISO/IEC 42001:2023 especifica requisitos de um sistema de gestão de IA nas organizações."
+      },
+      "conceitosChave": ["Governança de IA: OCDE e ISO/IEC 42001", "IA responsável: explicabilidade", "IA responsável: supervisão humana"],
+      "fundamentacao": "OCDE, Recommendation of the Council on Artificial Intelligence (2019, revisada em maio de 2024), princípios baseados em valores; ISO/IEC 42001:2023, Information technology — Artificial intelligence — Management system, escopo."
+    },
+    {
+      "id": "ia-dados-037",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aplicações de IA e automação de processos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da automação robótica de processos (RPA) e de sua relação com a inteligência artificial, é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma unidade administrativa avalia automatizar o lançamento mensal de dados de planilhas padronizadas em um sistema legado. Sobre a automação robótica de processos (RPA) e sua relação com a IA, é correto afirmar que",
+        "No contexto da automação de processos administrativos no setor público, a respeito do RPA (Robotic Process Automation), é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o RPA usa robôs de software que reproduzem ações humanas nas interfaces dos sistemas, segundo regras definidas, e é mais indicado para tarefas repetitivas, estáveis e com dados estruturados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os robôs de RPA operam como um usuário: abrem sistemas, copiam e colam dados, preenchem formulários e geram relatórios, seguindo regras explícitas. Funcionam melhor em processos repetitivos, estáveis e com entradas estruturadas; quando há variação ou dados não estruturados, combinam-se com IA (OCR, PLN, classificação), na chamada automação inteligente.",
+          "versaoInvertidaFalsa": "o RPA aprende sozinho a partir de exemplos e é a técnica mais indicada para interpretar documentos não estruturados e com grande variação de formato."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o RPA aprende sozinho a partir de exemplos, como os modelos de aprendizado de máquina, e por isso dispensa a definição prévia das regras do processo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RPA tradicional é determinístico: executa o que foi configurado e não aprende com exemplos. A capacidade de aprender a partir de dados é própria do aprendizado de máquina, que pode ser acoplado ao robô."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o RPA exige a substituição dos sistemas legados por APIs modernas, pois não consegue interagir com interfaces gráficas de usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma das principais vantagens do RPA é justamente interagir com sistemas legados pela interface gráfica, sem exigir integração por API. Quando há API disponível, ela costuma ser preferível, mas não é requisito."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o RPA é a técnica mais indicada para interpretar documentos não estruturados e com grande variação, como petições redigidas livremente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Documentos livres e variáveis exigem técnicas de IA, como OCR, processamento de linguagem natural e classificação de textos. O RPA isolado, baseado em regras fixas, lida mal com essa variabilidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o RPA e a IA são incompatíveis, de modo que um mesmo fluxo automatizado não pode combinar robôs de software e modelos de aprendizado de máquina.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É comum combinar os dois na automação inteligente: a IA interpreta documentos ou toma decisões probabilísticas, e o RPA executa os passos operacionais nos sistemas."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao RPA capacidades de IA (aprender, interpretar texto livre) ou limitações que ele não tem (não operar interfaces gráficas). O RPA executa regras; a IA lida com variação e com dados não estruturados.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre RPA e IA?",
+        "resposta": "O RPA usa robôs de software que reproduzem ações humanas nas interfaces, segundo regras fixas, e é ideal para tarefas repetitivas com dados estruturados. A IA aprende com dados e lida com variação e conteúdo não estruturado; combinados, formam a automação inteligente."
+      },
+      "conceitosChave": ["Automação: RPA × IA"],
+      "fundamentacao": "van der Aalst, W. M. P.; Bichler, M.; Heinzl, A. Robotic Process Automation (Business & Information Systems Engineering, 2018); Lacity, M.; Willcocks, L. Robotic Process and Cognitive Automation (2018)."
+    },
+    {
+      "id": "ia-dados-038",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aprendizado supervisionado, não supervisionado e por reforço",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma equipe desenvolveu um modelo para prever quais processos de tomada de contas especial resultarão em condenação. Antes de separar os dados, padronizou todos os atributos com média e desvio-padrão calculados sobre a base inteira; incluiu como atributo a 'data de inscrição do débito em dívida ativa', registrada apenas após a condenação; e escolheu os hiperparâmetros testando várias configurações diretamente no conjunto de teste. O modelo obteve 98% de acurácia no teste, mas desempenho muito inferior em produção. A explicação e a correção adequadas são",
+      "variantesEnunciado": [
+        "Para prever quais licitações serão anuladas, um analista usou como atributo a 'data da publicação do ato de anulação', calculou a normalização dos atributos sobre todos os registros antes de dividir treino e teste e ajustou os hiperparâmetros observando o desempenho no próprio conjunto de teste. O modelo teve desempenho excelente no teste e fraco em produção. A explicação e a correção adequadas são",
+        "Em auditoria de um modelo que prevê a reprovação de contas, constatou-se que: a padronização dos atributos usou média e desvio-padrão de toda a base, antes da divisão em treino e teste; um dos atributos era a 'data do julgamento definitivo', só conhecida após o desfecho; e os hiperparâmetros foram escolhidos pelo melhor resultado no conjunto de teste. O modelo teve 97% de acurácia no teste e desempenho fraco em produção. A explicação e a correção adequadas são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "subajuste do modelo, a ser corrigido com o aumento da complexidade e do número de épocas de treinamento, mantendo-se o mesmo procedimento de avaliação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O subajuste se manifesta como desempenho ruim já na avaliação, e aqui o teste indicou desempenho excelente. O problema é a estimativa otimista causada pela contaminação da avaliação, que não se resolve com mais complexidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "mudança na distribuição dos dados de produção (data drift), que dispensa revisar o pipeline, bastando retreinar periodicamente o modelo com os mesmos atributos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mudanças na distribuição dos dados podem ocorrer em produção, mas o caso descreve falhas de procedimento que, por si sós, inflam o resultado do teste. Retreinar com o mesmo atributo posterior ao desfecho e o mesmo pipeline repetiria o erro."
+        },
+        {
+          "id": "opt-3",
+          "texto": "desbalanceamento de classes, a ser corrigido com sobreamostragem sintética (SMOTE) aplicada à base inteira antes da divisão entre treino e teste.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mesmo que houvesse desbalanceamento, aplicar sobreamostragem à base inteira antes da divisão também vaza informação, porque exemplos sintéticos derivados do teste entram no treino. E a causa descrita no caso é outra."
+        },
+        {
+          "id": "opt-4",
+          "texto": "excesso de dados de treinamento, a ser corrigido com a redução da amostra, pois bases grandes levam o modelo a memorizar os exemplos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mais dados, em geral, reduzem a tendência de memorização (sobreajuste), e não o contrário. A queda em produção decorre da contaminação da avaliação, e não do tamanho da base."
+        },
+        {
+          "id": "opt-5",
+          "texto": "vazamento de dados: o atributo só existe após o desfecho, e o pré-processamento e os hiperparâmetros foram ajustados com dados de teste; deve-se excluir o atributo, ajustar o pré-processamento só no treino e reservar o teste para a avaliação final.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Há três formas de vazamento: (1) atributo indisponível no momento da previsão, que 'entrega' o alvo; (2) padronização ajustada com estatísticas da base inteira, incluindo o teste; (3) escolha de hiperparâmetros no conjunto de teste, que o transforma em validação. A correção é excluir o atributo, encapsular o pré-processamento em um pipeline ajustado só no treino (ou em cada dobra da validação cruzada), escolher hiperparâmetros por validação e usar o teste uma única vez, ao final.",
+          "versaoInvertidaFalsa": "não houve vazamento de dados, pois padronizar com estatísticas da base inteira e escolher hiperparâmetros no conjunto de teste são práticas que não afetam a estimativa de desempenho."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve vazamento de dados sem nomeá-lo e oferece diagnósticos vizinhos (subajuste, drift, desbalanceamento). Atributo posterior ao desfecho e uso do teste no ajuste inflam o desempenho medido.",
+      "resumoFlashcard": {
+        "pergunta": "O que é vazamento de dados (data leakage) e como evitá-lo?",
+        "resposta": "É o uso, no treinamento ou na seleção do modelo, de informação indisponível no momento da previsão ou vinda do conjunto de teste, o que infla o desempenho medido. Evita-se excluindo atributos posteriores ao desfecho, ajustando o pré-processamento só no treino (pipelines) e usando o teste uma única vez."
+      },
+      "conceitosChave": ["ML: vazamento de dados", "ML: treino, validação e teste"],
+      "fundamentacao": "Documentação do scikit-learn, 'Common pitfalls and recommended practices' (data leakage) e 'Cross-validation: evaluating estimator performance'; Kaufman, S. et al. Leakage in Data Mining: Formulation, Detection, and Avoidance (ACM TKDD, 2012)."
+    },
+    {
+      "id": "ia-dados-039",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "IA generativa, agentes e modelos multimodais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em estudo sobre agentes inteligentes e modelos multimodais para apoiar a fiscalização, a equipe de TI de um Tribunal de Contas reuniu conceitos clássicos da área. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao avaliar soluções de IA que analisam fotografias de obras, documentos e áudios de sessões, a equipe revisou conceitos de agentes inteligentes e de modelos multimodais. Considere as afirmativas abaixo.",
+        "Sobre agentes inteligentes, segundo a tipologia de Russell e Norvig, e sobre modelos multimodais, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um agente reativo simples escolhe suas ações apenas com base na percepção atual, por meio de regras condição-ação, sem manter histórico do que percebeu antes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a definição de Russell e Norvig; esse agente funciona bem somente quando a decisão correta pode ser tomada com base na percepção atual."
+        },
+        {
+          "texto": "Em ambientes parcialmente observáveis, um agente baseado em modelo mantém um estado interno, atualizado a partir das percepções e do conhecimento sobre como o mundo evolui.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O estado interno permite acompanhar aspectos do mundo que não estão visíveis na percepção atual."
+        },
+        {
+          "texto": "Um modelo multimodal é aquele que combina vários modelos de linguagem treinados em idiomas diferentes para responder a perguntas em qualquer língua.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Multimodal refere-se a modalidades de dados (texto, imagem, áudio, vídeo), e não a idiomas. Um modelo multimodal pode, por exemplo, receber a foto de uma obra e um texto e responder sobre ambos."
+        },
+        {
+          "texto": "Um agente baseado em utilidade escolhe entre ações que atingem o objetivo comparando o grau de desejabilidade dos estados resultantes, segundo uma função de utilidade.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A utilidade permite decidir entre alternativas que cumprem o objetivo com custos, riscos ou qualidade diferentes, o que o agente baseado apenas em objetivos não distingue."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, que também é verdadeira: o agente baseado em utilidade compara a desejabilidade dos estados para escolher entre ações que atingem o objetivo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa, pois multimodalidade diz respeito a tipos de dados (texto, imagem, áudio), e não a idiomas. Também omite a I, que define corretamente o agente reativo simples."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa, e omite a I e a II, que descrevem corretamente os agentes reativo simples e baseado em modelo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I, a II e a IV reproduzem a tipologia de agentes de Russell e Norvig: o reativo simples decide pela percepção atual com regras condição-ação; o baseado em modelo mantém estado interno para lidar com observabilidade parcial; o baseado em utilidade compara a desejabilidade dos estados. A III é falsa: multimodal refere-se a modalidades de dados, como texto, imagem e áudio, e não a idiomas.",
+          "versaoInvertidaFalsa": "Um agente reativo simples mantém um estado interno com o histórico das percepções e por isso é a escolha indicada para ambientes parcialmente observáveis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: um modelo multimodal processa ou gera diferentes tipos de dados, como texto, imagem e áudio. Combinar idiomas não caracteriza multimodalidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde multimodalidade (tipos de dados) com multilinguismo e embaralha os tipos de agente: o reativo simples não guarda estado; quem mantém estado interno é o agente baseado em modelo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os tipos de agente de Russell e Norvig?",
+        "resposta": "Reativo simples (regras condição-ação sobre a percepção atual), baseado em modelo (mantém estado interno), baseado em objetivos (planeja para atingir metas), baseado em utilidade (compara a desejabilidade dos estados) e agente com aprendizado (melhora com a experiência)."
+      },
+      "conceitosChave": ["Agentes inteligentes: tipos", "IA generativa: modelos multimodais"],
+      "fundamentacao": "Russell, S.; Norvig, P. Inteligência Artificial: uma abordagem moderna, 4ª ed., cap. 2, seção 2.4 (estrutura dos agentes); literatura sobre modelos multimodais de grande porte, que processam texto, imagem e áudio."
+    },
+    {
+      "id": "ia-dados-040",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estatística aplicada e avaliação de modelos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em levantamento sobre os municípios jurisdicionados, um técnico encontrou coeficiente de correlação de Pearson r = 0,8 entre o número de contratações emergenciais e o número de achados de auditoria por município. Em reunião, um colega concluiu que as contratações emergenciais causam os achados. A respeito desse resultado, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao cruzar dados de órgãos estaduais, um analista obteve correlação de Pearson de 0,8 entre o número de aditivos contratuais e o número de irregularidades apontadas por órgão. Um colega afirmou que os aditivos causam as irregularidades. A respeito desse resultado, é correto afirmar que",
+        "Um estudo sobre prefeituras jurisdicionadas encontrou r = 0,8 entre o volume de dispensas de licitação e o número de achados de fiscalização. Um gestor interpretou o resultado como prova de que as dispensas provocam os achados. A respeito desse resultado, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a correlação de 0,8 indica que 80% dos achados de auditoria são causados pelas contratações emergenciais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O coeficiente de correlação não é proporção nem percentual de causas. Ele mede a força e o sentido da associação linear entre as variáveis, em escala de −1 a 1."
+        },
+        {
+          "id": "opt-2",
+          "texto": "por ser superior a 0,7, a correlação comprova a relação de causa e efeito entre as variáveis, o que dispensa a análise de outros fatores, como o porte ou o volume de recursos geridos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum valor de correlação, por mais alto, comprova causalidade. Para inferir causa, são necessários desenho adequado (experimentos, quase-experimentos), controle de variáveis de confusão e plausibilidade do mecanismo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "há associação linear positiva forte e r² = 0,64, mas isso não prova causalidade, pois fatores como o porte ou o volume de recursos geridos podem influenciar ambas as variáveis.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. r = 0,8 indica associação linear positiva forte. O coeficiente de determinação r² = 0,64 significa que, em regressão linear simples, cerca de 64% da variância de uma variável é explicada pela outra. Ainda assim, correlação não implica causalidade: entes maiores tendem a ter mais contratações e mais achados, e o porte atuaria como variável de confusão.",
+          "versaoInvertidaFalsa": "há associação linear positiva forte, o que comprova que uma variável causa a outra, já que r² = 0,64 indica 64% de causalidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o coeficiente indica que cada contratação emergencial adicional gera, em média, 0,8 achado de auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O efeito médio de uma variável sobre a outra é dado pela inclinação da reta de regressão, que depende das unidades e dos desvios-padrão (b = r · sy/sx), e não pelo coeficiente de correlação, que é adimensional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "como a correlação não é igual a 1, não há relação entre as variáveis, e o resultado deve ser descartado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Correlação igual a 1 indica relação linear perfeita, situação rara. Um r de 0,8 é forte e não deve ser descartado; deve ser interpretado com cautela quanto à causalidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca transforma correlação em causalidade ou em percentual de causas e confunde o coeficiente de correlação com a inclinação da reta de regressão. O r² mede a variância explicada, e não a causalidade.",
+      "resumoFlashcard": {
+        "pergunta": "O que significam r = 0,8 e r² = 0,64?",
+        "resposta": "r = 0,8 indica associação linear positiva forte; r² = 0,64 indica que cerca de 64% da variância de uma variável é explicada linearmente pela outra. Nenhum dos dois prova causalidade: variáveis de confusão podem explicar a associação."
+      },
+      "conceitosChave": ["Estatística: correlação × causalidade"],
+      "fundamentacao": "Montgomery, D. C.; Runger, G. C. Estatística Aplicada e Probabilidade para Engenheiros, cap. 11 (regressão linear simples e correlação); Freedman, D.; Pisani, R.; Purves, R. Statistics, 4ª ed., cap. 2 (estudos observacionais e confusão) e caps. 8 e 9 (correlação)."
+    }
+  ]
+}
