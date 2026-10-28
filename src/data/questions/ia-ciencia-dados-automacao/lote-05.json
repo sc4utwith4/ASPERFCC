@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "ia-dados-041",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estratégia Brasileira de Inteligência Artificial (EBIA)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A Estratégia Brasileira de Inteligência Artificial (EBIA), instituída em 2021 por portaria do Ministério da Ciência, Tecnologia e Inovações, organiza-se em eixos temáticos transversais e verticais. São eixos transversais da EBIA",
+      "variantesEnunciado": [
+        "Ao estudar a Estratégia Brasileira de Inteligência Artificial (EBIA), um técnico observou que ela distribui seus nove eixos temáticos entre transversais e verticais. Correspondem aos eixos transversais",
+        "Na estrutura da EBIA, os eixos transversais permeiam toda a estratégia, e os verticais tratam de frentes específicas. Os eixos transversais da EBIA são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplicação no poder público; segurança pública; e aspectos internacionais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aplicação no poder público e segurança pública são eixos verticais, voltados a frentes específicas de aplicação. Entre os três itens, só aspectos internacionais é eixo transversal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "legislação, regulação e uso ético; governança de IA; e aspectos internacionais.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A EBIA (Portaria MCTI nº 4.617/2021, alterada pela Portaria MCTI nº 4.979/2021) tem nove eixos: três transversais, que permeiam toda a estratégia (legislação, regulação e uso ético; governança de IA; aspectos internacionais), e seis verticais, como força de trabalho e capacitação, PD&I e empreendedorismo, setores produtivos, poder público e segurança pública.",
+          "versaoInvertidaFalsa": "aplicação no poder público, segurança pública e aplicação nos setores produtivos, que são os três eixos transversais da EBIA, enquanto governança de IA é eixo vertical."
+        },
+        {
+          "id": "opt-3",
+          "texto": "força de trabalho e capacitação; pesquisa, desenvolvimento, inovação e empreendedorismo; e aplicação nos setores produtivos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os três itens são eixos verticais da EBIA, que tratam de frentes específicas (formação de pessoas, pesquisa e aplicação econômica). Os transversais são legislação, regulação e uso ético; governança de IA; e aspectos internacionais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "legislação, regulação e uso ético; governança de IA; e segurança pública.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros itens são transversais, mas segurança pública é eixo vertical. O terceiro eixo transversal é o de aspectos internacionais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "infraestrutura e desenvolvimento de IA; inovação empresarial; e melhoria dos serviços públicos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os itens remetem a temas do Plano Brasileiro de Inteligência Artificial (PBIA 2024–2028), e não aos eixos transversais da EBIA. A troca entre a estratégia de 2021 e o plano de 2024 é armadilha comum."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura eixos transversais e verticais e oferece temas do PBIA 2024–2028. Transversais da EBIA: legislação, regulação e uso ético; governança de IA; aspectos internacionais.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os eixos transversais da EBIA?",
+        "resposta": "Legislação, regulação e uso ético; governança de IA; e aspectos internacionais. Os outros seis eixos são verticais, como força de trabalho e capacitação, PD&I e empreendedorismo, setores produtivos, poder público e segurança pública."
+      },
+      "conceitosChave": ["EBIA: eixos transversais e verticais"],
+      "fundamentacao": "Portaria MCTI nº 4.617, de 6/4/2021 (institui a EBIA), alterada pela Portaria MCTI nº 4.979, de 13/7/2021; documento da EBIA (MCTI, 2021), estrutura de eixos temáticos."
+    },
+    {
+      "id": "ia-dados-042",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Ciência de dados: coleta, preparação e exploração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na preparação de uma base de contratos para análise, um técnico constatou que o atributo 'valor estimado' está ausente em 8% dos registros. A distribuição desse atributo é fortemente assimétrica à direita, com alguns contratos de valor muito elevado. Para imputar os valores ausentes de forma simples, sem distorcer a medida de tendência central, a opção mais adequada é",
+      "variantesEnunciado": [
+        "Em uma base de folhas de pagamento, a remuneração bruta está ausente em parte dos registros, e sua distribuição tem forte assimetria à direita, com poucos salários muito altos. Para uma imputação simples que não distorça a medida de tendência central, a opção mais adequada é",
+        "Ao preparar dados de obras públicas para um modelo, a equipe verificou que o custo por metro quadrado falta em parte dos registros e que a distribuição desse atributo é muito assimétrica, com alguns valores extremos. Para imputar os ausentes de forma simples, sem distorcer a tendência central, a opção mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "substituir os valores ausentes pela média aritmética do atributo, por ser a medida de tendência central mais robusta à presença de valores extremos na distribuição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A média é puxada pelos valores extremos e, em distribuição assimétrica à direita, fica acima do valor típico. Imputá-la superestimaria os registros sem valor informado. A robustez a extremos é característica da mediana."
+        },
+        {
+          "id": "opt-2",
+          "texto": "substituir os valores ausentes por zero, já que registros sem valor informado não representam gasto efetivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ausência de informação não significa valor zero. Imputar zero criaria registros fictícios de valor nulo, distorceria a distribuição e as estatísticas e poderia gerar falsos indícios."
+        },
+        {
+          "id": "opt-3",
+          "texto": "excluir o atributo inteiro da base, pois qualquer imputação invalida a análise estatística posterior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com ausência em pequena parte dos registros, descartar o atributo inteiro desperdiça informação relevante. A imputação é técnica legítima, desde que adequada à distribuição e documentada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir os valores ausentes pela mediana do atributo, menos sensível aos valores extremos, e registrar quais valores foram imputados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em distribuição assimétrica com valores extremos, a mediana representa melhor o valor típico, porque não é afetada pela magnitude dos extremos. Registrar quais valores foram imputados (por exemplo, com uma variável indicadora) preserva a rastreabilidade. Convém ainda verificar se a ausência tem padrão, pois dados ausentes de forma não aleatória podem enviesar qualquer imputação simples.",
+          "versaoInvertidaFalsa": "substituir os valores ausentes pela média, pois em distribuições fortemente assimétricas a média é menos sensível aos valores extremos do que a mediana."
+        },
+        {
+          "id": "opt-5",
+          "texto": "substituir os valores ausentes pela moda, por ser a medida mais adequada a variáveis numéricas contínuas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A moda é adequada a variáveis categóricas ou discretas com repetições frequentes; em variável contínua, como valores monetários, pode nem existir ou não ser representativa."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à média a robustez que é da mediana e sugere tratamentos que distorcem a base (zero, exclusão do atributo, moda em variável contínua).",
+      "resumoFlashcard": {
+        "pergunta": "Qual medida usar para imputar valores ausentes em atributo numérico assimétrico com extremos?",
+        "resposta": "A mediana, que não é afetada pela magnitude dos valores extremos; a média é puxada por eles. Convém registrar os valores imputados e verificar se a ausência segue algum padrão."
+      },
+      "conceitosChave": ["Preparação de dados: limpeza", "Estatística: medidas de tendência central"],
+      "fundamentacao": "Han, J.; Kamber, M.; Pei, J. Data Mining: Concepts and Techniques, cap. 3 (limpeza de dados e valores ausentes); documentação do scikit-learn, 'Imputation of missing values' (SimpleImputer com strategy='median' e indicador de ausência)."
+    },
+    {
+      "id": "ia-dados-043",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Processamento de linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das representações vetoriais de palavras e de textos (embeddings) usadas em processamento de linguagem natural, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao projetar uma busca semântica sobre acórdãos, a equipe de dados estudou as representações vetoriais de palavras e de textos. Sobre os embeddings, é correto afirmar que",
+        "Sobre word embeddings e representações vetoriais de textos em processamento de linguagem natural, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a representação one-hot capta a similaridade semântica entre palavras, pois sinônimos recebem vetores com muitas posições em comum.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No one-hot, cada palavra é um vetor esparso com um único 1 em posição exclusiva; vetores de palavras diferentes são sempre ortogonais, e nenhuma similaridade semântica é capturada. Essa limitação motivou os embeddings densos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os embeddings são dicionários elaborados manualmente por linguistas, nos quais cada palavra recebe uma definição textual padronizada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Embeddings são aprendidos automaticamente a partir de grandes volumes de texto, com base na hipótese distribucional (palavras usadas em contextos semelhantes têm significados semelhantes). Não são definições escritas por linguistas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "em embeddings estáticos, como os do word2vec, cada palavra tem um único vetor, e modelos contextuais, como o BERT, geram vetores distintos para a mesma palavra conforme a frase.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Modelos como word2vec e GloVe atribuem um vetor fixo a cada palavra do vocabulário, de modo que 'banco' (instituição financeira) e 'banco' (assento) compartilham a mesma representação. Modelos contextuais baseados em Transformers, como o BERT, calculam a representação a partir da frase inteira e distinguem os sentidos.",
+          "versaoInvertidaFalsa": "em embeddings estáticos, como os do word2vec, a mesma palavra recebe vetores distintos conforme a frase, e modelos contextuais, como o BERT, atribuem um único vetor fixo a cada palavra."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a similaridade de cosseno entre dois embeddings mede a diferença de tamanho entre os textos, e não a proximidade de significado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A similaridade de cosseno mede o ângulo entre os vetores, independentemente de sua norma; vetores que apontam na mesma direção indicam significados próximos. Por isso é a medida usual em buscas semânticas e em RAG."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o TF-IDF produz vetores densos e contextuais, nos quais palavras de sentido parecido ficam próximas mesmo quando não ocorrem nos mesmos documentos, o que dispensa o uso de embeddings.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O TF-IDF gera vetores esparsos, com uma dimensão por termo do vocabulário, ponderando a frequência no documento e a raridade na coleção. Não é contextual e só aproxima documentos que compartilham termos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca representações esparsas (one-hot, TF-IDF) e densas (embeddings) e inverte estático × contextual: o word2vec dá um vetor fixo por palavra; o BERT gera vetores que dependem da frase.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre embeddings estáticos e contextuais?",
+        "resposta": "Nos estáticos (word2vec, GloVe), cada palavra tem um único vetor, qualquer que seja o contexto. Nos contextuais (BERT e outros Transformers), o vetor depende da frase, o que distingue sentidos como 'banco' instituição e 'banco' assento."
+      },
+      "conceitosChave": ["PLN: embeddings"],
+      "fundamentacao": "Mikolov, T. et al. Efficient Estimation of Word Representations in Vector Space (2013); Devlin, J. et al. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (NAACL, 2019); Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), capítulo sobre semântica vetorial e embeddings."
+    },
+    {
+      "id": "ia-dados-044",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aprendizado supervisionado, não supervisionado e por reforço",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Para segmentar jurisdicionados por perfil de execução orçamentária, a equipe de dados de um Tribunal de Contas pretende aplicar técnicas de aprendizado não supervisionado. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um analista quer agrupar municípios com perfis semelhantes de despesas e reduzir o número de variáveis antes da análise, sem dispor de rótulos. Sobre as técnicas cogitadas, considere as afirmativas abaixo.",
+        "A respeito do algoritmo k-means e da análise de componentes principais (PCA), considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O k-means dispensa a definição prévia do número de grupos, pois determina sozinho a quantidade ideal de clusters a partir dos dados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O k-means exige que k seja informado; métodos como o do cotovelo ou o coeficiente de silhueta ajudam a escolher k, mas a escolha é externa ao algoritmo."
+        },
+        {
+          "texto": "O k-means atribui cada ponto ao centroide mais próximo e recalcula os centroides iterativamente, buscando minimizar a soma das distâncias quadráticas dos pontos aos centroides de seus grupos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o algoritmo de Lloyd: alternância entre atribuição e atualização até a convergência, minimizando a inércia (soma dos quadrados intragrupo)."
+        },
+        {
+          "texto": "Como usa distâncias, o k-means é sensível à escala dos atributos, o que recomenda padronizá-los antes do agrupamento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sem padronização, atributos com valores grandes, como montantes em reais, dominariam o cálculo das distâncias."
+        },
+        {
+          "texto": "A análise de componentes principais (PCA) gera novas variáveis, combinações lineares das originais, ortogonais entre si e ordenadas pela variância explicada.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A PCA reduz a dimensionalidade preservando o máximo de variância nas primeiras componentes, sem usar rótulos."
+        },
+        {
+          "texto": "A PCA é técnica supervisionada, que escolhe as componentes de maior correlação com o rótulo de classe.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A PCA é não supervisionada: não usa rótulos e busca as direções de maior variância dos dados. Técnicas que usam o rótulo, como a análise discriminante linear (LDA), pertencem a outra família."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "II, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II descreve o funcionamento do k-means (atribuição ao centroide mais próximo e atualização iterativa), a III, sua sensibilidade à escala, e a IV, as componentes principais. A I é falsa porque o k-means exige k definido previamente, e a V, porque a PCA é não supervisionada e não usa rótulos.",
+          "versaoInvertidaFalsa": "O k-means dispensa a padronização dos atributos, pois a escala das variáveis não interfere no cálculo das distâncias entre os pontos e os centroides."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que é falsa: o número de grupos é parâmetro de entrada do k-means, escolhido com apoio de critérios como o do cotovelo ou o da silhueta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa III, que também é verdadeira: a padronização prévia evita que atributos em escalas maiores dominem as distâncias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa V, que é falsa, pois a PCA não usa o rótulo de classe, e omite a II, que descreve corretamente o algoritmo k-means."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as afirmativas I e V, ambas falsas, e omite a II e a IV, que descrevem corretamente o k-means e a PCA."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que o k-means escolhe sozinho o número de grupos e que a PCA usa rótulos. O k-means exige k e é sensível à escala; a PCA é não supervisionada e ordena as componentes pela variância.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as características do k-means e da PCA?",
+        "resposta": "O k-means exige k definido previamente, atribui pontos ao centroide mais próximo e minimiza a soma dos quadrados intragrupo; é sensível à escala. A PCA, não supervisionada, cria componentes ortogonais, combinações lineares das variáveis, ordenadas pela variância explicada."
+      },
+      "conceitosChave": ["ML: aprendizado não supervisionado", "ML: k-means e PCA"],
+      "fundamentacao": "Documentação do scikit-learn, 'Clustering: K-means' e 'Decomposing signals in components: PCA'; James, G. et al. An Introduction to Statistical Learning, 2ª ed., cap. 12 (aprendizado não supervisionado: PCA e agrupamento)."
+    },
+    {
+      "id": "ia-dados-045",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "IA generativa, agentes e modelos multimodais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um Tribunal de Contas quer um assistente baseado em LLM que responda a perguntas de servidores sobre seus normativos internos. Os normativos são alterados com frequência, as respostas precisam indicar o dispositivo que as fundamenta e o orçamento não comporta retreinamentos periódicos do modelo. Comparando ajuste fino (fine-tuning) e geração aumentada por recuperação (RAG), a escolha mais adequada e sua justificativa são",
+      "variantesEnunciado": [
+        "Uma unidade de controle externo deseja um chatbot que oriente servidores sobre manuais de auditoria, revisados várias vezes ao ano. As respostas devem indicar o trecho do manual usado, e não há recursos para retreinar o modelo a cada revisão. Comparando ajuste fino e RAG, a escolha mais adequada e sua justificativa são",
+        "A central de serviços de TI quer um assistente que responda com base em procedimentos operacionais que mudam com frequência, sempre indicando o documento de origem, sem custos de retreinamento a cada atualização. Comparando ajuste fino (fine-tuning) e geração aumentada por recuperação (RAG), a escolha mais adequada e sua justificativa são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ajuste fino, porque incorpora os documentos aos pesos do modelo, o que garante respostas sempre atualizadas e com a citação exata das fontes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ajuste fino incorpora padrões aos pesos, mas não garante atualização: cada alteração dos documentos exigiria novo treinamento, inviável no orçamento descrito. Também não há garantia de citação exata, pois o modelo reproduz o conhecimento de forma difusa e pode alucinar dispositivos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ajuste fino, porque o RAG exige retreinar o modelo a cada nova consulta feita pelos servidores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: o RAG não retreina o modelo; a cada consulta, apenas recupera trechos relevantes da base e os insere no contexto. Quem exige treinamento adicional é o ajuste fino."
+        },
+        {
+          "id": "opt-3",
+          "texto": "RAG, porque elimina a necessidade de manter uma base de documentos, já que o modelo consulta a internet aberta para responder.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RAG pressupõe justamente uma base de documentos curada e indexada, normalmente institucional. Recorrer à internet aberta comprometeria a confiabilidade e a pertinência das respostas sobre documentos internos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "ajuste fino combinado com temperatura alta, que aumenta a fidelidade das respostas ao texto vigente dos documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Temperatura alta aumenta a diversidade e a imprevisibilidade das respostas, e não a fidelidade ao texto. E o ajuste fino continuaria exigindo retreinamentos a cada alteração dos documentos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "RAG, porque atualizar a base indexada basta para refletir as alterações dos documentos, sem retreinar o modelo, e os trechos recuperados permitem citar a fonte.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No RAG, os documentos ficam em uma base indexada (trechos, embeddings, banco vetorial); alterá-los exige apenas reindexar, sem mudar os pesos do modelo. Os trechos recuperados vão para o contexto e podem ser citados na resposta, o que favorece a verificação. O ajuste fino é mais indicado para ensinar formato, estilo ou comportamento, e não para manter conhecimento volátil.",
+          "versaoInvertidaFalsa": "ajuste fino, porque incorporar os documentos aos pesos do modelo é a forma mais barata de refletir alterações frequentes e garante a citação exata das fontes."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao ajuste fino a atualização e a citação de fontes, que são vantagens do RAG, e diz que o RAG exige retreino. Conhecimento volátil com necessidade de fonte pede RAG.",
+      "resumoFlashcard": {
+        "pergunta": "Quando preferir RAG a ajuste fino?",
+        "resposta": "Quando o conhecimento muda com frequência e as respostas devem citar fontes: no RAG basta atualizar a base indexada, sem retreinar o modelo. O ajuste fino é mais indicado para adaptar formato, estilo ou comportamento do modelo."
+      },
+      "conceitosChave": ["RAG × fine-tuning", "IA generativa: alucinação"],
+      "fundamentacao": "Lewis, P. et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (NeurIPS, 2020); Gao, Y. et al. Retrieval-Augmented Generation for Large Language Models: A Survey (arXiv:2312.10997, 2023)."
+    },
+    {
+      "id": "ia-dados-046",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estatística aplicada e avaliação de modelos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Em uma amostra de sete processos, os atrasos de tramitação, em dias, foram: 5, 3, 40, 2, 6, 3 e 4. A média, a mediana e a moda desses atrasos são, respectivamente,",
+      "variantesEnunciado": [
+        "Os tempos de resposta, em dias, de sete pedidos de informação foram 5, 3, 40, 2, 6, 3 e 4. A média, a mediana e a moda desses tempos são, respectivamente,",
+        "Um técnico registrou o número de dias de atraso de sete entregas de um contrato: 5, 3, 40, 2, 6, 3 e 4. A média, a mediana e a moda desses valores são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "4, 9 e 3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte média e mediana. A média é a soma dividida pela quantidade: 63/7 = 9. A mediana é o valor central da série ordenada (2, 3, 3, 4, 5, 6, 40), isto é, 4."
+        },
+        {
+          "id": "opt-2",
+          "texto": "9, 2 e 3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor 2 é o quarto elemento da lista na ordem em que foi apresentada, e não na série ordenada. A mediana exige ordenar os dados antes: 2, 3, 3, 4, 5, 6, 40, cujo valor central é 4."
+        },
+        {
+          "id": "opt-3",
+          "texto": "9, 4 e 3.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Média = (5 + 3 + 40 + 2 + 6 + 3 + 4)/7 = 63/7 = 9. Ordenando (2, 3, 3, 4, 5, 6, 40), a mediana é o 4º valor, 4. A moda é o valor mais frequente, 3, que aparece duas vezes. O atraso de 40 dias puxa a média para cima, e por isso a mediana representa melhor o atraso típico.",
+          "versaoInvertidaFalsa": "4, 9 e 3, pois a média corresponde ao valor central da série ordenada e a mediana, à soma dos valores dividida pela quantidade de observações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "9, 4,5 e 3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A média dos dois valores centrais só se aplica quando a quantidade de observações é par. Com sete valores, a mediana é o 4º elemento da série ordenada, 4."
+        },
+        {
+          "id": "opt-5",
+          "texto": "9, 3 e 4.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte mediana e moda. O valor mais frequente (moda) é 3, que aparece duas vezes; o valor central da série ordenada (mediana) é 4."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora erros de procedimento: não ordenar antes de achar a mediana, tirar a média dos dois centrais com quantidade ímpar e trocar média, mediana e moda.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular média, mediana e moda e qual delas resiste a valores extremos?",
+        "resposta": "Média: soma dividida pela quantidade. Mediana: valor central da série ordenada (média dos dois centrais se a quantidade for par). Moda: valor mais frequente. A mediana é a mais resistente a valores extremos."
+      },
+      "conceitosChave": ["Estatística: medidas de tendência central"],
+      "fundamentacao": "Montgomery, D. C.; Runger, G. C. Estatística Aplicada e Probabilidade para Engenheiros, cap. 6 (estatística descritiva); Bussab, W. O.; Morettin, P. A. Estatística Básica, cap. 3 (medidas-resumo); contas conferidas por script."
+    },
+    {
+      "id": "ia-dados-047",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aplicações de IA e automação de processos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A unidade de protocolo de um Tribunal de Contas recebe diariamente centenas de documentos digitalizados (petições, defesas e denúncias) e quer automatizar sua triagem e distribuição às unidades técnicas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "O setor de expedição de um órgão de controle quer automatizar a leitura e a distribuição de ofícios e de defesas recebidos em PDF digitalizado. Considere as afirmativas abaixo.",
+        "Sobre a automação da triagem de documentos digitalizados em um órgão público, com uso de IA e de robôs de software, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Como os documentos são digitalizados, um robô de RPA baseado apenas em regras fixas de posição na tela é suficiente para extrair e interpretar o conteúdo de qualquer petição, independentemente do formato.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Documentos digitalizados e redigidos livremente exigem OCR para obter o texto e técnicas de PLN para interpretá-lo; regras fixas de posição só funcionam com formulários padronizados."
+        },
+        {
+          "texto": "Uma vez em produção, o classificador de documentos dispensa monitoramento, pois seu desempenho permanece estável independentemente de mudanças no tipo ou na redação dos documentos recebidos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Mudanças nos documentos recebidos (novos tipos, nova legislação, novos modelos de petição) podem degradar o desempenho; é preciso monitorar métricas e retreinar quando necessário."
+        },
+        {
+          "texto": "Uma solução adequada combina OCR para converter as imagens em texto, classificação de texto para identificar o tipo de documento e reconhecimento de entidades nomeadas para extrair partes, processos e datas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Essa combinação é típica da automação inteligente de documentos; o RPA pode completar o fluxo, executando o cadastro e a distribuição nos sistemas."
+        },
+        {
+          "texto": "É recomendável definir um limiar de confiança para que documentos classificados com baixa confiança sejam encaminhados a revisão humana, em vez de distribuídos automaticamente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O humano no circuito trata os casos incertos, e as correções feitas podem realimentar o treinamento do modelo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas: a I superestima o RPA baseado em regras fixas, e a II ignora a necessidade de monitorar modelos em produção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que é falsa: documentos digitalizados e de redação livre exigem OCR e PLN, e não apenas regras fixas de posição na tela."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa, e omite a IV, que descreve corretamente o uso de limiar de confiança com revisão humana."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa: mudanças no perfil dos documentos recebidos podem degradar o modelo, que deve ser monitorado e retreinado quando necessário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A III descreve a combinação usual de OCR, classificação de texto e NER na triagem de documentos, e a IV, o encaminhamento dos casos de baixa confiança à revisão humana. A I é falsa porque regras fixas não interpretam documentos livres, e a II, porque modelos em produção precisam de monitoramento contínuo.",
+          "versaoInvertidaFalsa": "Documentos classificados com baixa confiança devem ser distribuídos automaticamente, pois o encaminhamento à revisão humana anula os ganhos da automação e não melhora a qualidade da triagem."
+        }
+      ],
+      "pegadinhaFCC": "A banca superestima o RPA baseado em regras e sugere que modelos em produção dispensam monitoramento. A triagem de documentos livres pede OCR, PLN e humano no circuito para os casos incertos.",
+      "resumoFlashcard": {
+        "pergunta": "Como automatizar a triagem de documentos digitalizados com segurança?",
+        "resposta": "Combinando OCR (imagem em texto), classificação de texto (tipo de documento) e NER (partes, processos, datas), com limiar de confiança que envie os casos incertos à revisão humana e monitoramento contínuo do modelo em produção."
+      },
+      "conceitosChave": ["Automação no controle: triagem de documentos", "Automação: RPA × IA"],
+      "fundamentacao": "van der Aalst, W. M. P.; Bichler, M.; Heinzl, A. Robotic Process Automation (Business & Information Systems Engineering, 2018); Jurafsky, D.; Martin, J. H. Speech and Language Processing, 3ª ed. (rascunho), capítulos sobre classificação de texto e NER; Sculley, D. et al. Hidden Technical Debt in Machine Learning Systems (NeurIPS, 2015)."
+    },
+    {
+      "id": "ia-dados-048",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Big Data e processamento distribuído",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas planeja três frentes: (1) armazenar, em formato bruto e com estrutura definida apenas no momento da leitura, arquivos heterogêneos como PDFs de processos, logs e planilhas de jurisdicionados; (2) manter base integrada, orientada a assuntos e com histórico, modelada previamente para painéis gerenciais; (3) monitorar pagamentos à medida que são registrados, gerando alertas em poucos segundos. As soluções adequadas a (1), (2) e (3) são, respectivamente,",
+      "variantesEnunciado": [
+        "Em projeto de plataforma de dados para fiscalização, pretende-se: (1) reunir em formato original arquivos de áudio de sessões, imagens de obras e planilhas diversas, aplicando estrutura apenas ao consultá-los; (2) disponibilizar base consolidada e histórica, com modelo dimensional definido na carga, para relatórios gerenciais; (3) detectar transações suspeitas no momento em que ocorrem. As soluções adequadas a (1), (2) e (3) são, respectivamente,",
+        "Um órgão de controle precisa (1) guardar dados brutos de múltiplas fontes e formatos, sem modelagem prévia; (2) oferecer aos gestores base integrada, não volátil e orientada a assuntos para indicadores; (3) emitir alertas quase em tempo real sobre empenhos registrados. As soluções adequadas a (1), (2) e (3) são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "data lake, data warehouse e processamento de fluxos (streaming).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O data lake armazena dados brutos de qualquer formato, com o esquema aplicado na leitura (schema-on-read). O data warehouse, na definição de Inmon, é orientado a assuntos, integrado, não volátil e variante no tempo, com esquema definido na carga (schema-on-write) para análises e painéis. Alertas em segundos, à medida que os eventos chegam, exigem processamento de fluxos (streaming), como o Structured Streaming do Spark.",
+          "versaoInvertidaFalsa": "data warehouse, data lake e processamento em lote, pois o data warehouse aplica o esquema só na leitura e o processamento em lote gera alertas em poucos segundos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "data warehouse, data lake e processamento em lote (batch).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte data lake e data warehouse: dados brutos e heterogêneos, com esquema na leitura, vão para o data lake; dados integrados e modelados previamente, para o data warehouse. Além disso, o processamento em lote não atende a alertas em poucos segundos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "data lake, data mart e processamento em lote (batch) noturno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras soluções são próximas do adequado (o data mart é um recorte departamental do data warehouse), mas o processamento em lote noturno é incompatível com alertas gerados em poucos segundos após o registro dos pagamentos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "data warehouse, data warehouse e processamento de fluxos (streaming).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O data warehouse exige esquema definido previamente (schema-on-write) e não é a solução indicada para guardar PDFs, logs e planilhas heterogêneas em formato bruto, que é o papel do data lake."
+        },
+        {
+          "id": "opt-5",
+          "texto": "banco de dados transacional (OLTP), data lake e processamento em lote (batch).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bancos transacionais (OLTP) servem às operações do dia a dia, e não ao armazenamento de arquivos brutos heterogêneos. O data lake não é a solução para base integrada e modelada para painéis, e o lote não atende a alertas quase em tempo real."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte data lake (bruto, esquema na leitura) e data warehouse (integrado, esquema na escrita) e oferece processamento em lote onde a exigência é de alertas quase em tempo real.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre data lake e data warehouse, e entre batch e streaming?",
+        "resposta": "O data lake guarda dados brutos de qualquer formato, com esquema na leitura; o data warehouse guarda dados integrados, históricos e modelados, com esquema na escrita. O batch processa blocos acumulados periodicamente; o streaming processa eventos continuamente, com baixa latência."
+      },
+      "conceitosChave": ["Big Data: data lake × data warehouse", "Big Data: batch × streaming"],
+      "fundamentacao": "Inmon, W. H. Building the Data Warehouse, 4ª ed., cap. 2 (características do data warehouse); Kleppmann, M. Designing Data-Intensive Applications (2017), caps. 10 e 11 (processamento em lote e de fluxos); README do Apache Spark (Structured Streaming)."
+    },
+    {
+      "id": "ia-dados-049",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Estatística aplicada e avaliação de modelos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "A curva ROC de um classificador binário é traçada com a …… no eixo vertical e a …… no eixo horizontal, calculadas para diferentes ……. A área sob essa curva (AUC) igual a 0,5 corresponde a desempenho equivalente ao de um classificador ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Para comparar classificadores de risco de contratos, a equipe usou a curva ROC, que relaciona a …… (eixo vertical) com a …… (eixo horizontal) ao longo de diferentes ……; uma AUC de 0,5 equivale ao desempenho de um classificador ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Na avaliação de modelos de classificação binária, a curva ROC representa, no eixo das ordenadas, a …… e, no eixo das abscissas, a ……, obtidas variando-se os ……. Se a área sob a curva for 0,5, o modelo não supera um classificador ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "precisão − revocação − conjuntos de teste − perfeito",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Precisão contra revocação compõe a curva precisão-revocação, outra ferramenta, útil quando os positivos são raros. Além disso, AUC de 0,5 não indica classificador perfeito, cujo valor é 1."
+        },
+        {
+          "id": "opt-2",
+          "texto": "taxa de falsos positivos − taxa de verdadeiros positivos − limiares de decisão − aleatório",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os eixos. Na curva ROC, a taxa de verdadeiros positivos (revocação ou sensibilidade) fica no eixo vertical, e a taxa de falsos positivos (1 − especificidade), no horizontal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "taxa de verdadeiros positivos − especificidade − épocas de treinamento − perfeito",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O eixo horizontal é a taxa de falsos positivos, que corresponde a 1 − especificidade, e não à própria especificidade. A curva varia o limiar de decisão, e não as épocas de treinamento, e AUC de 0,5 não é desempenho perfeito."
+        },
+        {
+          "id": "opt-4",
+          "texto": "taxa de verdadeiros positivos − taxa de falsos positivos − limiares de decisão − aleatório",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A curva ROC mostra a taxa de verdadeiros positivos, VP/(VP + FN), contra a taxa de falsos positivos, FP/(FP + VN), à medida que o limiar de decisão varia. A AUC resume a curva em um número: 1 indica separação perfeita, e 0,5, desempenho igual ao do acaso (a diagonal). Por considerar todos os limiares, a AUC independe da escolha de um limiar específico.",
+          "versaoInvertidaFalsa": "A curva ROC traz a taxa de falsos positivos no eixo vertical e a taxa de verdadeiros positivos no horizontal, e AUC igual a 0,5 indica classificador perfeito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "acurácia − taxa de erro − tamanhos de amostra − aleatório",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acurácia e taxa de erro são complementares (somam 1) e não formam a curva ROC; também não se traça a ROC variando o tamanho da amostra, mas o limiar de decisão."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte os eixos da ROC, troca a taxa de falsos positivos pela especificidade e confunde a ROC com a curva precisão-revocação. AUC 0,5 é acaso; 1 é perfeição.",
+      "resumoFlashcard": {
+        "pergunta": "O que mostra a curva ROC e o que significa AUC = 0,5?",
+        "resposta": "A ROC mostra a taxa de verdadeiros positivos (eixo vertical) contra a taxa de falsos positivos (eixo horizontal) ao variar o limiar de decisão. AUC = 0,5 equivale ao acaso; AUC = 1, à separação perfeita."
+      },
+      "conceitosChave": ["Avaliação: curva ROC e AUC"],
+      "fundamentacao": "Fawcett, T. An introduction to ROC analysis (Pattern Recognition Letters, 2006); documentação do scikit-learn, 'Receiver operating characteristic (ROC)' (roc_curve e roc_auc_score)."
+    },
+    {
+      "id": "ia-dados-050",
+      "materiaSlug": "ia-ciencia-dados-automacao",
+      "subtopico": "Aplicações de IA e automação de processos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um Tribunal de Contas automatizou a distribuição de documentos recebidos: um classificador atribui uma categoria e uma pontuação de confiança, e documentos com confiança igual ou superior a 0,90 são encaminhados automaticamente, enquanto os demais vão para revisão humana. A administração propõe elevar o limiar para 0,97. Mantido o mesmo modelo, é correto afirmar que a mudança tende a",
+      "variantesEnunciado": [
+        "Na triagem automática de denúncias, um modelo atribui tipo e pontuação de confiança; a partir de 0,90 a denúncia é registrada automaticamente, e abaixo disso vai para um servidor. Propõe-se elevar o limiar para 0,97, sem alterar o modelo. É correto afirmar que a mudança tende a",
+        "Um robô combinado com um classificador cadastra automaticamente os documentos com confiança mínima de 0,90 e envia os demais para conferência manual. Se o limiar for elevado para 0,97, mantido o mesmo modelo, é correto afirmar que a mudança tende a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aumentar a proporção de documentos encaminhados automaticamente e, ao mesmo tempo, reduzir os erros de encaminhamento, sem qualquer contrapartida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas coisas não ocorrem juntas: limiar mais alto significa que menos documentos atingem a confiança exigida, o que reduz, e não aumenta, a automação. O ganho em acerto vem justamente da maior seletividade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "reduzir a proporção de documentos tratados automaticamente e aumentar a demanda de revisão humana, em troca de menor taxa de erro entre os encaminhamentos automáticos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Com limiar de 0,97, só os documentos com confiança muito alta seguem automaticamente; os demais, em maior número, vão para revisão humana. Em geral, isso reduz a taxa de erro entre os encaminhamentos automáticos (maior precisão), à custa de menor cobertura da automação e de mais trabalho humano. É o trade-off típico de limiares, que deve ser calibrado com dados de validação e acompanhado em produção.",
+          "versaoInvertidaFalsa": "aumentar a proporção de documentos tratados automaticamente e reduzir a demanda de revisão humana, pois um limiar mais alto deixa passar mais documentos sem revisão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "alterar os pesos internos do classificador, que passará a atribuir confiança maior a todos os documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limiar é parâmetro de decisão aplicado sobre a saída do modelo; alterá-lo não muda os pesos nem as pontuações de confiança, só a regra que decide o que é automatizado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "tornar desnecessário o monitoramento do modelo, pois a confiança de 0,97 assegura que não haverá erros nos encaminhamentos automáticos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pontuação de confiança alta não é garantia de acerto: modelos podem ser mal calibrados e errar com confiança elevada, e o desempenho pode degradar-se com mudanças nos documentos. O monitoramento continua necessário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "aumentar a revocação de todas as categorias, pois mais documentos passarão a ser classificados automaticamente em cada uma delas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Elevar o limiar faz menos documentos serem classificados automaticamente em cada categoria, o que tende a reduzir, e não a aumentar, a revocação da etapa automática."
+        }
+      ],
+      "pegadinhaFCC": "A banca promete ganhos simultâneos sem contrapartida e confunde limiar de decisão com treinamento do modelo. Limiar mais alto significa menos automação, mais revisão humana e menos erros entre os casos automatizados.",
+      "resumoFlashcard": {
+        "pergunta": "Qual o efeito de elevar o limiar de confiança em uma automação com revisão humana?",
+        "resposta": "Menos casos são tratados automaticamente e mais vão para revisão humana, mas os automatizados tendem a ter menos erros (maior precisão). O modelo não muda; muda a regra de decisão, que deve ser calibrada e monitorada."
+      },
+      "conceitosChave": ["Automação: humano no circuito e limiar de confiança", "Avaliação: precisão, revocação e F1"],
+      "fundamentacao": "Documentação do scikit-learn, 'Tuning the decision threshold for class prediction' e 'Probability calibration'; Amershi, S. et al. Guidelines for Human-AI Interaction (CHI, 2019)."
+    }
+  ]
+}

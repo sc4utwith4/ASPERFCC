@@ -17,7 +17,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "na recusa do modelo em responder a perguntas que violem suas políticas de uso, mesmo quando o pedido é legítimo.",
+          "texto": "na recusa do modelo em atender a pedidos legítimos, por interpretá-los equivocadamente como violações de suas políticas de uso.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A recusa indevida de pedidos legítimos é problema de calibração das salvaguardas do modelo, e não alucinação. Na alucinação o modelo responde, e com aparente segurança, mas com conteúdo falso ou sem respaldo."
         },
@@ -425,7 +425,7 @@
           "explicacao": "Verdadeira. É o art. 6º, IX, da LGPD, diretamente relacionado aos vieses de modelos de IA."
         },
         {
-          "texto": "Dados efetivamente anonimizados não são considerados dados pessoais, salvo se o processo de anonimização puder ser revertido com esforços razoáveis ou por meios próprios do controlador.",
+          "texto": "Dados anonimizados não são considerados dados pessoais, salvo quando a anonimização for revertida com meios próprios ou quando puder ser revertida com esforços razoáveis.",
           "verdadeira": true,
           "explicacao": "Verdadeira. É o que dispõe o art. 12 da LGPD; a anonimização é avaliada pelos meios técnicos razoáveis e disponíveis, e não como garantia absoluta."
         }
@@ -448,7 +448,7 @@
           "id": "opt-3",
           "texto": "I e III, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, que também é verdadeira: dado anonimizado não é dado pessoal, salvo quando a anonimização puder ser revertida com esforços razoáveis ou por meios próprios (art. 12)."
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, que também é verdadeira: dado anonimizado não é dado pessoal, salvo quando a anonimização for revertida com meios próprios ou puder ser revertida com esforços razoáveis (art. 12)."
         },
         {
           "id": "opt-4",

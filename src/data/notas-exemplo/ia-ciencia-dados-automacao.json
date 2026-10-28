@@ -1,0 +1,49 @@
+{
+  "id": "nota-ia-dados-01",
+  "materiaSlug": "ia-ciencia-dados-automacao",
+  "titulo": "Métricas de avaliação de classificadores: matriz de confusão, precisão, revocação e F1",
+  "subtopico": "Estatística aplicada e avaliação de modelos",
+  "pistas": [
+    {
+      "pergunta": "O que é um falso negativo?",
+      "resposta": "É o caso positivo que o modelo não sinalizou, como um contrato irregular classificado como regular. Corresponde ao erro do tipo II."
+    },
+    {
+      "pergunta": "Como se calcula a precisão?",
+      "resposta": "Precisão = VP/(VP + FP). Dos casos que o modelo sinalizou, é a proporção que era de fato positiva."
+    },
+    {
+      "pergunta": "Como se calcula a revocação?",
+      "resposta": "Revocação = VP/(VP + FN). Dos positivos reais, é a proporção que o modelo encontrou; também se chama sensibilidade ou taxa de verdadeiros positivos."
+    },
+    {
+      "pergunta": "Por que o F1 usa a média harmônica?",
+      "resposta": "Porque a média harmônica é puxada pelo menor valor: o F1 = 2PR/(P + R) só é alto quando precisão e revocação são altas ao mesmo tempo."
+    },
+    {
+      "pergunta": "Por que a acurácia engana em bases desbalanceadas?",
+      "resposta": "Porque um modelo que sempre prevê a classe majoritária já obtém acurácia alta sem encontrar nenhum positivo: 95% quando só 5% dos casos são irregulares."
+    },
+    {
+      "pergunta": "Com VP = 45, FP = 15 e FN = 5, quanto valem precisão, revocação e F1?",
+      "resposta": "Precisão = 45/60 = 75%; revocação = 45/50 = 90%; F1 = 2 · 0,75 · 0,90/1,65 = 1,35/1,65 ≈ 81,8%."
+    },
+    {
+      "pergunta": "O que costuma acontecer quando se eleva o limiar de decisão?",
+      "resposta": "O modelo sinaliza menos casos: a precisão tende a subir e a revocação tende a cair. A acurácia pode até permanecer igual."
+    },
+    {
+      "pergunta": "Qual a diferença entre especificidade e revocação?",
+      "resposta": "A revocação mede os acertos entre os positivos reais, VP/(VP + FN); a especificidade mede os acertos entre os negativos reais, VN/(VN + FP)."
+    }
+  ],
+  "conteudoMarkdown": "## Por que a acurácia não basta\n\nNo controle externo, a classe de interesse costuma ser rara: contratos com indício de fracionamento, pagamentos indevidos, notas fiscais inidôneas. Quando 95% dos casos são regulares, um modelo que responde sempre \"regular\" acerta 95% e não encontra nada. Por isso a avaliação de classificadores parte da **matriz de confusão** e das métricas que dela derivam.\n\n## A matriz de confusão\n\nEm um classificador binário, escolhe-se primeiro a classe **positiva**, normalmente a de interesse (por exemplo, \"irregular\"). Cada previsão cai em uma de quatro células:\n\n- **VP (verdadeiro positivo):** o modelo sinalizou, e o caso era positivo.\n- **FP (falso positivo):** o modelo sinalizou, mas o caso era negativo. É o alarme falso (erro do tipo I).\n- **FN (falso negativo):** o modelo não sinalizou, mas o caso era positivo. É o caso perdido (erro do tipo II).\n- **VN (verdadeiro negativo):** o modelo não sinalizou, e o caso era negativo.\n\n> A posição de linhas e colunas muda conforme o autor ou a ferramenta (no scikit-learn, as linhas são os valores reais e as colunas, os previstos). Antes de calcular, identifique o que é previsto e o que é real.\n\n## As métricas\n\n- **Acurácia** = (VP + VN)/total: proporção de acertos globais. Engana quando as classes são desbalanceadas.\n- **Precisão** = VP/(VP + FP): dos casos sinalizados, quantos eram positivos. Responde à pergunta \"posso confiar no alerta?\".\n- **Revocação** (recall, sensibilidade ou taxa de verdadeiros positivos) = VP/(VP + FN): dos positivos reais, quantos o modelo encontrou. Responde à pergunta \"quanto do problema o modelo alcança?\".\n- **Especificidade** = VN/(VN + FP): dos negativos reais, quantos foram corretamente descartados.\n- **F1** = 2 · P · R/(P + R): ==média harmônica de precisão e revocação==, que só é alta quando as duas são altas.\n\n> Para não trocar precisão por revocação, olhe o denominador: a precisão divide pelo total de sinalizados (VP + FP); a revocação, pelo total de positivos reais (VP + FN).\n\n## Exemplo resolvido\n\nUm modelo sinaliza contratos com indício de fracionamento de despesa. No conjunto de teste há 1.000 contratos, dos quais 50 são de fato irregulares. O modelo sinalizou 60 contratos, e 45 deles eram irregulares.\n\n- VP = 45 (sinalizados e irregulares).\n- FP = 60 − 45 = 15 (sinalizados, mas regulares).\n- FN = 50 − 45 = 5 (irregulares não sinalizados).\n- VN = 1.000 − 45 − 15 − 5 = 935.\n\nCom esses valores:\n\n- Precisão = 45/60 = **0,75 (75%)**.\n- Revocação = 45/50 = **0,90 (90%)**.\n- F1 = 2 · 0,75 · 0,90/(0,75 + 0,90) = 1,35/1,65 ≈ **0,818 (81,8%)**. A média aritmética daria 0,825, um pouco acima, porque não penaliza o desequilíbrio entre as duas métricas.\n- Acurácia = (45 + 935)/1.000 = **0,98 (98%)**.\n- Especificidade = 935/950 ≈ 0,984.\n\nCompare com o modelo trivial que nunca sinaliza nada: acurácia de 950/1.000 = 95% e revocação zero. Os 98% parecem excelentes, mas estão apenas três pontos acima de um modelo inútil. ==São a precisão e a revocação que mostram o valor do classificador.==\n\n## O efeito do limiar de decisão\n\nMuitos classificadores produzem uma pontuação, e o limiar define o que será sinalizado. Elevando o limiar, o mesmo modelo passou a sinalizar 40 contratos, 35 deles irregulares:\n\n- VP = 35; FP = 5; FN = 15; VN = 945.\n- Precisão = 35/40 = 0,875; revocação = 35/50 = 0,70; F1 ≈ 0,778; acurácia = 980/1.000 = 0,98.\n\nA acurácia ficou igual, mas o comportamento mudou: menos alarmes falsos e mais irregularidades perdidas. Ao mover o limiar, precisão e revocação costumam andar em sentidos opostos. A escolha depende do custo de cada erro. Se a equipe de auditoria é pequena e cada alerta consome dias de trabalho, valoriza-se a precisão. Se deixar passar um caso é grave, como um dano relevante ao erário, privilegia-se a revocação. Para expressar essa preferência, usa-se o F-beta, que dá mais peso à revocação quando beta é maior que 1.\n\n## Além de um limiar: ROC e AUC\n\nA curva ROC mostra a taxa de verdadeiros positivos (eixo vertical) contra a taxa de falsos positivos (eixo horizontal) em todos os limiares. A AUC resume a curva: 0,5 equivale ao acaso, e 1, à separação perfeita. Com classes muito desbalanceadas, a curva precisão-revocação costuma ser mais informativa, porque a taxa de falsos positivos fica pequena mesmo com muitos alarmes falsos.\n\n## Armadilhas de prova\n\n- Trocar precisão por revocação. Os denominadores denunciam a troca: VP + FP na precisão e VP + FN na revocação.\n- Calcular o F1 como média aritmética.\n- Tomar a especificidade, VN/(VN + FP), por revocação.\n- Ler acurácia alta como \"o modelo encontra quase todos os positivos\".\n- Esquecer de definir qual é a classe positiva antes de montar a matriz.",
+  "sintese": "A matriz de confusão separa acertos e erros em VP, FP, FN e VN. A precisão, VP/(VP + FP), mede a confiabilidade dos alertas; a revocação, VP/(VP + FN), mede quanto dos positivos reais foi encontrado; o F1 é a média harmônica das duas. Com classes desbalanceadas a acurácia engana, e o limiar de decisão troca precisão por revocação conforme o custo de cada erro.",
+  "fontes": [
+    "Documentação do scikit-learn, 'Model evaluation: quantifying the quality of predictions', seção de métricas de classificação (confusion_matrix, precision_score, recall_score, f1_score).",
+    "Sokolova, M.; Lapalme, G. A systematic analysis of performance measures for classification tasks. Information Processing & Management, 2009.",
+    "Fawcett, T. An introduction to ROC analysis. Pattern Recognition Letters, 2006.",
+    "Géron, A. Mãos à obra: aprendizado de máquina com Scikit-Learn, Keras & TensorFlow, cap. 3 (classificação e medidas de desempenho).",
+    "Contas do exemplo conferidas por script em Python (registro em docs/pesquisa/ia-ciencia-dados-automacao.md)."
+  ]
+}

@@ -1,0 +1,620 @@
+{
+  "materiaSlug": "devops-engenharia-entrega",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "devops-041",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Monitoramento, alertas e indicadores técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal implantou o Prometheus para coletar métricas dos sistemas e o Grafana para visualizá-las. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um projeto de monitoramento da infraestrutura do Tribunal, um técnico documentou o funcionamento do Prometheus e do Grafana. Considere as afirmativas abaixo.",
+        "A respeito do Prometheus e do Grafana, ferramentas usadas na coleta e na visualização de métricas, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O Prometheus armazena as métricas como séries temporais, identificadas pelo nome da métrica e por pares chave-valor chamados rótulos (labels).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O modelo de dados é multidimensional: cada série temporal é identificada pelo nome da métrica e pelos rótulos, e as amostras são guardadas com o carimbo de tempo."
+        },
+        {
+          "texto": "No modelo padrão do Prometheus, cada aplicação envia ativamente suas métricas ao servidor, que não consulta os alvos monitorados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A coleta padrão é por pull: o servidor busca (scrape) via HTTP as métricas expostas pelos alvos. O envio ativo só ocorre por meio de um intermediário, o Pushgateway."
+        },
+        {
+          "texto": "Para jobs de curta duração, que podem terminar antes de serem coletados, o ecossistema do Prometheus oferece o Pushgateway como intermediário.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Jobs efêmeros enviam as métricas ao Pushgateway, que as mantém disponíveis para o Prometheus coletar."
+        },
+        {
+          "texto": "Um gauge é adequado para valores que sobem e descem, como o uso atual de memória, enquanto um counter só cresce, podendo voltar a zero quando o processo reinicia.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O counter é cumulativo e monotônico, zerando apenas no reinício, e por isso se usa rate() para obter taxas; o gauge representa um valor instantâneo que oscila."
+        },
+        {
+          "texto": "O Grafana substitui o Prometheus no armazenamento das séries temporais, pois guarda internamente todas as métricas exibidas em seus painéis.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O Grafana é a camada de visualização: consulta fontes de dados, como o Prometheus, via PromQL, e monta painéis; as séries continuam armazenadas no Prometheus."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: no modelo padrão, o servidor do Prometheus coleta as métricas dos alvos por HTTP, em modelo pull. Também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a II e a V são falsas: a coleta padrão é por pull, e o Grafana consulta fontes de dados como o Prometheus, sem substituí-lo no armazenamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV são verdadeiras, mas faltou a III: o Pushgateway é o intermediário previsto para jobs de curta duração."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que é falsa: o Grafana é uma ferramenta de visualização e de painéis que consulta fontes de dados, como o Prometheus, onde as séries continuam armazenadas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (séries temporais identificadas por nome e rótulos), a III (Pushgateway para jobs de curta duração) e a IV (gauge para valores que sobem e descem; counter só cresce ou zera ao reiniciar). A II inverte o modelo de coleta, que é pull por HTTP, e a V atribui ao Grafana o armazenamento, que continua no Prometheus.",
+          "versaoInvertidaFalsa": "O Prometheus armazena as métricas como registros de log em texto livre, indexados apenas pelo horário da coleta, sem nome de métrica nem rótulos."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte o modelo de coleta (o padrão é pull), troca counter por gauge e atribui ao Grafana o armazenamento das métricas. O Grafana visualiza; o Prometheus coleta e armazena.",
+      "resumoFlashcard": {
+        "pergunta": "Como o Prometheus coleta e armazena métricas, e qual é o papel do Grafana?",
+        "resposta": "O Prometheus coleta por pull, via HTTP, as métricas expostas pelos alvos e as guarda como séries temporais identificadas por nome e rótulos, consultáveis por PromQL; jobs curtos usam o Pushgateway, e o Alertmanager trata os alertas. O Grafana consulta essas fontes e monta painéis."
+      },
+      "conceitosChave": ["Prometheus: modelo pull e séries temporais", "Métricas: counter × gauge"],
+      "fundamentacao": "Documentação do Prometheus, 'Overview' (modelo de dados, coleta por pull, Pushgateway, Alertmanager e Grafana) e 'Metric types' (counter e gauge)."
+    },
+    {
+      "id": "devops-042",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Git distribuído, GitHub e GitLab",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal mantém repositórios em duas plataformas, alguns no GitHub e outros em uma instância do GitLab. Ao padronizar os procedimentos entre elas, a equipe de TI comparou recursos equivalentes. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao migrar parte dos projetos do Tribunal do GitHub para o GitLab, um técnico elaborou um quadro de correspondência entre os recursos das duas plataformas. Considere as afirmativas abaixo.",
+        "A respeito das plataformas GitHub e GitLab, usadas para hospedagem, colaboração e automação baseadas em Git, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A proposta de integrar as alterações de um branch a outro, com revisão e discussão, chama-se pull request no GitHub e merge request no GitLab.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o mesmo recurso com nomes diferentes, ambos com revisão, comentários e verificações automáticas antes do merge."
+        },
+        {
+          "texto": "As duas plataformas usam o mesmo arquivo de definição de pipeline, .github/workflows/ci.yml, o que permite migrar a automação sem nenhuma adaptação.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O GitHub Actions lê workflows em .github/workflows, e o GitLab CI/CD lê o .gitlab-ci.yml; as sintaxes e as palavras-chave são diferentes."
+        },
+        {
+          "texto": "No GitLab, o arquivo CODEOWNERS só é reconhecido se estiver no diretório .github/, a mesma localização exigida pelo GitHub.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O GitLab procura o CODEOWNERS, nesta ordem, na raiz, em docs/ e em .gitlab/ e usa o primeiro que encontrar. O GitHub aceita .github/, a raiz e docs/."
+        },
+        {
+          "texto": "No GitLab, a automação de CI/CD é definida no arquivo .gitlab-ci.yml, enquanto no GitHub os workflows ficam em arquivos YAML no diretório .github/workflows.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. São os arquivos de definição de pipeline de cada plataforma, ambos em YAML e versionados com o código."
+        },
+        {
+          "texto": "Por serem plataformas centralizadas, GitHub e GitLab eliminam o caráter distribuído do Git, de modo que os clones locais deixam de conter o histórico completo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. As plataformas hospedam um repositório remoto e acrescentam recursos de colaboração, mas cada clone continua sendo um repositório completo, com todo o histórico."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: cada plataforma tem seu formato de pipeline (.github/workflows no GitHub e .gitlab-ci.yml no GitLab), com palavras-chave diferentes, e a migração exige adaptação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (pull request no GitHub e merge request no GitLab são o mesmo conceito) e a IV (.gitlab-ci.yml no GitLab e workflows YAML em .github/workflows no GitHub). A II é falsa porque os formatos de pipeline diferem; a III, porque o GitLab procura o CODEOWNERS na raiz, em docs/ e em .gitlab/; e a V, porque as plataformas não retiram dos clones o histórico completo.",
+          "versaoInvertidaFalsa": "No GitLab, a proposta de integrar as alterações de um branch a outro, com revisão, chama-se pull request, e no GitHub, merge request."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As três afirmativas são falsas: os arquivos de pipeline diferem entre as plataformas, o GitLab não procura o CODEOWNERS em .github/, e os clones continuam com o histórico completo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV são verdadeiras, mas a III e a V são falsas: o GitLab procura o CODEOWNERS na raiz, em docs/ e em .gitlab/, e hospedar o repositório em uma plataforma não elimina o caráter distribuído do Git."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a III é falsa, pois o GitLab não usa o diretório .github/ para o CODEOWNERS. Faltou também a I, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que os arquivos de pipeline são intercambiáveis e que o CODEOWNERS do GitLab fica em .github/. Os conceitos se correspondem, mas os arquivos e as localizações são próprios de cada plataforma.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os equivalentes entre GitHub e GitLab para revisão e pipeline?",
+        "resposta": "Pull request no GitHub corresponde a merge request no GitLab. Os pipelines ficam em .github/workflows (GitHub Actions) e em .gitlab-ci.yml (GitLab CI/CD). O CODEOWNERS fica em .github/, na raiz ou em docs/ no GitHub e na raiz, em docs/ ou em .gitlab/ no GitLab."
+      },
+      "conceitosChave": ["GitHub × GitLab: equivalências", "Revisão de código: CODEOWNERS"],
+      "fundamentacao": "Documentação do GitHub, 'About code owners' e 'Workflow syntax for GitHub Actions'; documentação do GitLab, 'Merge requests', 'Code Owners' e 'CI/CD YAML syntax reference'."
+    },
+    {
+      "id": "devops-043",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Estratégias de branching (Git Flow e trunk-based)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Uma equipe precisa escolher estratégias de branching para dois produtos. O produto A é um sistema web implantado várias vezes ao dia, com uma única versão em produção. O produto B é um software instalado nos órgãos jurisdicionados, com várias versões em uso ao mesmo tempo e ciclos de lançamento planejados. Considerando as características do Git Flow, do GitHub Flow e do trunk-based development, é correto afirmar que",
+      "variantesEnunciado": [
+        "A área de TI do Tribunal mantém dois produtos: um portal web (produto A), atualizado em produção diversas vezes por dia e sempre com uma única versão ativa, e um aplicativo de prestação de contas instalado pelos jurisdicionados (produto B), do qual coexistem várias versões, com lançamentos planejados. Considerando as características do Git Flow, do GitHub Flow e do trunk-based development, é correto afirmar que",
+        "Ao definir a estratégia de branching de dois projetos, um técnico observou que o produto A é uma aplicação web com várias implantações diárias e uma só versão em produção, enquanto o produto B é distribuído em versões numeradas, várias delas mantidas simultaneamente, com lançamentos programados. Considerando as características do Git Flow, do GitHub Flow e do trunk-based development, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Git Flow é o mais indicado para o produto A, pois seus branches de release permitem implantar várias vezes ao dia sem acumular mudanças no branch develop.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Git Flow acrescenta etapas, como develop e release, que retardam a ida à produção e combinam mal com várias implantações por dia. Seu próprio autor recomenda fluxos mais simples para aplicações entregues continuamente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o trunk-based development é incompatível com o produto A, porque implantar várias vezes ao dia exige branches de feature longos, que só podem ser integrados ao tronco após uma homologação completa de cada funcionalidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o inverso: o trunk-based usa branches curtos ou nenhum, integra várias vezes por dia e é um facilitador da entrega contínua, característica do produto A."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Git Flow, com branches de release e hotfix e a convivência de develop e main, tende a servir melhor ao produto B, enquanto o A se beneficia de um fluxo mais leve, como o GitHub Flow ou o trunk-based.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em nota de 2020, o autor do Git Flow reconheceu que o modelo foi pensado para software com versões explícitas e várias versões em uso, caso do produto B, em que branches de release e hotfix organizam a estabilização e as correções. Para aplicações web entregues continuamente, com uma só versão em produção, como o produto A, ele sugere fluxos mais simples, como o GitHub Flow. O trunk-based também atende bem a esse cenário, com integração frequente e feature flags.",
+          "versaoInvertidaFalsa": "o Git Flow, com branches de release e hotfix e a convivência de develop e main, tende a servir melhor ao produto A, enquanto o B se beneficia de um fluxo mais leve, como o GitHub Flow ou o trunk-based."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o GitHub Flow mantém branches permanentes de develop e de release, o que o torna equivalente ao Git Flow, mudando apenas os nomes dos branches.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GitHub Flow é um fluxo leve, com um branch principal sempre implantável e branches curtos que voltam a ele por pull request e depois são apagados; não tem branches permanentes de develop e de release."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os três modelos são equivalentes para qualquer produto, já que a escolha da estratégia de branching não interfere na frequência de integração nem na entrega contínua.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A estratégia de branching afeta diretamente a frequência de integração: branches longos atrasam a integração e dificultam a entrega contínua. Por isso a escolha depende das características do produto."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as recomendações. O Git Flow, com release e hotfix, combina com software versionado e várias versões em uso; a entrega contínua de uma só versão pede fluxos leves, como GitHub Flow ou trunk-based.",
+      "resumoFlashcard": {
+        "pergunta": "Quando o Git Flow é indicado e quando um fluxo mais leve é preferível?",
+        "resposta": "O Git Flow combina com software de versões explícitas, com várias versões em uso ao mesmo tempo e ciclos de release planejados. Para aplicações web entregues continuamente, com uma só versão em produção, fluxos leves como o GitHub Flow ou o trunk-based são mais adequados."
+      },
+      "conceitosChave": ["Branching: Git Flow", "Branching: trunk-based development", "Branching: GitHub Flow"],
+      "fundamentacao": "Vincent Driessen, 'A successful Git branching model' (nvie.com, 2010), com a nota de reflexão de março de 2020; documentação do GitHub, 'GitHub flow'; trunkbaseddevelopment.com."
+    },
+    {
+      "id": "devops-044",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Pull/merge requests e revisão de código",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A revisão de código por meio de pull requests (ou merge requests) é uma prática central das plataformas baseadas em Git. Sobre boas práticas nessa revisão, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal tornou obrigatórios os pull requests em todos os repositórios dos sistemas internos. Sobre boas práticas na revisão de código feita nesses pull requests, é correto afirmar que",
+        "A respeito de boas práticas de revisão de código em pull requests ou merge requests, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pull requests pequenos e focados em uma única mudança tendem a ser revisados com mais rapidez e atenção do que alterações extensas que misturam vários assuntos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Mudanças pequenas e coesas são mais fáceis de entender, revisar e reverter, e reduzem o tempo de espera e o risco de defeitos passarem despercebidos. São práticas complementares: verificações automáticas antes da revisão humana (testes, lint, análise estática), revisão por pessoa diferente do autor e comentários objetivos sobre correção, clareza e segurança.",
+          "versaoInvertidaFalsa": "pull requests extensos, que reúnem várias mudanças de assuntos diferentes, tendem a ser revisados com mais rapidez e atenção do que alterações pequenas e focadas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a revisão humana dispensa verificações automáticas, como testes e análise estática, pois o revisor experiente identifica todos os defeitos lendo o código alterado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Revisão humana e verificações automáticas se complementam. Testes, linters e análise estática pegam de forma consistente o que é mecânico e liberam o revisor para avaliar o desenho, a legibilidade e as regras de negócio."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o próprio autor deve aprovar o seu pull request antes do merge, já que conhece melhor que qualquer revisor as decisões tomadas na implementação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A revisão existe para que outra pessoa avalie a mudança, o que aplica a segregação de funções. No GitHub, aliás, o autor não consegue aprovar o próprio pull request."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o ideal é acumular semanas de trabalho em um único pull request, para que o revisor tenha uma visão completa da funcionalidade antes de opinar sobre o código.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pull requests enormes tornam a revisão superficial e demorada, aumentam os conflitos e atrasam a integração. A visão do conjunto se obtém com mudanças incrementais bem descritas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os comentários da revisão devem se concentrar em preferências pessoais de estilo, já que a correção funcional é responsabilidade exclusiva da equipe de testes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Questões de estilo devem ser automatizadas por formatadores e linters. A revisão deve se ocupar sobretudo da correção, da clareza, da segurança e da manutenibilidade do código."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece práticas que parecem eficientes, mas enfraquecem a revisão: autoaprovação, pull requests gigantes e revisão sem automação. O recomendado são mudanças pequenas, verificações automáticas e revisão por outra pessoa.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são boas práticas de revisão de código em pull requests?",
+        "resposta": "Manter os pull requests pequenos e focados, rodar verificações automáticas (testes, lint, análise estática) antes da revisão humana, ter revisão por pessoa diferente do autor e concentrar os comentários em correção, clareza, segurança e manutenibilidade."
+      },
+      "conceitosChave": ["Revisão de código: pull request"],
+      "fundamentacao": "Google Engineering Practices, 'Code Review Developer Guide' (seção 'Small CLs'); documentação do GitHub, 'Approving a pull request with required reviews'."
+    },
+    {
+      "id": "devops-045",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Docker e Docker Compose",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico do Tribunal escreveu um arquivo compose.yaml para o ambiente de desenvolvimento do sistema de diárias, com dois serviços: api, que usa o banco, e db, baseado na imagem postgres:17. No serviço api, declarou depends_on: [db]. Ao executar docker compose up, a API às vezes falha porque tenta se conectar ao PostgreSQL antes de ele aceitar conexões. Além disso, os dados do banco somem sempre que o container db é removido e recriado. Para resolver os dois problemas, a medida mais adequada é",
+      "variantesEnunciado": [
+        "No ambiente local do portal de serviços, o compose.yaml define os serviços api e db (imagem postgres:17), e api declara depends_on: [db]. Com docker compose up, a API ocasionalmente falha ao conectar porque o PostgreSQL ainda está inicializando, e os dados do banco se perdem sempre que o container db é recriado. Para resolver os dois problemas, a medida mais adequada é",
+        "Uma equipe usa Docker Compose para subir uma API e um PostgreSQL 17 em desenvolvimento. O serviço api tem depends_on: [db], mas falha de vez em quando por tentar acessar o banco antes de ele estar pronto, e todo o conteúdo do banco desaparece quando o container db é removido e criado de novo. Para resolver os dois problemas, a medida mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "trocar depends_on por links, que fazem o Compose aguardar automaticamente até que o banco aceite conexões, e gravar os dados na camada gravável do container db.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. links é um recurso legado e, assim como depends_on sem condição, não espera o serviço ficar pronto. E a camada gravável do container é descartada quando ele é removido, que é justamente o problema."
+        },
+        {
+          "id": "opt-2",
+          "texto": "aumentar o número de réplicas do serviço db com deploy.replicas, de modo que sempre haja um banco pronto, e manter os dados na camada do container.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Réplicas não resolvem a ordem de inicialização, e várias instâncias do PostgreSQL usando o mesmo diretório de dados seriam um erro. Os dados continuariam presos à camada efêmera do container."
+        },
+        {
+          "id": "opt-3",
+          "texto": "manter depends_on: [db], que já garante que o banco esteja pronto para conexões, e usar a instrução EXPOSE para persistir os dados no host.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. depends_on sem condição só garante que o container db foi iniciado, e não que o PostgreSQL aceita conexões. EXPOSE apenas documenta portas e não tem relação com persistência de dados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "definir um healthcheck no serviço db, por exemplo com pg_isready, usar depends_on com condition: service_healthy no serviço api e montar um volume nomeado no diretório de dados do PostgreSQL, que persiste independentemente do ciclo de vida do container.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Por padrão, o Compose espera apenas que o container da dependência esteja em execução, e não pronto. Com healthcheck no db (pg_isready, por exemplo) e depends_on com condition: service_healthy, a api só é criada quando o banco fica saudável. Já os dados gravados na camada do container se perdem quando ele é removido; um volume nomeado, gerenciado pelo Docker e mecanismo preferido para persistência, mantém os dados entre recriações.",
+          "versaoInvertidaFalsa": "manter depends_on: [db] sem condição, pois o Compose já espera o banco aceitar conexões antes de iniciar a api, e gravar os dados na camada gravável do container db, que persiste entre recriações."
+        },
+        {
+          "id": "opt-5",
+          "texto": "acrescentar uma espera de 60 segundos ao comando da API e executar docker compose down -v ao fim do dia, para que o volume do banco seja preservado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma espera fixa é frágil, pois o tempo de inicialização varia. E docker compose down -v remove os volumes nomeados declarados no arquivo e os anônimos, apagando justamente os dados que se pretendia preservar."
+        }
+      ],
+      "pegadinhaFCC": "A banca supõe que depends_on simples espera o serviço ficar pronto e que os dados na camada do container persistem. É preciso healthcheck com condition: service_healthy e um volume nomeado.",
+      "resumoFlashcard": {
+        "pergunta": "Como garantir no Compose que a API só inicie com o banco pronto e que os dados do banco persistam?",
+        "resposta": "Definindo healthcheck no serviço do banco e usando depends_on com condition: service_healthy no serviço que depende dele. Para persistir os dados, monta-se um volume nomeado no diretório de dados do banco, pois a camada gravável do container se perde quando ele é removido."
+      },
+      "conceitosChave": ["Docker Compose: depends_on e healthcheck", "Docker: volumes × bind mounts"],
+      "fundamentacao": "Documentação do Docker, Compose > 'Control startup and shutdown order' (depends_on, condition e healthcheck); Engine > Storage > Volumes; referência do comando docker compose down (opção -v)."
+    },
+    {
+      "id": "devops-046",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No Kubernetes, um Service expõe um conjunto de Pods como um serviço de rede estável. A respeito dos tipos de Service e dos recursos de entrada de tráfego, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal precisa expor serviços do sistema de protocolo hospedados em um cluster Kubernetes, alguns só para uso interno e outros para acesso externo. A respeito dos tipos de Service e dos recursos de entrada de tráfego, é correto afirmar que",
+        "Ao estudar a rede do Kubernetes, um técnico revisou os tipos de Service e as opções para receber tráfego vindo de fora do cluster. A esse respeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o tipo NodePort é o padrão quando nenhum tipo é informado e torna o Service acessível apenas de dentro do cluster, por um IP virtual interno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O padrão é ClusterIP, que é o tipo acessível só internamente. O NodePort, além do IP de cluster, abre uma porta estática em cada nó, da faixa padrão 30000–32767, e permite acesso de fora."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o tipo ClusterIP é o padrão e expõe o Service só dentro do cluster, ao passo que o LoadBalancer o expõe externamente por um balanceador do provedor ou integrado ao cluster.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sem type, o Service é ClusterIP: recebe um IP virtual interno e só é alcançável de dentro do cluster. NodePort abre uma porta estática em cada nó. LoadBalancer expõe o Service externamente, mas o Kubernetes não traz o balanceador: ele vem do provedor de nuvem ou de uma integração instalada. ExternalName apenas devolve um registro CNAME. Para roteamento HTTP por host e caminho, usa-se o Ingress, hoje congelado, ou a Gateway API, recomendada pelo projeto.",
+          "versaoInvertidaFalsa": "o tipo LoadBalancer é o padrão e expõe o Service só dentro do cluster, ao passo que o ClusterIP o expõe externamente por um balanceador do provedor ou integrado ao cluster."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o tipo LoadBalancer dispensa qualquer componente externo, porque o próprio Kubernetes implementa o balanceador de carga em todas as instalações, inclusive nas locais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A documentação afirma que o Kubernetes não oferece diretamente um componente de balanceamento: é preciso fornecê-lo ou integrar o cluster a um provedor de nuvem. Em instalações locais, usa-se uma solução adicional."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o recurso Ingress foi removido das versões recentes do Kubernetes e precisa ser substituído imediatamente pela Gateway API, sob pena de os manifestos existentes deixarem de funcionar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Ingress não foi removido: sua API está congelada, isto é, continua disponível e estável, mas sem novas funcionalidades, e o projeto não tem planos de removê-la. A Gateway API é recomendada para novos usos, sem migração obrigatória."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o tipo ExternalName cria um balanceador interno com IP fixo que distribui as requisições entre os Pods selecionados pelos rótulos do Service.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ExternalName não tem seletor nem IP de cluster: ele mapeia o Service para um nome externo, configurando o DNS do cluster para devolver um registro CNAME."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o tipo padrão, que é ClusterIP, atribui ao Kubernetes um balanceador próprio e trata o Ingress como removido, quando ele está apenas congelado em favor da Gateway API.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os tipos de Service do Kubernetes e qual é o padrão?",
+        "resposta": "ClusterIP (padrão; IP virtual interno, só dentro do cluster), NodePort (porta estática em cada nó, faixa padrão 30000–32767), LoadBalancer (exposição externa por balanceador do provedor ou integrado) e ExternalName (CNAME para um nome externo). Para HTTP por host e caminho, há o Ingress, congelado, e a Gateway API, recomendada."
+      },
+      "conceitosChave": ["Kubernetes: Service e Ingress"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Services, Load Balancing, and Networking > Service (tipos de Service), Ingress (nota sobre a API congelada) e Gateway API."
+    },
+    {
+      "id": "devops-047",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um Deployment do sistema de consulta processual do Tribunal define, para cada container, requests de 500m de CPU e 512Mi de memória e limits de 1 CPU e 1Gi. Há um HorizontalPodAutoscaler (autoscaling/v2) com alvo de 60% de utilização média de CPU, mínimo de 2 e máximo de 10 réplicas. Em um pico de acesso, as 4 réplicas em execução registram utilização média de CPU de 90% em relação ao request. Considerando o funcionamento padrão do Kubernetes, é correto afirmar que",
+      "variantesEnunciado": [
+        "No cluster do Tribunal, a API do portal de transparência roda em um Deployment com requests de 500m de CPU e 512Mi de memória e limits de 1 CPU e 1Gi por container, controlado por um HPA (autoscaling/v2) com alvo de 60% de utilização média de CPU, entre 2 e 10 réplicas. Durante um pico, as 4 réplicas atuais apresentam utilização média de 90% em relação ao request. Considerando o funcionamento padrão do Kubernetes, é correto afirmar que",
+        "Um técnico analisa o comportamento do Deployment do sistema de protocolo durante um pico: 4 réplicas em execução, cada container com requests de 500m de CPU e 512Mi de memória e limits de 1 CPU e 1Gi, utilização média de CPU de 90% do request e um HorizontalPodAutoscaler (autoscaling/v2) configurado para 60% de utilização média, com mínimo de 2 e máximo de 10 réplicas. Considerando o funcionamento padrão do Kubernetes, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o HPA eleva o Deployment imediatamente ao máximo de 10 réplicas, pois qualquer valor acima do alvo leva o autoscaler ao limite configurado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O HPA não vai direto ao máximo: calcula a quantidade proporcional à razão entre o valor atual e o alvo, ceil(4 × 90/60) = 6, respeitando o mínimo e o máximo configurados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o HPA calcula a utilização em relação aos limits, e não aos requests, de modo que a utilização real é de 45%, abaixo do alvo, e nenhuma réplica é criada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A utilização-alvo de um recurso é medida como porcentagem do request do container. Com 90% do request, a razão é 1,5 e o HPA escala; o cálculo de 45% sobre o limit é a pegadinha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o agendador posiciona os Pods com base nos limits, garantindo que cada nó tenha capacidade para o consumo máximo de todos os containers.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O agendamento considera os requests: a soma dos requests dos Pods de um nó não pode passar da capacidade alocável dele. Os limits podem somar mais que a capacidade, o chamado sobrecomprometimento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "um container que ultrapassar o limite de CPU é encerrado e reiniciado pelo kubelet, do mesmo modo que ocorre com o limite de memória.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite de CPU é aplicado por limitação de uso (throttling), e o container continua rodando, mais lentamente; a documentação lembra que os runtimes não encerram containers por uso excessivo de CPU. O encerramento por falta de memória (OOM) é a consequência típica de exceder o limite de memória."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o HPA tende a elevar o Deployment para 6 réplicas, pois ceil(4 × 90/60) = 6; o agendador posiciona os Pods com base nos requests; e um container que ultrapassar 1 CPU sofre limitação (throttling), enquanto o que exceder 1Gi de memória pode ser encerrado por falta de memória (OOM).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Para utilização de recurso, o HPA compara o consumo médio com o request dos containers e calcula réplicas desejadas = ceil(réplicas atuais × valor atual / valor alvo) = ceil(4 × 90 / 60) = 6, dentro do intervalo de 2 a 10. O kube-scheduler considera os requests para decidir em que nó cada Pod cabe. Os limites são aplicados de formas diferentes: o de CPU por limitação de uso (throttling) e o de memória pelo kernel, que pode encerrar o container por OOM.",
+          "versaoInvertidaFalsa": "o HPA tende a elevar o Deployment para 6 réplicas; o agendador posiciona os Pods com base nos limits; e um container que ultrapassar 1 CPU é encerrado por OOM, enquanto o que exceder 1Gi de memória apenas sofre limitação (throttling)."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca requests por limits no agendamento e no cálculo do HPA e iguala os efeitos dos limites de CPU (throttling) e de memória (OOM). Também sugere que o HPA salta direto para o máximo.",
+      "resumoFlashcard": {
+        "pergunta": "Como o Kubernetes usa requests e limits, e como o HPA calcula as réplicas?",
+        "resposta": "Os requests orientam o agendamento e servem de base para a utilização percentual do HPA; os limits são tetos: CPU acima do limite sofre throttling, e memória acima do limite pode levar ao encerramento por OOM. O HPA calcula ceil(réplicas atuais × métrica atual / alvo), entre o mínimo e o máximo."
+      },
+      "conceitosChave": ["Kubernetes: requests × limits", "Kubernetes: HPA"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Configuration > Resource Management for Pods and Containers; Concepts > Workloads > Autoscaling > Horizontal Pod Autoscaling (algoritmo e autoscaling/v2)."
+    },
+    {
+      "id": "devops-048",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Ambientes de desenvolvimento, homologação e produção",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um novo sistema do Tribunal será implantado nos ambientes de desenvolvimento, homologação e produção. A equipe discute como tratar as configurações que mudam de um ambiente para outro, como endereços de banco de dados e credenciais. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na preparação dos ambientes de um novo módulo do sistema de fiscalização, a equipe de TI do Tribunal precisa definir como gerenciar parâmetros que variam por ambiente, como URLs de serviços e senhas de banco de dados. Considere as afirmativas abaixo.",
+        "A respeito do gerenciamento de configurações e de credenciais nos ambientes de desenvolvimento, homologação e produção, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Cada ambiente deve ter um artefato próprio, compilado com as configurações daquele ambiente embutidas no código, para evitar erros de parametrização na implantação.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Embutir a configuração no código obriga a gerar um artefato por ambiente, o que contraria a promoção do mesmo artefato e a separação entre build, release e execução."
+        },
+        {
+          "texto": "Segundo o Twelve-Factor App, a configuração que varia entre ambientes deve ficar fora do código, por exemplo em variáveis de ambiente, de modo que o mesmo artefato sirva a todos eles.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O fator III (Config) pede separação estrita entre configuração e código; variáveis de ambiente são o exemplo clássico."
+        },
+        {
+          "texto": "Para manter a paridade, homologação deve reproduzir produção tanto quanto possível, inclusive nas versões de banco de dados e dos demais serviços de apoio.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O fator X (Dev/prod parity) recomenda usar os mesmos tipos e versões de serviços de apoio em todos os ambientes, o que vale com mais razão para homologação."
+        },
+        {
+          "texto": "Credenciais devem ficar em um cofre de segredos ou no mecanismo de segredos da plataforma, com acesso restrito e rotação periódica, e ser injetadas na implantação ou na execução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Cofres de segredos e mecanismos como os secrets de pipeline e do Kubernetes permitem controlar o acesso, auditar o uso, fazer rotação e injetar valores sem gravá-los no código."
+        },
+        {
+          "texto": "Credenciais de produção podem ser gravadas no repositório Git desde que ele seja privado, pois o acesso restrito elimina o risco de vazamento.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Credenciais versionadas ficam no histórico e em todos os clones, mesmo depois de apagadas em commit posterior. Repositório privado não é cofre de segredos."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: embutir a configuração no artefato obriga a um build por ambiente e contraria o princípio de promover o mesmo artefato. Também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que é falsa: repositório privado não torna seguro guardar credenciais, que ficam no histórico, se espalham pelos clones e podem vazar por acessos indevidos. Também omite a III, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a II (fator III do Twelve-Factor: configuração no ambiente e o mesmo artefato em todos os ambientes), a III (paridade, fator X, inclusive nos serviços de apoio) e a IV (segredos em cofre ou no mecanismo da plataforma, com acesso restrito, rotação e injeção na implantação ou na execução). A I recompila por ambiente, e a V confia em repositório privado para guardar credenciais.",
+          "versaoInvertidaFalsa": "Segundo o Twelve-Factor App, a configuração que varia entre ambientes deve ficar embutida no código, gerando-se um artefato diferente para cada ambiente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a V são falsas: a configuração não deve ser embutida no artefato, e credenciais não devem ser versionadas, ainda que em repositório privado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que é falsa. O fator III do Twelve-Factor propõe como teste que o código possa ser aberto ao público a qualquer momento sem comprometer credenciais, o que é impossível com segredos no repositório."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere embutir a configuração no artefato e versionar credenciais em repositório privado. A boa prática é configuração fora do código, o mesmo artefato em todos os ambientes e segredos em cofre.",
+      "resumoFlashcard": {
+        "pergunta": "Como tratar configurações e credenciais que variam entre ambientes?",
+        "resposta": "Mantendo a configuração fora do código, por exemplo em variáveis de ambiente, para promover o mesmo artefato a todos os ambientes (fator III do Twelve-Factor). As credenciais ficam em cofre de segredos ou no mecanismo da plataforma, com acesso restrito e rotação, e nunca no repositório, ainda que privado."
+      },
+      "conceitosChave": ["Ambientes: configuração externa", "Ambientes: paridade dev/prod"],
+      "fundamentacao": "The Twelve-Factor App, fatores III ('Config'), V ('Build, release, run') e X ('Dev/prod parity'); documentação do GitHub Actions, 'Using secrets in GitHub Actions'."
+    },
+    {
+      "id": "devops-049",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "GitHub Actions, GitLab CI/CD e Jenkins",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Nas principais ferramentas de automação de pipelines, a definição fica versionada junto com o código. No GitHub Actions, os workflows são arquivos YAML gravados no diretório ……; no GitLab CI/CD, o pipeline é descrito, por padrão, no arquivo ……, na raiz do repositório; e, no Jenkins, é o arquivo …… que guarda o pipeline como código. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao documentar os pipelines dos sistemas do Tribunal, um técnico registrou: os workflows do GitHub Actions ficam no diretório ……; o GitLab CI/CD lê, por padrão, o arquivo ……; e, no Jenkins, é o arquivo …… que guarda o pipeline como código. Preenchem, correta e respectivamente, as lacunas:",
+        "Em uma capacitação sobre automação de entrega, explicou-se que a configuração do pipeline é versionada com o código: no GitHub Actions, em arquivos YAML do diretório ……; no GitLab CI/CD, no arquivo ……; e, no Jenkins, em um arquivo chamado ……, escrito em sintaxe declarativa ou scripted. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": ".github/workflows − .gitlab-ci.yml − Jenkinsfile",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O GitHub Actions lê os workflows em arquivos YAML no diretório .github/workflows; o GitLab CI/CD usa, por padrão, o arquivo .gitlab-ci.yml na raiz do projeto; e o Jenkins usa o Jenkinsfile versionado no repositório, prática que a documentação chama de Pipeline-as-code. Nas três ferramentas, o pipeline evolui e é revisado junto com o código.",
+          "versaoInvertidaFalsa": ".github/workflows − .gitlab-ci.yml − Jenkinsfile.yml"
+        },
+        {
+          "id": "opt-2",
+          "texto": ".gitlab/workflows − .github-ci.yml − Jenkinsfile",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os nomes estão trocados entre as plataformas: o diretório .github/workflows é do GitHub, e o arquivo de pipeline do GitLab é o .gitlab-ci.yml. Não existem .gitlab/workflows nem .github-ci.yml como padrões."
+        },
+        {
+          "id": "opt-3",
+          "texto": ".github/actions − .gitlab-ci.yml − pipeline.groovy",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os workflows ficam em .github/workflows; o termo actions designa as ações reutilizáveis chamadas com uses. E o arquivo padrão do Jenkins se chama Jenkinsfile, sem extensão."
+        },
+        {
+          "id": "opt-4",
+          "texto": ".github/workflows − gitlab-pipeline.yaml − Jenkinsfile.xml",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GitLab procura, por padrão, o .gitlab-ci.yml, e o Jenkinsfile não é XML: é escrito em sintaxe declarativa ou scripted, baseada em Groovy. O XML aparece na configuração interna dos jobs do Jenkins, e não no pipeline como código."
+        },
+        {
+          "id": "opt-5",
+          "texto": ".ci/workflows − .gitlab-ci.yml − Jenkinsfile.yml",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GitHub Actions não lê o diretório .ci/workflows, e o Jenkinsfile não é YAML: as sintaxes declarativa e scripted são baseadas em Groovy."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os nomes entre as plataformas e inventa extensões. Os padrões são .github/workflows, .gitlab-ci.yml e Jenkinsfile, sem extensão e em sintaxe baseada em Groovy.",
+      "resumoFlashcard": {
+        "pergunta": "Onde fica a definição do pipeline no GitHub Actions, no GitLab CI/CD e no Jenkins?",
+        "resposta": "No GitHub Actions, em arquivos YAML no diretório .github/workflows; no GitLab CI/CD, no arquivo .gitlab-ci.yml na raiz do repositório; no Jenkins, no Jenkinsfile, em sintaxe declarativa ou scripted."
+      },
+      "conceitosChave": ["Pipeline como código: arquivos de definição"],
+      "fundamentacao": "Documentação do GitHub Actions, 'Workflow syntax for GitHub Actions'; documentação do GitLab, 'CI/CD YAML syntax reference'; documentação do Jenkins, 'Pipeline' e 'Using a Jenkinsfile'."
+    },
+    {
+      "id": "devops-050",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "GitHub Actions, GitLab CI/CD e Jenkins",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No GitHub, o workflow de implantação do portal de serviços do Tribunal tem um job que publica a aplicação em produção e precisa da credencial de acesso ao servidor. A equipe quer que esse job só execute depois que um dos gestores designados aprovar a implantação, que a credencial de produção só fique acessível ao job após essa aprovação e que quem disparou a implantação não possa aprová-la sozinho. A configuração mais adequada é",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal automatizou com GitHub Actions a implantação do sistema de diárias. Para o job de produção, que usa a senha de acesso ao servidor, definiu-se que um dos responsáveis designados deve aprovar cada implantação, que a senha só pode ser lida pelo job depois da aprovação e que o autor do disparo não pode aprovar a própria implantação. A configuração mais adequada é",
+        "Um técnico precisa proteger, no GitHub Actions, o job que implanta em produção o sistema de protocolo. Os requisitos são: aprovação prévia de um dos gestores indicados, acesso à credencial de produção somente depois dessa aprovação e impossibilidade de quem iniciou a implantação aprová-la. A configuração mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "guardar a credencial como segredo do repositório e exigir revisão de código no pull request, pois a aprovação do pull request libera automaticamente a implantação e os segredos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aprovar um pull request não aprova implantações: são controles distintos. Um segredo de repositório fica disponível aos jobs do workflow sem a barreira da aprovação de implantação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "gravar a credencial em uma variável no próprio arquivo do workflow e restringir o acesso de leitura ao diretório .github/workflows apenas aos gestores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Credenciais nunca devem ser gravadas no arquivo do workflow, que fica versionado, visível a quem tem acesso ao repositório e permanece no histórico. Segredos devem ficar no mecanismo de secrets."
+        },
+        {
+          "id": "opt-3",
+          "texto": "usar o gatilho workflow_dispatch para que apenas gestores disparem o job manualmente, o que dispensa revisores, já que quem executa o disparo é o próprio aprovador da implantação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Restringir quem dispara o workflow não cria aprovação independente e permite que a mesma pessoa dispare e conclua a implantação, contrariando a segregação pedida. A credencial também não ficaria condicionada à aprovação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "criar o environment producao com revisores obrigatórios e a opção que impede a autoaprovação, guardar a credencial como segredo desse environment e referenciá-lo no job.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Environments do GitHub Actions têm regras de proteção: revisores obrigatórios (até seis pessoas ou equipes, bastando a aprovação de um) e a opção de impedir que quem iniciou a implantação a aprove. Segredos de environment só ficam disponíveis aos jobs que referenciam o environment e, havendo exigência de aprovação, só depois dela. No job, basta declarar environment: producao.",
+          "versaoInvertidaFalsa": "criar o environment producao com revisores obrigatórios, guardar a credencial como segredo desse environment e referenciá-lo no job, ciente de que o segredo fica disponível ao job antes da aprovação e de que quem disparou a implantação pode aprová-la."
+        },
+        {
+          "id": "opt-5",
+          "texto": "configurar um wait timer de 30 minutos no environment, período no qual os gestores podem cancelar a execução, o que equivale a uma aprovação obrigatória.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O wait timer apenas atrasa o início do job por um tempo definido, de 1 a 43.200 minutos; não exige que alguém aprove e, se ninguém agir, o job segue."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde aprovação de pull request com aprovação de implantação e oferece o wait timer como se fosse aprovação. O controle certo é o environment com revisores obrigatórios, bloqueio de autoaprovação e segredos do próprio environment.",
+      "resumoFlashcard": {
+        "pergunta": "Como exigir aprovação antes de um job de implantação no GitHub Actions?",
+        "resposta": "Criando um environment com revisores obrigatórios (até seis, bastando um aprovar), com bloqueio de autoaprovação se desejado, guardando os segredos de produção nesse environment e referenciando-o no job com environment. O job espera a aprovação, e só então os segredos ficam disponíveis."
+      },
+      "conceitosChave": ["GitHub Actions: environments e aprovação", "Segredos em pipelines"],
+      "fundamentacao": "Documentação do GitHub Actions, 'Deployments and environments' (Required reviewers, Prevent self-review, Wait timer e Environment secrets)."
+    }
+  ]
+}

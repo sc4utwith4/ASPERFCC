@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "devops-engenharia-entrega",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "devops-031",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "CI/CD e pipelines",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Feature flags (ou feature toggles) são usadas em pipelines de entrega para controlar a exposição de funcionalidades. Sobre essa técnica, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal passou a usar feature flags para implantar em produção funcionalidades do sistema de processo eletrônico ainda em validação com um grupo restrito de usuários. Sobre essa técnica, é correto afirmar que",
+        "No contexto de integração e entrega contínuas, a respeito das feature flags (feature toggles), é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "permitem separar a implantação do código da liberação da funcionalidade, mas as flags de liberação devem ser removidas depois do lançamento, sob pena de acumular dívida técnica.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A flag permite implantar o código com a funcionalidade desligada (dark launch) e ligá-la depois, para todos ou para parte dos usuários, sem nova implantação; é o que viabiliza integrar no tronco funcionalidades incompletas. Flags de liberação são temporárias: lançada a funcionalidade, devem ser removidas, pois cada flag multiplica caminhos de execução e combinações a testar.",
+          "versaoInvertidaFalsa": "permitem separar a implantação do código da liberação da funcionalidade, e as flags de liberação devem permanecer no código indefinidamente, pois não geram dívida técnica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "substituem os testes automatizados, porque qualquer funcionalidade defeituosa pode ser desligada em produção assim que o problema for percebido pelos usuários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desligar uma flag reduz o impacto de um defeito, mas não substitui os testes: o código implantado, ligado ou desligado, continua precisando ser verificado, e as combinações de flags aumentam o que deve ser testado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "exigem um branch de longa duração para cada flag, no qual a funcionalidade permanece isolada até que a flag seja ligada em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: as flags permitem integrar continuamente no tronco o código de uma funcionalidade inacabada, mantida desligada, e dispensam branches de longa duração."
+        },
+        {
+          "id": "opt-4",
+          "texto": "devem permanecer no código indefinidamente, já que cada flag acrescentada aumenta a flexibilidade sem custo adicional de manutenção ou de testes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cada flag cria caminhos alternativos de execução e aumenta a complexidade e o número de combinações a testar. Flags de liberação devem ter vida curta; flags operacionais, como as que desligam funções em sobrecarga, podem durar mais, mas também precisam ser gerenciadas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "só podem ser avaliadas no momento da compilação, gerando um artefato diferente para cada combinação de flags ligadas e desligadas em cada um dos ambientes do pipeline de entrega contínua.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Feature flags são, em geral, avaliadas em tempo de execução, a partir de configuração ou de um serviço de flags, o que permite mudar o comportamento sem novo build. Gerar um artefato por combinação contrariaria o princípio de promover o mesmo artefato entre os ambientes."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta a flag como substituta de testes ou como recurso sem custo. Ela separa implantação de liberação, mas as flags de liberação são temporárias e precisam ser removidas.",
+      "resumoFlashcard": {
+        "pergunta": "Para que servem as feature flags e que cuidado elas exigem?",
+        "resposta": "Servem para separar a implantação do código da liberação da funcionalidade: o código vai para produção desligado e é ativado depois, para todos ou para um grupo. Exigem gestão, porque as flags de liberação devem ser removidas após o lançamento, para não acumular dívida técnica e combinações a testar."
+      },
+      "conceitosChave": ["Feature flags", "Implantação: separar deploy de release"],
+      "fundamentacao": "Pete Hodgson, 'Feature Toggles (aka Feature Flags)' (martinfowler.com, 2017); Martin Fowler, bliki 'DarkLaunching'."
+    },
+    {
+      "id": "devops-032",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Automação de build e de testes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A suíte de testes de integração do sistema de prestação de contas do Tribunal leva 40 minutos no pipeline. Para reduzir esse tempo, a equipe dividiu os testes em quatro partes executadas em paralelo, em runners distintos. Desde então, alguns testes passaram a falhar de forma intermitente: passam quando executados isoladamente, mas falham quando rodam ao mesmo tempo que as outras partes, todas apontadas para o mesmo banco de dados de homologação. A causa mais provável e a medida mais adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Para encurtar o estágio de testes do sistema de protocolo, que levava 35 minutos, a equipe passou a executar a suíte de integração em quatro partes simultâneas. Surgiram falhas intermitentes: os mesmos testes passam sozinhos, mas falham quando executados junto com as outras partes, que usam o mesmo banco de dados compartilhado de homologação. A causa mais provável e a medida mais adequada são, respectivamente,",
+        "Um técnico investiga falhas aleatórias no pipeline do portal de serviços desde que os testes de integração passaram a rodar em quatro runners paralelos. Cada teste, executado sozinho, passa; em paralelo, alguns falham, e todos os runners usam um único banco de dados de homologação. A causa mais provável e a medida mais adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a lentidão dos runners, que não suportam paralelismo; voltar à execução sequencial e aceitar os 40 minutos, já que testes de integração não podem ser paralelizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida: testes de integração podem rodar em paralelo, desde que sejam independentes. Voltar à execução sequencial esconde o acoplamento entre os testes e desperdiça o ganho de tempo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a ordem aleatória dos testes; fixar uma ordem de execução para que os testes que dependem de dados de outros sempre rodem depois deles.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fixar a ordem mascara a dependência entre testes e não resolve a interferência entre partes que rodam ao mesmo tempo. Testes confiáveis não dependem de dados gravados por outros testes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a dependência entre testes por meio do estado compartilhado no banco, que gera interferência quando as partes rodam ao mesmo tempo; isolar os dados de cada parte, por exemplo com um banco efêmero por execução ou com transações revertidas ao fim de cada teste, mantendo o paralelismo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O padrão descrito, que passa isolado, falha em paralelo e depende de recurso comum, indica testes que dependem de estado compartilhado: um altera ou apaga dados de que outro precisa. Testes paralelos precisam ser independentes. A solução é isolar os dados, com banco efêmero por execução (por exemplo, em container), esquemas separados ou transações revertidas, sem abrir mão do paralelismo.",
+          "versaoInvertidaFalsa": "a ordem aleatória dos testes, e não o banco compartilhado; fixar a ordem de execução resolve o problema, pois testes paralelos podem depender livremente de dados gravados por outros testes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o excesso de partes; reduzir de quatro para duas, pois o número de falhas intermitentes é proporcional ao número de runners utilizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reduzir as partes pode diminuir a frequência das colisões, mas não elimina a causa, que é o estado compartilhado. Não há relação fixa entre a quantidade de runners e as falhas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o uso de banco de dados nos testes de integração; substituí-los todos por testes de unidade com dublês, eliminando a integração do pipeline.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes de unidade com dublês são valiosos, mas não verificam a integração real com o banco. Eliminá-los do pipeline reduziria a cobertura justamente na camada em que o problema apareceu."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece soluções que abrem mão do paralelismo ou mascaram a dependência, como fixar a ordem dos testes. O problema é o estado compartilhado, e a correção é isolar os dados de cada teste.",
+      "resumoFlashcard": {
+        "pergunta": "Por que testes que passam isolados falham quando executados em paralelo?",
+        "resposta": "Em geral porque compartilham estado, como o mesmo banco de dados, e um teste interfere nos dados de outro. A correção é tornar os testes independentes, isolando os dados (banco efêmero, esquemas separados ou transações revertidas), o que permite manter o paralelismo."
+      },
+      "conceitosChave": ["Testes: paralelismo e isolamento", "Testes: testes intermitentes"],
+      "fundamentacao": "Martin Fowler, 'Eradicating Non-Determinism in Tests' (martinfowler.com, 2011), seções 'Lack of Isolation' e 'Quarantine'; documentação do GitLab, palavra-chave parallel."
+    },
+    {
+      "id": "devops-033",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Infraestrutura como código e gerenciamento de configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal discute a adoção de infraestrutura imutável e de GitOps para os ambientes do sistema de processo eletrônico. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um estudo para modernizar a operação dos sistemas do Tribunal, um técnico comparou a infraestrutura imutável e o GitOps com a administração tradicional de servidores. Considere as afirmativas abaixo.",
+        "A respeito de infraestrutura imutável e de GitOps, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Na infraestrutura imutável, servidores em produção não recebem atualizações no local: a mudança é aplicada gerando uma nova imagem e substituindo as instâncias antigas pelas novas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Em vez de alterar servidores em execução, cria-se uma nova imagem com a mudança e trocam-se as instâncias, o que evita divergências acumuladas e facilita a reprodução."
+        },
+        {
+          "texto": "Uma vantagem da infraestrutura imutável é eliminar a necessidade de versionar as imagens, já que cada instância é descartada depois de criada.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O versionamento das imagens é essencial: é o que permite saber exatamente o que está em produção e voltar a uma versão anterior com segurança."
+        },
+        {
+          "texto": "No GitOps, o estado desejado do sistema é declarado e versionado em um repositório, e agentes de software puxam essa declaração e reconciliam continuamente o estado real com ela.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. São os quatro princípios do OpenGitOps: declarativo, versionado e imutável, puxado automaticamente e continuamente reconciliado."
+        },
+        {
+          "texto": "No GitOps, a forma recomendada de corrigir um problema urgente é alterar diretamente os recursos do cluster, já que o agente de reconciliação preservará a alteração manual.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A alteração manual é uma divergência em relação ao estado desejado, e o agente tende a desfazê-la. A correção deve ser feita no repositório, que é a fonte da verdade."
+        },
+        {
+          "texto": "Servidores configurados manualmente ao longo do tempo, difíceis de reproduzir, são chamados de servidores floco de neve (snowflake servers), problema que a infraestrutura como código busca evitar.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O servidor floco de neve acumula ajustes manuais não documentados e se torna único e frágil; IaC e imutabilidade tornam a infraestrutura reproduzível."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: versionar as imagens é essencial na infraestrutura imutável, pois permite saber o que está em produção e voltar a uma versão anterior. Também omite a V, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (mudança por substituição, e não por alteração no local), a III (princípios do GitOps: estado desejado declarativo e versionado, puxado e reconciliado continuamente por agentes) e a V (servidor floco de neve, configurado à mão e irreproduzível). A II erra ao dispensar o versionamento, e a IV, ao propor alterações manuais, que o agente de reconciliação desfaz.",
+          "versaoInvertidaFalsa": "No GitOps, o estado desejado fica registrado apenas no cluster, e são os operadores que, por comandos manuais, levam as alterações até ele, sem agentes de reconciliação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas: a II dispensa o versionamento das imagens, essencial para rastrear e reverter versões, e a IV contraria o GitOps, em que o repositório é a fonte da verdade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: no GitOps, uma alteração manual no cluster é tratada como divergência e tende a ser revertida pelo agente, e a correção deve passar pelo repositório. Também omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa. Sem versionamento das imagens, não há como saber exatamente o que está em execução nem voltar com segurança a uma versão anterior."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que a imutabilidade dispensa versionamento e que, no GitOps, o ajuste manual no cluster é o caminho para urgências. No GitOps, o repositório é a fonte da verdade, e o agente reconcilia o cluster com ele.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os princípios do GitOps segundo o OpenGitOps?",
+        "resposta": "O estado desejado deve ser declarativo; versionado e imutável, guardado com histórico completo; puxado automaticamente por agentes de software; e continuamente reconciliado, isto é, os agentes observam o estado real e aplicam o desejado."
+      },
+      "conceitosChave": ["IaC: infraestrutura imutável", "GitOps: reconciliação contínua"],
+      "fundamentacao": "OpenGitOps, 'GitOps Principles' v1.0.0 (repositório open-gitops/documents); Martin Fowler, bliki 'ImmutableServer' e 'SnowflakeServer'; Kief Morris, Infrastructure as Code, 2ª ed. (O'Reilly, 2020)."
+    },
+    {
+      "id": "devops-034",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Observabilidade: métricas, logs e traces",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na instrumentação de uma aplicação para observabilidade, a forma como logs e métricas são produzidos influencia a capacidade de correlacionar eventos. A esse respeito, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao padronizar a instrumentação dos sistemas do Tribunal, a equipe de TI discutiu como produzir logs e métricas que facilitem a investigação de incidentes. A esse respeito, é correto afirmar que",
+        "A respeito de boas práticas de instrumentação para a correlação de eventos entre logs, métricas e traces, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "rótulos de métricas devem incluir identificadores únicos, como o número do processo ou o CPF do usuário, para que cada série temporal permita localizar a requisição exata que causou um problema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cada combinação de valores de rótulos cria uma série temporal; identificadores únicos explodem a cardinalidade, com alto custo de memória e de armazenamento no Prometheus e em ferramentas semelhantes, cuja documentação desaconselha esse uso. O detalhe por requisição pertence a logs e traces, e usar CPF como rótulo ainda expõe dado pessoal sem necessidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "logs em texto livre são preferíveis aos estruturados, porque permitem ao desenvolvedor redigir mensagens mais completas, que as ferramentas de busca indexam com a mesma eficiência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Texto livre exige análise por expressões regulares, frágil e cara. Logs estruturados têm campos consultáveis e são a prática recomendada para correlação e análise."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a correlação entre logs e traces exige que ambos sejam armazenados no mesmo banco de dados, pois os identificadores de trace não podem ser gravados em registros de log.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os identificadores de trace podem, e devem, ser gravados nos registros de log; é isso que permite a correlação, mesmo quando os sinais ficam em ferramentas diferentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "registrar logs estruturados, com campos como trace_id e span_id, permite saltar de um trace para os logs da mesma requisição e filtrá-los com precisão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Logs estruturados, por exemplo em JSON, têm campos nomeados que podem ser filtrados e agregados. Gravar neles o trace_id e o span_id do contexto ativo, o que as bibliotecas do OpenTelemetry fazem, liga cada registro à requisição e ao trecho do trace em que foi emitido. Assim se navega do trace aos logs, e vice-versa, e se correlacionam eventos de serviços diferentes.",
+          "versaoInvertidaFalsa": "registrar logs em texto livre, sem campos como trace_id e span_id, permite saltar de um trace para os logs da mesma requisição e filtrá-los com precisão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a correlação de eventos depende apenas de os servidores estarem com os relógios sincronizados, o que dispensa qualquer identificador comum entre os registros dos serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Relógios sincronizados ajudam a ordenar eventos, mas não bastam para associar registros à mesma requisição; para isso, é preciso um identificador comum, como o trace_id ou um ID de correlação propagado entre os serviços."
+        }
+      ],
+      "pegadinhaFCC": "A banca propõe usar identificadores únicos como rótulos de métricas, o que explode a cardinalidade, e sugere que relógios sincronizados bastam. A correlação vem de identificadores comuns, como o trace_id, gravados em logs estruturados.",
+      "resumoFlashcard": {
+        "pergunta": "Como correlacionar logs e traces de uma mesma requisição?",
+        "resposta": "Gravando nos logs estruturados o trace_id e o span_id do contexto ativo. Assim, a partir de um trace, encontram-se os logs da mesma requisição, e vice-versa. Identificadores únicos não devem virar rótulos de métricas, por causa da cardinalidade."
+      },
+      "conceitosChave": ["Observabilidade: correlação de eventos", "Métricas: cardinalidade"],
+      "fundamentacao": "Documentação do OpenTelemetry, Concepts > Signals > Logs (correlação com o contexto de trace); documentação do Prometheus, 'Metric and label naming' (alerta sobre rótulos de alta cardinalidade)."
+    },
+    {
+      "id": "devops-035",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Monitoramento, alertas e indicadores técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Os métodos RED e USE são usados para escolher o que monitorar em sistemas de TI. A respeito deles, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao definir os painéis do sistema de processo eletrônico, a equipe de TI do Tribunal decidiu aplicar o método RED aos serviços e o método USE à infraestrutura. Sobre esses métodos, é correto afirmar que",
+        "A respeito dos métodos RED e USE, usados para orientar o monitoramento de serviços e de recursos computacionais, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o método USE se aplica a serviços orientados a requisições e acompanha, para cada endpoint, a taxa de requisições, os erros e a duração das respostas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde ao método RED. O USE trata de recursos, como CPU, memória, discos, filas e interfaces de rede, e verifica utilização, saturação e erros."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o método RED se aplica a recursos de hardware, como CPU, memória e discos, e verifica a utilização, a saturação e os erros de cada um deles.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde ao método USE. O RED trata de serviços orientados a requisições e mede taxa, erros e duração."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os dois métodos são equivalentes e intercambiáveis, pois ambos medem as mesmas três grandezas, apenas com nomes diferentes para cada uma delas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só os erros aparecem nos dois. Os métodos têm objetos diferentes, serviços no RED e recursos no USE, e por isso são complementares, e não intercambiáveis."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os dois métodos substituem os quatro sinais de ouro do SRE, que foram abandonados por não considerarem a saturação dos recursos do sistema monitorado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os sinais de ouro continuam sendo referência e incluem a saturação: latência, tráfego, erros e saturação. RED e USE são abordagens complementares, e o RED costuma ser descrito como um recorte dos sinais de ouro voltado a serviços."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o RED acompanha taxa, erros e duração das requisições de cada serviço, e o USE, utilização, saturação e erros de cada recurso, como CPU e memória.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O RED (Rate, Errors, Duration), proposto por Tom Wilkie, olha para os serviços pela perspectiva das requisições, próxima da experiência do usuário. O USE (Utilization, Saturation, Errors), de Brendan Gregg, examina cada recurso: utilização é a fração de tempo em uso, saturação é o trabalho que espera na fila, e erros são os eventos de erro. São complementares: o RED mostra que o serviço vai mal, e o USE ajuda a achar o recurso que limita.",
+          "versaoInvertidaFalsa": "o USE acompanha taxa, erros e duração das requisições de cada serviço, e o RED, utilização, saturação e erros de cada recurso, como CPU e memória."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o objeto de cada método. O RED é para serviços (taxa, erros, duração), e o USE é para recursos (utilização, saturação, erros).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre os métodos RED e USE?",
+        "resposta": "O RED (Rate, Errors, Duration) monitora serviços orientados a requisições: taxa, erros e duração. O USE (Utilization, Saturation, Errors) monitora recursos, como CPU, memória, disco e filas: utilização, saturação e erros. Os dois são complementares."
+      },
+      "conceitosChave": ["Monitoramento: RED × USE", "Monitoramento: sinais de ouro"],
+      "fundamentacao": "Tom Wilkie, 'The RED Method: how to instrument your services' (Grafana Labs); Brendan Gregg, 'The USE Method' (brendangregg.com); Google, Site Reliability Engineering (2016), cap. 6."
+    },
+    {
+      "id": "devops-036",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Pull/merge requests e revisão de código",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No GitHub, a equipe de TI do Tribunal quer garantir que nenhuma alteração chegue ao branch main do sistema de folha de pagamento sem que: (1) passe por pull request aprovado por pelo menos uma pessoa além do autor; (2) o pipeline de testes tenha terminado com sucesso; e (3) uma aprovação dada antes de novos commits só continue valendo se o código revisado não tiver mudado. A configuração mais adequada é criar, para main, uma regra de proteção que",
+      "variantesEnunciado": [
+        "A gestão de configuração do Tribunal definiu que o branch main do sistema de controle patrimonial, hospedado no GitHub, só pode receber mudanças por pull request aprovado por outra pessoa, com o pipeline de testes concluído com sucesso, e que aprovações dadas antes de novos commits que alterem o código não podem ser aproveitadas. A configuração mais adequada é criar, para main, uma regra de proteção que",
+        "Um técnico precisa configurar no GitHub o branch main do sistema de diárias para atender a três exigências: revisão aprovada de alguém que não seja o autor, testes automatizados aprovados antes do merge e invalidação de aprovações obsoletas quando o código do pull request mudar. A configuração mais adequada é criar, para main, uma regra de proteção que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "exija pull request com ao menos uma aprovação e status checks do pipeline bem-sucedidos e descarte as aprovações já dadas quando novos commits alterarem o código revisado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na proteção de branch do GitHub, exigir pull request com número mínimo de aprovações atende ao item 1, já que o autor não pode aprovar o próprio pull request; exigir que os status checks passem antes do merge atende ao item 2; e descartar aprovações obsoletas quando são enviados commits que afetam o diff atende ao item 3. Por padrão, a regra também impede force push e exclusão do branch.",
+          "versaoInvertidaFalsa": "exija pull request com ao menos uma aprovação e status checks do pipeline bem-sucedidos e mantenha válidas as aprovações já dadas mesmo quando novos commits alterarem o código revisado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "permita force push apenas aos administradores, para que possam reescrever o histórico de main sempre que um commit sem revisão for detectado, e exija histórico linear no branch.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Liberar force push, ainda que só a administradores, permite reescrever o histórico de main e contraria o objetivo de controle; por padrão, a proteção já impede force push. O histórico linear só proíbe commits de merge e não garante revisão nem testes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "exija commits assinados e histórico linear, configurações que, juntas, garantem que toda alteração em main tenha sido revisada e testada antes do merge.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Commits assinados atestam a autoria, e o histórico linear impede commits de merge, mas nenhum dos dois exige revisão ou testes aprovados. São controles úteis, porém diferentes dos pedidos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "bloqueie o branch (lock branch), tornando main somente leitura, de modo que as alterações passem a ser aplicadas apenas por merge de pull requests aprovados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O lock branch torna o branch somente leitura: nenhum commit pode ser feito nele, nem por merge de pull request. Serve para congelar um branch, e não para disciplinar o fluxo de mudanças."
+        },
+        {
+          "id": "opt-5",
+          "texto": "exija revisão apenas dos code owners, o que dispensa os status checks, já que a revisão humana de quem conhece o código também verifica se os testes passam.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A revisão de code owners é um controle adicional e não substitui os status checks, pois a revisão humana não executa os testes. O item 2 exige a verificação automática do pipeline."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece controles reais da proteção de branch, como commits assinados, histórico linear e lock branch, que não atendem ao pedido. Revisão obrigatória, status checks e descarte de aprovações obsoletas são os ajustes certos.",
+      "resumoFlashcard": {
+        "pergunta": "Quais configurações de proteção de branch do GitHub garantem revisão e testes antes do merge?",
+        "resposta": "Exigir pull request com número mínimo de aprovações, exigir que os status checks passem antes do merge e descartar aprovações obsoletas quando novos commits alteram o diff. Por padrão, a regra também bloqueia force push e exclusão do branch."
+      },
+      "conceitosChave": ["GitHub: proteção de branch", "Revisão de código: pull request"],
+      "fundamentacao": "Documentação do GitHub, 'About protected branches' (Require pull request reviews before merging, Require status checks before merging, Lock branch e Allow force pushes)."
+    },
+    {
+      "id": "devops-037",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Docker e Docker Compose",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao revisar os Dockerfiles dos sistemas do Tribunal, um técnico avaliou o uso de algumas instruções. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma revisão de segurança e de eficiência das imagens de container usadas pelo Tribunal, foram analisadas instruções do Dockerfile. Considere as afirmativas abaixo.",
+        "A respeito de instruções do Dockerfile e de boas práticas na construção de imagens, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A instrução EXPOSE publica a porta indicada no host, tornando a aplicação acessível de fora sem necessidade de opções adicionais no docker run.",
+          "verdadeira": false,
+          "explicacao": "Falsa. EXPOSE funciona como documentação entre quem constrói e quem executa a imagem. Para publicar a porta, usa-se -p (ou -P, que publica todas as portas expostas) no docker run, ou ports no Compose."
+        },
+        {
+          "texto": "Em um build multi-stage, é possível compilar a aplicação em um estágio com o kit de desenvolvimento e copiar apenas o resultado para um estágio final mais enxuto, com COPY --from.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Com vários FROM, cada estágio parte de uma base; COPY --from copia só os artefatos, deixando compiladores e dependências de build fora da imagem final."
+        },
+        {
+          "texto": "A instrução USER permite que o processo do container seja executado com um usuário sem privilégios de root, prática recomendada quando o serviço não precisa deles.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. As boas práticas do Docker recomendam criar um usuário e usar USER para rodar sem root sempre que o serviço não precisar de privilégios."
+        },
+        {
+          "texto": "ADD e COPY são equivalentes em todos os aspectos, e a escolha entre elas é apenas uma questão de estilo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. COPY copia arquivos do contexto de build ou de outro estágio. ADD também busca arquivos em URLs HTTPS e repositórios Git e extrai automaticamente arquivos tar locais."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: EXPOSE apenas documenta a porta, e publicá-la exige -p ou -P no docker run. Também omite a III, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV são falsas. EXPOSE não publica a porta, e ADD tem recursos que o COPY não tem, como baixar de URLs remotas e extrair arquivos tar locais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II descreve o build multi-stage: vários FROM no mesmo Dockerfile e COPY --from para levar ao estágio final só o necessário, o que reduz o tamanho e a superfície de ataque da imagem. A III descreve o uso de USER para não rodar como root. A I é falsa porque EXPOSE apenas documenta a porta, e a IV, porque ADD também baixa de URLs remotas e extrai arquivos tar locais.",
+          "versaoInvertidaFalsa": "Em um build multi-stage, cada estágio gera uma imagem final separada, e não é possível copiar arquivos de um estágio para outro, o que obriga a manter as ferramentas de compilação na imagem final."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é verdadeira, mas a IV é falsa: ADD e COPY não são equivalentes, e a documentação recomenda COPY para copiar arquivos do contexto ou de outro estágio. Faltou também a II, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I e a IV, ambas falsas, e omite a II, que é verdadeira: o build multi-stage permite copiar apenas os artefatos necessários para a imagem final."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que EXPOSE publica a porta e que ADD e COPY são equivalentes. EXPOSE só documenta, e ADD tem recursos extras, como URLs remotas e extração de tar.",
+      "resumoFlashcard": {
+        "pergunta": "O que fazem EXPOSE, USER e o build multi-stage em um Dockerfile?",
+        "resposta": "EXPOSE documenta a porta em que o container escuta, mas não a publica: isso exige -p ou -P no docker run. USER define o usuário do processo, permitindo rodar sem root. O build multi-stage usa vários FROM e copia com COPY --from só os artefatos necessários para a imagem final."
+      },
+      "conceitosChave": ["Docker: instruções do Dockerfile", "Docker: build multi-stage"],
+      "fundamentacao": "Dockerfile reference (EXPOSE, USER, ADD e COPY); documentação do Docker, 'Multi-stage builds' e 'Building best practices' (seções 'ADD or COPY', 'EXPOSE' e 'USER')."
+    },
+    {
+      "id": "devops-038",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Kubernetes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Em um cluster Kubernetes, o …… expõe a API por meio da qual usuários e demais componentes interagem com o cluster; o …… é o armazenamento chave-valor consistente e de alta disponibilidade que guarda os dados do cluster; o …… escolhe o nó em que cada Pod ainda não alocado será executado; e o ……, presente em cada nó, garante que os containers dos Pods atribuídos ao nó estejam em execução. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao explicar a arquitetura do Kubernetes a novos integrantes da equipe de TI do Tribunal, um técnico resumiu: o …… é a porta de entrada das operações, pois recebe as requisições à API do cluster; o …… mantém, de forma consistente, os dados de todos os objetos; o …… decide em qual nó cada Pod recém-criado será executado; e o …… é o agente de cada nó que inicia e acompanha os containers dos Pods. Preenchem, correta e respectivamente, as lacunas:",
+        "Na documentação de arquitetura do cluster que hospedará os sistemas do Tribunal, registrou-se que: o …… atende às chamadas da API do Kubernetes; o …… armazena o estado de todos os objetos do cluster; o …… associa a um nó cada Pod que ainda não tem nó definido; e o …… roda em todos os nós e mantém em execução os containers dos Pods ali alocados. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "kube-apiserver − etcd − kube-controller-manager − kube-proxy",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O kube-controller-manager executa os controladores que levam o estado real ao desejado, como réplicas e endpoints, mas não escolhe o nó de cada Pod, tarefa do kube-scheduler. O kube-proxy mantém regras de rede para os Services e não gerencia containers; quem faz isso é o kubelet."
+        },
+        {
+          "id": "opt-2",
+          "texto": "kubelet − etcd − kube-scheduler − kube-apiserver",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o primeiro e o último componentes. O kubelet é o agente de cada nó que mantém os containers dos Pods em execução; quem expõe a API do Kubernetes é o kube-apiserver, no plano de controle."
+        },
+        {
+          "id": "opt-3",
+          "texto": "kube-apiserver − CoreDNS − kube-scheduler − kubelet",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CoreDNS é um complemento (addon) que fornece DNS ao cluster, resolvendo nomes de Services e de Pods. Os dados do cluster ficam no etcd."
+        },
+        {
+          "id": "opt-4",
+          "texto": "kube-controller-manager − etcd − kube-scheduler − kube-proxy",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O kube-controller-manager não expõe a API, papel do kube-apiserver, e o kube-proxy cuida das regras de rede dos Services, e não da execução dos containers, papel do kubelet."
+        },
+        {
+          "id": "opt-5",
+          "texto": "kube-apiserver − etcd − kube-scheduler − kubelet",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No plano de controle, o kube-apiserver expõe a API HTTP do Kubernetes, o etcd guarda de forma consistente todos os dados da API e o kube-scheduler atribui a um nó cada Pod ainda não alocado. Em cada nó, o kubelet garante que os containers dos Pods estejam rodando. Completam o quadro o kube-controller-manager, o cloud-controller-manager (opcional), o kube-proxy (hoje também apontado como opcional) e o runtime de containers.",
+          "versaoInvertidaFalsa": "kube-apiserver − etcd − kube-controller-manager − kubelet"
+        }
+      ],
+      "pegadinhaFCC": "A banca troca componentes vizinhos: scheduler × controller-manager, kubelet × kube-proxy e etcd × DNS do cluster. Quem escolhe o nó é o scheduler, e quem mantém os containers rodando no nó é o kubelet.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os papéis do kube-apiserver, do etcd, do kube-scheduler e do kubelet?",
+        "resposta": "O kube-apiserver expõe a API do Kubernetes; o etcd é o armazenamento chave-valor consistente com os dados do cluster; o kube-scheduler escolhe o nó de cada Pod ainda não alocado; e o kubelet, em cada nó, garante que os containers dos Pods estejam em execução."
+      },
+      "conceitosChave": ["Kubernetes: componentes do cluster"],
+      "fundamentacao": "Documentação do Kubernetes, Concepts > Overview > Kubernetes Components e Concepts > Cluster Architecture."
+    },
+    {
+      "id": "devops-039",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "Ambientes de desenvolvimento, homologação e produção",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para reproduzir um defeito do sistema de gestão de pessoal, um desenvolvedor do Tribunal propõe copiar integralmente a base de dados de produção, com nomes, CPFs, endereços e dados funcionais de servidores, para o ambiente de homologação, ao qual têm acesso equipes internas e terceirizadas. Considerando a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) e as boas práticas de gestão de ambientes, a conduta mais adequada é",
+      "variantesEnunciado": [
+        "Um analista sugere restaurar no ambiente de homologação do sistema de protocolo um backup completo de produção, que contém nomes, CPFs e endereços de jurisdicionados, para investigar uma falha. O ambiente é acessado por desenvolvedores internos e de empresa contratada. Considerando a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) e as boas práticas de gestão de ambientes, a conduta mais adequada é",
+        "Durante a correção de um erro no módulo de concessão de benefícios, a equipe cogita usar em homologação uma cópia fiel da base de produção, com dados pessoais completos de servidores e dependentes, acessível a profissionais internos e terceirizados. Considerando a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) e as boas práticas de gestão de ambientes, a conduta mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "autorizar a cópia integral, pois a LGPD não se aplica a ambientes internos de teste, uma vez que os dados não são divulgados ao público externo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD se aplica a qualquer operação de tratamento, e a lei inclui no conceito a reprodução, o armazenamento, o acesso e a transferência de dados (art. 5º, X), também em ambientes internos. O acesso de equipes terceirizadas reforça a necessidade de controle."
+        },
+        {
+          "id": "opt-2",
+          "texto": "usar em homologação dados sintéticos ou dados de produção anonimizados ou mascarados, limitados ao necessário para reproduzir o defeito, com controle de acesso ao ambiente, em atenção aos princípios da necessidade e da segurança da LGPD.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Copiar todos os dados pessoais de produção para um ambiente com mais acessos amplia o risco sem necessidade. A LGPD exige limitar o tratamento ao mínimo necessário (art. 6º, III), adotar medidas de segurança (art. 6º, VII, e art. 46) e reconhece a anonimização como meio de retirar o dado do alcance da lei, salvo se reversível (art. 5º, XI, e art. 12). Dados sintéticos ou mascarados, limitados ao necessário e com acesso controlado, permitem reproduzir o defeito com risco muito menor.",
+          "versaoInvertidaFalsa": "copiar integralmente para homologação os dados pessoais de produção, sem anonimização nem mascaramento, pois a LGPD não se aplica a ambientes internos de teste e ali dispensa os princípios da necessidade e da segurança."
+        },
+        {
+          "id": "opt-3",
+          "texto": "autorizar a cópia, desde que o ambiente de homologação fique na mesma rede da produção, o que estende a ele automaticamente os mesmos controles de segurança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Estar na mesma rede não transfere controles; homologação costuma ter mais usuários e menos restrições que produção. O que reduz o risco é minimizar e anonimizar os dados e controlar o acesso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "copiar a base com criptografia apenas durante a transferência do backup, pois, uma vez restaurada em homologação, a proteção dos dados deixa de ser exigida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Criptografar a transferência protege só o trânsito. Depois de restaurados, os dados continuam pessoais e sujeitos à lei, e a proteção é exigida em todo o ciclo do tratamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "proibir qualquer teste com dados em homologação, já que a LGPD veda o tratamento de dados pessoais por órgãos públicos fora da execução de políticas públicas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida. A LGPD não proíbe testes com dados; exige base legal, finalidade, necessidade e segurança. Dados sintéticos ou anonimizados atendem ao propósito sem expor os titulares."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que o ambiente interno está fora da LGPD ou que basta criptografar a transferência. Copiar e armazenar são tratamento; a saída é minimizar e anonimizar ou mascarar os dados, com acesso controlado.",
+      "resumoFlashcard": {
+        "pergunta": "Que dados usar em ambientes de homologação, segundo a LGPD e as boas práticas?",
+        "resposta": "Preferencialmente dados sintéticos ou dados de produção anonimizados ou mascarados, limitados ao necessário, com controle de acesso. Copiar dados pessoais reais amplia o risco e contraria os princípios da necessidade e da segurança (art. 6º, III e VII, da LGPD)."
+      },
+      "conceitosChave": ["Ambientes: dados de teste e LGPD", "LGPD: anonimização"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 5º, X e XI, art. 6º, III e VII, art. 12 e art. 46."
+    },
+    {
+      "id": "devops-040",
+      "materiaSlug": "devops-engenharia-entrega",
+      "subtopico": "GitHub Actions, GitLab CI/CD e Jenkins",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No Jenkins, um pipeline pode ser definido em um arquivo Jenkinsfile, versionado com o código do projeto. A respeito das sintaxes declarativa e scripted desse arquivo, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal migrou os jobs do Jenkins para pipelines definidos em Jenkinsfile, armazenados nos repositórios dos sistemas. Sobre as sintaxes declarativa e scripted desse arquivo, é correto afirmar que",
+        "A respeito das sintaxes declarativa e scripted do Jenkinsfile, usadas para definir pipelines como código no Jenkins, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a sintaxe scripted exige o bloco pipeline { } no nível mais alto, com a seção agent obrigatória, enquanto a declarativa usa blocos node { } e admite código Groovy livre em qualquer ponto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa troca as sintaxes: pipeline { } com agent obrigatório no nível mais alto é a declarativa, e node { } com Groovy livre caracteriza a scripted."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Jenkinsfile só pode ser escrito na sintaxe declarativa, já que a scripted foi descontinuada e não é mais aceita pelas versões atuais do plugin Pipeline.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas sintaxes continuam suportadas, e a documentação descreve ambas e compara suas vantagens. A declarativa é mais estruturada, e a scripted, mais flexível."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a seção post da sintaxe declarativa só é executada quando o pipeline termina com sucesso e, por isso, não serve para notificar falhas ou para limpar o workspace.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A seção post tem condições como always, success, failure, unstable, changed e cleanup. A condição always roda qualquer que seja o resultado e é usada justamente para limpeza e notificações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "na declarativa, o nível mais alto é o bloco pipeline { }, com a seção agent nele obrigatória, e a scripted é uma DSL de uso geral sobre Groovy, em geral organizada em blocos node { }.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Desde a versão 2.5 do plugin Pipeline, há duas sintaxes. A declarativa tem estrutura fixa: o nível mais alto deve ser pipeline { }, com agent definido nesse nível (e opcionalmente nos estágios), stages, stage e steps, além de seções como post. A scripted é uma DSL de uso geral construída com Groovy, executada de cima para baixo, com controle de fluxo em Groovy, tipicamente dentro de node { }.",
+          "versaoInvertidaFalsa": "na scripted, o nível mais alto é o bloco pipeline { }, com a seção agent nele obrigatória, e a declarativa é uma DSL de uso geral sobre Groovy, em geral organizada em blocos node { }."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as duas sintaxes diferem apenas na extensão do arquivo, Jenkinsfile.groovy para a scripted e Jenkinsfile.yml para a declarativa, que é escrita em YAML.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas sintaxes ficam no mesmo arquivo Jenkinsfile e são baseadas em Groovy; a declarativa não é YAML. O Jenkins não distingue a sintaxe pela extensão do arquivo."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as características das sintaxes e restringe a seção post ao sucesso. pipeline { } com agent é a declarativa; node { } com Groovy livre é a scripted; post com always roda sempre.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre as sintaxes declarativa e scripted do Jenkinsfile?",
+        "resposta": "A declarativa tem estrutura fixa: pipeline { } no nível mais alto, agent obrigatório nesse nível, stages, steps e seções como post. A scripted é uma DSL de uso geral em Groovy, executada sequencialmente e organizada em node { }, com mais flexibilidade e menos estrutura."
+      },
+      "conceitosChave": ["Jenkins: pipeline declarativo × scripted"],
+      "fundamentacao": "Documentação do Jenkins, 'Pipeline Syntax' (seções Declarative Pipeline, agent, post e Scripted Pipeline) e 'Pipeline' (Jenkinsfile e Pipeline-as-code)."
+    }
+  ]
+}
