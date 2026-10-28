@@ -53,7 +53,10 @@
         "pergunta": "O que conta na janela de contexto de um LLM?",
         "resposta": "Tudo o que o modelo pode referenciar ao gerar a resposta: prompt de sistema, mensagens, resultados e definições de ferramentas e a própria saída. É medida em tokens, é distinta do corpus de treinamento e, quando muito cheia, degrada a recordação (context rot)."
       },
-      "conceitosChave": ["LLM: janela de contexto", "Context rot"],
+      "conceitosChave": [
+        "LLM: janela de contexto",
+        "Context rot"
+      ],
       "fundamentacao": "Anthropic, documentação “Context windows” (platform.claude.com/docs/en/build-with-claude/context-windows); Glossário Anthropic, verbetes “Context window” e “Tokens”; Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025)."
     },
     {
@@ -106,7 +109,10 @@
         "pergunta": "O que a temperatura controla em um LLM e o que ela não garante?",
         "resposta": "Controla a aleatoriedade da amostragem dos próximos tokens: baixa favorece as continuações mais prováveis, alta aumenta a diversidade. Nem com temperatura 0 há determinismo total entre chamadas, e uma saída estável não é necessariamente correta, por isso a validação continua necessária."
       },
-      "conceitosChave": ["LLM: temperatura", "Validação determinística"],
+      "conceitosChave": [
+        "LLM: temperatura",
+        "Validação determinística"
+      ],
       "fundamentacao": "Glossário Anthropic, verbete “Temperature” (platform.claude.com/docs/en/about-claude/glossary): “Even with temperature set to 0, the results will not be fully deterministic”."
     },
     {
@@ -159,7 +165,11 @@
         "pergunta": "Qual é a inovação central do Transformer e o que são embeddings?",
         "resposta": "O Transformer (Vaswani et al., 2017) usa apenas mecanismos de atenção (autoatenção multi-cabeça), sem recorrência nem convoluções, o que facilita a paralelização. Embeddings são vetores numéricos que representam textos de modo que significados parecidos fiquem próximos no espaço vetorial."
       },
-      "conceitosChave": ["Transformer: autoatenção", "Embeddings", "LLM: tokens"],
+      "conceitosChave": [
+        "Transformer: autoatenção",
+        "Embeddings",
+        "LLM: tokens"
+      ],
       "fundamentacao": "Vaswani et al., “Attention Is All You Need” (NeurIPS 2017, arXiv 1706.03762), resumo; Anthropic, documentação “Embeddings” (platform.claude.com/docs/en/build-with-claude/embeddings)."
     },
     {
@@ -176,9 +186,19 @@
       ],
       "assertivas": [
         {
+          "texto": "Configurar a temperatura em 0 elimina as alucinações, pois o modelo passa a responder somente com informações verificadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A temperatura só controla a aleatoriedade da amostragem. Uma continuação muito provável pode ser falsa, e nem com temperatura 0 a saída é totalmente determinística."
+        },
+        {
           "texto": "Como o modelo é pré-treinado para prever o próximo token, a fluência e a segurança aparente de uma resposta não indicam, por si, que ela seja factualmente correta.",
           "verdadeira": true,
           "explicacao": "Verdadeira. LLMs autorregressivos geram a continuação estatisticamente plausível. A OWASP (LLM09:2025) descreve a alucinação como conteúdo que parece preciso, mas é fabricado. Tom confiante não é evidência de acerto."
+        },
+        {
+          "texto": "Quanto mais tokens forem colocados na janela de contexto, maior será a capacidade do modelo de recordar com precisão cada informação fornecida.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A documentação da Anthropic descreve o fenômeno oposto, o context rot: com o crescimento da contagem de tokens, a precisão e a recordação se degradam."
         },
         {
           "texto": "Por causa da data de corte do treinamento, o modelo pode sugerir funções obsoletas ou inexistentes de uma biblioteca lançada ou alterada depois desse marco.",
@@ -186,52 +206,42 @@
           "explicacao": "Verdadeira. O modelo desconhece mudanças posteriores ao seu treinamento e tende a reproduzir APIs antigas ou a inventar chamadas plausíveis. Fornecer no contexto a documentação da versão em uso reduz o problema."
         },
         {
-          "texto": "Configurar a temperatura em 0 elimina as alucinações, pois o modelo passa a responder somente com informações verificadas.",
-          "verdadeira": false,
-          "explicacao": "Falsa. A temperatura só controla a aleatoriedade da amostragem. Uma continuação muito provável pode ser falsa, e nem com temperatura 0 a saída é totalmente determinística."
-        },
-        {
           "texto": "Incluir no contexto a documentação oficial e trechos relevantes do código reduz o risco de respostas sem fundamento, mas não dispensa testes e revisão.",
           "verdadeira": true,
           "explicacao": "Verdadeira. A ancoragem (grounding) por RAG ou leitura de arquivos melhora a precisão. O glossário da Anthropic e a OWASP indicam que ela não elimina erros, e por isso a validação do resultado continua necessária."
-        },
-        {
-          "texto": "Quanto mais tokens forem colocados na janela de contexto, maior será a capacidade do modelo de recordar com precisão cada informação fornecida.",
-          "verdadeira": false,
-          "explicacao": "Falsa. A documentação da Anthropic descreve o fenômeno oposto, o context rot: com o crescimento da contagem de tokens, a precisão e a recordação se degradam."
         }
       ],
       "comandoFinal": "Está correto o que se afirma em",
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "I, II, III e IV, apenas.",
+          "texto": "I, II, IV e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa: temperatura 0 não elimina alucinações, pois só reduz a aleatoriedade da amostragem, e uma continuação muito provável ainda pode ser falsa. As afirmativas I, II e IV estão certas."
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que é falsa: temperatura 0 não elimina alucinações, pois só reduz a aleatoriedade da amostragem, e uma continuação muito provável ainda pode ser falsa. As afirmativas II, IV e V estão certas."
         },
         {
           "id": "opt-2",
-          "texto": "II e V, apenas.",
+          "texto": "II e III, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa V é falsa: a documentação descreve o context rot, em que mais tokens degradam a recordação. A combinação também deixa de fora as afirmativas I e IV, que são verdadeiras."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: a documentação descreve o context rot, em que mais tokens degradam a recordação. A combinação também deixa de fora a IV e a V, que são verdadeiras."
         },
         {
           "id": "opt-3",
           "texto": "I, III e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Combina a afirmativa I, verdadeira, com as afirmativas III e V, ambas falsas: temperatura 0 não elimina alucinações e excesso de contexto piora a recordação."
+          "explicacaoDetalhada": "INCORRETA. Combina a afirmativa V, verdadeira, com as afirmativas I e III, ambas falsas: temperatura 0 não elimina alucinações e excesso de contexto piora a recordação."
         },
         {
           "id": "opt-4",
-          "texto": "I e IV, apenas.",
+          "texto": "II e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. As afirmativas I e IV são verdadeiras, mas a II também é: a data de corte faz o modelo desconhecer APIs posteriores ao treinamento e sugerir funções obsoletas ou inexistentes. A resposta fica incompleta."
+          "explicacaoDetalhada": "INCORRETA. As afirmativas II e V são verdadeiras, mas a IV também é: a data de corte faz o modelo desconhecer APIs posteriores ao treinamento e sugerir funções obsoletas ou inexistentes. A resposta fica incompleta."
         },
         {
           "id": "opt-5",
-          "texto": "I, II e IV, apenas.",
+          "texto": "II, IV e V, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (fluência não prova factualidade), a II (data de corte leva a APIs obsoletas ou inventadas) e a IV (ancoragem reduz, mas não elimina, o risco). São falsas a III (temperatura 0 não elimina alucinação) e a V (o context rot mostra que excesso de tokens degrada a recordação).",
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a II (fluência não prova factualidade), a IV (data de corte leva a APIs obsoletas ou inventadas) e a V (ancoragem reduz, mas não elimina, o risco). São falsas a I (temperatura 0 não elimina alucinação) e a III (o context rot mostra que excesso de tokens degrada a recordação).",
           "versaoInvertidaFalsa": "Incluir no contexto a documentação oficial e o código relevante elimina as alucinações do modelo, tornando dispensáveis os testes e a revisão do código gerado."
         }
       ],
@@ -240,7 +250,11 @@
         "pergunta": "Quais limites dos LLMs exigem validação do código que eles geram?",
         "resposta": "Eles preveem o próximo token (fluência não é factualidade), têm data de corte do conhecimento (APIs obsoletas ou inventadas) e perdem precisão com contexto excessivo (context rot). Ancoragem reduz o risco, e testes e revisão continuam obrigatórios."
       },
-      "conceitosChave": ["LLM: alucinação", "LLM: temperatura", "Context rot"],
+      "conceitosChave": [
+        "LLM: alucinação",
+        "LLM: temperatura",
+        "Context rot"
+      ],
       "fundamentacao": "OWASP Top 10 for LLM Applications 2025, LLM09:2025 Misinformation; Glossário Anthropic, verbetes “Pretraining”, “Temperature” e “RAG”; Anthropic, “Context windows” (context rot)."
     },
     {
@@ -293,7 +307,9 @@
         "pergunta": "O que caracteriza a programação baseada em intenção?",
         "resposta": "Declarar o resultado desejado, as restrições e critérios de aceite verificáveis, deixando ao sistema (LLM/agente) a escolha do procedimento. O desenvolvedor continua responsável por validar o resultado com testes e revisão."
       },
-      "conceitosChave": ["Programação baseada em intenção"],
+      "conceitosChave": [
+        "Programação baseada em intenção"
+      ],
       "fundamentacao": "GitHub Spec Kit, documento “spec-driven.md” (“intent-driven development”; cenários de aceite viram testes); arXiv 2603.17150, “Intent Formalization” (2026); Claude Code, Best practices (“say what fixed looks like”)."
     },
     {
@@ -346,7 +362,10 @@
         "pergunta": "Quais elementos tornam uma intenção bem especificada para um agente de codificação?",
         "resposta": "Objetivo concreto (o que deve mudar), restrições (o que não pode mudar, como dependências e assinaturas públicas) e critério de aceite verificável (testes que devem passar). Assim o agente sabe o escopo e consegue comprovar a conclusão."
       },
-      "conceitosChave": ["Programação baseada em intenção", "Critérios de aceite verificáveis"],
+      "conceitosChave": [
+        "Programação baseada em intenção",
+        "Critérios de aceite verificáveis"
+      ],
       "fundamentacao": "Claude Code, Best practices (“Write a specific prompt”; “Give Claude a check to run”), code.claude.com/docs/en/best-practices; GitHub Spec Kit, “spec-driven.md”."
     },
     {
@@ -399,7 +418,10 @@
         "pergunta": "Qual a diferença entre vibe coding e desenvolvimento orientado a especificação?",
         "resposta": "Vibe coding (Karpathy, 2025) é aceitar o código gerado sem ler os diffs, guiando-se pelo resultado aparente, o que só se justifica em protótipos descartáveis. No desenvolvimento orientado a especificação, a especificação é a fonte da verdade, os cenários de aceite viram testes e a validação é contínua."
       },
-      "conceitosChave": ["Vibe coding × spec-driven", "Programação baseada em intenção"],
+      "conceitosChave": [
+        "Vibe coding × spec-driven",
+        "Programação baseada em intenção"
+      ],
       "fundamentacao": "GitHub Spec Kit, “spec-driven.md” (inversão de poder; especificação como fonte da verdade); post de Andrej Karpathy no X (02/02/2025), conforme fontes secundárias; Claude Code, Best practices."
     },
     {
@@ -452,7 +474,9 @@
         "pergunta": "O que é few-shot (multishot) prompting e como bons exemplos devem ser?",
         "resposta": "É incluir no prompt alguns exemplos de entrada e saída para orientar formato, tom e estrutura da resposta. Os exemplos devem ser relevantes, diversos, para não induzir padrões indesejados, e bem delimitados, por exemplo com tags <example>."
       },
-      "conceitosChave": ["Prompt: few-shot"],
+      "conceitosChave": [
+        "Prompt: few-shot"
+      ],
       "fundamentacao": "Anthropic, “Prompting best practices”, seção “Use examples effectively” (platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices); Glossário Anthropic, verbetes “Fine-tuning” e “RAG”."
     },
     {
@@ -474,66 +498,69 @@
           "explicacao": "Verdadeira. A documentação da Anthropic recomenda definir um papel no prompt de sistema: até uma frase focaliza comportamento e tom."
         },
         {
-          "texto": "Envolver instruções, contexto, exemplos e dados de entrada em tags próprias, como <instructions> e <input>, reduz interpretações equivocadas em prompts complexos.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. Tags XML ajudam o modelo a separar sem ambiguidade instruções, contexto, exemplos e entradas variáveis, o que reduz interpretações equivocadas."
-        },
-        {
-          "texto": "Os exemplos de few-shot devem ser diversos e cobrir casos de borda, para que o modelo não reproduza padrões indesejados de um único exemplo.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. Exemplos devem ser relevantes, diversos e estruturados. A diversidade evita que o modelo copie particularidades não intencionais de um exemplo."
-        },
-        {
           "texto": "Em prompts com documentos longos, a pergunta deve vir antes dos documentos, pois o modelo dá menos peso ao que aparece no fim do contexto.",
           "verdadeira": false,
           "explicacao": "Falsa. A recomendação é a inversa: documentos longos no topo e a consulta no fim. A documentação relata melhora de até 30% na qualidade com a pergunta ao final."
         },
         {
+          "texto": "Envolver instruções, contexto, exemplos e dados de entrada em tags próprias, como <instructions> e <input>, reduz interpretações equivocadas em prompts complexos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Tags XML ajudam o modelo a separar sem ambiguidade instruções, contexto, exemplos e entradas variáveis, o que reduz interpretações equivocadas."
+        },
+        {
           "texto": "Pedir ao modelo que raciocine passo a passo antes de responder garante a correção do código gerado, o que dispensa testes.",
           "verdadeira": false,
           "explicacao": "Falsa. Raciocinar antes de responder pode melhorar tarefas complexas, mas não garante correção. O código continua precisando de testes e revisão."
+        },
+        {
+          "texto": "Os exemplos de few-shot devem ser diversos e cobrir casos de borda, para que o modelo não reproduza padrões indesejados de um único exemplo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Exemplos devem ser relevantes, diversos e estruturados. A diversidade evita que o modelo copie particularidades não intencionais de um exemplo."
         }
       ],
       "comandoFinal": "Está correto o que se afirma em",
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "I e IV, apenas.",
+          "texto": "I e II, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa I é verdadeira, mas a IV é falsa: a orientação oficial é colocar documentos longos no topo e a pergunta no fim. A combinação também omite II e III, que são corretas."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é verdadeira, mas a II é falsa: a orientação oficial é colocar documentos longos no topo e a pergunta no fim. A combinação também omite a III e a V, que são corretas."
         },
         {
           "id": "opt-2",
-          "texto": "II, III e V, apenas.",
+          "texto": "III, IV e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. As afirmativas II e III são verdadeiras, mas a V é falsa: pedir raciocínio passo a passo não garante correção nem dispensa testes. A combinação também omite a I, que é correta."
+          "explicacaoDetalhada": "INCORRETA. As afirmativas III e V são verdadeiras, mas a IV é falsa: pedir raciocínio passo a passo não garante correção nem dispensa testes. A combinação também omite a I, que é correta."
         },
         {
           "id": "opt-3",
-          "texto": "I, II e III, apenas.",
+          "texto": "I, III e V, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. Papel no prompt de sistema (I), delimitação com tags XML (II) e exemplos diversos (III) estão na documentação de boas práticas da Anthropic. A IV inverte a orientação para contexto longo (documentos no topo, pergunta no fim) e a V atribui à cadeia de raciocínio uma garantia que ela não oferece.",
+          "explicacaoDetalhada": "CORRETA. Papel no prompt de sistema (I), delimitação com tags XML (III) e exemplos diversos (V) estão na documentação de boas práticas da Anthropic. A II inverte a orientação para contexto longo (documentos no topo, pergunta no fim) e a IV atribui à cadeia de raciocínio uma garantia que ela não oferece.",
           "versaoInvertidaFalsa": "Misturar instruções, contexto, exemplos e dados de entrada em um único bloco, sem tags de separação, reduz interpretações equivocadas em prompts complexos."
         },
         {
           "id": "opt-4",
           "texto": "I, II, III, IV e V.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a IV inverte a recomendação para contextos longos e a V promete uma garantia inexistente: o raciocínio explícito ajuda, mas não substitui a verificação."
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a II inverte a recomendação para contextos longos e a IV promete uma garantia inexistente: o raciocínio explícito ajuda, mas não substitui a verificação."
         },
         {
           "id": "opt-5",
-          "texto": "III e IV, apenas.",
+          "texto": "II e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa III é verdadeira, mas a IV é falsa: em contexto longo, a orientação é colocar os documentos no topo e a pergunta no fim. Faltam ainda I e II, ambas verdadeiras."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa V é verdadeira, mas a II é falsa: em contexto longo, a orientação é colocar os documentos no topo e a pergunta no fim. Faltam ainda a I e a III, ambas verdadeiras."
         }
       ],
-      "pegadinhaFCC": "A afirmativa IV inverte a ordem recomendada para contexto longo (documentos no topo, pergunta no fim), e a V transforma uma técnica útil, a cadeia de raciocínio, em garantia de correção.",
+      "pegadinhaFCC": "A afirmativa II inverte a ordem recomendada para contexto longo (documentos no topo, pergunta no fim), e a IV transforma uma técnica útil, a cadeia de raciocínio, em garantia de correção.",
       "resumoFlashcard": {
         "pergunta": "Quais são boas práticas de engenharia de prompts para assistentes de codificação?",
         "resposta": "Definir papel no prompt de sistema, separar instruções, contexto, exemplos e entradas com tags XML, usar exemplos relevantes e diversos e, em contexto longo, pôr os documentos no topo e a pergunta no fim. Pedir raciocínio ajuda, mas não garante correção."
       },
-      "conceitosChave": ["Prompt: delimitadores XML", "Prompt: few-shot"],
+      "conceitosChave": [
+        "Prompt: delimitadores XML",
+        "Prompt: few-shot"
+      ],
       "fundamentacao": "Anthropic, “Prompting best practices”, seções “Give Claude a role”, “Structure prompts with XML tags”, “Use examples effectively” e “Long context prompting” (platform.claude.com)."
     },
     {
@@ -586,7 +613,10 @@
         "pergunta": "O que a engenharia de contexto recomenda quando a sessão de um agente fica sobrecarregada?",
         "resposta": "Tratar o contexto como recurso finito: curar o menor conjunto de tokens de alto sinal, recuperar informação just-in-time por identificadores (caminhos, consultas), compactar o histórico, registrar notas persistentes e isolar tarefas em subagentes."
       },
-      "conceitosChave": ["Engenharia de contexto", "Context rot"],
+      "conceitosChave": [
+        "Engenharia de contexto",
+        "Context rot"
+      ],
       "fundamentacao": "Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025); Anthropic, “Context windows” (context rot)."
     }
   ]

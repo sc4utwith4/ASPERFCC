@@ -20,6 +20,21 @@ export function useResumos(): Map<MateriaSlug, ResumoMateriaProgresso> | undefin
   }, []);
 }
 
+/** Tamanho do 1º ciclo da matéria: uma bateria de 50, ou mais se lotes extras entraram no banco. */
+export function tamanhoCiclo1(r: ResumoMateriaProgresso | undefined): number {
+  return Math.max(PROVA.questoesPorBateria, r?.totalQuestoes ?? 0);
+}
+
+/** Soma dos 1ºs ciclos das 14 matérias (700 com o banco padrão). */
+export function totalCiclo1(resumos: Map<MateriaSlug, ResumoMateriaProgresso> | undefined): number {
+  return MATERIAS.reduce((s, m) => s + tamanhoCiclo1(resumos?.get(m.slug)), 0);
+}
+
+/** Questões já respondidas no 1º ciclo, somadas nas 14 matérias. */
+export function respondidasCiclo1(resumos: Map<MateriaSlug, ResumoMateriaProgresso> | undefined): number {
+  return [...(resumos?.values() ?? [])].reduce((s, r) => s + Math.min(tamanhoCiclo1(r), r.respondidasCiclo1), 0);
+}
+
 export function contagemDoResumo(r: ResumoMateriaProgresso | undefined): Contagem {
   return contar([...(r?.ultimaPorQuestao.values() ?? [])]);
 }

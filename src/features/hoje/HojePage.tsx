@@ -1,7 +1,7 @@
 import { useNavigate, Link } from "react-router";
 import { useLiveQuery } from "dexie-react-hooks";
 import { ArrowRight, CalendarCheck, GalleryVerticalEnd, Play } from "lucide-react";
-import { getMateria, MATERIAS, PROVA, type MateriaSlug } from "@/data/edital";
+import { getMateria, MATERIAS, type MateriaSlug } from "@/data/edital";
 import { db } from "@/db/db";
 import { flashcardsVencidos, pacotesVencidos } from "@/db/servicos";
 import { diaDaSemana, diferencaDias, formatarDia, formatarDiaCurto, hoje } from "@/engine/datas";
@@ -10,7 +10,7 @@ import { diasDeAtraso, etapaAtual, itensParaRevisar } from "@/engine/srs";
 import { formatarNumero, projetarProva, valorMarginal } from "@/engine/pontuacao";
 import { useUI } from "@/stores/ui";
 import { BarraSegmentada, Botao, Metrica, Painel, Selo, TituloPagina, Vazio } from "@/components/ui";
-import { contagemDoResumo, taxasLiquidas, useDataProva, usePremissas, useResumos } from "../dados";
+import { contagemDoResumo, respondidasCiclo1, tamanhoCiclo1, taxasLiquidas, totalCiclo1, useDataProva, usePremissas, useResumos } from "../dados";
 
 const ROTULO_STATUS = { "em-dia": "Ritmo viável", apertado: "Ritmo apertado", inviavel: "Ritmo inviável", concluido: "1º ciclo concluído" } as const;
 
@@ -27,8 +27,8 @@ export function HojePage() {
   const baterias = useLiveQuery(async () => (await db.baterias.toArray()).filter((b) => !b.concluidaEm && (b.tipo === "ciclo" || b.tipo === "variantes")), []);
   const feitasHoje = useLiveQuery(async () => new Set((await db.tentativas.where("dia").equals(dia).toArray()).map((t) => t.questaoId)).size, [dia]) ?? 0;
 
-  const respondidasCiclo1 = [...(resumos?.values() ?? [])].reduce((s, r) => s + Math.min(PROVA.questoesPorBateria, r.respondidasCiclo1), 0);
-  const restantes = MATERIAS.length * PROVA.questoesPorBateria - respondidasCiclo1;
+  const totalDoCiclo = totalCiclo1(resumos);
+  const restantes = totalDoCiclo - respondidasCiclo1(resumos);
   const ritmo = calcularRitmo(dia, restantes, dataProva, meta);
   const diasProva = diferencaDias(dia, dataProva);
   const taxas = taxasLiquidas(resumos);
@@ -36,7 +36,7 @@ export function HojePage() {
   const marginal = valorMarginal(premissas);
 
   const sugestoes = MATERIAS.map((m) => ({ m, r: resumos?.get(m.slug) }))
-    .filter(({ r }) => (r?.respondidasCiclo1 ?? 0) < PROVA.questoesPorBateria && (r?.totalQuestoes ?? 0) > 0)
+    .filter(({ r }) => (r?.respondidasCiclo1 ?? 0) < tamanhoCiclo1(r) && (r?.totalQuestoes ?? 0) > 0)
     .sort((a, b) => b.m.questoesNaProva * b.m.peso - a.m.questoesNaProva * a.m.peso || (a.r?.respondidasCiclo1 ?? 0) - (b.r?.respondidasCiclo1 ?? 0))
     .slice(0, 3);
 
@@ -58,7 +58,7 @@ export function HojePage() {
       <div className="grid gap-4 lg:grid-cols-3">
         <Painel titulo="Ritmo até a prova" descricao="Para a etapa +30 da revisão caber antes de D-3." className="lg:col-span-2">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            <Metrica rotulo="Restam no 1º ciclo" valor={restantes} detalhe={`de ${MATERIAS.length * PROVA.questoesPorBateria}`} />
+            <Metrica rotulo="Restam no 1º ciclo" valor={restantes} detalhe={`de ${totalDoCiclo}`} />
             <Metrica rotulo="Questões por dia" valor={ritmo.questoesPorDia} detalhe={`até ${formatarDiaCurto(ritmo.limiteEscadaCompleta)}`} />
             <Metrica rotulo="Dias até o limite" valor={ritmo.diasAteLimite} detalhe="escada completa" />
             <div>
@@ -116,7 +116,7 @@ export function HojePage() {
                       <p className="text-[13px] text-ink">
                         {m.nome} <span className="text-ink-2">· {b.tipo === "ciclo" ? "1º ciclo" : `bateria de variantes ${b.ciclo}`}</span>
                       </p>
-                      <BarraSegmentada s={{ ...c, total: PROVA.questoesPorBateria }} className="mt-1.5 max-w-[360px]" />
+                      <BarraSegmentada s={{ ...c, total: tamanhoCiclo1(r) }} className="mt-1.5 max-w-[360px]" />
                     </div>
                     <Botao
                       variante="primario"
@@ -155,7 +155,7 @@ export function HojePage() {
                   <Link to={`/materias/${m.slug}`} onClick={() => definir({ materiaAtiva: m.slug })} className="quiet-transition block h-full rounded-lg border border-line bg-elevated p-3 hover:border-line-control">
                     <p className="text-[13px] font-medium text-ink">{m.nomeCurto}</p>
                     <p className="mt-0.5 text-[12px] text-ink-2">
-                      {m.questoesNaProva} questões × peso {m.peso} · <span className="tabular">{r?.respondidasCiclo1 ?? 0}/50</span> feitas
+                      {m.questoesNaProva} questões × peso {m.peso} · <span className="tabular">{r?.respondidasCiclo1 ?? 0}/{tamanhoCiclo1(r)}</span> feitas
                     </p>
                     <span className="mt-2 inline-flex items-center gap-1 text-[12px] text-accent-text">
                       Estudar <ArrowRight size={12} strokeWidth={1.8} />

@@ -52,7 +52,10 @@
         "pergunta": "Qual a diferença entre workflows e agentes e o que mantém o agente sob controle?",
         "resposta": "Workflows orquestram LLMs e ferramentas por caminhos de código predefinidos; agentes deixam o LLM dirigir dinamicamente o processo. O agente deve obter ground truth do ambiente a cada passo (resultados de ferramentas, execução de código) e ter condições de parada, como máximo de iterações."
       },
-      "conceitosChave": ["Workflows × agentes", "Ciclo agentivo"],
+      "conceitosChave": [
+        "Workflows × agentes",
+        "Ciclo agentivo"
+      ],
       "fundamentacao": "Anthropic Engineering, “Building effective agents” (19/12/2024), seções “What are agents?” e “Agents”."
     },
     {
@@ -69,6 +72,11 @@
       ],
       "assertivas": [
         {
+          "texto": "Depois que o plano de implementação é aprovado, a verificação dos resultados torna-se dispensável, pois eventuais erros já teriam sido previstos no planejamento.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O plano reduz retrabalho, mas não prova que a implementação funciona. A verificação (testes, build, linter) continua necessária, e o ciclo agentivo inclui a fase de verificar resultados."
+        },
+        {
           "texto": "O padrão ReAct intercala traços de raciocínio e ações, de modo que cada observação obtida do ambiente orienta o passo seguinte do agente.",
           "verdadeira": true,
           "explicacao": "Verdadeira. ReAct (Yao et al., ICLR 2023) combina raciocínio e ação de forma intercalada: o modelo pensa, age, observa o resultado e ajusta o próximo passo."
@@ -77,11 +85,6 @@
           "texto": "Na abordagem Reflexion, o agente registra reflexões verbais sobre o feedback recebido e as mantém em memória para melhorar as tentativas seguintes.",
           "verdadeira": true,
           "explicacao": "Verdadeira. Reflexion (Shinn et al., NeurIPS 2023) propõe agentes com “reforço verbal”: refletem sobre o feedback e guardam as reflexões em memória para as próximas tentativas."
-        },
-        {
-          "texto": "Depois que o plano de implementação é aprovado, a verificação dos resultados torna-se dispensável, pois eventuais erros já teriam sido previstos no planejamento.",
-          "verdadeira": false,
-          "explicacao": "Falsa. O plano reduz retrabalho, mas não prova que a implementação funciona. A verificação (testes, build, linter) continua necessária, e o ciclo agentivo inclui a fase de verificar resultados."
         },
         {
           "texto": "Na autocorreção, quando um teste falha, o agente deve ajustar o teste ao comportamento implementado, pois o código recém-escrito é a referência mais atualizada.",
@@ -98,34 +101,34 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "I, II, III e V, apenas.",
+          "texto": "II, III, IV e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa: plano aprovado não dispensa verificação, porque planejar não prova que a implementação funciona. As demais (I, II e V) estão certas."
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: ajustar o teste ao código mascara o defeito em vez de corrigi-lo. As demais (II, III e V) estão certas."
         },
         {
           "id": "opt-2",
-          "texto": "I, II e V, apenas.",
+          "texto": "II, III e V, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. ReAct intercala raciocínio e ação guiados pelas observações (I), Reflexion usa reflexões verbais guardadas em memória (II) e os checkpoints do Claude Code desfazem edições de arquivos, mas não efeitos remotos (V). A III é falsa porque o plano não substitui a verificação, e a IV também, porque adaptar o teste ao código mascara o defeito em vez de corrigi-lo.",
+          "explicacaoDetalhada": "CORRETA. ReAct intercala raciocínio e ação guiados pelas observações (II), Reflexion usa reflexões verbais guardadas em memória (III) e os checkpoints do Claude Code desfazem edições de arquivos, mas não efeitos remotos (V). A I é falsa porque o plano não substitui a verificação, e a IV também, porque adaptar o teste ao código mascara o defeito em vez de corrigi-lo.",
           "versaoInvertidaFalsa": "No Claude Code, os checkpoints revertem tanto as edições de arquivos quanto os efeitos em sistemas remotos, como alterações em bancos de dados, chamadas de APIs e implantações."
         },
         {
           "id": "opt-3",
-          "texto": "II, IV e V, apenas.",
+          "texto": "I, III e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A IV é falsa: alterar o teste para que passe é contornar a verificação, não corrigir o defeito. A combinação também omite a I, que é verdadeira."
+          "explicacaoDetalhada": "INCORRETA. A I é falsa: plano aprovado não dispensa verificação, porque planejar não prova que a implementação funciona. A combinação também omite a II, que é verdadeira."
         },
         {
           "id": "opt-4",
-          "texto": "I e III, apenas.",
+          "texto": "II e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III é falsa: o plano aprovado não dispensa testes, build e linter. Faltam a II e a V, também verdadeiras."
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: alterar o teste para que passe é contornar a verificação. Faltam a III e a V, também verdadeiras."
         },
         {
           "id": "opt-5",
-          "texto": "III, IV e V, apenas.",
+          "texto": "I, IV e V, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Reúne as duas falsas (III e IV), que vendem atalhos para a verificação, e só uma verdadeira (V). Ficam de fora a I e a II, ambas corretas."
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas falsas (I e IV), que vendem atalhos para a verificação, e só uma verdadeira (V). Ficam de fora a II e a III, ambas corretas."
         }
       ],
       "pegadinhaFCC": "As afirmativas falsas vendem atalhos: plano aprovado como substituto da verificação e teste ajustado ao código como “correção”. Atenção também ao limite dos checkpoints, que não desfazem efeitos remotos.",
@@ -133,7 +136,11 @@
         "pergunta": "O que são ReAct e Reflexion e qual o limite dos checkpoints do Claude Code?",
         "resposta": "ReAct intercala raciocínio e ações guiados pelas observações do ambiente. Reflexion faz o agente refletir verbalmente sobre o feedback e guardar as reflexões em memória para tentar de novo. Checkpoints desfazem edições de arquivos, mas não efeitos em sistemas remotos."
       },
-      "conceitosChave": ["ReAct", "Autocorreção (self-healing)", "Ciclo agentivo"],
+      "conceitosChave": [
+        "ReAct",
+        "Autocorreção (self-healing)",
+        "Ciclo agentivo"
+      ],
       "fundamentacao": "Yao et al., “ReAct” (ICLR 2023, arXiv 2210.03629), repositório oficial no GitHub; Shinn et al., “Reflexion” (NeurIPS 2023, arXiv 2303.11366); Claude Code, “How Claude Code works”, seção “Undo changes with checkpoints”; Anthropic, “Prompting best practices” (avoid focusing on passing tests)."
     },
     {
@@ -186,7 +193,10 @@
         "pergunta": "Qual é o principal cuidado com testes gerados por IA a partir do código existente?",
         "resposta": "O problema do oráculo: as asserções tendem a refletir o comportamento atual, inclusive defeitos. Servem para regressão, mas o resultado esperado deve ser validado contra os requisitos, e a eficácia da suíte é mais bem medida por mutação do que por cobertura."
       },
-      "conceitosChave": ["Testes gerados por IA: oráculo", "Mutation testing"],
+      "conceitosChave": [
+        "Testes gerados por IA: oráculo",
+        "Mutation testing"
+      ],
       "fundamentacao": "Konstantinou, Degiovanni e Papadakis, arXiv 2410.21136 (oráculos de LLMs e comportamento atual); GEM (SBC/CIbSE), lacuna entre cobertura e escore de mutação; Claude Code, “Common workflows”, seção “Work with tests”."
     },
     {
@@ -239,7 +249,10 @@
         "pergunta": "Como funciona o filtro de testes gerados por LLM do tipo TestGen-LLM e qual é seu limite?",
         "resposta": "Aceita só testes que compilam, passam de forma estável em execuções repetidas e aumentam a cobertura, todos critérios determinísticos. O filtro garante melhoria da suíte e sinal confiável de regressão, mas não que a asserção verifique o comportamento esperado."
       },
-      "conceitosChave": ["Testes gerados por IA: oráculo", "Validação determinística"],
+      "conceitosChave": [
+        "Testes gerados por IA: oráculo",
+        "Validação determinística"
+      ],
       "fundamentacao": "Alshahwan et al., “Automated Unit Test Improvement using Large Language Models at Meta” (FSE 2024 Industry, arXiv 2402.09171); Claude Blog, “Building agents with the Claude Agent SDK” (LLM as a judge)."
     },
     {
@@ -292,7 +305,10 @@
         "pergunta": "Como conduzir a depuração de um defeito com um agente de codificação?",
         "resposta": "Informar sintoma, passos de reprodução, stack trace e se a falha é intermitente. Pedir primeiro um teste que reproduza a falha, depois a correção, e em seguida rodar a suíte completa para checar regressões."
       },
-      "conceitosChave": ["Depuração assistida por IA", "Autocorreção (self-healing)"],
+      "conceitosChave": [
+        "Depuração assistida por IA",
+        "Autocorreção (self-healing)"
+      ],
       "fundamentacao": "Claude Code, “Common workflows”, seção “Fix bugs efficiently”; “Best practices”, seção “Write a specific prompt” (“write a failing test that reproduces it, then fix it”) (code.claude.com/docs/en)."
     },
     {
@@ -314,14 +330,14 @@
           "explicacao": "Verdadeira. A documentação do Claude Code destaca que o /code-review revisa o diff em subagente novo, que nunca viu a conversa e por isso “não é influenciado pelo raciocínio que produziu o código”."
         },
         {
-          "texto": "Comentários de documentação gerados por IA, como docstrings, devem ser conferidos com o comportamento real do código, pois o modelo pode descrever parâmetros ou efeitos inexistentes.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. Documentação gerada pode alucinar parâmetros, retornos ou efeitos colaterais. A própria documentação do Claude Code sugere verificar se os comentários seguem o padrão do projeto e revisá-los."
-        },
-        {
           "texto": "Quando se pede a um revisor automatizado que “encontre problemas”, todos os apontamentos devem ser corrigidos, pois o revisor só relata falhas reais de corretude.",
           "verdadeira": false,
           "explicacao": "Falsa. A documentação alerta que um revisor solicitado a encontrar problemas “sempre encontrará algo”. Corrigir tudo pode gerar abstrações e testes desnecessários, e por isso se recomenda focar na corretude e ignorar o estilo."
+        },
+        {
+          "texto": "Comentários de documentação gerados por IA, como docstrings, devem ser conferidos com o comportamento real do código, pois o modelo pode descrever parâmetros ou efeitos inexistentes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Documentação gerada pode alucinar parâmetros, retornos ou efeitos colaterais. A própria documentação do Claude Code sugere verificar se os comentários seguem o padrão do projeto e revisá-los."
         },
         {
           "texto": "A aprovação de um revisor automatizado pode substituir a aprovação humana exigida pelas regras de proteção da branch principal, desde que a revisão cubra todo o diff.",
@@ -335,31 +351,31 @@
           "id": "opt-1",
           "texto": "I, II e III, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A I e a II estão certas, mas a III é falsa: revisores automatizados também produzem apontamentos irrelevantes ou de estilo, e corrigir tudo indiscriminadamente gera complexidade desnecessária."
+          "explicacaoDetalhada": "INCORRETA. A I e a III estão certas, mas a II é falsa: revisores automatizados também produzem apontamentos irrelevantes ou de estilo, e corrigir tudo indiscriminadamente gera complexidade desnecessária."
         },
         {
           "id": "opt-2",
-          "texto": "II e IV, apenas.",
+          "texto": "III e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: a aprovação humana prevista na proteção da branch não deve ser substituída pela revisão de IA. Falta ainda a I."
+          "explicacaoDetalhada": "INCORRETA. A III é verdadeira, mas a IV é falsa: a aprovação humana prevista na proteção da branch não deve ser substituída pela revisão de IA. Falta ainda a I."
         },
         {
           "id": "opt-3",
-          "texto": "III e IV, apenas.",
+          "texto": "II e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a III, que trata todo apontamento do revisor como falha real, e a IV, que deixa a revisão de IA substituir a aprovação humana."
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a II, que trata todo apontamento do revisor como falha real, e a IV, que deixa a revisão de IA substituir a aprovação humana."
         },
         {
           "id": "opt-4",
           "texto": "I, II, III e IV.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A III e a IV são falsas. A revisão por IA complementa, mas não substitui, o julgamento humano nem a governança da branch protegida."
+          "explicacaoDetalhada": "INCORRETA. A II e a IV são falsas. A revisão por IA complementa, mas não substitui, o julgamento humano nem a governança da branch protegida."
         },
         {
           "id": "opt-5",
-          "texto": "I e II, apenas.",
+          "texto": "I e III, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. A I corresponde à orientação de revisar em contexto independente (subagente que não viu a conversa), e a II, ao cuidado com documentação gerada, que pode descrever o que o código não faz. A III ignora que revisores automatizados sempre encontram algo, inclusive questões irrelevantes, e a IV troca a palavra final humana e a proteção de branch por uma revisão automatizada.",
+          "explicacaoDetalhada": "CORRETA. A I corresponde à orientação de revisar em contexto independente (subagente que não viu a conversa), e a III, ao cuidado com documentação gerada, que pode descrever o que o código não faz. A II ignora que revisores automatizados sempre encontram algo, inclusive questões irrelevantes, e a IV troca a palavra final humana e a proteção de branch por uma revisão automatizada.",
           "versaoInvertidaFalsa": "Uma revisão executada na mesma conversa em que o código foi escrito, pelo próprio agente que o produziu, é a forma mais independente de revisão, pois o revisor conhece todo o raciocínio da implementação."
         }
       ],
@@ -368,7 +384,10 @@
         "pergunta": "Quais cuidados valem para revisão e documentação de código assistidas por IA?",
         "resposta": "Revisar em contexto independente (subagente que não viu a conversa), conferir a documentação gerada contra o comportamento real e filtrar os apontamentos com foco em corretude. A aprovação humana e a proteção de branch continuam com a palavra final."
       },
-      "conceitosChave": ["Revisão de código por IA", "Documentação gerada por IA"],
+      "conceitosChave": [
+        "Revisão de código por IA",
+        "Documentação gerada por IA"
+      ],
       "fundamentacao": "Claude Code, “Best practices”, seções “Give Claude a check to run” (/code-review em subagente novo), “Review against your spec” (“skip style”) e tabela de instruções determinísticas (“Who has the last word”); “Common workflows”, seção “Handle documentation”."
     },
     {
@@ -421,7 +440,9 @@
         "pergunta": "O que é RAG e o que ele não faz?",
         "resposta": "É recuperar, no momento da consulta, trechos relevantes de uma base externa e inseri-los no contexto, ancorando a resposta e permitindo citar fontes. Não altera os pesos do modelo e não elimina alucinações: a qualidade depende da base e da recuperação."
       },
-      "conceitosChave": ["RAG"],
+      "conceitosChave": [
+        "RAG"
+      ],
       "fundamentacao": "Glossário Anthropic, verbetes “RAG (retrieval augmented generation)” e “Fine-tuning” (platform.claude.com/docs/en/about-claude/glossary); OWASP LLM01:2025 (RAG não mitiga totalmente prompt injection)."
     },
     {
@@ -474,7 +495,11 @@
         "pergunta": "Quais são as etapas de um pipeline típico de RAG?",
         "resposta": "Dividir os documentos em chunks, gerar o embedding de cada chunk e armazená-lo em banco vetorial. Na consulta, buscar por similaridade semântica (opcionalmente combinada com BM25) e reordenar os candidatos com um reranker antes de enviá-los ao modelo."
       },
-      "conceitosChave": ["RAG: chunking", "RAG: reranking", "Embeddings"],
+      "conceitosChave": [
+        "RAG: chunking",
+        "RAG: reranking",
+        "Embeddings"
+      ],
       "fundamentacao": "Anthropic, “Introducing Contextual Retrieval” (19/09/2024) (anthropic.com/news/contextual-retrieval); Anthropic, documentação “Embeddings” (rerankers da Voyage AI)."
     },
     {
@@ -527,7 +552,10 @@
         "pergunta": "O que é Contextual Retrieval e que problema resolve?",
         "resposta": "É acrescentar a cada chunk um contexto explicativo (documento, entidade, período) antes de gerar o embedding e o índice BM25. Resolve a perda de contexto de trechos isolados e reduz falhas de recuperação, sobretudo quando combinada com reranking."
       },
-      "conceitosChave": ["Contextual Retrieval", "RAG: chunking"],
+      "conceitosChave": [
+        "Contextual Retrieval",
+        "RAG: chunking"
+      ],
       "fundamentacao": "Anthropic, “Introducing Contextual Retrieval” (19/09/2024), seções sobre o problema de contexto dos chunks, Contextual Embeddings, Contextual BM25 e reranking."
     },
     {
@@ -580,7 +608,10 @@
         "pergunta": "Quais as diferenças entre os índices HNSW e IVFFlat no pgvector?",
         "resposta": "HNSW: grafo multicamadas, melhor relação velocidade-recall, build mais lento, mais memória, pode ser criado sem dados. IVFFlat: divide vetores em listas, build mais rápido e menos memória, desempenho de consulta inferior, deve ser criado após a carga. Ambos são aproximados e trocam recall por velocidade."
       },
-      "conceitosChave": ["Bancos vetoriais: HNSW × IVFFlat", "Embeddings"],
+      "conceitosChave": [
+        "Bancos vetoriais: HNSW × IVFFlat",
+        "Embeddings"
+      ],
       "fundamentacao": "pgvector, README oficial (github.com/pgvector/pgvector), seções “Querying” (operadores <->, <#>, <=>, <+>), “Indexing”, “HNSW” e “IVFFlat”; Anthropic, documentação “Embeddings” (vetores normalizados)."
     }
   ]

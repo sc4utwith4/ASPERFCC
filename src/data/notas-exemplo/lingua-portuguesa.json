@@ -1,0 +1,48 @@
+{
+  "id": "nota-lp-01",
+  "materiaSlug": "lingua-portuguesa",
+  "titulo": "Crase sem decoreba: regência + artigo",
+  "subtopico": "Ortografia, acentuação e crase",
+  "pistas": [
+    {
+      "pergunta": "Quais são as duas condições para haver crase?",
+      "resposta": "Um termo que exija a preposição “a” e uma palavra seguinte que admita o artigo “a” (ou que comece por “a”, como aquele, aquela, aquilo e a qual)."
+    },
+    {
+      "pergunta": "Como funciona o teste do masculino?",
+      "resposta": "Troque a palavra feminina por uma masculina equivalente: se surgir “ao(s)”, há crase (“assisti ao debate” → “assisti à reunião”); se surgir só “a”, não há."
+    },
+    {
+      "pergunta": "Por que não há crase em “o laboratório recorre a técnicas”?",
+      "resposta": "Porque o “a” singular diante de palavra no plural é só preposição. Com artigo, a frase seria “recorre às técnicas”."
+    },
+    {
+      "pergunta": "Há crase antes de “qualquer” e de “Vossa Excelência”?",
+      "resposta": "Não: pronomes indefinidos e de tratamento não admitem artigo (“a qualquer tempo”, “encaminho a Vossa Excelência”). Exceções: senhora, senhorita e dona, que admitem artigo (“à senhora”)."
+    },
+    {
+      "pergunta": "Em que casos a crase é facultativa?",
+      "resposta": "Antes de possessivo feminino singular (“a/à sua chefe”), de nome próprio feminino de pessoa (“a/à Mariana”) e depois de “até” (“até a/à praça”)."
+    },
+    {
+      "pergunta": "Qual a regência de “assistir” no sentido de ver?",
+      "resposta": "Transitivo indireto, com a preposição “a”: “assistiram à apresentação”. No sentido de ajudar, prestar assistência, é transitivo direto (“o médico assistiu o paciente”)."
+    },
+    {
+      "pergunta": "Como se constrói o verbo “preferir” na norma-padrão?",
+      "resposta": "Preferir algo a algo, sem “mais” e sem “do que”: “prefiro o papel à tela”, “preferem o atendimento presencial ao remoto”."
+    },
+    {
+      "pergunta": "Por que “a norma à qual se subordinam” tem crase?",
+      "resposta": "Porque “subordinar-se” exige a preposição “a” e o relativo “a qual” contém artigo. O masculino confirma: “o decreto ao qual se subordinam”."
+    }
+  ],
+  "conteudoMarkdown": "## A ideia central\n\nCrase é a fusão de duas vogais “a”: a **preposição** exigida por um termo regente (verbo ou nome) e o **artigo definido feminino** que acompanha a palavra seguinte. O acento grave apenas marca essa fusão. Por isso, ==crase é sempre regência somada a artigo==: quem domina a regência dos verbos e nomes mais comuns resolve quase todas as questões sem decorar listas.\n\n> Só há crase se houver, ao mesmo tempo, preposição “a” exigida pelo termo anterior e artigo “a” admitido pela palavra seguinte.\n\nA fusão também ocorre com o “a” inicial de **aquele(s), aquela(s), aquilo** (“refiro-me àquele relatório”) e com o relativo **a qual / as quais** (“a legislação, à qual se subordinam”).\n\n## O teste em duas perguntas\n\n- O termo anterior exige a preposição “a”? Exemplos: ir a, chegar a, referir-se a, corresponder a, obedecer a, assistir a (ver), aspirar a (desejar), limitar-se a, favorável a, relativo a, necessário a.\n- A palavra seguinte admite o artigo “a”? Teste com outro verbo: “Venho **da** Bahia” (admite artigo: “vou à Bahia”); “Venho **de** Goiânia” (não admite: “vou a Goiânia”).\n\nSe a resposta for “sim” nas duas, há crase. Se for “não” em qualquer uma, não há.\n\n## Truques de verificação\n\n- **Troca pelo masculino**: “Assisti à reunião” → “Assisti ao debate” (crase confirmada). “Refiro-me a esta norma” → “Refiro-me a este decreto” (sem crase: o demonstrativo não admite artigo).\n- **Plural sem artigo**: se a palavra está no plural e o “a” está no singular, é só preposição: “recorre a técnicas”, “refere-se a normas”. Com artigo, “às normas”.\n- **Lugar com determinante**: “vou a Goiânia”, mas “vou à Goiânia de minha infância” (o adjunto faz surgir o artigo).\n\n## Casos obrigatórios\n\n- Locuções adverbiais, prepositivas e conjuntivas com núcleo feminino: às vezes, à noite, às pressas, à luz de, à custa de, à procura de, à base de, à espera de, à medida que, à proporção que.\n- Horas determinadas: “às 14h”, “à uma hora”; e o paralelismo “das 8h às 18h” (com artigo nos dois termos) ou “de 8h a 18h” (sem artigo nos dois).\n- Expressões com a ideia de “à moda de / à maneira de”, mesmo antes de palavra masculina: “bife à milanesa”, “versos à Camões”.\n- Relativo e demonstrativos regidos por “a”: “à qual”, “às quais”, “àquele”, “àquilo”.\n\n## Casos proibidos\n\n- Antes de verbo: “voltou a ser”, “a partir de”, “começou a chover”.\n- Antes de palavra masculina (fora da ideia de “à moda de”): “a lápis”, “a prazo”, “a pedido do gestor”.\n- Antes de artigo indefinido e de pronomes que não admitem artigo: “a um rapaz”, “a qualquer tempo”, “a todos”, “a ela”, “a esta”, “a Vossa Excelência”.\n- Entre palavras repetidas: “cara a cara”, “gota a gota”.\n- Antes de numeral em indicação de distância ou de tempo futuro, sem artigo: “está a sete minutos”, “fica a dois quilômetros”, “daqui a dois dias”.\n\n## Casos facultativos\n\n- Antes de pronome possessivo feminino singular: “Entreguei o relatório a/à sua chefe”.\n- Antes de nome próprio feminino de pessoa: “Enviei o ofício a/à Mariana”.\n- Depois de “até”: “Caminhou até a/à praça”.\n\n## A regência que sustenta a crase\n\n- **assistir** (ver, presenciar) rege “a”: “assistiram à apresentação”; no sentido de ajudar, é transitivo direto.\n- **aspirar** (desejar) rege “a”: “aspira à chefia”; no sentido de sorver, é transitivo direto.\n- **obedecer / desobedecer** regem “a”: “obedecer às normas”.\n- **preferir**: algo a algo, sem “mais” e sem “do que”: “prefiro o papel à tela”.\n- **referir-se, corresponder, subordinar-se, limitar-se** regem “a”: “corresponder à situação vigente”.\n- **visar** (objetivar): a tradição gramatical exige “a” (“visa ao aprimoramento”); gramáticos mais recentes admitem também a construção direta. Na dúvida, use a preposição.\n- Nomes: favorável a, relativo a, alheio a, acessível a, obediência a, necessário a (“necessário à identificação das partes”).\n\n## Pegadinhas que a FCC repete\n\n- **“à qual” × “a qualquer”**: o relativo contém artigo; o indefinido, não. Os dois podem aparecer na mesma frase.\n- **Pronomes de tratamento**: “encaminho a Vossa Excelência” (sem crase), mas “encaminho à senhora” (com crase).\n- **Tempo**: “daqui a dois dias” (futuro, preposição) × “há dois dias” (passado, verbo haver).\n- **Distância com numeral**: “o ônibus está a sete minutos” não leva acento, embora soe como “à”.\n- **Locução feminina sem artigo aparente**: “à luz de”, “à custa de” e “à medida que” levam acento sempre; a ausência dele é erro, mesmo que a frase pareça natural.\n\n> Roteiro de prova: identifique o termo regente, pergunte se ele pede “a”, teste o artigo pelo masculino ou pelo “venho da/de” e só então decida.",
+  "sintese": "Crase não se decora: é regência mais artigo. Primeiro verifico se o termo anterior pede a preposição “a”; depois, se a palavra seguinte aceita o artigo “a”. O teste do masculino confirma (“ao” → “à”). Antes de verbo, de palavra masculina, de plural sem artigo e de pronomes indefinidos e de tratamento, não há crase; em locuções femininas e horas determinadas, há sempre.",
+  "fontes": [
+    "Evanildo Bechara, Moderna Gramática Portuguesa, 38ª ed., capítulos “Emprego do acento grave (crase)” e “Regência”",
+    "Domingos Paschoal Cegalla, Novíssima Gramática da Língua Portuguesa, 48ª ed., “Crase”",
+    "Celso Cunha e Lindley Cintra, Nova Gramática do Português Contemporâneo, 7ª ed.",
+    "Celso Pedro Luft, Dicionário Prático de Regência Verbal e Dicionário Prático de Regência Nominal"
+  ]
+}

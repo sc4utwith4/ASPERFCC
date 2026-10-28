@@ -1,0 +1,567 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "lp-021",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "textoApoioId": "lp-t05",
+      "enunciadoBase": "O texto orienta as unidades administrativas sobre a divulgação de dados de contratos. De acordo com ele, considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "A respeito das orientações apresentadas na nota para a divulgação de dados de contratos em sítio oficial, considere as afirmativas abaixo.",
+        "Considere as afirmações a seguir, relativas ao conteúdo da nota orientativa sobre a divulgação de dados de contratos."
+      ],
+      "assertivas": [
+        {
+          "texto": "As orientações da nota prevalecem sobre a legislação aplicável quando houver conflito entre ambas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O 1º parágrafo afirma que as orientações “não substituem a legislação aplicável, à qual se subordinam”."
+        },
+        {
+          "texto": "A informação publicada deve ser atualizada sempre que houver alteração contratual, para que corresponda à situação vigente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o que determina o 2º parágrafo: a versão publicada deve corresponder, “a qualquer tempo, à situação vigente”."
+        },
+        {
+          "texto": "Descrições genéricas devem ser evitadas porque impedem identificar o objeto contratado e dificultam a comparação de preços.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O 3º parágrafo dá exatamente essas duas razões, introduzidas por “uma vez que”."
+        },
+        {
+          "texto": "Dados pessoais de pessoas físicas, como endereço residencial e dados bancários, devem ser divulgados integralmente, em nome da transparência.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O 4º parágrafo manda omitir ou mascarar esses dados, em observância ao princípio da necessidade."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: a nota afirma que suas orientações “não substituem a legislação aplicável, à qual se subordinam” (1º parágrafo). Uma norma orientativa interna não prevalece sobre a lei."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. II reproduz o 2º parágrafo: “Sempre que houver alteração contratual, a informação deverá ser atualizada [...], de modo que a versão publicada corresponda, a qualquer tempo, à situação vigente”. III reproduz o 3º: descrições genéricas “impedem a identificação do que efetivamente foi contratado e dificultam a comparação de preços”. I é falsa porque as orientações se subordinam à legislação; IV é falsa porque a nota manda omitir ou mascarar esses dados, em observância ao princípio da necessidade.",
+          "versaoInvertidaFalsa": "De acordo com a nota, a informação publicada só precisa ser atualizada ao fim da vigência do contrato, ainda que ocorram alterações contratuais no período."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmações falsas. A I contraria a subordinação expressa da nota à legislação; a IV contraria o 4º parágrafo, que determina a omissão ou o mascaramento de dados pessoais além do estritamente necessário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão corretas, mas a IV é falsa: a nota limita a exposição de dados pessoais ao “estritamente necessário à identificação das partes” e manda omitir ou mascarar endereço, documentos e dados bancários de pessoas físicas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas não é a única: a II também corresponde ao texto, que exige a atualização da informação sempre que houver alteração contratual."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores invertem a relação entre norma interna e lei (a nota se subordina à legislação) e transformam uma restrição (proteção de dados pessoais) em obrigação de divulgar. Transparência não autoriza expor dados além do necessário.",
+      "resumoFlashcard": {
+        "pergunta": "Segundo a nota orientativa, como conciliar a divulgação de contratos com a proteção de dados pessoais?",
+        "resposta": "Divulgam-se os dados necessários à identificação das partes; endereço residencial, documentos de identidade e dados bancários de pessoas físicas são omitidos ou mascarados, em observância ao princípio da necessidade da legislação de proteção de dados."
+      },
+      "conceitosChave": ["Interpretação: localização de informação", "Texto normativo-instrucional"],
+      "fundamentacao": "Texto lp-t05, 1º a 4º parágrafos; Lei nº 13.709/2018 (LGPD), art. 6º, III (princípio da necessidade)."
+    },
+    {
+      "id": "lp-022",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Ortografia, acentuação e crase",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t05",
+      "enunciadoBase": "Considere as frases elaboradas a partir do texto, das quais se suprimiu o “a” ou o “à”: I. As orientações não substituem a legislação, …… qual se subordinam. II. A versão publicada deve corresponder …… situação vigente. III. A informação deverá ser atualizada …… qualquer tempo. IV. Os dados publicados não se limitarão …… informações de um único exercício. V. As siglas serão desdobradas …… partir da primeira ocorrência. O sinal indicativo de crase deve ser empregado nas lacunas das frases",
+      "variantesEnunciado": [
+        "Nas frases a seguir, baseadas na nota orientativa, foi omitido o “a” ou o “à”: I. As orientações não substituem a legislação, …… qual se subordinam. II. A versão publicada deve corresponder …… situação vigente. III. A informação deverá ser atualizada …… qualquer tempo. IV. Os dados publicados não se limitarão …… informações de um único exercício. V. As siglas serão desdobradas …… partir da primeira ocorrência. De acordo com a norma-padrão, o acento indicativo de crase é exigido nas lacunas das frases",
+        "Atente para as frases abaixo, redigidas com base no texto: I. As orientações não substituem a legislação, …… qual se subordinam. II. A versão publicada deve corresponder …… situação vigente. III. A informação deverá ser atualizada …… qualquer tempo. IV. Os dados publicados não se limitarão …… informações de um único exercício. V. As siglas serão desdobradas …… partir da primeira ocorrência. O emprego do sinal indicativo de crase é obrigatório nas lacunas das frases"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a frase V, mas não há crase em “a partir de”: “partir” é verbo, e verbo não admite artigo. As frases I, II e IV, de fato, exigem o acento grave."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, mas não há crase antes de “qualquer”, pronome indefinido que não admite artigo (“a qualquer tempo”). E omite a II, em que “corresponder a” + “a situação” resulta em “à situação vigente”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: “subordinar-se a” + “a qual” = “à qual” (o relativo “a qual” contém artigo). II: “corresponder a” + “a situação” = “à situação vigente”. IV: “limitar-se a” + “as informações” = “às informações”. Em III, não há crase antes do pronome indefinido “qualquer”; em V, não há crase antes do verbo “partir”. Regra prática: troque por um termo masculino — “ao qual”, “ao estado vigente”, “aos dados”; se aparecer “ao/aos”, há crase.",
+          "versaoInvertidaFalsa": "Na frase “A informação deverá ser atualizada à qualquer tempo”, a crase é obrigatória, pois a preposição se funde com o artigo também antes de pronome indefinido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Das três frases indicadas, só a II exige crase. Em III, “qualquer” não admite artigo; em V, “partir” é verbo. Além disso, a resposta omite I e IV, que pedem o acento grave (“à qual”, “às informações”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e IV exigem crase, mas a I também: o verbo “subordinar-se” rege a preposição “a”, que se funde com o artigo contido no relativo “a qual”: “à qual se subordinam” (compare: “ao qual se subordinam”)."
+        }
+      ],
+      "pegadinhaFCC": "A FCC cobra a crase com o relativo “a qual” (que contém artigo) e a ausência de crase antes de pronome indefinido (“a qualquer tempo”). O teste do masculino resolve: “ao qual” → “à qual”; “a qualquer momento” → sem crase.",
+      "resumoFlashcard": {
+        "pergunta": "Há crase em “a qual” e em “a qualquer tempo”?",
+        "resposta": "Em “a qual”, sim, quando o verbo exige a preposição “a”: “a legislação, à qual se subordinam” (= ao qual). Antes de “qualquer”, não: pronome indefinido não admite artigo (“a qualquer tempo”)."
+      },
+      "conceitosChave": ["Crase: casos obrigatórios", "Crase: casos proibidos", "Crase com pronome relativo"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Emprego do acento grave (crase)”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Crase” (casos obrigatórios e proibidos); texto lp-t05, 1º e 2º parágrafos."
+    },
+    {
+      "id": "lp-023",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Flexão, vozes verbais e correlação de tempos e modos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t05",
+      "enunciadoBase": "No 3º parágrafo, a oração “As siglas serão desdobradas na primeira ocorrência” está na voz passiva analítica. Transposta para a voz passiva sintética, mantidos o tempo verbal e a norma-padrão, ela assume a forma:",
+      "variantesEnunciado": [
+        "Transpondo-se para a voz passiva sintética a oração “As siglas serão desdobradas na primeira ocorrência” (3º parágrafo), com a manutenção do tempo verbal e a observância da norma-padrão, obtém-se:",
+        "A forma correta da oração “As siglas serão desdobradas na primeira ocorrência”, do 3º parágrafo, na voz passiva com pronome apassivador, preservado o tempo verbal, é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Se desdobrarão as siglas na primeira ocorrência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A concordância e o tempo estão certos, mas a norma-padrão não admite pronome oblíquo átono no início do período. Com o futuro do presente e sem palavra atrativa, a colocação exigida é a mesóclise: “Desdobrar-se-ão”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Desdobrar-se-á as siglas na primeira ocorrência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na voz passiva sintética, o verbo concorda com o sujeito paciente, “as siglas”: “Desdobrar-se-ão as siglas” (= as siglas serão desdobradas). O singular “desdobrar-se-á” ignora o sujeito plural."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Desdobrar-se-ão as siglas na primeira ocorrência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A passiva sintética forma-se com verbo transitivo direto + pronome apassivador “se”, concordando com o sujeito paciente (“as siglas”, plural). O tempo da analítica (“serão desdobradas”, futuro do presente) se mantém: “desdobrarão”. Como o verbo está no futuro do presente e não há palavra atrativa no início do período, o pronome fica mesoclítico: “Desdobrar-se-ão”.",
+          "versaoInvertidaFalsa": "Na transposição de “As siglas serão desdobradas” para a voz passiva sintética, o verbo fica no singular, pois o pronome se indetermina o sujeito: “Desdobrar-se-á as siglas”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "As siglas desdobrarão-se na primeira ocorrência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A norma-padrão não admite ênclise com verbo no futuro do presente ou do pretérito (“desdobrarão-se”). Sem palavra atrativa, usa-se a mesóclise; com o sujeito anteposto, a próclise também é aceita no padrão brasileiro (“As siglas se desdobrarão”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Desdobraram-se as siglas na primeira ocorrência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A concordância e a colocação (ênclise no início do período) estão corretas, mas “desdobraram-se” está no pretérito perfeito, e a forma analítica “serão desdobradas” está no futuro do presente. A transposição de voz deve preservar o tempo verbal."
+        }
+      ],
+      "pegadinhaFCC": "A questão cobra três coisas ao mesmo tempo: concordância da passiva sintética com o sujeito paciente, manutenção do tempo verbal e colocação pronominal (mesóclise com o futuro; vedadas a próclise em início de período e a ênclise com o futuro).",
+      "resumoFlashcard": {
+        "pergunta": "Como transpor “As siglas serão desdobradas” para a voz passiva sintética?",
+        "resposta": "“Desdobrar-se-ão as siglas”: verbo transitivo direto + “se” apassivador, concordando com o sujeito paciente plural, no mesmo tempo (futuro do presente), com mesóclise por não haver palavra atrativa no início do período."
+      },
+      "conceitosChave": ["Vozes verbais: passiva sintética", "Colocação pronominal: mesóclise"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Vozes do verbo” e “Colocação dos pronomes átonos”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pronomes” (mesóclise); texto lp-t05, 3º parágrafo."
+    },
+    {
+      "id": "lp-024",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Concordância nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t05",
+      "enunciadoBase": "O verbo indicado entre parênteses deverá flexionar-se numa forma do plural para preencher adequadamente a lacuna da seguinte frase, elaborada a partir do texto:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão, deverá ir obrigatoriamente para o plural o verbo indicado entre parênteses na frase:",
+        "Em uma das frases abaixo, construídas com base na nota orientativa, o verbo entre parênteses deve ser flexionado no plural. Trata-se de:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Não …… (caber) às unidades administrativas, segundo a nota, alterar os prazos fixados em regulamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito de “caber” é a oração reduzida “alterar os prazos fixados em regulamento”. Sujeito oracional leva o verbo à 3ª pessoa do singular: “Não cabe às unidades...”. “Às unidades administrativas” é objeto indireto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "…… (dever) haver, no sítio oficial, dicionários que expliquem o significado de cada campo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Haver”, no sentido de existir, é impessoal e transmite a impessoalidade ao auxiliar: “Deve haver [...] dicionários”. “Dicionários” é objeto direto, e o verbo fica no singular."
+        },
+        {
+          "id": "opt-3",
+          "texto": "A cada contrato publicado …… (corresponder) uma página específica do sítio oficial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito de “corresponder” é “uma página específica do sítio oficial”, posposto e no singular: “A cada contrato publicado corresponde uma página”. “A cada contrato” é complemento (objeto indireto)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "…… (constar) do sítio oficial, além do valor global, os aditivos eventualmente celebrados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O sujeito de “constar” é “os aditivos eventualmente celebrados”, posposto ao verbo; “além do valor global” é adjunto e não integra o sujeito. Logo: “Constam do sítio oficial, além do valor global, os aditivos eventualmente celebrados”. Sujeito posposto exige concordância como qualquer outro.",
+          "versaoInvertidaFalsa": "Na frase “Consta do sítio oficial, além do valor global, os aditivos eventualmente celebrados”, o verbo deve ficar no singular, pois concorda com “valor global”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Segundo a nota, …… (dever) ser privilegiado o uso de linguagem clara e de termos precisos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito da locução “dever ser privilegiado” é “o uso de linguagem clara e de termos precisos”, cujo núcleo, “uso”, é singular: “deve ser privilegiado o uso”. O plural “termos” está dentro do adjunto, e não no núcleo."
+        }
+      ],
+      "pegadinhaFCC": "Termos no plural perto do verbo (“às unidades”, “dicionários”, “termos precisos”) seduzem para o plural, mas não são sujeito. A FCC exige localizar o núcleo do sujeito, que muitas vezes vem posposto (“Constam [...] os aditivos”).",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar o sujeito para decidir se o verbo vai ao plural?",
+        "resposta": "Pergunte ao verbo “o que consta?” e isole adjuntos e complementos: em “Constam do sítio, além do valor global, os aditivos”, o sujeito é “os aditivos”. Sujeito oracional (“alterar os prazos”) e verbos impessoais (“haver” = existir) deixam o verbo no singular."
+      },
+      "conceitosChave": ["Concordância: sujeito posposto", "Concordância: verbos impessoais", "Concordância: sujeito oracional"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Concordância verbal” (sujeito posposto, sujeito oracional, verbos impessoais); Cegalla, Novíssima Gramática da Língua Portuguesa, “Concordância verbal”; texto lp-t05, 2º parágrafo."
+    },
+    {
+      "id": "lp-025",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Discurso direto, indireto e indireto livre",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t06",
+      "enunciadoBase": "Há ocorrência de discurso indireto livre, em que a voz do narrador se mistura ao pensamento de uma personagem sem verbo introdutório, no seguinte segmento do texto:",
+      "variantesEnunciado": [
+        "O narrador incorpora à narração, sem verbo de elocução, o pensamento de uma personagem — procedimento chamado discurso indireto livre — no segmento:",
+        "Considerando-se as formas de reprodução das falas e dos pensamentos das personagens, verifica-se discurso indireto livre em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“Dirigiu-se ao rapaz que digitava no celular e quis saber se o 312 já tinha passado.” (2º parágrafo)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É discurso indireto: o narrador relata a pergunta da senhora por meio do verbo “quis saber” e da conjunção “se”, com ajuste de tempo (“já tinha passado”). Há verbo introdutório e subordinação, o que exclui o indireto livre."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“Ele nem levantou os olhos: ‘Está a sete minutos, segundo o aplicativo.’” (2º parágrafo)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É discurso direto: a fala do rapaz é reproduzida literalmente, entre aspas, depois de dois-pontos. O narrador cede a palavra à personagem, sem fundir as vozes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“O rapaz, enfim, ergueu a cabeça. Que pergunta era aquela?” (3º parágrafo)",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Que pergunta era aquela?” traduz o pensamento do rapaz na voz do narrador: não há verbo de elocução (“pensou”, “perguntou-se”), nem aspas, nem conjunção subordinativa, e a frase mantém a 3ª pessoa e o pretérito imperfeito (“era”) próprios da narração. É o mesmo procedimento de “quantas vezes o ícone não ficara parado [...]?”, mais adiante.",
+          "versaoInvertidaFalsa": "No 3º parágrafo, “Que pergunta era aquela?” é discurso direto, pois reproduz literalmente, entre aspas, a fala do rapaz dirigida à senhora."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“Riu, meio sem graça, e admitiu que o aplicativo às vezes também esperava o ônibus.” (3º parágrafo)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É discurso indireto: o verbo “admitiu” introduz a oração subordinada “que o aplicativo às vezes também esperava o ônibus”, que relata a fala do rapaz."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“Fiquei pensando que os aplicativos medem com precisão a distância entre dois pontos” (5º parágrafo)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O narrador relata o próprio pensamento em 1ª pessoa, com verbo introdutório (“Fiquei pensando que...”). Não há fusão da voz do narrador com a de uma personagem distinta, traço do discurso indireto livre."
+        }
+      ],
+      "pegadinhaFCC": "A interrogação solta no meio da narração é a pista do indireto livre. A banca oferece trechos com “quis saber se”, “admitiu que” e “pensando que” (indireto) e falas entre aspas (direto), que têm verbo introdutório ou marcas gráficas.",
+      "resumoFlashcard": {
+        "pergunta": "Como reconhecer o discurso indireto livre?",
+        "resposta": "O pensamento ou a fala da personagem aparece incorporado à narração, sem verbo de elocução, sem aspas ou travessão e sem conjunção subordinativa, mantendo a 3ª pessoa e os tempos do narrador. Perguntas e exclamações soltas são indício frequente (“Que pergunta era aquela?”)."
+      },
+      "conceitosChave": ["Discurso indireto livre", "Discurso direto e indireto"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Discurso direto, discurso indireto e discurso indireto livre”; Bechara, Moderna Gramática Portuguesa, 38ª ed., seção sobre discurso direto, indireto e indireto livre; texto lp-t06, 2º a 5º parágrafos."
+    },
+    {
+      "id": "lp-026",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Discurso direto, indireto e indireto livre",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t06",
+      "enunciadoBase": "No 2º parágrafo, o rapaz responde “Está a sete minutos, segundo o aplicativo.”, e a senhora retruca “Sete minutos de aplicativo ou sete minutos de verdade?”. Transpondo-se as duas falas para o discurso indireto, obtém-se, de acordo com a norma-padrão:",
+      "variantesEnunciado": [
+        "As falas do rapaz (“Está a sete minutos, segundo o aplicativo.”) e da senhora (“Sete minutos de aplicativo ou sete minutos de verdade?”), reproduzidas em discurso direto no 2º parágrafo, estão corretamente transpostas para o discurso indireto em:",
+        "Considere as falas do 2º parágrafo — a do rapaz, “Está a sete minutos, segundo o aplicativo.”, e a da senhora, “Sete minutos de aplicativo ou sete minutos de verdade?”. A transposição de ambas para o discurso indireto está correta em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Sem levantar os olhos, ele respondeu que o ônibus está a sete minutos, segundo o aplicativo, e a senhora perguntou se eram sete minutos de aplicativo ou de verdade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na passagem para o discurso indireto com verbo de elocução no pretérito (“respondeu”), o presente do indicativo da fala (“Está”) passa ao pretérito imperfeito (“estava”). Manter “está” quebra a correlação temporal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Sem levantar os olhos, ele respondeu que o ônibus estava a sete minutos, segundo o aplicativo, e a senhora perguntou se eram sete minutos de aplicativo ou de verdade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As falas passam a orações subordinadas: a afirmação vira oração introduzida por “que” (“respondeu que o ônibus estava”), com o presente “está” convertido no imperfeito “estava”; a pergunta total vira interrogativa indireta introduzida por “se” (“perguntou se eram”), com o verbo implícito no presente (“são”) passado ao imperfeito. O sujeito elíptico da fala (“o ônibus”) é explicitado, e as aspas desaparecem.",
+          "versaoInvertidaFalsa": "Na transposição para o discurso indireto, o verbo da fala “Está a sete minutos” deve permanecer no presente (“respondeu que o ônibus está a sete minutos”), pois o fato ainda ocorria."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Sem levantar os olhos, ele respondeu que o ônibus estava a sete minutos, segundo o aplicativo, e a senhora perguntou que eram sete minutos de aplicativo ou de verdade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pergunta direta “Sete minutos de aplicativo ou sete minutos de verdade?” é interrogativa total (sem pronome interrogativo); no discurso indireto, é introduzida pela conjunção “se”, e não por “que”: “perguntou se eram”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Sem levantar os olhos, ele respondeu que o ônibus estivera a sete minutos, segundo o aplicativo, e a senhora perguntou se eram sete minutos de aplicativo ou de verdade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Estivera” (mais-que-perfeito) situaria o fato antes do momento da resposta, como se o ônibus já não estivesse a sete minutos. O presente da fala corresponde ao imperfeito no discurso indireto: “estava”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Sem levantar os olhos, ele respondeu: o ônibus estava a sete minutos, segundo o aplicativo, e a senhora perguntou-lhe: eram sete minutos de aplicativo ou de verdade?",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois-pontos e a pergunta mantida em forma direta (“eram sete minutos de aplicativo ou de verdade?”) conservam a estrutura do discurso direto, apenas sem aspas. No indireto, as falas se subordinam ao verbo de elocução por “que” ou “se”."
+        }
+      ],
+      "pegadinhaFCC": "A FCC cobra a correlação de tempos na transposição (presente → imperfeito; perfeito → mais-que-perfeito; futuro → futuro do pretérito) e o conectivo da pergunta indireta: “se” para interrogativa total, pronome ou advérbio interrogativo para a parcial.",
+      "resumoFlashcard": {
+        "pergunta": "O que muda ao passar uma fala do discurso direto para o indireto com verbo de elocução no passado?",
+        "resposta": "Presente → pretérito imperfeito (“está” → “estava”); pretérito perfeito → mais-que-perfeito; futuro do presente → futuro do pretérito; imperativo → imperfeito do subjuntivo; 1ª e 2ª pessoas → 3ª; pergunta total → “se”; “aqui” e “hoje” → “ali” e “naquele dia”."
+      },
+      "conceitosChave": ["Discurso direto e indireto: transposição", "Correlação verbal"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Discurso direto, discurso indireto e discurso indireto livre” (transposição de tempos e pessoas); Bechara, Moderna Gramática Portuguesa, 38ª ed., seção sobre discurso indireto; texto lp-t06, 2º parágrafo."
+    },
+    {
+      "id": "lp-027",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Ortografia, acentuação e crase",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t06",
+      "enunciadoBase": "Considerando-se as frases abaixo, elaboradas a partir do texto, o sinal indicativo de crase está empregado corretamente em:",
+      "variantesEnunciado": [
+        "O acento indicativo de crase foi empregado de acordo com a norma-padrão na seguinte frase, construída com base na crônica:",
+        "Das frases abaixo, inspiradas no texto, aquela em que o emprego do sinal indicativo de crase está correto é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "O rapaz informou que o ônibus estava à sete minutos do ponto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em indicações de distância ou de tempo com numeral (“a sete minutos”, “a dois quilômetros”), o “a” é só preposição, sem artigo; não há crase. O próprio texto grafa “Está a sete minutos”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "A senhora dirigiu-se à um rapaz que digitava no celular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há crase antes de artigo indefinido: “dirigiu-se a um rapaz”. A crase pressupõe o artigo definido feminino “a”, incompatível com “um”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Cada passageiro voltou à ser apenas alguém que espera o ônibus.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há crase antes de verbo, pois verbo não admite artigo: “voltou a ser”. É o caso proibido mais lembrado — e mais cobrado — pela FCC."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Os presentes discutiram o atraso do 312 à luz da própria experiência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “À luz de” é locução prepositiva formada com substantivo feminino; nas locuções adverbiais, prepositivas e conjuntivas femininas, a crase é obrigatória (“à luz de”, “à custa de”, “às vezes”, “à medida que”). O próprio texto traz exemplo do mesmo tipo: “às vezes”.",
+          "versaoInvertidaFalsa": "Na locução “à luz de”, o acento grave é facultativo, pois a expressão não contém artigo definido feminino."
+        },
+        {
+          "id": "opt-5",
+          "texto": "O cobrador anunciava os atrasos à todos os passageiros que esperavam no ponto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não se usa crase antes de pronome indefinido masculino (“todos”): “anunciava os atrasos a todos os passageiros”. O “a” é apenas a preposição exigida por “anunciar algo a alguém”."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores reúnem os casos proibidos mais frequentes: antes de verbo, de artigo indefinido, de pronome masculino e de numeral em indicação de distância. A correta usa uma locução prepositiva feminina, em que a crase é obrigatória.",
+      "resumoFlashcard": {
+        "pergunta": "Em que casos a crase é obrigatória e em quais é proibida?",
+        "resposta": "Obrigatória em locuções femininas (à luz de, às vezes, à medida que), em horas determinadas (às 14h) e quando a preposição “a” encontra o artigo “a”. Proibida antes de verbo, palavra masculina, artigo indefinido, pronomes pessoais e indefinidos e numerais em distâncias (“a sete minutos”)."
+      },
+      "conceitosChave": ["Crase: casos obrigatórios", "Crase: casos proibidos"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Emprego do acento grave (crase)”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Crase: casos obrigatórios e proibidos”; texto lp-t06, 2º e 3º parágrafos."
+    },
+    {
+      "id": "lp-028",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Regência nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t06",
+      "enunciadoBase": "No 4º parágrafo, lê-se: “alguém lembrou, com saudade, o cobrador que anunciava os atrasos aos gritos”. Mantendo-se a correção e o sentido, esse segmento pode ser reescrito como:",
+      "variantesEnunciado": [
+        "Está correta e preserva o sentido original a seguinte reescrita do segmento “alguém lembrou, com saudade, o cobrador que anunciava os atrasos aos gritos” (4º parágrafo):",
+        "Considerando-se a regência do verbo “lembrar” e a colocação pronominal, o segmento “alguém lembrou, com saudade, o cobrador que anunciava os atrasos aos gritos”, do 4º parágrafo, admite, sem prejuízo da correção e do sentido, a seguinte redação:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "alguém lembrou-se, com saudade, o cobrador que anunciava os atrasos aos gritos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na forma pronominal, “lembrar-se” exige a preposição “de” (“lembrou-se do cobrador”); sem ela, a construção fica incorreta. Além disso, o pronome indefinido “alguém” atrai o pronome átono, e a norma-padrão pede a próclise: “alguém se lembrou”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "alguém lembrou, com saudade, do cobrador que anunciava os atrasos aos gritos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sem o pronome, “lembrar” (no sentido de recordar) é transitivo direto: “lembrou o cobrador”, como no texto. A construção “lembrou do” mistura as duas regências e é própria do registro coloquial."
+        },
+        {
+          "id": "opt-3",
+          "texto": "alguém lhe lembrou, com saudade, o cobrador que anunciava os atrasos aos gritos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Lembrar algo a alguém” significa fazer alguém recordar algo. Com “lhe”, a frase passa a dizer que alguém fez outra pessoa recordar o cobrador, o que altera o sentido do original, em que a própria pessoa recorda."
+        },
+        {
+          "id": "opt-4",
+          "texto": "alguém se lembrou, com saudade, do cobrador que anunciava os atrasos aos gritos",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Lembrar” admite duas regências equivalentes no sentido de recordar: transitivo direto (“lembrou o cobrador”) ou pronominal com a preposição “de” (“se lembrou do cobrador”). A nova redação usa a segunda e mantém o sentido. A próclise é exigida pelo pronome indefinido “alguém”, palavra atrativa.",
+          "versaoInvertidaFalsa": "Na norma-padrão, “lembrar” sem pronome rege a preposição de, de modo que o texto deveria trazer “alguém lembrou, com saudade, do cobrador”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "alguém se lembrou, com saudade, ao cobrador que anunciava os atrasos aos gritos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A forma pronominal “lembrar-se” rege a preposição “de”, e não “a”. “Se lembrou ao cobrador” é construção inexistente na norma-padrão no sentido de recordar."
+        }
+      ],
+      "pegadinhaFCC": "O texto usa a regência culta (“lembrou o cobrador”), e a banca oferece a coloquial (“lembrou do”). A reescrita só é correta com o pronome e a preposição (“se lembrou do”), e a colocação deve respeitar a atração do indefinido “alguém”.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as regências corretas de “lembrar” e “esquecer” no sentido de recordar e olvidar?",
+        "resposta": "Transitivos diretos sem pronome (“lembrou o cobrador”, “esqueceu o prazo”) ou pronominais com a preposição “de” (“lembrou-se do cobrador”, “esqueceu-se do prazo”). “Lembrou do” e “esqueceu do” são construções coloquiais rejeitadas pela norma-padrão."
+      },
+      "conceitosChave": ["Regência verbal", "Regência: lembrar e esquecer", "Colocação pronominal"],
+      "fundamentacao": "Celso Pedro Luft, Dicionário Prático de Regência Verbal (verbetes lembrar e esquecer); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Regência” e “Colocação dos pronomes átonos” (pronomes indefinidos como fator de próclise); texto lp-t06, 4º parágrafo."
+    },
+    {
+      "id": "lp-029",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Redação Oficial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o chefe de uma divisão técnica de um Tribunal de Contas precise redigir, em seu próprio nome, um ofício dirigido ao Presidente do Tribunal, Conselheiro a quem a divisão se subordina. Segundo o Manual de Redação da Presidência da República (3ª ed., 2018), o vocativo, o pronome de tratamento e o fecho adequados são, respectivamente,",
+      "variantesEnunciado": [
+        "Suponha que o chefe de uma divisão técnica de um Tribunal de Contas deva enviar, em seu nome, um ofício ao Presidente da Corte, Conselheiro hierarquicamente superior a ele. De acordo com o Manual de Redação da Presidência da República (3ª ed., 2018), o vocativo, o pronome de tratamento e o fecho do expediente devem ser, respectivamente,",
+        "Em um Tribunal de Contas, o chefe de uma divisão subordinada à Presidência redigirá ofício, por ele assinado, ao Presidente do Tribunal, que é Conselheiro. Conforme o Manual de Redação da Presidência da República (3ª ed., 2018), devem ser empregados, respectivamente, como vocativo, tratamento e fecho:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“Excelentíssimo Senhor Presidente” − Vossa Excelência − “Respeitosamente”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pronome e o fecho estão corretos, mas o vocativo “Excelentíssimo Senhor” é reservado, pelo Manual, aos Chefes de Poder (Presidente da República, Presidente do Congresso Nacional, Presidente do STF). As demais autoridades tratadas por Vossa Excelência recebem “Senhor” seguido do cargo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“Senhor Presidente” − Vossa Excelência − “Respeitosamente”",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Conselheiros de Tribunais de Contas recebem o tratamento Vossa Excelência. Como o Presidente do Tribunal não é Chefe de Poder, o vocativo é “Senhor” seguido do cargo: “Senhor Presidente,”. Sendo o destinatário de hierarquia superior à do remetente, o fecho é “Respeitosamente,”; “Atenciosamente,” fica para autoridades de mesma hierarquia ou de hierarquia inferior e para os demais casos.",
+          "versaoInvertidaFalsa": "Segundo o Manual, o ofício do chefe de divisão ao Presidente do Tribunal deve empregar o vocativo “Excelentíssimo Senhor Presidente” e o fecho “Atenciosamente”, por se tratar de comunicação interna."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“Senhor Presidente” − Vossa Senhoria − “Atenciosamente”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Vossa Senhoria é tratamento para as demais autoridades e para particulares, não para Conselheiro de Tribunal de Contas, que recebe Vossa Excelência. E “Atenciosamente” não serve para destinatário de hierarquia superior."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“Digníssimo Senhor Presidente” − Vossa Excelência − “Atenciosamente”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Manual aboliu o “digníssimo” (DD) nas comunicações oficiais, pois a dignidade é pressuposto para ocupar qualquer cargo público. Além disso, o fecho para autoridade superior é “Respeitosamente”, e não “Atenciosamente”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“Senhor Presidente” − Vossa Excelência − “Atenciosamente”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Vocativo e tratamento estão corretos, mas o fecho não: “Atenciosamente” destina-se a autoridades de mesma hierarquia, de hierarquia inferior e aos demais casos. Para autoridade de hierarquia superior à do remetente, usa-se “Respeitosamente”."
+        }
+      ],
+      "pegadinhaFCC": "Cada distrator erra um único elemento: “Excelentíssimo” (só para Chefes de Poder), “Digníssimo” (abolido), Vossa Senhoria (não serve para Conselheiro) e “Atenciosamente” (não serve para superior). A questão exige os três acertos ao mesmo tempo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os vocativos e fechos previstos no Manual de Redação da Presidência (3ª ed.)?",
+        "resposta": "Vocativo: “Excelentíssimo Senhor” + cargo só para Chefes de Poder; “Senhor” + cargo para as demais autoridades. Fechos: “Respeitosamente” para hierarquia superior (inclusive o Presidente da República) e “Atenciosamente” para mesma hierarquia, hierarquia inferior e demais casos."
+      },
+      "conceitosChave": ["Redação Oficial: pronomes de tratamento", "Redação Oficial: fechos", "Redação Oficial: vocativo"],
+      "fundamentacao": "Manual de Redação da Presidência da República, 3ª ed. (2018), seções “Pronomes de tratamento” (vocativos e emprego de Vossa Excelência; supressão do “digníssimo”) e “Fechos para comunicações”."
+    },
+    {
+      "id": "lp-030",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Pontuação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A pontuação está inteiramente correta na seguinte frase:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão, está corretamente pontuada a seguinte frase:",
+        "Das frases abaixo, redigidas em uma unidade técnica, aquela em que todas as vírgulas estão empregadas de acordo com a norma-padrão é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Os técnicos que concluíram o curso de auditoria de sistemas, receberão certificado na próxima semana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A vírgula separa o sujeito (“Os técnicos que concluíram o curso de auditoria de sistemas”) do verbo (“receberão”), o que a norma-padrão não admite, por mais longo que seja o sujeito. A oração adjetiva é restritiva e integra o sujeito."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Em reunião realizada ontem a comissão, decidiu prorrogar o prazo de entrega dos relatórios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A frase inverte duas regras: o adjunto adverbial deslocado (“Em reunião realizada ontem”) deveria ser separado por vírgula do restante da oração, e não pode haver vírgula entre o sujeito “a comissão” e o verbo “decidiu”. Correto: “Em reunião realizada ontem, a comissão decidiu...”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Os auditores examinaram, os contratos, as notas fiscais e os comprovantes de pagamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A vírgula depois de “examinaram” separa o verbo de seu objeto direto (“os contratos, as notas fiscais e os comprovantes de pagamento”). As vírgulas da enumeração estão corretas; a primeira, não."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Senhor Diretor solicito, a Vossa Senhoria a remessa dos documentos até sexta-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O vocativo (“Senhor Diretor”) deve ser isolado por vírgula, e a vírgula depois de “solicito” separa o verbo de seu complemento. Correto: “Senhor Diretor, solicito a Vossa Senhoria a remessa dos documentos até sexta-feira.”"
+        },
+        {
+          "id": "opt-5",
+          "texto": "O Tribunal, órgão de controle externo, julgará as contas do exercício na sessão de amanhã.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Órgão de controle externo” é aposto explicativo de “O Tribunal” e, por isso, vem isolado por vírgulas. Não há vírgula entre o sujeito e o verbo (“O Tribunal [...] julgará”) nem entre o verbo e seus complementos.",
+          "versaoInvertidaFalsa": "Na frase “O Tribunal, órgão de controle externo, julgará as contas”, as vírgulas são indevidas, pois separam o sujeito do verbo."
+        }
+      ],
+      "pegadinhaFCC": "A FCC insiste nas vírgulas proibidas (entre sujeito e verbo, entre verbo e complemento) e nas obrigatórias (vocativo, aposto explicativo, adjunto adverbial deslocado). Sujeito longo não autoriza vírgula antes do verbo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais vírgulas são proibidas e quais são obrigatórias na ordem direta?",
+        "resposta": "Proibidas: entre sujeito e verbo, entre verbo e complemento, entre nome e adjunto. Obrigatórias: isolar vocativo, aposto explicativo, oração adjetiva explicativa e expressões intercaladas; recomendada para adjunto adverbial deslocado, sobretudo o longo."
+      },
+      "conceitosChave": ["Pontuação: vírgula", "Aposto e vocativo"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pontuação” (emprego da vírgula); Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pontuação”."
+    }
+  ]
+}

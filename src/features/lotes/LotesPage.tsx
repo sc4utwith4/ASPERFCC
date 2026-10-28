@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { Download, FileUp, RefreshCw, Trash2, Upload } from "lucide-react";
-import { getMateria, MATERIAS } from "@/data/edital";
+import { getMateria, MATERIAS, PROVA } from "@/data/edital";
 import { textoDeApoio } from "@/data/banco";
 import { LoteSchema } from "@/data/schema";
 import { validarQuestaoNoContexto, formatarCaminho, type Problema } from "@/data/validacao";
@@ -120,7 +120,10 @@ export default function LotesPage() {
                   <span className="flex items-center gap-1.5">
                     {v?.selo ? <Selo tom="ambar" title="Questões com selo 'conferir no texto oficial'">{v.selo} selo</Selo> : null}
                     {v?.importadas ? <Selo tom="ardosia">{v.importadas} import.</Selo> : null}
-                    <span className={v?.total === 50 ? "tabular text-ink" : "tabular text-warning-text"}>{v?.total ?? 0}/50</span>
+                    <span className={(v?.total ?? 0) >= PROVA.questoesPorBateria ? "tabular text-ink" : "tabular text-warning-text"}>
+                      {v?.total ?? 0}
+                      {(v?.total ?? 0) < PROVA.questoesPorBateria ? `/${PROVA.questoesPorBateria}` : ""}
+                    </span>
                   </span>
                 </li>
               );

@@ -4,6 +4,7 @@ import {
   LoteSchema,
   NotaExemploSchema,
   TextosArquivoSchema,
+  chaveExata,
   normalizar,
   type Lote,
   type Questao,
@@ -35,7 +36,7 @@ export interface EntradaLote {
 }
 
 export interface OpcoesValidacao {
-  /** Exige 50 questões por matéria e cobertura mínima de subtópicos. */
+  /** Exige ao menos 50 questões por matéria e cobertura mínima de subtópicos. */
   exigirCompleto: boolean;
   /** Ids de textos de apoio existentes, por matéria. */
   textosPorMateria?: Map<MateriaSlug, Set<string>>;
@@ -131,7 +132,7 @@ export function validarQuestaoNoContexto(q: Questao, lote: Pick<Lote, "materiaSl
   }
 
   const correta = q.alternativas.find((a) => a.correta);
-  if (correta && correta.versaoInvertidaFalsa && normalizar(correta.versaoInvertidaFalsa) === normalizar(correta.texto)) {
+  if (correta && correta.versaoInvertidaFalsa && chaveExata(correta.versaoInvertidaFalsa) === chaveExata(correta.texto)) {
     erro("versaoInvertidaFalsa é igual ao texto da alternativa correta");
   }
   return problemas;
@@ -166,8 +167,9 @@ function validarConjuntoMateria(slug: MateriaSlug, questoes: readonly Questao[],
   const materia = getMateria(slug);
   const sevCompleto: Severidade = opcoes.exigirCompleto ? "erro" : "aviso";
 
-  if (resumo.total !== PROVA.questoesPorBateria) {
-    problemas.push({ severidade: sevCompleto, local, mensagem: `${resumo.total} questões (esperado ${PROVA.questoesPorBateria})` });
+  // Lotes além do 5º (gerador, importação) são bem-vindos; o mínimo é uma bateria completa.
+  if (resumo.total < PROVA.questoesPorBateria) {
+    problemas.push({ severidade: sevCompleto, local, mensagem: `${resumo.total} questões (mínimo ${PROVA.questoesPorBateria})` });
   }
   for (const sub of materia.subtopicos) {
     const n = resumo.porSubtopico[sub] ?? 0;

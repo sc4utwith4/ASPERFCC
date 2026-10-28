@@ -1,0 +1,55 @@
+{
+  "id": "nota-seg-info-01",
+  "materiaSlug": "seguranca-informacao",
+  "titulo": "Criptografia, certificados e assinatura digital: o que cada mecanismo garante",
+  "subtopico": "Infraestrutura de chaves públicas, certificados e assinatura digital",
+  "pistas": [
+    {
+      "pergunta": "O que a assinatura digital garante e o que ela não garante?",
+      "resposta": "Garante integridade, autenticidade e não repúdio. Não garante confidencialidade: o documento assinado continua legível e, se for sigiloso, precisa também ser cifrado."
+    },
+    {
+      "pergunta": "Com qual chave se assina e com qual se verifica uma assinatura digital?",
+      "resposta": "Assina-se cifrando o hash do documento com a chave privada do signatário; verifica-se com a chave pública dele, obtida do certificado digital."
+    },
+    {
+      "pergunta": "Para enviar um arquivo sigiloso a alguém, com que chave se cifra?",
+      "resposta": "Com a chave pública do destinatário, em geral protegendo uma chave simétrica de sessão (envelope digital). Só a chave privada do destinatário decifra."
+    },
+    {
+      "pergunta": "Por que o HMAC não oferece não repúdio?",
+      "resposta": "Porque emissor e verificador conhecem a mesma chave secreta: qualquer um dos dois poderia ter gerado o código, e não há como provar a um terceiro quem o produziu."
+    },
+    {
+      "pergunta": "O que um certificado digital X.509 v3 contém e quem o assina?",
+      "resposta": "Chave pública e identificação do titular, número de série, emissor, período de validade e extensões, mas nunca a chave privada. É assinado pela AC emissora com a chave privada dela."
+    },
+    {
+      "pergunta": "Qual a diferença entre LCR e OCSP?",
+      "resposta": "A LCR é a lista, publicada periodicamente pela AC, dos certificados revogados antes do vencimento. O OCSP é a consulta online do status de um certificado específico."
+    },
+    {
+      "pergunta": "Quais os papéis da AC Raiz, da AC e da AR na ICP-Brasil?",
+      "resposta": "A AC Raiz (função do ITI) emite os certificados das AC do nível seguinte e não pode emitir para o usuário final; a AC emite, revoga e gerencia certificados; a AR identifica e cadastra os usuários e encaminha os pedidos à AC."
+    },
+    {
+      "pergunta": "Quais espécies de assinatura eletrônica a Lei nº 14.063/2020 prevê?",
+      "resposta": "Simples, avançada (sem certificado ICP-Brasil, aceita pelas partes, vinculada univocamente ao signatário e com detecção de alterações) e qualificada (com certificado ICP-Brasil e maior nível de confiabilidade)."
+    },
+    {
+      "pergunta": "Quais algoritmos de hash e de cifra simétrica estão obsoletos e quais usar?",
+      "resposta": "Obsoletos: MD5 e SHA-1 (colisões práticas; o NIST retira o SHA-1 até 2030) e DES/3DES (cifração com 3DES desautorizada após 2023). Usar SHA-2 ou SHA-3 e AES."
+    }
+  ],
+  "conteudoMarkdown": "## A pergunta que decide a questão\n\nEm prova de Segurança da Informação, quase toda questão de criptografia se resolve com uma única pergunta: **o que este mecanismo garante, e o que ele não garante?** A banca costuma trocar as chaves (pública × privada), atribuir sigilo a quem só dá autoria e vender o hash como se fosse cifra. Esta nota organiza os mecanismos pela propriedade que cada um entrega.\n\n## Os quatro blocos básicos\n\n- **Criptografia simétrica**: a mesma chave secreta cifra e decifra. É rápida e serve para grandes volumes (AES, com bloco de 128 bits e chaves de 128, 192 ou 256 bits). O problema é **distribuir a chave** com segurança. O DES está obsoleto, e a cifração com 3DES foi desautorizada pelo NIST após 2023.\n- **Criptografia assimétrica**: par de chaves, uma pública e outra privada (RSA, baseado na dificuldade de fatoração; ECC, baseada em curvas elípticas, com chaves menores para a mesma segurança). É lenta para grandes volumes, mas resolve a distribuição de chaves e permite assinar.\n- **Hash**: resumo de tamanho fixo e de mão única. Detecta alteração, mas, sem chave, não prova a origem: quem altera o arquivo recalcula o resumo. MD5 e SHA-1 têm colisões práticas; use SHA-2 ou SHA-3.\n- **HMAC**: hash combinado com chave secreta. Garante integridade e autenticidade **entre quem compartilha a chave**, mas não o não repúdio, porque qualquer um dos detentores poderia ter gerado o código.\n\n## Quem usa qual chave\n\nA regra que mais derruba candidatos cabe em duas linhas:\n\n> Para **sigilo**, cifra-se com a chave pública do destinatário. Para **assinar**, usa-se a chave privada do signatário, e a verificação é feita com a chave pública dele.\n\nCifrar algo com a própria chave privada não esconde nada: qualquer pessoa com a chave pública correspondente decifra. Por isso esse uso serve à assinatura, e não à confidencialidade. E a chave privada ==nunca sai do controle exclusivo do titular==: não é enviada, não vai no certificado e não é compartilhada.\n\n## Assinatura digital passo a passo\n\n- O signatário calcula o hash do documento.\n- Cifra esse resumo com a sua chave privada: o resultado é a assinatura.\n- O verificador recalcula o hash do documento recebido.\n- Decifra a assinatura com a chave pública do signatário, obtida do certificado.\n- Se os dois resumos coincidirem, comprovam-se a **integridade** (nada mudou) e a **autoria** (só a chave privada do titular produziria aquela assinatura), base do **não repúdio**.\n\nO documento assinado continua legível: ==assinatura digital não dá confidencialidade==. Se o conteúdo for sigiloso, é preciso também cifrá-lo.\n\n## Envelope digital: o melhor dos dois mundos\n\nPara mandar um arquivo grande e sigiloso, combinam-se as duas técnicas: gera-se uma chave simétrica aleatória (chave de sessão), cifra-se o arquivo com ela e cifra-se apenas a chave de sessão com a chave pública do destinatário. Só ele, com a chave privada, recupera a chave de sessão. É a criptografia híbrida, usada em padrões de mensagem segura como S/MIME e OpenPGP.\n\n## Certificado digital e ICP\n\nA chave pública só é útil se houver confiança de que ela pertence a quem diz pertencer. O certificado X.509 v3 faz esse vínculo: traz a chave pública e a identificação do titular, número de série, emissor, período de validade e extensões, e é **assinado pela autoridade certificadora com a chave privada dela**. Quem confia na AC verifica essa assinatura e sobe a cadeia até a raiz. O certificado nunca contém a chave privada do titular.\n\nNa ICP-Brasil (MP nº 2.200-2/2001):\n\n- a **AC Raiz**, função exercida pelo ITI, emite os certificados das AC de nível imediatamente subsequente e é ==proibida de emitir certificados para o usuário final==;\n- a **AC** emite, revoga e gerencia certificados e disponibiliza a lista de revogados;\n- a **AR** identifica e cadastra o usuário e encaminha o pedido à AC, presencialmente ou por meio que garanta segurança equivalente;\n- o par de chaves é gerado pelo titular, e a chave privada fica sob seu controle exclusivo.\n\nSe a chave privada for perdida ou comprometida, o titular pede a **revogação**. O número de série passa a constar da **LCR** (lista de certificados revogados, publicada periodicamente pela AC), e o **OCSP** passa a informar, nas consultas online, que o certificado está revogado. A LCR relaciona revogados, e não válidos. Assinaturas anteriores continuam verificáveis quando se comprova o momento em que foram feitas, por exemplo com carimbo do tempo.\n\n## Mecanismo × propriedade (revisão de um minuto)\n\n- Hash sem chave: integridade (detecção de alteração); não autentica a origem.\n- HMAC: integridade e autenticidade entre as partes; sem não repúdio.\n- Assinatura digital: integridade, autenticidade e não repúdio; sem confidencialidade.\n- Cifra com a chave pública do destinatário: confidencialidade; não prova o remetente.\n- Certificado digital: confiança na chave pública (vínculo entre chave e titular); sozinho, não cifra nem assina documentos.\n\n## Validade jurídica no Brasil\n\nDocumentos eletrônicos assinados com certificado ICP-Brasil gozam de **presunção de veracidade** em relação aos signatários (MP nº 2.200-2/2001, art. 10, § 1º), o que não impede outros meios de comprovação de autoria e integridade aceitos pelas partes (§ 2º). A Lei nº 14.063/2020 classifica as assinaturas eletrônicas em **simples**, **avançada** (sem certificado ICP-Brasil, aceita pelas partes, vinculada univocamente ao signatário e capaz de detectar alterações) e **qualificada** (com certificado ICP-Brasil), esta com o nível mais elevado de confiabilidade.\n\n## Pegadinhas recorrentes\n\n- Trocar a chave pública pela privada na assinatura ou na cifra.\n- Dizer que a assinatura digital garante sigilo.\n- Atribuir não repúdio ao HMAC ou à cifra simétrica com chave compartilhada.\n- Chamar a LCR de lista de certificados válidos.\n- Atribuir à AC Raiz a emissão de certificados para o usuário final.\n- Confundir a assinatura avançada com a qualificada.",
+  "sintese": "Cada mecanismo garante uma coisa. Cifrar com a chave pública do destinatário dá sigilo; assinar com a chave privada do signatário dá integridade, autenticidade e não repúdio, mas não sigilo; o HMAC autentica entre quem divide a chave, sem não repúdio; o hash sozinho só detecta alteração. O certificado torna confiável a chave pública porque a AC o assina com a chave privada dela, e a revogação aparece na LCR e no OCSP. No Brasil, certificado ICP-Brasil gera assinatura qualificada, com presunção de veracidade.",
+  "fontes": [
+    "MP nº 2.200-2/2001 (ICP-Brasil), arts. 5º, 6º, 7º (redação da Lei nº 14.063/2020), 10 e 13",
+    "Lei nº 14.063/2020, art. 4º (assinaturas eletrônicas simples, avançada e qualificada)",
+    "RFC 5280 (perfil de certificado X.509 v3 e de LCR) e RFC 6960 (OCSP)",
+    "RFC 2104 e FIPS 198-1 (HMAC); FIPS 186-5 (Digital Signature Standard)",
+    "FIPS 197 (AES); NIST SP 800-131A Rev. 2 (TDEA); NIST, anúncio de dezembro de 2022 sobre a retirada do SHA-1 até 2030",
+    "ISO/IEC 27000:2018, seção 3 (definições de autenticidade e não repúdio)",
+    "Stallings, Criptografia e Segurança de Redes (criptografia de chave pública, assinaturas digitais e distribuição de chaves)"
+  ]
+}

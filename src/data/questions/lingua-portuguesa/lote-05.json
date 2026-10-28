@@ -1,0 +1,565 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "lp-041",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Relação texto-contexto, intertextualidade e gêneros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t09",
+      "enunciadoBase": "Considerando-se o gênero a que pertence o texto, uma reportagem, é correto afirmar que ele",
+      "variantesEnunciado": [
+        "O texto é uma reportagem. Tendo em vista as características desse gênero, é correto afirmar que o texto",
+        "Tratando-se de uma reportagem, depreende-se corretamente da composição do texto que ele"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "defende uma tese em 1ª pessoa, com argumentos e conclusão, como é próprio do artigo de opinião.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há tese defendida em 1ª pessoa: o repórter não se mostra no texto, que descreve o laboratório e informa sobre a conservação de documentos. A defesa explícita de um ponto de vista caracteriza o artigo de opinião."
+        },
+        {
+          "id": "opt-2",
+          "texto": "prescreve procedimentos a serem cumpridos pelos leitores, em linguagem normativa e impessoal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não dá ordens nem estabelece procedimentos para o leitor; relata como o laboratório trabalha. Linguagem prescritiva e impessoal é traço de textos normativos ou instrucionais, como a nota orientativa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "narra fatos ficcionais por meio de um narrador-personagem que revela seus sentimentos e lembranças.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não se trata de ficção nem há narrador-personagem: o texto informa sobre uma atividade real (a conservação de documentos), com a fonte identificada por sua função (“a conservadora que coordena o laboratório”)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reproduz integralmente uma entrevista no formato de perguntas e respostas, sem nenhuma intervenção do repórter.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há formato de perguntas e respostas. O repórter seleciona falas, resume outras em discurso indireto (“Diz que a imagem digital é uma aliada”) e as integra à descrição, o que pressupõe sua intervenção."
+        },
+        {
+          "id": "opt-5",
+          "texto": "descreve uma cena, informa sobre o assunto e incorpora a voz de uma fonte, em discurso direto e indireto.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A reportagem combina descrição de cena (“o silêncio só é interrompido pelo ruído discreto dos pincéis”), informação sobre o tema (inimigos do papel, técnicas de restauro) e a voz da fonte, ora em discurso direto (“‘Aqui, quem corre estraga’, resume a conservadora”), ora em indireto (“A coordenadora explica que a regra de ouro da profissão é a reversibilidade”). O presente do indicativo aproxima o leitor da cena.",
+          "versaoInvertidaFalsa": "Por ser uma reportagem, o texto dispensa a voz de fontes e se limita a expor a opinião do repórter sobre a conservação de documentos."
+        }
+      ],
+      "pegadinhaFCC": "A FCC pede o reconhecimento do gênero pelos traços composicionais. Na reportagem, a combinação de descrição, informação e citação de fontes (em discurso direto e indireto) é decisiva; os distratores descrevem artigo de opinião, texto normativo, conto e entrevista.",
+      "resumoFlashcard": {
+        "pergunta": "Quais traços distinguem a reportagem de outros gêneros?",
+        "resposta": "Propósito informativo aprofundado, descrição de cenas e pessoas reais, citação de fontes em discurso direto e indireto e, em geral, ausência de opinião explícita do repórter. Difere da notícia pela maior extensão e aprofundamento, e do artigo de opinião pela ausência de tese defendida."
+      },
+      "conceitosChave": ["Gêneros textuais", "Discurso direto e indireto"],
+      "fundamentacao": "Marcuschi, Produção textual, análise de gêneros e compreensão (Parábola, 2008), capítulo sobre gêneros textuais; Nilson Lage, A reportagem: teoria e técnica de entrevista e pesquisa jornalística (Record, 2001); texto lp-t09."
+    },
+    {
+      "id": "lp-042",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Ortografia, acentuação e crase",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t09",
+      "enunciadoBase": "Está correta a acentuação de todas as formas verbais na seguinte frase, elaborada a partir do texto:",
+      "variantesEnunciado": [
+        "Considerando-se as regras de acentuação gráfica vigentes, todas as formas verbais estão corretamente grafadas na frase:",
+        "Entre as frases abaixo, inspiradas na reportagem, aquela em que as formas verbais estão acentuadas de acordo com o Acordo Ortográfico é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Os papéis fabricados a partir do século XIX contém substâncias que os fragilizam com o tempo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito “Os papéis fabricados a partir do século XIX” está no plural, e a 3ª pessoa do plural de “conter” leva acento circunflexo: “contêm”. “Contém”, com acento agudo, é a forma do singular, como no texto (“Boa parte do papel [...] contém”)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "A coordenadora do laboratório mantêm a equipe atenta aos menores detalhes do trabalho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito “A coordenadora do laboratório” está no singular, e a forma correta é “mantém”, com acento agudo. “Mantêm”, com circunflexo, é a 3ª pessoa do plural (“elas mantêm”)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "As folhas higienizadas vem de caixas antigas e contêm manchas deixadas por grampos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Contêm” está correta (plural), mas “vem” é forma do singular. Com o sujeito plural “As folhas higienizadas”, o verbo “vir” leva o acento circunflexo diferencial: “vêm”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Os conservadores lêem os documentos com cuidado e retêm as informações essenciais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Retêm” (plural de “reter”) está correta, mas “lêem” perdeu o acento com o Acordo Ortográfico: escreve-se “leem”, como “creem”, “veem” e “deem”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Os técnicos vêm trabalhando com paciência, e a força do adesivo provém do amido.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Vêm” é a 3ª pessoa do plural de “vir” (sujeito “Os técnicos”), com o acento diferencial mantido pelo Acordo. “Provém” é a 3ª pessoa do singular de “provir” (sujeito “a força do adesivo”): os derivados de “ter” e “vir” levam acento agudo no singular (provém, contém, mantém) e circunflexo no plural (provêm, contêm, mantêm).",
+          "versaoInvertidaFalsa": "Na frase “Os técnicos vêm trabalhando com paciência”, o acento circunflexo é indevido, pois o Acordo Ortográfico eliminou o acento diferencial de “vêm”."
+        }
+      ],
+      "pegadinhaFCC": "A FCC explora a oposição agudo (singular: contém, mantém, provém) × circunflexo (plural: contêm, mantêm, provêm) e a confusão entre “vêm” (vir), que manteve o acento, e “veem”/“leem” (ver/ler), que o perderam com o Acordo.",
+      "resumoFlashcard": {
+        "pergunta": "Como se acentuam “ter”, “vir” e seus derivados na 3ª pessoa do presente?",
+        "resposta": "Primitivos: “tem/têm”, “vem/vêm” (circunflexo no plural). Derivados: agudo no singular e circunflexo no plural (“contém/contêm”, “mantém/mantêm”, “provém/provêm”). Não confundir com “veem” (ver) e “leem” (ler), sem acento."
+      },
+      "conceitosChave": ["Acentuação: ter e vir", "Acordo Ortográfico"],
+      "fundamentacao": "Acordo Ortográfico da Língua Portuguesa (Decreto nº 6.583/2008), Base VIII (oxítonas em -em e formas de ter, vir e derivados) e Base IX (hiatos “ee” em creem, deem, leem, veem); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Acentuação gráfica”."
+    },
+    {
+      "id": "lp-043",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Coordenação, subordinação e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "textoApoioId": "lp-t09",
+      "enunciadoBase": "Considere os trechos do texto dos quais foram suprimidos três conectivos: “Há, porém, um adversário mais insidioso, …… nasce no próprio documento: a acidez.” e “Boa parte do papel [...] o amarelam e o fragilizam, …… certas folhas se esfarelam ao simples toque.” (2º parágrafo); “qualquer intervenção deve poder ser desfeita no futuro, …… surja uma técnica melhor” (3º parágrafo). Mantendo-se o sentido original, preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Nos trechos a seguir, foram retirados três conectivos do texto: “Há, porém, um adversário mais insidioso, …… nasce no próprio documento: a acidez.” e “Boa parte do papel [...] o amarelam e o fragilizam, …… certas folhas se esfarelam ao simples toque.” (2º parágrafo); “qualquer intervenção deve poder ser desfeita no futuro, …… surja uma técnica melhor” (3º parágrafo). Mantidos a correção e o sentido, completam as lacunas, respectivamente:",
+        "Três conectivos da reportagem foram substituídos por lacunas: “Há, porém, um adversário mais insidioso, …… nasce no próprio documento: a acidez.” e “Boa parte do papel [...] o amarelam e o fragilizam, …… certas folhas se esfarelam ao simples toque.” (2º parágrafo); “qualquer intervenção deve poder ser desfeita no futuro, …… surja uma técnica melhor” (3º parágrafo). Preservando as relações de sentido do original, as lacunas são preenchidas, correta e respectivamente, por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "embora − de modo que − caso",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Embora” é concessivo e exigiria subjuntivo (“embora nasça”); além disso, o adversário é mais insidioso justamente porque nasce no próprio documento, relação de causa, e não de concessão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "porque − ainda que − se",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Ainda que” é concessivo: o esfarelamento das folhas é consequência, e não concessão. E “se”, condicional, não se combina com o presente do subjuntivo “surja” (seria “se surgir”)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "visto que − a fim de que − caso",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Visto que” manteria a causa, mas “a fim de que” é final: apresentaria o esfarelamento como objetivo das substâncias, o que é absurdo. A relação no texto é de consequência."
+        },
+        {
+          "id": "opt-4",
+          "texto": "porquanto − de modo que − se",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Porquanto” e “de modo que” preservariam as relações de causa e de consequência, mas a conjunção “se” exige o futuro do subjuntivo (“se surgir”); com “surja”, só cabem conectivos como “caso” ou “desde que”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "porque − de modo que − caso",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. (1) “Porque” explica por que a acidez é um adversário “mais insidioso”: ela nasce no próprio documento. (2) “De modo que” introduz a consequência do amarelamento e da fragilização: as folhas se esfarelam. (3) “Caso” introduz condição e se constrói com o presente do subjuntivo (“caso surja”). São os conectivos do original.",
+          "versaoInvertidaFalsa": "embora − a fim de que − se, pois as orações expressam, respectivamente, concessão, finalidade e condição."
+        }
+      ],
+      "pegadinhaFCC": "Além do valor semântico, a FCC cobra o modo verbal exigido pelo conectivo: “caso” e “desde que” pedem o presente do subjuntivo (“caso surja”), enquanto “se” pede o futuro do subjuntivo (“se surgir”). Conectivo de sentido certo com modo errado também elimina a alternativa.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença de construção entre “caso” e “se” condicionais?",
+        "resposta": "“Caso” constrói-se com o presente ou o imperfeito do subjuntivo (“caso surja”, “caso surgisse”); “se”, com o futuro ou o imperfeito do subjuntivo (“se surgir”, “se surgisse”). “Se surja” e “caso surgir” são incorretos."
+      },
+      "conceitosChave": ["Conectivos: valor semântico", "Conectivos: modo verbal exigido"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Conjunções subordinativas” (causais, consecutivas e condicionais); Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulos “Conjunções” e “Emprego do subjuntivo”; texto lp-t09, 2º e 3º parágrafos."
+    },
+    {
+      "id": "lp-044",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t10",
+      "enunciadoBase": "Considerando-se a argumentação do ensaio, é correto afirmar:",
+      "variantesEnunciado": [
+        "De acordo com as ideias desenvolvidas no texto, é correto afirmar:",
+        "Depreende-se corretamente da leitura do ensaio sobre a prestação de contas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A frase “Uma conta que fecha não é necessariamente uma conta que convence” indica que a exatidão das somas não basta para julgar a gestão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 2º parágrafo distingue a face numérica da prestação de contas (“Os números dizem quanto se gastou”) da face narrativa (“só a narrativa explica por que se gastou”) e afirma que da narrativa “depende o juízo sobre a qualidade da gestão”. “Fechar” remete às somas corretas; “convencer”, à justificativa. Uma despesa pode estar “corretamente registrada e, ainda assim, ser inútil, excessiva ou mal planejada”.",
+          "versaoInvertidaFalsa": "Para o autor, uma conta cujas somas fecham é, por isso mesmo, uma conta que convence, já que a exatidão contábil basta para avaliar a qualidade da gestão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Para o autor, a prestação de contas mais valiosa é aquela realizada depois que os órgãos de controle a exigem, pois só então ela se torna efetivamente obrigatória.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 4º parágrafo diz o contrário: a prestação de contas mais valiosa é “aquela feita antes que alguém a exija”, “um hábito que se pratica todos os dias”, e não um dever cumprido sob cobrança."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O autor sustenta que as instituições de controle devem presumir a culpa do gestor, já que a confiança do cidadão degenerou em fé.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor atribui às instituições de controle o papel de “verificar sem presumir a culpa” (3º parágrafo). A degeneração da confiança em fé ocorre, segundo ele, quando o controle desaparece; não é um fato consumado que justifique presumir culpa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A etimologia apresentada no 1º parágrafo serve para demonstrar que prestar contas se reduz a apresentar números corretamente somados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A etimologia mostra justamente que “contar” reúne enumerar e narrar: quem presta contas “não apenas apresenta números”, mas “oferece uma narrativa e responsabiliza-se por ela”. A alternativa inverte a conclusão do 1º parágrafo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Segundo o texto, a desconfiança absoluta fortalece o controle, porque nenhuma prova é dispensada quando se suspeita de tudo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Para o autor, quando a desconfiança se torna absoluta, “o controle degenera em suspeita, que nenhuma prova satisfaz”: o controle se deteriora, em vez de se fortalecer. A alternativa também deturpa o sentido de “nenhuma prova satisfaz”."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores invertem afirmações do texto (antes × depois da exigência; verificar sem presumir a culpa × presumir a culpa) ou leem a etimologia ao contrário. A tese está na dupla face de “contar”: enumerar e narrar.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a “dupla face” da prestação de contas no ensaio “O que significa prestar contas”?",
+        "resposta": "Enumerar e narrar: os números dizem quanto se gastou, mas só a narrativa (a justificativa) explica por que se gastou. Por isso “uma conta que fecha não é necessariamente uma conta que convence”: a exatidão contábil não basta para avaliar a gestão."
+      },
+      "conceitosChave": ["Interpretação: tese do autor", "Inferência textual"],
+      "fundamentacao": "Texto lp-t10, 1º a 4º parágrafos; identificação da tese e das relações argumentativas."
+    },
+    {
+      "id": "lp-045",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Morfossintaxe e pronomes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t10",
+      "enunciadoBase": "No 3º parágrafo, lê-se: “Quando o controle desaparece, a confiança degenera em fé, que dispensa provas; quando a desconfiança se torna absoluta, o controle degenera em suspeita, que nenhuma prova satisfaz”. Sobre o pronome “que” nos segmentos “que dispensa provas” e “que nenhuma prova satisfaz”, é correto afirmar que",
+      "variantesEnunciado": [
+        "Considere os segmentos “que dispensa provas” e “que nenhuma prova satisfaz”, do 3º parágrafo. Quanto ao pronome relativo “que” empregado em cada um deles, é correto afirmar que",
+        "No trecho “a confiança degenera em fé, que dispensa provas; quando a desconfiança se torna absoluta, o controle degenera em suspeita, que nenhuma prova satisfaz” (3º parágrafo), a análise correta do pronome “que” nas duas orações é a de que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ambos retomam o mesmo antecedente, “confiança”, e exercem a função de sujeito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os relativos retomam os termos imediatamente anteriores, “fé” e “suspeita”, e não “confiança”. E só o primeiro é sujeito; no segundo, o sujeito de “satisfaz” é “nenhuma prova”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o primeiro retoma “fé” e é objeto direto de “dispensa”; o segundo retoma “suspeita” e é sujeito de “satisfaz”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as funções. Em “que dispensa provas”, “provas” é o objeto direto, e o relativo, o sujeito; em “que nenhuma prova satisfaz”, o sujeito é “nenhuma prova”, e o relativo, o objeto direto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ambos são conjunções integrantes, pois introduzem orações que completam o sentido dos verbos anteriores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conjunção integrante não retoma termo algum e introduz oração substantiva (substituível por “isso”). Aqui o “que” retoma substantivos (“fé”, “suspeita”) e equivale a “a qual”, introduzindo orações adjetivas explicativas, por isso precedidas de vírgula."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o primeiro retoma “provas” e o segundo retoma “prova”, exercendo ambos a função de objeto direto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O relativo retoma o termo que o antecede, e não o que vem depois: “fé, que...” e “suspeita, que...”. “Provas” e “prova” estão dentro das orações adjetivas, como objeto direto e sujeito, respectivamente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o primeiro retoma “fé” e é sujeito de “dispensa”; o segundo retoma “suspeita” e é objeto direto do verbo “satisfaz”.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Substituindo o relativo pelo antecedente: “a fé dispensa provas” (o relativo é sujeito de “dispensa”, e “provas”, objeto direto) e “nenhuma prova satisfaz a suspeita” (o relativo é objeto direto de “satisfaz”, cujo sujeito é “nenhuma prova”). A ordem das palavras engana: no segundo caso, o sujeito vem depois do relativo.",
+          "versaoInvertidaFalsa": "Em “suspeita, que nenhuma prova satisfaz”, o pronome relativo é sujeito de “satisfaz”, e “nenhuma prova” é seu objeto direto."
+        }
+      ],
+      "pegadinhaFCC": "A ordem “relativo + sujeito + verbo” (“que nenhuma prova satisfaz”) faz o candidato tomar o relativo por sujeito. O teste é reescrever a oração com o antecedente no lugar do relativo e descobrir quem pratica a ação.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a função do “que” em “suspeita, que nenhuma prova satisfaz”?",
+        "resposta": "Objeto direto. Trocando o relativo pelo antecedente, obtém-se “nenhuma prova satisfaz a suspeita”: o sujeito é “nenhuma prova”. Já em “fé, que dispensa provas”, o relativo é sujeito (“a fé dispensa provas”)."
+      },
+      "conceitosChave": ["Pronome relativo: função sintática", "Orações adjetivas explicativas"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pronome relativo” e “Orações subordinadas adjetivas”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pronomes relativos” (funções sintáticas); texto lp-t10, 3º parágrafo."
+    },
+    {
+      "id": "lp-046",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Formação de palavras, sinonímia e antonímia",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t10",
+      "enunciadoBase": "Considerando-se o 3º parágrafo, mantém-se o sentido do texto com a substituição proposta em:",
+      "variantesEnunciado": [
+        "No contexto do 3º parágrafo, a troca de uma palavra pela indicada preserva o sentido original em:",
+        "Sem prejuízo do sentido original, uma palavra do 3º parágrafo pode ser substituída pela que se propõe em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“fé, que dispensa provas”: fé, que distribui provas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Dispensar” tem, entre outros, o sentido de distribuir (“dispensar cuidados”), mas no contexto significa prescindir, não precisar: a fé não exige provas. “Distribui provas” é sinônimo de dicionário que não serve no contexto, armadilha típica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“o de verificar sem presumir a culpa”: o de verificar sem demonstrar a culpa",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Presumir” é supor, admitir antecipadamente, sem prova; “demonstrar” é provar. O autor recomenda verificar sem partir da suposição de culpa; com “demonstrar”, a frase passaria a sugerir que o controle não deve provar a culpa, sentido oposto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“o de cobrar sem paralisar quem precisa agir”: o de cobrar sem estimular quem precisa agir",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Paralisar” é impedir de agir; “estimular” é o contrário. A substituição inverte o sentido: o autor quer que o controle cobre sem travar a ação do gestor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“quando a desconfiança se torna absoluta”: quando a desconfiança se torna relativa",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Absoluta” (total, irrestrita) opõe-se a “relativa”. O autor fala do extremo em que a desconfiança é total; com “relativa”, a frase perde a ideia de excesso que faz o controle degenerar em suspeita."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“O cidadão delega ao gestor o poder de decidir”: O cidadão transfere ao gestor o poder de decidir",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Delegar” é transferir a outrem um poder ou uma atribuição: o cidadão transfere ao gestor o poder de decidir sobre recursos que não lhe pertencem. A substituição mantém o sentido e a regência (transferir algo a alguém).",
+          "versaoInvertidaFalsa": "No 3º parágrafo, “dispensa”, em “fé, que dispensa provas”, equivale a “distribui”, pois a fé oferece provas a quem confia."
+        }
+      ],
+      "pegadinhaFCC": "A FCC usa sinônimos de dicionário que não servem no contexto (“dispensar” = distribuir) e antônimos disfarçados (“presumir” × “demonstrar”). A sinonímia é sempre contextual: teste a substituição na frase inteira.",
+      "resumoFlashcard": {
+        "pergunta": "Por que “dispensa”, em “fé, que dispensa provas”, não equivale a “distribui”?",
+        "resposta": "Porque, no contexto, “dispensar” significa prescindir, não precisar: a fé não exige provas. “Distribuir” é outro sentido do verbo (“dispensar cuidados”), que não cabe na frase. A sinonímia depende do contexto."
+      },
+      "conceitosChave": ["Sinonímia contextual", "Antonímia"],
+      "fundamentacao": "Houaiss, Dicionário da Língua Portuguesa (verbetes delegar, dispensar, presumir e paralisar); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Semântica” (sinonímia e antonímia); texto lp-t10, 3º parágrafo."
+    },
+    {
+      "id": "lp-047",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Redação Oficial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A respeito das orientações do Manual de Redação da Presidência da República (3ª ed., 2018) sobre comunicações oficiais, considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "Considere as afirmativas abaixo, relativas às normas do Manual de Redação da Presidência da República (3ª ed., 2018) para a elaboração de expedientes e mensagens oficiais.",
+        "Um servidor recém-empossado estudou o Manual de Redação da Presidência da República (3ª ed., 2018) e anotou as afirmações abaixo. Considere-as."
+      ],
+      "assertivas": [
+        {
+          "texto": "Aviso, memorando e ofício, que se diferenciavam antes pela finalidade do que pela forma, passaram a seguir nomenclatura e diagramação únicas, o padrão ofício.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A 3ª edição abandonou a distinção entre os três expedientes e adotou o padrão ofício."
+        },
+        {
+          "texto": "O tratamento “digníssimo” deve acompanhar o nome das autoridades tratadas por Vossa Excelência, como reconhecimento da dignidade do cargo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O “digníssimo” (DD) foi abolido: a dignidade é pressuposto para ocupar qualquer cargo público."
+        },
+        {
+          "texto": "“Doutor” não é forma de tratamento, e sim título acadêmico, razão pela qual não deve ser usado indiscriminadamente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Manual faz essa ressalva e indica que “Senhor” já confere a formalidade desejada."
+        },
+        {
+          "texto": "Em mensagens de correio eletrônico, a abreviatura “Att.” é fecho oficial equivalente a “Atenciosamente”.",
+          "verdadeira": false,
+          "explicacao": "Falsa. “Atenciosamente” é o fecho padrão; abreviações como “Att.” e fechos como “Abraços” e “Saudações” não são fechos oficiais."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: a 3ª edição eliminou a distinção entre aviso, memorando e ofício, que se diferenciavam antes pela finalidade do que pela forma, adotando o padrão ofício. III: o Manual registra que “doutor” é título acadêmico, e não forma de tratamento, e recomenda evitar seu uso indiscriminado. II é falsa porque o “digníssimo” foi abolido; IV é falsa porque “Atenciosamente” é o fecho padrão e abreviações como “Att.” não são fechos oficiais.",
+          "versaoInvertidaFalsa": "Segundo o Manual de Redação da Presidência da República (3ª ed.), aviso, memorando e ofício continuam a ter diagramações próprias, que os distinguem pela forma."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: o Manual aboliu o “digníssimo” (DD) nas comunicações oficiais, porque a dignidade é pressuposto para ocupar qualquer cargo público, sendo desnecessária sua repetida evocação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmações falsas: o “digníssimo” foi abolido, e “Att.”, assim como “Abraços” e “Saudações”, não é fecho oficial, ainda que difundido no uso do e-mail."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão corretas, mas a IV não: o Manual trata “Atenciosamente” como fecho padrão e afirma que abreviações como “Att.” não são fechos oficiais e não devem ser usadas em e-mails profissionais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a I também: a 3ª edição uniformizou aviso, memorando e ofício no padrão ofício, com nomenclatura e diagramação únicas."
+        }
+      ],
+      "pegadinhaFCC": "A banca cobra as supressões do Manual (“digníssimo” abolido, “ilustríssimo” dispensado, “doutor” não é tratamento) e a unificação dos expedientes no padrão ofício. No e-mail, o uso corrente (“Att.”) não se confunde com o fecho oficial.",
+      "resumoFlashcard": {
+        "pergunta": "Quais formas de tratamento o Manual de Redação da Presidência suprimiu ou desaconselhou?",
+        "resposta": "Aboliu o “digníssimo” (a dignidade é pressuposto do cargo), dispensou o “ilustríssimo” para quem recebe Vossa Senhoria e para particulares (basta “Senhor”) e esclareceu que “doutor” é título acadêmico, e não forma de tratamento."
+      },
+      "conceitosChave": ["Redação Oficial: padrão ofício", "Redação Oficial: pronomes de tratamento", "Redação Oficial: correio eletrônico"],
+      "fundamentacao": "Manual de Redação da Presidência da República, 3ª ed. (2018), seções “Pronomes de tratamento” (digníssimo, ilustríssimo, doutor), “O padrão ofício” e “Correio eletrônico (e-mail)” (fecho)."
+    },
+    {
+      "id": "lp-048",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Formação de palavras, sinonímia e antonímia",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considerando-se os processos de formação de palavras, foram formadas pelo mesmo processo as duas palavras de:",
+      "variantesEnunciado": [
+        "As duas palavras foram formadas pelo mesmo processo em:",
+        "Há identidade de processo de formação entre as duas palavras do seguinte par:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "anoitecer e desleal",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Anoitecer” é parassintética: prefixo e sufixo foram acrescentados simultaneamente a “noite” (não existem “anoite” nem “noitecer”). “Desleal” é derivação prefixal: “des-” + “leal”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "planalto e girassol",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas são compostas, mas por processos diferentes: “planalto” (plano + alto) é composição por aglutinação, com perda de fonema; “girassol” (gira + sol) é composição por justaposição, sem alteração dos elementos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "infelizmente e enriquecer",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Infelizmente” é derivação prefixal e sufixal, pois existem “infeliz” e “felizmente” (os afixos podem ser retirados separadamente). “Enriquecer” é parassintética: não existem “enrico” nem “riquecer”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "debate e pesca",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Debate” (de “debater”) e “pesca” (de “pescar”) são formadas por derivação regressiva: o substantivo resulta da redução do verbo, com a supressão da terminação verbal. São os chamados substantivos deverbais, que geralmente indicam ação (“a busca”, “o ataque”, “o combate”, “a compra”).",
+          "versaoInvertidaFalsa": "As palavras “planalto” e “girassol” formaram-se pelo mesmo processo, a composição por justaposição, pois nenhuma delas sofreu alteração fonética."
+        },
+        {
+          "id": "opt-5",
+          "texto": "automóvel e passatempo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Automóvel” é hibridismo (elemento grego “auto-” + elemento latino “móvel”); “passatempo” é composição por justaposição de elementos portugueses (“passa” + “tempo”)."
+        }
+      ],
+      "pegadinhaFCC": "A banca agrupa palavras de processos vizinhos: aglutinação × justaposição, parassíntese × derivação prefixal e sufixal. O teste da parassíntese: se retirar só o prefixo ou só o sufixo não gera palavra existente, a formação é parassintética.",
+      "resumoFlashcard": {
+        "pergunta": "Como distinguir derivação parassintética de derivação prefixal e sufixal?",
+        "resposta": "Na parassintética, prefixo e sufixo entram ao mesmo tempo; retirando só um deles, não sobra palavra (“enriquecer”: não há “enrico” nem “riquecer”). Na prefixal e sufixal, cada afixo pode sair separadamente (“infelizmente”: existem “infeliz” e “felizmente”)."
+      },
+      "conceitosChave": ["Formação de palavras", "Derivação regressiva e parassintética"],
+      "fundamentacao": "Cegalla, Novíssima Gramática da Língua Portuguesa, “Formação das palavras” (derivação e composição); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Formação de palavras”."
+    },
+    {
+      "id": "lp-049",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Está correta, de acordo com a norma-padrão, a redação da seguinte frase:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão, a frase redigida corretamente é:",
+        "Entre as frases abaixo, extraídas de minutas de relatórios, aquela que está inteiramente de acordo com a norma-padrão é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Apesar do prazo ter vencido na sexta-feira, a unidade técnica aceitou os documentos do jurisdicionado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “O prazo” é sujeito do infinitivo “ter vencido”. A norma-padrão não admite a contração da preposição com o artigo do sujeito (“do prazo”), porque a preposição rege a oração inteira, e não o sujeito: “Apesar de o prazo ter vencido”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Em princípio, a equipe discordou do relator, mas mudou de entendimento no fim da sessão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Em princípio” significa em tese, de modo geral; para indicar o momento inicial (“no começo”), usa-se “a princípio”. Como a frase relata uma mudança de entendimento ao fim da sessão, o sentido pretendido é “A princípio, a equipe discordou”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O gestor foi de encontro às recomendações da auditoria e as implementou todas antes do prazo fixado pelo relator.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Ir de encontro a” significa chocar-se, opor-se; “ir ao encontro de” significa estar de acordo, favorecer. Como o gestor implementou as recomendações, o correto é “foi ao encontro das recomendações”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Haja visto o atraso na entrega, a comissão prorrogou o prazo de análise das propostas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A expressão correta é “haja vista” (= tendo em vista), invariável: “Haja vista o atraso na entrega”. “Haja visto” é forma equivocada, embora frequente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Apesar de o prazo ter vencido na sexta-feira, a unidade técnica aceitou os documentos do jurisdicionado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Quando o sujeito de um infinitivo vem precedido de preposição, mantêm-se separados preposição e artigo: “Apesar de o prazo ter vencido”. A preposição “de” liga-se à oração reduzida (“o prazo ter vencido”), da qual “o prazo” é sujeito. O mesmo vale para “antes de o relator votar” e “depois de a equipe concluir”.",
+          "versaoInvertidaFalsa": "Na frase “Apesar de o prazo ter vencido”, a norma-padrão exige a contração “do prazo”, pois a preposição sempre se combina com o artigo seguinte."
+        }
+      ],
+      "pegadinhaFCC": "A forma correta (“de o prazo”) soa estranha ao ouvido e por isso parece errada. A FCC também cobra pares de expressões confundidas: “a princípio” × “em princípio”, “ao encontro de” × “de encontro a”, e a forma fixa “haja vista”.",
+      "resumoFlashcard": {
+        "pergunta": "Por que se escreve “Apesar de o prazo ter vencido”, e não “Apesar do prazo ter vencido”?",
+        "resposta": "Porque “o prazo” é sujeito do infinitivo “ter vencido”, e a norma-padrão não contrai a preposição com o artigo do sujeito: a preposição rege a oração reduzida inteira. Vale também para “antes de o relator votar” e “depois de a equipe concluir”."
+      },
+      "conceitosChave": ["Reescrita: confronto de frases", "Preposição e sujeito de infinitivo", "Expressões confundidas"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed. (contração da preposição com o artigo do sujeito do infinitivo); Cegalla, Dicionário de Dificuldades da Língua Portuguesa (verbetes a princípio, ao encontro de e haja vista)."
+    },
+    {
+      "id": "lp-050",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na frase “Concluída a auditoria, a equipe apresentou o relatório ao gestor”, a oração reduzida de particípio foi desenvolvida, mantendo-se o sentido e a correção, em:",
+      "variantesEnunciado": [
+        "Desenvolvendo-se a oração reduzida da frase “Concluída a auditoria, a equipe apresentou o relatório ao gestor”, sem alteração do sentido e com correção, obtém-se:",
+        "A oração “Concluída a auditoria”, em “Concluída a auditoria, a equipe apresentou o relatório ao gestor”, está corretamente transformada em oração desenvolvida, mantido o sentido, em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Embora a auditoria fosse concluída, a equipe apresentou o relatório ao gestor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Embora” introduz concessão: indicaria que a equipe apresentou o relatório apesar de a auditoria ter sido concluída, oposição sem sentido. A reduzida “Concluída a auditoria” expressa tempo (anterioridade)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Caso a auditoria seja concluída, a equipe apresentará o relatório ao gestor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Caso” introduz condição e transforma um fato consumado em hipótese; além disso, “apresentará” muda o tempo da oração principal. O original narra fatos passados em sequência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Para que concluísse a auditoria, a equipe apresentou o relatório ao gestor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Para que” indica finalidade: a apresentação do relatório seria o meio de concluir a auditoria, inversão da ordem lógica dos fatos. A reduzida expressa tempo, e não fim."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Depois que a auditoria foi concluída, a equipe apresentou o relatório ao gestor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A oração reduzida de particípio “Concluída a auditoria” tem valor temporal (anterioridade): primeiro se concluiu a auditoria, depois se apresentou o relatório. Desenvolvida, torna-se oração adverbial temporal com o verbo na voz passiva e no pretérito perfeito: “Depois que a auditoria foi concluída”. Também seriam possíveis “Assim que” ou “Quando a auditoria foi concluída”.",
+          "versaoInvertidaFalsa": "Na frase “Concluída a auditoria, a equipe apresentou o relatório ao gestor”, a oração reduzida exprime concessão e equivale a “Embora a auditoria tivesse sido concluída”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Porque a auditoria será concluída, a equipe apresentou o relatório ao gestor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Porque” introduz causa, e o futuro “será concluída” torna a frase ilógica: um fato futuro não pode explicar uma ação já realizada. O valor original é temporal, e o tempo verbal, passado."
+        }
+      ],
+      "pegadinhaFCC": "As reduzidas de particípio e de gerúndio não trazem conectivo, e a FCC pede que o candidato identifique o valor circunstancial pelo contexto. Aqui, o particípio indica fato anterior ao da oração principal: valor temporal.",
+      "resumoFlashcard": {
+        "pergunta": "Como desenvolver uma oração reduzida de particípio?",
+        "resposta": "Identifique o valor circunstancial pelo contexto (tempo, causa, condição, concessão) e use o conectivo correspondente, com o verbo na voz passiva e no tempo adequado: “Concluída a auditoria” → “Depois que a auditoria foi concluída” (tempo)."
+      },
+      "conceitosChave": ["Reescrita: orações reduzidas", "Orações adverbiais"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Orações reduzidas” (de particípio) e “Orações adverbiais temporais”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo sobre orações reduzidas."
+    }
+  ]
+}

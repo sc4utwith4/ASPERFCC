@@ -52,7 +52,11 @@
         "pergunta": "Quais são as três técnicas de contexto para tarefas longas de agentes?",
         "resposta": "Compactação (resumir o histórico perto do limite e recomeçar com o resumo), tomada de notas estruturada ou memória agentiva (notas persistidas fora da janela) e subagentes (tarefas em janelas limpas que devolvem resumos)."
       },
-      "conceitosChave": ["Compactação de contexto", "Memória de agentes", "Subagentes"],
+      "conceitosChave": [
+        "Compactação de contexto",
+        "Memória de agentes",
+        "Subagentes"
+      ],
       "fundamentacao": "Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025), seção sobre tarefas de longo horizonte (compaction, structured note-taking, sub-agent architectures)."
     },
     {
@@ -105,7 +109,10 @@
         "pergunta": "Como a documentação oficial define o Claude Code?",
         "resposta": "Como ferramenta de codificação agentiva que lê a base de código, edita arquivos, executa comandos e se integra às ferramentas de desenvolvimento. Está disponível no terminal, em IDEs, no app desktop e no navegador, e roda também sem interação (claude -p)."
       },
-      "conceitosChave": ["Claude Code: visão geral", "Agentes de codificação"],
+      "conceitosChave": [
+        "Claude Code: visão geral",
+        "Agentes de codificação"
+      ],
       "fundamentacao": "Claude Code, documentação “Overview” (code.claude.com/docs/en/overview) e “How Claude Code works” (code.claude.com/docs/en/how-claude-code-works)."
     },
     {
@@ -158,7 +165,10 @@
         "pergunta": "Quais são os escopos de CLAUDE.md no Claude Code?",
         "resposta": "Política gerenciada (organização), usuário (~/.claude/CLAUDE.md, todos os projetos), projeto (./CLAUDE.md ou ./.claude/CLAUDE.md, versionado) e local (./CLAUDE.local.md, pessoal, no .gitignore). Todos são lidos no início da sessão e concatenados como contexto, não como regra imposta."
       },
-      "conceitosChave": ["Claude Code: CLAUDE.md", "Memória de agentes"],
+      "conceitosChave": [
+        "Claude Code: CLAUDE.md",
+        "Memória de agentes"
+      ],
       "fundamentacao": "Claude Code, documentação “How Claude remembers your project” (code.claude.com/docs/en/memory), seção “Choose where to put CLAUDE.md files”."
     },
     {
@@ -180,14 +190,14 @@
           "explicacao": "Verdadeira. A documentação descreve o plan mode assim: Claude lê arquivos, executa comandos de exploração e escreve um plano, mas não edita o código-fonte; as edições ficam bloqueadas até a aprovação."
         },
         {
-          "texto": "Subagentes executam tarefas em janela de contexto própria, com prompt de sistema e acesso a ferramentas específicos, e devolvem um resumo à conversa principal.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. Subagentes são assistentes especializados que rodam em janela de contexto própria, com prompt de sistema, ferramentas e permissões próprias, e devolvem resumo."
-        },
-        {
           "texto": "Hooks são orientações em linguagem natural, gravadas no CLAUDE.md, que o modelo pode seguir ou não, conforme o contexto da tarefa.",
           "verdadeira": false,
           "explicacao": "Falsa. Hooks são comandos de shell configurados em arquivos de settings e executados pelo Claude Code em eventos do ciclo de vida. Dão controle determinístico, sem depender da decisão do modelo."
+        },
+        {
+          "texto": "Subagentes executam tarefas em janela de contexto própria, com prompt de sistema e acesso a ferramentas específicos, e devolvem um resumo à conversa principal.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Subagentes são assistentes especializados que rodam em janela de contexto própria, com prompt de sistema, ferramentas e permissões próprias, e devolvem resumo."
         },
         {
           "texto": "Com a opção -p, o Claude Code executa uma solicitação de forma não interativa, o que permite usá-lo em scripts e pipelines de integração contínua.",
@@ -201,40 +211,44 @@
           "id": "opt-1",
           "texto": "I, II, III e IV.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: hooks não são orientações em linguagem natural, e sim comandos de shell executados de forma determinística nos eventos configurados (PreToolUse, PostToolUse, Stop etc.)."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: hooks não são orientações em linguagem natural, e sim comandos de shell executados de forma determinística nos eventos configurados (PreToolUse, PostToolUse, Stop etc.)."
         },
         {
           "id": "opt-2",
-          "texto": "III e IV, apenas.",
+          "texto": "II e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a III é falsa: hooks são comandos determinísticos, não orientações em linguagem natural. Ficaram de fora a I e a II, ambas corretas."
+          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a II é falsa: hooks são comandos determinísticos, não orientações em linguagem natural. Ficaram de fora a I e a III, ambas corretas."
         },
         {
           "id": "opt-3",
-          "texto": "I, II e IV, apenas.",
+          "texto": "I, III e IV, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. Estão de acordo com a documentação a I (o plan mode explora e propõe sem editar o código até a aprovação), a II (subagentes têm contexto, prompt e ferramentas próprios e devolvem resumo) e a IV (-p executa sem interação, útil em scripts e CI). A III confunde hooks com instruções do CLAUDE.md: hooks são comandos de shell configurados em settings que garantem controle determinístico.",
+          "explicacaoDetalhada": "CORRETA. Estão de acordo com a documentação a I (o plan mode explora e propõe sem editar o código até a aprovação), a III (subagentes têm contexto, prompt e ferramentas próprios e devolvem resumo) e a IV (-p executa sem interação, útil em scripts e CI). A II confunde hooks com instruções do CLAUDE.md: hooks são comandos de shell configurados em settings que garantem controle determinístico.",
           "versaoInvertidaFalsa": "No modo de planejamento, o agente edita diretamente o código-fonte enquanto elabora o plano, e a aprovação do usuário serve apenas para registrar as mudanças já aplicadas."
         },
         {
           "id": "opt-4",
-          "texto": "I e III, apenas.",
+          "texto": "I e II, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III é falsa: hooks são comandos de shell que o Claude Code executa sempre, não orientações que o modelo possa ignorar. Faltam a II e a IV, também verdadeiras."
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a II é falsa: hooks são comandos de shell que o Claude Code executa sempre, não orientações que o modelo possa ignorar. Faltam a III e a IV, também verdadeiras."
         },
         {
           "id": "opt-5",
           "texto": "II, III e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa, e exclui a I, que é verdadeira: o plan mode explora e propõe sem editar o código até a aprovação. A II e a IV estão certas."
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa, e exclui a I, que é verdadeira: o plan mode explora e propõe sem editar o código até a aprovação. A III e a IV estão certas."
         }
       ],
-      "pegadinhaFCC": "A afirmativa III atribui aos hooks a natureza do CLAUDE.md. A diferença cobrada é que hooks são determinísticos (o harness executa sempre), enquanto o CLAUDE.md é contexto que o modelo pode ou não seguir.",
+      "pegadinhaFCC": "A afirmativa II atribui aos hooks a natureza do CLAUDE.md. A diferença cobrada é que hooks são determinísticos (o harness executa sempre), enquanto o CLAUDE.md é contexto que o modelo pode ou não seguir.",
       "resumoFlashcard": {
         "pergunta": "O que distingue plan mode, subagentes, hooks e o modo -p no Claude Code?",
         "resposta": "Plan mode explora e propõe plano sem editar o código até a aprovação. Subagentes trabalham em contexto próprio e devolvem resumo. Hooks são comandos de shell determinísticos disparados por eventos do ciclo de vida. -p executa sem interação, para scripts e CI."
       },
-      "conceitosChave": ["Claude Code: modo de planejamento", "Subagentes", "Claude Code: hooks"],
+      "conceitosChave": [
+        "Claude Code: modo de planejamento",
+        "Subagentes",
+        "Claude Code: hooks"
+      ],
       "fundamentacao": "Claude Code, documentação “Permission modes” (plan mode), “Create custom subagents”, “Automate actions with hooks” e “Run Claude Code programmatically” (code.claude.com/docs/en)."
     },
     {
@@ -244,10 +258,10 @@
       "origem": "Inédita padrão FCC",
       "nivel": "Avançado",
       "formato": "caso-pratico",
-      "enunciadoBase": "No repositório do sistema de fiscalização, o arquivo .env guarda credenciais e a pasta src/gen/ contém código gerado automaticamente, que não pode ser editado à mão. A equipe escreveu no CLAUDE.md, em letras maiúsculas, “NUNCA LEIA O .env E NUNCA EDITE src/gen/”, mas o agente ainda violou a regra em algumas sessões. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se",
+      "enunciadoBase": "No repositório do sistema de fiscalização, o arquivo .env guarda credenciais e a pasta src/gen/ contém código gerado automaticamente, que não pode ser editado à mão. A equipe escreveu no CLAUDE.md, em letras maiúsculas, “NUNCA LEIA O .env E NUNCA EDITE src/gen/”, mas o agente ainda violou a regra em algumas sessões. Para que essas restrições passem a ser aplicadas pela própria ferramenta, independentemente da decisão do modelo, deve-se",
       "variantesEnunciado": [
-        "No projeto do portal de prestação de contas, o arquivo .env contém segredos de integração e a pasta src/gen/ guarda clientes de API gerados por ferramenta. Mesmo com o aviso “NUNCA LEIA O .env E NUNCA EDITE src/gen/” no CLAUDE.md, o agente às vezes desrespeitou a orientação. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se",
-        "Uma auditoria interna constatou que o agente de codificação usado pela equipe abriu o arquivo .env e alterou arquivos de src/gen/ (código gerado), apesar da proibição escrita em maiúsculas no CLAUDE.md do repositório. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se"
+        "No projeto do portal de prestação de contas, o arquivo .env contém segredos de integração e a pasta src/gen/ guarda clientes de API gerados por ferramenta. Mesmo com o aviso “NUNCA LEIA O .env E NUNCA EDITE src/gen/” no CLAUDE.md, o agente às vezes desrespeitou a orientação. Para que essas restrições passem a ser aplicadas pela própria ferramenta, independentemente da decisão do modelo, deve-se",
+        "Uma auditoria interna constatou que o agente de codificação usado pela equipe abriu o arquivo .env e alterou arquivos de src/gen/ (código gerado), apesar da proibição escrita em maiúsculas no CLAUDE.md do repositório. Para que essas restrições passem a ser aplicadas pela própria ferramenta, independentemente da decisão do modelo, deve-se"
       ],
       "alternativas": [
         {
@@ -278,7 +292,7 @@
           "id": "opt-5",
           "texto": "incluir Read(./.env) nas regras deny de permissão e usar um hook PreToolUse com matcher Edit|Write que bloqueie, com código de saída 2, edições em src/gen/.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. Prompt e CLAUDE.md são instruções não determinísticas que o modelo pode deixar de seguir. Hooks e regras deny são aplicados pelo harness sempre. A regra deny Read(./.env) impede que as ferramentas de arquivo leiam o .env, e o hook PreToolUse, que roda antes da ferramenta e bloqueia quando sai com código 2, barra edições em src/gen/. O stderr volta ao Claude como motivo do bloqueio.",
+          "explicacaoDetalhada": "CORRETA. Prompt e CLAUDE.md são instruções não determinísticas que o modelo pode deixar de seguir. Hooks e regras deny são aplicados pelo harness sempre. A regra deny Read(./.env) impede que as ferramentas de arquivo leiam o .env, e o hook PreToolUse, que roda antes da ferramenta e bloqueia quando sai com código 2, barra edições em src/gen/. O stderr volta ao Claude como motivo do bloqueio. Para barrar também processos que leiam arquivos de forma indireta, como um script próprio, a documentação recomenda complementar com o sandbox, imposto pelo sistema operacional.",
           "versaoInvertidaFalsa": "manter as restrições apenas no CLAUDE.md, pois esse arquivo funciona como configuração imposta pelo harness e bloqueia qualquer leitura ou edição contrária às instruções registradas."
         }
       ],
@@ -287,7 +301,11 @@
         "pergunta": "Como impor no Claude Code uma regra que não pode ter exceção?",
         "resposta": "Com mecanismos determinísticos aplicados pelo harness: regras deny de permissão (por exemplo, Read(./.env)) e hooks PreToolUse que bloqueiam a ação ao sair com código 2. O CLAUDE.md orienta o modelo, mas não garante obediência."
       },
-      "conceitosChave": ["Claude Code: hooks", "Claude Code: permissões", "Claude Code: CLAUDE.md"],
+      "conceitosChave": [
+        "Claude Code: hooks",
+        "Claude Code: permissões",
+        "Claude Code: CLAUDE.md"
+      ],
       "fundamentacao": "Claude Code, “Best practices” (instruções determinísticas × não determinísticas), “Automate actions with hooks” (PreToolUse, exit 2), “Configure permissions” (ordem deny > ask > allow; Read(./.env)) e “Extend Claude Code” (“Put guardrails in hooks”)."
     },
     {
@@ -340,7 +358,10 @@
         "pergunta": "Quais são os traços distintivos do Google Antigravity?",
         "resposta": "É uma plataforma agent-first (novembro de 2025) com editor e Agent Manager para orquestrar vários agentes em paralelo. Os agentes atuam no editor, no terminal e no navegador e documentam o trabalho em artefatos verificáveis (plano de implementação, walkthrough, capturas), que o usuário comenta."
       },
-      "conceitosChave": ["Antigravity: Agent Manager e artefatos", "Agentes de codificação"],
+      "conceitosChave": [
+        "Antigravity: Agent Manager e artefatos",
+        "Agentes de codificação"
+      ],
       "fundamentacao": "Google Developers Blog, “Build with Google Antigravity, our new agentic development platform” (nov/2025); documentação antigravity.google (“Plan”, “Walkthrough”); Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026).",
       "revisarFonteOficial": true
     },
@@ -358,66 +379,70 @@
       ],
       "assertivas": [
         {
-          "texto": "As duas ferramentas oferecem execução não interativa (headless), adequada a scripts, pipelines e servidores acessados por SSH ou containers remotos.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. No Claude Code, claude -p (--print) roda sem interação, com saída em texto ou JSON. O Google recomenda a Antigravity CLI para execução headless, por exemplo via SSH ou em containers remotos."
-        },
-        {
-          "texto": "No Claude Code, servidores MCP de escopo de projeto declarados em .mcp.json exigem aprovação do usuário antes do uso em sessões interativas.",
-          "verdadeira": true,
-          "explicacao": "Verdadeira. Por segurança, o Claude Code pede aprovação, em sessões interativas, antes de usar servidores de escopo de projeto do .mcp.json."
-        },
-        {
           "texto": "A Antigravity CLI, o app desktop, a IDE e o SDK do Antigravity usam harnesses de agente distintos e incompatíveis entre si, sem compartilhar skills ou plugins.",
           "verdadeira": false,
           "explicacao": "Falsa. Segundo o Google, embora cada interface pareça diferente, todas rodam sobre o mesmo harness de agente subjacente, com suporte a plugins e skills."
         },
         {
+          "texto": "As duas ferramentas oferecem execução não interativa (headless), adequada a scripts, pipelines e servidores acessados por SSH ou containers remotos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No Claude Code, claude -p (--print) roda sem interação, com saída em texto ou JSON. O Google recomenda a Antigravity CLI para execução headless, por exemplo via SSH ou em containers remotos."
+        },
+        {
           "texto": "O modo que ignora as solicitações de permissão (no Claude Code, bypassPermissions) é o recomendado para o uso cotidiano em estações de trabalho conectadas à internet.",
           "verdadeira": false,
           "explicacao": "Falsa. A documentação do Claude Code restringe o bypassPermissions a ambientes isolados, como containers, VMs ou dev containers sem acesso à internet, e alerta que ele não protege contra prompt injection."
+        },
+        {
+          "texto": "No Claude Code, servidores MCP de escopo de projeto declarados em .mcp.json exigem aprovação do usuário antes do uso em sessões interativas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Por segurança, o Claude Code pede aprovação, em sessões interativas, antes de usar servidores de escopo de projeto do .mcp.json."
         }
       ],
       "comandoFinal": "Está correto o que se afirma em",
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "I, II e III, apenas.",
+          "texto": "I, II e IV, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A I e a II estão certas, mas a III é falsa: o Google afirma que Antigravity 2.0, CLI, IDE e SDK compartilham o mesmo harness de agente e oferecem plugins e skills."
+          "explicacaoDetalhada": "INCORRETA. A II e a IV estão certas, mas a I é falsa: o Google afirma que Antigravity 2.0, CLI, IDE e SDK compartilham o mesmo harness de agente e oferecem plugins e skills."
         },
         {
           "id": "opt-2",
-          "texto": "II e IV, apenas.",
+          "texto": "II e III, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: ignorar permissões é aceitável só em ambiente isolado. Além disso, a combinação omite a I, que é verdadeira."
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a III é falsa: ignorar permissões é aceitável só em ambiente isolado. Além disso, a combinação omite a IV, que é verdadeira."
         },
         {
           "id": "opt-3",
-          "texto": "III e IV, apenas.",
+          "texto": "I e III, apenas.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a III (os harnesses são o mesmo, não distintos) e a IV (o bypass é para ambientes isolados, não para o uso cotidiano)."
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a I (os harnesses são o mesmo, não distintos) e a III (o bypass é para ambientes isolados, não para o uso cotidiano)."
         },
         {
           "id": "opt-4",
-          "texto": "I e II, apenas.",
+          "texto": "II e IV, apenas.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. A I procede: claude -p e a Antigravity CLI, que o Google recomenda para execução headless (SSH, containers remotos), atendem a automação sem interface. A II também: o Claude Code pede aprovação antes de usar servidores do .mcp.json em sessões interativas. A III contraria o Google, segundo o qual todas as superfícies do Antigravity rodam sobre o mesmo harness, e a IV contraria a documentação, que restringe o bypassPermissions a ambientes isolados.",
+          "explicacaoDetalhada": "CORRETA. A II procede: claude -p e a Antigravity CLI, que o Google recomenda para execução headless (SSH, containers remotos), atendem a automação sem interface. A IV também: o Claude Code pede aprovação antes de usar servidores do .mcp.json em sessões interativas. A I contraria o Google, segundo o qual todas as superfícies do Antigravity rodam sobre o mesmo harness, e a III contraria a documentação, que restringe o bypassPermissions a ambientes isolados.",
           "versaoInvertidaFalsa": "Nenhuma das duas ferramentas permite execução não interativa, de modo que a automação em servidores sem interface gráfica exige sempre um operador respondendo às solicitações do agente."
         },
         {
           "id": "opt-5",
           "texto": "I, II, III e IV.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a III e a IV são falsas: as superfícies do Antigravity compartilham o mesmo harness, e o bypass de permissões é desaconselhado fora de ambientes isolados."
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a I e a III são falsas: as superfícies do Antigravity compartilham o mesmo harness, e o bypass de permissões é desaconselhado fora de ambientes isolados."
         }
       ],
-      "pegadinhaFCC": "A afirmativa IV parece pragmática (“evitar interrupções”), mas o modo que ignora permissões é desaconselhado fora de ambientes isolados. A III nega o harness compartilhado entre as superfícies do Antigravity.",
+      "pegadinhaFCC": "A afirmativa III parece pragmática (“evitar interrupções”), mas o modo que ignora permissões é desaconselhado fora de ambientes isolados. A I nega o harness compartilhado entre as superfícies do Antigravity.",
       "resumoFlashcard": {
         "pergunta": "Como Claude Code e Antigravity CLI atendem à automação sem interface gráfica?",
         "resposta": "Ambos têm execução headless: claude -p no Claude Code e a Antigravity CLI, superfície de terminal recomendada pelo Google para SSH e containers e que compartilha o harness do Antigravity. Ignorar permissões (bypassPermissions) só é aceitável em ambientes isolados."
       },
-      "conceitosChave": ["Antigravity CLI", "Claude Code: modo não interativo (-p)", "Claude Code: permissões"],
+      "conceitosChave": [
+        "Antigravity CLI",
+        "Claude Code: modo não interativo (-p)",
+        "Claude Code: permissões"
+      ],
       "fundamentacao": "Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026); Claude Code, “Run Claude Code programmatically” (-p), “Connect Claude Code to tools via MCP” (escopo de projeto) e “Permission modes” (bypassPermissions).",
       "revisarFonteOficial": true
     },
@@ -471,7 +496,9 @@
         "pergunta": "Quais são as fases do ciclo agentivo segundo a documentação do Claude Code?",
         "resposta": "Coletar contexto, agir e verificar resultados, em ciclo que se repete e se adapta à tarefa até a conclusão. O modelo decide cada passo a partir do resultado do anterior, e o usuário pode interromper e redirecionar a qualquer momento."
       },
-      "conceitosChave": ["Ciclo agentivo"],
+      "conceitosChave": [
+        "Ciclo agentivo"
+      ],
       "fundamentacao": "Claude Code, documentação “How Claude Code works”, seção “The agentic loop” (code.claude.com/docs/en/how-claude-code-works)."
     },
     {
@@ -524,7 +551,10 @@
         "pergunta": "Do que um agente precisa para verificar e corrigir o próprio trabalho (self-healing)?",
         "resposta": "De um check executável com resultado aprovado ou reprovado (testes, build, linter, comparação com fixture). Com ele, o agente altera o código, roda o check, lê a falha, corrige e repete até passar, e deve apresentar a saída como evidência."
       },
-      "conceitosChave": ["Autocorreção (self-healing)", "Validação determinística"],
+      "conceitosChave": [
+        "Autocorreção (self-healing)",
+        "Validação determinística"
+      ],
       "fundamentacao": "Claude Code, “Best practices”, seção “Give Claude a check to run” (code.claude.com/docs/en/best-practices); Claude Blog, “Building agents with the Claude Agent SDK” (29/09/2025), seção “Verify your work”."
     },
     {
@@ -554,7 +584,7 @@
         },
         {
           "id": "opt-3",
-          "texto": "ao tentar encerrar o turno, o agente é impedido pelo código de saída 2, recebe os erros do compilador pelo stderr e continua trabalhando até a checagem passar.",
+          "texto": "ao tentar encerrar o turno, o agente é barrado pelo código de saída 2, recebe os erros do compilador pelo stderr e volta a trabalhar para corrigi-los antes de concluir.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. A documentação de boas práticas traz este exemplo. O hook Stop roda quando Claude tenta terminar o turno; se o tsc falha, o || exit 2 bloqueia a parada, e o que foi impresso no stderr (por isso o 1>&2) volta ao Claude como razão de não poder concluir. O agente corrige e tenta de novo até o typecheck passar ou até o limite de bloqueios consecutivos. É a verificação imposta pelo harness, não deixada ao critério do modelo.",
           "versaoInvertidaFalsa": "ao tentar encerrar o turno, o agente conclui normalmente, porque o código de saída 2 indica sucesso e a saída do compilador não é repassada ao modelo, que só a veria em um log."
@@ -577,7 +607,10 @@
         "pergunta": "O que faz um hook Stop que termina com exit 2 no Claude Code?",
         "resposta": "Impede que Claude encerre o turno e devolve ao modelo o que foi escrito no stderr como motivo. Com um comando de verificação (por exemplo, tsc --noEmit), o agente é mandado de volta ao trabalho até o check passar: é verificação imposta pelo harness."
       },
-      "conceitosChave": ["Claude Code: hooks", "Autocorreção (self-healing)"],
+      "conceitosChave": [
+        "Claude Code: hooks",
+        "Autocorreção (self-healing)"
+      ],
       "fundamentacao": "Claude Code, “Best practices”, seção “Enforce the check with a Stop hook”; “Automate actions with hooks” (eventos, exit code 2) (code.claude.com/docs/en)."
     }
   ]

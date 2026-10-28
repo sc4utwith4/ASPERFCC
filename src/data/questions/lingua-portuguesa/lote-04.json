@@ -1,0 +1,542 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "lp-031",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Relação texto-contexto, intertextualidade e gêneros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t07",
+      "enunciadoBase": "No 2º e no 3º parágrafos, o autor estabelece um diálogo intertextual com a epopeia homérica (Odisseia). A respeito desse recurso, é correto afirmar que o autor",
+      "variantesEnunciado": [
+        "O texto retoma episódios da Odisseia, de Homero, no 2º e no 3º parágrafos. Quanto ao modo como o autor se vale desse diálogo intertextual, é correto afirmar que ele",
+        "Ao mencionar Penélope e Ulisses, o autor recorre à intertextualidade com o poema homérico. Sobre o uso desse recurso, depreende-se corretamente do texto que o autor"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cita literalmente versos do poema homérico para comprovar que os gregos antigos já liam devagar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor não transcreve versos: retoma os episódios por paráfrase e alusão, sem citação literal. E não afirma que os gregos “liam devagar”; diz que eles legaram “uma imagem que serve bem a quem lê devagar”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "contesta a versão tradicional do mito ao afirmar que Penélope agia por astúcia, e não por fidelidade a Ulisses.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor não contesta o mito nem fala em fidelidade. Ele registra a leitura corrente (“Costuma-se ver nesse gesto apenas astúcia”) e acrescenta outra (“prefiro ver nele uma lição de método”). Ampliar uma interpretação não é negar a versão tradicional."
+        },
+        {
+          "id": "opt-3",
+          "texto": "lembra que Ulisses tapou os próprios ouvidos com cera para não ouvir o canto das sereias, como deveria fazer o leitor diante das telas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Segundo o texto (e a Odisseia), Ulisses queria ouvir o canto e, para não se lançar ao mar, “mandou que os companheiros o amarrassem ao mastro”. Quem teve os ouvidos tapados foram os companheiros. A alternativa troca justamente o detalhe que sustenta a analogia."
+        },
+        {
+          "id": "opt-4",
+          "texto": "recorre aos episódios para sustentar que a leitura em telas deve ser abandonada em favor exclusivo do livro de papel.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 4º parágrafo afirma que “Nada disso implica condenar a tecnologia”, que multiplicou o acesso aos textos. O livro de papel aparece como uma das “cordas” possíveis, ao lado de um horário sem notificações, e não como alternativa exclusiva."
+        },
+        {
+          "id": "opt-5",
+          "texto": "reinterpreta o gesto de Penélope como lição de método de leitura e o expediente de Ulisses como estratégia contra a distração.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A intertextualidade é feita por alusão e releitura: o tecer e desfazer da mortalha vira método de leitura (“avançar uma página, voltar duas, desmanchar a primeira impressão”), e o pedido de Ulisses para ser amarrado ao mastro vira modelo para “inventar as próprias cordas” contra a distração (horários sem notificações, livro de papel). O autor se apropria do texto-fonte para construir seu argumento.",
+          "versaoInvertidaFalsa": "No texto, o autor cita literalmente versos da Odisseia e reafirma a interpretação tradicional de que o gesto de Penélope revela apenas astúcia, sem relação com a leitura."
+        }
+      ],
+      "pegadinhaFCC": "Em intertextualidade, a FCC distingue alusão e paráfrase de citação e cobra o uso que o autor faz do texto-fonte. O distrator sobre a cera nos ouvidos explora a memória imprecisa do mito para atrair quem não confere o texto.",
+      "resumoFlashcard": {
+        "pergunta": "Como o ensaio “Elogio da leitura lenta” usa a Odisseia?",
+        "resposta": "Por alusão e releitura: Penélope, que tecia de dia e desfazia à noite, ilustra o método de ler e reler; Ulisses, amarrado ao mastro para ouvir as sereias sem se perder, ilustra a necessidade de criar “cordas” contra a distração. O texto-fonte é reinterpretado a serviço da tese."
+      },
+      "conceitosChave": ["Intertextualidade", "Alusão e paráfrase"],
+      "fundamentacao": "Koch, Bentes e Cavalcante, Intertextualidade: diálogos possíveis (Cortez, 2007); Homero, Odisseia (episódios da mortalha de Penélope e das sereias); texto lp-t07, 2º e 3º parágrafos."
+    },
+    {
+      "id": "lp-032",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Denotação, conotação e figuras de linguagem",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t07",
+      "enunciadoBase": "Na frase inicial do texto (“Lemos hoje mais palavras do que qualquer geração anterior, e talvez nunca tenhamos lido tão pouco”), o autor emprega",
+      "variantesEnunciado": [
+        "Considerando-se o 1º parágrafo, a frase “Lemos hoje mais palavras do que qualquer geração anterior, e talvez nunca tenhamos lido tão pouco” constitui",
+        "O texto se inicia com a frase “Lemos hoje mais palavras do que qualquer geração anterior, e talvez nunca tenhamos lido tão pouco”, na qual se reconhece"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um paradoxo, desfeito adiante pela distinção entre ver palavras e ler com atenção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O paradoxo reúne ideias que parecem contraditórias (ler mais e ler menos). O texto o anuncia — “A contradição é apenas aparente” — e o resolve: o volume de palavras diante dos olhos (manchetes, mensagens, avisos) não equivale à leitura no sentido forte, a de “habitar” o texto.",
+          "versaoInvertidaFalsa": "Na frase inicial do texto, há um pleonasmo, pois a ideia de ler muitas palavras é repetida para reforçar o elogio à leitura contemporânea."
+        },
+        {
+          "id": "opt-2",
+          "texto": "uma hipérbole, que exagera a quantidade de palavras lidas para ironizar o hábito contemporâneo da leitura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há exagero: é plausível que hoje se leiam mais palavras do que antes, pela profusão de telas. O efeito expressivo vem da contradição aparente entre “mais palavras” e “tão pouco”, e não da ampliação de um fato."
+        },
+        {
+          "id": "opt-3",
+          "texto": "um eufemismo, que suaviza a constatação de que as novas gerações já não sabem ler.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O eufemismo atenua uma ideia desagradável. A frase não suaviza crítica alguma; ao contrário, provoca o leitor com uma contradição. Também não afirma que as novas gerações não sabem ler."
+        },
+        {
+          "id": "opt-4",
+          "texto": "uma metonímia, que toma a quantidade de palavras pela qualidade dos livros publicados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A metonímia substitui um termo por outro com que mantém relação de contiguidade (autor pela obra, continente pelo conteúdo). A frase não faz substituição desse tipo, nem fala de livros publicados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "um pleonasmo, que repete a mesma ideia de leitura com a finalidade de reforçá-la.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pleonasmo repete uma ideia para reforçá-la. Aqui há oposição de ideias (“mais” × “tão pouco”), e o verbo “ler” aparece em sentidos diferentes, não como redundância."
+        }
+      ],
+      "pegadinhaFCC": "O próprio autor declara “A contradição é apenas aparente”, que é a definição de paradoxo. Os distratores oferecem figuras próximas (hipérbole, pleonasmo) para quem não percebe a oposição entre “mais palavras” e “tão pouco”.",
+      "resumoFlashcard": {
+        "pergunta": "O que é paradoxo e como reconhecê-lo?",
+        "resposta": "É a figura que associa ideias aparentemente contraditórias, mas que fazem sentido em outro nível: “Lemos mais palavras do que nunca e nunca lemos tão pouco”. Difere da antítese, que apenas aproxima termos opostos sem afirmar ambos sobre o mesmo objeto."
+      },
+      "conceitosChave": ["Figuras de linguagem: paradoxo", "Figuras de linguagem: antítese"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Figuras de linguagem” (antítese e paradoxo); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Estilística”; texto lp-t07, 1º parágrafo."
+    },
+    {
+      "id": "lp-033",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t07",
+      "enunciadoBase": "Está correta e preserva o sentido do texto a nova redação proposta para o seguinte segmento:",
+      "variantesEnunciado": [
+        "Mantêm-se a correção e o sentido original na reescrita do seguinte segmento do ensaio:",
+        "Considerando-se a norma-padrão e o sentido do texto, está adequada a nova redação dada a um segmento em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“é coisa diversa de habitá-lo” (1º parágrafo): é coisa idêntica a habitá-lo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A reescrita é gramatical, mas inverte o sentido: o autor afirma que deslizar os olhos sobre um texto é “coisa diversa” (diferente) de habitá-lo; “coisa idêntica” diz o contrário e destrói a distinção central do ensaio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“Quem quer ler com atenção precisa [...] inventar as próprias cordas” (3º parágrafo): Quem quer ler com atenção, precisa inventar as próprias cordas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Quem quer ler com atenção” é oração subordinada substantiva subjetiva, isto é, o sujeito de “precisa”. A vírgula entre sujeito e verbo é vedada pela norma-padrão, mesmo quando o sujeito é uma oração."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“Penélope, enquanto esperava o regresso de Ulisses, tecia” (2º parágrafo): Penélope, embora esperasse o regresso de Ulisses, tecia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Enquanto” tem valor temporal (durante o tempo em que esperava); “embora” é concessivo e criaria uma oposição inexistente entre esperar Ulisses e tecer a mortalha. Há mudança de sentido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“a esse fluxo contínuo damos, por comodidade, o nome de leitura” (1º parágrafo): damos, por comodidade, a esse fluxo contínuo o nome de leitura",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A nova ordem apenas desloca o objeto indireto (“a esse fluxo contínuo”) para depois do verbo, e a expressão intercalada “por comodidade” continua isolada por vírgulas. Mantêm-se a correção (dar algo a alguém: “damos [...] a esse fluxo contínuo o nome de leitura”) e o sentido.",
+          "versaoInvertidaFalsa": "A reescrita “damos, por comodidade, a esse fluxo contínuo o nome de leitura” altera o sentido do original, pois transforma o objeto indireto “a esse fluxo contínuo” em sujeito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“para que outra, mais sólida, ocupe o seu lugar” (2º parágrafo): para que outra, mais sólida, ocupa o seu lugar",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A locução final “para que” exige o subjuntivo: “para que outra [...] ocupe”. O indicativo “ocupa” é incorreto nessa construção."
+        }
+      ],
+      "pegadinhaFCC": "Em “nova redação de um segmento”, a FCC mistura erros de correção (vírgula entre sujeito oracional e verbo, indicativo depois de “para que”) e de sentido (troca de conectivo, antônimo). A correta costuma ser uma simples reordenação de termos com a pontuação preservada.",
+      "resumoFlashcard": {
+        "pergunta": "Pode haver vírgula entre uma oração subjetiva iniciada por “quem” e o verbo principal?",
+        "resposta": "Não. Em “Quem quer ler com atenção precisa inventar as próprias cordas”, a oração “Quem quer ler com atenção” é o sujeito de “precisa”; separar sujeito e verbo por vírgula é erro, ainda que o sujeito seja oracional e longo."
+      },
+      "conceitosChave": ["Reescrita: manutenção de sentido", "Pontuação: vírgula", "Conectivos: valor semântico"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pontuação” e “Orações subordinadas”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Conjunções”; texto lp-t07, 1º a 3º parágrafos."
+    },
+    {
+      "id": "lp-034",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t08",
+      "enunciadoBase": "No 2º parágrafo, o autor afirma que “a digitalização não elimina a fila: apenas a torna invisível”. Considerando-se o contexto, essa afirmação significa que",
+      "variantesEnunciado": [
+        "Considerando-se o 2º parágrafo, a afirmação de que “a digitalização não elimina a fila: apenas a torna invisível” deve ser entendida no sentido de que",
+        "De acordo com o contexto em que se insere, o trecho “a digitalização não elimina a fila: apenas a torna invisível” (2º parágrafo) indica que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as filas desapareceram para todos os cidadãos, que agora resolvem suas pendências com o poder público em poucos minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 1º parágrafo reconhece ganhos da digitalização, mas o 2º restringe esse benefício a quem dispõe de aparelho, conexão e familiaridade com aplicativos. A generalização (“para todos os cidadãos”) contraria o argumento central."
+        },
+        {
+          "id": "opt-2",
+          "texto": "quem não consegue usar o sistema continua sem atendimento, mas nem sequer é contado entre os que esperam.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A frase se explica pela oração causal que a segue: “porque quem não consegue entrar no sistema nem sequer chega a ser contado entre os que esperam”. A exclusão (a “fila”) persiste para o trabalhador com celular antigo, o idoso sem senha e o morador sem sinal, mas deixa de ser visível, pois essas pessoas nem aparecem entre os que aguardam atendimento.",
+          "versaoInvertidaFalsa": "No texto, dizer que a digitalização torna a fila invisível significa que ela eliminou a espera de todos os cidadãos, inclusive dos que não têm acesso à internet."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as plataformas digitais criaram filas virtuais, nas quais os usuários aguardam atendimento sem conseguir saber a própria posição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa toma “fila” em sentido literal e técnico. No texto, “fila invisível” é metáfora da exclusão de quem não consegue acessar o serviço digital, e não descrição de uma fila virtual de usuários conectados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o atendimento presencial, ao se tornar invisível, passou a ser oferecido apenas a quem domina a tecnologia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor não diz que o atendimento presencial se tornou invisível nem que é exclusivo de quem domina a tecnologia; ao contrário, defende manter canais presenciais ou telefônicos para evitar que um direito vire “privilégio de quem domina a tecnologia”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a fila foi transferida dos balcões para as centrais telefônicas, onde a espera passou a ser ainda maior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não menciona transferência da espera para centrais telefônicas; o atendimento telefônico aparece no 3º parágrafo como canal a ser mantido para incluir quem tem dificuldade com as plataformas."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece a leitura literal de uma metáfora (“fila virtual”) e a generalização do benefício. A chave está na oração causal que vem logo depois: a fila é invisível porque os excluídos nem são contados.",
+      "resumoFlashcard": {
+        "pergunta": "Em “O balcão que virou tela”, o que significa dizer que a digitalização torna a fila “invisível”?",
+        "resposta": "Que a exclusão continua, mas deixa de ser vista: quem não tem aparelho, conexão ou familiaridade com aplicativos não consegue entrar no sistema e, por isso, nem sequer é contado entre os que esperam atendimento."
+      },
+      "conceitosChave": ["Interpretação: inferência", "Denotação e conotação"],
+      "fundamentacao": "Texto lp-t08, 2º e 3º parágrafos; interpretação de expressão metafórica no contexto."
+    },
+    {
+      "id": "lp-035",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t08",
+      "enunciadoBase": "Está correta a nova redação de um segmento do texto, mantido o sentido original, em:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão e o sentido original, a reescrita de um segmento do artigo está correta em:",
+        "Uma nova redação, correta e fiel ao sentido do texto, foi dada ao seguinte segmento:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“Poucos sentem saudade dessa época, e com razão” (1º parágrafo): Poucos sentem saudade dessa época, o que se justifica.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “E com razão” é comentário do autor sobre o fato de poucos sentirem saudade: a falta de saudade é justificada. A oração “o que se justifica”, em que “o que” retoma toda a oração anterior, expressa o mesmo juízo, com correção gramatical e pontuação adequada.",
+          "versaoInvertidaFalsa": "No 1º parágrafo, “e com razão” indica que o autor considera injustificada a falta de saudade da época dos carimbos, de modo que a reescrita fiel seria “o que é lamentável”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“voltar no dia seguinte porque faltava um carimbo” (1º parágrafo): voltar no dia seguinte porquanto faltasse um carimbo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Porquanto” é conjunção causal (= porque, visto que) e se constrói com o indicativo: “porquanto faltava um carimbo”. O subjuntivo “faltasse” torna a frase incorreta e enfraquece a causa, que no texto é um fato."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“perguntar quem essa comodidade de fato alcança” (2º parágrafo): perguntar à quem essa comodidade de fato alcança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há crase antes do pronome “quem”, que não admite artigo. Além disso, “alcançar” é transitivo direto, e “quem” é seu objeto direto; o original não tem preposição alguma."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“diante dele havia uma pessoa” (4º parágrafo): diante dele haviam pessoas capazes de perceber a dúvida de quem chegava.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Haver” no sentido de existir é impessoal e fica no singular mesmo com complemento no plural: “diante dele havia pessoas”. O plural “haviam” é erro de concordância, e a troca do singular pelo plural ainda altera o sentido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“Talvez o desafio da administração digital seja justamente este” (4º parágrafo): Talvez o desafio da administração digital é justamente este.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O advérbio “talvez” anteposto ao verbo exige o subjuntivo, como no original (“seja”). Com o indicativo “é”, a construção contraria a norma-padrão; o indicativo só se admite com “talvez” posposto (“O desafio é, talvez, este”)."
+        }
+      ],
+      "pegadinhaFCC": "Cada distrator cobra um conteúdo diferente (conectivo com modo verbal, crase antes de pronome, haver impessoal, subjuntivo depois de “talvez”). É a questão de confronto de frases da FCC: a correta pode parecer menos formal, mas é a única sem erro.",
+      "resumoFlashcard": {
+        "pergunta": "Que modo verbal exigem “talvez” anteposto e “porquanto”?",
+        "resposta": "“Talvez” antes do verbo exige subjuntivo (“Talvez seja este o desafio”); depois do verbo, admite indicativo (“É, talvez, este”). “Porquanto”, causal, pede indicativo (“porquanto faltava um carimbo”)."
+      },
+      "conceitosChave": ["Reescrita: confronto de frases", "Modos verbais: subjuntivo", "Concordância: verbos impessoais"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Emprego dos modos” e “Concordância verbal”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Crase” e “Conjunções causais”; texto lp-t08."
+    },
+    {
+      "id": "lp-036",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Pontuação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t08",
+      "enunciadoBase": "A respeito da pontuação do texto, é correto afirmar:",
+      "variantesEnunciado": [
+        "Considerando-se os sinais de pontuação empregados no artigo, está correto o que se afirma em:",
+        "Sobre o emprego dos sinais de pontuação no texto “O balcão que virou tela”, é correto afirmar:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "No 1º parágrafo, os travessões isolam exemplos de “certos procedimentos” e poderiam ser substituídos por parênteses, sem prejuízo da correção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em “transformou certos procedimentos — a emissão de uma certidão, o agendamento de uma consulta — em questão de minutos”, os travessões duplos isolam uma intercalação que exemplifica “certos procedimentos”. Nessa função, travessões e parênteses são intercambiáveis; as vírgulas também seriam possíveis, mas se confundiriam com as vírgulas internas da enumeração.",
+          "versaoInvertidaFalsa": "No 1º parágrafo, os travessões que isolam “a emissão de uma certidão, o agendamento de uma consulta” não poderiam ser substituídos por parênteses, pois indicam mudança de interlocutor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "No 2º parágrafo, a vírgula depois de “contudo” poderia ser suprimida, mantendo-se apenas a anterior, sem prejuízo da correção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conjunção ou expressão intercalada (“contudo”, “no entanto”, “porém” deslocados) fica entre duas vírgulas: “É preciso, contudo, perguntar...”. Suprimir só uma delas deixa a intercalação incompleta e incorreta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "No 4º parágrafo, a vírgula depois de “pessoa” separa indevidamente o sujeito de seu verbo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Haver” no sentido de existir é impessoal, e “uma pessoa” é objeto direto. A vírgula depois de “pessoa” isola o termo explicativo “capaz de perceber a dúvida no rosto de quem chegava”, que caracteriza a pessoa; não há separação entre sujeito e verbo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "No 3º parágrafo, os dois-pontos introduzem uma ressalva que contradiz a ideia anterior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois-pontos do 3º parágrafo introduzem a explicitação do que se evita (“a transformação de um direito em privilégio de quem domina a tecnologia”), isto é, especificam o termo anterior. Não há ressalva nem contradição."
+        },
+        {
+          "id": "opt-5",
+          "texto": "No 4º parágrafo, a vírgula depois de “defeitos” é indevida, pois não se usa vírgula antes da conjunção “mas”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A vírgula antes de “mas” é a norma nas orações coordenadas adversativas: “O balcão antigo tinha muitos defeitos, mas tinha também uma virtude”. A proibição apontada não existe."
+        }
+      ],
+      "pegadinhaFCC": "A FCC cobra a equivalência entre travessões, parênteses e vírgulas nas intercalações e a regra da conjunção intercalada entre duas vírgulas. Distratores criam proibições inexistentes (vírgula antes de “mas”) ou atribuem aos dois-pontos funções que eles não têm no trecho.",
+      "resumoFlashcard": {
+        "pergunta": "Quando travessões duplos podem ser trocados por parênteses ou vírgulas?",
+        "resposta": "Quando isolam uma intercalação (explicação, exemplo, comentário): “certos procedimentos — a emissão de uma certidão, o agendamento de uma consulta — ...”. Se a intercalação já contém vírgulas, travessões ou parênteses evitam ambiguidade."
+      },
+      "conceitosChave": ["Pontuação: travessão", "Pontuação: vírgula", "Pontuação: dois-pontos"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pontuação” (vírgula, dois-pontos, travessão e parênteses); Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pontuação”; texto lp-t08."
+    },
+    {
+      "id": "lp-037",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Regência nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere as frases: (1) Este é o sistema de …… funcionamento dependem as auditorias de conformidade. (2) O cargo …… o técnico aspira exige certificação em segurança da informação. (3) A norma …… se referiu o relator foi revogada no ano passado. (4) Os servidores …… o diretor confiou a tarefa concluíram o levantamento. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Atente para as frases a seguir, em que foram omitidos pronomes relativos e, quando necessário, as preposições que os antecedem: (1) Este é o sistema de …… funcionamento dependem as auditorias de conformidade. (2) O cargo …… o técnico aspira exige certificação em segurança da informação. (3) A norma …… se referiu o relator foi revogada no ano passado. (4) Os servidores …… o diretor confiou a tarefa concluíram o levantamento. Completam, correta e respectivamente, as lacunas:",
+        "Em relatório de uma unidade técnica, constam as frases: (1) Este é o sistema de …… funcionamento dependem as auditorias de conformidade. (2) O cargo …… o técnico aspira exige certificação em segurança da informação. (3) A norma …… se referiu o relator foi revogada no ano passado. (4) Os servidores …… o diretor confiou a tarefa concluíram o levantamento. De acordo com a norma-padrão, as lacunas são preenchidas, correta e respectivamente, por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cujo o − que − que − que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Cujo” nunca é seguido de artigo (“cujo o” é erro). E nas demais lacunas falta a preposição exigida pelos verbos da oração adjetiva: “aspirar a”, “referir-se a”, “confiar algo a alguém”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cujo − que − de que − a quem",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “cujo” e “a quem”, mas erra (2) e (3): “aspirar”, no sentido de desejar, rege “a” e não dispensa a preposição; “referir-se” rege “a”, e não “de”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "do qual − a que − à qual − em quem",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na lacuna (1), a preposição “de” já está na frase; com “do qual”, ela fica agramatical (“de do qual funcionamento”). Na (4), “confiar em” significa ter confiança; para atribuir uma tarefa, a regência é “confiar a tarefa a alguém” (“a quem”)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cujo − a qual − a que − que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em (2), “cargo” é masculino, e o relativo deveria ser “ao qual” (ou “a que”), nunca “a qual”. Em (4), falta a preposição exigida por “confiar [algo] a alguém”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cujo − a que − a que − a quem",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. (1) “Cujo” indica posse (o funcionamento do sistema), concorda com o possuído (“funcionamento”) e vem sem artigo; a preposição “de”, exigida por “dependem”, já está antes da lacuna. (2) “Aspirar”, no sentido de desejar, rege “a”: “o cargo a que aspira”. (3) “Referir-se” rege “a”: “a norma a que se referiu” (ou “à qual”). (4) “Confiar algo a alguém”: “os servidores a quem o diretor confiou a tarefa”. A preposição exigida pelo verbo da oração adjetiva vem antes do relativo.",
+          "versaoInvertidaFalsa": "cujo o − que − que − que, pois o pronome cujo exige artigo e os pronomes relativos dispensam a preposição pedida pelo verbo."
+        }
+      ],
+      "pegadinhaFCC": "A preposição do verbo da oração adjetiva tem de ir para antes do relativo (“a que aspira”, “a que se referiu”, “a quem confiou”). A banca também cobra “cujo” sem artigo e a diferença de sentido entre “confiar a” (entregar) e “confiar em” (acreditar).",
+      "resumoFlashcard": {
+        "pergunta": "Como usar corretamente o pronome relativo “cujo”?",
+        "resposta": "“Cujo” indica posse entre o antecedente e o termo seguinte, concorda com o possuído e não admite artigo depois (“o sistema cujo funcionamento”, nunca “cujo o”). Recebe antes a preposição exigida pelo verbo: “o sistema de cujo funcionamento dependem as auditorias”."
+      },
+      "conceitosChave": ["Regência: pronome relativo", "Pronome relativo: cujo", "Regência verbal"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pronome relativo” (cujo; relativo preposicionado); Celso Pedro Luft, Dicionário Prático de Regência Verbal (verbetes aspirar, referir-se, confiar e depender)."
+    },
+    {
+      "id": "lp-038",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Flexão, vozes verbais e correlação de tempos e modos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Transpondo-se para a voz passiva analítica a frase “A equipe de auditoria examinava os contratos de tecnologia da informação com rigor”, a forma verbal resultante será:",
+      "variantesEnunciado": [
+        "Na voz passiva analítica, a frase “A equipe de auditoria examinava os contratos de tecnologia da informação com rigor” apresentará a seguinte forma verbal:",
+        "Ao se converter para a voz passiva com verbo auxiliar a frase “A equipe de auditoria examinava os contratos de tecnologia da informação com rigor”, obtém-se a forma verbal:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "foram examinados",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Foram examinados” corresponde ao pretérito perfeito (“examinou”). Na transposição, o auxiliar “ser” assume o tempo do verbo da ativa, que está no pretérito imperfeito: “eram”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "era examinado",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tempo está correto, mas a concordância não: o sujeito paciente é “os contratos de tecnologia da informação”, no plural. O auxiliar e o particípio vão ao plural: “eram examinados”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "examinavam-se",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Examinavam-se” é voz passiva sintética (pronominal), e não analítica. A questão pede a forma com o auxiliar “ser” + particípio."
+        },
+        {
+          "id": "opt-4",
+          "texto": "tinham sido examinados",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Tinham sido examinados” corresponde ao mais-que-perfeito composto (“tinha examinado”), anterior a outro fato passado. A ativa está no imperfeito, que indica ação habitual ou em curso no passado: “eram examinados”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "eram examinados",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na passiva analítica, o objeto direto da ativa (“os contratos de tecnologia da informação”) vira sujeito paciente, o sujeito da ativa vira agente da passiva (“pela equipe de auditoria”), e o verbo se desdobra em “ser” + particípio. O auxiliar fica no mesmo tempo e modo do verbo original (“examinava” → “eram”, imperfeito do indicativo) e concorda com o novo sujeito, plural; o particípio concorda em gênero e número: “Os contratos [...] eram examinados com rigor pela equipe de auditoria”.",
+          "versaoInvertidaFalsa": "Na transposição de “A equipe examinava os contratos” para a voz passiva analítica, o auxiliar fica no pretérito perfeito e no singular: “foi examinado”."
+        }
+      ],
+      "pegadinhaFCC": "A FCC oferece formas do auxiliar em tempos vizinhos (perfeito, mais-que-perfeito) e a passiva sintética. O segredo é manter no auxiliar “ser” o tempo e o modo exatos do verbo da ativa e fazer a concordância com o novo sujeito.",
+      "resumoFlashcard": {
+        "pergunta": "Como transpor uma oração da voz ativa para a passiva analítica?",
+        "resposta": "O objeto direto vira sujeito paciente, o sujeito vira agente da passiva (com “por”), e o verbo vira “ser” + particípio, com o auxiliar no mesmo tempo e modo do verbo original: “examinava” → “era(m) examinado(s)”; “examinará” → “será(ão) examinado(s)”."
+      },
+      "conceitosChave": ["Vozes verbais: transposição", "Vozes verbais: passiva analítica"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Vozes do verbo”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Voz passiva analítica e sintética”."
+    },
+    {
+      "id": "lp-039",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Morfossintaxe e pronomes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Quanto à colocação do pronome oblíquo átono, está de acordo com a norma-padrão a frase:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão, está correta a colocação do pronome átono na seguinte frase:",
+        "Entre as frases abaixo, redigidas em comunicações internas, aquela em que o pronome átono está colocado de acordo com a norma-padrão é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Me informaram que o prazo para a prestação de contas foi prorrogado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A norma-padrão não admite pronome oblíquo átono no início do período. Sem palavra atrativa, usa-se a ênclise: “Informaram-me que o prazo [...] foi prorrogado”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Os autos não encaminharam-se ao relator antes do fim do expediente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A palavra negativa “não” atrai o pronome átono, exigindo a próclise: “Os autos não se encaminharam ao relator”. A ênclise depois de negação é um dos erros de colocação mais cobrados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Quando apresentou-se o recurso, o prazo para manifestação já vencera.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A conjunção subordinativa “quando” é fator de próclise: “Quando se apresentou o recurso”. A ênclise contraria a atração exercida pela conjunção."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Ninguém se manifestou sobre o pedido de reconsideração apresentado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pronomes indefinidos como “ninguém”, “alguém”, “tudo” e “nada” atraem o pronome átono, tornando a próclise obrigatória: “Ninguém se manifestou”. As demais frases contrariam regras de colocação: início de período, negação, conjunção subordinativa e ênclise com o futuro do presente.",
+          "versaoInvertidaFalsa": "Na frase “Ninguém manifestou-se sobre o pedido de reconsideração”, a ênclise é obrigatória, pois o pronome indefinido não exerce atração sobre o pronome átono."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A equipe técnica reunirá-se com o gestor na próxima segunda-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com verbo no futuro do presente, a norma-padrão não admite ênclise (“reunirá-se”). Sem palavra atrativa, usa-se a mesóclise (“reunir-se-á”); com o sujeito expresso antes do verbo, a próclise também é aceita no padrão brasileiro (“A equipe técnica se reunirá”)."
+        }
+      ],
+      "pegadinhaFCC": "Cada distrator viola uma regra diferente de colocação: início de período, negação, conjunção subordinativa e futuro do presente. A correta exige lembrar que pronome indefinido também é palavra atrativa.",
+      "resumoFlashcard": {
+        "pergunta": "Quais palavras tornam a próclise obrigatória?",
+        "resposta": "Palavras negativas (não, nunca, ninguém), advérbios sem pausa, pronomes relativos, indefinidos e interrogativos, conjunções subordinativas e frases optativas (“Deus o ajude”). Sem atrativo, a norma-padrão veda o pronome átono no início do período."
+      },
+      "conceitosChave": ["Colocação pronominal", "Colocação pronominal: mesóclise"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Colocação dos pronomes átonos”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pronomes” (colocação: próclise, mesóclise e ênclise)."
+    },
+    {
+      "id": "lp-040",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "As frases “O relatório apontou falhas.”, “As falhas comprometem a confiabilidade dos dados.” e “O gestor deverá corrigir as falhas até março.” articulam-se num único período, com correção e clareza, em:",
+      "variantesEnunciado": [
+        "Juntando-se num só período as frases “O relatório apontou falhas.”, “As falhas comprometem a confiabilidade dos dados.” e “O gestor deverá corrigir as falhas até março.”, obtém-se uma redação correta e clara em:",
+        "As três frases a seguir devem ser reunidas em um único período: “O relatório apontou falhas.”, “As falhas comprometem a confiabilidade dos dados.” e “O gestor deverá corrigir as falhas até março.”. Está correta e clara a redação:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "O relatório apontou falhas que comprometem a confiabilidade dos dados e que o gestor deverá corrigir até março.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As duas informações sobre “falhas” são incorporadas por orações adjetivas coordenadas entre si: na primeira, o relativo “que” é sujeito (“que comprometem”); na segunda, é objeto direto de “corrigir” (“que o gestor deverá corrigir”), sem pronome redundante. O período é correto, claro e mantém o sentido das três frases.",
+          "versaoInvertidaFalsa": "Ao juntar as frases, deve-se repetir o objeto por meio de pronome oblíquo, como em “falhas que o gestor deverá corrigi-las até março”, para garantir a clareza."
+        },
+        {
+          "id": "opt-2",
+          "texto": "O relatório apontou falhas cujas comprometem a confiabilidade dos dados e que o gestor deverá corrigi-las até março.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Cujo” estabelece relação de posse entre o antecedente e um substantivo seguinte (“falhas cujos efeitos comprometem”); não pode funcionar sozinho como sujeito. Além disso, “que o gestor deverá corrigi-las” repete o objeto já representado pelo relativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O relatório apontou falhas, as quais comprometem a confiabilidade dos dados, que o gestor deverá corrigi-las até março.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na oração “que o gestor deverá corrigi-las”, o relativo “que” já é o objeto direto de “corrigir”; o pronome “las” torna o objeto redundante (pleonasmo vicioso). Também falta o conectivo “e” entre as duas orações adjetivas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "O relatório apontou falhas onde comprometem a confiabilidade dos dados, e o gestor deverá corrigir elas até março.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Onde” só se emprega com antecedente que indique lugar, e “falhas” não é lugar. E “corrigir elas” usa pronome reto como objeto direto, o que a norma-padrão rejeita (“corrigi-las”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "O relatório apontou falhas que comprometem a confiabilidade dos dados, das quais o gestor deverá corrigir até março.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Corrigir” é transitivo direto e não rege preposição; “das quais” introduz uma preposição indevida (“corrigir das falhas”). O correto seria “as quais o gestor deverá corrigir” ou “que o gestor deverá corrigir”."
+        }
+      ],
+      "pegadinhaFCC": "Na reorganização de períodos, a FCC cobra o relativo com a função certa e sem redundância (“que o gestor deverá corrigir”, e não “corrigi-las”), o uso restrito de “onde” (lugar) e de “cujo” (posse) e a regência do verbo da oração adjetiva.",
+      "resumoFlashcard": {
+        "pergunta": "Por que “falhas que o gestor deverá corrigi-las” está errado?",
+        "resposta": "Porque o relativo “que” já é o objeto direto de “corrigir”; acrescentar “las” repete o objeto (pleonasmo vicioso). O correto é “falhas que o gestor deverá corrigir” ou “falhas, as quais o gestor deverá corrigir”."
+      },
+      "conceitosChave": ["Reescrita: organização de períodos", "Pronome relativo: função sintática"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Orações adjetivas” e “Pronome relativo” (que, o qual, cujo, onde); Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pronomes relativos”."
+    }
+  ]
+}

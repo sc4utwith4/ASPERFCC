@@ -341,7 +341,7 @@
         {
           "texto": "A categoria Software Supply Chain Failures (A03:2025) amplia a antiga Vulnerable and Outdated Components, abrangendo comprometimentos em dependências, sistemas de build e infraestrutura de distribuição.",
           "verdadeira": true,
-          "explicacao": "Verdadeira. A A03:2025 é expansão da A06:2021 e cobre todo o ecossistema de dependências, build e distribuição; foi a categoria mais votada na pesquisa com a comunidade."
+          "explicacao": "Verdadeira. A A03:2025 é expansão da A06:2021 e cobre todo o ecossistema de dependências, build e distribuição; foi apontada de forma esmagadora como preocupação prioritária na pesquisa com a comunidade."
         },
         {
           "texto": "A categoria Injection manteve, em 2025, a 3ª posição que ocupava em 2021, por ser uma das mais testadas pelas ferramentas automatizadas.",

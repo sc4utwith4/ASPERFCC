@@ -1,0 +1,55 @@
+{
+  "id": "nota-eng-ia-01",
+  "materiaSlug": "engenharia-software-ia-agentes",
+  "titulo": "Ciclo agentivo e validação do código gerado",
+  "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+  "pistas": [
+    {
+      "pergunta": "Quais são as fases do ciclo agentivo segundo a documentação do Claude Code?",
+      "resposta": "Coletar contexto, agir e verificar resultados. As fases se misturam e se repetem até a conclusão, adaptadas à tarefa, e o usuário pode interromper e redirecionar o agente a qualquer momento."
+    },
+    {
+      "pergunta": "Qual a diferença entre workflow e agente, segundo a Anthropic?",
+      "resposta": "No workflow, LLMs e ferramentas seguem caminhos de código predefinidos. No agente, o próprio LLM dirige dinamicamente o processo e o uso de ferramentas, por isso precisa de verdade de referência do ambiente a cada passo e de condições de parada."
+    },
+    {
+      "pergunta": "Por que um agente às vezes declara a tarefa concluída sem que ela esteja correta?",
+      "resposta": "Porque ele para quando o trabalho parece pronto. Sem um check executável que devolva aprovado ou reprovado, só tem a aparência de conclusão, e o humano vira a suíte de testes."
+    },
+    {
+      "pergunta": "O que é autocorreção (self-healing) no ciclo agentivo?",
+      "resposta": "É o laço em que o agente altera o código, roda um check (testes, build, linter), lê a saída da falha, corrige e repete até passar, apresentando o comando e a saída como evidência."
+    },
+    {
+      "pergunta": "Qual é a forma mais robusta de feedback para o agente verificar o trabalho?",
+      "resposta": "Regras determinísticas e reprodutíveis: testes, compilação, checagem de tipos, linters e SAST. Feedback visual ajuda em interfaces, e o LLM como juiz é complemento pouco robusto, com vieses de posição, verbosidade e autoaprimoramento."
+    },
+    {
+      "pergunta": "Como transformar a verificação de pedido em exigência no Claude Code?",
+      "resposta": "Com mecanismos aplicados pelo harness, como um hook Stop que roda o check e sai com código 2 em caso de falha (o turno não termina e o stderr volta ao modelo), além de CI e proteção de branch no processo."
+    },
+    {
+      "pergunta": "O que é test gaming e como mitigá-lo?",
+      "resposta": "É o agente fazer a suíte passar sem resolver o problema: valores fixos para as entradas de teste ou asserções alteradas. Mitiga-se pedindo solução geral, proibindo alterar testes sem justificativa, revisando diffs de testes e usando testes ocultos, mutação e revisão independente."
+    },
+    {
+      "pergunta": "O que os checkpoints do Claude Code não conseguem desfazer?",
+      "resposta": "Efeitos em sistemas remotos, como alterações em bancos de dados, chamadas de APIs e implantações. Os checkpoints cobrem só edições de arquivos, e por isso ações externas dependem de permissões e aprovação."
+    }
+  ],
+  "conteudoMarkdown": "## O que é o ciclo agentivo\n\nUm agente de codificação, como o Claude Code ou os agentes do Google Antigravity, não se limita a responder: ele **age** sobre o projeto. A documentação do Claude Code descreve o trabalho em três fases que se misturam: ==coletar contexto, agir e verificar resultados==. O ciclo se adapta à tarefa. Uma pergunta pode exigir só coleta de contexto; a correção de um bug percorre as três fases várias vezes. Quem decide cada passo é o modelo, com base no resultado do passo anterior, e o usuário pode interromper e redirecionar a qualquer momento.\n\nO ciclo é movido por duas peças: o **modelo**, que raciocina, e as **ferramentas**, que agem (leitura e edição de arquivos, busca, shell, git, web, servidores MCP). A camada que fornece as ferramentas e gerencia o contexto é chamada de *harness*.\n\n> Workflow segue caminhos de código predefinidos; agente é o LLM dirigindo dinamicamente o próprio processo. (Anthropic, Building effective agents)\n\nPor ser dinâmico, o agente precisa de duas âncoras: a **verdade de referência** (*ground truth*) obtida do ambiente a cada passo, como resultados de ferramentas e execução de código, e **condições de parada**, como um número máximo de iterações.\n\n## 1. Coleta de contexto\n\n- **Busca agêntica**: o agente usa grep, listagem e leitura de arquivos para trazer só o necessário. A busca semântica (embeddings) é mais rápida, porém menos precisa e transparente.\n- **Memória do projeto**: o CLAUDE.md, lido em toda sessão, informa comandos de build e teste, convenções e decisões. É ==contexto, não imposição==.\n- **Recuperação just-in-time**: manter caminhos e consultas e carregar o conteúdo sob demanda, em vez de lotar a janela (o excesso de tokens degrada a recordação, o chamado *context rot*).\n- **Subagentes e compactação**: subagentes leem muito em janela própria e devolvem resumos; a compactação resume o histórico quando a janela enche.\n\n## 2. Planejamento\n\nNo **modo de planejamento** do Claude Code, o agente explora e propõe um plano sem editar o código até a aprovação. No Antigravity, o **plano de implementação** é um artefato que o usuário comenta antes das edições. O plano reduz retrabalho e alinha a intenção, mas ==plano aprovado não prova que a implementação funciona==.\n\n## 3. Ação\n\nO modelo emite chamadas de ferramenta estruturadas (nome e argumentos conforme JSON Schema); a aplicação executa e devolve o resultado, que realimenta o modelo. As ações passam pelo sistema de **permissões** (regras deny, ask e allow, avaliadas nessa ordem) e, se configurado, pelo **sandbox** de arquivos e rede. Os **checkpoints** desfazem edições de arquivos, mas não efeitos remotos (banco de dados, APIs, implantações).\n\n## 4. Verificação autônoma e autocorreção\n\nO agente para quando o trabalho **parece** pronto. Se não tiver algo que diga aprovado ou reprovado, a aparência é tudo o que ele tem. Com um check executável, ele fecha o laço sozinho:\n\n- altera o código;\n- roda o check (suíte de testes, código de saída do build, typecheck, linter, comparação com fixture);\n- lê a saída da falha e corrige;\n- repete até passar e apresenta **o comando e a saída** como evidência.\n\nA especificação do MCP segue a mesma lógica: erros de execução de ferramentas devem ser devolvidos ao modelo para permitir a autocorreção.\n\n**Hierarquia de verificação**: primeiro as checagens **determinísticas** e reprodutíveis (compilação, tipos, testes, linters, SAST); depois o feedback visual, para interfaces; por fim o **LLM como juiz**, útil para critérios difusos, mas descrito pela Anthropic como pouco robusto e sujeito a vieses. A revisão humana, de preferência por quem não escreveu o código, fecha o processo.\n\n## 5. Pedir × impor\n\n- **Não determinístico**: prompt, CLAUDE.md, skills, um pedido de “rode os testes até passar”.\n- **Determinístico**: hook **PreToolUse** (bloqueia a ação antes, com código 2), hook **Stop** (impede o fim do turno enquanto o check falhar), regras deny, configurações gerenciadas, CI e proteção de branch.\n\nRegra prática: ==se a regra não admite exceção, ela vai para um hook ou uma regra deny==, não para o CLAUDE.md.\n\n## 6. Armadilhas cobradas em prova\n\n- **Autodeclaração**: “todos os testes passaram” sem execução não é evidência.\n- **Test gaming**: hardcode de respostas para as entradas de teste ou asserções alteradas; o teste verifica a correção, mas não define a solução.\n- **Oráculo**: testes gerados a partir do código tendem a registrar o comportamento atual, inclusive defeitos.\n- **Alucinação de pacotes e slopsquatting**: “instalou sem erro” não prova legitimidade; verifique a proveniência e fixe versões.\n- **Plano como prova**: planejamento não substitui verificação.\n\n## Checklist do técnico\n\n- [ ] O agente tem um comando de verificação documentado no CLAUDE.md?\n- [ ] A verificação crítica está imposta (hook Stop, CI) e não apenas pedida?\n- [ ] O diff de testes foi revisado (sem asserções alteradas nem hardcode)?\n- [ ] Dependências novas tiveram a proveniência verificada e a versão fixada?\n- [ ] Ações com efeito remoto exigem aprovação humana?",
+  "sintese": "O agente trabalha em ciclo: coleta contexto, planeja, age com ferramentas e verifica, repetindo até concluir. A qualidade depende de ele ter um check objetivo (testes, build, tipos, lint) para se autocorrigir e de apresentar evidências. O que não admite exceção deve ser imposto por hooks, regras deny e CI, não apenas pedido no prompt ou no CLAUDE.md. Plano aprovado, autodeclaração, juiz LLM e testes alterados não substituem a verificação determinística e a revisão humana.",
+  "fontes": [
+    "Claude Code — How Claude Code works (code.claude.com/docs/en/how-claude-code-works)",
+    "Claude Code — Best practices (code.claude.com/docs/en/best-practices)",
+    "Claude Code — Automate actions with hooks (code.claude.com/docs/en/hooks-guide)",
+    "Claude Code — Permission modes e Configure permissions (code.claude.com/docs/en/permission-modes; /permissions)",
+    "Anthropic Engineering — Building effective agents (19/12/2024)",
+    "Claude Blog — Building agents with the Claude Agent SDK (29/09/2025)",
+    "Anthropic Engineering — Effective context engineering for AI agents (29/09/2025)",
+    "Anthropic — Prompting best practices, seção Avoid focusing on passing tests and hardcoding (platform.claude.com)",
+    "MCP Specification 2025-11-25 e 2026-07-28 — Server Features: Tools (erros de execução para autocorreção)",
+    "Zheng et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (NeurIPS 2023)",
+    "Google Antigravity — documentação de Plan e Walkthrough (antigravity.google/docs)"
+  ]
+}

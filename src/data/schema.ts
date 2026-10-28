@@ -35,62 +35,69 @@ export const FlashcardSchema = z.strictObject({
   resposta: z.string().trim().min(20),
 });
 
-export const QuestaoSchema = z
-  .strictObject({
-    id: z.string().regex(/^[a-z]+(?:-[a-z]+)*-\d{3}$/, "id no formato prefixo-000"),
-    materiaSlug: MateriaSlugSchema,
-    subtopico: z.string().trim().min(3),
-    origem: z.literal("Inédita padrão FCC"),
-    procedencia: ProcedenciaSchema.optional(),
-    nivel: NivelSchema,
-    formato: FormatoSchema,
-    textoApoioId: z.string().trim().min(3).optional(),
-    enunciadoBase: z.string().trim().min(40),
-    variantesEnunciado: z.array(z.string().trim().min(40)).min(2).max(4),
-    assertivas: z.array(AssertivaSchema).min(3).max(5).optional(),
-    /** Só no formato "assertivas": comando exibido depois da lista I, II, III… */
-    comandoFinal: z.string().trim().min(10).optional(),
-    alternativas: z.array(AlternativaSchema).length(5),
-    pegadinhaFCC: z.string().trim().min(30),
-    resumoFlashcard: FlashcardSchema,
-    conceitosChave: z.array(z.string().trim().min(2).max(80)).min(1).max(3),
-    fundamentacao: z.string().trim().min(5),
-    revisarFonteOficial: z.boolean().optional(),
-  })
-  .superRefine((q, ctx) => {
-    const corretas = q.alternativas.filter((a) => a.correta);
-    if (corretas.length !== 1) {
-      ctx.addIssue({ code: "custom", path: ["alternativas"], message: `deve haver exatamente 1 alternativa correta (há ${corretas.length})` });
+/** Campos da questão sem as regras cruzadas (usado para gerar o JSON Schema do CLI gerador). */
+export const QuestaoBaseSchema = z.strictObject({
+  id: z.string().regex(/^[a-z]+(?:-[a-z]+)*-\d{3}$/, "id no formato prefixo-000"),
+  materiaSlug: MateriaSlugSchema,
+  subtopico: z.string().trim().min(3),
+  origem: z.literal("Inédita padrão FCC"),
+  procedencia: ProcedenciaSchema.optional(),
+  nivel: NivelSchema,
+  formato: FormatoSchema,
+  textoApoioId: z.string().trim().min(3).optional(),
+  enunciadoBase: z.string().trim().min(40),
+  variantesEnunciado: z.array(z.string().trim().min(40)).min(2).max(4),
+  assertivas: z.array(AssertivaSchema).min(3).max(5).optional(),
+  /** Só no formato "assertivas": comando exibido depois da lista I, II, III… */
+  comandoFinal: z.string().trim().min(10).optional(),
+  alternativas: z.array(AlternativaSchema).length(5),
+  pegadinhaFCC: z.string().trim().min(30),
+  resumoFlashcard: FlashcardSchema,
+  conceitosChave: z.array(z.string().trim().min(2).max(80)).min(1).max(3),
+  fundamentacao: z.string().trim().min(5),
+  revisarFonteOficial: z.boolean().optional(),
+});
+
+type QuestaoBase = z.infer<typeof QuestaoBaseSchema>;
+
+/** Regras que cruzam campos: 1 correta, prefixos das explicações, variantes distintas etc. */
+export function refinarQuestao(q: QuestaoBase, ctx: z.core.$RefinementCtx<QuestaoBase>): void {
+  const corretas = q.alternativas.filter((a) => a.correta);
+  if (corretas.length !== 1) {
+    ctx.addIssue({ code: "custom", path: ["alternativas"], message: `deve haver exatamente 1 alternativa correta (há ${corretas.length})` });
+  }
+  const ids = new Set(q.alternativas.map((a) => a.id));
+  if (ids.size !== 5) {
+    ctx.addIssue({ code: "custom", path: ["alternativas"], message: "ids das alternativas devem ser opt-1..opt-5 sem repetição" });
+  }
+  q.alternativas.forEach((a, i) => {
+    const prefixo = a.correta ? "CORRETA" : "INCORRETA";
+    if (!a.explicacaoDetalhada.startsWith(prefixo)) {
+      ctx.addIssue({ code: "custom", path: ["alternativas", i, "explicacaoDetalhada"], message: `explicação deve começar com "${prefixo}"` });
     }
-    const ids = new Set(q.alternativas.map((a) => a.id));
-    if (ids.size !== 5) {
-      ctx.addIssue({ code: "custom", path: ["alternativas"], message: "ids das alternativas devem ser opt-1..opt-5 sem repetição" });
-    }
-    q.alternativas.forEach((a, i) => {
-      const prefixo = a.correta ? "CORRETA" : "INCORRETA";
-      if (!a.explicacaoDetalhada.startsWith(prefixo)) {
-        ctx.addIssue({ code: "custom", path: ["alternativas", i, "explicacaoDetalhada"], message: `explicação deve começar com "${prefixo}"` });
-      }
-      if (a.correta && !a.versaoInvertidaFalsa) {
-        ctx.addIssue({ code: "custom", path: ["alternativas", i, "versaoInvertidaFalsa"], message: "alternativa correta precisa de versaoInvertidaFalsa" });
-      }
-    });
-    const textos = q.alternativas.map((a) => normalizar(a.texto));
-    if (new Set(textos).size !== textos.length) {
-      ctx.addIssue({ code: "custom", path: ["alternativas"], message: "há alternativas com texto repetido" });
-    }
-    if (q.formato === "assertivas" && (!q.assertivas || !q.comandoFinal)) {
-      ctx.addIssue({ code: "custom", path: ["assertivas"], message: "formato 'assertivas' exige os campos assertivas e comandoFinal" });
-    }
-    if (q.formato !== "assertivas" && (q.assertivas || q.comandoFinal)) {
-      ctx.addIssue({ code: "custom", path: ["assertivas"], message: "assertivas e comandoFinal só são permitidos no formato 'assertivas'" });
-    }
-    const base = normalizar(q.enunciadoBase);
-    const variantes = q.variantesEnunciado.map(normalizar);
-    if (variantes.some((v) => v === base) || new Set(variantes).size !== variantes.length) {
-      ctx.addIssue({ code: "custom", path: ["variantesEnunciado"], message: "variantes devem diferir do enunciado base e entre si" });
+    if (a.correta && !a.versaoInvertidaFalsa) {
+      ctx.addIssue({ code: "custom", path: ["alternativas", i, "versaoInvertidaFalsa"], message: "alternativa correta precisa de versaoInvertidaFalsa" });
     }
   });
+  // Acentos importam aqui: "à" × "a" e "contêm" × "contém" são alternativas distintas em Português.
+  const textos = q.alternativas.map((a) => chaveExata(a.texto));
+  if (new Set(textos).size !== textos.length) {
+    ctx.addIssue({ code: "custom", path: ["alternativas"], message: "há alternativas com texto repetido" });
+  }
+  if (q.formato === "assertivas" && (!q.assertivas || !q.comandoFinal)) {
+    ctx.addIssue({ code: "custom", path: ["assertivas"], message: "formato 'assertivas' exige os campos assertivas e comandoFinal" });
+  }
+  if (q.formato !== "assertivas" && (q.assertivas || q.comandoFinal)) {
+    ctx.addIssue({ code: "custom", path: ["assertivas"], message: "assertivas e comandoFinal só são permitidos no formato 'assertivas'" });
+  }
+  const base = normalizar(q.enunciadoBase);
+  const variantes = q.variantesEnunciado.map(normalizar);
+  if (variantes.some((v) => v === base) || new Set(variantes).size !== variantes.length) {
+    ctx.addIssue({ code: "custom", path: ["variantesEnunciado"], message: "variantes devem diferir do enunciado base e entre si" });
+  }
+}
+
+export const QuestaoSchema = QuestaoBaseSchema.superRefine(refinarQuestao);
 
 export const LoteSchema = z.strictObject({
   materiaSlug: MateriaSlugSchema,
@@ -186,6 +193,12 @@ export type NotaExemplo = z.infer<typeof NotaExemploSchema>;
 export type CasoDiscursivo = z.infer<typeof CasoDiscursivoSchema>;
 export type PilarEspelho = z.infer<typeof PilarEspelhoSchema>;
 
+/** Igualdade textual que preserva acentos e pontuação (ignora só caixa e espaços). */
+export function chaveExata(texto: string): string {
+  return texto.normalize("NFC").trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+/** Forma "solta" para similaridade: sem acentos, sem pontuação, minúsculas. */
 export function normalizar(texto: string): string {
   return texto
     .normalize("NFD")

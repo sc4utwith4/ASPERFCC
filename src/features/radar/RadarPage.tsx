@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { useLiveQuery } from "dexie-react-hooks";
 import { ChevronDown, ChevronRight, Shuffle } from "lucide-react";
 import { carregarCasos } from "@/data/banco";
-import { DISCURSIVA, MATERIAS, PROVA, type MateriaSlug } from "@/data/edital";
+import { DISCURSIVA, MATERIAS, type MateriaSlug } from "@/data/edital";
 import { db } from "@/db/db";
 import { evolucaoDiaria, gerarBateriaVariantes, mapaDeQuestoes } from "@/db/servicos";
 import { diferencaDias, formatarDia, formatarDiaCurto, hoje } from "@/engine/datas";
@@ -13,7 +13,7 @@ import { calcularRitmo } from "@/engine/ritmo";
 import { useUI } from "@/stores/ui";
 import { Abas, BarraSegmentada, Botao, Metrica, Painel, Selo, TituloPagina } from "@/components/ui";
 import { BarrasDominio, ColunasEvolucao } from "@/components/graficos";
-import { contagemDoResumo, taxasLiquidas, useDataProva, usePremissas, useResumos } from "../dados";
+import { contagemDoResumo, respondidasCiclo1, tamanhoCiclo1, taxasLiquidas, totalCiclo1, useDataProva, usePremissas, useResumos } from "../dados";
 
 type Periodo = "14" | "30" | "60";
 
@@ -40,8 +40,9 @@ export default function RadarPage() {
   }, []);
 
   if (!resumos) return null;
-  const respondidas = [...resumos.values()].reduce((s, r) => s + Math.min(PROVA.questoesPorBateria, r.respondidasCiclo1), 0);
-  const ritmo = calcularRitmo(dia, MATERIAS.length * PROVA.questoesPorBateria - respondidas, dataProva, meta);
+  const respondidas = respondidasCiclo1(resumos);
+  const totalDoCiclo = totalCiclo1(resumos);
+  const ritmo = calcularRitmo(dia, totalDoCiclo - respondidas, dataProva, meta);
   const taxas = taxasLiquidas(resumos);
   const projecao = taxas.size >= 3 ? projetarProva(taxas, premissas) : undefined;
   const marginal = valorMarginal(premissas);
@@ -60,7 +61,7 @@ export default function RadarPage() {
 
       <div className="mb-4 grid gap-4 lg:grid-cols-4">
         <Painel className="lg:col-span-1">
-          <Metrica rotulo="1º ciclo" valor={`${respondidas}/${MATERIAS.length * PROVA.questoesPorBateria}`} detalhe={`${MATERIAS.filter((m) => resumos.get(m.slug)?.diaConclusaoCiclo1).length} matérias concluídas`} />
+          <Metrica rotulo="1º ciclo" valor={`${respondidas}/${totalDoCiclo}`} detalhe={`${MATERIAS.filter((m) => resumos.get(m.slug)?.diaConclusaoCiclo1).length} matérias concluídas`} />
         </Painel>
         <Painel className="lg:col-span-1">
           <Metrica rotulo="Ritmo necessário" valor={`${ritmo.questoesPorDia}/dia`} detalhe={`até ${formatarDiaCurto(ritmo.limiteEscadaCompleta)} (escada completa)`} />
@@ -112,8 +113,10 @@ export default function RadarPage() {
                       </td>
                       <td className="px-1.5 py-2">
                         <div className="flex items-center gap-2">
-                          <BarraSegmentada s={{ ...c, total: PROVA.questoesPorBateria }} className="w-16" altura={5} />
-                          <span className="tabular text-ink-2">{r?.respondidasCiclo1 ?? 0}/50</span>
+                          <BarraSegmentada s={{ ...c, total: tamanhoCiclo1(r) }} className="w-16" altura={5} />
+                          <span className="tabular text-ink-2">
+                            {r?.respondidasCiclo1 ?? 0}/{tamanhoCiclo1(r)}
+                          </span>
                         </div>
                       </td>
                       <td className="tabular px-1.5 py-2 text-ink-2">{r?.diaConclusaoCiclo1 ? formatarDiaCurto(r.diaConclusaoCiclo1) : "—"}</td>

@@ -1,9 +1,9 @@
 import { Link } from "react-router";
-import { MATERIAS, PROVA, type Bloco } from "@/data/edital";
+import { MATERIAS, type Bloco } from "@/data/edital";
 import { formatarDiaCurto } from "@/engine/datas";
 import { useUI } from "@/stores/ui";
 import { BarraSegmentada, Selo, TituloPagina } from "@/components/ui";
-import { contagemDoResumo, useContagemQuestoes, useResumos } from "../dados";
+import { contagemDoResumo, tamanhoCiclo1, useContagemQuestoes, useResumos } from "../dados";
 
 const BLOCOS: { id: Bloco; titulo: string; detalhe: string }[] = [
   { id: "gerais", titulo: "Conhecimentos Gerais", detalhe: "25 questões · peso 1" },
@@ -39,9 +39,9 @@ export function MateriasPage() {
                         {m.questoesNaProva} questões na prova · {m.subtopicos.length} subtópicos · {noBanco} no banco
                       </p>
                       <div className="mt-auto pt-4">
-                        <BarraSegmentada s={{ ...c, total: PROVA.questoesPorBateria }} />
+                        <BarraSegmentada s={{ ...c, total: tamanhoCiclo1(r) }} />
                         <p className="tabular mt-1.5 flex justify-between text-[12px] text-ink-2">
-                          <span>{r?.respondidasCiclo1 ?? 0}/50 no 1º ciclo</span>
+                          <span>{r?.respondidasCiclo1 ?? 0}/{tamanhoCiclo1(r)} no 1º ciclo</span>
                           <span>{r?.diaConclusaoCiclo1 ? `concluída em ${formatarDiaCurto(r.diaConclusaoCiclo1)}` : r?.ultimaAtividade ? `última vez ${formatarDiaCurto(r.ultimaAtividade)}` : "não iniciada"}</span>
                         </p>
                       </div>

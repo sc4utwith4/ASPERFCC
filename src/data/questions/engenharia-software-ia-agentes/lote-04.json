@@ -1,0 +1,618 @@
+{
+  "materiaSlug": "engenharia-software-ia-agentes",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "eng-ia-031",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Gestão de contexto e memória, RAG e bancos vetoriais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da gestão de contexto e de memória em agentes de codificação como o Claude Code, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre como agentes de codificação, a exemplo do Claude Code, administram o contexto e a memória ao longo de várias sessões de trabalho, é correto afirmar que",
+        "Um técnico do Tribunal precisa orientar colegas sobre memória e contexto em sessões de um agente de codificação. Tomando como referência o Claude Code, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cada nova sessão herda integralmente o histórico das sessões anteriores, de modo que arquivos de memória do projeto se tornam dispensáveis.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A documentação do Claude Code afirma que as sessões são independentes: cada nova sessão começa com janela de contexto nova, sem o histórico anterior. A persistência vem do CLAUDE.md e da memória automática."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a compactação da conversa preserva, palavra por palavra, todas as instruções dadas no início da sessão, sem risco de perda de detalhes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A compactação resume a conversa. A documentação adverte que o resumo mantém os pedidos e os trechos de código principais, mas instruções detalhadas do início podem se perder, e por isso regras persistentes vão no CLAUDE.md."
+        },
+        {
+          "id": "opt-3",
+          "texto": "subagentes compartilham a mesma janela de contexto da conversa principal, razão pela qual não servem para isolar tarefas que exigem a leitura de grande quantidade de arquivos do repositório.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: subagentes trabalham em janela de contexto própria, e as chamadas de ferramentas deles ficam fora do contexto principal, que recebe só um resumo. Servem justamente para isolar tarefas de leitura extensa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o RAG e a memória persistente em arquivos são técnicas mutuamente exclusivas, de modo que o uso de uma impede o da outra no mesmo agente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Recuperação sob demanda (RAG ou busca agêntica) e memória persistente em arquivos se complementam: uma traz conhecimento externo relevante, a outra preserva decisões e preferências entre sessões."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cada sessão começa com janela nova; instruções persistentes devem ficar em arquivos como o CLAUDE.md, pois a compactação do histórico pode perder detalhes ditos no início.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação, cada sessão começa com janela nova, e o conhecimento atravessa sessões por dois mecanismos: o CLAUDE.md, escrito pela equipe e lido em toda sessão, e a memória automática, com notas gravadas pelo próprio agente. Quando o contexto enche, a compactação resume a conversa e pode descartar detalhes iniciais, por isso a recomendação é guardar regras persistentes no CLAUDE.md, e não só na conversa.",
+          "versaoInvertidaFalsa": "cada sessão herda integralmente o contexto das anteriores, e a compactação preserva literalmente todas as instruções iniciais, razão pela qual não é preciso registrar regras persistentes em arquivos como o CLAUDE.md."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui às sessões uma memória que elas não têm e à compactação uma fidelidade que ela não garante. Persistência entre sessões depende de arquivos (CLAUDE.md, memória automática), e o isolamento de tarefas, de subagentes.",
+      "resumoFlashcard": {
+        "pergunta": "Como o Claude Code lida com memória entre sessões e com a compactação?",
+        "resposta": "Cada sessão começa com contexto novo. O conhecimento persiste via CLAUDE.md (instruções da equipe) e memória automática (notas do agente). A compactação resume a conversa quando o contexto enche e pode perder detalhes iniciais, por isso regras persistentes vão no CLAUDE.md."
+      },
+      "conceitosChave": [
+        "Memória de agentes",
+        "Compactação de contexto",
+        "Claude Code: CLAUDE.md"
+      ],
+      "fundamentacao": "Claude Code, “How Claude Code works”, seções “Work with sessions” e “When context fills up”; “How Claude remembers your project” (CLAUDE.md e auto memory) (code.claude.com/docs/en)."
+    },
+    {
+      "id": "eng-ia-032",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Model Context Protocol (MCP) e interoperabilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do Model Context Protocol (MCP), é correto afirmar que se trata de",
+      "variantesEnunciado": [
+        "Sobre o Model Context Protocol (MCP), adotado por agentes de codificação para acessar sistemas externos, é correto afirmar que se trata de",
+        "Um técnico do Tribunal estuda protocolos de interoperabilidade entre agentes de IA e ferramentas. Quanto ao Model Context Protocol (MCP), é correto afirmar que se trata de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "protocolo aberto lançado pela Anthropic em novembro de 2024 para padronizar a conexão entre aplicações de IA e fontes de dados e ferramentas, com mensagens JSON-RPC 2.0.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Anthropic anunciou o MCP em 25/11/2024 como padrão aberto para conectar assistentes de IA aos sistemas onde os dados estão, substituindo integrações fragmentadas por um único protocolo. A especificação usa mensagens JSON-RPC 2.0 entre hosts, clientes e servidores e foi inspirada no Language Server Protocol. Em dezembro de 2025, o MCP foi doado à Agentic AI Foundation, ligada à Linux Foundation.",
+          "versaoInvertidaFalsa": "protocolo proprietário lançado pela Anthropic em novembro de 2024, baseado em gRPC, que só permite conectar modelos Claude a fontes de dados da própria empresa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "protocolo proprietário criado pela OpenAI em 2023, baseado em gRPC e em formato binário, que só permite conectar os modelos da própria empresa a bancos de dados relacionais corporativos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MCP é aberto, foi lançado pela Anthropic em 2024, usa JSON-RPC 2.0 (não gRPC) e é agnóstico de modelo e de fonte de dados: conecta ferramentas, arquivos, APIs e serviços diversos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "formato de arquivo para ajuste fino de modelos, que reúne exemplos de contexto usados para atualizar os pesos de um LLM.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MCP não trata de treinamento nem altera pesos. Ele fornece, em tempo de execução, contexto (recursos), ferramentas e prompts às aplicações de IA."
+        },
+        {
+          "id": "opt-4",
+          "texto": "banco de dados vetorial padronizado que armazena embeddings e substitui a recuperação de documentos em pipelines de RAG.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bancos vetoriais pertencem ao tema de RAG. Um servidor MCP pode até expor uma ferramenta de busca vetorial, mas o MCP em si é protocolo de comunicação, não banco de dados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "substituto do HTTP para tráfego web, que dispensa TLS porque o próprio protocolo garante confidencialidade e autenticação das mensagens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MCP roda sobre transportes como stdio e Streamable HTTP e não substitui o HTTP. Para conexões remotas, a segurança continua dependendo de TLS, autorização e boas práticas de implementação."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o autor (OpenAI), a natureza (proprietário), a tecnologia (gRPC) ou a categoria (banco vetorial, formato de treino). Guarde: Anthropic, novembro de 2024, aberto, JSON-RPC 2.0.",
+      "resumoFlashcard": {
+        "pergunta": "O que é o MCP, quem o lançou e quando?",
+        "resposta": "É o Model Context Protocol, protocolo aberto lançado pela Anthropic em novembro de 2024 para padronizar a conexão de aplicações de IA a dados e ferramentas. Usa mensagens JSON-RPC 2.0 entre host, cliente e servidor e foi doado à Agentic AI Foundation (Linux Foundation) em dezembro de 2025."
+      },
+      "conceitosChave": [
+        "MCP: fundamentos",
+        "Interoperabilidade de agentes"
+      ],
+      "fundamentacao": "Anthropic, “Introducing the Model Context Protocol” (25/11/2024); MCP Specification, “Overview” (revisões 2025-11-25 e 2026-07-28, github.com/modelcontextprotocol/modelcontextprotocol); Anthropic, anúncio da Agentic AI Foundation (09/12/2025)."
+    },
+    {
+      "id": "eng-ia-033",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Model Context Protocol (MCP) e interoperabilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere o texto sobre a especificação do MCP. Entre as primitivas oferecidas pelo servidor, a do tipo …… é controlada pelo modelo, que a invoca para executar ações, e a do tipo …… é controlada pela aplicação, que decide como incorporar esses dados de contexto. Entre as funcionalidades que o cliente pode oferecer, a denominada …… permite que o servidor solicite, por intermédio do cliente, informações adicionais ao usuário. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere o texto sobre a especificação do Model Context Protocol. Das primitivas expostas pelo servidor, a do tipo …… fica sob controle do modelo, que decide invocá-la, e a do tipo …… fica sob controle da aplicação, que escolhe que dados de contexto anexar. Entre as funcionalidades de cliente, a denominada …… possibilita ao servidor, por meio do cliente, pedir ao usuário dados complementares. Preenchem, correta e respectivamente, as lacunas:",
+        "Em parecer técnico sobre a integração de um agente aos sistemas do Tribunal via MCP, registrou-se: a primitiva de servidor do tipo …… é acionada por decisão do modelo; a primitiva do tipo …… é administrada pela aplicação host como dado de contexto; e a funcionalidade de cliente denominada …… permite ao servidor obter do usuário, via cliente, informações que faltam. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "prompts − resources − sampling",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Prompts são controlados pelo usuário (templates escolhidos, como comandos de barra), não pelo modelo. Sampling é a funcionalidade pela qual o servidor pede ao cliente uma geração do LLM, não informações ao usuário."
+        },
+        {
+          "id": "opt-2",
+          "texto": "resources − prompts − elicitation",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resources são controlados pela aplicação, não pelo modelo, e prompts são controlados pelo usuário. A terceira lacuna está certa, mas as duas primeiras invertem a hierarquia de controle."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tools − resources − elicitation",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A especificação do MCP, igual nas revisões 2025-11-25 e 2026-07-28, define a hierarquia de controle das primitivas do servidor: tools são controladas pelo modelo (funções que o LLM chama), resources pela aplicação (dados de contexto identificados por URI) e prompts pelo usuário (templates). Entre as funcionalidades do cliente, elicitation é a solicitação, iniciada pelo servidor, de informações adicionais ao usuário. Na revisão 2025-11-25, o cliente também oferecia sampling e roots, que a revisão 2026-07-28 marcou como obsoletos.",
+          "versaoInvertidaFalsa": "No MCP, a primitiva tools é controlada pela aplicação, a primitiva resources é controlada pelo modelo, e a funcionalidade sampling permite ao servidor pedir informações adicionais diretamente ao usuário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "tools − prompts − roots",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas prompts são controlados pelo usuário, e não pela aplicação. Roots delimitam fronteiras de URI ou do sistema de arquivos em que o servidor pode operar; não servem para pedir informações ao usuário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "tools − resources − sampling",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas sampling permite ao servidor solicitar, por meio do cliente, uma geração (completion) do modelo de linguagem, e não informações ao usuário. Esse papel é da elicitation."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha a hierarquia de controle (tools: modelo; resources: aplicação; prompts: usuário) e troca elicitation (pergunta ao usuário) por sampling (pede geração ao LLM) ou roots (fronteiras de arquivos).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a hierarquia de controle das primitivas do MCP e para que serve a elicitation?",
+        "resposta": "Tools são controladas pelo modelo, resources pela aplicação e prompts pelo usuário. Elicitation é a funcionalidade do cliente pela qual o servidor pede ao usuário, via cliente, informações adicionais. Sampling serve para pedir geração ao LLM, e roots definem fronteiras de arquivos."
+      },
+      "conceitosChave": [
+        "MCP: primitivas",
+        "MCP: elicitation"
+      ],
+      "fundamentacao": "MCP Specification, “Server Features — Overview” (tabela de controle) e “Overview — Features” (revisões 2025-11-25 e 2026-07-28); “Client Features: Elicitation”; changelog 2026-07-28 (obsolescência de Roots e Sampling)."
+    },
+    {
+      "id": "eng-ia-034",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Model Context Protocol (MCP) e interoperabilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na arquitetura do Model Context Protocol (MCP), quanto aos papéis de host, cliente e servidor, é correto afirmar que",
+      "variantesEnunciado": [
+        "Considerando a especificação do Model Context Protocol (MCP), no que se refere às responsabilidades de host, cliente e servidor, é correto afirmar que",
+        "Ao integrar um agente de codificação a um servidor MCP que expõe consultas ao sistema de processos do Tribunal, a equipe precisa entender os papéis definidos no protocolo. Quanto a host, cliente e servidor, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um único cliente se conecta ao mesmo tempo a todos os servidores disponíveis, e cada servidor recebe o histórico completo da conversa do usuário para contextualizar adequadamente as respostas que fornece.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cada cliente se comunica com exatamente um servidor (relação 1:1), e o host cria vários clientes. Um dos princípios de projeto do MCP é que servidores não devem ler a conversa inteira: o histórico completo fica com o host."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o host é a aplicação que cria e gerencia vários clientes e aplica políticas de consentimento, e cada cliente mantém relação 1:1 com um servidor, que expõe recursos, ferramentas e prompts.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a especificação, o host é o processo que atua como contêiner e coordenador: cria e gerencia vários clientes, controla permissões e ciclo de vida das conexões, aplica políticas de segurança e consentimento e agrega o contexto. Cada cliente, criado pelo host, mantém relação 1:1 com um servidor. Os servidores fornecem contexto e capacidades (resources, tools e prompts) e podem ser processos locais ou serviços remotos.",
+          "versaoInvertidaFalsa": "o host é um servidor remoto que gerencia um único cliente compartilhado por todas as conexões, e cada servidor tem acesso ao histórico completo da conversa e aos demais servidores conectados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o servidor é o próprio modelo de linguagem, e o cliente é a API remota do provedor, ficando o host restrito à exibição das respostas na interface.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O modelo de linguagem não é o servidor MCP. O servidor é um serviço que expõe dados e ferramentas, como um sistema de processos ou de arquivos, e o cliente é um conector dentro do host. O host coordena a integração com o LLM."
+        },
+        {
+          "id": "opt-4",
+          "texto": "servidores podem consultar diretamente outros servidores conectados ao mesmo host, sem mediação, para combinar ferramentas de diferentes fornecedores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pelo princípio de isolamento do MCP, servidores não devem “enxergar” outros servidores: interações entre servidores são controladas pelo host, que impõe as fronteiras de segurança."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o cliente executa as ferramentas localmente e devolve os resultados ao servidor, que decide sozinho quais ações o usuário está autorizado a realizar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o servidor que executa as ferramentas que expõe, a pedido do cliente. As decisões de autorização e consentimento do usuário cabem ao host, não ao servidor sozinho."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis (LLM como servidor, cliente único) e viola o princípio de isolamento: servidores não leem a conversa inteira nem acessam outros servidores. Memorize: o host coordena, o cliente tem relação 1:1 com um servidor.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os papéis de host, cliente e servidor no MCP?",
+        "resposta": "Host: aplicação de IA que cria e gerencia clientes, aplica consentimento e segurança e agrega contexto. Cliente: conector dentro do host, em relação 1:1 com um servidor. Servidor: serviço local ou remoto que expõe resources, tools e prompts, isolado da conversa completa e dos demais servidores."
+      },
+      "conceitosChave": [
+        "MCP: arquitetura host-cliente-servidor",
+        "MCP: segurança"
+      ],
+      "fundamentacao": "MCP Specification, “Architecture” (Core Components: Host, Clients, Servers; Design Principles), revisões 2025-11-25 e 2026-07-28 (github.com/modelcontextprotocol/modelcontextprotocol)."
+    },
+    {
+      "id": "eng-ia-035",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Model Context Protocol (MCP) e interoperabilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico desenvolveu um servidor MCP local, conectado pelo transporte stdio, que expõe a ferramenta consultar_processo. Para depurar, inseriu comandos que imprimem mensagens de log na saída padrão (stdout). Desde então, o cliente passou a registrar erros de interpretação de mensagens e a conexão cai com frequência. A explicação e a correção adequadas são:",
+      "variantesEnunciado": [
+        "Para acompanhar a execução, uma desenvolvedora adicionou instruções print ao seu servidor MCP de consulta a jurisdicionados, que roda localmente pelo transporte stdio, e essas mensagens passaram a sair na saída padrão (stdout). O cliente começou a acusar mensagens inválidas e a encerrar a conexão. A explicação e a correção adequadas são:",
+        "Um servidor MCP que expõe ferramentas do sistema de protocolo, executado como subprocesso via stdio, passou a falhar depois que alguém ativou mensagens de depuração escritas no stdout. O cliente registra falhas ao interpretar as mensagens e a sessão cai. A explicação e a correção adequadas são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o stdio está obsoleto desde 2025, e o servidor deve ser migrado para o transporte HTTP+SSE, que é o padrão atualmente recomendado pela especificação para servidores locais e remotos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o estado dos transportes: stdio e Streamable HTTP são os transportes padrão, e o HTTP+SSE da versão 2024-11-05 foi substituído pelo Streamable HTTP e está obsoleto desde 2025-03-26. O problema é o uso indevido do stdout, não o transporte."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o cliente deveria ignorar silenciosamente as linhas inválidas; basta configurá-lo para aceitar mensagens com quebras de linha embutidas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A especificação exige que as mensagens sejam delimitadas por nova linha e não contenham quebras de linha embutidas. Contornar no cliente não resolve a violação do servidor, que mistura log com protocolo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as mensagens de log devem ser enviadas como requisições JSON-RPC sem identificador, pois todas as requisições do MCP dispensam ID.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Requisições JSON-RPC no MCP devem ter ID string ou inteiro, não nulo. Só notificações não têm ID. E log de depuração não deve ser injetado no canal do protocolo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "no stdio, o stdout deve conter apenas mensagens MCP válidas, uma por linha; os logs devem ir para o stderr, que o cliente não deve tratar como erro.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No transporte stdio, o cliente lança o servidor como subprocesso; o servidor lê JSON-RPC do stdin e escreve no stdout mensagens delimitadas por nova linha. A especificação determina que o servidor não escreva no stdout nada que não seja mensagem MCP válida e permite que escreva logs em UTF-8 no stderr. O cliente não deve presumir que saída no stderr indique erro. Logs impressos no stdout corrompem o fluxo de mensagens.",
+          "versaoInvertidaFalsa": "no stdio, os logs de depuração devem ser escritos no stdout junto com as mensagens MCP, e qualquer conteúdo enviado ao stderr deve ser tratado pelo cliente como erro fatal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o cliente deve encerrar o servidor sempre que este escrever no stderr, pois qualquer saída nesse fluxo indica condição de erro fatal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A especificação diz que o cliente pode capturar, repassar ou ignorar o stderr do servidor e não deve presumir que saída nesse fluxo indique erro. O stderr é o canal adequado justamente para logs."
+        }
+      ],
+      "pegadinhaFCC": "O detalhe técnico decisivo está nas regras do stdio: stdout é exclusivo das mensagens do protocolo e o stderr serve para logs. A banca tenta desviar o foco para a troca de transporte, sugerindo o HTTP+SSE, que está obsoleto.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as regras do transporte stdio no MCP?",
+        "resposta": "O cliente lança o servidor como subprocesso. Mensagens JSON-RPC trafegam por stdin e stdout, uma por linha, sem quebras embutidas. O servidor não pode escrever no stdout nada além de mensagens MCP válidas; logs vão para o stderr, que o cliente não deve presumir que indique erro."
+      },
+      "conceitosChave": [
+        "MCP: transportes"
+      ],
+      "fundamentacao": "MCP Specification, “Transports — stdio” (revisões 2025-11-25 e 2026-07-28) e “Basic Protocol” (IDs de requisições e notificações) (github.com/modelcontextprotocol/modelcontextprotocol)."
+    },
+    {
+      "id": "eng-ia-036",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Model Context Protocol (MCP) e interoperabilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao publicar um servidor MCP remoto para integrar o agente de codificação a sistemas internos do Tribunal, a equipe de segurança revisou requisitos e princípios da especificação do protocolo. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na homologação de um servidor MCP acessível pela rede interna, que dará ao agente de IA acesso a dados de fiscalização, o comitê de segurança conferiu exigências da especificação do protocolo. Considere as afirmativas abaixo.",
+        "Antes de liberar um servidor MCP remoto que expõe ferramentas do sistema de contratações, a equipe de TI listou regras da especificação do protocolo. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Os transportes padrão são stdio e Streamable HTTP, e este último substituiu o transporte HTTP+SSE da versão 2024-11-05.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A especificação define stdio e Streamable HTTP como transportes padrão, e o Streamable HTTP substituiu o HTTP+SSE de 2024-11-05, obsoleto desde 2025-03-26."
+        },
+        {
+          "texto": "No Streamable HTTP, o servidor deve validar o cabeçalho Origin das conexões recebidas, para prevenir ataques de DNS rebinding.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O aviso de segurança do Streamable HTTP manda validar o cabeçalho Origin em todas as conexões, contra DNS rebinding, e responder com HTTP 403 se ele for inválido."
+        },
+        {
+          "texto": "As anotações que descrevem o comportamento das ferramentas devem ser consideradas confiáveis, qualquer que seja o servidor que as forneça, pois integram o protocolo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A especificação manda considerar as anotações de ferramentas não confiáveis, salvo quando vierem de servidores confiáveis. Ferramentas representam execução arbitrária de código."
+        },
+        {
+          "texto": "O servidor pode usar a elicitation em modo formulário para solicitar ao usuário senhas, chaves de API e tokens de acesso necessários à integração.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Servidores não devem usar o modo formulário para pedir senhas, chaves de API, tokens ou credenciais de pagamento; para isso existe o modo URL, que leva o usuário a uma interação fora do cliente."
+        },
+        {
+          "texto": "O host deve obter consentimento explícito do usuário antes de invocar uma ferramenta, e deve haver humano no circuito com possibilidade de negar invocações.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Pelos princípios de segurança, hosts devem obter consentimento explícito antes de invocar qualquer ferramenta, e deve haver humano no circuito capaz de negar invocações."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão de acordo com a especificação os transportes padrão (I), a validação do cabeçalho Origin contra DNS rebinding (II) e o consentimento com humano no circuito para invocar ferramentas (V). A III é falsa porque anotações de servidores não confiáveis não merecem confiança, e a IV também, porque credenciais não podem ser pedidas por elicitation em modo formulário.",
+          "versaoInvertidaFalsa": "No Streamable HTTP, o servidor deve aceitar conexões de qualquer origem, sem validar o cabeçalho Origin, pois o protocolo já impede, por si só, ataques de DNS rebinding."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III e a IV são falsas: anotações de ferramentas não são confiáveis por padrão, e o modo formulário não pode ser usado para pedir credenciais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa, porque credenciais exigem o modo URL, e omite a I, que é verdadeira. A II e a V estão certas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III, IV e V.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a III e a IV contrariam requisitos expressos de segurança da especificação: desconfiar das anotações e não pedir credenciais pelo modo formulário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A V é verdadeira, mas a III é falsa: anotações só merecem confiança se vierem de servidor confiável. Faltam a I e a II, ambas verdadeiras."
+        }
+      ],
+      "pegadinhaFCC": "As afirmativas falsas são as “confortáveis” para quem desenvolve: confiar nas anotações e pedir a credencial pelo próprio formulário. A especificação exige desconfiança de servidores não confiáveis e proíbe pedir segredos no modo formulário.",
+      "resumoFlashcard": {
+        "pergunta": "Quais requisitos de segurança do MCP são essenciais para um servidor remoto?",
+        "resposta": "Usar transporte padrão (Streamable HTTP, que substituiu o HTTP+SSE) e validar o cabeçalho Origin contra DNS rebinding. Tratar anotações de ferramentas como não confiáveis salvo servidor confiável, não pedir credenciais por elicitation em modo formulário e obter consentimento do usuário, com humano no circuito, antes de invocar ferramentas."
+      },
+      "conceitosChave": [
+        "MCP: transportes",
+        "MCP: segurança",
+        "MCP: elicitation"
+      ],
+      "fundamentacao": "MCP Specification 2025-11-25 e 2026-07-28: “Transports” (Streamable HTTP, Security Warning: Origin), “Overview — Security and Trust & Safety”, “Server Features: Tools” (anotações não confiáveis; human in the loop) e “Client Features: Elicitation” (modo formulário × URL)."
+    },
+    {
+      "id": "eng-ia-037",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Skills, tool use e automação de fluxos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No uso de ferramentas (tool use, também chamado function calling) por LLMs, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre o mecanismo de chamada de funções (function calling ou tool use), pelo qual LLMs interagem com sistemas externos, é correto afirmar que",
+        "Um técnico integrará um LLM ao sistema de protocolo, expondo uma função que consulta o andamento de processos. Quanto ao funcionamento do tool use, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o modelo executa diretamente, em seus próprios servidores, qualquer função declarada pela aplicação, sem que esta precise processar a chamada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Para ferramentas cliente, a definida pela aplicação, o modelo apenas emite a chamada: a resposta vem com stop_reason “tool_use”, e quem executa é a aplicação. Só as ferramentas de servidor do provedor, como web search e code execution, rodam na infraestrutura dele."
+        },
+        {
+          "id": "opt-2",
+          "texto": "as ferramentas são descritas apenas em linguagem natural, sem nenhum esquema de parâmetros, cabendo ao modelo adivinhar, a cada chamada, o formato dos argumentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As ferramentas têm nome, descrição e esquema de entrada (input_schema em JSON Schema). Com “strict: true”, é possível garantir que as chamadas sigam o esquema exatamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o modelo decide quando chamar uma ferramenta e devolve uma chamada estruturada, com nome e argumentos conformes ao esquema; a aplicação executa e retorna o resultado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação da Anthropic, o modelo decide quando chamar a ferramenta com base no pedido e na descrição dela e devolve uma chamada estruturada (bloco tool_use) com nome e argumentos conforme o input_schema. A aplicação executa a operação e devolve o resultado em um bloco tool_result, e o modelo usa esse resultado para continuar. Esse ciclo é a base dos agentes.",
+          "versaoInvertidaFalsa": "o modelo executa por conta própria as funções definidas pela aplicação e descarta seus resultados, de modo que a aplicação não participa do ciclo de chamada nem precisa devolver resultados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "declarar ferramentas em uma requisição altera os pesos do modelo, que passa a lembrar delas nas sessões seguintes sem nova declaração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Definições de ferramentas fazem parte da requisição e consomem tokens de entrada a cada chamada. Não alteram pesos nem persistem entre requisições."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o resultado da execução da ferramenta é descartado após a chamada, pois o modelo não precisa dele para elaborar a resposta final ao usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O resultado é devolvido ao modelo justamente para fundamentar a próxima etapa ou a resposta final. Erros de execução também devem ser devolvidos, para permitir autocorreção."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha é achar que o modelo “roda” a função da aplicação. Nas ferramentas cliente, ele só propõe a chamada estruturada; a aplicação executa e devolve o resultado, que realimenta o modelo.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona o ciclo de tool use (function calling)?",
+        "resposta": "A aplicação declara ferramentas com nome, descrição e JSON Schema. O modelo decide chamar e emite tool_use com os argumentos, a aplicação executa e devolve tool_result, e o modelo usa o resultado para continuar. Ferramentas de servidor do provedor são exceção: rodam na infraestrutura dele."
+      },
+      "conceitosChave": [
+        "Tool use (function calling)"
+      ],
+      "fundamentacao": "Anthropic, “Tool use with Claude” (platform.claude.com/docs/en/agents-and-tools/tool-use/overview), seções “How tool use works” e “When Claude uses tools”; MCP Specification, “Tools” (erros de execução para autocorreção)."
+    },
+    {
+      "id": "eng-ia-038",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Skills, tool use e automação de fluxos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de auditoria de TI criou a skill “checklist-contratacoes-tic”, com um SKILL.md (frontmatter com name e description e instruções no corpo), um arquivo de referência com a legislação aplicável e um script que valida planilhas de preços. A equipe teme que instalar muitas skills esgote a janela de contexto do agente. Considerando o carregamento progressivo das Agent Skills, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para padronizar análises de editais de TIC, um técnico empacotou a skill “analise-editais-tic”: SKILL.md com frontmatter (name e description) e instruções, um documento de referência normativa e um script que confere planilhas. Colegas receiam que acumular skills sobrecarregue o contexto do agente. Considerando o carregamento progressivo das Agent Skills, é correto afirmar que",
+        "A Diretoria de TI pretende distribuir dezenas de skills para o agente de codificação, cada uma com SKILL.md, arquivos de apoio e scripts utilitários, e um gestor pergunta se isso consumirá a janela de contexto logo no início da sessão. Considerando o carregamento progressivo das Agent Skills, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "todas as skills instaladas são carregadas integralmente no início da sessão, inclusive os arquivos de referência e os scripts, razão pela qual a quantidade de skills disponíveis deve ser mínima.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o oposto do carregamento progressivo: no início, só os metadados (nome e descrição, cerca de 100 tokens por skill) entram no prompt de sistema. Por isso é possível instalar muitas skills sem penalidade relevante de contexto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a description é opcional, pois o agente escolhe a skill pelo nome da pasta e lê o conteúdo de todas as skills a cada pedido do usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A description é obrigatória e decisiva: o agente compara o pedido do usuário com ela para decidir se aciona a skill. Por isso deve dizer o que a skill faz e quando usá-la. O corpo das skills não é lido a cada pedido."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o código-fonte do script é sempre inserido no contexto antes de sua execução, para que o modelo possa conferi-lo linha a linha a cada uso da skill.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Scripts empacotados são executados via bash, e só a saída deles entra no contexto: o código não é carregado. É o que torna os scripts mais eficientes do que pedir ao modelo para gerar código equivalente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "skills funcionam apenas na API do provedor e não podem ser usadas em agentes de terminal, nos quais o equivalente obrigatório são servidores MCP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Skills são usadas também em agentes de terminal, como o Claude Code (em ~/.claude/skills/ ou .claude/skills/), e seguem o padrão aberto Agent Skills, adotado por várias ferramentas. MCP e skills são complementares, não equivalentes obrigatórios."
+        },
+        {
+          "id": "opt-5",
+          "texto": "no início, só name e description ficam no contexto; o corpo do SKILL.md é lido quando a tarefa combina com a descrição, e arquivos e scripts entram sob demanda.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela documentação das Agent Skills, o carregamento é progressivo. No nível 1, name e description do frontmatter são carregados no início e ficam no prompt de sistema. No nível 2, o corpo do SKILL.md é lido quando a tarefa combina com a descrição. No nível 3, arquivos adicionais são lidos só quando necessários, e os scripts são executados via bash, com apenas a saída entrando no contexto.",
+          "versaoInvertidaFalsa": "no início, o corpo integral de cada SKILL.md, seus arquivos de referência e o código dos scripts são carregados no contexto, enquanto name e description só são lidos quando a skill é acionada."
+        }
+      ],
+      "pegadinhaFCC": "A banca ataca os três níveis do carregamento progressivo: diz que tudo carrega no início, que a description é opcional e que o código do script entra no contexto. Guarde: metadados sempre, corpo quando acionada, recursos e scripts sob demanda (script só com a saída).",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona o carregamento progressivo das Agent Skills?",
+        "resposta": "Nível 1: name e description sempre no contexto (cerca de 100 tokens por skill). Nível 2: corpo do SKILL.md lido quando a tarefa combina com a descrição. Nível 3: arquivos lidos sob demanda e scripts executados via bash, com só a saída entrando no contexto."
+      },
+      "conceitosChave": [
+        "Agent Skills: carregamento progressivo",
+        "Agent Skills: SKILL.md"
+      ],
+      "fundamentacao": "Anthropic, “Agent Skills — overview” (platform.claude.com/docs/en/agents-and-tools/agent-skills/overview), seção “How Skills work”; Anthropic Engineering, “Equipping agents for the real world with Agent Skills” (16/10/2025); padrão aberto agentskills.io (github.com/agentskills/agentskills)."
+    },
+    {
+      "id": "eng-ia-039",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Skills, tool use e automação de fluxos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao planejar a extensão do agente de codificação usado pela equipe de sistemas, um técnico comparou mecanismos disponíveis no Claude Code. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na definição da arquitetura de extensões do agente que apoiará a manutenção do sistema de prestação de contas, a equipe registrou as seguintes conclusões sobre recursos do Claude Code. Considere as afirmativas abaixo.",
+        "Em curso interno sobre automação de fluxos com agentes de codificação, o instrutor apresentou comparações entre mecanismos de extensão do Claude Code. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um servidor MCP fornece ao agente conexão e ferramentas para um sistema externo, enquanto uma skill pode ensinar ao agente como usar bem essas ferramentas, por exemplo com o esquema do banco e padrões de consulta.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação compara: o MCP conecta o agente a serviços externos (ferramentas e dados), e a skill estende o que o agente sabe, inclusive como usar essas ferramentas de forma eficaz."
+        },
+        {
+          "texto": "Um hook é executado em um evento do ciclo de vida sem que o modelo decida executá-lo, ao passo que uma skill traz instruções que o modelo interpreta, com resultado que pode variar.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O hook dispara no evento sem decisão do modelo (determinístico, com custo de contexto zero salvo se retornar saída). A skill traz instruções que Claude interpreta, e o resultado pode variar."
+        },
+        {
+          "texto": "Um subagente compartilha a janela de contexto da conversa principal, e por isso todo o conteúdo que ele lê passa a ocupar o contexto principal.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Subagentes trabalham em janela de contexto separada; as chamadas de ferramentas deles ficam fora do contexto principal, que recebe apenas um resumo."
+        },
+        {
+          "texto": "Comandos personalizados gravados em .claude/commands/ e skills em .claude/skills/ criam comandos de barra invocáveis pelo usuário, e os comandos personalizados foram incorporados às skills.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação de skills informa que comandos personalizados foram incorporados às skills: um arquivo em .claude/commands/deploy.md e uma skill em .claude/skills/deploy/SKILL.md criam o mesmo /deploy."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III é falsa: o subagente tem janela de contexto própria e devolve só um resumo. Faltam ainda a II e a IV, ambas verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. MCP e skills se complementam (I); hooks são determinísticos e skills são interpretadas pelo modelo (II); comandos personalizados e skills geram comandos de barra, e os comandos foram incorporados às skills (IV). A III é falsa porque o subagente roda em contexto isolado, e esse isolamento é justamente o que impede de lotar a janela principal.",
+          "versaoInvertidaFalsa": "Um hook só é executado quando o modelo decide segui-lo, como qualquer instrução do CLAUDE.md, ao passo que uma skill é executada automaticamente em cada evento do ciclo de vida, sem interpretação do modelo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a IV são verdadeiras, mas a III é falsa, e a combinação omite a I, também verdadeira: MCP e skill se complementam."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a III é falsa: o subagente não compartilha a janela de contexto principal. Faltam ainda a I e a II, ambas verdadeiras."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a III contraria a característica central do subagente: a janela de contexto isolada, que devolve só um resumo."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa III nega o traço que define o subagente (contexto isolado com retorno de resumo). As verdadeiras exigem distinguir conexão (MCP), conhecimento (skill), automação determinística (hook) e isolamento (subagente).",
+      "resumoFlashcard": {
+        "pergunta": "Qual o papel de MCP, skill, hook e subagente no Claude Code?",
+        "resposta": "MCP conecta a sistemas externos (ferramentas e dados). Skill dá conhecimento e fluxos sob demanda, interpretados pelo modelo. Hook executa ação determinística em evento do ciclo de vida. Subagente isola uma tarefa em contexto próprio e devolve um resumo."
+      },
+      "conceitosChave": [
+        "Hooks × skills",
+        "Subagentes",
+        "MCP: fundamentos"
+      ],
+      "fundamentacao": "Claude Code, “Extend Claude Code” (code.claude.com/docs/en/features-overview), seções “Compare similar features” (Skill vs Subagent, MCP vs Skill, Hook vs Skill); “Extend Claude with skills” (comandos personalizados incorporados às skills)."
+    },
+    {
+      "id": "eng-ia-040",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Skills, tool use e automação de fluxos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico escreveu o seguinte frontmatter para uma nova skill destinada a apoiar auditorias de contratos: name: Auditoria_Contratos TCE e description: (vazia), deixando no corpo do SKILL.md a explicação sobre quando usá-la. Considerando a especificação aberta das Agent Skills (agentskills.io), é correto afirmar que o frontmatter",
+      "variantesEnunciado": [
+        "Ao criar uma skill para padronizar a análise de prestações de contas, uma analista preencheu o frontmatter com name: Analise_Contas TCE e description sem conteúdo, explicando no corpo do SKILL.md em que situações a skill deve ser usada. Considerando a especificação aberta das Agent Skills (agentskills.io), é correto afirmar que o frontmatter",
+        "Na revisão de um repositório de skills da Diretoria de TI, encontrou-se um SKILL.md cujo frontmatter traz name: Revisao_Editais TIC e a description em branco, com as orientações de uso apenas no corpo do arquivo. Considerando a especificação aberta das Agent Skills (agentskills.io), é correto afirmar que o frontmatter"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é válido, porque o name é opcional e a description pode ficar vazia, já que o modelo lê o corpo de todas as skills para decidir qual usar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Name e description são campos obrigatórios. A description é o que o agente compara com o pedido para decidir acionar a skill, porque o corpo só é lido depois do acionamento. Deixar a explicação no corpo impede a descoberta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é válido, desde que o name esteja entre aspas, pois espaços, maiúsculas e sublinhados são aceitos em nomes delimitados por aspas no YAML.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A restrição é do formato da skill, não da sintaxe YAML: o name deve ter até 64 caracteres, só com letras minúsculas, números e hífens, sem começar ou terminar com hífen. Aspas não tornam válidos espaços, maiúsculas ou sublinhados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deveria estar em JSON, e não em YAML, pois a especificação exige que os metadados da skill fiquem em um arquivo skill.json, separado do SKILL.md, que contém apenas as instruções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A especificação define o SKILL.md com frontmatter YAML seguido de conteúdo markdown no mesmo arquivo. Não há arquivo skill.json obrigatório."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é inválido: o name admite apenas letras minúsculas, números e hífens, e a description é obrigatória, não pode ficar vazia e deve dizer o que a skill faz e quando usá-la.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela especificação aberta das Agent Skills, o name é obrigatório, tem no máximo 64 caracteres, só com letras minúsculas, números e hífens, sem hífen no início ou no fim. A description também é obrigatória, não pode ser vazia (máximo de 1.024 caracteres) e deve dizer o que a skill faz e quando usá-la, porque é com ela que o agente decide acionar a skill no carregamento progressivo. A documentação de Agent Skills da plataforma da Anthropic traz as mesmas exigências. Algumas ferramentas são mais tolerantes (o Claude Code, por exemplo, usa o nome da pasta quando falta o name), mas isso não torna válido um name com maiúsculas, sublinhado e espaço.",
+          "versaoInvertidaFalsa": "é válido: o name aceita maiúsculas, espaços e sublinhados, e a description pode ficar vazia, porque o agente consulta o corpo do SKILL.md de todas as skills antes de escolher qual acionar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é inválido apenas pela description vazia, pois o name pode conter quaisquer caracteres, desde que não ultrapasse 64 caracteres.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A description vazia invalida o frontmatter, mas o name também é inválido: tem maiúsculas, sublinhado e espaço. O limite de 64 caracteres não é a única restrição."
+        }
+      ],
+      "pegadinhaFCC": "A banca cruza duas regras: o formato do name (minúsculas, números e hífens) e a obrigatoriedade da description. Quem conhece só uma das regras cai na alternativa que aponta um único defeito.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as regras dos campos obrigatórios do frontmatter de um SKILL.md?",
+        "resposta": "name: até 64 caracteres, só minúsculas, números e hífens, sem hífen no início ou no fim. description: obrigatória, não vazia, até 1.024 caracteres, dizendo o que a skill faz e quando usá-la, pois é por ela que o agente decide acioná-la."
+      },
+      "conceitosChave": [
+        "Agent Skills: SKILL.md",
+        "Agent Skills: carregamento progressivo"
+      ],
+      "fundamentacao": "Agent Skills, “Specification” (github.com/agentskills/agentskills, docs/specification.mdx), seção “Frontmatter”; Anthropic, “Agent Skills — overview”, seção “Skill structure” (requisitos de name e description); Claude Code, “Extend Claude with skills” (name derivado do diretório)."
+    }
+  ]
+}

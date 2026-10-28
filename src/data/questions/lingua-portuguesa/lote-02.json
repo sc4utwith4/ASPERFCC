@@ -174,9 +174,9 @@
         },
         {
           "id": "opt-5",
-          "texto": "Caso os dados históricos refletissem distorções antigas, a máquina não as corrigirá: aprenderia com elas e as reproduziria.",
+          "texto": "Se os dados históricos refletissem distorções antigas, a máquina não as corrigirá: aprenderia com elas e as reproduziria.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. Mistura tempos: “corrigirá” (futuro do presente) com “aprenderia” e “reproduziria” (futuro do pretérito). Com a condição no imperfeito do subjuntivo (“Caso [...] refletissem”), todos os verbos da consequência devem estar no futuro do pretérito."
+          "explicacaoDetalhada": "INCORRETA. Mistura tempos: “corrigirá” (futuro do presente) com “aprenderia” e “reproduziria” (futuro do pretérito). Com a condição no imperfeito do subjuntivo (“Se [...] refletissem”), todos os verbos da consequência devem estar no futuro do pretérito."
         }
       ],
       "pegadinhaFCC": "A banca troca apenas o tempo da condição e verifica se o candidato ajusta todos os verbos da consequência. O par mais cobrado: futuro do subjuntivo com futuro do presente; imperfeito do subjuntivo com futuro do pretérito. O mais-que-perfeito do indicativo (“corrigira”) é armadilha de forma parecida.",
@@ -523,7 +523,7 @@
         },
         {
           "id": "opt-2",
-          "texto": "Os jurisdicionados não obedeceram o prazo fixado para a entrega das contas.",
+          "texto": "Os jurisdicionados não obedeceram o prazo fixado para a entrega.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. “Obedecer” (e “desobedecer”) é transitivo indireto e exige a preposição “a”: “não obedeceram ao prazo”. É um dos verbos de regência mais cobrados pela FCC justamente porque o uso coloquial o trata como transitivo direto."
         },
