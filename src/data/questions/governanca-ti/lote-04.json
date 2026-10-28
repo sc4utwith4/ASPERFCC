@@ -490,7 +490,7 @@
         },
         {
           "id": "opt-3",
-          "texto": "bastaria certificar a unidade de TI em norma de gestão de serviços, como a ISO/IEC 20000-1, para suprir a falta de direcionamento estratégico e de critérios de priorização dos investimentos.",
+          "texto": "bastaria certificar a unidade de TI em norma de gestão de serviços, como a ISO/IEC 20000-1, para suprir a falta de direcionamento estratégico e de critérios de priorização.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Uma certificação em gestão de serviços atesta processos de gestão, mas não supre o papel da alta administração de definir direção, critérios de priorização e acompanhamento dos resultados da TI."
         },
@@ -615,7 +615,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "a avaliação de desempenho é obrigatória e deve resultar em nível 5 em todos os processos para que o sistema de governança seja considerado adequado à organização.",
+          "texto": "a avaliação de desempenho é obrigatória e deve resultar em nível 5 em todos os processos para que o sistema de governança seja considerado adequado.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. O COBIT 2019 não obriga avaliações nem exige nível 5 em todos os processos. Os níveis-alvo são definidos no desenho do sistema de governança, considerando os fatores de desenho e a prioridade de cada objetivo."
         }

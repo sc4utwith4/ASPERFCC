@@ -141,7 +141,7 @@
         },
         {
           "id": "opt-3",
-          "texto": "o critério e a ponderação são regulares, pois a lei permite qualquer peso para a proposta técnica, desde que a escolha esteja devidamente justificada no ETP.",
+          "texto": "o critério e a ponderação são regulares, pois a lei permite qualquer peso para a proposta técnica, desde que justificada no ETP.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A justificativa no ETP é condição para escolher o critério, mas não afasta o limite legal: a proposta técnica pode ter, no máximo, 70% de valoração (art. 36, § 2º)."
         },

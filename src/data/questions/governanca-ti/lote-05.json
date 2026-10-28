@@ -420,7 +420,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "estabelece correspondência única e obrigatória, de modo que cada meta corporativa se relaciona com um só objetivo de governança ou de gestão do modelo principal.",
+          "texto": "estabelece correspondência única e obrigatória, de modo que cada meta corporativa se relaciona com um só objetivo de governança ou de gestão.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Os mapeamentos da cascata são de muitos para muitos, com relações primárias e secundárias. Uma meta corporativa se liga a várias metas de alinhamento, que se ligam a vários objetivos, e a organização deve adaptar a cascata ao seu contexto."
         }
@@ -619,7 +619,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "o abandono das abordagens adaptativas, com retorno exclusivo ao ciclo de vida preditivo e às 10 áreas de conhecimento consagradas na 6ª edição.",
+          "texto": "o abandono das abordagens adaptativas, com retorno exclusivo ao ciclo de vida preditivo e às 10 áreas de conhecimento da 6ª edição.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A 8ª edição continua aplicável a abordagens preditivas, adaptativas e híbridas, com orientação de adaptação (tailoring), e não retomou as 10 áreas de conhecimento. Os temas dessas áreas reaparecem reorganizados nos sete domínios de desempenho."
         },
@@ -637,7 +637,7 @@
         },
         {
           "id": "opt-4",
-          "texto": "a eliminação dos domínios de desempenho, substituídos por cinco grupos de processos de aplicação sequencial e obrigatória em todos os projetos.",
+          "texto": "a eliminação dos domínios de desempenho, substituídos por cinco grupos de processos de aplicação sequencial e obrigatória.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Os domínios foram mantidos e reorganizados em sete. As cinco áreas de foco retomam os nomes dos grupos de processos, mas sem sequência rígida, e os processos são não prescritivos."
         },
