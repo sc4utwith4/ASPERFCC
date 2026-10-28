@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "seguranca-informacao",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "seg-info-001",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Princípios: confidencialidade, integridade, disponibilidade, autenticidade e não repúdio",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Em segurança da informação, a propriedade que permite provar a ocorrência de um evento ou de uma ação alegada e identificar a entidade que lhe deu origem, de modo que o autor não possa negar validamente tê-la praticado, denomina-se",
+      "variantesEnunciado": [
+        "Um servidor assinou eletronicamente um parecer no sistema de processo eletrônico do Tribunal e, meses depois, alegou não tê-lo emitido. A propriedade de segurança da informação que permite comprovar a autoria da ação e afastar essa negação denomina-se",
+        "Considere que o protocolo eletrônico do Tribunal precisa assegurar que um jurisdicionado não consiga negar, posteriormente, ter enviado determinada petição. A propriedade de segurança da informação que atende a esse requisito denomina-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "autenticidade (garantia de que a entidade é quem alega ser).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Autenticidade é a propriedade de que uma entidade é o que alega ser (ISO/IEC 27000). Ela apoia o não repúdio, mas, sozinha, não produz a prova de que aquela entidade praticou determinada ação nem impede a negação posterior. A confusão entre os dois conceitos é a armadilha clássica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "não repúdio (irretratabilidade).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Não repúdio, ou irretratabilidade, é a capacidade de provar a ocorrência de um evento ou ação alegada e as entidades que o originaram (ISO/IEC 27000:2018). Na prática, é obtido com assinatura digital feita com chave privada sob controle exclusivo do titular, apoiada em registros confiáveis, como carimbo de tempo e trilhas de auditoria.",
+          "versaoInvertidaFalsa": "autenticidade, pois é ela, e não o não repúdio, que permite provar quem praticou a ação e impede a negação posterior da autoria."
+        },
+        {
+          "id": "opt-3",
+          "texto": "integridade (garantia de exatidão e completude).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Integridade é a propriedade de exatidão e completude da informação, que permite detectar ou impedir alterações indevidas. Um documento íntegro pode ter a autoria contestada: a impossibilidade de negar a autoria é outra propriedade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "confidencialidade (sigilo perante não autorizados).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Confidencialidade é a propriedade de a informação não ser disponibilizada nem revelada a indivíduos, entidades ou processos não autorizados. Ela trata do sigilo, e não da prova de quem praticou a ação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "disponibilidade (acesso sob demanda por autorizados).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Disponibilidade é a propriedade de a informação estar acessível e utilizável sob demanda por entidade autorizada. Manter o registro acessível não basta para provar quem praticou a ação nem para impedir que o autor a negue."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve o não repúdio pela definição da norma e oferece a autenticidade como isca: autenticidade confirma que a entidade é quem diz ser; não repúdio é a prova da autoria da ação, que impede a negação posterior.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre autenticidade e não repúdio?",
+        "resposta": "Autenticidade garante que a entidade é quem alega ser. Não repúdio (irretratabilidade) é a capacidade de provar que um evento ou ação ocorreu e quem o originou, impedindo a negação posterior; na prática, decorre da assinatura digital com chave privada de uso exclusivo do titular."
+      },
+      "conceitosChave": ["Princípios CIDAN", "CIDAN: não repúdio"],
+      "fundamentacao": "ISO/IEC 27000:2018, seção 3 (termos e definições: autenticidade e não repúdio); Lei nº 12.527/2011, art. 4º, VII (autenticidade)."
+    },
+    {
+      "id": "seg-info-002",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Gestão de riscos, vulnerabilidades e incidentes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na revisão anual da gestão de riscos de segurança da informação do Tribunal, o comitê responsável aprovou quatro decisões: (1) desativar o serviço legado de envio de documentos por FTP, substituindo-o pelo portal já existente, pois o risco foi considerado inaceitável e o serviço não era indispensável; (2) contratar apólice de seguro cibernético para cobrir parte das perdas financeiras decorrentes de incidentes graves; (3) implantar autenticação multifator e segmentação de rede para reduzir a probabilidade de acesso indevido ao sistema de prestação de contas; (4) registrar a aceitação formal, pelo proprietário do risco, de um risco residual baixo na intranet. Segundo a ABNT NBR ISO/IEC 27005, as opções de tratamento adotadas em 1, 2, 3 e 4 são, respectivamente,",
+      "variantesEnunciado": [
+        "Durante a atualização do plano de tratamento de riscos da área de TI do Tribunal, foram tomadas as seguintes decisões: (1) encerrar um módulo de consulta pública que expunha dados sem necessidade, eliminando a atividade que originava o risco; (2) celebrar contrato que transfere a um terceiro parte das consequências financeiras de indisponibilidades; (3) aplicar criptografia e controles de acesso que diminuem a probabilidade e o impacto de vazamentos; (4) manter, com registro formal do proprietário do risco, um risco residual considerado tolerável. Conforme a ABNT NBR ISO/IEC 27005, as opções de tratamento em 1, 2, 3 e 4 são, respectivamente,",
+        "Considere que, em auditoria interna do sistema de gestão de segurança da informação do Tribunal, constatou-se que o comitê de riscos (1) deixou de operar um aplicativo obsoleto que originava risco inaceitável; (2) dividiu com uma seguradora parte das perdas potenciais de um ataque; (3) adotou controles técnicos para reduzir a probabilidade de exploração de falhas; e (4) decidiu conscientemente conviver com um risco residual baixo, com o aceite do proprietário do risco. De acordo com a ABNT NBR ISO/IEC 27005, essas decisões correspondem, respectivamente, às opções de tratamento"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "modificar, compartilhar, evitar e reter.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as decisões 1 e 3. Desativar o serviço que origina o risco é evitar o risco; implantar MFA e segmentação para reduzir a probabilidade de ocorrência é modificá-lo. O seguro (2) é compartilhamento e a aceitação formal do residual (4) é retenção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "evitar, reter, modificar e compartilhar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta as decisões 1 (evitar) e 3 (modificar), mas troca 2 e 4: o seguro divide com terceiro parte das consequências (compartilhar), e a aceitação documentada do risco residual pelo proprietário do risco é a retenção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "evitar, compartilhar, modificar e reter.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A ABNT NBR ISO/IEC 27005 (adoção da ISO/IEC 27005:2022, seção 8.2) prevê quatro opções: evitar (não iniciar ou encerrar a atividade que origina o risco, como desativar o FTP legado), compartilhar (dividir o risco com terceiros, como em seguro ou contrato), modificar (alterar probabilidade ou consequência por meio de controles, como MFA e segmentação) e reter (aceitar por decisão informada, com registro do proprietário do risco).",
+          "versaoInvertidaFalsa": "evitar, modificar, compartilhar e reter, pois o seguro cibernético reduz a probabilidade do incidente, e a autenticação multifator transfere o risco ao fornecedor da solução."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reter, compartilhar, modificar e evitar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca as decisões 1 e 4. Reter é aceitar conscientemente o risco, o que ocorreu na intranet (4); encerrar o serviço de FTP (1) elimina a atividade que gera o risco, ou seja, evita o risco."
+        },
+        {
+          "id": "opt-5",
+          "texto": "evitar, compartilhar, reter e modificar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as decisões 3 e 4. Controles técnicos que reduzem a probabilidade de acesso indevido modificam o risco; registrar a aceitação do risco residual pelo proprietário do risco é retê-lo."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve as decisões sem nomear a opção e embaralha a ordem. O detalhe decisivo: encerrar a atividade que origina o risco é evitar; seguro é compartilhar (não reduz probabilidade); controles que reduzem probabilidade ou impacto modificam; aceitar o residual com aval do proprietário é reter.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as opções de tratamento de riscos previstas na ABNT NBR ISO/IEC 27005?",
+        "resposta": "Modificar (controles que alteram probabilidade ou consequência), reter (aceitar por decisão informada), evitar (não iniciar ou encerrar a atividade que origina o risco) e compartilhar (dividir com terceiros, como em seguro ou contrato)."
+      },
+      "conceitosChave": ["ISO 27005: tratamento de riscos"],
+      "fundamentacao": "ISO/IEC 27005:2022 (ABNT NBR ISO/IEC 27005:2023), seção 8.2 (seleção das opções de tratamento de riscos); ABNT NBR ISO/IEC 27001:2022, 6.1.3."
+    },
+    {
+      "id": "seg-info-003",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Classificação da informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere que a área de gestão documental do Tribunal elabora um quadro-resumo sobre a Lei nº 12.527/2011 (LAI). Segundo o art. 24, os prazos máximos de restrição de acesso à informação classificada são: ultrassecreta, ……; secreta, ……; e reservada, ……; esses prazos vigoram a partir da data de …… da informação. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em treinamento sobre classificação da informação para servidores do Tribunal, o instrutor explicou que, conforme o art. 24 da Lei nº 12.527/2011, a informação ultrassecreta tem prazo máximo de restrição de ……, a secreta, de ……, e a reservada, de ……, contados a partir da data de sua ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao revisar a tabela de documentos sigilosos de um órgão jurisdicionado, um técnico verificou que a Lei de Acesso à Informação fixa, no art. 24, § 1º, os seguintes prazos máximos de restrição: ultrassecreta, ……; secreta, ……; reservada, ……, todos contados da data de …… da informação. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "25 anos − 15 anos − 5 anos − classificação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os prazos de 25, 15 e 5 anos estão certos, mas o termo inicial não é a classificação: o § 1º do art. 24 da LAI determina que os prazos vigoram a partir da data de produção da informação. É a meia-verdade típica da banca."
+        },
+        {
+          "id": "opt-2",
+          "texto": "50 anos − 25 anos − 10 anos − produção",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os valores estão inflados. O maior prazo previsto no art. 24, § 1º, da LAI é de 25 anos, para a informação ultrassecreta; a secreta tem 15 anos e a reservada, 5 anos, contados da produção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "25 anos − 10 anos − 5 anos − produção",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Erra o prazo da informação secreta, que é de 15 anos, e não de 10 anos. Os demais elementos (25 anos, 5 anos e contagem a partir da produção) estão corretos, o que torna o distrator perigoso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "25 anos − 15 anos − 5 anos − produção",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Conforme o art. 24, § 1º, da Lei nº 12.527/2011, os prazos máximos de restrição de acesso são de 25 anos (ultrassecreta), 15 anos (secreta) e 5 anos (reservada), vigorando a partir da data de produção da informação. Alternativamente, o termo final pode ser um evento, desde que ocorra antes do prazo máximo (§ 3º), e, vencido o prazo, a informação torna-se automaticamente de acesso público (§ 4º).",
+          "versaoInvertidaFalsa": "25 anos − 15 anos − 5 anos − classificação, pois a LAI determina que a contagem do sigilo comece no ato formal de classificação, e não na produção da informação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "15 anos − 10 anos − 5 anos − classificação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Subestima os dois primeiros graus e adota o termo inicial errado. A informação ultrassecreta tem prazo máximo de 25 anos e a secreta, de 15 anos, contados da produção, e não da classificação."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o termo inicial da contagem (produção × classificação) e altera um único prazo, em geral o da informação secreta. Memorize 25-15-5, contados da produção da informação.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os prazos máximos de sigilo da LAI e a partir de quando são contados?",
+        "resposta": "Ultrassecreta, 25 anos; secreta, 15 anos; reservada, 5 anos (art. 24, § 1º, da Lei 12.527/2011), contados da data de produção da informação. Vencido o prazo ou ocorrido o evento que defina o termo final, a informação torna-se automaticamente pública."
+      },
+      "conceitosChave": ["LAI: classificação da informação"],
+      "fundamentacao": "Lei nº 12.527/2011 (LAI), art. 24, §§ 1º, 3º e 4º."
+    },
+    {
+      "id": "seg-info-004",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Controle de acesso e gestão de identidades (IAM)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de infraestrutura do Tribunal vai exigir autenticação multifator (MFA) no acesso remoto dos servidores à rede corporativa. Foram propostas cinco combinações de verificação para o momento do login. Atende ao conceito de MFA a combinação de",
+      "variantesEnunciado": [
+        "Para proteger o painel administrativo do sistema de prestação de contas, o Tribunal decidiu exigir autenticação baseada em fatores de categorias distintas. Entre as propostas avaliadas pela equipe de segurança, atende ao conceito de autenticação multifator a combinação de",
+        "Um técnico precisa escolher, entre cinco configurações de login propostas para a VPN corporativa do Tribunal, aquela que efetivamente implementa autenticação multifator (MFA). Atende a esse requisito a combinação de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "senha pessoal e PIN numérico de seis dígitos cadastrado pelo próprio servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Senha e PIN pertencem à mesma categoria (algo que o usuário sabe). Somar dois segredos não cria MFA, pois um mesmo tipo de ataque, como phishing ou keylogger, compromete ambos de uma vez."
+        },
+        {
+          "id": "opt-2",
+          "texto": "senha pessoal e resposta a uma pergunta secreta definida no cadastro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pergunta secreta é outro fator de conhecimento, e respostas baseadas em conhecimento são consideradas frágeis pela OWASP. Senha mais pergunta secreta continua sendo autenticação de fator único."
+        },
+        {
+          "id": "opt-3",
+          "texto": "senha pessoal e verificação de que o acesso parte de endereço IP do Brasil.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Localização (endereço IP, geolocalização) é sinal de risco que pode informar a decisão de acesso, mas não substitui um fator de autenticação, conforme a orientação da OWASP baseada na NIST SP 800-63B-4."
+        },
+        {
+          "id": "opt-4",
+          "texto": "senha pessoal e código temporário gerado por aplicativo no celular do servidor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. MFA exige evidências de pelo menos dois fatores de categorias distintas: algo que se sabe, algo que se tem e algo que se é. A senha (conhecimento) combinada com o código TOTP gerado no celular (posse) atende ao requisito. Mais robustos ainda são autenticadores resistentes a phishing, como chaves FIDO2 e passkeys com verificação do usuário.",
+          "versaoInvertidaFalsa": "senha pessoal e PIN numérico de seis dígitos, pois dois segredos distintos, ainda que da mesma categoria, já caracterizam a autenticação multifator."
+        },
+        {
+          "id": "opt-5",
+          "texto": "senha com mais de vinte caracteres, trocada obrigatoriamente a cada trinta dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Senha longa continua sendo um único fator. Além disso, a NIST SP 800-63B desaconselha a troca periódica obrigatória sem indício de comprometimento, porque ela induz senhas previsíveis."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura combinações da mesma categoria (senha + PIN, senha + pergunta secreta) e sinais de contexto (localização) com o verdadeiro segundo fator. MFA exige categorias diferentes: saber, ter e ser.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza a autenticação multifator (MFA)?",
+        "resposta": "O uso de pelo menos dois fatores de categorias distintas: algo que se sabe (senha, PIN), algo que se tem (token, celular, certificado) e algo que se é (biometria). Dois segredos memorizados ou um sinal de localização não formam MFA."
+      },
+      "conceitosChave": ["IAM: MFA"],
+      "fundamentacao": "OWASP Multifactor Authentication Cheat Sheet (fatores de autenticação e sinais de risco); NIST SP 800-63B-4 (autenticadores); ABNT NBR ISO/IEC 27002:2022, controle 8.5 (autenticação segura)."
+    },
+    {
+      "id": "seg-info-005",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Criptografia simétrica e assimétrica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico do Tribunal precisa enviar a uma auditoria independente um arquivo de 2 GB com papéis de trabalho sigilosos, garantindo que somente o destinatário consiga lê-lo. O destinatário possui par de chaves RSA com certificado digital válido, e não há canal seguro prévio para combinar senhas. A solução tecnicamente mais adequada é",
+      "variantesEnunciado": [
+        "Para remeter ao Ministério Público de Contas um lote volumoso de documentos digitalizados de uma fiscalização, a equipe do Tribunal precisa assegurar a confidencialidade no trânsito. O destinatário dispõe de certificado digital com chave pública RSA, mas não há segredo previamente compartilhado entre as partes. A solução tecnicamente mais adequada é",
+        "Considere que o Tribunal deve transmitir a um órgão parceiro uma base de dados extensa com informações sigilosas de jurisdicionados, sem segredo prévio combinado entre as partes, e que o órgão parceiro possui par de chaves assimétricas certificado. Para que apenas o parceiro leia o conteúdo, de forma eficiente, a solução tecnicamente mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cifrar o arquivo com a chave privada do remetente, de modo que apenas o destinatário, com a chave pública correspondente, consiga abri-lo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O que se cifra com a chave privada do remetente pode ser decifrado por qualquer pessoa que tenha a chave pública dele, que é pública por definição. Esse uso serve à assinatura (autoria e integridade), e não à confidencialidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "gerar uma chave AES aleatória, cifrar o arquivo com ela e cifrar essa chave de sessão com a chave pública do destinatário.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a criptografia híbrida (envelope digital): a cifra simétrica (AES) é eficiente para grandes volumes, e a chave de sessão aleatória é protegida com a chave pública do destinatário, que só ele decifra com a própria chave privada. Assim se resolve a distribuição de chaves sem canal seguro prévio, como fazem os padrões de mensagem segura S/MIME e OpenPGP.",
+          "versaoInvertidaFalsa": "gerar uma chave AES aleatória, cifrar o arquivo com ela e cifrar essa chave de sessão com a chave privada do remetente, que o destinatário abre com a chave pública correspondente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "calcular o SHA-256 do arquivo e enviar apenas o resumo, pois o hash impede a leitura do conteúdo por terceiros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Hash é função de resumo de mão única: não cifra o arquivo nem permite recuperar o conteúdo, e enviar apenas o resumo nem sequer entrega a informação ao destinatário. O hash serve para verificar integridade, e não para dar sigilo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cifrar o arquivo com AES e enviar a chave simétrica no mesmo e-mail, em texto claro, para o destinatário decifrar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Enviar a chave simétrica junto do arquivo, em texto claro, anula a confidencialidade: quem interceptar a mensagem obtém as duas coisas. Esse é justamente o problema de distribuição de chaves que a criptografia assimétrica resolve."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cifrar o arquivo com a chave pública do próprio remetente e enviar a chave privada dele ao destinatário em mensagem separada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A chave privada nunca deve ser compartilhada: ela é de uso exclusivo do titular, e entregá-la compromete todas as assinaturas e cifras associadas ao par. A confidencialidade se obtém com a chave pública do destinatário."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte os papéis das chaves: para confidencialidade, cifra-se com a chave pública do destinatário; cifrar com a chave privada do remetente é assinar. E arquivo grande pede cifra simétrica, com a chave de sessão protegida pela assimétrica.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona a criptografia híbrida (envelope digital)?",
+        "resposta": "Gera-se uma chave simétrica de sessão aleatória, cifram-se os dados com ela (de forma rápida, ex.: AES) e cifra-se a chave de sessão com a chave pública do destinatário. Só o destinatário, com sua chave privada, recupera a chave de sessão e decifra os dados."
+      },
+      "conceitosChave": ["Criptografia híbrida (envelope digital)", "Criptografia assimétrica"],
+      "fundamentacao": "Stallings, Criptografia e Segurança de Redes (criptografia de chave pública e distribuição de chaves); FIPS 197 (AES); RFC 8017 (PKCS #1, RSA)."
+    },
+    {
+      "id": "seg-info-006",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Infraestrutura de chaves públicas, certificados e assinatura digital",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito dos certificados digitais no padrão X.509 versão 3, utilizados em infraestruturas de chaves públicas como a ICP-Brasil, é correto afirmar que",
+      "variantesEnunciado": [
+        "Durante a especificação técnica de uma contratação de certificados digitais para servidores do Tribunal, discutiram-se o conteúdo e a emissão dos certificados no padrão X.509 v3. Sobre esses certificados, é correto afirmar que",
+        "Ao configurar a validação de assinaturas no sistema de processo eletrônico do Tribunal, a equipe precisou compreender a estrutura dos certificados digitais X.509 v3. Acerca desses certificados, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "contêm a chave pública e a chave privada do titular, esta protegida por cifra simétrica, o que permite restaurá-la em caso de perda do token.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O certificado é documento público e nunca contém a chave privada do titular. A chave privada fica sob controle exclusivo do titular, em token, cartão ou HSM; eventual cópia de segurança, quando a política a admite, é feita fora do certificado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "são assinados pela autoridade certificadora emissora com a chave pública dela, o que permite a qualquer pessoa conferir a assinatura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A AC assina com a chave privada dela; a chave pública da AC, divulgada no certificado da própria AC, serve para que terceiros verifiquem essa assinatura. Uma assinatura feita com chave pública não teria valor, pois qualquer um poderia produzi-la."
+        },
+        {
+          "id": "opt-3",
+          "texto": "vinculam a chave pública à identidade do titular, trazem número de série, emissor e validade e são assinados com a chave privada da AC emissora.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O certificado X.509 v3 (perfil da RFC 5280) associa a chave pública ao titular e contém, entre outros campos, versão, número de série, algoritmo de assinatura, emissor, validade (início e fim), titular, chave pública e extensões. A autoridade certificadora assina o conjunto com a chave privada dela, e quem confia na AC verifica a assinatura com a chave pública correspondente, subindo a cadeia até a raiz.",
+          "versaoInvertidaFalsa": "vinculam a chave pública à identidade do titular, trazem número de série, emissor e validade e são assinados com a chave privada do próprio titular, sem participação da AC."
+        },
+        {
+          "id": "opt-4",
+          "texto": "têm validade indeterminada, extinguindo-se somente quando o titular pede a revogação e o número de série passa a constar da lista de certificados válidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O certificado tem período de validade definido (campos de início e fim). A revogação antecipa o fim da confiança, e o número de série passa a constar da lista de certificados revogados (LCR), e não de uma lista de válidos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dispensam a verificação da cadeia de certificação quando o titular é órgão público, pois a confiança decorre da natureza do emissor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A validação sempre exige verificar a cadeia até uma AC raiz confiável, o período de validade e o status de revogação, qualquer que seja o titular. Ser órgão público não dispensa nenhuma dessas verificações."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a chave usada na assinatura do certificado (privada da AC, e não pública) e insinua que o certificado guarda a chave privada do titular. Também chama a LCR de lista de válidos, quando ela relaciona os revogados.",
+      "resumoFlashcard": {
+        "pergunta": "O que um certificado X.509 v3 contém e quem o assina?",
+        "resposta": "Contém a chave pública e a identificação do titular, número de série, emissor, período de validade, algoritmo e extensões, mas nunca a chave privada. É assinado pela AC emissora com a chave privada dela, e a verificação usa a chave pública da AC, subindo a cadeia até a raiz."
+      },
+      "conceitosChave": ["Certificado X.509", "Revogação: LCR e OCSP"],
+      "fundamentacao": "RFC 5280 (perfil de certificado X.509 v3 e de LCR); MP nº 2.200-2/2001, art. 6º (atribuições das autoridades certificadoras)."
+    },
+    {
+      "id": "seg-info-007",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "OWASP Top 10:2025 e codificação segura (DevSecOps)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em reunião de alinhamento sobre requisitos de segurança para novos sistemas do Tribunal, a equipe comparou a OWASP Top 10:2025 com a edição de 2021. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao revisar o checklist de segurança de aplicações usado nas contratações de software do Tribunal, um técnico atualizou as referências da OWASP Top 10 da edição de 2021 para a de 2025. Considere as afirmativas abaixo.",
+        "Em auditoria de sistemas sobre o processo de desenvolvimento seguro de um jurisdicionado, a equipe do Tribunal verificou se os critérios adotados refletiam as mudanças da OWASP Top 10:2025 em relação à edição de 2021. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A categoria Security Misconfiguration subiu da 5ª posição, em 2021, para a 2ª posição na edição de 2025.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Segundo a introdução oficial, a A02:2025 Security Misconfiguration subiu de 5º para 2º lugar, refletindo o peso crescente da configuração no comportamento das aplicações."
+        },
+        {
+          "texto": "A categoria Software Supply Chain Failures (A03:2025) amplia a antiga Vulnerable and Outdated Components, abrangendo comprometimentos em dependências, sistemas de build e infraestrutura de distribuição.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A A03:2025 é expansão da A06:2021 e cobre todo o ecossistema de dependências, build e distribuição; foi a categoria mais votada na pesquisa com a comunidade."
+        },
+        {
+          "texto": "A categoria Injection manteve, em 2025, a 3ª posição que ocupava em 2021, por ser uma das mais testadas pelas ferramentas automatizadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Injection caiu duas posições, da 3ª para a 5ª (A05:2025), embora continue entre as categorias mais testadas e com mais CVEs associadas."
+        },
+        {
+          "texto": "A categoria dedicada a registro e monitoramento foi retirada da lista de 2025, por estar sempre sub-representada nos dados coletados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A categoria foi mantida em 9º lugar, com o nome Security Logging & Alerting Failures, para enfatizar que registro sem alerta tem pouco valor na detecção de incidentes."
+        },
+        {
+          "texto": "Mishandling of Exceptional Conditions é categoria nova, voltada a tratamento inadequado de erros, erros lógicos e falha aberta (fail open).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A A10:2025 é nova e reúne 24 CWEs sobre tratamento inadequado de erros, erros lógicos, falha aberta e outras condições anormais."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa: Injection caiu da 3ª posição (2021) para a 5ª (2025). As afirmativas I, II e V estão corretas, o que torna a combinação atraente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I, II e V reproduzem a introdução oficial da OWASP Top 10:2025: Security Misconfiguration subiu de 5º para 2º; Software Supply Chain Failures (A03) é expansão da A06:2021 Vulnerable and Outdated Components; e Mishandling of Exceptional Conditions (A10) é categoria nova. A III erra a posição da Injection (agora A05) e a IV ignora que a categoria de logging foi mantida em 9º, com novo nome.",
+          "versaoInvertidaFalsa": "Mishandling of Exceptional Conditions não é categoria nova na OWASP Top 10:2025: ela apenas renomeia a categoria Server-Side Request Forgery da edição de 2021."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exclui a I, que é verdadeira, e inclui a IV, falsa: a categoria de registro foi mantida como A09:2025, renomeada para Security Logging & Alerting Failures para enfatizar a função de alerta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa, porque Injection caiu para a 5ª posição, e a combinação deixa de fora II e V, ambas verdadeiras e centrais nas mudanças de 2025."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas (III e IV) com uma verdadeira (V). Injection não manteve a 3ª posição, e a categoria de logging não saiu da lista: foi renomeada e mantida em 9º lugar."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura mudanças reais (subida da Security Misconfiguration, novas A03 e A10) com falsas permanências (Injection em 3º) e falsas exclusões (logging). Logging ficou em 9º, renomeado; SSRF foi incorporado à A01.",
+      "resumoFlashcard": {
+        "pergunta": "O que mudou na OWASP Top 10:2025 em relação à edição de 2021?",
+        "resposta": "Duas categorias novas (A03 Software Supply Chain Failures, que amplia Vulnerable and Outdated Components, e A10 Mishandling of Exceptional Conditions) e uma consolidação (SSRF incorporado à A01). Security Misconfiguration subiu de 5º para 2º; Cryptographic Failures caiu para 4º e Injection para 5º; a A09 passou a se chamar Security Logging & Alerting Failures."
+      },
+      "conceitosChave": ["OWASP Top 10:2025: mudanças"],
+      "fundamentacao": "OWASP Top 10:2025, Introdução, seção 'What's changed in the Top 10 for 2025' (versão final publicada em dezembro de 2025, github.com/OWASP/Top10)."
+    },
+    {
+      "id": "seg-info-008",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Segurança em APIs, containers e nuvem",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na auditoria de uma API REST do sistema de cadastro de jurisdicionados, a equipe do Tribunal verificou que o endpoint PATCH /api/usuarios/{id}, usado pelo próprio usuário para atualizar telefone e e-mail, grava no banco qualquer campo recebido no JSON. Em teste autorizado, um usuário comum incluiu o atributo \"perfil\": \"gestor\" na requisição de atualização do próprio cadastro e obteve privilégios de gestor. Segundo a OWASP API Security Top 10:2023, a falha e a medida de correção mais adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Em teste de segurança contratado pelo Tribunal, verificou-se que a API do portal de serviços vincula automaticamente todos os campos do corpo da requisição ao objeto interno do usuário. Ao atualizar o próprio nome, um usuário comum enviou também o campo \"administrador\": true e passou a ter acesso administrativo. Segundo a OWASP API Security Top 10:2023, a falha e a medida de correção mais adequada são, respectivamente,",
+        "Considere que, na homologação de uma API de prestação de contas, um analista descobriu que um jurisdicionado consegue, na operação de edição do próprio perfil, alterar o campo interno \"nivelAcesso\", que deveria ser definido apenas pela administração do sistema. Conforme a OWASP API Security Top 10:2023, a falha e a medida de correção mais adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "API1:2023 – Broken Object Level Authorization; passar a usar identificadores aleatórios (GUID) no lugar dos números sequenciais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. BOLA (API1:2023) ocorre quando o usuário acessa objetos de terceiros manipulando o identificador, como trocar o {id} da URL. Aqui o usuário alterou o próprio registro, mas incluiu uma propriedade proibida. Além disso, GUIDs aleatórios só dificultam a adivinhação, sem substituir a verificação de autorização."
+        },
+        {
+          "id": "opt-2",
+          "texto": "API5:2023 – Broken Function Level Authorization; mover a funcionalidade de atualização para um endpoint administrativo separado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. BFLA (API5:2023) é o acesso a funções que o perfil não pode executar, como chamar um endpoint administrativo. O usuário usou uma função legítima, a edição do próprio cadastro; a falha está na autorização por propriedade do objeto, e não na função."
+        },
+        {
+          "id": "opt-3",
+          "texto": "API3:2023 – Broken Object Property Level Authorization; aceitar somente uma lista explícita das propriedades que o cliente pode alterar.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A API3:2023 (Broken Object Property Level Authorization) reúne as antigas Excessive Data Exposure e Mass Assignment (edição de 2019), com a causa raiz comum: falta de autorização no nível das propriedades do objeto. A correção é não vincular automaticamente a entrada a objetos internos e aceitar somente as propriedades que o cliente pode alterar (lista de permissão), validando o esquema da requisição.",
+          "versaoInvertidaFalsa": "API3:2023 – Broken Object Property Level Authorization; vincular automaticamente todos os campos recebidos, confiando na validação de perfil feita pelo front-end."
+        },
+        {
+          "id": "opt-4",
+          "texto": "API4:2023 – Unrestricted Resource Consumption; impor limite de taxa de requisições por usuário no gateway de API do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A API4:2023 trata do consumo irrestrito de recursos, como CPU, memória, banda e custos por requisição. Limitar a taxa de requisições não impede que uma única chamada altere o perfil do usuário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "API8:2023 – Security Misconfiguration; restringir a política de CORS às origens do portal oficial do Tribunal na internet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CORS restringe quais origens de navegador podem chamar a API, mas não controla quais propriedades um usuário autenticado pode modificar. O ataque funcionaria a partir da própria origem oficial ou fora do navegador."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece três categorias de autorização vizinhas. O detalhe decisivo é que o usuário alterou o PRÓPRIO objeto, mas uma PROPRIEDADE proibida (mass assignment): isso é API3:2023, e não BOLA (objeto alheio) nem BFLA (função proibida).",
+      "resumoFlashcard": {
+        "pergunta": "O que é a API3:2023 – Broken Object Property Level Authorization?",
+        "resposta": "É a falha de autorização no nível das propriedades de um objeto, que une Excessive Data Exposure e Mass Assignment da edição de 2019. Previne-se expondo e aceitando só as propriedades permitidas (lista de permissão), sem vincular automaticamente a entrada a objetos internos."
+      },
+      "conceitosChave": ["OWASP API Security Top 10:2023"],
+      "fundamentacao": "OWASP API Security Top 10:2023, API3:2023 (Broken Object Property Level Authorization), com remissão a API1:2023 e API5:2023."
+    },
+    {
+      "id": "seg-info-009",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Backup, continuidade de negócios e recuperação de desastres",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao revisar o plano de continuidade e a política de backup dos sistemas críticos do Tribunal, um técnico de controle externo analisou conceitos de análise de impacto nos negócios (BIA) e de proteção das cópias de segurança. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em auditoria sobre a gestão de continuidade de negócios de um órgão jurisdicionado, a equipe do Tribunal avaliou a análise de impacto nos negócios (BIA) e a estratégia de proteção das cópias de segurança. Considere as afirmativas abaixo.",
+        "Na preparação de um curso interno sobre resiliência dos serviços de TI do Tribunal, foram reunidas afirmações sobre análise de impacto nos negócios (BIA) e sobre a guarda e a verificação de backups. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A BIA identifica as atividades prioritárias e os impactos de sua interrupção ao longo do tempo e subsidia a definição do RTO, que não deve exceder o período máximo tolerável de interrupção (MTPD).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A BIA avalia os impactos da interrupção ao longo do tempo e fixa prazos priorizados de retomada; o RTO deve ser menor ou igual ao MTPD."
+        },
+        {
+          "texto": "A regra 3-2-1 recomenda manter três cópias dos dados, em dois tipos diferentes de mídia, com ao menos uma cópia fora do local principal.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a formulação clássica: uma cópia primária e duas de backup, em duas mídias distintas, com uma cópia guardada fora do local."
+        },
+        {
+          "texto": "Cópias de segurança permanentemente conectadas à rede de produção e graváveis com a mesma conta administrativa dos servidores são a melhor defesa contra ransomware, por estarem sempre atualizadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Cópias sempre conectadas e graváveis pela mesma credencial costumam ser cifradas junto com a produção; a CISA recomenda backups offline e cifrados."
+        },
+        {
+          "texto": "Os testes periódicos de restauração tornam-se dispensáveis quando o software de backup registra que todas as rotinas foram concluídas com sucesso.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O registro de sucesso não prova que os dados podem ser recuperados; a restauração deve ser testada periodicamente em cenário de recuperação."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa. O guia #StopRansomware da CISA recomenda manter backups offline e cifrados dos dados críticos: cópias sempre conectadas e graváveis pela mesma conta administrativa são cifradas pelo ransomware junto com a produção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa: o sucesso registrado pela rotina não comprova que os dados podem ser restaurados (mídia corrompida, cópia incompleta, chave de cifra perdida). E a I, verdadeira, ficou de fora."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I está correta: a BIA (ISO 22301, com diretrizes na ISO/TS 22317) avalia impactos ao longo do tempo e fixa prazos priorizados de retomada, com RTO menor ou igual ao MTPD. A II também: a regra 3-2-1 prevê três cópias, dois tipos de mídia e uma cópia fora do local. A III e a IV são falsas, pois os backups devem ficar isolados (offline ou imutáveis) e a restauração precisa ser testada periodicamente.",
+          "versaoInvertidaFalsa": "A BIA define o RTO de cada atividade, o qual pode superar o período máximo tolerável de interrupção (MTPD), desde que exista backup completo disponível."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Combina a I, verdadeira, com as duas falsas. Backup conectado e gravável pela mesma credencial é alvo fácil do ransomware, e não testar a restauração deixa a organização sem garantia de recuperação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nem todas estão corretas. As afirmativas III e IV contrariam as boas práticas de isolamento e verificação de backups recomendadas pela CISA e pelo controle 8.13 da ABNT NBR ISO/IEC 27002:2022."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta como vantagem o backup sempre conectado e confia no log de sucesso da rotina. Contra ransomware valem cópias isoladas (offline ou imutáveis) e testes de restauração; e o RTO fixado a partir da BIA não pode passar do MTPD.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a relação entre BIA, RTO e MTPD?",
+        "resposta": "A BIA identifica atividades prioritárias e o impacto da interrupção ao longo do tempo, o que permite fixar o MTPD (prazo a partir do qual o impacto se torna inaceitável) e o RTO (prazo de retomada em nível mínimo aceitável), que deve ser menor ou igual ao MTPD."
+      },
+      "conceitosChave": ["Continuidade: BIA", "Backup: regra 3-2-1"],
+      "fundamentacao": "ISO 22301:2019, 8.2.2 (análise de impacto nos negócios) e ISO/TS 22317; US-CERT, Data Backup Options (2012), regra 3-2-1; CISA, #StopRansomware Guide (backups offline, cifrados e testados); ABNT NBR ISO/IEC 27002:2022, controle 8.13."
+    },
+    {
+      "id": "seg-info-010",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Criptografia simétrica e assimétrica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Acerca do acordo de chaves Diffie-Hellman (DH) e de sua variante sobre curvas elípticas (ECDH), empregados no estabelecimento de sessões seguras, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao avaliar a configuração TLS do portal de serviços do Tribunal, um técnico analisou o papel do acordo de chaves Diffie-Hellman, clássico (DH) ou sobre curvas elípticas (ECDH), no estabelecimento das sessões. Sobre esse mecanismo, é correto afirmar que",
+        "Em parecer técnico sobre a integração segura entre dois sistemas do Tribunal, discutiu-se o uso do acordo de chaves Diffie-Hellman, em sua forma clássica ou sobre curvas elípticas. A respeito desse mecanismo, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o DH cifra diretamente os dados da sessão com a chave pública do servidor, dispensando algoritmo simétrico posterior e garantindo o não repúdio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O DH é protocolo de acordo de chave: as partes derivam um segredo comum sem transmiti-lo, e esse segredo alimenta a cifra simétrica que protege os dados. O DH não cifra mensagens nem assina, logo não proporciona não repúdio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a segurança do DH baseia-se na dificuldade de fatorar números inteiros grandes, o mesmo problema matemático que sustenta o RSA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A segurança do DH repousa no problema do logaritmo discreto, em grupos multiplicativos ou, no ECDH, em curvas elípticas. A fatoração de inteiros é a base do RSA, e a troca dos problemas matemáticos é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "sem autenticação dos valores trocados, o DH fica exposto a ataque de intermediário, e o uso de chaves efêmeras confere sigilo futuro (forward secrecy).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O DH puro não autentica as partes: um intermediário pode negociar um segredo com cada lado e retransmitir o tráfego (man-in-the-middle). Por isso os valores são autenticados, por exemplo com assinaturas ligadas a certificados, como no TLS. Com chaves efêmeras (DHE/ECDHE), descartadas ao fim da sessão, o comprometimento posterior da chave privada de longo prazo do servidor não revela sessões passadas: é o sigilo futuro, adotado de forma geral no TLS 1.3.",
+          "versaoInvertidaFalsa": "mesmo sem autenticação dos valores trocados, o DH é imune a ataque de intermediário, e o sigilo futuro decorre da reutilização prolongada de chaves de longo prazo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o sigilo futuro (forward secrecy) é obtido reutilizando-se a mesma chave DH por longos períodos, o que dificulta a análise do tráfego capturado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: o sigilo futuro depende de chaves efêmeras, novas a cada sessão. Reutilizar a mesma chave por longos períodos faz com que um único comprometimento exponha todas as sessões que dela dependeram."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o ECDH exige chaves maiores que as do DH clássico para o mesmo nível de segurança, razão pela qual foi abandonado pelo TLS 1.3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Curvas elípticas oferecem segurança equivalente com chaves bem menores: cerca de 256 bits de ECC equivalem a 3.072 bits de RSA ou DH clássico, segundo a NIST SP 800-57. E o TLS 1.3 usa amplamente o ECDHE, em vez de abandoná-lo."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao DH funções que ele não tem (cifrar dados, assinar), troca seu problema matemático (logaritmo discreto) pelo do RSA (fatoração) e inverte o sigilo futuro, que exige chaves efêmeras.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a principal fragilidade do Diffie-Hellman puro e como se obtém sigilo futuro?",
+        "resposta": "Sem autenticação das partes, o DH é vulnerável a ataque de intermediário (MITM); mitiga-se autenticando os valores trocados, por exemplo com certificados e assinaturas. O sigilo futuro vem de chaves efêmeras (DHE/ECDHE), que impedem que a quebra posterior da chave de longo prazo revele sessões passadas."
+      },
+      "conceitosChave": ["Diffie-Hellman", "Criptografia assimétrica"],
+      "fundamentacao": "Diffie e Hellman, New Directions in Cryptography (1976); RFC 8446 (TLS 1.3, acordo de chaves (EC)DHE efêmero); NIST SP 800-57 Parte 1, tabela de equivalência de força de segurança."
+    }
+  ]
+}

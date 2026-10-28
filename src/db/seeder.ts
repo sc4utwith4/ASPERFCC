@@ -64,7 +64,7 @@ export async function semearBanco(onProgresso?: (p: ProgressoSeed) => void): Pro
 
   onProgresso?.({ etapa: "Notas Cornell de exemplo", feito: feito++, total });
   await semearNotasExemplo();
-  onProgresso?.({ etapa: "Workspace de exemplo", feito: feito++, total });
+  onProgresso?.({ etapa: "Workspace de exemplo", feito, total });
   await semearWorkspaceExemplo();
   onProgresso?.({ etapa: "Pronto", feito: total, total });
 

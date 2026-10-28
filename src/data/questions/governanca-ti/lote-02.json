@@ -1,0 +1,536 @@
+{
+  "materiaSlug": "governanca-ti",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "gov-ti-011",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Ao avaliar a governança de informação e tecnologia de uma secretaria estadual com base no COBIT 2019, a equipe do Tribunal registrou quatro achados: (1) a matriz RACI das práticas de gestão de mudanças não atribui a ninguém a responsabilidade final (accountable) pela aprovação; (2) não existe política formal de classificação da informação; (3) os atendentes da central de serviços não têm a qualificação necessária para operar a ferramenta de gestão de serviços; (4) a ferramenta de gestão de serviços em uso não oferece integração entre os módulos de incidentes e de mudanças. Os componentes do sistema de governança afetados em (1), (2), (3) e (4) são, respectivamente,",
+      "variantesEnunciado": [
+        "Em auditoria de governança de I&T em uma autarquia, baseada no COBIT 2019, foram apontados: (1) matriz RACI do processo de gestão de problemas sem papel accountable definido; (2) ausência de política formal de uso aceitável dos recursos de TI; (3) equipe de suporte sem as competências exigidas para administrar o novo sistema de monitoramento; (4) plataforma de monitoramento incapaz de enviar alertas ao sistema de chamados. Os componentes do sistema de governança afetados em (1), (2), (3) e (4) são, respectivamente,",
+        "Considere que, no diagnóstico da governança de I&T de um município baseado no COBIT 2019, constatou-se: (1) indefinição, na matriz RACI, de quem aprova os projetos de TI; (2) inexistência de política formal de segurança da informação; (3) servidores sem capacitação para operar o sistema de gestão de projetos; (4) sistema de gestão de projetos sem integração com o sistema orçamentário. Os componentes do sistema de governança afetados em (1), (2), (3) e (4) são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "estruturas organizacionais; princípios, políticas e frameworks; pessoas, habilidades e competências; serviços, infraestrutura e aplicações.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O COBIT 2019 prevê sete componentes do sistema de governança: processos; estruturas organizacionais; princípios, políticas e frameworks; informação; cultura, ética e comportamento; pessoas, habilidades e competências; e serviços, infraestrutura e aplicações. A matriz RACI descreve as responsabilidades das estruturas organizacionais em cada prática. A política formal integra o componente de princípios, políticas e frameworks. A falta de qualificação afeta pessoas, habilidades e competências. A ferramenta deficiente pertence a serviços, infraestrutura e aplicações.",
+          "versaoInvertidaFalsa": "processos; informação; pessoas, habilidades e competências; serviços, infraestrutura e aplicações, já que a matriz RACI faz parte do componente processos e a política de classificação é item de informação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "processos; informação; cultura, ética e comportamento; serviços, infraestrutura e aplicações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A matriz RACI não é o componente processo: ela documenta, para cada prática, as responsabilidades das estruturas organizacionais. A política formal não é item de informação, e sim parte de princípios, políticas e frameworks. Falta de qualificação técnica refere-se a pessoas, habilidades e competências, não a cultura e comportamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "estruturas organizacionais; informação; pessoas, habilidades e competências; processos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta (1) e (3), mas erra (2) e (4). A política de classificação pertence ao componente princípios, políticas e frameworks, ainda que trate de informação. A limitação da ferramenta é de serviços, infraestrutura e aplicações, e não do processo, que continuaria existindo com outra ferramenta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cultura, ética e comportamento; princípios, políticas e frameworks; pessoas, habilidades e competências; serviços, infraestrutura e aplicações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta (2), (3) e (4), mas classifica como cultura a falha da matriz RACI. A RACI descreve as responsabilidades das estruturas organizacionais em cada prática, e a ausência de um responsável final (accountable) é falha de estrutura organizacional, não de comportamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "processos; princípios, políticas e frameworks; pessoas, habilidades e competências; informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta (2) e (3), mas trata a matriz RACI como processo e a deficiência da ferramenta como informação. No COBIT 2019, a RACI está vinculada ao componente estruturas organizacionais, e as ferramentas de TI compõem serviços, infraestrutura e aplicações."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora componentes vizinhos: a RACI parece 'processo', a política de classificação parece 'informação' e a falta de capacitação parece 'cultura'. No COBIT 2019, a RACI liga práticas a estruturas organizacionais, políticas ficam em princípios, políticas e frameworks, e ferramentas ficam em serviços, infraestrutura e aplicações.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os sete componentes do sistema de governança no COBIT 2019?",
+        "resposta": "Processos; estruturas organizacionais; princípios, políticas e frameworks; informação; cultura, ética e comportamento; pessoas, habilidades e competências; e serviços, infraestrutura e aplicações. No COBIT 5, eram chamados de habilitadores."
+      },
+      "conceitosChave": ["COBIT 2019: componentes"],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology, cap. 4 (componentes do sistema de governança); COBIT 2019 Framework: Governance and Management Objectives, estrutura de cada objetivo (processo, estruturas organizacionais com matriz RACI, fluxos e itens de informação, pessoas, habilidades e competências, políticas e procedimentos, cultura, serviços, infraestrutura e aplicações)."
+    },
+    {
+      "id": "gov-ti-012",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a equipe de TI do Tribunal, adotando o ITIL 4, modela o fluxo de valor de um novo serviço de envio eletrônico de prestações de contas pelos jurisdicionados. Na modelagem, a atividade da cadeia de valor de serviço que assegura que os componentes do serviço estejam disponíveis quando e onde forem necessários e atendam às especificações acordadas, como a aquisição dos certificados digitais e o desenvolvimento do módulo de recepção, é",
+      "variantesEnunciado": [
+        "Na implantação de um serviço de assinatura eletrônica de despachos, a equipe de TI de um tribunal de contas mapeou as atividades da cadeia de valor do ITIL 4. A atividade que garante que os componentes do serviço, como as licenças contratadas e o módulo de integração desenvolvido internamente, estejam disponíveis quando e onde necessários e conforme as especificações acordadas é",
+        "Uma secretaria estadual estrutura, segundo o ITIL 4, o fluxo de valor de um portal de agendamento. Contratar os servidores em nuvem e desenvolver as integrações com os sistemas legados, garantindo que esses componentes estejam disponíveis quando e onde necessários e atendam às especificações, corresponde à atividade da cadeia de valor denominada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "projetar e fazer a transição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Projetar e fazer a transição busca garantir que produtos e serviços atendam continuamente às expectativas das partes interessadas quanto a qualidade, custos e prazo de entrada em operação. Não é a atividade que obtém ou constrói os componentes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "entregar e dar suporte.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Entregar e dar suporte garante que os serviços sejam entregues e sustentados conforme as especificações acordadas e as expectativas das partes interessadas, ou seja, trata da operação em uso. Não é a atividade de adquirir ou desenvolver componentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "obter/construir.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A cadeia de valor de serviço do ITIL 4 tem seis atividades: planejar, melhorar, engajar, projetar e fazer a transição, obter/construir e entregar e dar suporte. A atividade obter/construir assegura que os componentes do serviço estejam disponíveis quando e onde forem necessários e atendam às especificações acordadas, seja por aquisição (certificados, licenças, nuvem) ou por desenvolvimento interno.",
+          "versaoInvertidaFalsa": "projetar e fazer a transição, atividade que assegura que os componentes do serviço sejam adquiridos ou construídos e estejam disponíveis quando e onde necessários."
+        },
+        {
+          "id": "opt-4",
+          "texto": "engajar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Engajar busca compreender as necessidades das partes interessadas e manter transparência, envolvimento contínuo e bons relacionamentos com elas, como ouvir os jurisdicionados sobre o serviço. Não trata da disponibilidade dos componentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "planejar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Planejar garante entendimento compartilhado da visão, da situação atual e da direção de melhoria para as quatro dimensões e para todos os produtos e serviços. É atividade de orientação, não de obtenção de componentes."
+        }
+      ],
+      "pegadinhaFCC": "As atividades vizinhas confundem: quem adquire ou desenvolve componentes conforme especificação é obter/construir. Projetar e fazer a transição cuida de qualidade, custo e prazo de entrada em operação, e entregar e dar suporte cuida do serviço em uso.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as seis atividades da cadeia de valor de serviço do ITIL 4 e o que faz obter/construir?",
+        "resposta": "Planejar, melhorar, engajar, projetar e fazer a transição, obter/construir e entregar e dar suporte. Obter/construir garante que os componentes do serviço estejam disponíveis quando e onde necessários e conforme as especificações."
+      },
+      "conceitosChave": ["ITIL 4: cadeia de valor de serviço"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 4, seção sobre a cadeia de valor de serviço (propósito de cada uma das seis atividades)."
+    },
+    {
+      "id": "gov-ti-013",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na área de TI de um tribunal de contas, três mudanças ocorreram na mesma semana: (1) a criação de caixa postal para servidor recém-empossado, atividade de baixo risco, bem compreendida e executada sempre pelo mesmo roteiro aprovado; (2) a aplicação imediata de correção de segurança para vulnerabilidade crítica que estava sendo explorada contra o portal de serviços; (3) a migração do banco de dados do sistema de controle externo para nova versão, com avaliação de riscos e janela programada. Segundo a prática de habilitação de mudanças do ITIL 4, essas mudanças classificam-se, respectivamente, como",
+      "variantesEnunciado": [
+        "Em um jurisdicionado, a equipe de TI registrou: (1) a liberação de acesso de leitura a uma pasta de rede, procedimento rotineiro, de baixo risco e com roteiro previamente aprovado; (2) a correção urgente de falha que deixava fora do ar o sistema de arrecadação; (3) a substituição planejada do servidor de arquivos, avaliada e agendada para o fim de semana. Segundo a prática de habilitação de mudanças do ITIL 4, essas mudanças classificam-se, respectivamente, como",
+        "Considere três mudanças na infraestrutura de uma secretaria estadual: (1) a instalação de software homologado no catálogo, por roteiro pré-autorizado e de baixo risco; (2) a aplicação imediata de correção para conter ataque em curso; (3) a atualização do sistema de gestão de pessoal para nova versão, com análise de impacto e aprovação prévia da autoridade de mudança. Pelo ITIL 4, essas mudanças classificam-se, respectivamente, como"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "normal, emergencial e padrão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A criação de caixa postal por roteiro aprovado, de baixo risco e repetitiva, é a definição de mudança padrão, que é pré-autorizada. A migração do banco de dados, que exige avaliação e agendamento, é mudança normal. A alternativa troca os dois extremos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "padrão, emergencial e normal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No ITIL 4, mudança padrão é de baixo risco, bem compreendida, documentada e pré-autorizada, e pode ser executada sem nova autorização, muitas vezes a partir de requisição de serviço. Mudança emergencial deve ser implementada o quanto antes (por exemplo, para aplicar correção de segurança), com avaliação e autorização expeditas. Mudança normal precisa ser programada, avaliada e autorizada conforme o processo, como a migração planejada do banco de dados.",
+          "versaoInvertidaFalsa": "normal, padrão e emergencial, porque a correção imediata de vulnerabilidade explorada é mudança padrão pré-autorizada, e a migração programada é emergencial."
+        },
+        {
+          "id": "opt-3",
+          "texto": "padrão, normal e emergencial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a primeira, mas inverte as demais. A correção de vulnerabilidade que está sendo explorada exige implementação imediata, o que caracteriza mudança emergencial. A migração com análise de riscos e janela programada é mudança normal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "emergencial, padrão e normal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há urgência na criação de caixa postal, atividade rotineira e pré-autorizada (padrão). A correção de segurança diante de exploração ativa não é padrão, pois exige ação imediata e autorização expedita."
+        },
+        {
+          "id": "opt-5",
+          "texto": "padrão, emergencial e emergencial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A migração do banco de dados foi planejada, com avaliação de riscos e janela programada, e por isso é mudança normal. Considerar emergencial toda mudança de grande impacto confunde impacto com urgência."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde impacto com urgência e rotina com emergência. O critério do ITIL 4 é: padrão é pré-autorizada e de baixo risco; emergencial precisa ser feita o quanto antes, com autorização expedita; normal segue avaliação, autorização e agendamento.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os três tipos de mudança do ITIL 4 e o que caracteriza cada um?",
+        "resposta": "Padrão: baixo risco, documentada e pré-autorizada. Emergencial: implementada o quanto antes, com avaliação e autorização expeditas. Normal: programada, avaliada e autorizada por uma autoridade de mudança conforme o processo."
+      },
+      "conceitosChave": ["Gestão de serviços: tipos de mudança", "ITIL 4: habilitação de mudanças"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, prática de controle de mudanças (change control), denominada habilitação de mudanças (change enablement) no guia da prática: mudanças padrão, normais e emergenciais."
+    },
+    {
+      "id": "gov-ti-014",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um órgão estadual precisa adquirir 300 notebooks com especificações usuais de mercado, objetivamente definidas no edital, e, em processo separado, contratar solução inovadora de inteligência artificial para triagem de processos, cujas especificações técnicas não consegue definir com precisão suficiente sem adaptar as soluções disponíveis no mercado. Segundo a Lei 14.133/2021, as modalidades adequadas são, respectivamente,",
+      "variantesEnunciado": [
+        "O Tribunal planeja comprar 500 monitores com padrões de desempenho e qualidade definidos objetivamente por especificações usuais de mercado e, em outro processo, contratar solução inovadora de análise de dados cujas especificações a Administração não consegue definir com precisão sem adaptar soluções existentes. Segundo a Lei 14.133/2021, as modalidades adequadas são, respectivamente,",
+        "Uma prefeitura vai licitar licenças de software de escritório, bem comum de especificação usual de mercado, e, separadamente, buscar solução tecnológica inovadora para atendimento por assistente virtual, cuja especificação técnica precisa não consegue definir sem dialogar com o mercado. Pela Lei 14.133/2021, as modalidades adequadas são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "concorrência, com critério de técnica e preço, e pregão, com critério de menor preço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bens com especificações usuais de mercado são bens comuns, para os quais o pregão é obrigatório (art. 6º, XLI, e art. 29). A solução inovadora, cujas especificações não podem ser definidas com precisão, é hipótese típica de diálogo competitivo, e não de pregão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pregão, com critério de técnica e preço, e concurso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No pregão, o critério de julgamento é o menor preço ou o maior desconto (art. 6º, XLI). Concurso é modalidade para escolha de trabalho técnico, científico ou artístico, com prêmio ou remuneração ao vencedor, e não para contratar solução tecnológica a ser desenvolvida com o mercado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tomada de preços e diálogo competitivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tomada de preços e convite não existem na Lei 14.133/2021, cujas modalidades são pregão, concorrência, concurso, leilão e diálogo competitivo (art. 28). Também é vedado criar modalidades ou combinar as existentes (art. 28, § 2º)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "diálogo competitivo e concorrência com critério de maior retorno econômico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Diálogo competitivo não se presta a bens comuns com especificação usual, cuja aquisição exige pregão. Maior retorno econômico é critério usado exclusivamente em contrato de eficiência (art. 39), em que se remunera o contratado por percentual da economia gerada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "pregão, com critério de menor preço ou maior desconto, e diálogo competitivo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela Lei 14.133/2021, o pregão é a modalidade obrigatória para bens e serviços comuns, cujos padrões de desempenho e qualidade possam ser definidos objetivamente por especificações usuais de mercado, com critério de menor preço ou de maior desconto (art. 6º, XIII e XLI, e art. 29). O diálogo competitivo é restrito a objetos que envolvam inovação tecnológica ou técnica, impossibilidade de atender à necessidade sem adaptar soluções disponíveis e impossibilidade de definir as especificações técnicas com precisão suficiente (art. 32, I).",
+          "versaoInvertidaFalsa": "diálogo competitivo, por se tratar de bem de TIC, e pregão com critério de menor preço para a solução inovadora de inteligência artificial."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece modalidades extintas (tomada de preços), critérios incompatíveis com o pregão (técnica e preço) e troca os objetos: bem comum com especificação usual vai para pregão, e solução inovadora sem especificação precisa vai para diálogo competitivo.",
+      "resumoFlashcard": {
+        "pergunta": "Na Lei 14.133/2021, quando cabem o pregão e o diálogo competitivo?",
+        "resposta": "O pregão é obrigatório para bens e serviços comuns, definidos objetivamente por especificações usuais de mercado, com critério de menor preço ou maior desconto. O diálogo competitivo é para objetos inovadores, que exigem adaptar soluções do mercado e cujas especificações a Administração não consegue definir com precisão."
+      },
+      "conceitosChave": ["Lei 14.133: modalidades", "Lei 14.133: critérios de julgamento"],
+      "fundamentacao": "Lei 14.133/2021, art. 6º, XIII (bens e serviços comuns), XXXIX (concurso), XLI (pregão) e XLII (diálogo competitivo); arts. 28, 29, 32 e 39."
+    },
+    {
+      "id": "gov-ti-015",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Estratégia Nacional de Governo Digital (ENGD 2024–2027)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O Decreto 12.069/2024, que dispõe sobre a Estratégia Nacional de Governo Digital e institui a estratégia para o período de 2024 a 2027, estabelece como objetivo geral dessa estratégia",
+      "variantesEnunciado": [
+        "Em estudo sobre transformação digital no setor público, um técnico precisa indicar corretamente o objetivo geral da Estratégia Nacional de Governo Digital para 2024 a 2027, instituída pelo Decreto 12.069/2024. Esse objetivo geral é",
+        "Segundo o Decreto 12.069/2024, a Estratégia Nacional de Governo Digital para o período de 2024 a 2027, que articula as estratégias da União, dos Estados, do Distrito Federal e dos Municípios, tem como objetivo geral"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a substituição integral do atendimento presencial por canais digitais em todos os entes federativos até o fim de 2027.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O decreto não fixa meta de extinção do atendimento presencial. Ao contrário, valoriza canais integrados de atendimento e o reconhecimento das barreiras de acesso, em linha com a Lei 14.129/2021, que preserva a possibilidade de atendimento presencial."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a centralização, na União, da prestação dos serviços públicos digitais dos Estados, do Distrito Federal e dos Municípios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ENGD articula e direciona estratégias de transformação digital de todos os entes, que mantêm suas competências. A colaboração ocorre pela Rede Gov.br, de adesão voluntária, e não por centralização na União."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a adoção obrigatória, por todos os entes, da estratégia federal de governo digital, vedada a edição de estratégias locais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O decreto prevê justamente a publicação de estratégias de governo digital pela União, pelos Estados, pelo DF e pelos Municípios (art. 10, I). Quem adere à Rede Gov.br assume o compromisso de publicar estratégia própria em consonância com a ENGD."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a busca de um Estado mais inclusivo, eficaz, proativo, participativo e sustentável.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 8º do Decreto 12.069/2024 define como objetivo geral a busca de um Estado mais inclusivo, eficaz, proativo, participativo e sustentável. Isso deve ocorrer em especial pela oferta de soluções que reconheçam desigualdades e barreiras de acesso, pela adaptação dos processos com inovação e reúso seguro de dados, e pela transparência, participação social e desenvolvimento sustentável. O art. 9º desdobra esse objetivo em dez objetivos específicos.",
+          "versaoInvertidaFalsa": "a busca de um Estado mais centralizado e exclusivamente digital, com a extinção progressiva dos canais presenciais de atendimento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a transferência das infraestruturas públicas digitais, como a Plataforma gov.br, à gestão de entidades do setor privado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As infraestruturas públicas digitais são soluções estruturantes construídas para o interesse público e podem ser usadas por entidades públicas e privadas (art. 4º, III). O decreto atribui à Secretaria de Governo Digital a promoção de seu desenvolvimento e uso, e não sua transferência ao setor privado."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o objetivo geral por medidas extremas que o decreto não prevê, como extinguir o presencial, centralizar serviços na União ou proibir estratégias locais. O texto fala em Estado mais inclusivo, eficaz, proativo, participativo e sustentável.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o objetivo geral da Estratégia Nacional de Governo Digital 2024–2027 (Decreto 12.069/2024)?",
+        "resposta": "A busca de um Estado mais inclusivo, eficaz, proativo, participativo e sustentável (art. 8º). Ele se desdobra em dez objetivos específicos (art. 9º) e em prioridades para 2024–2027 (art. 10)."
+      },
+      "conceitosChave": ["ENGD 2024–2027: objetivos", "ENGD 2024–2027: estrutura do decreto"],
+      "fundamentacao": "Decreto 12.069/2024, arts. 2º, 4º, III, 8º, 9º, 10, I, e 11 a 15."
+    },
+    {
+      "id": "gov-ti-016",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "PMBOK 8ª edição",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O gerente de um projeto de modernização do sistema de autuação de um tribunal de contas organiza o trabalho pelos domínios de desempenho do Guia PMBOK 8ª edição. Ele precisa: (1) acompanhar o orçamento, o financiamento e a obtenção dos benefícios financeiros esperados; (2) definir quem decide sobre mudanças relevantes e como o projeto presta contas ao comitê patrocinador; (3) identificar e tratar ameaças e oportunidades que podem afetar os objetivos. Essas necessidades relacionam-se, respectivamente, aos domínios de desempenho",
+      "variantesEnunciado": [
+        "No projeto de implantação de uma plataforma de dados de um jurisdicionado, conduzido conforme o Guia PMBOK 8ª edição, a gerente separou três frentes: (1) controle de custos, fontes de recursos e retorno financeiro; (2) estrutura de decisão, escalonamento e supervisão do projeto; (3) análise e resposta a ameaças e oportunidades. Essas frentes relacionam-se, respectivamente, aos domínios de desempenho",
+        "Ao estruturar o plano de um projeto de migração para nuvem segundo o Guia PMBOK 8ª edição, o gerente listou: (1) orçamento e benefícios financeiros; (2) papéis decisórios, aprovação de mudanças e relação com o patrocinador; (3) tratamento de eventos incertos positivos e negativos. Essas necessidades relacionam-se, respectivamente, aos domínios de desempenho"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Custos, Integração e Incerteza.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Custos e Integração eram áreas de conhecimento da 6ª edição, e Incerteza era domínio de desempenho da 7ª. Nenhum desses nomes integra os sete domínios da 8ª edição, que adotou Finanças, Governança e Risco."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Finanças, Partes Interessadas e Incerteza.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Finanças está correto, mas definir quem decide e como o projeto presta contas ao patrocinador é matéria de Governança, e não apenas de engajamento das partes interessadas. Incerteza era domínio da 7ª edição; na 8ª, ameaças e oportunidades são tratadas no domínio Risco."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Finanças, Governança e Risco.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os sete domínios de desempenho do PMBOK 8ª edição são Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco. Orçamento, financiamento e benefícios financeiros ficam em Finanças. Estrutura decisória, aprovação de mudanças e supervisão do projeto ficam em Governança. Ameaças e oportunidades ficam em Risco, tema que na 7ª edição cabia ao domínio Incerteza.",
+          "versaoInvertidaFalsa": "Custos, Integração e Incerteza, que são os nomes adotados pela 8ª edição para os domínios de orçamento, estrutura decisória e riscos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Medição, Governança e Risco.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Medição era domínio da 7ª edição e não figura entre os sete da 8ª. Acompanhar orçamento e benefícios financeiros corresponde, na 8ª edição, ao domínio Finanças."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Finanças, Recursos e Entrega.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Recursos trata da obtenção e do uso das pessoas e dos demais recursos necessários ao projeto, e não da estrutura decisória. Entrega era domínio da 7ª edição. Na 8ª, ameaças e oportunidades estão no domínio Risco."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura nomes de três edições: áreas de conhecimento da 6ª (Custos, Integração), domínios da 7ª (Incerteza, Medição, Entrega) e da 8ª. Só Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco são domínios da 8ª edição.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os sete domínios de desempenho do PMBOK 8ª edição?",
+        "resposta": "Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco. Eles substituem os oito domínios da 7ª edição e retomam, de forma reorganizada, temas das antigas áreas de conhecimento."
+      },
+      "conceitosChave": ["PMBOK 8: domínios de desempenho", "PMBOK 6 × 7 × 8"],
+      "fundamentacao": "PMI. PMBOK Guide, 8th ed. (2025), domínios de desempenho Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco; PMBOK Guide, 7th ed. (2021), domínios de desempenho; PMBOK Guide, 6th ed. (2017), áreas de conhecimento."
+    },
+    {
+      "id": "gov-ti-017",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Métodos ágeis em projetos de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Segundo o Guia do Scrum (2020), cada artefato contém um compromisso que reforça a transparência e o foco: o Product Backlog tem a …… ; o Sprint Backlog tem a …… ; e o Incremento tem a …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em treinamento sobre Scrum para a equipe de projetos do Tribunal, o instrutor explicou que, pelo Guia do Scrum (2020), os compromissos associados aos artefatos são: para o Product Backlog, a …… ; para o Sprint Backlog, a …… ; e para o Incremento, a …… . Preenchem, correta e respectivamente, as lacunas:",
+        "No Guia do Scrum (2020), a cada artefato corresponde um compromisso: o Product Backlog está associado à …… ; o Sprint Backlog, à …… ; e o Incremento, à …… . Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Visão do Produto − Meta da Sprint − Definição de Preparado",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Visão do Produto' e 'Definição de Preparado' (Definition of Ready) não são compromissos do Guia do Scrum (2020). O compromisso do Product Backlog é a Meta do Produto, e o do Incremento, a Definição de Pronto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Meta da Sprint − Meta do Produto − Definição de Pronto",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os compromissos dos backlogs. A Meta do Produto orienta o Product Backlog no longo prazo, e a Meta da Sprint é o objetivo único da Sprint, que dá coerência ao Sprint Backlog."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Meta do Produto − Definição de Pronto − Meta da Sprint",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Definição de Pronto é o compromisso do Incremento: descreve o estado em que ele atende às medidas de qualidade exigidas. A Meta da Sprint é o compromisso do Sprint Backlog."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Definição de Pronto − Meta da Sprint − Meta do Produto",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca os compromissos do Product Backlog e do Incremento. O trabalho só integra um Incremento quando atende à Definição de Pronto, e o Product Backlog é orientado pela Meta do Produto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Meta do Produto − Meta da Sprint − Definição de Pronto",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Guia do Scrum (2020) associa um compromisso a cada artefato. O Product Backlog tem a Meta do Produto, estado futuro do produto e objetivo de longo prazo do Scrum Team. O Sprint Backlog tem a Meta da Sprint, objetivo único da Sprint. O Incremento tem a Definição de Pronto, descrição formal do estado em que o Incremento atende às medidas de qualidade exigidas.",
+          "versaoInvertidaFalsa": "O Product Backlog tem a Meta da Sprint, o Sprint Backlog tem a Meta do Produto e o Incremento tem a Definição de Pronto."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte os compromissos dos dois backlogs e insere termos que não estão no Guia do Scrum (2020), como 'Definição de Preparado' e 'Visão do Produto'.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os compromissos associados aos artefatos no Guia do Scrum (2020)?",
+        "resposta": "Product Backlog: Meta do Produto. Sprint Backlog: Meta da Sprint. Incremento: Definição de Pronto. Os compromissos foram introduzidos na versão de 2020 para reforçar a transparência e o foco."
+      },
+      "conceitosChave": ["Scrum: artefatos e compromissos"],
+      "fundamentacao": "Schwaber, K.; Sutherland, J. Guia do Scrum (2020), seção 'Artefatos do Scrum' (Product Backlog e Meta do Produto; Sprint Backlog e Meta da Sprint; Incremento e Definição de Pronto)."
+    },
+    {
+      "id": "gov-ti-018",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Governança de TI e alinhamento estratégico",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Para Weill e Ross, autores de referência no tema, governança de TI consiste em",
+      "variantesEnunciado": [
+        "Em nota técnica sobre governança de TI, um técnico do Tribunal adotou a definição clássica de Weill e Ross. Segundo esses autores, governança de TI consiste em",
+        "Ao diferenciar governança e gestão de TI em um curso para jurisdicionados, o instrutor recorreu à definição de Weill e Ross, para quem governança de TI consiste em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "especificar os direitos decisórios e o modelo de responsabilização para estimular comportamentos desejáveis no uso da TI.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Weill e Ross (2004) definem governança de TI como a especificação dos direitos decisórios e do modelo de responsabilização (accountability) para estimular comportamentos desejáveis no uso da TI. O foco é quem decide e quem responde, em cinco decisões: princípios de TI, arquitetura, infraestrutura, necessidades de aplicações de negócio e investimentos e priorização.",
+          "versaoInvertidaFalsa": "executar as atividades de planejamento, construção e operação da TI, cabendo à área técnica tomar sozinha as decisões sobre investimentos e prioridades."
+        },
+        {
+          "id": "opt-2",
+          "texto": "executar as atividades de planejamento, construção e operação da TI conforme as metas fixadas pela própria área técnica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Planejar, construir e operar são atividades de gestão, executadas conforme a direção dada pela governança. A definição de Weill e Ross trata de quem decide e de como se responde pelas decisões, e não da execução."
+        },
+        {
+          "id": "opt-3",
+          "texto": "concentrar na área de TI todas as decisões sobre investimentos, arquitetura e aplicações, para garantir padronização técnica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Concentrar todas as decisões na TI corresponde ao arranjo que Weill e Ross chamam de 'monarquia de TI', apenas um dos arranjos possíveis, e não à definição de governança. A essência é distribuir de forma explícita os direitos decisórios entre negócio e TI."
+        },
+        {
+          "id": "opt-4",
+          "texto": "auditar periodicamente os controles gerais de TI para subsidiar a opinião sobre as demonstrações contábeis da organização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A auditoria de controles gerais de TI é atividade de asseguração, ligada à função de controle e às linhas de defesa. Ela pode avaliar a governança, mas não a define."
+        },
+        {
+          "id": "opt-5",
+          "texto": "padronizar os processos operacionais de serviços de TI, como incidentes e mudanças, segundo as boas práticas de mercado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Padronizar processos de serviços de TI é objeto do gerenciamento de serviços (por exemplo, ITIL 4), uma atividade de gestão. A governança define direção, direitos decisórios e responsabilização sobre o uso da TI."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a definição de governança (direitos decisórios e responsabilização) por atividades de gestão, auditoria ou gerenciamento de serviços. Também tenta apresentar um arranjo específico, como a concentração das decisões na TI, como se fosse a própria definição.",
+      "resumoFlashcard": {
+        "pergunta": "Como Weill e Ross definem governança de TI?",
+        "resposta": "Como a especificação dos direitos decisórios e do modelo de responsabilização (accountability) para estimular comportamentos desejáveis no uso da TI. A definição abrange cinco decisões: princípios, arquitetura, infraestrutura, necessidades de aplicações e investimentos e priorização."
+      },
+      "conceitosChave": ["Governança de TI: direitos decisórios", "Governança × gestão de TI"],
+      "fundamentacao": "Weill, P.; Ross, J. W. IT Governance: How Top Performers Manage IT Decision Rights for Superior Results. Harvard Business School Press, 2004, cap. 1 (definição) e cap. 2 (cinco decisões e arquétipos de decisão)."
+    },
+    {
+      "id": "gov-ti-019",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de portfólio, ativos e continuidade de serviços",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O comitê de TI de uma secretaria estadual reúne em um único conjunto o programa de transformação digital, três projetos de modernização de sistemas e a operação contínua do datacenter. Periodicamente, avalia esses componentes para decidir quais iniciativas iniciar, acelerar, suspender ou encerrar, conforme a contribuição para os objetivos estratégicos, os riscos e o orçamento disponível. Essa atuação caracteriza",
+      "variantesEnunciado": [
+        "No Tribunal, considere que um colegiado de governança acompanha em conjunto projetos de sistemas, programas de capacitação digital e a sustentação dos serviços em produção, decidindo periodicamente o que iniciar, acelerar, suspender ou encerrar com base no alinhamento estratégico, no risco e nos recursos disponíveis. Essa atuação caracteriza",
+        "Uma autarquia estadual criou instância que avalia, com critérios de alinhamento estratégico, valor, risco e restrição orçamentária, o conjunto formado por seus programas, projetos e operações de TI, para priorizar investimentos e redistribuir recursos entre eles. Essa atuação caracteriza"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "gestão de programa, pois programas reúnem projetos e operações relacionados que devem ser concluídos em conjunto para gerar benefícios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Programa é um conjunto de projetos e atividades relacionados, gerenciados de forma coordenada para obter benefícios que não seriam alcançados individualmente. O caso vai além: reúne componentes não necessariamente relacionados, inclusive operações, e decide o que iniciar ou encerrar conforme os objetivos estratégicos, o que é próprio do portfólio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "atuação de escritório de projetos (PMO), cuja função exclusiva é padronizar metodologias e ferramentas de gerenciamento de projetos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PMO pode apoiar a gestão de portfólio, mas sua função não se resume a padronizar metodologias, e o caso descreve decisões de investimento tomadas pelo comitê. A palavra 'exclusiva' torna a alternativa ainda mais frágil."
+        },
+        {
+          "id": "opt-3",
+          "texto": "gestão de projetos, porque cada iniciativa tem início e fim definidos e as decisões cabem ao gerente de cada projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A operação contínua do datacenter não tem início e fim definidos, e as decisões descritas são tomadas por um comitê sobre o conjunto, e não pelo gerente de cada projeto. Gestão de projetos trata da entrega de cada projeto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "gestão de portfólio, que gerencia de forma centralizada projetos, programas e operações para alcançar objetivos estratégicos, priorizando e balanceando investimentos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Portfólio é o conjunto de projetos, programas, portfólios subsidiários e operações gerenciados em grupo para alcançar objetivos estratégicos. A gestão de portfólio seleciona, prioriza, balanceia e decide iniciar, acelerar, suspender ou encerrar componentes conforme o alinhamento à estratégia, o valor, o risco e as restrições de recursos. É a mesma lógica do objetivo APO05 do COBIT 2019 e da prática de gerenciamento de portfólio do ITIL 4.",
+          "versaoInvertidaFalsa": "gestão de programa, que gerencia de forma centralizada projetos e operações não relacionados para alcançar objetivos estratégicos, priorizando e balanceando investimentos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "gerenciamento de nível de serviço, pois as operações do datacenter são avaliadas periodicamente em relação às metas de serviço acordadas formalmente com os clientes internos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gerenciamento de nível de serviço define metas de serviço e acompanha a entrega em relação a elas. O caso trata de priorizar investimentos entre programas, projetos e operações segundo a estratégia, e não de medir o desempenho de um serviço."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece conceitos vizinhos (programa, PMO, projeto) e explora a presença de operações no conjunto. O que caracteriza o portfólio é reunir componentes, inclusive operações, para priorizá-los e balanceá-los segundo os objetivos estratégicos.",
+      "resumoFlashcard": {
+        "pergunta": "O que é gestão de portfólio e como se diferencia da gestão de programas?",
+        "resposta": "É a gestão centralizada de projetos, programas, portfólios subsidiários e operações para alcançar objetivos estratégicos, priorizando e balanceando investimentos. O programa coordena componentes relacionados para obter benefícios conjuntos. O portfólio decide o que fazer conforme a estratégia."
+      },
+      "conceitosChave": ["Gestão de portfólio", "Portfólio × programa × projeto"],
+      "fundamentacao": "PMI. The Standard for Portfolio Management, 4th ed. (2017), definições de portfólio e de gestão de portfólio; PMI. The Standard for Program Management (definição de programa); ISACA, COBIT 2019, objetivo APO05 (Managed Portfolio); AXELOS, ITIL 4, prática de gerenciamento de portfólio."
+    },
+    {
+      "id": "gov-ti-020",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No desenho do sistema de governança de informação e tecnologia de uma autarquia estadual, a equipe aplicou os fatores de desenho do COBIT 2019. Constatou-se que a indisponibilidade dos sistemas de arrecadação paralisa imediatamente o atendimento e a operação da autarquia, mas a TI não é vista como vetor de inovação dos serviços, que permanecem praticamente inalterados há anos. Quanto ao fator de desenho 'papel da TI', a autarquia enquadra-se como",
+      "variantesEnunciado": [
+        "Um tribunal de contas aplicou os fatores de desenho do COBIT 2019 ao seu sistema de governança de I&T. Verificou-se que qualquer falha nos sistemas de protocolo e de processo eletrônico interrompe de imediato as atividades finalísticas, embora a TI não seja usada como motor de inovação dos serviços oferecidos. Quanto ao fator 'papel da TI', o tribunal enquadra-se como",
+        "Em um hospital estadual, a interrupção do prontuário eletrônico paralisa imediatamente o atendimento, mas os serviços prestados não vêm sendo inovados por meio da TI, que apenas os sustenta. Aplicando o fator de desenho 'papel da TI' do COBIT 2019, o hospital enquadra-se como"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "reviravolta (turnaround), pois a TI é crítica para a operação contínua, mas ainda não para a inovação dos serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa atribui à reviravolta a definição de fábrica. No COBIT 2019, reviravolta é a situação em que a TI é vista como vetor de inovação dos processos e serviços, mas, no momento, não há dependência crítica da TI para a operação e a continuidade. É o oposto do caso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "fábrica (factory), pois a falha da TI tem impacto imediato na operação, embora a TI não seja vetor de inovação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O fator de desenho 'papel da TI', inspirado no grid estratégico de McFarlan, tem quatro valores. Suporte: a TI não é crucial nem para a operação nem para a inovação. Fábrica: a falha da TI tem impacto imediato na operação e na continuidade, mas a TI não é vista como vetor de inovação. Reviravolta: a TI impulsiona a inovação sem dependência operacional crítica. Estratégico: a TI é crítica para operar e para inovar. O caso descreve a fábrica.",
+          "versaoInvertidaFalsa": "reviravolta (turnaround), pois a falha da TI tem impacto imediato na operação, embora a TI não seja vetor de inovação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "estratégico, pois a TI é indispensável tanto para a operação quanto para a inovação dos serviços da autarquia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O papel estratégico exige que a TI seja crítica para a operação e também para a inovação dos processos e serviços. O caso afasta expressamente a inovação, de modo que não se trata de TI estratégica."
+        },
+        {
+          "id": "opt-4",
+          "texto": "suporte, pois a TI não é utilizada como vetor de inovação dos serviços oferecidos pela autarquia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No papel de suporte, a TI não é crucial nem para a inovação nem para a operação e a continuidade dos processos. Como a indisponibilidade paralisa imediatamente o atendimento, a dependência operacional é crítica, o que descarta o suporte."
+        },
+        {
+          "id": "opt-5",
+          "texto": "modelo de sourcing interno (insourced), pois a autarquia opera sistemas críticos próprios, sem dependência de fornecedores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Modelo de sourcing é outro fator de desenho do COBIT 2019 (terceirização, nuvem, interno, híbrido) e não responde à pergunta sobre o papel da TI. Além disso, o caso não traz informação sobre fornecedores."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha é trocar fábrica por reviravolta: a fábrica tem dependência operacional crítica sem inovação, e a reviravolta tem inovação sem dependência operacional crítica. A banca também mistura outro fator de desenho (modelo de sourcing) para confundir.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os quatro valores do fator de desenho 'papel da TI' no COBIT 2019?",
+        "resposta": "Suporte (TI não crucial para operar nem para inovar), fábrica (crítica para a operação, mas não para a inovação), reviravolta (vetor de inovação sem dependência operacional crítica) e estratégico (crítica para operar e para inovar)."
+      },
+      "conceitosChave": ["COBIT 2019: fatores de desenho"],
+      "fundamentacao": "ISACA. COBIT 2019 Design Guide, cap. 2 (fatores de desenho), fator 'role of IT' (support, factory, turnaround, strategic); COBIT 2019 Framework: Introduction and Methodology, cap. 5 (os onze fatores de desenho)."
+    }
+  ]
+}

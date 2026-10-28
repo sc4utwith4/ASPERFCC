@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "engenharia-software-ia-agentes",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "eng-ia-021",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere o texto, baseado em orientações da Anthropic para a construção de sistemas agentivos. Em ……, LLMs e ferramentas são orquestrados por caminhos de código predefinidos; em ……, o próprio LLM dirige dinamicamente seus processos e o uso de ferramentas. Para avaliar o progresso, o agente deve obter a cada passo a …… do ambiente, como resultados de ferramentas ou da execução de código, e é comum prever ……, como um número máximo de iterações. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere o trecho de um estudo técnico sobre arquitetura de sistemas com LLMs. Nos ……, o encadeamento de chamadas a modelos e ferramentas segue caminhos definidos previamente em código; nos ……, é o modelo que decide, de forma dinâmica, os passos e as ferramentas a usar. Para medir o avanço, o agente precisa colher, a cada etapa, a …… do ambiente, como a saída de testes, e o projeto deve prever ……, por exemplo um limite de iterações. Preenchem, correta e respectivamente, as lacunas:",
+        "Em material de capacitação da Diretoria de TI, lê-se: ao contrário dos ……, que executam passos fixados em código, os …… escolhem dinamicamente como cumprir a tarefa; por isso, devem basear-se, a cada etapa, na …… obtida do ambiente, como resultados da execução de código, e operar sob ……, como um número máximo de ciclos. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "agentes − workflows − verdade de referência − condições de parada",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas primeiras lacunas. Para a Anthropic, workflows seguem caminhos de código predefinidos, enquanto agentes dirigem dinamicamente os próprios processos e o uso de ferramentas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "workflows − agentes − temperatura − janelas de contexto",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas temperatura é parâmetro de amostragem, não informação obtida do ambiente, e a janela de contexto não é mecanismo de parada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pipelines de CI − workflows − validação cruzada − condições de parada",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pipelines de CI são automações determinísticas, mas o par cobrado no texto é workflows × agentes, e workflows não cabe na segunda lacuna. Validação cruzada é técnica de avaliação de modelos de aprendizado de máquina, não sinal obtido a cada passo do agente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "workflows − agentes − autoavaliação do modelo − cotas de tokens",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autoavaliação do modelo não substitui o sinal objetivo do ambiente, como resultados de ferramentas e execução de código. Cotas de tokens limitam custo, mas o texto se refere a condições de parada, como o número máximo de iterações."
+        },
+        {
+          "id": "opt-5",
+          "texto": "workflows − agentes − verdade de referência − condições de parada",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em “Building effective agents” (dez/2024), a Anthropic define workflows como sistemas em que LLMs e ferramentas são orquestrados por caminhos de código predefinidos, e agentes como sistemas em que o LLM dirige dinamicamente seus processos e ferramentas. Recomenda que o agente obtenha “ground truth” (verdade de referência) do ambiente a cada passo, como resultados de ferramentas e execução de código, e que se incluam condições de parada, como o número máximo de iterações, para manter o controle.",
+          "versaoInvertidaFalsa": "Em agentes, LLMs e ferramentas seguem caminhos de código predefinidos; em workflows, o LLM dirige dinamicamente o processo; e o progresso deve ser avaliado só pela autoavaliação do modelo, sem condições de parada."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte workflows e agentes e troca o sinal objetivo do ambiente (ground truth) pela autoavaliação do modelo. O agente decide dinamicamente, mas deve se ancorar em resultados reais e ter limites de iteração.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre workflows e agentes e o que mantém o agente sob controle?",
+        "resposta": "Workflows orquestram LLMs e ferramentas por caminhos de código predefinidos; agentes deixam o LLM dirigir dinamicamente o processo. O agente deve obter ground truth do ambiente a cada passo (resultados de ferramentas, execução de código) e ter condições de parada, como máximo de iterações."
+      },
+      "conceitosChave": ["Workflows × agentes", "Ciclo agentivo"],
+      "fundamentacao": "Anthropic Engineering, “Building effective agents” (19/12/2024), seções “What are agents?” e “Agents”."
+    },
+    {
+      "id": "eng-ia-022",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em um estudo sobre o ciclo agentivo e os mecanismos de autocorreção em agentes de codificação, um técnico do Tribunal registrou as seguintes afirmações. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao preparar um curso interno sobre agentes de IA que corrigem o próprio código, a equipe de TI compilou as afirmações a seguir. Considere as afirmativas abaixo.",
+        "Na análise de riscos do uso de agentes autônomos na manutenção do sistema de fiscalização, foram apresentadas estas afirmações sobre planejamento, ação e verificação. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O padrão ReAct intercala traços de raciocínio e ações, de modo que cada observação obtida do ambiente orienta o passo seguinte do agente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. ReAct (Yao et al., ICLR 2023) combina raciocínio e ação de forma intercalada: o modelo pensa, age, observa o resultado e ajusta o próximo passo."
+        },
+        {
+          "texto": "Na abordagem Reflexion, o agente registra reflexões verbais sobre o feedback recebido e as mantém em memória para melhorar as tentativas seguintes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Reflexion (Shinn et al., NeurIPS 2023) propõe agentes com “reforço verbal”: refletem sobre o feedback e guardam as reflexões em memória para as próximas tentativas."
+        },
+        {
+          "texto": "Depois que o plano de implementação é aprovado, a verificação dos resultados torna-se dispensável, pois eventuais erros já teriam sido previstos no planejamento.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O plano reduz retrabalho, mas não prova que a implementação funciona. A verificação (testes, build, linter) continua necessária, e o ciclo agentivo inclui a fase de verificar resultados."
+        },
+        {
+          "texto": "Na autocorreção, quando um teste falha, o agente deve ajustar o teste ao comportamento implementado, pois o código recém-escrito é a referência mais atualizada.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Ajustar o teste ao código mascara defeitos. As orientações da Anthropic pedem soluções gerais e que o modelo avise quando um teste parecer incorreto, em vez de contorná-lo."
+        },
+        {
+          "texto": "No Claude Code, os checkpoints permitem desfazer edições de arquivos, mas não revertem efeitos em sistemas remotos, como bancos de dados, APIs e implantações.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação afirma que checkpoints cobrem apenas mudanças de arquivos; ações que afetam sistemas remotos não podem ser revertidas por eles."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa: plano aprovado não dispensa verificação, porque planejar não prova que a implementação funciona. As demais (I, II e V) estão certas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. ReAct intercala raciocínio e ação guiados pelas observações (I), Reflexion usa reflexões verbais guardadas em memória (II) e os checkpoints do Claude Code desfazem edições de arquivos, mas não efeitos remotos (V). A III é falsa porque o plano não substitui a verificação, e a IV também, porque adaptar o teste ao código mascara o defeito em vez de corrigi-lo.",
+          "versaoInvertidaFalsa": "No Claude Code, os checkpoints revertem tanto as edições de arquivos quanto os efeitos em sistemas remotos, como alterações em bancos de dados, chamadas de APIs e implantações."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa: alterar o teste para que passe é contornar a verificação, não corrigir o defeito. A combinação também omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III é falsa: o plano aprovado não dispensa testes, build e linter. Faltam a II e a V, também verdadeiras."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas falsas (III e IV), que vendem atalhos para a verificação, e só uma verdadeira (V). Ficam de fora a I e a II, ambas corretas."
+        }
+      ],
+      "pegadinhaFCC": "As afirmativas falsas vendem atalhos: plano aprovado como substituto da verificação e teste ajustado ao código como “correção”. Atenção também ao limite dos checkpoints, que não desfazem efeitos remotos.",
+      "resumoFlashcard": {
+        "pergunta": "O que são ReAct e Reflexion e qual o limite dos checkpoints do Claude Code?",
+        "resposta": "ReAct intercala raciocínio e ações guiados pelas observações do ambiente. Reflexion faz o agente refletir verbalmente sobre o feedback e guardar as reflexões em memória para tentar de novo. Checkpoints desfazem edições de arquivos, mas não efeitos em sistemas remotos."
+      },
+      "conceitosChave": ["ReAct", "Autocorreção (self-healing)", "Ciclo agentivo"],
+      "fundamentacao": "Yao et al., “ReAct” (ICLR 2023, arXiv 2210.03629), repositório oficial no GitHub; Shinn et al., “Reflexion” (NeurIPS 2023, arXiv 2303.11366); Claude Code, “How Claude Code works”, seção “Undo changes with checkpoints”; Anthropic, “Prompting best practices” (avoid focusing on passing tests)."
+    },
+    {
+      "id": "eng-ia-023",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Geração, revisão, documentação, depuração e testes assistidos por IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da geração de testes unitários por IA a partir de um código já existente, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre testes unitários produzidos por assistentes de IA com base no código-fonte já implementado, é correto afirmar que",
+        "Um técnico pediu a um agente que gerasse testes para um módulo legado do sistema de protocolo, sem documentação de requisitos. Sobre testes gerados nessas condições, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "testes gerados que atingem 100% de cobertura de linhas comprovam que o código está correto, dispensando a revisão das asserções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cobertura mede o que foi executado, não o que foi verificado. Testes com asserções fracas ou que reproduzem um defeito podem cobrir 100% das linhas sem detectar nada; por isso a literatura recomenda medir também o escore de mutação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o modelo deduz o comportamento esperado diretamente dos requisitos de negócio, mesmo que eles não constem do contexto, e as asserções refletem a especificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O modelo só conhece o que está no contexto ou o que infere do código e dos nomes. Sem requisitos explícitos, tende a tomar o comportamento atual como esperado, e não há garantia de aderência à especificação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "testes gerados por IA não conseguem explorar casos de borda, como valores-limite e entradas inválidas, ficando restritos ao caminho principal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bem orientados, os assistentes sugerem testes para condições de erro, valores-limite e entradas inesperadas. A documentação do Claude Code recomenda pedir explicitamente esses casos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as asserções tendem a capturar o comportamento atual do código, inclusive eventuais defeitos, o que é útil para regressão, mas exige validar o oráculo contra os requisitos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estudos sobre oráculos gerados por LLMs (por exemplo, Konstantinou, Degiovanni e Papadakis) indicam que, sem nomes ou especificações significativos, as asserções reproduzem sobretudo o comportamento atual do programa. Isso as torna úteis como testes de regressão, mas pode cristalizar defeitos. O oráculo, ou seja, o resultado esperado, precisa ser confrontado com os requisitos e revisado, e a qualidade da suíte é mais bem medida com mutação do que só com cobertura ou taxa de aprovação.",
+          "versaoInvertidaFalsa": "as asserções geradas a partir do código existente capturam sempre o comportamento especificado nos requisitos, de modo que testes aprovados comprovam a ausência de defeitos e dispensam revisão do oráculo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a taxa de aprovação dos testes gerados é o melhor indicador de sua capacidade de detectar defeitos, superior ao escore de mutação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes que sempre passam podem não verificar nada. O escore de mutação, que mede quantos defeitos artificiais a suíte detecta, avalia melhor a capacidade de encontrar falhas do que a taxa de aprovação ou a cobertura."
+        }
+      ],
+      "pegadinhaFCC": "Cobertura alta e testes “verdes” parecem prova de correção. O ponto cobrado é o problema do oráculo: o teste gerado do código tende a registrar o comportamento atual, inclusive o errado.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o principal cuidado com testes gerados por IA a partir do código existente?",
+        "resposta": "O problema do oráculo: as asserções tendem a refletir o comportamento atual, inclusive defeitos. Servem para regressão, mas o resultado esperado deve ser validado contra os requisitos, e a eficácia da suíte é mais bem medida por mutação do que por cobertura."
+      },
+      "conceitosChave": ["Testes gerados por IA: oráculo", "Mutation testing"],
+      "fundamentacao": "Konstantinou, Degiovanni e Papadakis, arXiv 2410.21136 (oráculos de LLMs e comportamento atual); GEM (SBC/CIbSE), lacuna entre cobertura e escore de mutação; Claude Code, “Common workflows”, seção “Work with tests”."
+    },
+    {
+      "id": "eng-ia-024",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Geração, revisão, documentação, depuração e testes assistidos por IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para ampliar a suíte de testes de um sistema legado, a equipe de TI montou um pipeline em que os testes sugeridos por um LLM só são aceitos se compilarem, passarem de forma estável em execuções repetidas e aumentarem a cobertura da classe testada; os demais são descartados automaticamente. Sobre esse arranjo, inspirado em experiências industriais com geração de testes por IA, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico implantou no sistema de prestação de contas uma esteira que submete cada teste proposto por IA a três barreiras automáticas: compilação, execução repetida sem falhas intermitentes e aumento de cobertura; o que não passa é descartado. Sobre esse arranjo, inspirado em experiências industriais com geração de testes por IA, é correto afirmar que",
+        "Na modernização do sistema de protocolo, os testes gerados por um assistente de IA só entram na suíte se compilarem, se mostrarem estáveis em várias execuções e elevarem a cobertura da classe. Sobre esse arranjo, inspirado em experiências industriais com geração de testes por IA, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplica filtros determinísticos em sequência, que eliminam testes que não compilam, instáveis ou redundantes, mas não asseguram por si que as asserções verifiquem o comportamento esperado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O arranjo reproduz a ideia do TestGen-LLM da Meta (FSE 2024): filtros sucessivos de build, execução repetida para descartar testes flaky e ganho de cobertura, de modo que o teste aceito melhora a suíte existente e dá sinal confiável de regressão. Esses filtros, porém, não garantem que a asserção verifique o comportamento desejado (problema do oráculo), por isso a revisão humana ou a análise de mutação continuam relevantes.",
+          "versaoInvertidaFalsa": "aplica filtros determinísticos em sequência e, por isso, assegura que toda asserção aceita verifica exatamente o comportamento especificado, tornando desnecessária qualquer revisão humana dos testes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "torna dispensável a revisão humana das asserções, pois testes que compilam, passam e aumentam a cobertura necessariamente verificam o comportamento especificado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Compilar, passar e cobrir não equivalem a verificar o comportamento especificado. Um teste pode passar porque reproduz um defeito existente ou porque tem asserção fraca, e por isso a revisão humana continua necessária."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deveria manter os testes instáveis (flaky), já que eles aumentam a cobertura e, portanto, a capacidade da suíte de detectar defeitos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes instáveis geram sinais falsos, minam a confiança na suíte e por isso são descartados pelo filtro de execução repetida. Cobertura obtida com teste instável não é sinal confiável."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é desnecessário, pois um segundo LLM, atuando como juiz, poderia avaliar todos os testes apenas por leitura, com o mesmo rigor da compilação e da execução repetida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Compilação e execução são verificações determinísticas e reprodutíveis. LLM-as-a-judge é descrito pela Anthropic como “geralmente não muito robusto” e pode complementar, mas não substituir, esses filtros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "garante que o código de produção esteja correto, já que todos os testes aceitos passam na versão atual do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes que passam na versão atual mostram consistência com o comportamento presente, não correção. Se o sistema tem defeito, o teste gerado pode até consolidá-lo."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha é tratar filtros automáticos de build, estabilidade e cobertura como prova de correção. Eles melhoram a suíte, mas não resolvem o oráculo nem dispensam a revisão.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona o filtro de testes gerados por LLM do tipo TestGen-LLM e qual é seu limite?",
+        "resposta": "Aceita só testes que compilam, passam de forma estável em execuções repetidas e aumentam a cobertura, todos critérios determinísticos. O filtro garante melhoria da suíte e sinal confiável de regressão, mas não que a asserção verifique o comportamento esperado."
+      },
+      "conceitosChave": ["Testes gerados por IA: oráculo", "Validação determinística"],
+      "fundamentacao": "Alshahwan et al., “Automated Unit Test Improvement using Large Language Models at Meta” (FSE 2024 Industry, arXiv 2402.09171); Claude Blog, “Building agents with the Claude Agent SDK” (LLM as a judge)."
+    },
+    {
+      "id": "eng-ia-025",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Geração, revisão, documentação, depuração e testes assistidos por IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Usuários relatam que o sistema de protocolo eletrônico às vezes registra a data de autuação no dia anterior quando o documento é enviado perto da meia-noite. Um técnico vai pedir ajuda a um agente de codificação para corrigir o defeito. A forma de condução mais adequada é",
+      "variantesEnunciado": [
+        "Auditores observam que o sistema de prestação de contas, em algumas ocasiões, grava o protocolo com data do dia anterior quando o envio ocorre pouco antes da meia-noite. A equipe decide usar um agente de IA para corrigir o problema. A forma de condução mais adequada é",
+        "Um defeito intermitente faz com que documentos enviados ao sistema de fiscalização perto da meia-noite recebam a data do dia anterior. Antes de acionar o agente de codificação, o técnico planeja como conduzir a tarefa. A forma de condução mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pedir que o agente “resolva o problema das datas”, aceitar a primeira alteração proposta e publicá-la, pois o agente consegue inferir sozinho a causa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pedido vago e aceite sem verificação repetem o padrão que gera regressões. A documentação recomenda informar o comando que reproduz, a stack trace e os passos, e confirmar a correção com testes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "solicitar que o agente envolva o trecho em um bloco try/catch que ignore exceções de data, eliminando os registros de erro nos logs.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Suprimir exceções esconde o sintoma sem corrigir a causa provável (fuso horário ou conversão de data), e ainda elimina evidências úteis para diagnóstico."
+        },
+        {
+          "id": "opt-3",
+          "texto": "informar o sintoma, os passos para reproduzir e o caráter intermitente, pedir um teste que reproduza a falha, depois a correção e, por fim, a execução de toda a suíte.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo as boas práticas do Claude Code, o agente deve receber o sintoma, os passos de reprodução e a informação de que a falha é intermitente. Um bom prompt pede para “escrever um teste que falhe reproduzindo o problema e depois corrigi-lo”. O teste vira o check objetivo da correção, e a execução da suíte completa verifica regressões, como no ciclo de coletar contexto, agir e verificar.",
+          "versaoInvertidaFalsa": "pedir diretamente a correção, sem informar sintoma nem passos de reprodução e sem teste que reproduza a falha, pois a execução da suíte completa ao final é suficiente para provar que o defeito foi resolvido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "desativar o teste automatizado que falha nesse horário e registrar a falha como conhecida, para que a equipe possa avançar em outras demandas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desativar o teste que expõe a falha elimina o sinal de verificação e mantém o defeito em produção. Defeito conhecido não é defeito resolvido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "pedir ao agente que aumente os tempos limite (timeouts) de todas as requisições, já que falhas intermitentes como essa decorrem sempre de lentidão da rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generaliza indevidamente a causa (“sempre”). O sintoma, uma data registrada no dia anterior perto da meia-noite, sugere problema de fuso horário ou conversão de data, não de tempo limite."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores tratam o sintoma (try/catch, timeout, teste desativado) ou delegam sem contexto. A depuração assistida eficaz dá contexto de reprodução e começa por um teste que falha.",
+      "resumoFlashcard": {
+        "pergunta": "Como conduzir a depuração de um defeito com um agente de codificação?",
+        "resposta": "Informar sintoma, passos de reprodução, stack trace e se a falha é intermitente. Pedir primeiro um teste que reproduza a falha, depois a correção, e em seguida rodar a suíte completa para checar regressões."
+      },
+      "conceitosChave": ["Depuração assistida por IA", "Autocorreção (self-healing)"],
+      "fundamentacao": "Claude Code, “Common workflows”, seção “Fix bugs efficiently”; “Best practices”, seção “Write a specific prompt” (“write a failing test that reproduces it, then fix it”) (code.claude.com/docs/en)."
+    },
+    {
+      "id": "eng-ia-026",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Geração, revisão, documentação, depuração e testes assistidos por IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal discute como incorporar a revisão de código e a documentação assistidas por IA ao fluxo de pull requests dos sistemas de controle externo. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na definição do processo de pull request do sistema de fiscalização, a coordenação avaliou o uso de agentes de IA para revisar código e gerar documentação. Considere as afirmativas abaixo.",
+        "Em reunião sobre qualidade de software, a equipe de sistemas debateu limites e boas práticas da revisão e da documentação de código produzidas com apoio de IA. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Uma revisão executada por um subagente que não acompanhou a conversa em que o código foi escrito tende a ser menos influenciada pelo raciocínio que produziu a implementação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação do Claude Code destaca que o /code-review revisa o diff em subagente novo, que nunca viu a conversa e por isso “não é influenciado pelo raciocínio que produziu o código”."
+        },
+        {
+          "texto": "Comentários de documentação gerados por IA, como docstrings, devem ser conferidos com o comportamento real do código, pois o modelo pode descrever parâmetros ou efeitos inexistentes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Documentação gerada pode alucinar parâmetros, retornos ou efeitos colaterais. A própria documentação do Claude Code sugere verificar se os comentários seguem o padrão do projeto e revisá-los."
+        },
+        {
+          "texto": "Quando se pede a um revisor automatizado que “encontre problemas”, todos os apontamentos devem ser corrigidos, pois o revisor só relata falhas reais de corretude.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A documentação alerta que um revisor solicitado a encontrar problemas “sempre encontrará algo”. Corrigir tudo pode gerar abstrações e testes desnecessários, e por isso se recomenda focar na corretude e ignorar o estilo."
+        },
+        {
+          "texto": "A aprovação de um revisor automatizado pode substituir a aprovação humana exigida pelas regras de proteção da branch principal, desde que a revisão cubra todo o diff.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Revisão por IA é um controle adicional. Na tabela de instruções determinísticas, a palavra final cabe à proteção de branch e à pessoa que aprova o merge."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a II estão certas, mas a III é falsa: revisores automatizados também produzem apontamentos irrelevantes ou de estilo, e corrigir tudo indiscriminadamente gera complexidade desnecessária."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: a aprovação humana prevista na proteção da branch não deve ser substituída pela revisão de IA. Falta ainda a I."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a III, que trata todo apontamento do revisor como falha real, e a IV, que deixa a revisão de IA substituir a aprovação humana."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III e a IV são falsas. A revisão por IA complementa, mas não substitui, o julgamento humano nem a governança da branch protegida."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I corresponde à orientação de revisar em contexto independente (subagente que não viu a conversa), e a II, ao cuidado com documentação gerada, que pode descrever o que o código não faz. A III ignora que revisores automatizados sempre encontram algo, inclusive questões irrelevantes, e a IV troca a palavra final humana e a proteção de branch por uma revisão automatizada.",
+          "versaoInvertidaFalsa": "Uma revisão executada na mesma conversa em que o código foi escrito, pelo próprio agente que o produziu, é a forma mais independente de revisão, pois o revisor conhece todo o raciocínio da implementação."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa duas generalizações: “todos os apontamentos devem ser corrigidos” e “IA pode substituir a aprovação humana”. A revisão automatizada é útil quando independente, mas é filtro, não palavra final.",
+      "resumoFlashcard": {
+        "pergunta": "Quais cuidados valem para revisão e documentação de código assistidas por IA?",
+        "resposta": "Revisar em contexto independente (subagente que não viu a conversa), conferir a documentação gerada contra o comportamento real e filtrar os apontamentos com foco em corretude. A aprovação humana e a proteção de branch continuam com a palavra final."
+      },
+      "conceitosChave": ["Revisão de código por IA", "Documentação gerada por IA"],
+      "fundamentacao": "Claude Code, “Best practices”, seções “Give Claude a check to run” (/code-review em subagente novo), “Review against your spec” (“skip style”) e tabela de instruções determinísticas (“Who has the last word”); “Common workflows”, seção “Handle documentation”."
+    },
+    {
+      "id": "eng-ia-027",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Gestão de contexto e memória, RAG e bancos vetoriais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A técnica de geração aumentada por recuperação (Retrieval-Augmented Generation — RAG) consiste em",
+      "variantesEnunciado": [
+        "No contexto de assistentes de IA que respondem com base em normas e manuais internos, a geração aumentada por recuperação (RAG) consiste em",
+        "Um técnico precisa explicar a gestores do Tribunal a técnica de RAG (Retrieval-Augmented Generation), usada em assistentes sobre a legislação de controle externo. Essa técnica consiste em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "retreinar periodicamente o modelo com os documentos da organização, incorporando-os aos pesos para que ele passe a responder sem consultar nenhuma fonte externa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Incorporar documentos aos pesos é ajuste fino (fine-tuning), não RAG. No RAG, os pesos não mudam: o conhecimento é recuperado e enviado no contexto a cada consulta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "recuperar, no momento da consulta, trechos relevantes de uma base de conhecimento externa e inseri-los no contexto, ancorando a resposta do modelo nessas fontes.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Conforme o glossário da Anthropic, o RAG combina recuperação de informação com geração: trechos relevantes de uma base externa são recuperados quando a consulta chega e passados ao modelo junto com a pergunta. Isso ancora a resposta em evidências, permite usar informação atualizada ou específica do domínio e facilita a citação das fontes. A eficácia depende da qualidade da base e da recuperação.",
+          "versaoInvertidaFalsa": "incorporar os documentos da organização aos pesos do modelo por meio de novo treinamento, de modo que nenhuma informação precise ser recuperada ou inserida no contexto no momento da consulta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ampliar a janela de contexto do modelo por meio de compressão dos pesos, permitindo-lhe ler bases documentais inteiras a cada requisição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tamanho da janela de contexto é característica do modelo, e o RAG não “comprime pesos”. Ao contrário, ele seleciona poucos trechos relevantes justamente para não precisar enviar a base inteira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "gerar respostas sem citação de fontes, pois o conteúdo recuperado substitui o conhecimento do modelo e dispensa qualquer verificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma das vantagens do RAG é justamente permitir a citação explícita das fontes recuperadas. A recuperação não dispensa a verificação: trechos irrelevantes ou desatualizados também podem levar a erro."
+        },
+        {
+          "id": "opt-5",
+          "texto": "eliminar definitivamente as alucinações, já que o modelo passa a responder apenas com frases copiadas literalmente dos documentos recuperados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. RAG reduz, mas não elimina, alucinações: o modelo pode interpretar mal os trechos, combinar informações de forma incorreta ou receber trechos irrelevantes. A OWASP também lembra que RAG não mitiga totalmente o prompt injection."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca RAG por ajuste fino (alterar pesos) e promete o fim das alucinações. RAG recupera e injeta contexto em tempo de consulta, sem mudar o modelo, e só reduz erros.",
+      "resumoFlashcard": {
+        "pergunta": "O que é RAG e o que ele não faz?",
+        "resposta": "É recuperar, no momento da consulta, trechos relevantes de uma base externa e inseri-los no contexto, ancorando a resposta e permitindo citar fontes. Não altera os pesos do modelo e não elimina alucinações: a qualidade depende da base e da recuperação."
+      },
+      "conceitosChave": ["RAG"],
+      "fundamentacao": "Glossário Anthropic, verbetes “RAG (retrieval augmented generation)” e “Fine-tuning” (platform.claude.com/docs/en/about-claude/glossary); OWASP LLM01:2025 (RAG não mitiga totalmente prompt injection)."
+    },
+    {
+      "id": "eng-ia-028",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Gestão de contexto e memória, RAG e bancos vetoriais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere a descrição de um pipeline de RAG para consulta à jurisprudência do Tribunal. No pré-processamento, os documentos são divididos em ……; cada parte é convertida em ……, armazenados em um banco vetorial. Na consulta, uma busca por …… recupera as partes mais próximas da pergunta, e um …… reordena os candidatos por relevância antes de enviá-los ao modelo. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere o funcionamento de um assistente de IA que responde a perguntas sobre normas internas. Na indexação, cada norma é dividida em ……, e cada parte é transformada em …… gravados em banco vetorial. Na pergunta do usuário, uma busca por …… seleciona as partes mais próximas, que um …… reordena antes do envio ao modelo. Preenchem, correta e respectivamente, as lacunas:",
+        "Em um projeto de RAG sobre manuais de auditoria, a equipe descreveu: os manuais são fragmentados em ……; os fragmentos são representados como …… e indexados em banco vetorial; a recuperação ocorre por ……, e um …… reavalia a relevância dos candidatos antes de enviá-los ao LLM. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "tokens − hashes − correspondência exata − compilador",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tokens são unidades de texto do modelo, não as partes de documento indexadas. Hashes não preservam similaridade de significado, a correspondência exata não é a busca vetorial, e compilador não tem papel no pipeline."
+        },
+        {
+          "id": "opt-2",
+          "texto": "chunks − embeddings − similaridade semântica − tokenizador",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As três primeiras lacunas estão certas, mas o tokenizador segmenta texto em tokens e não reordena resultados. Quem reordena os candidatos por relevância é o reranker."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tabelas normalizadas − índices B-tree − junção relacional − otimizador de consultas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve um banco relacional clássico (normalização, B-tree, junções), sem relação com a busca por similaridade de vetores típica do RAG."
+        },
+        {
+          "id": "opt-4",
+          "texto": "chunks − embeddings − similaridade semântica − reranker",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O pipeline padrão descrito pela Anthropic em “Contextual Retrieval”: a base é dividida em chunks; cada chunk vira um embedding guardado em banco vetorial que permite busca por similaridade semântica; os resultados podem ser combinados com busca lexical (BM25); e o reranking filtra os candidatos para que só os mais relevantes cheguem ao modelo, melhorando a resposta e reduzindo custo e latência.",
+          "versaoInvertidaFalsa": "No RAG, cada documento é convertido inteiro em embedding e só depois dividido em chunks; na consulta, a busca usa correspondência exata de termos, e o tokenizador reordena os candidatos por relevância."
+        },
+        {
+          "id": "opt-5",
+          "texto": "embeddings − chunks − similaridade semântica − reranker",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas primeiras etapas: primeiro os documentos são divididos em chunks e só depois cada chunk é convertido em embedding."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte a ordem chunk → embedding e coloca o tokenizador no papel do reranker. Memorize o fluxo: dividir em chunks, gerar embeddings, buscar por similaridade e reordenar com reranker.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as etapas de um pipeline típico de RAG?",
+        "resposta": "Dividir os documentos em chunks, gerar o embedding de cada chunk e armazená-lo em banco vetorial. Na consulta, buscar por similaridade semântica (opcionalmente combinada com BM25) e reordenar os candidatos com um reranker antes de enviá-los ao modelo."
+      },
+      "conceitosChave": ["RAG: chunking", "RAG: reranking", "Embeddings"],
+      "fundamentacao": "Anthropic, “Introducing Contextual Retrieval” (19/09/2024) (anthropic.com/news/contextual-retrieval); Anthropic, documentação “Embeddings” (rerankers da Voyage AI)."
+    },
+    {
+      "id": "eng-ia-029",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Gestão de contexto e memória, RAG e bancos vetoriais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um assistente baseado em RAG sobre relatórios de auditoria, um chunk recuperado diz apenas que “a despesa com pessoal cresceu 3% em relação ao período anterior”, sem indicar o jurisdicionado nem o exercício. Por isso, o assistente atribui o dado ao município errado. Uma técnica adequada para reduzir esse tipo de falha de recuperação é",
+      "variantesEnunciado": [
+        "Um assistente de RAG que responde sobre prestações de contas recuperou o trecho “o índice ficou 2 pontos abaixo do limite legal”, sem identificar o órgão nem o ano, e acabou atribuindo a informação a outra entidade. Uma técnica adequada para reduzir esse tipo de falha de recuperação é",
+        "Na base vetorial de um chatbot de jurisprudência, muitos chunks mencionam valores e percentuais sem dizer a que processo, jurisdicionado ou exercício se referem, o que gera respostas trocadas. Uma técnica adequada para reduzir esse tipo de falha de recuperação é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "acrescentar a cada chunk, antes de gerar o embedding e o índice lexical, um breve contexto explicativo com o documento, o jurisdicionado e o período a que se refere.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a Contextual Retrieval da Anthropic. Chunks isolados perdem contexto (o exemplo do artigo é um trecho sobre crescimento de 3% da receita que não diz de qual empresa nem de qual período). A solução é anteceder cada chunk de um contexto explicativo específico antes de gerar o embedding e o índice BM25. O artigo relata redução de 35% nas falhas de recuperação só com embeddings contextuais, de 49% com BM25 contextual e de 67% somando reranking.",
+          "versaoInvertidaFalsa": "manter os chunks sem nenhum contexto adicional, pois acrescentar referências ao documento e ao período antes de gerar o embedding piora a recuperação e confunde o índice lexical."
+        },
+        {
+          "id": "opt-2",
+          "texto": "reduzir cada chunk a uma única frase, pois trechos menores sempre carregam mais contexto semântico e eliminam a ambiguidade de referência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Chunks menores tendem a perder ainda mais contexto. O tamanho ideal equilibra precisão e contexto, e reduzir tudo a frases soltas agrava a ambiguidade descrita."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aumentar a temperatura do modelo, para que ele explore outras interpretações do trecho antes de escolher o jurisdicionado mais provável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A falha está na recuperação: o trecho não traz a informação de quem é o dado. A temperatura atua na geração e não acrescenta contexto ao chunk."
+        },
+        {
+          "id": "opt-4",
+          "texto": "abandonar a busca lexical (BM25), pois a correspondência exata de termos é obsoleta e prejudica justamente a recuperação de identificadores precisos, como nomes de municípios e números de exercícios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O BM25 é útil justamente para correspondências exatas, como identificadores, nomes e códigos, e a Contextual Retrieval o combina com embeddings. Abandoná-lo pioraria a recuperação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "confiar que o modelo de embeddings capta automaticamente o contexto de todo o corpus, tornando irrelevante o que cada chunk contém isoladamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O embedding representa o texto do próprio chunk. Se o chunk não menciona o jurisdicionado nem o período, o vetor não carrega essa informação, e é por isso que o contexto precisa ser acrescentado ao chunk."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece soluções que não atacam a causa (temperatura, chunk menor, abandono do BM25). O problema é o chunk sem contexto, e a solução cobrada é contextualizar cada chunk antes de indexar.",
+      "resumoFlashcard": {
+        "pergunta": "O que é Contextual Retrieval e que problema resolve?",
+        "resposta": "É acrescentar a cada chunk um contexto explicativo (documento, entidade, período) antes de gerar o embedding e o índice BM25. Resolve a perda de contexto de trechos isolados e reduz falhas de recuperação, sobretudo quando combinada com reranking."
+      },
+      "conceitosChave": ["Contextual Retrieval", "RAG: chunking"],
+      "fundamentacao": "Anthropic, “Introducing Contextual Retrieval” (19/09/2024), seções sobre o problema de contexto dos chunks, Contextual Embeddings, Contextual BM25 e reranking."
+    },
+    {
+      "id": "eng-ia-030",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Gestão de contexto e memória, RAG e bancos vetoriais",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI vai armazenar embeddings normalizados (norma 1) de pareceres em PostgreSQL com a extensão pgvector. A tabela começará vazia e receberá cargas diárias, e a prioridade é a melhor relação entre velocidade de consulta e recall, ainda que o índice ocupe mais memória. Com base na documentação do pgvector, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para um mecanismo de busca semântica sobre acórdãos, um técnico usará PostgreSQL com pgvector e embeddings de norma 1. A tabela será criada vazia e alimentada aos poucos, e o objetivo é obter a melhor relação entre velocidade de consulta e recall, mesmo com maior uso de memória. Com base na documentação do pgvector, é correto afirmar que",
+        "Um projeto de RAG do Tribunal armazenará, em PostgreSQL com a extensão pgvector, vetores normalizados de manuais de auditoria. O índice precisa existir antes da primeira carga, e a equipe aceita gastar mais memória em troca da melhor relação velocidade-recall nas buscas. Com base na documentação do pgvector, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "índices aproximados, como HNSW e IVFFlat, preservam integralmente o recall perfeito da busca exata e apenas aceleram as consultas, sem alterar os resultados retornados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Segundo o README do pgvector, por padrão a busca é exata, com recall perfeito. Os índices aproximados trocam parte do recall por velocidade, e por isso os resultados podem mudar depois de criados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o operador <=> calcula a distância euclidiana (L2), e, por isso, deve-se usar <-> sempre que se desejar a distância de cosseno entre os vetores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os operadores: no pgvector, <-> é a distância L2 (euclidiana), <=> é a distância de cosseno, <#> é o produto interno negativo e <+> é a distância L1. A similaridade de cosseno é obtida por 1 − (a <=> b)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o HNSW atende à prioridade, pois tem melhor relação velocidade-recall que o IVFFlat, ao custo de build mais lento e mais memória, e pode ser criado sem dados, por não exigir treinamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela documentação do pgvector, o HNSW cria um grafo multicamadas com melhor desempenho de consulta (relação velocidade-recall) que o IVFFlat, mas tem build mais lento e usa mais memória. Como não há etapa de treinamento, pode ser criado com a tabela vazia. O IVFFlat divide os vetores em listas e convém criá-lo depois de carregar os dados; tem build mais rápido e usa menos memória, mas consulta com relação velocidade-recall inferior.",
+          "versaoInvertidaFalsa": "o IVFFlat atende à prioridade, pois pode ser criado com a tabela vazia, sem etapa de treinamento, e oferece melhor relação velocidade-recall que o HNSW, consumindo mais memória."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o IVFFlat é preferível, porque constrói o índice mais lentamente e consome mais memória que o HNSW, mas oferece melhor relação velocidade-recall nas consultas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as características: é o HNSW que tem build mais lento e mais memória com melhor relação velocidade-recall. O IVFFlat constrói mais rápido, consome menos memória e tem desempenho de consulta inferior."
+        },
+        {
+          "id": "opt-5",
+          "texto": "com vetores normalizados, a similaridade de cosseno e o produto interno produzem rankings diferentes, sendo obrigatório converter os vetores antes de indexá-los.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com vetores de norma 1, a similaridade de cosseno equivale ao produto interno, e cosseno e distância euclidiana produzem o mesmo ranking. Não há conversão obrigatória."
+        }
+      ],
+      "pegadinhaFCC": "A questão cruza dois objetos: as características dos índices (HNSW com melhor velocidade-recall e criação sem dados; IVFFlat com build rápido, mas exigindo dados) e o significado dos operadores (<=> é cosseno, <-> é L2). Os distratores invertem um ou outro.",
+      "resumoFlashcard": {
+        "pergunta": "Quais as diferenças entre os índices HNSW e IVFFlat no pgvector?",
+        "resposta": "HNSW: grafo multicamadas, melhor relação velocidade-recall, build mais lento, mais memória, pode ser criado sem dados. IVFFlat: divide vetores em listas, build mais rápido e menos memória, desempenho de consulta inferior, deve ser criado após a carga. Ambos são aproximados e trocam recall por velocidade."
+      },
+      "conceitosChave": ["Bancos vetoriais: HNSW × IVFFlat", "Embeddings"],
+      "fundamentacao": "pgvector, README oficial (github.com/pgvector/pgvector), seções “Querying” (operadores <->, <#>, <=>, <+>), “Indexing”, “HNSW” e “IVFFlat”; Anthropic, documentação “Embeddings” (vetores normalizados)."
+    }
+  ]
+}

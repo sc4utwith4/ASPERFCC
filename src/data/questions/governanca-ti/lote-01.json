@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "governanca-ti",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "gov-ti-001",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o COBIT 2019, governança e gestão são disciplinas distintas, que envolvem tipos diferentes de atividades, estruturas organizacionais e propósitos. A respeito dessa distinção, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao orientar um jurisdicionado sobre a criação de um comitê de governança de informação e tecnologia (I&T), o técnico consultou o COBIT 2019 para separar as atribuições do órgão de governança das atribuições da gestão executiva. Sobre essa separação, é correto afirmar que",
+        "No COBIT 2019, a distinção entre governança e gestão orienta quem define a direção e quem executa as atividades de informação e tecnologia. Nesse contexto, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a gestão avalia, direciona e monitora, ao passo que a governança planeja, constrói, executa e monitora as atividades nos domínios APO, BAI, DSS e MEA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os papéis. No COBIT 2019, é a governança que avalia, direciona e monitora (domínio EDM), e a gestão que planeja, constrói, executa e monitora as atividades alinhadas à direção definida (domínios APO, BAI, DSS e MEA)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o domínio MEA integra a governança, porque monitorar é uma das funções do órgão de governança, ao lado de avaliar e direcionar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. MEA (Monitorar, Avaliar e Analisar) é domínio de gestão: acompanha o desempenho e a conformidade da I&T em relação a metas internas, controles internos e requisitos externos. A função de monitorar do órgão de governança está dentro do próprio EDM (Avaliar, Direcionar e Monitorar). A coincidência do verbo é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a governança avalia as necessidades das partes interessadas, direciona por priorização e decisão e monitora desempenho e conformidade, no domínio EDM.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O COBIT 2019 atribui à governança três funções: avaliar as necessidades, as condições e as opções das partes interessadas para chegar a objetivos equilibrados e acordados; direcionar por meio de priorização e tomada de decisão; e monitorar desempenho e conformidade em relação à direção acordada. Essas atividades formam o domínio EDM, em regra a cargo do conselho. A gestão, conduzida pela diretoria executiva, planeja, constrói, executa e monitora nos domínios APO, BAI, DSS e MEA.",
+          "versaoInvertidaFalsa": "a governança planeja, constrói, executa e monitora as atividades de I&T no domínio EDM, cabendo à gestão avaliar, direcionar e monitorar a partir dos domínios APO, BAI, DSS e MEA."
+        },
+        {
+          "id": "opt-4",
+          "texto": "governança e gestão são responsabilidade da diretoria executiva, sob a liderança do CEO, cabendo ao conselho apenas aprovar o orçamento anual de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No COBIT 2019, a governança costuma ser responsabilidade do conselho de administração (ou órgão equivalente), sob a liderança de seu presidente, e pode ser delegada a estruturas específicas. A diretoria executiva, sob o CEO, responde pela gestão. Reduzir o papel do conselho à aprovação do orçamento ignora as funções de avaliar, direcionar e monitorar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a separação entre governança e gestão é inovação do COBIT 2019, pois o COBIT 5 tratava as duas disciplinas como um único conjunto integrado de processos de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A separação já constava do COBIT 5 como um de seus cinco princípios ('separar governança de gestão'), com o domínio EDM distinto dos domínios de gestão. O COBIT 2019 manteve a ideia como princípio do sistema de governança ('governança distinta da gestão'). A meia-verdade sobre a origem é a pegadinha."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os verbos de governança (avaliar, direcionar, monitorar) pelos de gestão (planejar, construir, executar, monitorar) e tenta fazer o candidato classificar o MEA como governança só porque contém 'monitorar'. No COBIT 2019, o único domínio de governança é o EDM.",
+      "resumoFlashcard": {
+        "pergunta": "No COBIT 2019, o que distingue governança de gestão e quais domínios correspondem a cada uma?",
+        "resposta": "A governança avalia, direciona e monitora (domínio EDM) e costuma caber ao conselho. A gestão planeja, constrói, executa e monitora conforme a direção dada (domínios APO, BAI, DSS e MEA) e cabe à diretoria executiva."
+      },
+      "conceitosChave": ["COBIT 2019: governança × gestão", "COBIT 2019: domínios e objetivos"],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology, cap. 3 (governança e gestão) e cap. 4 (princípio 'governança distinta da gestão'); COBIT 2019 Framework: Governance and Management Objectives, descrição dos domínios EDM, APO, BAI, DSS e MEA."
+    },
+    {
+      "id": "gov-ti-002",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No ITIL 4, o Sistema de Valor de Serviço (SVS) descreve como os componentes e as atividades da organização trabalham em conjunto para viabilizar a criação de valor, tendo como entradas a oportunidade e a demanda. São componentes do SVS:",
+      "variantesEnunciado": [
+        "Ao preparar uma capacitação sobre o ITIL 4 para a central de serviços do Tribunal, um técnico precisa listar corretamente os componentes do Sistema de Valor de Serviço (SVS), que transforma oportunidade e demanda em valor. São componentes do SVS:",
+        "Em um diagnóstico de gerenciamento de serviços de um jurisdicionado, a equipe adotou como referência o Sistema de Valor de Serviço (SVS) do ITIL 4. Integram esse sistema, como componentes,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as quatro dimensões do gerenciamento de serviços, as fases do ciclo de vida do serviço, os processos e as funções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As quatro dimensões (organizações e pessoas; informação e tecnologia; parceiros e fornecedores; fluxos de valor e processos) aplicam-se ao SVS inteiro, mas não são componentes dele. Fases do ciclo de vida e 'funções' são conceitos do ITIL v3, substituídos no ITIL 4 pela cadeia de valor e pelas práticas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os princípios orientadores, a governança, a cadeia de valor de serviço, as práticas e a melhoria contínua.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O SVS do ITIL 4 tem cinco componentes: princípios orientadores, governança, cadeia de valor de serviço, práticas e melhoria contínua. As entradas são oportunidade e demanda, e a saída é o valor para a organização, seus clientes e demais partes interessadas. As quatro dimensões perpassam todo o sistema.",
+          "versaoInvertidaFalsa": "os princípios orientadores, a governança, as quatro dimensões e as fases do ciclo de vida do serviço, que juntos substituem a cadeia de valor e as práticas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a estratégia, o desenho, a transição, a operação e a melhoria contínua de serviço, organizados como ciclo de vida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a estrutura de cinco publicações do ciclo de vida do ITIL v3 (Estratégia, Desenho, Transição, Operação e Melhoria Contínua de Serviço). O ITIL 4 substituiu o ciclo de vida pelo SVS e pela cadeia de valor de serviço, cujas atividades se combinam em fluxos de valor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a oportunidade, a demanda, o valor, os produtos e os serviços, que formam o núcleo do sistema de valor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Oportunidade e demanda são entradas do SVS, e valor é sua saída. Produtos e serviços resultam da atuação do sistema. Nenhum desses elementos é componente do SVS. A alternativa mistura entradas, saída e resultados para parecer completa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os princípios orientadores, as funções de central de serviços e de gerenciamento técnico, os processos e o valor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Central de serviços, gerenciamento técnico, gerenciamento de aplicações e gerenciamento de operações eram 'funções' no ITIL v3. No ITIL 4, a central de serviços é uma prática de gerenciamento de serviços, e o termo 'funções' deixou de estruturar o modelo. Valor é a saída do SVS, não um componente."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura componentes do SVS com conceitos do ITIL v3 (ciclo de vida, funções) e com as quatro dimensões, que perpassam o sistema mas não são componentes. Também troca entradas e saída (oportunidade, demanda e valor) por componentes.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os cinco componentes do Sistema de Valor de Serviço (SVS) do ITIL 4 e quais são suas entradas e saída?",
+        "resposta": "Princípios orientadores, governança, cadeia de valor de serviço, práticas e melhoria contínua. As entradas são oportunidade e demanda, e a saída é valor. As quatro dimensões aplicam-se ao SVS inteiro."
+      },
+      "conceitosChave": ["ITIL 4: SVS", "ITIL 4 × ITIL v3"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 4 (The ITIL service value system) e cap. 3 (as quatro dimensões do gerenciamento de serviços)."
+    },
+    {
+      "id": "gov-ti-003",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, durante três dias seguidos, o sistema de protocolo eletrônico do Tribunal ficou lento no início de cada manhã. A central de serviços registrou os chamados e restabeleceu o desempenho reiniciando o servidor de aplicação, procedimento que foi documentado para uso dos atendentes. A equipe técnica identificou que a causa era um vazamento de memória em uma biblioteca de terceiros, cuja correção definitiva depende de nova versão do fornecedor, ainda não disponível. À luz do ITIL 4, o procedimento documentado de reinicialização e a situação da causa identificada caracterizam, respectivamente,",
+      "variantesEnunciado": [
+        "Em um jurisdicionado, o portal de emissão de certidões passou a apresentar falhas intermitentes. A central de serviços passou a contornar a situação limpando o cache da aplicação, conforme roteiro registrado na base de conhecimento, enquanto a equipe técnica concluiu que a origem era um defeito no componente de sessão, cuja correção depende de atualização ainda não liberada pelo fabricante. À luz do ITIL 4, o roteiro registrado e a situação da causa identificada caracterizam, respectivamente,",
+        "O sistema de folha de pagamento de uma secretaria estadual trava sempre que determinado relatório é emitido. Os atendentes passaram a orientar os usuários a emitir o relatório em partes, procedimento documentado, e a equipe técnica descobriu que a causa é um erro no gerador de relatórios, ainda sem correção disponível. Segundo o ITIL 4, o procedimento documentado e a situação da causa identificada caracterizam, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "mudança emergencial e problema resolvido, pois a causa foi identificada e o serviço voltou a funcionar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reiniciar o servidor conforme roteiro não é mudança emergencial: não altera a configuração do serviço, apenas restaura a operação. O problema não está resolvido, porque a causa permanece e a correção definitiva depende do fornecedor. Restabelecer o serviço encerra o incidente, não o problema."
+        },
+        {
+          "id": "opt-2",
+          "texto": "erro conhecido e solução de contorno, pois a reinicialização é o erro documentado e a causa é o contorno técnico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os conceitos. O procedimento que reduz ou elimina o impacto enquanto não há resolução definitiva é a solução de contorno. Erro conhecido é o problema já analisado e ainda não resolvido, que é a situação da causa (vazamento de memória) identificada pela equipe."
+        },
+        {
+          "id": "opt-3",
+          "texto": "requisição de serviço e incidente grave, pois o procedimento foi pedido pelos usuários e a lentidão afetou vários setores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Requisição de serviço é um pedido de ação acordada como parte normal da entrega (acesso, instalação, informação), e não o tratamento de uma falha. A lentidão é incidente, mas o enunciado não trata da classificação de gravidade, e sim do procedimento de contorno e da causa analisada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "solução de contorno (workaround) e erro conhecido.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo ITIL 4, solução de contorno é a solução que reduz ou elimina o impacto de um incidente ou problema para o qual ainda não há resolução completa, como a reinicialização documentada. Erro conhecido é o problema que foi analisado e ainda não foi resolvido: a causa (vazamento de memória) está identificada, mas a correção depende do fornecedor. Essa situação é tratada no controle de erros da prática de gerenciamento de problemas.",
+          "versaoInvertidaFalsa": "erro conhecido e solução de contorno, pois o procedimento documentado de reinicialização é o erro conhecido e a causa identificada é a solução de contorno."
+        },
+        {
+          "id": "opt-5",
+          "texto": "resolução definitiva do incidente e problema encerrado, já que a causa raiz foi encontrada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A reinicialização restaura o serviço, mas não elimina a causa, e a lentidão volta a cada manhã. Encontrar a causa raiz não encerra o problema: ele permanece como erro conhecido até a correção ser implementada, em regra por meio de uma mudança."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve o contorno e a causa sem nomeá-los e oferece os mesmos rótulos invertidos. Também tenta fazer o candidato achar que restabelecer o serviço ou descobrir a causa raiz encerra o problema, quando ele só deixa de existir com a correção definitiva.",
+      "resumoFlashcard": {
+        "pergunta": "No ITIL 4, qual é a diferença entre solução de contorno e erro conhecido?",
+        "resposta": "Solução de contorno reduz ou elimina o impacto de um incidente ou problema ainda sem resolução completa. Erro conhecido é o problema já analisado e ainda não resolvido. O erro conhecido é gerido no controle de erros até a correção definitiva."
+      },
+      "conceitosChave": ["Gestão de serviços: incidente × problema", "ITIL 4: erro conhecido e solução de contorno"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de incidentes e de gerenciamento de problemas (definições de incidente, problema, erro conhecido e solução de contorno; fases de identificação, controle do problema e controle de erros)."
+    },
+    {
+      "id": "gov-ti-004",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que um técnico de TI do Tribunal integra a equipe de planejamento da contratação de uma solução de armazenamento de dados e está elaborando o estudo técnico preliminar (ETP), na forma da Lei 14.133/2021. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma secretaria estadual vai contratar solução de videoconferência e designou servidores da área de TI para elaborar o estudo técnico preliminar (ETP), conforme a Lei 14.133/2021. Considere as afirmativas abaixo.",
+        "Ao revisar o processo de contratação de licenças de software de um jurisdicionado, a equipe de auditoria do Tribunal examinou o estudo técnico preliminar (ETP) à luz da Lei 14.133/2021. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O ETP deve conter, no mínimo, a descrição da necessidade, a estimativa das quantidades, a estimativa do valor, as justificativas para o parcelamento ou não da contratação e o posicionamento conclusivo sobre a adequação da contratação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 18, § 2º, da Lei 14.133/2021 torna obrigatórios os incisos I, IV, VI, VIII e XIII do § 1º. A ausência dos demais elementos exige justificativa."
+        },
+        {
+          "texto": "O levantamento de mercado, com a análise das alternativas possíveis e a justificativa técnica e econômica da escolha do tipo de solução, é elemento previsto para o ETP, e sua não inclusão deve ser justificada.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O levantamento de mercado está no art. 18, § 1º, V. Não está entre os elementos mínimos do § 2º, mas, se não constar, o ETP deve apresentar a justificativa."
+        },
+        {
+          "texto": "Quando houver possibilidade de compra ou de locação dos bens, o ETP deve considerar os custos e os benefícios de cada opção, com indicação da alternativa mais vantajosa.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 44 da Lei 14.133/2021, especialmente relevante em TIC, em que se comparam aquisição de equipamentos, locação e contratação como serviço."
+        },
+        {
+          "texto": "O ETP é elaborado depois do termo de referência, com a finalidade de confirmar a viabilidade do objeto já detalhado naquele documento.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pelo art. 6º, XX, o ETP é o documento da primeira etapa do planejamento: caracteriza o interesse público e a melhor solução e dá base ao termo de referência, que é elaborado depois, se a contratação se mostrar viável."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: o ETP antecede e fundamenta o termo de referência (art. 6º, XX). A combinação também omite as afirmativas II e III, que reproduzem os arts. 18, § 1º, V, e 44 da Lei 14.133/2021."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Faltou a afirmativa I, que reproduz o rol mínimo obrigatório do art. 18, § 2º (incisos I, IV, VI, VIII e XIII do § 1º). Quem a descarta costuma achar que o levantamento de mercado também é obrigatório e que o rol mínimo está incompleto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa porque inverte a ordem dos artefatos. O ETP é a primeira etapa do planejamento e dá base ao termo de referência, ao anteprojeto ou ao projeto básico."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa, e a afirmativa I, verdadeira, ficou de fora. A combinação atrai quem confunde a sequência estudo técnico preliminar → termo de referência e duvida do rol mínimo do art. 18, § 2º."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As afirmativas I, II e III estão de acordo com o art. 18, §§ 1º e 2º, e o art. 44 da Lei 14.133/2021: elementos mínimos do ETP, levantamento de mercado (que, se omitido, exige justificativa) e comparação entre compra e locação. A IV é falsa porque o ETP é a primeira etapa do planejamento e fundamenta o termo de referência (art. 6º, XX).",
+          "versaoInvertidaFalsa": "O ETP deve conter obrigatoriamente todos os treze elementos do art. 18, § 1º, da Lei 14.133/2021, inclusive o levantamento de mercado, sem possibilidade de dispensa justificada de qualquer deles."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a ordem dos artefatos (o ETP vem antes do termo de referência) e explora a diferença entre os elementos obrigatórios do ETP (incisos I, IV, VI, VIII e XIII) e os dispensáveis com justificativa, como o levantamento de mercado.",
+      "resumoFlashcard": {
+        "pergunta": "Quais elementos do estudo técnico preliminar são obrigatórios na Lei 14.133/2021?",
+        "resposta": "Os incisos I, IV, VI, VIII e XIII do art. 18, § 1º: necessidade, quantidades, valor estimado, justificativa do parcelamento e posicionamento conclusivo. Os demais, como o levantamento de mercado, podem faltar se houver justificativa (art. 18, § 2º)."
+      },
+      "conceitosChave": ["Lei 14.133: fase preparatória (ETP)", "Contratações de TIC: planejamento"],
+      "fundamentacao": "Lei 14.133/2021, art. 6º, XX (estudo técnico preliminar), art. 18, caput e §§ 1º (incisos I a XIII) e 2º, e art. 44 (compra × locação)."
+    },
+    {
+      "id": "gov-ti-005",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "PMBOK 8ª edição",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O Guia PMBOK 8ª edição, lançado pelo PMI em 2025 em volume único com o Padrão de Gerenciamento de Projetos, organiza seu conteúdo em",
+      "variantesEnunciado": [
+        "Em capacitação sobre gerenciamento de projetos de TI, um instrutor apresentou a estrutura do Guia PMBOK 8ª edição, publicado pelo PMI em 2025. Segundo essa edição, o conteúdo está organizado em",
+        "Ao atualizar a metodologia de projetos de um jurisdicionado para o Guia PMBOK 8ª edição, a equipe precisou rever a estrutura de referência adotada. Nessa edição, o PMI organiza o conteúdo em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "6 princípios e 8 domínios de desempenho, mantendo a ausência de processos adotada na edição anterior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É uma mistura de edições. A 8ª edição tem 6 princípios, mas 7 domínios de desempenho, e reintroduziu os processos, agora de forma não prescritiva. Os 8 domínios e a ausência de processos são da 7ª edição."
+        },
+        {
+          "id": "opt-2",
+          "texto": "12 princípios e 8 domínios de desempenho, sem processos, com ênfase em modelos, métodos e artefatos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a estrutura da 7ª edição (2021): 12 princípios, 8 domínios de desempenho (entre eles Incerteza e Medição) e uma seção de modelos, métodos e artefatos, sem processos. A 8ª edição consolidou os princípios em 6 e os domínios em 7."
+        },
+        {
+          "id": "opt-3",
+          "texto": "10 áreas de conhecimento e 5 grupos de processos, que reúnem 49 processos com entradas, ferramentas e técnicas e saídas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a estrutura da 6ª edição (2017). A 8ª edição não volta às áreas de conhecimento nem aos 49 processos: organiza o conteúdo em princípios, domínios de desempenho e áreas de foco, com 40 processos não prescritivos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "6 princípios, 7 domínios de desempenho, 5 áreas de foco e 40 processos de caráter não prescritivo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O PMBOK 8ª edição mantém a base de princípios e domínios da 7ª, simplificada. São 6 princípios e 7 domínios de desempenho (Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco). A orientação por processos volta em 40 processos não prescritivos, agrupados em 5 áreas de foco que retomam os nomes iniciação, planejamento, execução, monitoramento e controle, e encerramento.",
+          "versaoInvertidaFalsa": "12 princípios, 8 domínios de desempenho e 5 áreas de foco, com 49 processos de aplicação obrigatória em todos os projetos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "12 princípios, 7 domínios de desempenho e 5 grupos de processos, com 47 processos de aplicação obrigatória.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mistura números de várias edições: 12 princípios (7ª), 47 processos (5ª edição, de 2013) e grupos de processos 'obrigatórios'. Na 8ª edição, os processos são 40, não prescritivos, e devem ser adaptados ao contexto do projeto."
+        }
+      ],
+      "pegadinhaFCC": "A FCC cobra a 8ª edição misturando os números das anteriores: 12 princípios e 8 domínios (7ª), 10 áreas e 49 processos (6ª), 47 processos (5ª). A combinação correta é 6 princípios, 7 domínios, 5 áreas de foco e 40 processos não prescritivos.",
+      "resumoFlashcard": {
+        "pergunta": "Como está estruturado o Guia PMBOK 8ª edição?",
+        "resposta": "Em 6 princípios, 7 domínios de desempenho (Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco), 5 áreas de foco e 40 processos não prescritivos. O guia vale para abordagens preditivas, adaptativas e híbridas."
+      },
+      "conceitosChave": ["PMBOK 8: estrutura", "PMBOK 6 × 7 × 8"],
+      "fundamentacao": "PMI. A Guide to the Project Management Body of Knowledge (PMBOK Guide), 8th ed., and The Standard for Project Management (2025); página oficial do PMI (pmi.org/standards/pmbok): seis princípios, sete domínios de desempenho e orientação por processos não prescritiva."
+    },
+    {
+      "id": "gov-ti-006",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ISO/IEC 38500:2024",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A ISO/IEC 38500:2024, terceira edição da norma internacional sobre governança de TI para a organização, cancelou e substituiu a edição de 2015. Em relação à edição anterior, uma das principais mudanças foi",
+      "variantesEnunciado": [
+        "Ao atualizar o referencial de uma auditoria de governança de TI, a equipe do Tribunal constatou que a ISO/IEC 38500:2015 havia sido substituída pela edição de 2024. Entre as principais mudanças dessa nova edição, está",
+        "Um técnico revisa uma nota técnica que ainda cita a ISO/IEC 38500:2015 como referência vigente. Para atualizá-la, ele deve registrar que a ISO/IEC 38500:2024 trouxe, entre suas principais mudanças,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a manutenção dos seis princípios de 2015 (responsabilidade, estratégia, aquisição, desempenho, conformidade e comportamento humano), acrescidos de um sétimo, sobre inteligência artificial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os seis princípios citados são da edição de 2015. Na de 2024, os princípios foram reelaborados e alinhados aos princípios de governança organizacional da ISO 37000. Não houve simples acréscimo de um princípio sobre inteligência artificial, embora o contexto da revisão inclua tecnologias como IA e nuvem."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o alinhamento dos princípios de governança de TI aos princípios de governança organizacional da ISO 37000 e a inclusão de 'engajar as partes interessadas' no modelo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O prefácio da edição de 2024 lista três mudanças principais: os princípios de governança de TI foram reelaborados e alinhados aos princípios da ISO 37000 (governança de organizações); o modelo passou a incluir 'engajar as partes interessadas', ao lado de avaliar, dirigir e monitorar; e um framework de governança de TI foi atualizado a partir do ISO/IEC TR 38502.",
+          "versaoInvertidaFalsa": "a manutenção integral dos seis princípios da edição de 2015 e do modelo restrito a avaliar, dirigir e monitorar, sem qualquer alinhamento à ISO 37000."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a substituição do modelo avaliar-dirigir-monitorar pelo ciclo planejar-fazer-checar-agir (PDCA), para compatibilizar a norma com os sistemas de gestão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A edição de 2024 manteve avaliar, dirigir e monitorar e acrescentou o engajamento das partes interessadas. O PDCA é a lógica das normas de sistemas de gestão (como a ISO/IEC 27001), que estabelecem requisitos, e não a de uma norma de princípios para o órgão de governança."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a conversão da norma em requisitos auditáveis, permitindo a certificação de organizações por terceira parte, como ocorre com a ISO/IEC 27001.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ISO/IEC 38500:2024 continua sendo norma de orientação, com princípios para os membros do órgão de governança. Não estabelece requisitos certificáveis. A comparação com a ISO/IEC 27001, norma de requisitos de sistema de gestão, é a armadilha."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a mudança do público-alvo, que deixou de ser o órgão de governança e passou a ser os gestores operacionais responsáveis pela execução dos serviços de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A norma continua dirigida aos membros dos órgãos de governança e a quem os apoia e assessora (gestores, especialistas, auditores). O foco é a governança do uso atual e futuro da TI, e não a gestão operacional dos serviços."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha mais provável é cobrar como atuais os seis princípios e o modelo da edição de 2015. Na de 2024, os princípios foram alinhados à ISO 37000, o modelo ganhou 'engajar as partes interessadas' e a norma continua sem requisitos certificáveis.",
+      "resumoFlashcard": {
+        "pergunta": "Quais foram as principais mudanças da ISO/IEC 38500:2024 em relação à edição de 2015?",
+        "resposta": "Os princípios de governança de TI foram reelaborados e alinhados à ISO 37000, o modelo passou a incluir 'engajar as partes interessadas' além de avaliar, dirigir e monitorar, e um framework de governança de TI foi atualizado a partir do ISO/IEC TR 38502."
+      },
+      "conceitosChave": ["ISO/IEC 38500:2024", "ISO/IEC 38500: 2015 × 2024"],
+      "fundamentacao": "ISO/IEC 38500:2024, Foreword (principais mudanças em relação à ISO/IEC 38500:2015) e Scope; ISO/IEC JTC 1/SC 40, anúncio da revisão e white paper sobre as diferenças entre as edições de 2015 e 2024."
+    },
+    {
+      "id": "gov-ti-007",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Lei do Governo Digital (Lei 14.129/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que determinado Estado adotou, por ato normativo próprio, os comandos da Lei 14.129/2021 e que um órgão estadual passou a exigir que o cidadão reapresente, a cada nova solicitação de serviço digital, certidão que o próprio órgão já recebeu e validou em requerimento anterior. O órgão também determinou o fim do atendimento presencial em todos os serviços, inclusive nos destinados a público com pouco acesso à internet. À luz dos princípios e diretrizes da lei, essas medidas contrariam, respectivamente,",
+      "variantesEnunciado": [
+        "Considere que um órgão federal exige que a empresa interessada reenvie, a cada pedido de serviço digital, documento já apresentado e validado em processo anterior no próprio órgão, e que decidiu encerrar o atendimento presencial de todos os serviços, inclusive daqueles destinados a público com dificuldade de acesso digital. À luz dos princípios e diretrizes da Lei 14.129/2021, essas medidas contrariam, respectivamente,",
+        "Em fiscalização de serviços públicos digitais de uma autarquia federal, a equipe constatou que se exige do usuário a reapresentação de comprovante já validado pela própria autarquia e que o atendimento presencial foi extinto em todos os serviços, sem considerar o público-alvo. Segundo os princípios e diretrizes da Lei 14.129/2021, essas práticas contrariam, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a presunção de boa-fé do usuário e a diretriz de prestação exclusivamente digital dos serviços públicos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A presunção de boa-fé (art. 3º, XV) até se relaciona ao caso, mas a segunda parte é falsa: a lei não prevê prestação exclusivamente digital. Ao contrário, prevê a permanência da possibilidade de atendimento presencial conforme as características, a relevância e o público-alvo do serviço (art. 3º, XVI)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o uso de linguagem clara e a vedação de atendimento presencial nos serviços que já tenham versão digital.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Linguagem clara (art. 3º, VII) não tem relação com a exigência repetida de documento. Não há vedação de atendimento presencial: a lei assegura que essa possibilidade permaneça de acordo com o serviço e seu público, e o art. 14 garante o direito ao atendimento presencial sem prejuízo da prestação digital."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a vedação de exigir prova de fato já comprovado e a permanência do atendimento presencial conforme as características, a relevância e o público-alvo do serviço.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 3º da Lei 14.129/2021 inclui, entre os princípios e diretrizes do Governo Digital, a vedação de exigência de prova de fato já comprovado pela apresentação de documento ou informação válida (inciso XIII) e a permanência da possibilidade de atendimento presencial, de acordo com as características, a relevância e o público-alvo do serviço (inciso XVI). Exigir de novo a certidão já validada e extinguir indiscriminadamente o presencial afronta os dois.",
+          "versaoInvertidaFalsa": "a vedação de exigir prova de fato já comprovado e a regra de que todo serviço com versão digital deve ter o atendimento presencial extinto, independentemente do público-alvo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a interoperabilidade de sistemas e a regra de que o atendimento presencial só pode ser mantido para pessoas com deficiência ou com mobilidade reduzida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A interoperabilidade (art. 3º, XIV) ajudaria a evitar a reapresentação de documentos, mas a segunda parte é inventada: a lei não restringe o atendimento presencial às pessoas com deficiência. O critério é o conjunto de características, relevância e público-alvo de cada serviço."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a transparência ativa e o dever de manter atendimento presencial em todos os serviços públicos, independentemente de suas características, de sua relevância e de seu público.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Transparência ativa é a divulgação de dados independentemente de solicitação, sem relação com a exigência repetida de documento. A segunda parte generaliza indevidamente: a lei fala em permanência da possibilidade de atendimento presencial 'de acordo com as características, a relevância e o público-alvo do serviço', e não em presencial obrigatório para tudo."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece princípios vizinhos (boa-fé, interoperabilidade, transparência) e distorce a diretriz do atendimento presencial para 'exclusivamente digital' ou 'presencial obrigatório em tudo'. A lei fala em permanência da possibilidade de atendimento presencial conforme o serviço e seu público.",
+      "resumoFlashcard": {
+        "pergunta": "Como a Lei 14.129/2021 trata a exigência de documentos já apresentados e o atendimento presencial?",
+        "resposta": "Veda exigir prova de fato já comprovado por documento ou informação válida (art. 3º, XIII). Assegura a permanência da possibilidade de atendimento presencial conforme as características, a relevância e o público-alvo do serviço (art. 3º, XVI)."
+      },
+      "conceitosChave": ["Lei 14.129: princípios e diretrizes", "Lei 14.129: atendimento presencial"],
+      "fundamentacao": "Lei 14.129/2021, art. 2º, III (aplicação aos demais entes que adotarem a lei por ato normativo próprio), art. 3º, VII, XIII, XIV, XV e XVI, e art. 14."
+    },
+    {
+      "id": "gov-ti-008",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Governança de TI e alinhamento estratégico",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, em um tribunal de contas, a área de TI implantou uma plataforma de análise de dados e de inteligência artificial que permitiu cruzar bases de jurisdicionados em larga escala. Aproveitando essa nova capacidade, a alta administração redefiniu a estratégia de fiscalização, que passou a selecionar objetos de auditoria por modelos de risco, e, em seguida, foram reorganizados os processos de trabalho e a estrutura das unidades de controle externo. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de",
+      "variantesEnunciado": [
+        "Uma secretaria estadual adotou plataforma de identidade digital e assinatura eletrônica desenvolvida pela área de TI. Com base nessa capacidade tecnológica, a cúpula reformulou a estratégia de atendimento, que passou a priorizar serviços totalmente digitais, e depois redesenhou os processos e a estrutura das unidades de atendimento. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de",
+        "Em um órgão público, novas capacidades de computação em nuvem e de automação, oferecidas pela estratégia de TI, levaram a direção a redefinir a estratégia institucional de prestação de serviços. Só então foram ajustados a estrutura organizacional e os processos das áreas finalísticas. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "execução da estratégia, em que a estratégia de negócio orienta a infraestrutura organizacional, que por sua vez orienta a infraestrutura de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na execução da estratégia, o ponto de partida é a estratégia de negócio, desdobrada na infraestrutura e nos processos organizacionais e depois na infraestrutura de TI. É a visão tradicional, em que a TI apenas implementa a estratégia definida. No caso, o ponto de partida foi uma capacidade de TI."
+        },
+        {
+          "id": "opt-2",
+          "texto": "transformação tecnológica, em que a estratégia de negócio orienta a estratégia de TI, que por sua vez define a infraestrutura de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na transformação tecnológica, a estratégia de negócio também é o ponto de partida: ela define a estratégia de TI mais adequada, que se reflete na infraestrutura e nos processos de TI. No caso, a sequência começa na TI e termina na infraestrutura organizacional."
+        },
+        {
+          "id": "opt-3",
+          "texto": "nível de serviço, em que a estratégia de TI orienta a infraestrutura de TI, que por sua vez orienta a infraestrutura organizacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No nível de serviço, a estratégia de TI orienta a infraestrutura e os processos de TI, para atender bem à organização, sem redefinir a estratégia de negócio. No caso, a nova capacidade de TI mudou a própria estratégia de fiscalização, o que caracteriza outra perspectiva."
+        },
+        {
+          "id": "opt-4",
+          "texto": "potencial competitivo, em que a estratégia de TI viabiliza nova estratégia de negócio, que então orienta a infraestrutura organizacional.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Henderson e Venkatraman (1993) descrevem quatro perspectivas de alinhamento entre os domínios estratégia de negócio, estratégia de TI, infraestrutura organizacional e infraestrutura de TI. No potencial competitivo, capacidades emergentes de TI permitem formular uma nova estratégia de negócio, que depois se reflete nos processos e na estrutura da organização. É o que ocorreu: plataforma de dados → nova estratégia de fiscalização → reorganização das unidades.",
+          "versaoInvertidaFalsa": "execução da estratégia, em que capacidades emergentes de TI viabilizam uma nova estratégia de negócio, que então orienta a infraestrutura organizacional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "integração funcional, em que a TI e o negócio atuam em conjunto na definição dos processos internos, sem relação com a estratégia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Integração funcional não é perspectiva, e sim uma das duas dimensões do modelo: liga os domínios de negócio e de TI. A outra dimensão é o ajuste estratégico, que liga os domínios externos (estratégia) e internos (infraestrutura). Além disso, o caso envolve diretamente a estratégia."
+        }
+      ],
+      "pegadinhaFCC": "O caso descreve a sequência sem nomear os domínios, e a banca oferece as outras perspectivas e até uma dimensão do modelo como distratores. A pista decisiva é o ponto de partida: quando a capacidade de TI muda a estratégia de negócio, trata-se de potencial competitivo.",
+      "resumoFlashcard": {
+        "pergunta": "No modelo de Henderson e Venkatraman, o que caracteriza a perspectiva de potencial competitivo?",
+        "resposta": "A estratégia de TI, explorando capacidades emergentes, viabiliza nova estratégia de negócio, que depois orienta a infraestrutura e os processos organizacionais. Difere da execução da estratégia e da transformação tecnológica, que partem da estratégia de negócio."
+      },
+      "conceitosChave": ["Alinhamento estratégico (SAM)", "Governança de TI: alinhamento estratégico"],
+      "fundamentacao": "Henderson, J. C.; Venkatraman, N. Strategic alignment: leveraging information technology for transforming organizations. IBM Systems Journal, v. 32, n. 1, 1993 (domínios, dimensões de ajuste estratégico e de integração funcional e quatro perspectivas de alinhamento)."
+    },
+    {
+      "id": "gov-ti-009",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Métodos ágeis em projetos de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um projeto do Tribunal conduzido com Scrum, no meio da Sprint, o diretor da unidade demandante pediu diretamente aos desenvolvedores que incluíssem uma funcionalidade urgente que não contribui para a Meta da Sprint em curso. Segundo o Guia do Scrum (2020), a conduta adequada é",
+      "variantesEnunciado": [
+        "Durante uma Sprint do projeto de modernização do sistema de jurisprudência de um tribunal de contas, um gestor da área usuária procurou os desenvolvedores e solicitou a inclusão imediata de um novo relatório, sem relação com a Meta da Sprint. Segundo o Guia do Scrum (2020), a conduta adequada é",
+        "Uma equipe Scrum que desenvolve o aplicativo de serviços de um jurisdicionado recebeu, no meio da Sprint, pedido direto do secretário para incluir uma funcionalidade que não serve à Meta da Sprint. Conforme o Guia do Scrum (2020), a conduta adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os desenvolvedores incluírem a funcionalidade no Sprint Backlog, pois o Scrum privilegia responder a mudanças em vez de seguir um plano.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Guia do Scrum determina que, durante a Sprint, não se façam mudanças que ponham em risco a Meta da Sprint. A adaptação ocorre pelo Product Backlog, gerido pelo Product Owner. Invocar o Manifesto Ágil não autoriza desviar a Sprint de sua meta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Scrum Master aprovar a inclusão da funcionalidade, pois é ele o responsável por priorizar e distribuir o trabalho dos desenvolvedores durante toda a duração da Sprint.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Scrum Master é responsável pela eficácia do Scrum Team e por estabelecer o Scrum, mas não prioriza nem distribui o trabalho. A ordenação do Product Backlog cabe ao Product Owner, e o plano da Sprint (Sprint Backlog) pertence aos desenvolvedores, que se auto-organizam."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Scrum Master cancelar imediatamente a Sprint e iniciar outra, depois de consultar os desenvolvedores sobre a nova prioridade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pelo Guia do Scrum (2020), apenas o Product Owner tem autoridade para cancelar a Sprint, e só quando a Meta da Sprint se torna obsoleta. A troca de quem cancela é pegadinha recorrente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "estender a duração da Sprint para acomodar a nova funcionalidade, mantendo-se a Meta da Sprint originalmente definida no planejamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Sprint tem duração fixa, de um mês ou menos, e não é estendida para acomodar trabalho novo. Esticar o timebox compromete a cadência de inspeção e adaptação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "levar a demanda ao Product Owner, que ordena o Product Backlog, sem mudanças que ameacem a Meta da Sprint; só ele pode cancelar a Sprint, se a meta ficar obsoleta.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o Guia do Scrum (2020), o Product Owner é o responsável por maximizar o valor do produto e pela gestão do Product Backlog. Quem quiser mudar prioridades deve convencê-lo. Durante a Sprint, não se fazem mudanças que ponham em risco a Meta da Sprint. O escopo pode ser esclarecido e renegociado com o PO à medida que se aprende mais. Somente o PO pode cancelar a Sprint, e apenas se a meta se tornar obsoleta.",
+          "versaoInvertidaFalsa": "levar a demanda ao Scrum Master, que ordena o Product Backlog e é o único com autoridade para cancelar a Sprint quando surgir uma prioridade nova."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca papéis do Scrum: atribui ao Scrum Master a priorização ou o cancelamento da Sprint, que cabem ao Product Owner. Também tenta justificar a inclusão de trabalho fora da meta com 'responder a mudanças'.",
+      "resumoFlashcard": {
+        "pergunta": "No Scrum (Guia 2020), quem decide sobre nova demanda no meio da Sprint e quem pode cancelar a Sprint?",
+        "resposta": "A demanda vai para o Product Owner, que ordena o Product Backlog. Durante a Sprint não se fazem mudanças que ponham em risco a Meta da Sprint. Só o PO pode cancelar a Sprint, e apenas se a meta se tornar obsoleta."
+      },
+      "conceitosChave": ["Scrum: papéis (accountabilities)", "Scrum: Sprint e Meta da Sprint"],
+      "fundamentacao": "Schwaber, K.; Sutherland, J. Guia do Scrum (2020), seções 'Product Owner', 'Scrum Master', 'Developers' e 'Sprint' (regra de não pôr em risco a Meta da Sprint e cancelamento da Sprint)."
+    },
+    {
+      "id": "gov-ti-010",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de portfólio, ativos e continuidade de serviços",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A análise de impacto no negócio (BIA) do sistema de recebimento de prestações de contas do Tribunal concluiu que, após 24 horas de paralisação, os impactos se tornariam inaceitáveis e que a perda de mais de 4 horas de dados recebidos comprometeria prazos legais. O plano vigente prevê um único backup completo por dia, às 23h, e restauração estimada em 30 horas no ambiente secundário. Considerando os conceitos de período máximo tolerável de interrupção (MTPD), objetivo de tempo de recuperação (RTO) e objetivo de ponto de recuperação (RPO), é correto concluir que o plano",
+      "variantesEnunciado": [
+        "Em um jurisdicionado, a BIA do sistema de folha de pagamento indicou que, após 24 horas de indisponibilidade, os impactos seriam inaceitáveis e que não se admite perder mais do que 4 horas de lançamentos. O plano de recuperação atual prevê backup completo uma vez por dia, à noite, e restauração estimada em 30 horas em site alternativo. Considerando os conceitos de MTPD, RTO e RPO, é correto concluir que o plano",
+        "Para o portal de serviços de uma secretaria estadual, a análise de impacto no negócio fixou em 24 horas o tempo após o qual a interrupção se torna inaceitável e em 4 horas a perda máxima admissível de dados. O plano de continuidade, porém, prevê backup diário único e tempo de restauração de 30 horas. Considerando os conceitos de MTPD, RTO e RPO, é correto concluir que o plano"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "atende ao RPO, porque o backup diário assegura a recuperação dos dados, mas falha quanto ao RTO, que deveria ser igual ao MTPD de 24 horas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com um único backup por dia, uma falha pouco antes das 23h pode causar perda de quase 24 horas de dados, muito acima do RPO de 4 horas. Além disso, o RTO deve ser inferior ao MTPD, e não igual a ele, para haver margem antes de os impactos se tornarem inaceitáveis. A alternativa acerta só a falha de tempo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "falha nos dois aspectos: a restauração excede o MTPD, ao qual o RTO deve ser inferior, e o backup diário admite perda de até 24 horas de dados, acima do RPO.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O MTPD (24 h) é o tempo após o qual os impactos da interrupção se tornam inaceitáveis. O RTO, prazo para retomar a atividade, deve ser inferior a ele, mas o plano prevê 30 h de restauração. O RPO (4 h) é a perda máxima de dados tolerada, e um backup a cada 24 h pode levar à perda de até 24 h de dados. São necessárias soluções como replicação ou backups mais frequentes e uma estratégia de recuperação mais rápida.",
+          "versaoInvertidaFalsa": "é adequado quanto ao RPO, pois um backup completo por dia limita a perda a 4 horas de dados, e só precisa reduzir a restauração para atender ao RTO."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é inadequado apenas quanto ao RPO, já que o RTO pode superar o MTPD sempre que houver ambiente secundário disponível para a retomada do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ter um ambiente secundário não autoriza RTO maior que o MTPD: se a retomada demorar mais que o período máximo tolerável, os impactos inaceitáveis já terão ocorrido. O site alternativo é meio para cumprir o RTO, não exceção a ele."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é inadequado apenas quanto ao RTO, pois o RPO mede o tempo necessário para restabelecer o sistema, e não a quantidade máxima de dados que se pode perder.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa troca as definições. O RPO é o ponto até o qual a informação deve ser restaurada, ou seja, a perda máxima admissível de dados. O tempo de restabelecimento é o RTO. Com a definição correta, o plano também falha no RPO."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é adequado, desde que o RTO seja redefinido para 30 horas, valor que deve sempre corresponder ao tempo de restauração estimado no plano.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os objetivos de recuperação derivam da BIA, isto é, do impacto no negócio, e não da capacidade técnica atual. Ajustar o RTO ao tempo de restauração existente inverteria a lógica e manteria uma retomada posterior ao MTPD de 24 horas."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca RTO (tempo para retomar) por RPO (perda máxima de dados) e sugere que o RTO pode igualar ou superar o MTPD. Os objetivos vêm da BIA: o RTO deve ser menor que o MTPD, e a frequência de backup ou replicação tem de respeitar o RPO.",
+      "resumoFlashcard": {
+        "pergunta": "O que são MTPD, RTO e RPO e como se relacionam em um plano de continuidade?",
+        "resposta": "MTPD é o tempo após o qual os impactos de uma interrupção se tornam inaceitáveis. RTO é o prazo para retomar a atividade e deve ser inferior ao MTPD. RPO é a perda máxima de dados admitida, que define a frequência de backup ou replicação."
+      },
+      "conceitosChave": ["Continuidade: RTO, RPO e MTPD", "Continuidade: análise de impacto no negócio (BIA)"],
+      "fundamentacao": "ABNT NBR ISO 22301:2020 (ISO 22301:2019), seção 8.2.2 (análise de impacto nos negócios, prazos de retomada e período máximo tolerável); ISO 22300:2021 (definições de MTPD, RTO e RPO); AXELOS, ITIL 4, prática de gerenciamento de continuidade de serviço."
+    }
+  ]
+}

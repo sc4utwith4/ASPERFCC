@@ -1,0 +1,592 @@
+{
+  "materiaSlug": "seguranca-informacao",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "seg-info-021",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Malware, ransomware, phishing e engenharia social",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a Cartilha de Segurança para Internet do CERT.br, o código malicioso capaz de se propagar automaticamente pelas redes, enviando cópias de si mesmo de equipamento para equipamento, seja pela execução direta dessas cópias, seja pela exploração automática de vulnerabilidades, sem precisar se inserir em outros programas ou arquivos, é o",
+      "variantesEnunciado": [
+        "Durante um incidente, a equipe de resposta do Tribunal observou que um código malicioso se replicava sozinho de estação para estação da rede interna, explorando uma falha não corrigida do sistema operacional, sem que nenhum usuário abrisse arquivos ou executasse programas. Esse comportamento caracteriza o código malicioso denominado",
+        "Em treinamento de conscientização, o instrutor destacou o tipo de praga digital que, diferentemente do vírus, não se anexa a outros arquivos e se espalha por conta própria pela rede, explorando vulnerabilidades dos equipamentos. Trata-se do código malicioso denominado"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "worm.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela Cartilha do CERT.br, o worm se propaga automaticamente pelas redes, enviando cópias de si mesmo, pela execução direta dessas cópias ou pela exploração automática de vulnerabilidades, sem se incluir em outros programas ou arquivos. Por isso consome recursos de rede e se espalha com rapidez; a defesa passa por correção de vulnerabilidades, segmentação de rede e monitoramento.",
+          "versaoInvertidaFalsa": "vírus, já que é ele que dispensa qualquer arquivo hospedeiro e se espalha sozinho pela rede, explorando vulnerabilidades."
+        },
+        {
+          "id": "opt-2",
+          "texto": "vírus.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O vírus se propaga inserindo cópias de si mesmo em outros programas ou arquivos e depende da execução do programa ou arquivo hospedeiro para se tornar ativo. A independência de hospedeiro descrita no enunciado é justamente o que distingue o worm."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cavalo de troia (trojan).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cavalo de troia executa as funções para as quais aparentemente foi projetado e, às ocultas, outras funções maliciosas. Ele depende de ser instalado ou executado pela vítima e não se replica por conta própria."
+        },
+        {
+          "id": "opt-4",
+          "texto": "rootkit.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O rootkit é um conjunto de programas e técnicas para esconder e assegurar a presença de um invasor ou de outro código malicioso em equipamento já comprometido. Seu objetivo é a ocultação, e não a propagação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "spyware.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O spyware monitora as atividades de um sistema e envia as informações coletadas a terceiros, como fazem keyloggers e screenloggers. Não se caracteriza pela autopropagação na rede."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve a autopropagação sem hospedeiro, que é a marca do worm, e oferece o vírus como isca: o vírus se anexa a arquivos e depende da execução do hospedeiro.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre vírus e worm?",
+        "resposta": "O vírus insere cópias de si em programas ou arquivos e depende da execução do hospedeiro para agir. O worm propaga-se sozinho pela rede, executando cópias de si ou explorando vulnerabilidades automaticamente, sem se anexar a arquivos."
+      },
+      "conceitosChave": ["Malware: worm × vírus"],
+      "fundamentacao": "CERT.br, Cartilha de Segurança para Internet, fascículo Códigos Maliciosos (definições de vírus, worm, cavalo de troia, rootkit e spyware)."
+    },
+    {
+      "id": "seg-info-022",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Controle de acesso e gestão de identidades (IAM)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "No acesso ao sistema de processo eletrônico do Tribunal, quando o servidor informa seu nome de usuário, ocorre a ……; quando apresenta a senha e o código do token, ocorre a ……; quando o sistema verifica se o perfil dele permite assinar despachos, ocorre a ……; e o registro da operação em trilha de logs, para apuração posterior, corresponde à ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao acessar a VPN do Tribunal, o usuário digita sua matrícula, o que corresponde à ……; em seguida, comprova ser quem diz ser com senha e biometria, o que corresponde à ……; o servidor de políticas então define a quais sistemas ele pode chegar, o que corresponde à ……; por fim, cada conexão é registrada para fins de responsabilização, o que corresponde à ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere o fluxo de acesso a um sistema de controle de contratos: o usuário declara quem é, informando seu login (……); prova essa identidade com suas credenciais (……); recebe ou não permissão para aprovar um empenho, conforme o perfil (……); e tem suas ações registradas em logs que permitirão rastreá-las (……). Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "autenticação − identificação − autorização − auditoria",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas primeiras etapas. Informar o nome de usuário é apenas declarar a identidade (identificação); comprová-la com senha e token é a autenticação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "identificação − autorização − autenticação − auditoria",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca a segunda e a terceira etapas. A apresentação de senha e token comprova a identidade (autenticação), e a verificação do perfil para assinar despachos define o que o usuário pode fazer (autorização)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "identificação − autenticação − auditoria − autorização",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras estão certas, mas a verificação do perfil é autorização, e o registro em logs para apuração posterior é auditoria (responsabilização, ou accounting)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "autorização − autenticação − identificação − auditoria",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autorização só ocorre depois de identificar e autenticar o usuário: não há como decidir o que alguém pode fazer sem saber quem é. A sequência proposta é ilógica."
+        },
+        {
+          "id": "opt-5",
+          "texto": "identificação − autenticação − autorização − auditoria",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A sequência clássica é: identificação (o usuário declara quem é), autenticação (comprova a identidade com um ou mais fatores, como senha e token), autorização (o sistema decide o que ele pode fazer conforme o perfil) e auditoria ou responsabilização (registro das ações para rastreamento posterior). Autenticação, autorização e auditoria compõem o modelo AAA.",
+          "versaoInvertidaFalsa": "autenticação − identificação − autorização − auditoria, pois a apresentação de senha e token apenas declara quem é o usuário, sem comprovar sua identidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha etapas vizinhas. Declarar quem é (login) é identificação; provar (senha, token) é autenticação; decidir o que pode fazer é autorização; registrar para responsabilizar é auditoria.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre identificação, autenticação, autorização e auditoria?",
+        "resposta": "Identificação é declarar quem é (login); autenticação é comprovar essa identidade com fatores (senha, token, biometria); autorização é definir o que o usuário pode fazer; auditoria é registrar as ações para rastreamento e responsabilização."
+      },
+      "conceitosChave": ["IAM: autenticação × autorização"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27002:2022, controles 5.15 (controle de acesso), 5.16 (gestão de identidade), 8.5 (autenticação segura) e 8.15 (registros de eventos)."
+    },
+    {
+      "id": "seg-info-023",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Gestão de riscos, vulnerabilidades e incidentes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A varredura mensal do Tribunal apontou duas vulnerabilidades: a primeira, com pontuação base 9,8 no CVSS, afeta um servidor de laboratório isolado, sem conexão de rede e sem dados reais; a segunda, com pontuação base 7,5, afeta o portal de serviços exposto à internet e consta do catálogo de vulnerabilidades sabidamente exploradas (KEV) da CISA. A equipe só tem capacidade para corrigir uma delas nesta semana. Segundo boas práticas de gestão de vulnerabilidades, a conduta mais adequada é",
+      "variantesEnunciado": [
+        "O relatório de vulnerabilidades de um jurisdicionado auditado pelo Tribunal indicou uma falha de pontuação base 9,8 em equipamento de testes desconectado da rede e outra, de pontuação 7,5, no sistema de compras acessível pela internet, já incluída no catálogo KEV da CISA por estar sendo explorada ativamente. Com recursos para corrigir apenas uma de imediato, a conduta mais adequada é",
+        "Considere que, na triagem semanal de vulnerabilidades do Tribunal, figuram uma falha CVSS 9,8 em máquina virtual de laboratório sem rede e sem dados de produção e uma falha CVSS 7,5, com exploração ativa conhecida (catálogo KEV), no gateway de acesso remoto exposto à internet. Podendo tratar apenas uma de imediato, a conduta mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "corrigir primeiro a falha de pontuação 9,8, pois o escore base do CVSS já expressa o risco de cada vulnerabilidade para a organização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O escore base mede a gravidade técnica intrínseca, e não o risco no contexto da organização. A própria especificação do CVSS orienta considerar a ameaça (exploração ativa) e o ambiente (exposição, criticidade), e a falha 9,8 está em equipamento isolado e sem dados reais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "priorizar a falha do sistema exposto à internet, ponderando exploração ativa, exposição e criticidade do ativo, e registrar o tratamento da outra.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Priorização baseada em risco combina gravidade com contexto: a falha 7,5 está em sistema exposto à internet e consta do catálogo KEV da CISA, ou seja, há exploração ativa conhecida, o que a torna mais urgente que a 9,8 em máquina isolada. A outra não é ignorada: recebe tratamento registrado (manter o isolamento, corrigir no ciclo seguinte), como prevê o controle 8.8 da ABNT NBR ISO/IEC 27002:2022.",
+          "versaoInvertidaFalsa": "priorizar a falha de pontuação 9,8, pois o escore base é o único critério relevante, independentemente de exposição, exploração ativa ou criticidade do ativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "adiar ambas para a próxima janela trimestral de mudanças, pois correções fora do ciclo planejado geram mais risco que as próprias falhas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Postergar falha com exploração ativa em sistema exposto é exatamente o que a A03:2025 da OWASP critica: correções presas a ciclos mensais ou trimestrais deixam a organização exposta sem necessidade. A gestão de mudanças deve prever caminho emergencial."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aceitar formalmente o risco das duas, já que a existência de pontuação CVSS indica que o fabricante já disponibilizou a correção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A existência de pontuação CVSS não significa que haja correção disponível, e aceitar o risco de falha explorada ativamente em sistema exposto, sem análise, contraria a gestão de riscos. A retenção exige decisão informada do proprietário do risco."
+        },
+        {
+          "id": "opt-5",
+          "texto": "tirar do ar por tempo indeterminado o sistema exposto, pois qualquer falha listada no catálogo KEV impede a operação de um serviço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Retirar o sistema do ar por tempo indeterminado é medida desproporcional que sacrifica a disponibilidade. Constar do KEV indica urgência de correção ou de mitigação, e não proibição absoluta de operar."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa o número maior (9,8) como isca. CVSS base é gravidade, e não risco: exploração ativa (KEV), exposição à internet e criticidade do ativo pesam mais na fila de correção.",
+      "resumoFlashcard": {
+        "pergunta": "Como priorizar a correção de vulnerabilidades além do escore CVSS?",
+        "resposta": "Combinando a gravidade técnica com o contexto: exploração ativa conhecida (catálogo KEV, EPSS), exposição do ativo (por exemplo, internet), criticidade do sistema e controles compensatórios existentes. O escore base, isolado, não expressa o risco para a organização."
+      },
+      "conceitosChave": ["Gestão de vulnerabilidades: CVE e CVSS"],
+      "fundamentacao": "FIRST, CVSS v4.0 Specification (2023), uso das métricas Threat e Environmental; CISA, catálogo Known Exploited Vulnerabilities (KEV); ABNT NBR ISO/IEC 27002:2022, controle 8.8; OWASP Top 10:2025, A03."
+    },
+    {
+      "id": "seg-info-024",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Infraestrutura de chaves públicas, certificados e assinatura digital",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma servidora do Tribunal perdeu o token criptográfico que armazenava seu certificado digital ICP-Brasil, ainda dentro do prazo de validade. Sobre as providências cabíveis e seus efeitos, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um auditor do Tribunal teve furtado o notebook em que estava instalado o certificado digital ICP-Brasil que usava para assinar relatórios, ainda válido. Sobre as providências cabíveis e seus efeitos, é correto afirmar que",
+        "Considere que um gestor de órgão jurisdicionado comunicou ao Tribunal a suspeita de que a chave privada associada ao seu certificado digital ICP-Brasil, ainda válido, foi copiada por terceiros. Sobre as providências cabíveis e seus efeitos, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o titular deve pedir a revogação à autoridade certificadora, que passará a informar o certificado como revogado na LCR e em consultas OCSP.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Diante de perda, furto ou suspeita de comprometimento da chave privada, o titular deve solicitar a revogação. A AC inclui o número de série do certificado na lista de certificados revogados (LCR), publicada periodicamente (RFC 5280), e responde que ele está revogado nas consultas online de status via OCSP (RFC 6960). Quem valida assinaturas deve verificar esse status, e o titular obtém novo certificado, com novo par de chaves.",
+          "versaoInvertidaFalsa": "o titular deve pedir a revogação à autoridade certificadora, que excluirá o certificado da LCR, já que essa lista relaciona apenas os certificados válidos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "basta aguardar o fim do prazo de validade, já que, sem a senha de acesso, o certificado extraviado não pode ser usado por terceiros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A proteção por senha reduz, mas não elimina, o risco de uso indevido (tentativas de adivinhação, senha anotada, coação). Aguardar o vencimento deixa o certificado aparentemente válido por meses; a conduta correta é revogá-lo de imediato."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a AC Raiz da ICP-Brasil deve emitir diretamente novo certificado ao titular, substituindo o anterior sem necessidade de revogação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A MP nº 2.200-2/2001 (art. 5º, parágrafo único) veda à AC Raiz emitir certificados para o usuário final: quem emite é a AC credenciada, com identificação feita pela AR. E a substituição não dispensa a revogação do certificado comprometido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a revogação invalida automaticamente todas as assinaturas feitas antes do incidente, que deverão ser refeitas com o novo certificado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A revogação produz efeitos a partir de sua data. Assinaturas anteriores continuam verificáveis quando é possível comprovar o momento em que foram feitas, por exemplo com carimbo do tempo; só as posteriores à revogação ficam inválidas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a lista de certificados revogados (LCR) relaciona os certificados válidos da AC, de modo que o certificado comprometido deve ser excluído dela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LCR é a lista dos certificados revogados antes do fim da validade, e não dos válidos. O certificado comprometido deve passar a constar dela, e não ser excluído."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere esperar o vencimento, atribui à AC Raiz a emissão ao usuário final (vedada) e inverte o conteúdo da LCR. Comprometeu a chave: revoga-se, e o certificado passa a constar da LCR e a ser informado como revogado no OCSP.",
+      "resumoFlashcard": {
+        "pergunta": "O que fazer quando a chave privada de um certificado digital é perdida ou comprometida?",
+        "resposta": "Solicitar imediatamente a revogação à AC emissora. O certificado passa a constar da lista de certificados revogados (LCR) e a ser informado como revogado no OCSP; as assinaturas anteriores seguem verificáveis se o momento da assinatura puder ser comprovado."
+      },
+      "conceitosChave": ["Revogação: LCR e OCSP", "ICP-Brasil"],
+      "fundamentacao": "RFC 5280 (LCR) e RFC 6960 (OCSP); MP nº 2.200-2/2001, arts. 5º, parágrafo único, e 6º (emissão e revogação de certificados pelas AC)."
+    },
+    {
+      "id": "seg-info-025",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "OWASP Top 10:2025 e codificação segura (DevSecOps)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em teste autorizado no portal de prestação de contas, um técnico do Tribunal, autenticado como gestor do município A, alterou o número na URL /prestacoes/1043/documentos para /prestacoes/1044/documentos e conseguiu visualizar os documentos do município B. Segundo a OWASP Top 10:2025, a categoria da falha e a correção mais adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Durante auditoria em sistema de um jurisdicionado, verificou-se que um servidor autenticado conseguia baixar contracheques de colegas apenas trocando o parâmetro id=5520 por id=5521 na URL. Segundo a OWASP Top 10:2025, a categoria da falha e a correção mais adequada são, respectivamente,",
+        "Considere que, no sistema de protocolo do Tribunal, um usuário externo descobriu que, ao substituir o identificador sequencial do processo no endereço da página, passava a visualizar peças sigilosas de processos de outras partes. Segundo a OWASP Top 10:2025, a categoria da falha e a correção mais adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A05:2025 – Injection; adotar consultas parametrizadas em todos os acessos ao banco de dados em que ficam armazenados os documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não houve injeção de comandos ou consultas: o identificador alterado é um valor legítimo, e a consulta executou normalmente. Consultas parametrizadas previnem injeção, mas não impedem o acesso a registros de terceiros."
+        },
+        {
+          "id": "opt-2",
+          "texto": "A01:2025 – Broken Access Control; ocultar o número da prestação nos links exibidos, codificando-o em Base64 antes do envio ao navegador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A categoria está certa, mas a correção não. Codificar em Base64 é ofuscação reversível, e não controle de acesso: o atacante decodifica, altera e recodifica o valor. A OWASP exige verificação de autorização no servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "A07:2025 – Authentication Failures; exigir autenticação multifator de todos os gestores municipais que acessam o portal de contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O usuário estava legitimamente autenticado como gestor do município A; a falha é de autorização (acesso a objeto alheio), e não de autenticação. A MFA não resolveria o problema."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A02:2025 – Security Misconfiguration; desativar a listagem de diretórios e remover arquivos de backup do servidor web do portal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Listagem de diretórios e arquivos de backup expostos são preocupações citadas pela OWASP, mas não explicam o acesso a documentos de outro município por troca de identificador, que é falha de controle de acesso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A01:2025 – Broken Access Control; verificar no servidor, a cada requisição, se o registro pertence ao usuário, negando por padrão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Trocar o identificador e acessar objeto de outro usuário é a referência direta insegura a objeto (IDOR), exemplo típico da A01:2025 Broken Access Control. A OWASP recomenda controle de acesso aplicado em código confiável no servidor, negação por padrão, verificação de propriedade do registro a cada requisição e registro das falhas de acesso, com alerta quando repetidas.",
+          "versaoInvertidaFalsa": "A01:2025 – Broken Access Control; confiar no menu do navegador, que só exibe os documentos do próprio município, dispensando checagem no servidor."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece a categoria certa com correção errada (ofuscação em Base64) e categorias vizinhas (injeção, autenticação). Trocar ID e ver dado alheio é IDOR, da A01:2025: corrige-se com autorização no servidor, por registro, negando por padrão.",
+      "resumoFlashcard": {
+        "pergunta": "O que é IDOR e como corrigi-lo segundo a OWASP Top 10:2025?",
+        "resposta": "É a referência direta insegura a objeto: o usuário altera um identificador (na URL ou na API) e acessa registro de outra pessoa. É exemplo da A01:2025 Broken Access Control e se corrige verificando no servidor, a cada requisição, se o registro pertence ao usuário, com negação por padrão."
+      },
+      "conceitosChave": ["OWASP Top 10:2025: A01"],
+      "fundamentacao": "OWASP Top 10:2025, A01:2025 Broken Access Control (descrição: insecure direct object references; prevenção: controle no servidor, negar por padrão e impor a propriedade do registro)."
+    },
+    {
+      "id": "seg-info-026",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Segurança em APIs, containers e nuvem",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de desenvolvimento do Tribunal vai publicar em containers a nova versão do sistema de autuação. Na revisão de segurança da configuração, a medida que efetivamente reduz a superfície de ataque, em linha com a NIST SP 800-190 e com as boas práticas da OWASP para Docker, é",
+      "variantesEnunciado": [
+        "Ao revisar o pipeline que gera as imagens de container de um sistema de prestação de contas, o técnico do Tribunal precisou indicar a configuração adequada para o ambiente de produção. A medida que efetivamente reduz a superfície de ataque, em linha com a NIST SP 800-190 e com as boas práticas da OWASP para Docker, é",
+        "Em auditoria da infraestrutura de containers de um jurisdicionado, a equipe do Tribunal avaliou as configurações de execução adotadas pelo órgão. A medida que efetivamente reduz a superfície de ataque, conforme a NIST SP 800-190 e as boas práticas da OWASP para Docker, é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "embutir as credenciais do banco de dados no Dockerfile, para que a imagem já saia pronta para ser executada em qualquer ambiente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Segredos em texto claro embutidos na imagem são risco expressamente apontado pela NIST SP 800-190: qualquer pessoa com acesso à imagem ou ao registro os obtém. Credenciais devem vir de cofre de segredos ou de mecanismo próprio do orquestrador, em tempo de execução."
+        },
+        {
+          "id": "opt-2",
+          "texto": "montar o socket do Docker no container de monitoramento em modo somente leitura, o que torna a API do Docker somente leitura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A OWASP alerta que dar acesso ao socket do Docker equivale a dar acesso de root ao host e que montá-lo como somente leitura não torna a API somente leitura: quem alcança o socket ainda pode criar e alterar containers."
+        },
+        {
+          "id": "opt-3",
+          "texto": "executar o processo com usuário sem privilégios, removendo capacidades desnecessárias do kernel e evitando o modo privilegiado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Executar com usuário sem privilégios é a melhor forma de conter escalada de privilégios; complementam a medida remover capacidades do kernel (--cap-drop all, acrescentando só as necessárias) e não usar --privileged, que concede todas as capacidades. Somam-se imagens mínimas, sistema de arquivos somente leitura e varredura de imagens no CI, como recomendam a NIST SP 800-190 e a OWASP.",
+          "versaoInvertidaFalsa": "executar o processo como root e no modo privilegiado, pois o isolamento do container impede que privilégios elevados dentro dele afetem o host."
+        },
+        {
+          "id": "opt-4",
+          "texto": "usar sempre a tag latest de imagens públicas, que recebem correções automaticamente e dispensam varredura de vulnerabilidades.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tag latest é mutável e torna o build imprevisível, e imagens públicas podem ser não confiáveis ou desatualizadas. A boa prática é usar imagens de fontes confiáveis, com versão fixada e verificada, inclusive por assinatura, e varrê-las no pipeline."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dispensar a atualização do kernel do host, pois cada container possui kernel próprio, isolado do sistema operacional hospedeiro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Containers compartilham o kernel do host: uma vulnerabilidade de escalada no kernel, explorada de dentro de um container, pode dar acesso de root ao hospedeiro. Por isso a OWASP manda manter host e engine sempre atualizados."
+        }
+      ],
+      "pegadinhaFCC": "A banca vende como prática segura o socket do Docker em somente leitura e o kernel isolado por container. Containers compartilham o kernel do host e o socket dá controle do host; o certo é usuário sem privilégios, menos capacidades e nada de --privileged.",
+      "resumoFlashcard": {
+        "pergunta": "Quais práticas reduzem a superfície de ataque de containers?",
+        "resposta": "Executar com usuário sem privilégios, remover capacidades desnecessárias e não usar --privileged; usar imagens mínimas, confiáveis e varridas no CI; não embutir segredos na imagem; não expor o socket do Docker; manter host e engine atualizados, pois o kernel é compartilhado."
+      },
+      "conceitosChave": ["Containers: hardening"],
+      "fundamentacao": "NIST SP 800-190, Application Container Security Guide (2017), riscos e contramedidas de imagem, registro, orquestrador, container e host; OWASP Docker Security Cheat Sheet, regras 0 a 3."
+    },
+    {
+      "id": "seg-info-027",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Gestão de riscos, vulnerabilidades e incidentes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da NIST SP 800-61 Revisão 3, publicada em abril de 2025 como perfil comunitário do Cybersecurity Framework (CSF) 2.0, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao atualizar o plano de resposta a incidentes cibernéticos do Tribunal, a equipe de segurança adotou como referência a NIST SP 800-61 Rev. 3, de abril de 2025, que se apresenta como perfil comunitário do CSF 2.0. Sobre essa publicação, é correto afirmar que",
+        "Em auditoria sobre a gestão de incidentes de segurança de um jurisdicionado, o técnico do Tribunal verificou se o plano do órgão estava alinhado à revisão mais recente da NIST SP 800-61 (Rev. 3, abril de 2025). Acerca dessa revisão, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "mantém como estrutura principal o ciclo de quatro fases da revisão anterior, limitando-se a atualizar os exemplos de ameaças.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ciclo de quatro fases (preparação; detecção e análise; contenção, erradicação e recuperação; atividade pós-incidente) é da Rev. 2, de 2012. A Rev. 3 reorganizou as recomendações em torno das funções do CSF 2.0, embora admita que a organização use o modelo de ciclo de vida que lhe convier."
+        },
+        {
+          "id": "opt-2",
+          "texto": "exclui a função Govern do tratamento de incidentes, por considerá-la atividade da alta administração alheia à resposta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O NIST afirma que as seis funções do CSF 2.0 desempenham papel vital na resposta a incidentes. Govern, ao lado de Identify e Protect, sustenta a preparação, com políticas, papéis e responsabilidades."
+        },
+        {
+          "id": "opt-3",
+          "texto": "trata a preparação como etapa posterior à recuperação, a ser executada somente depois que o incidente estiver encerrado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A preparação é anterior e contínua: Govern, Identify e Protect dão a base para prevenir e responder. As lições aprendidas, tratadas na melhoria contínua, retroalimentam a preparação, mas isso não a desloca para depois da recuperação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aplica-se exclusivamente a órgãos federais norte-americanos, vedada a adoção do modelo por organizações de outros países.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Como o próprio CSF 2.0, a publicação é orientação voluntária, aplicável a organizações de qualquer setor, porte ou país. Nada impede sua adoção por órgãos públicos brasileiros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "substitui a Revisão 2 e organiza as recomendações de resposta a incidentes segundo as seis funções do CSF 2.0.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A NIST SP 800-61 Rev. 3 (03/04/2025) substituiu a Rev. 2, de 2012, e incorpora a resposta a incidentes à gestão de riscos de segurança cibernética por meio das seis funções do CSF 2.0: Govern, Identify, Protect, Detect, Respond e Recover. Govern, Identify e Protect sustentam a preparação; Detect, Respond e Recover concentram a resposta; e a melhoria contínua (categoria Improvement de Identify) retroalimenta o conjunto.",
+          "versaoInvertidaFalsa": "mantém a Revisão 2 em vigor e preserva como estrutura obrigatória o ciclo de quatro fases, sem relação com as funções do CSF 2.0."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta o ciclo de quatro fases da Rev. 2 como se fosse a estrutura da Rev. 3. Desde abril de 2025, a SP 800-61 é perfil do CSF 2.0 e organiza a resposta pelas seis funções, inclusive Govern.",
+      "resumoFlashcard": {
+        "pergunta": "O que mudou na NIST SP 800-61 Rev. 3 (2025)?",
+        "resposta": "Substituiu a Rev. 2 (2012) e passou a ser um perfil comunitário do CSF 2.0: as recomendações se organizam pelas seis funções (Govern, Identify, Protect, Detect, Respond e Recover). A preparação fica com Govern, Identify e Protect; a resposta, com Detect, Respond e Recover; a melhoria contínua, em Identify."
+      },
+      "conceitosChave": ["NIST SP 800-61r3: resposta a incidentes"],
+      "fundamentacao": "NIST SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (abr. 2025); NIST Cybersecurity Framework 2.0 (fev. 2024)."
+    },
+    {
+      "id": "seg-info-028",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Família ABNT NBR ISO/IEC 27000",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Acerca das normas da família ABNT NBR ISO/IEC 27000, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em capacitação sobre gestão da segurança da informação para servidores do Tribunal, o instrutor apresentou o papel de cada norma da família ABNT NBR ISO/IEC 27000. Sobre essas normas, é correto afirmar que",
+        "Ao planejar a implantação de um sistema de gestão de segurança da informação (SGSI) no Tribunal, a equipe precisou distinguir o propósito das principais normas da família ABNT NBR ISO/IEC 27000. A esse respeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a ABNT NBR ISO/IEC 27001 especifica os requisitos de um sistema de gestão de segurança da informação e admite certificação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A ABNT NBR ISO/IEC 27001:2022 especifica os requisitos para estabelecer, implementar, manter e melhorar continuamente um SGSI (cláusulas 4 a 10), inclusive avaliação e tratamento de riscos, e é a norma usada em auditorias de certificação. A 27002 traz orientações sobre controles, a 27005 orienta a gestão de riscos e a 27035 trata da gestão de incidentes.",
+          "versaoInvertidaFalsa": "a ABNT NBR ISO/IEC 27002 especifica os requisitos de um sistema de gestão de segurança da informação e é a norma da família que admite certificação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a ABNT NBR ISO/IEC 27002 é a norma certificável da família, pois relaciona os controles que a organização deve implementar integralmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 27002 é norma de orientação (código de prática) e não é certificável. Além disso, nem a 27001 obriga a implementar todos os controles: a seleção decorre da avaliação de riscos e é justificada na Declaração de Aplicabilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a ABNT NBR ISO/IEC 27005 define o Anexo A de controles e substitui a avaliação de riscos exigida pela ABNT NBR ISO/IEC 27001.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 27005 fornece orientações para a gestão de riscos de segurança da informação, apoiando o cumprimento da 27001; ela não define o Anexo A, que é da 27001, nem substitui a avaliação de riscos, que é requisito da 27001."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a ISO/IEC 27035 trata da continuidade de negócios e fixa, para cada setor, os prazos máximos de recuperação dos serviços críticos de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ISO/IEC 27035 trata da gestão de incidentes de segurança da informação (planejar e preparar, detectar e relatar, avaliar e decidir, responder e aprender lições). Continuidade de negócios é tema da ISO 22301."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a ABNT NBR ISO/IEC 27001 dispensa a avaliação de riscos quando a organização implementa todos os controles de seu Anexo A.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A avaliação de riscos é requisito obrigatório da 27001 (6.1.2 e 8.2), e a exclusão de requisitos das cláusulas 4 a 10 não é aceita para declarar conformidade. Os controles do Anexo A são selecionados a partir dos riscos, e não o contrário."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis das normas: 27001 é a de requisitos e certificável; 27002 orienta controles; 27005 trata de riscos; 27035, de incidentes; ISO 22301, de continuidade. E a avaliação de riscos nunca é dispensada.",
+      "resumoFlashcard": {
+        "pergunta": "Qual o papel das normas 27001, 27002, 27005 e 27035?",
+        "resposta": "A 27001 especifica os requisitos do SGSI e é certificável; a 27002 orienta a implementação dos controles; a 27005 orienta a gestão de riscos de segurança da informação; a 27035 trata da gestão de incidentes."
+      },
+      "conceitosChave": ["Família ISO/IEC 27000"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27001:2022, cláusulas 1, 4 a 10, 6.1.2 e 8.2; ABNT NBR ISO/IEC 27002:2022, introdução; ISO/IEC 27005:2022; ISO/IEC 27035-1:2023."
+    },
+    {
+      "id": "seg-info-029",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Classificação da informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao elaborar a norma interna de classificação da informação, a equipe do Tribunal consultou a Lei nº 12.527/2011 (LAI). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em auditoria sobre a política de transparência de um jurisdicionado, o técnico do Tribunal comparou os procedimentos de classificação de documentos com as regras da Lei nº 12.527/2011 (LAI). Considere as afirmativas abaixo.",
+        "Durante curso interno sobre tratamento de informações sigilosas e pessoais no Tribunal, foram apresentadas afirmações acerca da Lei nº 12.527/2011 (LAI). Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A LAI submete ao seu regime os órgãos da administração direta dos Poderes, incluindo expressamente as Cortes de Contas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 1º, parágrafo único, I, menciona os órgãos da administração direta dos Poderes Executivo, Legislativo, incluindo as Cortes de Contas, e Judiciário e do Ministério Público."
+        },
+        {
+          "texto": "Transcorrido o prazo de classificação ou consumado o evento que defina seu termo final, a informação torna-se, automaticamente, de acesso público.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 24, § 4º: o acesso público é automático, sem necessidade de ato de desclassificação."
+        },
+        {
+          "texto": "As informações pessoais relativas à intimidade, à vida privada, à honra e à imagem só têm acesso restrito se forem classificadas como ultrassecretas, caso em que o prazo máximo é de 100 anos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pelo art. 31, § 1º, I, essas informações têm acesso restrito independentemente de classificação de sigilo, pelo prazo máximo de 100 anos contados da produção."
+        },
+        {
+          "texto": "Em vez dos prazos máximos, pode-se estabelecer como termo final da restrição a ocorrência de determinado evento, desde que este ocorra antes do transcurso do prazo máximo de classificação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a alternativa prevista no art. 24, § 3º, da LAI."
+        },
+        {
+          "texto": "O prazo de restrição da informação classificada como reservada é de 15 anos, contados da data em que a autoridade competente formaliza a classificação.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A informação reservada tem prazo máximo de 5 anos, e a contagem começa na data de produção da informação (art. 24, § 1º)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa: pelo art. 31, § 1º, I, as informações pessoais relativas à intimidade, à vida privada, à honra e à imagem têm acesso restrito independentemente de classificação de sigilo, pelo prazo máximo de 100 anos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exclui a I, verdadeira (art. 1º, parágrafo único, I), e inclui a V, falsa: a informação reservada tem prazo máximo de 5 anos, e a contagem começa na data de produção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III e a V são falsas, e ficam de fora a II e a IV, que reproduzem os §§ 4º e 3º do art. 24 da LAI."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV estão corretas, mas a II também está: vencido o prazo ou ocorrido o evento, o acesso torna-se público automaticamente, sem ato de desclassificação (art. 24, § 4º)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: o art. 1º, parágrafo único, I, da LAI inclui expressamente as Cortes de Contas. II: art. 24, § 4º, acesso público automático ao fim do prazo ou com o evento. IV: art. 24, § 3º, termo final por evento anterior ao prazo máximo. A III é falsa porque a restrição das informações pessoais independe de classificação (art. 31), e a V erra o prazo da reservada (5 anos) e o termo inicial (produção).",
+          "versaoInvertidaFalsa": "Transcorrido o prazo de classificação, a informação permanece sigilosa até que a autoridade classificadora publique ato formal de desclassificação."
+        }
+      ],
+      "pegadinhaFCC": "A banca condiciona a proteção das informações pessoais à classificação (ela independe dela) e altera o prazo e o termo inicial da reservada. Lembre: as Cortes de Contas estão sob a LAI, e o acesso público é automático ao fim do prazo.",
+      "resumoFlashcard": {
+        "pergunta": "Como a LAI trata o fim do sigilo e as informações pessoais?",
+        "resposta": "Vencido o prazo de classificação (25, 15 ou 5 anos, contados da produção) ou ocorrido o evento definido como termo final, a informação torna-se automaticamente pública. Já as informações pessoais sobre intimidade, vida privada, honra e imagem têm acesso restrito independentemente de classificação, por até 100 anos."
+      },
+      "conceitosChave": ["LAI: classificação da informação"],
+      "fundamentacao": "Lei nº 12.527/2011 (LAI), art. 1º, parágrafo único, I; art. 24, §§ 1º, 3º e 4º; art. 31, § 1º, I."
+    },
+    {
+      "id": "seg-info-030",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Testes de invasão e análise de vulnerabilidades",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal pretende contratar serviços de análise de vulnerabilidades e de teste de invasão para seus sistemas expostos à internet. Ao elaborar o termo de referência, a equipe de TI registrou os seguintes entendimentos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na fase de planejamento da contratação de serviços de avaliação técnica de segurança para o Tribunal, a comissão consolidou entendimentos sobre varredura de vulnerabilidades e teste de invasão. Considere as afirmativas abaixo.",
+        "Em auditoria sobre os testes de segurança contratados por um jurisdicionado, o técnico do Tribunal verificou se o órgão compreendia as diferenças entre análise de vulnerabilidades e teste de invasão. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A varredura de vulnerabilidades identifica, de forma predominantemente automatizada, falhas conhecidas e configurações inseguras, pode gerar falsos positivos e, em regra, não explora as falhas encontradas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A varredura compara versões e configurações com bases de falhas conhecidas; por isso pode errar e, em regra, não confirma a exploração."
+        },
+        {
+          "texto": "O teste de invasão busca explorar as vulnerabilidades de forma controlada para comprovar o impacto real e validar os achados, dentro do escopo e das regras de engajamento autorizados.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O pentest valida os achados demonstrando o que um atacante conseguiria, sempre nos limites formalmente autorizados."
+        },
+        {
+          "texto": "Segundo a NIST SP 800-115, a metodologia de teste de invasão compreende as fases de planejamento, descoberta, ataque e relatório.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. São as quatro fases da metodologia descrita na NIST SP 800-115; o planejamento fixa regras, escopo e aprovação."
+        },
+        {
+          "texto": "No teste de caixa-cinza, o testador dispõe de conhecimento parcial do ambiente, como credenciais de usuário comum ou parte da documentação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A caixa-cinza fica entre a preta (sem conhecimento prévio) e a branca (conhecimento amplo, como código-fonte e arquitetura)."
+        },
+        {
+          "texto": "Por ser serviço contratado formalmente, o teste de invasão dispensa autorização escrita específica e definição prévia dos sistemas fora do escopo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O contrato não substitui a autorização escrita do teste nem as regras de engajamento, que delimitam escopo, exclusões, janelas e contatos."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que é falsa: o teste de invasão exige autorização formal e específica, com escopo, sistemas excluídos, janelas e contatos definidos nas regras de engajamento. E deixa de fora a III e a IV, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I e a II distinguem corretamente os serviços: a varredura identifica falhas conhecidas de modo automatizado, sem explorá-las, e o pentest explora de forma controlada para comprovar impacto. A III reproduz as quatro fases da NIST SP 800-115 (planejamento, descoberta, ataque e relatório), e a IV define a caixa-cinza. A V é falsa: sem autorização escrita e escopo delimitado o teste não pode começar, e é no planejamento que se fixam as regras de engajamento.",
+          "versaoInvertidaFalsa": "O teste de invasão limita-se a listar vulnerabilidades por varredura automatizada, sem tentar explorá-las, motivo pelo qual não exige regras de engajamento nem autorização específica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exclui a I, verdadeira, e inclui a V, falsa. O contrato não substitui a autorização específica do teste nem a definição prévia do que está fora do escopo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III, IV e V.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nem todas estão corretas: a V contraria a NIST SP 800-115, que coloca a aprovação formal, o escopo e as regras de engajamento na fase de planejamento, antes de qualquer teste."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a III são verdadeiras, mas a I e a IV também, e ficaram de fora. A varredura de vulnerabilidades e o teste de caixa-cinza estão corretamente descritos."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que o contrato dispensa autorização específica e mistura varredura com pentest. Varredura identifica sem explorar; pentest explora de forma controlada; e nada começa sem autorização escrita, escopo e regras de engajamento.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre varredura de vulnerabilidades e teste de invasão?",
+        "resposta": "A varredura é predominantemente automatizada, identifica falhas conhecidas e configurações fracas, pode ter falsos positivos e, em regra, não explora. O pentest tenta explorar as falhas de forma controlada para comprovar impacto, sempre com autorização escrita, escopo e regras de engajamento."
+      },
+      "conceitosChave": ["Pentest × varredura de vulnerabilidades", "Pentest: caixa preta/cinza/branca"],
+      "fundamentacao": "NIST SP 800-115, Technical Guide to Information Security Testing and Assessment (2008), metodologia de teste de invasão em quatro fases e planejamento com regras de engajamento."
+    }
+  ]
+}

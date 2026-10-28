@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "governanca-ti",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "gov-ti-021",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na revisão do serviço de atendimento ao jurisdicionado, um analista do Tribunal identificou três fragilidades: (1) o contrato com a empresa que mantém a plataforma de chat não prevê níveis de serviço nem responsabilidades em caso de falha; (2) não está definido quem, na estrutura do Tribunal, aprova as respostas padronizadas enviadas aos usuários; (3) as etapas de triagem, encaminhamento e encerramento dos atendimentos não estão documentadas nem coordenadas entre as unidades. Segundo as quatro dimensões do gerenciamento de serviços do ITIL 4, essas fragilidades referem-se, respectivamente, às dimensões",
+      "variantesEnunciado": [
+        "Ao avaliar o serviço de emissão de certidões de um jurisdicionado, a equipe constatou: (1) o acordo com o provedor de nuvem que hospeda o sistema não define responsabilidades de suporte; (2) não há definição de papéis e responsabilidades para aprovar alterações no conteúdo do portal; (3) o fluxo de atividades entre o pedido e a entrega da certidão não está mapeado. Segundo as quatro dimensões do gerenciamento de serviços do ITIL 4, essas fragilidades referem-se, respectivamente, às dimensões",
+        "Considere que, no serviço de ouvidoria digital de uma secretaria estadual, foram encontradas: (1) contratação da empresa de atendimento sem cláusulas de desempenho; (2) ausência de definição de quem responde pelas respostas oficiais ao cidadão; (3) inexistência de fluxo documentado das etapas que levam da manifestação à resposta. Segundo as quatro dimensões do gerenciamento de serviços do ITIL 4, essas fragilidades referem-se, respectivamente, às dimensões"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "parceiros e fornecedores; organizações e pessoas; fluxos de valor e processos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As quatro dimensões do ITIL 4 são organizações e pessoas; informação e tecnologia; parceiros e fornecedores; e fluxos de valor e processos. Contratos e acordos com terceiros, com níveis de serviço e responsabilidades, pertencem a parceiros e fornecedores. Papéis, responsabilidades e estrutura de autoridade pertencem a organizações e pessoas. A sequência de atividades e a coordenação entre unidades para gerar valor pertencem a fluxos de valor e processos.",
+          "versaoInvertidaFalsa": "informação e tecnologia; fluxos de valor e processos; organizações e pessoas, pois contratos são tratados como ativos de informação e papéis decisórios como processos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "informação e tecnologia; organizações e pessoas; fluxos de valor e processos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Erra a primeira: a plataforma de chat é tecnologia, mas a fragilidade apontada está no contrato com a empresa (níveis de serviço e responsabilidades), o que é objeto da dimensão parceiros e fornecedores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "parceiros e fornecedores; fluxos de valor e processos; organizações e pessoas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas últimas. Definir quem aprova as respostas é questão de papéis e responsabilidades (organizações e pessoas), e a falta de etapas documentadas e coordenadas é questão de fluxos de valor e processos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "organizações e pessoas; parceiros e fornecedores; informação e tecnologia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhuma correspondência está certa. A dimensão organizações e pessoas trata de estruturas, papéis, cultura e competências, e não de contratos com fornecedores. Informação e tecnologia trata de dados, conhecimento e tecnologias, e não do encadeamento das atividades."
+        },
+        {
+          "id": "opt-5",
+          "texto": "parceiros e fornecedores; informação e tecnologia; fatores externos (PESTLE).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fatores externos (políticos, econômicos, sociais, tecnológicos, legais e ambientais) influenciam as quatro dimensões, mas não são uma dimensão. A falta de definição de quem aprova as respostas é questão de organizações e pessoas, não de informação e tecnologia."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa elementos tecnológicos para atrair a dimensão informação e tecnologia, quando o problema está no contrato (parceiros e fornecedores), e apresenta os fatores PESTLE como se fossem uma quinta dimensão.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as quatro dimensões do gerenciamento de serviços no ITIL 4?",
+        "resposta": "Organizações e pessoas; informação e tecnologia; parceiros e fornecedores; e fluxos de valor e processos. Elas se aplicam a todo o sistema de valor de serviço e sofrem influência de fatores externos (PESTLE)."
+      },
+      "conceitosChave": ["ITIL 4: quatro dimensões"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 3 (The four dimensions of service management), seções sobre cada dimensão e sobre os fatores externos (PESTLE)."
+    },
+    {
+      "id": "gov-ti-022",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No ITIL 4, a prática de gerenciamento do catálogo de serviços tem como propósito",
+      "variantesEnunciado": [
+        "A central de serviços de TI do Tribunal pretende publicar, na intranet, o catálogo dos serviços disponíveis aos servidores. Segundo o ITIL 4, o propósito da prática de gerenciamento do catálogo de serviços é",
+        "Em diagnóstico de gerenciamento de serviços de um jurisdicionado, constatou-se que cada unidade descreve de forma diferente os serviços de TI ofertados. Segundo o ITIL 4, a prática que trata dessa situação, o gerenciamento do catálogo de serviços, tem como propósito"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "registrar todos os serviços em planejamento, em operação e já desativados, para apoiar as decisões de investimento da organização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa descrição corresponde ao portfólio de serviços na abordagem do ITIL v3 (funil de serviços, catálogo e serviços desativados), voltado a decisões de investimento. No ITIL 4, decisões sobre o mix de programas, projetos, produtos e serviços cabem à prática de gerenciamento de portfólio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "estabelecer metas de nível de serviço baseadas no negócio e assegurar que a entrega seja avaliada, monitorada e gerenciada em relação a elas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse é o propósito do gerenciamento de nível de serviço, que define metas claras e acompanha a entrega em relação a elas. O catálogo pode informar os níveis acordados, mas não é a prática que os estabelece."
+        },
+        {
+          "id": "opt-3",
+          "texto": "manter informações precisas sobre a configuração dos serviços e dos itens que os sustentam, incluindo os relacionamentos entre eles.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse é o propósito do gerenciamento de configuração de serviço, que mantém os registros de itens de configuração e de seus relacionamentos (por exemplo, em uma CMDB). O catálogo descreve os serviços e as ofertas ao público, e não a configuração técnica."
+        },
+        {
+          "id": "opt-4",
+          "texto": "capturar a demanda por resolução de incidentes e por requisições de serviço, atuando como ponto único de contato com todos os usuários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse é o propósito da central de serviços (service desk), ponto de entrada e de contato único do provedor com os usuários. A central usa o catálogo, mas não é a prática que o mantém."
+        },
+        {
+          "id": "opt-5",
+          "texto": "fornecer fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e assegurar que esteja disponível ao público pertinente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o ITIL 4, o gerenciamento do catálogo de serviços fornece uma fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e garante que ela esteja disponível para o público pertinente. O catálogo pode ter visões diferentes para usuários, clientes e equipes técnicas, e costuma servir de base para as requisições de serviço.",
+          "versaoInvertidaFalsa": "manter registro de todos os serviços planejados, ativos e desativados, com seus custos e dependências técnicas, para orientar as decisões de investimento da organização."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores são os propósitos das práticas vizinhas: portfólio (investimento), nível de serviço (metas), configuração (itens e relacionamentos) e central de serviços (ponto único de contato). Também aparece o portfólio de serviços do ITIL v3 como se fosse o catálogo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o propósito da prática de gerenciamento do catálogo de serviços no ITIL 4?",
+        "resposta": "Fornecer uma fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e garantir que ela esteja disponível ao público pertinente, com visões adequadas a cada público."
+      },
+      "conceitosChave": ["Gestão de serviços: catálogo de serviços", "ITIL 4 × ITIL v3"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, propósitos das práticas de gerenciamento do catálogo de serviços, de nível de serviço, de configuração de serviço, de central de serviços e de portfólio."
+    },
+    {
+      "id": "gov-ti-023",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na contratação de serviços especiais de tecnologia da informação para desenvolvimento e sustentação do sistema de controle externo, o estudo técnico preliminar demonstrou que a qualidade técnica das propostas que superarem os requisitos mínimos é relevante para os fins pretendidos. A minuta do edital adotou o critério de julgamento por técnica e preço, com peso de 80% para a proposta técnica e de 20% para a proposta de preço. À luz da Lei 14.133/2021, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um jurisdicionado pretende contratar bens e serviços especiais de TIC para sua plataforma de dados. O ETP demonstrou que avaliar e ponderar a qualidade técnica das propostas acima dos requisitos mínimos é relevante, e a minuta de edital fixou técnica e preço com valoração de 80% para a técnica e 20% para o preço. À luz da Lei 14.133/2021, é correto afirmar que",
+        "Ao analisar edital de serviços especiais de TIC de uma secretaria estadual, a equipe do Tribunal verificou que o ETP justificou a relevância da qualidade técnica das propostas e que foi adotado o critério de técnica e preço, com 80% de peso para a técnica e 20% para o preço. À luz da Lei 14.133/2021, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o critério é admitido para bens e serviços especiais de TIC, mas a ponderação é irregular, pois a proposta técnica pode ter, no máximo, 70% de valoração.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 36, § 1º, III, da Lei 14.133/2021 admite técnica e preço para bens e serviços especiais de tecnologia da informação e de comunicação, quando o ETP demonstrar que a qualidade técnica acima dos requisitos mínimos é relevante. O § 2º limita a valoração da proposta técnica a 70%. O peso de 80% torna a ponderação irregular, embora o critério em si seja cabível.",
+          "versaoInvertidaFalsa": "o critério e a ponderação são regulares, pois, para bens e serviços especiais de TIC, a lei admite que a proposta técnica tenha até 80% de valoração."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o critério é irregular, pois serviços de TIC devem ser contratados por pregão, com julgamento por menor preço, em qualquer hipótese.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pregão é obrigatório para bens e serviços comuns. Serviços especiais de TIC, cuja qualidade técnica é relevante e não se define por especificações usuais de mercado, admitem técnica e preço (art. 36, § 1º, III). A expressão 'em qualquer hipótese' denuncia a generalização indevida."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o critério e a ponderação são regulares, pois a lei permite qualquer peso para a proposta técnica, desde que a escolha esteja justificada no ETP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A justificativa no ETP é condição para escolher o critério, mas não afasta o limite legal: a proposta técnica pode ter, no máximo, 70% de valoração (art. 36, § 2º)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o critério é regular, mas a ponderação é irregular, porque, em técnica e preço, os pesos das propostas técnica e de preço devem ser sempre iguais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei não exige pesos iguais, apenas fixa o teto de 70% para a proposta técnica. Pesos como 60/40 ou 70/30 são admitidos se previstos no edital e justificados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o critério só seria admitido se o objeto fosse obra ou serviço especial de engenharia, única hipótese legal de julgamento por técnica e preço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Obras e serviços especiais de engenharia são apenas uma das hipóteses do art. 36, § 1º. A lei inclui também serviços técnicos especializados de natureza predominantemente intelectual, serviços dependentes de tecnologia sofisticada e de domínio restrito e bens e serviços especiais de TIC, entre outras."
+        }
+      ],
+      "pegadinhaFCC": "A questão tem dois objetos: o cabimento do critério (sim, para bens e serviços especiais de TIC, com ETP que demonstre a relevância técnica) e o limite de ponderação (técnica com no máximo 70%). A banca generaliza o pregão para toda a TIC e omite o teto.",
+      "resumoFlashcard": {
+        "pergunta": "Quando cabe o critério de técnica e preço em TIC e qual é o limite de peso da proposta técnica na Lei 14.133/2021?",
+        "resposta": "Cabe, entre outras hipóteses, para bens e serviços especiais de TIC, quando o ETP demonstrar que a qualidade técnica acima dos requisitos mínimos é relevante (art. 36, § 1º, III). A proposta técnica pode ter, no máximo, 70% de valoração (art. 36, § 2º)."
+      },
+      "conceitosChave": ["Lei 14.133: critérios de julgamento", "Contratações de TIC: técnica e preço"],
+      "fundamentacao": "Lei 14.133/2021, art. 33, IV, e art. 36, caput e §§ 1º (incisos I a V) e 2º; art. 6º, XIII e XLI, e art. 29 (pregão para bens e serviços comuns)."
+    },
+    {
+      "id": "gov-ti-024",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ISO/IEC 38500:2024",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o órgão de governança de um tribunal de contas, antes de decidir sobre a adoção de serviços de nuvem para seus sistemas, promove consultas a jurisdicionados, servidores, órgãos de controle e fornecedores para conhecer expectativas e preocupações. Só depois examina as alternativas, define as políticas que a gestão deverá seguir e acompanha os resultados. Segundo a ISO/IEC 38500:2024, a atividade de consulta descrita corresponde a",
+      "variantesEnunciado": [
+        "Um conselho de administração de empresa estatal estadual, antes de aprovar a estratégia de uso de inteligência artificial, ouviu clientes, empregados, órgãos reguladores e parceiros para compreender suas expectativas. Em seguida, avaliou as opções, dirigiu a gestão por meio de políticas e passou a monitorar os resultados. Segundo a ISO/IEC 38500:2024, a atividade de oitiva descrita corresponde a",
+        "Antes de definir a política de dados abertos, o órgão de governança de uma autarquia promoveu audiências com a sociedade civil, servidores e usuários dos serviços para identificar necessidades e preocupações; depois, avaliou alternativas, dirigiu e monitorou. Segundo a ISO/IEC 38500:2024, a etapa das audiências corresponde a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "avaliar, primeira etapa do modelo avaliar-dirigir-monitorar, que continua sendo o único modelo previsto na norma.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A edição de 2024 atualizou o modelo para incluir 'engajar as partes interessadas', ao lado de avaliar, dirigir e monitorar. A consulta para conhecer expectativas é o engajamento. A avaliação vem depois, quando o órgão examina as alternativas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "dirigir, pois cabe ao órgão de governança atribuir responsabilidades à gestão por meio de políticas e planos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dirigir é atribuir responsabilidades e orientar a gestão por meio de políticas e planos, o que no caso ocorre depois da consulta. Ouvir as partes interessadas é outra atividade do modelo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "engajar as partes interessadas, elemento incluído no modelo de governança de TI pela edição de 2024.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A ISO/IEC 38500:2024 atualizou o modelo de governança de TI para incluir o engajamento das partes interessadas, em alinhamento com a ISO 37000, ao lado de avaliar, dirigir e monitorar. Consultar jurisdicionados, servidores, órgãos de controle e fornecedores para conhecer expectativas e preocupações é engajá-los. Depois vêm a avaliação das alternativas, a direção por políticas e o monitoramento dos resultados.",
+          "versaoInvertidaFalsa": "monitorar, pois a ISO/IEC 38500:2024 manteve apenas o modelo avaliar-dirigir-monitorar e trata a consulta às partes interessadas como forma de monitoramento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "monitorar, porque a consulta às partes interessadas é a forma de acompanhar a conformidade das políticas já definidas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Monitorar é acompanhar o desempenho e a conformidade em relação às políticas e aos planos, o que pressupõe direção já definida. No caso, a consulta antecede a decisão, e o acompanhamento dos resultados só ocorre no fim."
+        },
+        {
+          "id": "opt-5",
+          "texto": "gerenciar a demanda, atividade de gestão que a norma delega integralmente aos gestores executivos de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A atividade descrita é exercida pelo próprio órgão de governança, e não pelos gestores. Gerenciar a demanda é atividade de gestão, que não corresponde a nenhum elemento do modelo de governança da norma."
+        }
+      ],
+      "pegadinhaFCC": "A banca aposta que o candidato conhece apenas o modelo avaliar-dirigir-monitorar da edição de 2015 e encaixa a consulta em 'avaliar' ou 'monitorar'. A edição de 2024 incluiu expressamente o engajamento das partes interessadas no modelo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais elementos compõem o modelo de governança de TI da ISO/IEC 38500:2024?",
+        "resposta": "Engajar as partes interessadas, avaliar, dirigir e monitorar. O engajamento foi incluído na edição de 2024, em alinhamento com a ISO 37000. A edição de 2015 trazia apenas avaliar, dirigir e monitorar."
+      },
+      "conceitosChave": ["ISO/IEC 38500:2024", "ISO/IEC 38500: modelo de governança"],
+      "fundamentacao": "ISO/IEC 38500:2024, Foreword (inclusão de 'engage stakeholders' no modelo) e seção do modelo para a governança de TI (engajar as partes interessadas, avaliar, dirigir e monitorar); ISO 37000:2021 (princípio do engajamento das partes interessadas); ISO/IEC 38500:2015 (modelo avaliar-dirigir-monitorar)."
+    },
+    {
+      "id": "gov-ti-025",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Lei do Governo Digital (Lei 14.129/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "A Lei 14.129/2021 define …… como a infraestrutura tecnológica que facilita o uso de dados de acesso público e promove a interação entre diversos agentes, de forma segura, eficiente e responsável, para estímulo à inovação, à exploração de atividade econômica e à prestação de serviços à população, e define …… como o acesso pelo cidadão a serviço público prestado por meio digital, sem necessidade de mediação humana. Já o espaço aberto à participação e à colaboração da sociedade para o desenvolvimento de ideias, ferramentas e métodos inovadores para a gestão pública é denominado …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em capacitação sobre a Lei do Governo Digital, o instrutor explicou que a lei chama de …… a infraestrutura tecnológica que facilita o uso de dados de acesso público e a interação segura entre diversos agentes para estimular inovação e serviços; chama de …… o acesso do cidadão a serviço público digital sem mediação humana; e chama de …… o espaço aberto à colaboração da sociedade para desenvolver ideias, ferramentas e métodos inovadores para a gestão pública. Preenchem, correta e respectivamente, as lacunas:",
+        "Segundo as definições da Lei 14.129/2021, corresponde a …… a infraestrutura tecnológica que facilita o uso de dados de acesso público e promove a interação entre agentes para inovação e prestação de serviços; corresponde a …… o acesso a serviço público digital sem mediação humana; e corresponde a …… o espaço aberto à participação da sociedade para criar métodos inovadores de gestão pública. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "plataforma de governo digital − autosserviço − laboratório de inovação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Plataformas de governo digital são, pela lei, as ferramentas digitais e os serviços comuns aos órgãos, normalmente ofertados de forma centralizada e compartilhada, necessários à oferta digital de serviços (art. 4º, VIII). A infraestrutura que facilita o uso de dados de acesso público e a interação entre agentes é o governo como plataforma."
+        },
+        {
+          "id": "opt-2",
+          "texto": "governo como plataforma − autosserviço − laboratório de inovação",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 4º da Lei 14.129/2021 define governo como plataforma (inciso VI) como a infraestrutura tecnológica que facilita o uso de dados de acesso público e promove a interação entre diversos agentes. Define autosserviço (inciso I) como o acesso do cidadão a serviço público digital sem mediação humana. E define laboratório de inovação (inciso VII) como o espaço aberto à participação e à colaboração da sociedade para desenvolver ideias, ferramentas e métodos inovadores para a gestão pública, a prestação de serviços e o controle social.",
+          "versaoInvertidaFalsa": "A Lei 14.129/2021 chama de plataforma de governo digital a infraestrutura que facilita o uso de dados de acesso público, de atendimento remoto o acesso sem mediação humana e de rede de conhecimento o espaço aberto à colaboração da sociedade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "governo como plataforma − atendimento remoto − registro de referência",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei usa o termo autosserviço para o acesso digital sem mediação humana. Registros de referência são informações íntegras e precisas, de uma ou mais fontes de dados, sobre elementos fundamentais para a prestação de serviços e a gestão de políticas públicas (art. 4º, IX), e não um espaço de colaboração."
+        },
+        {
+          "id": "opt-4",
+          "texto": "base nacional de serviços públicos − transparência ativa − laboratório de inovação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Base Nacional de Serviços Públicos é a base de dados com informações sobre a oferta de serviços públicos de todos os prestadores (art. 4º, II). Transparência ativa é a disponibilização de dados independentemente de solicitação (art. 4º, X). Nenhuma das duas corresponde às definições das duas primeiras lacunas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "governo como plataforma − autosserviço − rede de conhecimento",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão corretas, mas o espaço aberto à participação e à colaboração da sociedade para inovar na gestão pública é o laboratório de inovação (art. 4º, VII). Redes de conhecimento, citadas na legislação de governo digital como meio de compartilhar experiências entre gestores, não correspondem a essa definição."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca 'governo como plataforma' por 'plataforma de governo digital', que são conceitos distintos na mesma lei, e oferece outros termos definidos no art. 4º (registros de referência, transparência ativa, Base Nacional de Serviços Públicos) para confundir.",
+      "resumoFlashcard": {
+        "pergunta": "Na Lei 14.129/2021, qual é a diferença entre governo como plataforma e plataformas de governo digital?",
+        "resposta": "Governo como plataforma é a infraestrutura tecnológica que facilita o uso de dados de acesso público e a interação entre agentes para inovação e serviços (art. 4º, VI). Plataformas de governo digital são as ferramentas e os serviços comuns, em regra centralizados e compartilhados, necessários à oferta digital de serviços (art. 4º, VIII)."
+      },
+      "conceitosChave": ["Lei 14.129: definições", "Lei 14.129: governo como plataforma"],
+      "fundamentacao": "Lei 14.129/2021, art. 4º, I (autosserviço), II (Base Nacional de Serviços Públicos), VI (governo como plataforma), VII (laboratório de inovação), VIII (plataformas de governo digital), IX (registros de referência) e X (transparência ativa)."
+    },
+    {
+      "id": "gov-ti-026",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma equipe de auditoria de TI do Tribunal monta a matriz de planejamento de uma fiscalização com base no modelo principal (core model) do COBIT 2019. Para dimensionar o escopo, o coordenador pediu um resumo da estrutura de objetivos de governança e gestão. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao preparar treinamento sobre COBIT 2019 para auditores de um jurisdicionado, um técnico elaborou um resumo da estrutura dos objetivos de governança e gestão do modelo principal. Considere as afirmativas abaixo.",
+        "Em nota técnica que compara o COBIT 2019 com o COBIT 5, um técnico descreveu a estrutura dos objetivos de governança e gestão do modelo principal. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O modelo principal reúne 40 objetivos de governança e gestão, distribuídos em cinco domínios: um de governança (EDM) e quatro de gestão (APO, BAI, DSS e MEA).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. São 40 objetivos: EDM com 5, APO com 14, BAI com 11, DSS com 6 e MEA com 4. EDM é o único domínio de governança."
+        },
+        {
+          "texto": "Em relação ao COBIT 5, foram incluídos objetivos como APO14 (Dados gerenciados), BAI11 (Projetos gerenciados) e MEA04 (Garantia gerenciada).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O COBIT 5 tinha 37 processos. O COBIT 2019 acrescentou APO14 (Managed Data), BAI11 (Managed Projects), que separou projetos de programas (BAI01), e MEA04 (Managed Assurance), chegando a 40."
+        },
+        {
+          "texto": "O domínio DSS concentra a maior quantidade de objetivos, pois abrange a entrega, o serviço, o suporte e a segurança de toda a operação de I&T.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O domínio com mais objetivos é o APO (Alinhar, Planejar e Organizar), com 14. O DSS (Entregar, Servir e Dar Suporte) tem 6 objetivos, de DSS01 a DSS06."
+        },
+        {
+          "texto": "Cada objetivo de governança ou gestão relaciona-se a um processo e a um conjunto de componentes associados, como estruturas organizacionais e fluxos de informação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No COBIT 2019, cada objetivo está sempre ligado a um processo, de nome idêntico ou semelhante, e a componentes de outros tipos que ajudam a alcançá-lo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o domínio com mais objetivos é o APO, com 14. A combinação também deixa de fora as afirmativas II e IV, ambas verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa, e as afirmativas I e IV, verdadeiras, ficaram de fora. A pegadinha é supor que o domínio operacional (DSS) seja o mais extenso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o DSS tem 6 objetivos, e o APO, com 14, é o domínio mais extenso do COBIT 2019."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O modelo principal do COBIT 2019 tem 40 objetivos em cinco domínios (EDM 5, APO 14, BAI 11, DSS 6, MEA 4). Incluiu APO14, BAI11 e MEA04 em relação aos 37 processos do COBIT 5, e cada objetivo se relaciona a um processo e a componentes associados. A afirmativa III é falsa, porque o domínio mais extenso é o APO.",
+          "versaoInvertidaFalsa": "O modelo principal do COBIT 2019 mantém os 37 processos do COBIT 5, distribuídos em cinco domínios, sem acréscimo de novos objetivos de governança ou gestão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa (o APO, com 14 objetivos, é o domínio mais extenso), e omite a II, verdadeira: APO14, BAI11 e MEA04 foram acrescentados em relação aos 37 processos do COBIT 5."
+        }
+      ],
+      "pegadinhaFCC": "A banca cobra números: 40 objetivos (não os 37 processos do COBIT 5), 5 domínios e o APO como domínio mais extenso (14). A afirmativa falsa aposta na intuição de que a operação (DSS) teria mais objetivos.",
+      "resumoFlashcard": {
+        "pergunta": "Como se distribuem os 40 objetivos de governança e gestão do COBIT 2019?",
+        "resposta": "EDM 5, APO 14, BAI 11, DSS 6 e MEA 4. Em relação aos 37 processos do COBIT 5, entraram APO14 (Dados), BAI11 (Projetos) e MEA04 (Garantia)."
+      },
+      "conceitosChave": ["COBIT 2019: domínios e objetivos", "COBIT 2019 × COBIT 5"],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Governance and Management Objectives (lista dos 40 objetivos por domínio); COBIT 2019 Framework: Introduction and Methodology, cap. 4 (modelo principal e relação entre objetivo, processo e componentes); ISACA, artigo 'COBIT 2019 and COBIT 5 Comparison' (2020)."
+    },
+    {
+      "id": "gov-ti-027",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Métodos ágeis em projetos de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de sustentação de sistemas do Tribunal usa Kanban. Nas últimas semanas, com fluxo estável, o quadro manteve em média 30 itens em andamento (WIP) e a equipe concluiu em média 10 itens por semana (vazão). A coordenação quer reduzir o tempo médio de ciclo para 2 semanas, mantendo a vazão. Pela Lei de Little, o tempo médio de ciclo atual e o WIP médio compatível com a meta são, respectivamente,",
+      "variantesEnunciado": [
+        "Uma central de desenvolvimento de um jurisdicionado gerencia demandas com Kanban. Em regime estável, há em média 30 demandas em andamento e são entregues em média 10 demandas por semana. A gerência deseja que cada demanda leve, em média, 2 semanas do início à conclusão, sem alterar a vazão. Segundo a Lei de Little, o tempo médio de ciclo atual e o WIP médio compatível com a meta são, respectivamente,",
+        "Considere um fluxo Kanban estável com WIP médio de 30 itens e vazão média de 10 itens concluídos por semana. Para que o tempo médio de ciclo caia para 2 semanas, mantida a vazão, a equipe pretende ajustar o limite de WIP. Pela Lei de Little, o tempo médio de ciclo atual e o WIP médio compatível com a meta são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "3 semanas e 20 itens.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei de Little, válida para fluxos estáveis, estabelece que tempo médio de ciclo = WIP médio ÷ vazão média. Atualmente: 30 ÷ 10 = 3 semanas. Para tempo de ciclo de 2 semanas com vazão de 10 itens por semana: WIP = 2 × 10 = 20 itens. Limitar o WIP reduz o tempo de ciclo sem exigir aumento de capacidade, um dos fundamentos do Kanban.",
+          "versaoInvertidaFalsa": "3 semanas e 40 itens, porque, pela Lei de Little, reduzir o tempo médio de ciclo exige aumentar o número de itens em andamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "3 semanas e 5 itens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tempo atual está certo (30 ÷ 10 = 3), mas o WIP da meta foi calculado como vazão ÷ tempo de ciclo (10 ÷ 2 = 5). O correto é WIP = tempo de ciclo × vazão = 2 × 10 = 20 itens."
+        },
+        {
+          "id": "opt-3",
+          "texto": "0,33 semana e 20 itens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverteu a razão no cálculo do tempo atual (10 ÷ 30 ≈ 0,33). O tempo de ciclo é WIP ÷ vazão = 30 ÷ 10 = 3 semanas. O WIP da meta (20 itens) está certo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "2 semanas e 30 itens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Confunde a meta com a situação atual e mantém o WIP de 30 itens. Com vazão de 10 itens por semana, 30 itens em andamento resultam em tempo de ciclo médio de 3 semanas, e não de 2."
+        },
+        {
+          "id": "opt-5",
+          "texto": "3 semanas e 15 itens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tempo atual está certo, mas o WIP da meta foi obtido dividindo o WIP atual pela meta de tempo de ciclo (30 ÷ 2 = 15), sem aplicar a fórmula. Com tempo de ciclo de 2 semanas e vazão de 10 itens por semana, o WIP médio deve ser 2 × 10 = 20 itens."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora inversões da fórmula (vazão ÷ WIP, vazão ÷ tempo) e a intuição de que reduzir o tempo de ciclo exige mais itens em andamento. Pela Lei de Little, com vazão constante, menos WIP significa menor tempo de ciclo.",
+      "resumoFlashcard": {
+        "pergunta": "Como a Lei de Little relaciona WIP, vazão e tempo de ciclo no Kanban?",
+        "resposta": "Em fluxo estável, tempo médio de ciclo = WIP médio ÷ vazão média. Com vazão constante, reduzir o WIP reduz o tempo de ciclo. Exemplo: 30 itens ÷ 10 por semana = 3 semanas."
+      },
+      "conceitosChave": ["Kanban: fluxo e limite de WIP", "Kanban: Lei de Little"],
+      "fundamentacao": "Vacanti, D.; Coleman, J. The Kanban Guide (2020), seções sobre as medidas de fluxo (WIP, vazão, idade do item de trabalho e tempo de ciclo) e a Lei de Little; Little, J. D. C. A proof for the queuing formula L = λW. Operations Research, 1961."
+    },
+    {
+      "id": "gov-ti-028",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Governança de TI e alinhamento estratégico",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Para fortalecer o alinhamento estratégico da TI, um tribunal de contas decidiu adotar um Balanced Scorecard (BSC) de TI derivado do seu mapa estratégico institucional, conforme o modelo de Van Grembergen. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma secretaria estadual pretende medir a contribuição da TI para seus objetivos institucionais com um Balanced Scorecard de TI, no modelo proposto por Van Grembergen. Considere as afirmativas abaixo.",
+        "Em auditoria operacional sobre governança de TI em um jurisdicionado, a equipe avaliou o uso de um Balanced Scorecard de TI, segundo o modelo de Van Grembergen, como instrumento de alinhamento estratégico. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O BSC de TI organiza-se nas perspectivas de contribuição corporativa, orientação ao usuário, excelência operacional e orientação futura.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Van Grembergen adaptou à TI as quatro perspectivas do BSC de Kaplan e Norton: contribuição corporativa, orientação ao usuário, excelência operacional e orientação futura."
+        },
+        {
+          "texto": "A perspectiva de orientação ao usuário avalia a TI do ponto de vista da alta administração, medindo o retorno dos investimentos em TI para a organização.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O ponto de vista da alta administração e o valor dos investimentos em TI são objeto da contribuição corporativa. A orientação ao usuário avalia a TI do ponto de vista dos usuários, com medidas como satisfação e desempenho dos serviços."
+        },
+        {
+          "texto": "A perspectiva de orientação futura trata da preparação da TI para desafios futuros, como a capacitação das equipes e a pesquisa de tecnologias emergentes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A orientação futura mede se a TI está preparada para o futuro: competências das equipes, pesquisa e adoção de novas tecnologias e evolução da arquitetura. A eficiência dos processos atuais fica na excelência operacional."
+        },
+        {
+          "texto": "Para promover o alinhamento, os objetivos do BSC de TI devem ser desdobrados dos objetivos estratégicos da organização, mantendo relações de causa e efeito entre as perspectivas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O alinhamento se dá pela cascata: o BSC de TI deriva do BSC ou do mapa estratégico institucional, e suas perspectivas se ligam por relações de causa e efeito."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa, pois atribui à orientação ao usuário o ponto de vista da alta administração, próprio da contribuição corporativa. Também omite III e IV, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa, e as afirmativas I e IV, verdadeiras, foram omitidas. A troca entre orientação ao usuário e contribuição corporativa é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O BSC de TI de Van Grembergen usa as perspectivas de contribuição corporativa, orientação ao usuário, excelência operacional e orientação futura. A orientação futura trata da preparação para desafios futuros, e o alinhamento exige desdobrar os objetivos de TI dos objetivos estratégicos, com relações de causa e efeito. A II é falsa porque o ponto de vista da alta administração pertence à contribuição corporativa.",
+          "versaoInvertidaFalsa": "O BSC de TI organiza-se nas mesmas perspectivas do BSC corporativo (financeira, clientes, processos internos e aprendizado e crescimento), sem adaptação ao papel da TI."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa, pois atribui à orientação ao usuário o que pertence à contribuição corporativa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa, e omite a I, verdadeira, que lista as quatro perspectivas do BSC de TI propostas por Van Grembergen."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o ponto de vista de cada perspectiva: a alta administração e o valor dos investimentos são da contribuição corporativa, os usuários são da orientação ao usuário, a eficiência dos processos é da excelência operacional e a preparação para o futuro é da orientação futura.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as perspectivas do BSC de TI de Van Grembergen e o que cada uma avalia?",
+        "resposta": "Contribuição corporativa (visão da alta administração e valor dos investimentos), orientação ao usuário (visão dos usuários), excelência operacional (eficiência dos processos de TI) e orientação futura (preparação para desafios futuros). Os objetivos derivam da estratégia institucional."
+      },
+      "conceitosChave": ["BSC de TI", "Governança de TI: alinhamento estratégico"],
+      "fundamentacao": "Van Grembergen, W. The balanced scorecard and IT governance. Information Systems Control Journal, v. 2, 2000; Van Grembergen, W.; De Haes, S. Enterprise Governance of Information Technology (Springer), cap. sobre o BSC de TI; Kaplan, R. S.; Norton, D. P. A Estratégia em Ação: Balanced Scorecard."
+    },
+    {
+      "id": "gov-ti-029",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de portfólio, ativos e continuidade de serviços",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em auditoria de TI em um jurisdicionado, verificou-se que o órgão paga por 1.200 licenças de um software de escritório, mas apenas 800 estão instaladas, e que há 150 instalações de outro produto sem licença correspondente. Além disso, notebooks devolvidos por servidores aposentados permanecem sem destinação registrada. A prática do ITIL 4 cuja deficiência explica diretamente esses achados é a de",
+      "variantesEnunciado": [
+        "Durante fiscalização em uma secretaria estadual, a equipe do Tribunal constatou contratos de suporte pagos para servidores já desativados, softwares instalados sem licença e equipamentos recolhidos sem registro de descarte. A prática do ITIL 4 cuja deficiência explica diretamente esses achados é a de",
+        "Um levantamento na área de TI de um município revelou licenças compradas e nunca usadas, programas em uso sem licenciamento e computadores obsoletos sem registro de reaproveitamento ou alienação. A prática do ITIL 4 cuja deficiência explica diretamente esses achados é a de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "gerenciamento de configuração de serviço, cujo foco principal é o valor financeiro e o licenciamento dos itens, e não seus relacionamentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os focos. O gerenciamento de configuração de serviço mantém informações sobre os itens de configuração e seus relacionamentos, para apoiar a análise de impacto e outras práticas. Valor financeiro, licenciamento e ciclo de vida dos ativos são o foco do gerenciamento de ativos de TI."
+        },
+        {
+          "id": "opt-2",
+          "texto": "gerenciamento de liberação, que controla a disponibilização de novas versões de software aos usuários e o descarte das antigas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gerenciamento de liberação disponibiliza serviços e funcionalidades novos ou alterados para uso. Não trata do controle de licenças adquiridas, da conformidade das instalações nem da destinação de equipamentos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "gerenciamento financeiro de serviço, responsável exclusivo pela contagem de licenças e pela baixa patrimonial dos equipamentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gerenciamento financeiro de serviço apoia decisões sobre orçamento, contabilização e cobrança dos serviços. Ele se relaciona com os ativos, mas não é o responsável 'exclusivo' por licenças e descarte, papel do gerenciamento de ativos de TI. A palavra 'exclusivo' reforça o erro."
+        },
+        {
+          "id": "opt-4",
+          "texto": "gerenciamento de fornecedores, que responde pela instalação e pela desinstalação de softwares nos equipamentos do órgão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gerenciamento de fornecedores cuida dos relacionamentos e contratos com fornecedores e do desempenho deles. Pode ajudar a renegociar licenças, mas não controla instalações nem o ciclo de vida dos ativos do órgão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "gerenciamento de ativos de TI, que planeja e gerencia o ciclo de vida dos ativos, apoiando o controle de custos, a conformidade contratual e decisões de reuso e descarte.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No ITIL 4, o gerenciamento de ativos de TI planeja e gerencia o ciclo de vida completo de todos os ativos de TI. O objetivo é maximizar valor, controlar custos, gerenciar riscos, apoiar decisões de compra, reuso, retirada e descarte e cumprir requisitos regulatórios e contratuais, como os de licenciamento. Licenças ociosas, instalações sem licença e equipamentos sem destinação são falhas típicas dessa prática, que corresponde ao objetivo BAI09 do COBIT 2019.",
+          "versaoInvertidaFalsa": "gerenciamento de configuração de serviço, que planeja e gerencia o ciclo de vida, o valor financeiro e o licenciamento dos ativos, enquanto o gerenciamento de ativos cuida dos relacionamentos entre itens."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha é confundir ativo de TI (componente de valor financeiro, com foco em ciclo de vida, custos e licenças) com item de configuração (componente gerenciado para entregar o serviço, com foco em configuração e relacionamentos).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre gerenciamento de ativos de TI e gerenciamento de configuração de serviço no ITIL 4?",
+        "resposta": "O gerenciamento de ativos cuida do ciclo de vida, do custo, do licenciamento e da conformidade dos ativos de valor financeiro. O gerenciamento de configuração mantém informação precisa sobre os itens de configuração e seus relacionamentos, para apoiar a entrega do serviço."
+      },
+      "conceitosChave": ["Gestão de ativos de TI", "Ativo de TI × item de configuração"],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de ativos de TI e de gerenciamento de configuração de serviço (definições de ativo de TI e de item de configuração); ISACA, COBIT 2019, objetivos BAI09 (Managed Assets) e BAI10 (Managed Configuration); ISO/IEC 19770-1 (gestão de ativos de TI)."
+    },
+    {
+      "id": "gov-ti-030",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Estratégia Nacional de Governo Digital (ENGD 2024–2027)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o Decreto 12.069/2024, a adesão dos entes federativos à Rede Nacional de Governo Digital (Rede Gov.br)",
+      "variantesEnunciado": [
+        "Considere que um município goiano pretende aderir à Rede Nacional de Governo Digital (Rede Gov.br) para ter acesso a ferramentas de apoio à transformação digital. Nos termos do Decreto 12.069/2024, essa adesão",
+        "Em parecer sobre a participação de um Estado na Rede Nacional de Governo Digital (Rede Gov.br), a assessoria registrou corretamente que, segundo o Decreto 12.069/2024, a adesão dos entes federativos"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é obrigatória para todos os Municípios, que devem adotar integralmente a estratégia federal e ficam dispensados de editar estratégia própria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A adesão é voluntária (art. 11, § 1º). Quem adere assume o compromisso de publicar estratégia de governo digital própria em consonância com a ENGD (art. 15, § 1º). A alternativa inverte as duas regras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "depende de lei local que transfira à União a gestão dos serviços digitais do ente, como condição de acesso às infraestruturas públicas digitais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O decreto não prevê transferência de competências à União. A Rede Gov.br é colaborativa, e a adesão permite acesso gratuito a ferramentas e infraestruturas públicas digitais quando disponíveis para governos locais (art. 15), sem centralizar a gestão dos serviços."
+        },
+        {
+          "id": "opt-3",
+          "texto": "garante acesso gratuito às ferramentas da Plataforma gov.br, mas dispensa o ente de qualquer compromisso de alinhamento à Estratégia Nacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É meia-verdade. O acesso gratuito está previsto (art. 15, caput), mas, no ato da adesão, o ente assume os compromissos de publicar estratégia própria em consonância com a ENGD e de seguir as recomendações editadas pela Secretaria de Governo Digital (art. 15, § 1º)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é voluntária e implica os compromissos de publicar estratégia de governo digital própria, em consonância com a ENGD, e de seguir as recomendações da Secretaria de Governo Digital.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Rede Gov.br tem natureza colaborativa e reúne União, Estados, DF e Municípios. A adesão é voluntária (art. 11, § 1º). Ao aderir, o ente pode ter acesso gratuito a ferramentas da Plataforma gov.br e às infraestruturas públicas digitais, quando disponíveis para governos locais. Também assume os compromissos de publicar estratégia própria em consonância com a ENGD e de seguir as recomendações da Secretaria de Governo Digital (art. 13, III, e art. 15, § 1º).",
+          "versaoInvertidaFalsa": "é obrigatória e implica a substituição da estratégia de governo digital do ente pela estratégia federal, dispensado o acompanhamento das recomendações da Secretaria de Governo Digital."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é voluntária, mas o acesso às ferramentas da Plataforma gov.br e às infraestruturas públicas digitais é sempre oneroso para os entes subnacionais que aderirem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas o decreto prevê que os entes que aderirem poderão ter acesso gratuito às ferramentas de apoio à transformação digital da Plataforma gov.br e às infraestruturas públicas digitais, quando disponíveis para uso em governos locais (art. 15)."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura 'voluntária' com 'obrigatória' e cria meias-verdades: acesso gratuito sem contrapartidas, ou adesão voluntária com acesso oneroso. O decreto combina adesão voluntária, acesso gratuito quando disponível e os compromissos de publicar estratégia própria e seguir as recomendações.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona a adesão dos entes federativos à Rede Gov.br no Decreto 12.069/2024?",
+        "resposta": "É voluntária (art. 11, § 1º). Quem adere pode ter acesso gratuito a ferramentas da Plataforma gov.br e às infraestruturas públicas digitais, quando disponíveis, e se compromete a publicar estratégia própria em consonância com a ENGD e a seguir as recomendações da Secretaria de Governo Digital (art. 15)."
+      },
+      "conceitosChave": ["ENGD 2024–2027: Rede Gov.br"],
+      "fundamentacao": "Decreto 12.069/2024, arts. 11 (natureza colaborativa e adesão voluntária), 12 (governança da Rede Gov.br), 13, III (recomendações da Secretaria de Governo Digital) e 15 (acesso gratuito e compromissos da adesão)."
+    }
+  ]
+}

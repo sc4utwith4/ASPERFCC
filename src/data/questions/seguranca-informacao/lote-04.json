@@ -1,0 +1,564 @@
+{
+  "materiaSlug": "seguranca-informacao",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "seg-info-031",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Firewalls, antivírus e IDS/IPS",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito de sistemas de detecção e de prevenção de intrusão (IDS e IPS), é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao especificar a solução de proteção do perímetro da rede do Tribunal, a equipe comparou sistemas de detecção de intrusão (IDS) e de prevenção de intrusão (IPS). Sobre esses sistemas, é correto afirmar que",
+        "Em auditoria da arquitetura de segurança de rede de um jurisdicionado, o técnico do Tribunal analisou o emprego de IDS e de IPS pelo órgão. Acerca desses sistemas, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o IDS baseado em assinaturas é a solução mais eficaz contra ataques de dia zero, por dispensar padrões previamente cadastrados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: o IDS por assinatura depende de padrões cadastrados e, por isso, não reconhece ataques inéditos (dia zero). Ataques novos são mais bem detectados por anomalia ou por análise de comportamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a detecção por anomalia elimina os falsos positivos, pois só alerta quando o tráfego coincide com um ataque já catalogado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve, na verdade, a detecção por assinatura. A detecção por anomalia compara a atividade com um perfil de normalidade e tende a gerar mais falsos positivos, e não a eliminá-los."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o IPS, instalado em linha com o tráfego, pode bloquear pacotes maliciosos, enquanto o IDS, em regra, monitora e emite alertas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O IPS fica em linha (inline), no caminho do tráfego, e pode descartar pacotes, encerrar conexões ou bloquear origens; o IDS, em regra, recebe cópia do tráfego (porta espelhada ou TAP) ou analisa eventos do host e apenas detecta e alerta. Ambos podem usar assinatura, anomalia ou análise de protocolo com estado e existem nas versões de rede e de host, conforme a NIST SP 800-94.",
+          "versaoInvertidaFalsa": "o IDS, instalado em linha com o tráfego, bloqueia pacotes maliciosos, enquanto o IPS apenas monitora uma cópia do tráfego e emite alertas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o HIDS monitora todo o tráfego de um segmento de rede a partir de um sensor posicionado na porta espelhada do switch.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve um IDS de rede (NIDS). O HIDS roda no próprio host e monitora eventos locais, como logs, integridade de arquivos, processos e chamadas de sistema."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o IPS atua apenas depois do incidente, analisando registros históricos para produzir relatórios destinados à auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O IPS atua em tempo real, prevenindo a intrusão enquanto ela ocorre. Analisar registros históricos para relatórios é tarefa de ferramentas de correlação de logs e de auditoria, como o SIEM."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis: quem bloqueia em linha é o IPS; o IDS detecta e alerta. E atribui à detecção por assinatura a força contra o dia zero, que é justamente a fraqueza dela.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença essencial entre IDS e IPS?",
+        "resposta": "O IDS detecta e alerta, em regra analisando cópia do tráfego ou eventos do host, sem interferir no fluxo. O IPS fica em linha e pode bloquear o tráfego malicioso em tempo real. Ambos podem ser de rede ou de host e usar assinatura ou anomalia."
+      },
+      "conceitosChave": ["IDS × IPS"],
+      "fundamentacao": "NIST SP 800-94, Guide to Intrusion Detection and Prevention Systems (2007), tipos de IDPS (rede, sem fio, análise de comportamento de rede e host) e metodologias de detecção."
+    },
+    {
+      "id": "seg-info-032",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Criptografia simétrica e assimétrica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Sobre a criptografia simétrica, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao definir o padrão de proteção dos backups cifrados do Tribunal, a equipe de segurança revisou os fundamentos da criptografia simétrica. Sobre esse tipo de criptografia, é correto afirmar que",
+        "Em capacitação sobre criptografia para a equipe de TI do Tribunal, o instrutor comparou algoritmos simétricos e assimétricos. A respeito da criptografia simétrica, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "usa a mesma chave secreta para cifrar e decifrar, é eficiente em grandes volumes e exige distribuição segura da chave.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na criptografia simétrica, remetente e destinatário compartilham a mesma chave secreta. Algoritmos como o AES (FIPS 197, bloco de 128 bits e chaves de 128, 192 ou 256 bits) são rápidos e adequados a grandes volumes; o ponto fraco é distribuir a chave com segurança, problema resolvido com criptografia assimétrica ou acordo de chaves, como o Diffie-Hellman.",
+          "versaoInvertidaFalsa": "usa chaves diferentes para cifrar e decifrar, é lenta em grandes volumes e dispensa qualquer cuidado com a distribuição da chave."
+        },
+        {
+          "id": "opt-2",
+          "texto": "emprega um par de chaves matematicamente relacionadas, uma pública e outra privada, como ocorre no algoritmo AES de 256 bits.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Par de chaves pública e privada caracteriza a criptografia assimétrica. O AES é algoritmo simétrico de cifra de bloco, que usa uma única chave secreta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é exemplificada pelo RSA, cuja segurança se baseia na dificuldade de fatorar o produto de dois números primos muito grandes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RSA é algoritmo assimétrico; a dificuldade de fatoração sustenta sua segurança, mas ele não é exemplo de criptografia simétrica."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é, em regra, mais lenta que a assimétrica, razão pela qual seu uso se restringe à proteção de pequenas chaves de sessão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: a simétrica é muito mais rápida que a assimétrica. Por isso, na criptografia híbrida, os dados são cifrados com chave simétrica, e a assimétrica protege apenas a chave de sessão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "tem no DES, com chave efetiva de 56 bits, a opção recomendada para os novos sistemas, em razão de sua ampla compatibilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O DES, com chave efetiva de 56 bits, é obsoleto e vulnerável a busca exaustiva; até o 3DES teve a cifração desautorizada pelo NIST após 2023. Para novos sistemas, recomenda-se o AES."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à simétrica características da assimétrica (par de chaves, RSA) e inverte o desempenho. Simétrica: uma chave secreta, rapidez e problema de distribuição; o DES é obsoleto.",
+      "resumoFlashcard": {
+        "pergunta": "Quais as características da criptografia simétrica?",
+        "resposta": "Uma única chave secreta, compartilhada, cifra e decifra; é rápida e adequada a grandes volumes (ex.: AES). Sua principal dificuldade é distribuir a chave com segurança, o que se resolve com criptografia assimétrica ou acordo de chaves."
+      },
+      "conceitosChave": ["Criptografia simétrica"],
+      "fundamentacao": "FIPS 197 (AES); NIST SP 800-131A Rev. 2 (transição de algoritmos, inclusive TDEA); Stallings, Criptografia e Segurança de Redes (cifras simétricas)."
+    },
+    {
+      "id": "seg-info-033",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "OWASP Top 10:2025 e codificação segura (DevSecOps)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na revisão de código do módulo de pagamento de diárias, a equipe do Tribunal identificou dois comportamentos: quando o serviço de autorização demora a responder, o bloco de tratamento de exceção libera a operação e não registra o erro; e, se a gravação falha no meio da transação, o código tenta continuar a partir do último passo concluído. Segundo a OWASP Top 10:2025, a categoria envolvida e a correção adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Em auditoria de um sistema de compras de jurisdicionado, verificou-se que, quando o serviço de validação de saldo fica indisponível, a aplicação considera a validação aprovada e segue com a compra, sem registrar o erro; além disso, transações interrompidas por falha são retomadas do ponto em que pararam. Segundo a OWASP Top 10:2025, a categoria envolvida e a correção adequada são, respectivamente,",
+        "Considere que, no sistema de protocolo do Tribunal, uma exceção não tratada no controle de permissões faz a aplicação conceder acesso por padrão e que falhas no meio de uma gravação deixam o processo parcialmente registrado, sendo completado depois a partir do último passo concluído. Segundo a OWASP Top 10:2025, a categoria envolvida e a correção adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A05:2025 – Injection; validar todas as entradas no navegador do usuário e adotar consultas parametrizadas no acesso ao banco de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há injeção de dados em interpretador: o problema é a reação do sistema a uma condição anormal (demora de resposta, falha de gravação). Validação apenas no cliente, aliás, nunca é controle suficiente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "A10:2025 – Mishandling of Exceptional Conditions; manter a retomada a partir do último passo concluído, para não perder o trabalho já feito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A categoria está certa, mas a correção contraria a OWASP: tentar recuperar uma transação pela metade é justamente onde surgem erros irrecuperáveis; o correto é reverter toda a transação e recomeçar (falhar fechado). A meia-verdade é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "A07:2025 – Authentication Failures; exigir autenticação multifator dos servidores antes de cada solicitação de pagamento de diárias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O problema não está em verificar a identidade de quem solicita o pagamento, mas na aplicação que libera a operação quando o serviço de autorização falha. A MFA não corrige esse comportamento de falha aberta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A10:2025 – Mishandling of Exceptional Conditions; falhar de forma fechada, registrar e alertar o erro e reverter integralmente a transação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A A10:2025 Mishandling of Exceptional Conditions, nova em 2025, cobre falhas ao prevenir, detectar e responder a condições anormais, como falhar de forma aberta (fail open) e deixar transações pela metade. A OWASP recomenda capturar o erro onde ele ocorre, manter tratador global de exceções, registrar e alertar, falhar de forma fechada (negar na dúvida) e reverter integralmente a transação interrompida, recomeçando-a, além de impor limites de recursos.",
+          "versaoInvertidaFalsa": "A10:2025 – Mishandling of Exceptional Conditions; falhar de forma aberta, liberando a operação na dúvida, e retomar a transação do ponto em que parou."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A02:2025 – Security Misconfiguration; ocultar dos usuários as mensagens de erro detalhadas, mantendo inalterado o tratamento de exceções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ocultar mensagens de erro detalhadas é boa prática, mas não resolve o problema central: a aplicação continuaria liberando operações quando o serviço de autorização falha e deixando transações incompletas."
+        }
+      ],
+      "pegadinhaFCC": "A banca acerta a categoria e erra a correção (retomar a transação pela metade), apostando no senso comum de não perder trabalho. A OWASP manda falhar fechado e reverter tudo; e o fail open é a marca da A10:2025.",
+      "resumoFlashcard": {
+        "pergunta": "O que é a A10:2025 Mishandling of Exceptional Conditions e como preveni-la?",
+        "resposta": "É a categoria nova da OWASP Top 10:2025 para falhas no tratamento de condições anormais: erros não tratados, erros lógicos, falha aberta (fail open) e transações deixadas pela metade. Previne-se tratando o erro onde ocorre, com tratador global, registro e alerta, falhando fechado e revertendo integralmente a transação."
+      },
+      "conceitosChave": ["OWASP Top 10:2025: A10"],
+      "fundamentacao": "OWASP Top 10:2025, A10:2025 Mishandling of Exceptional Conditions (descrição e seção 'How to prevent': falhar fechado, reverter integralmente a transação e manter tratador global de exceções)."
+    },
+    {
+      "id": "seg-info-034",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Malware, ransomware, phishing e engenharia social",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Às 8h de uma segunda-feira, a central de serviços do Tribunal recebe chamados informando que arquivos de dois servidores da Secretaria de Controle Externo foram cifrados e substituídos por uma nota de resgate, na qual o grupo criminoso afirma ter copiado previamente dados de processos e ameaça publicá-los. Considerando as boas práticas de resposta a ransomware, a conduta inicial mais adequada é",
+      "variantesEnunciado": [
+        "Em um órgão jurisdicionado, servidores de arquivos amanheceram com os dados cifrados e uma nota em que o grupo atacante diz ter extraído previamente documentos sigilosos, que serão divulgados se o resgate não for pago. Chamada a orientar o órgão, a equipe do Tribunal deve indicar que, segundo as boas práticas de resposta a ransomware, a conduta inicial mais adequada é",
+        "Considere que, durante o expediente, o monitoramento do Tribunal detectou a cifração em massa de arquivos em três estações e em um servidor, acompanhada de mensagem que exige pagamento e ameaça vazar dados já copiados. Considerando as boas práticas de resposta a ransomware, a conduta inicial mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "restaurar imediatamente os backups sobre os servidores afetados, para retomar o serviço antes de investigar o vetor de entrada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Restaurar antes de conter e de identificar o vetor de entrada tende a reinfectar os sistemas, pois o invasor pode manter acesso. A recuperação vem depois da contenção e da erradicação, a partir de backups sabidamente limpos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pagar o resgate o quanto antes, pois o pagamento garante a chave de decifração e impede a publicação dos dados copiados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pagamento não garante a entrega da chave nem impede a divulgação dos dados, financia o crime e é desaconselhado por órgãos como a CISA. Na dupla extorsão, os dados já saíram do ambiente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "isolar da rede os equipamentos afetados, preservar evidências, acionar o plano de resposta e tratar a possível exfiltração dos dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A primeira providência é conter: isolar da rede os sistemas afetados, preservando evidências (o guia #StopRansomware da CISA recomenda desligar apenas se não for possível desconectar, pois o desligamento destrói dados da memória volátil). Em seguida, aciona-se o plano de resposta e, diante da dupla extorsão (cifração somada à exfiltração), trata-se o caso também como possível vazamento, avaliando inclusive a comunicação exigida pela LGPD.",
+          "versaoInvertidaFalsa": "restaurar de imediato os backups e retomar o serviço, pois, havendo cópia íntegra, a ameaça de publicação dos dados não exige nenhuma outra providência."
+        },
+        {
+          "id": "opt-4",
+          "texto": "desligar de imediato todos os equipamentos do Tribunal e formatar os afetados, eliminando o código malicioso e os seus vestígios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desligar todo o parque e formatar as máquinas afetadas destrói evidências necessárias para descobrir o vetor, a extensão do ataque e os dados exfiltrados, além de ampliar a indisponibilidade sem necessidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "concluir que, havendo backup íntegro dos dados cifrados, não existe incidente com dados pessoais a avaliar ou a comunicar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O backup resolve a disponibilidade, mas não a confidencialidade: a nota indica exfiltração prévia (dupla extorsão). Se houver dados pessoais, o incidente precisa ser avaliado e, se for o caso, comunicado à ANPD e aos titulares (LGPD, art. 48)."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece atalhos sedutores (restaurar logo, pagar, formatar) e ignora a dupla extorsão. Primeiro contém e preserva evidências; o backup recupera a disponibilidade, mas não desfaz o vazamento.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a conduta inicial diante de ransomware com dupla extorsão?",
+        "resposta": "Isolar da rede os sistemas afetados, preservando evidências (desligar só se não houver como desconectar), acionar o plano de resposta e tratar a possível exfiltração como vazamento. A restauração vem depois da contenção e da erradicação, a partir de backups limpos; pagar não é recomendado."
+      },
+      "conceitosChave": ["Ransomware: resposta"],
+      "fundamentacao": "CISA, #StopRansomware Guide (lista de verificação de resposta: detecção e análise, contenção e erradicação, recuperação); Lei nº 13.709/2018 (LGPD), art. 48; ABNT NBR ISO/IEC 27002:2022, controles 5.26 e 5.28."
+    },
+    {
+      "id": "seg-info-035",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Testes de invasão e análise de vulnerabilidades",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal contratou uma empresa para testar a segurança do portal de serviços aos jurisdicionados. Para o teste, a contratada receberá credenciais de um usuário externo comum e um diagrama geral da arquitetura, sem acesso ao código-fonte. O tipo de teste e o requisito que deve estar formalizado antes do início das atividades são, respectivamente,",
+      "variantesEnunciado": [
+        "Um jurisdicionado auditado pelo Tribunal contratou teste de invasão de seu sistema de compras, fornecendo à contratada uma conta de fornecedor cadastrado e a documentação resumida das integrações, mas não o código-fonte. O tipo de teste e o requisito que deve estar formalizado antes do início das atividades são, respectivamente,",
+        "Considere que, em teste de invasão contratado para o aplicativo de consulta processual do Tribunal, os testadores terão acesso a uma credencial de usuário comum e a parte da documentação técnica, sem acesso ao código-fonte nem a contas administrativas. O tipo de teste e o requisito que deve estar formalizado antes do início das atividades são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "caixa-cinza; autorização por escrito, com escopo, sistemas excluídos, janelas de execução e contatos de emergência definidos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Com conhecimento parcial (credencial comum e diagrama geral, sem código-fonte), o teste é de caixa-cinza. Antes de começar, a NIST SP 800-115 exige planejamento com aprovação formal e regras de engajamento: escopo, o que está fora dele, janelas, técnicas permitidas, tratamento dos dados obtidos e contatos para interromper o teste se houver impacto. Do lado do contratante, isso protege a operação e dá base ao trabalho.",
+          "versaoInvertidaFalsa": "caixa-preta; autorização apenas verbal, já que a contratada recebe credenciais e diagrama da arquitetura e o contrato supre a autorização específica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "caixa-branca; autorização verbal do gestor do contrato, suficiente por se tratar de serviço já contratado e pago.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Caixa-branca pressupõe conhecimento amplo do ambiente, como código-fonte e documentação detalhada, o que não é o caso. E autorização verbal é insuficiente: o teste exige autorização escrita e regras de engajamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "caixa-preta; dispensa de autorização específica, pois o próprio contrato de prestação de serviços já a supre.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na caixa-preta o testador não recebe informação prévia nem credenciais. Além disso, o contrato não substitui a autorização específica do teste, com escopo e limites definidos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "caixa-cinza; liberação para testar quaisquer sistemas do Tribunal, inclusive os não listados, se forem encontrados no caminho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A classificação como caixa-cinza está certa, mas o requisito não: testar sistemas fora do escopo é proibido e pode causar danos ou configurar acesso indevido. Escopo e exclusões devem estar formalmente delimitados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "caixa-branca; entrega prévia do relatório de varredura automatizada, que substitui o teste manual de exploração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O teste não é de caixa-branca, e a varredura automatizada não substitui o teste de invasão, que busca explorar as falhas de forma controlada para comprovar impacto. O requisito prévio essencial é a autorização com regras de engajamento."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o tipo de teste conforme o grau de conhecimento e insinua que o contrato basta. Credencial comum e documentação parcial é caixa-cinza; nenhum teste começa sem autorização escrita e regras de engajamento.",
+      "resumoFlashcard": {
+        "pergunta": "Como se classificam os testes de invasão pelo conhecimento prévio do testador?",
+        "resposta": "Caixa-preta: nenhum conhecimento prévio do ambiente. Caixa-cinza: conhecimento parcial, como credencial de usuário comum ou parte da documentação. Caixa-branca: conhecimento amplo, como código-fonte e arquitetura detalhada. Em todos, é indispensável autorização escrita com regras de engajamento."
+      },
+      "conceitosChave": ["Pentest: caixa preta/cinza/branca"],
+      "fundamentacao": "NIST SP 800-115 (2008), fase de planejamento do teste de invasão (aprovação formal e regras de engajamento); ABNT NBR ISO/IEC 27002:2022, controle 8.34 (proteção dos sistemas de informação durante testes de auditoria)."
+    },
+    {
+      "id": "seg-info-036",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Família ABNT NBR ISO/IEC 27000",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na implantação do sistema de gestão de segurança da informação (SGSI) do Tribunal segundo a ABNT NBR ISO/IEC 27001:2022, a equipe concluiu que o controle do Anexo A sobre desenvolvimento terceirizado não se aplica, porque o Tribunal não contrata desenvolvimento de software externo. Quanto à Declaração de Aplicabilidade, a conduta conforme a norma é",
+      "variantesEnunciado": [
+        "Durante a preparação do Tribunal para auditoria de certificação na ABNT NBR ISO/IEC 27001:2022, a análise de riscos indicou que o controle do Anexo A relativo ao desenvolvimento terceirizado é desnecessário, pois o órgão não contrata desenvolvimento externo de software. Quanto à Declaração de Aplicabilidade, a conduta conforme a norma é",
+        "Considere um jurisdicionado que implanta SGSI conforme a ABNT NBR ISO/IEC 27001:2022 e conclui que o controle do Anexo A sobre desenvolvimento terceirizado não lhe é aplicável, por não terceirizar o desenvolvimento de sistemas. Quanto à Declaração de Aplicabilidade, a conduta conforme a norma é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "manter o controle registrado como implementado, pois todos os controles do Anexo A são de adoção obrigatória para fins de certificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ABNT NBR ISO/IEC 27001:2022 não obriga a implementar todos os 93 controles do Anexo A: os controles necessários decorrem do tratamento de riscos. Registrar como implementado algo que não existe tornaria a declaração falsa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "omitir o controle da Declaração de Aplicabilidade, uma vez que ela deve relacionar somente os controles que estão efetivamente implementados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Declaração de Aplicabilidade deve tratar dos controles do Anexo A, inclusive dos excluídos, com a justificativa da exclusão; e lista também controles necessários ainda não implementados, indicando a situação de cada um."
+        },
+        {
+          "id": "opt-3",
+          "texto": "submeter a exclusão ao organismo certificador antes da avaliação de riscos, que só pode ser realizada depois dessa aprovação externa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A avaliação e o tratamento de riscos são feitos pela própria organização e fundamentam as decisões de inclusão e exclusão. O organismo certificador avalia a conformidade depois, na auditoria."
+        },
+        {
+          "id": "opt-4",
+          "texto": "registrar na declaração a exclusão e sua justificativa, com os controles necessários, as razões de inclusão e a situação de implementação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela cláusula 6.1.3 d) da ABNT NBR ISO/IEC 27001:2022, a Declaração de Aplicabilidade contém os controles necessários, a justificativa para sua inclusão, se estão implementados ou não e a justificativa para a exclusão de controles do Anexo A. Assim, o controle de desenvolvimento terceirizado (8.30) pode ser excluído, desde que a exclusão seja justificada.",
+          "versaoInvertidaFalsa": "registrar o controle como implementado, já que a ABNT NBR ISO/IEC 27001:2022 veda a exclusão de qualquer controle do Anexo A da Declaração de Aplicabilidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "substituir a Declaração de Aplicabilidade pelo inventário de ativos, que já demonstra quais controles se aplicam a cada ativo de informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O inventário de ativos (controle 5.9) é insumo da gestão de riscos, mas não substitui a Declaração de Aplicabilidade, documento exigido pela cláusula 6.1.3 d) com conteúdo próprio."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que todo controle do Anexo A é obrigatório ou que a declaração lista só o que está implementado. A Declaração de Aplicabilidade traz os necessários, a justificativa de inclusão, a situação de implementação e a justificativa de exclusão.",
+      "resumoFlashcard": {
+        "pergunta": "O que deve constar da Declaração de Aplicabilidade da ISO/IEC 27001:2022?",
+        "resposta": "Os controles necessários, a justificativa de inclusão, a indicação de estarem ou não implementados e a justificativa para a exclusão de controles do Anexo A (cláusula 6.1.3 d). Nenhum dos 93 controles é obrigatório por si: a seleção decorre do tratamento de riscos."
+      },
+      "conceitosChave": ["ISO 27001: Declaração de Aplicabilidade", "ISO 27001:2022: Anexo A"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27001:2022, cláusula 6.1.3 d) e Anexo A (controle 8.30, desenvolvimento terceirizado)."
+    },
+    {
+      "id": "seg-info-037",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Criptografia simétrica e assimétrica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na modernização do sistema de arquivamento de documentos do Tribunal, a equipe identificou o uso do ……, função de hash cuja resistência a colisões já foi quebrada na prática, e decidiu substituí-lo pelo ……; identificou também a cifra ……, cuja cifração foi desautorizada pelo NIST após 2023, a ser trocada pelo ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em auditoria da criptografia empregada por um jurisdicionado, verificou-se o uso do ……, hash com colisões já demonstradas na prática, que deve ser substituído pelo ……, e da cifra ……, cuja cifração o NIST desautorizou depois de 2023, a ser trocada pelo ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao revisar as bibliotecas criptográficas do portal de serviços do Tribunal, um técnico recomendou trocar o ……, cuja resistência a colisões foi quebrada em ataque prático, pelo ……, e substituir a cifra ……, desautorizada pelo NIST para cifração após 2023, pelo ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "SHA-256 − SHA-1 − AES − 3DES",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as recomendações: o SHA-256 (família SHA-2) é o hash a adotar, e o SHA-1 é o que deve sair; o AES é a cifra recomendada, e o 3DES é a desautorizada."
+        },
+        {
+          "id": "opt-2",
+          "texto": "SHA-1 − SHA-256 − 3DES − AES",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A primeira colisão prática do SHA-1 foi publicada em 2017 (ataque SHAttered), e o NIST anunciou a retirada do SHA-1 de todas as aplicações até 2030; o substituto natural é o SHA-256 (SHA-2) ou a família SHA-3. Já a cifração com TDEA (3DES) passou de obsoleta a desautorizada após 31/12/2023, segundo a NIST SP 800-131A Rev. 2, e deve ser trocada pelo AES.",
+          "versaoInvertidaFalsa": "SHA-256 − SHA-1 − AES − 3DES, pois o NIST desautorizou o AES para cifração após 2023 e considera o SHA-1 mais resistente a colisões que o SHA-256."
+        },
+        {
+          "id": "opt-3",
+          "texto": "SHA-1 − MD5 − 3DES − DES",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Trocar SHA-1 por MD5 piora a situação, pois o MD5 tem colisões práticas desde 2004; e o DES, com chave efetiva de 56 bits, é ainda mais fraco que o 3DES."
+        },
+        {
+          "id": "opt-4",
+          "texto": "MD5 − SHA-1 − AES − 3DES",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MD5 de fato está quebrado, mas o substituto proposto, SHA-1, também tem colisões práticas. E o AES não foi desautorizado: é o padrão recomendado de cifra simétrica."
+        },
+        {
+          "id": "opt-5",
+          "texto": "SHA-3 − SHA-1 − DES − 3DES",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SHA-3 (FIPS 202) é função de hash recomendada, sem colisões práticas conhecidas, e não deve ser substituído pelo SHA-1. E trocar DES por 3DES não atende à recomendação atual, que é o AES."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o algoritmo a abandonar pelo recomendado e oferece substitutos também quebrados (MD5, SHA-1, DES). Ficam SHA-2/SHA-3 e AES; saem MD5, SHA-1, DES e 3DES.",
+      "resumoFlashcard": {
+        "pergunta": "Quais algoritmos devem ser abandonados e quais adotados em hash e em cifra simétrica?",
+        "resposta": "Abandonar MD5 e SHA-1 (colisões práticas; o NIST retira o SHA-1 até 2030) e DES/3DES (cifração com 3DES desautorizada após 2023). Adotar SHA-2 (ex.: SHA-256) ou SHA-3 e AES."
+      },
+      "conceitosChave": ["Hash: MD5/SHA-1 obsoletos", "Criptografia simétrica"],
+      "fundamentacao": "NIST SP 800-131A Rev. 2 (TDEA desautorizado para cifração após 2023); NIST, anúncio de dezembro de 2022 sobre a retirada do SHA-1 até 2030; ataque SHAttered (Google e CWI, 2017); FIPS 180-4 (SHA-2), FIPS 202 (SHA-3) e FIPS 197 (AES)."
+    },
+    {
+      "id": "seg-info-038",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Zero Trust",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com os princípios de arquitetura de confiança zero (Zero Trust) da NIST SP 800-207, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao propor a adoção de Zero Trust no acesso aos sistemas internos do Tribunal, a equipe de segurança apresentou os princípios da NIST SP 800-207. Segundo essa publicação, é correto afirmar que",
+        "Em auditoria sobre a estratégia de segurança de rede de um jurisdicionado que declara adotar confiança zero, o técnico do Tribunal confrontou as práticas do órgão com a NIST SP 800-207. Segundo essa publicação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o usuário que se autentica na VPN corporativa passa a ter confiança plena em toda a rede interna, dispensando novas verificações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É exatamente o modelo de perímetro que a confiança zero abandona: estar dentro da rede, ou na VPN, não gera confiança implícita. Cada acesso a recurso é avaliado, o que limita o movimento lateral."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a confiança zero exige nova autenticação interativa do usuário a cada requisição HTTP, qualquer que seja o risco avaliado no momento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A NIST SP 800-207 (seção 2.1) admite basear a decisão em avaliação de confiança suficientemente recente e não exige novo login interativo a cada requisição. A reautenticação é acionada pela política: por tempo, mudança de recurso ou comportamento suspeito."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a confiança zero corresponde a um produto específico de firewall de borda, cuja instalação substitui a gestão de identidades e acessos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Zero Trust é conjunto de princípios e uma arquitetura, e não um produto. Ele depende da gestão de identidades, da postura dos dispositivos e de políticas dinâmicas, que nenhum firewall substitui."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a localização na rede não confere confiança por si só, e o acesso a cada recurso é concedido por sessão, conforme política dinâmica.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Entre os princípios da NIST SP 800-207 estão: toda comunicação é protegida independentemente da localização na rede; o acesso a recursos é concedido por sessão; o acesso é determinado por política dinâmica (identidade, postura do dispositivo, comportamento e outros atributos); e a postura dos ativos é monitorada continuamente. É o lema nunca confiar, sempre verificar.",
+          "versaoInvertidaFalsa": "a localização na rede interna confere confiança por si só, e o acesso concedido na entrada vale para todos os recursos, sem nova avaliação por política."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma vez concedido o acesso, dispensa-se o monitoramento contínuo da postura dos dispositivos até o encerramento da sessão de trabalho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A NIST SP 800-207 prevê monitoramento contínuo da integridade e da postura de segurança de todos os ativos; dispositivos que saem de conformidade podem perder o acesso durante a sessão."
+        }
+      ],
+      "pegadinhaFCC": "A banca oscila entre dois extremos falsos: confiança plena após a VPN (modelo de perímetro) e reautenticação interativa a cada requisição. A NIST SP 800-207 pede avaliação por sessão, com política dinâmica e monitoramento contínuo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as ideias centrais do Zero Trust segundo a NIST SP 800-207?",
+        "resposta": "Nenhuma confiança implícita pela localização na rede; toda comunicação protegida; acesso a cada recurso concedido por sessão, conforme política dinâmica (identidade, dispositivo, comportamento); e monitoramento contínuo da postura dos ativos. Não exige novo login a cada requisição."
+      },
+      "conceitosChave": ["Zero Trust: NIST SP 800-207"],
+      "fundamentacao": "NIST SP 800-207, Zero Trust Architecture (2020), seção 2.1 (princípios da confiança zero); OWASP Zero Trust Architecture Cheat Sheet."
+    },
+    {
+      "id": "seg-info-039",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Controle de acesso e gestão de identidades (IAM)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal pretende oferecer login único aos jurisdicionados em seus portais, integrando-se a provedores de identidade externos. Na definição da arquitetura, a equipe registrou os seguintes entendimentos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Para integrar os sistemas do Tribunal a um provedor de identidade corporativo e permitir login único, a equipe de arquitetura avaliou protocolos de federação e modelos de autorização. Considere as afirmativas abaixo.",
+        "Em auditoria sobre a gestão de identidades do portal de serviços de um jurisdicionado, que adota login único com provedores externos, o técnico do Tribunal analisou os protocolos e os modelos de controle de acesso utilizados. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O OAuth 2.0, por si só, é protocolo de autenticação que entrega à aplicação cliente a identidade verificada do usuário.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O OAuth 2.0 (RFC 6749) é arcabouço de autorização delegada, que emite tokens de acesso a recursos; ele não define, por si, a identidade verificada do usuário."
+        },
+        {
+          "texto": "O OpenID Connect é uma camada de identidade construída sobre o OAuth 2.0, e o ID Token que ele define é um JWT com informações sobre a autenticação do usuário.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O OpenID Connect Core 1.0 acrescenta a autenticação ao OAuth 2.0, e o ID Token, em formato JWT, traz claims sobre o usuário e o evento de autenticação."
+        },
+        {
+          "texto": "No SAML 2.0, o provedor de identidade emite asserções em XML que são consumidas pelo provedor de serviço para autenticar o usuário.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O IdP autentica o usuário e emite a asserção XML assinada; o SP confia nela e concede a sessão."
+        },
+        {
+          "texto": "A federação de identidades dispensa relação de confiança entre os domínios envolvidos, pois cada provedor de serviço valida diretamente a senha do usuário.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A federação existe justamente para que o SP confie nas asserções ou tokens do IdP, sem receber nem validar a senha do usuário."
+        },
+        {
+          "texto": "No modelo ABAC, as decisões de acesso podem considerar atributos do usuário, do recurso, da operação e do ambiente, como restringir certa operação fora do horário de expediente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a definição da NIST SP 800-162: políticas avaliam atributos do sujeito, do objeto, da operação e das condições de ambiente."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "II, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. II: o OpenID Connect Core 1.0 acrescenta ao OAuth 2.0 uma camada de identidade, e o ID Token é um JWT com claims sobre a autenticação. III: no SAML 2.0, o IdP emite asserções XML consumidas pelo SP. V: o ABAC (NIST SP 800-162) avalia atributos do sujeito, do objeto, da operação e do ambiente. A I é falsa porque o OAuth 2.0 é arcabouço de autorização delegada, e a IV é falsa porque a federação se apoia na relação de confiança entre IdP e SP, sem que o SP receba a senha.",
+          "versaoInvertidaFalsa": "O OpenID Connect substitui o OAuth 2.0 e dispensa tokens, transmitindo a senha do usuário diretamente ao provedor de serviço em cada acesso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, falsa: o OAuth 2.0 trata de autorização delegada (emissão de tokens de acesso), e não de autenticação; é o OpenID Connect que acrescenta a identidade verificada. E deixa de fora a V, verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: na federação, o provedor de serviço confia nas asserções ou tokens emitidos pelo provedor de identidade e nunca valida diretamente a senha do usuário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A V é verdadeira, mas a I e a IV são falsas. Atribuir ao OAuth 2.0 a função de autenticar e dispensar a relação de confiança na federação são as duas armadilhas da questão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III e a V são verdadeiras, mas a II também é e ficou de fora: o OpenID Connect é a camada de identidade sobre o OAuth 2.0, com o ID Token em formato JWT."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta o OAuth 2.0 como protocolo de autenticação e sugere federação sem confiança entre domínios. OAuth autoriza; o OIDC autentica (ID Token em JWT); o SAML usa asserções XML entre IdP e SP.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre OAuth 2.0, OpenID Connect e SAML 2.0?",
+        "resposta": "O OAuth 2.0 é arcabouço de autorização delegada (tokens de acesso). O OpenID Connect é camada de identidade sobre o OAuth 2.0, com ID Token em JWT. O SAML 2.0 troca asserções XML entre provedor de identidade e provedor de serviço. Os dois últimos sustentam o login único federado."
+      },
+      "conceitosChave": ["IAM: federação (SAML/OIDC)", "IAM: RBAC × ABAC"],
+      "fundamentacao": "RFC 6749 (OAuth 2.0); OpenID Connect Core 1.0 (ID Token); OASIS, SAML 2.0; NIST SP 800-162 (ABAC)."
+    },
+    {
+      "id": "seg-info-040",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Gestão de riscos, vulnerabilidades e incidentes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na resposta a um incidente de segurança que poderá resultar em processo administrativo disciplinar e em ação judicial, a coleta de evidências digitais, conforme o controle 5.28 da ABNT NBR ISO/IEC 27002:2022 e as boas práticas forenses, deve",
+      "variantesEnunciado": [
+        "Após detectar acesso indevido a dados sigilosos de auditoria, o Tribunal pretende apurar a responsabilidade do autor em processo disciplinar. Para que as provas digitais tenham valor, conforme o controle 5.28 da ABNT NBR ISO/IEC 27002:2022 e as boas práticas forenses, a coleta de evidências deve",
+        "Considere que, em incidente envolvendo possível fraude no sistema de pagamentos de um jurisdicionado, as evidências digitais serão usadas em ação judicial. Conforme o controle 5.28 da ABNT NBR ISO/IEC 27002:2022 e as boas práticas forenses, a coleta dessas evidências deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ser feita diretamente sobre o disco original do servidor, para ganhar tempo e evitar o custo de cópias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Trabalhar sobre o original altera metadados e conteúdo e compromete a admissibilidade da prova. A boa prática é preservar o original e analisar uma cópia forense, cuja fidelidade é demonstrada por hash."
+        },
+        {
+          "id": "opt-2",
+          "texto": "começar pela reinicialização do servidor afetado, para encerrar os processos maliciosos antes da coleta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reiniciar o equipamento apaga a memória volátil (processos, conexões, chaves em memória) e altera o estado do sistema. A coleta segue a ordem de volatilidade, do mais volátil para o menos volátil."
+        },
+        {
+          "id": "opt-3",
+          "texto": "seguir procedimentos documentados, com cópia forense verificada por hash e registro da cadeia de custódia.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O controle 5.28 (coleta de evidências) pede procedimentos para identificar, coletar, adquirir e preservar evidências relacionadas a eventos de segurança, de modo que sejam aceitas em processos disciplinares e judiciais. Na prática: preservar o original, gerar cópia forense com hash que prove a integridade e registrar a cadeia de custódia (quem coletou, quando, onde, como foi guardado e a quem foi entregue), conforme a ISO/IEC 27037.",
+          "versaoInvertidaFalsa": "ser feita sobre o disco original, sem cálculo de hash nem registro de cadeia de custódia, pois esses cuidados atrasam a resposta e não afetam o valor da prova."
+        },
+        {
+          "id": "opt-4",
+          "texto": "dispensar registros formais de quem manuseou o material, para preservar o sigilo da investigação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sem registro de quem manuseou a evidência, rompe-se a cadeia de custódia, e a defesa pode alegar adulteração. O sigilo se protege com controle de acesso ao material, e não com a ausência de registros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "incluir a exclusão dos logs analisados ao fim do trabalho, para liberar espaço e reduzir a exposição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Logs são evidência e devem ser preservados com integridade, inclusive para eventual perícia posterior. Excluí-los destruiria a prova e comprometeria a apuração."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta atalhos de urgência (trabalhar no original, reiniciar, apagar logs) como eficiência. Prova digital exige cópia forense verificada por hash, respeito à ordem de volatilidade e cadeia de custódia documentada.",
+      "resumoFlashcard": {
+        "pergunta": "Quais cuidados garantem o valor probatório de evidências digitais?",
+        "resposta": "Seguir procedimentos documentados: preservar o original, coletar respeitando a ordem de volatilidade, gerar cópia forense verificada por hash e registrar a cadeia de custódia (quem, quando, como e onde). É o que pede o controle 5.28 da ISO/IEC 27002:2022, detalhado na ISO/IEC 27037."
+      },
+      "conceitosChave": ["Incidentes: coleta de evidências"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27002:2022, controle 5.28 (coleta de evidências); ISO/IEC 27037:2012 (identificação, coleta, aquisição e preservação de evidência digital)."
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "lp-011",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t03",
+      "enunciadoBase": "Considerando-se o texto, a posição do autor a respeito do uso de algoritmos na administração pública pode ser corretamente resumida da seguinte forma:",
+      "variantesEnunciado": [
+        "De acordo com o artigo, o ponto de vista do autor sobre o emprego de sistemas automatizados pelo poder público está corretamente sintetizado em:",
+        "Está em conformidade com as ideias defendidas no texto a seguinte síntese da opinião do autor:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A tecnologia deve ser abandonada, porque um algoritmo nunca pode ser auditado nem ter suas decisões explicadas ao cidadão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 4º parágrafo afirma expressamente que “Nada disso recomenda o abandono da tecnologia”, que, “bem empregada”, pode tornar o controle “mais inteligente e menos arbitrário”. O autor também propõe auditorias, o que pressupõe que o sistema pode ser auditado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Os sistemas automatizados são imparciais por natureza, desde que alimentados por grande volume de dados históricos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor nega a imparcialidade: o algoritmo “não é um oráculo imparcial”, mas “um conjunto de escolhas humanas convertidas em código”. Dados históricos com distorções antigas fazem a máquina reproduzi-las (2º parágrafo); o volume de dados não corrige isso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O uso é legítimo se acompanhado de critérios documentados, auditorias periódicas e possibilidade de revisão humana.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 3º parágrafo enumera as condições: “que os critérios sejam documentados, que os resultados sejam auditados periodicamente e que haja sempre a possibilidade de revisão por uma pessoa capaz de discordar da máquina”. O 4º esclarece que a tecnologia não deve ser abandonada, mas tratada “com entusiasmo moderado e vigilância permanente”. É uma posição favorável ao uso, condicionada ao controle.",
+          "versaoInvertidaFalsa": "O uso é legítimo mesmo sem critérios documentados, auditorias ou revisão humana, pois a agilidade da máquina compensa a falta de explicações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A explicabilidade é um requisito técnico secundário, que pode ser dispensado em nome da agilidade do Estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Para o autor, “Explicabilidade, nesse contexto, não é capricho técnico, e sim condição de legitimidade” (3º parágrafo), e “a eficiência que dispensa explicações não é progresso” (4º parágrafo). A alternativa inverte essa hierarquia."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A principal ameaça está na própria ferramenta, e não na confiança que os gestores e os cidadãos depositam nela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a frase inicial do 2º parágrafo: “O problema não está na ferramenta, mas na confiança cega que ela costuma inspirar”. O risco, segundo o autor, é tratar o resultado da máquina como verdade inquestionável."
+        }
+      ],
+      "pegadinhaFCC": "A FCC cobra a posição matizada do autor: nem rejeição da tecnologia nem confiança cega. Os distratores invertem frases do texto (“o problema não está na ferramenta...”) ou transformam uma condição de legitimidade em detalhe técnico.",
+      "resumoFlashcard": {
+        "pergunta": "Em “Quem audita o algoritmo?”, em que condições o autor admite o uso de algoritmos pelo Estado?",
+        "resposta": "Quando os critérios forem documentados, os resultados auditados periodicamente e houver possibilidade de revisão humana. Para ele, explicabilidade é condição de legitimidade, e a tecnologia deve ser tratada com entusiasmo moderado e vigilância permanente."
+      },
+      "conceitosChave": ["Interpretação: tese do autor", "Argumentação"],
+      "fundamentacao": "Texto lp-t03, 2º a 4º parágrafos; identificação da tese e dos argumentos do artigo de opinião."
+    },
+    {
+      "id": "lp-012",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Relação texto-contexto, intertextualidade e gêneros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "textoApoioId": "lp-t03",
+      "enunciadoBase": "O texto é um artigo de opinião. A respeito dos recursos que o caracterizam como tal, considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "Tendo em vista que o texto pertence ao gênero artigo de opinião, considere as afirmativas abaixo sobre os recursos nele empregados.",
+        "Sobre as características do gênero a que pertence o texto, um artigo de opinião, e sobre os recursos argumentativos do autor, considere as afirmações a seguir."
+      ],
+      "assertivas": [
+        {
+          "texto": "O autor apresenta uma tese — o uso de algoritmos pelo Estado exige controle e explicabilidade — e a sustenta com argumentos e exemplos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A tese é sustentada por argumentos (escolhas humanas convertidas em código, reprodução de distorções) e por exemplo (fiscalizações concentradas sempre nas mesmas regiões)."
+        },
+        {
+          "texto": "Em “Daí a pergunta que dá título a este artigo” (3º parágrafo), o autor faz referência ao próprio texto e ao seu título, recurso metatextual que explicita a ligação entre a pergunta inicial e a argumentação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Ao mencionar “este artigo” e seu título, o texto fala de si mesmo e mostra que o raciocínio anterior conduz à pergunta “Quem audita o algoritmo?”."
+        },
+        {
+          "texto": "O texto evita qualquer marca de posicionamento pessoal, limitando-se a relatar fatos de modo neutro, como em uma notícia.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Há juízos de valor (“confiança cega”, “não é progresso”) e recomendações (“Recomenda, isto sim, que ela seja tratada...”), marcas típicas do texto opinativo."
+        },
+        {
+          "texto": "A frase final (“Afinal, a eficiência que dispensa explicações não é progresso; é apenas uma forma mais veloz de errar sem ser visto”) funciona como fecho conclusivo que retoma a tese.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Afinal” introduz a conclusão, que condensa a tese numa formulação de efeito: eficiência sem explicação não legitima o uso do algoritmo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: a tese (uso de algoritmos com controle e explicabilidade) é sustentada por argumentos e exemplos. II: ao mencionar “este artigo” e seu título, o autor faz o texto falar de si mesmo e explicita o vínculo entre a pergunta do título e o raciocínio. IV: “Afinal” introduz a conclusão, que retoma a tese. III é falsa: o texto é claramente opinativo (“Nada disso recomenda...”, “Recomenda, isto sim...”), ao contrário da notícia.",
+          "versaoInvertidaFalsa": "Em “Daí a pergunta que dá título a este artigo”, o autor remete a um texto de terceiros, recurso de intertextualidade que substitui a argumentação própria."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmação I está correta, mas a III não: o texto é marcadamente opinativo, com juízos de valor (“confiança cega”, “não é progresso”) e recomendações (“Recomenda, isto sim, que ela seja tratada...”). Faltam ainda II e IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa: um artigo de opinião assume posição explícita, ao contrário da notícia. A afirmação II está correta, mas a resposta omite I e IV, também verdadeiras."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão corretas, mas III é falsa: neutralidade e relato factual são traços da notícia, não do artigo de opinião, que defende um ponto de vista. A alternativa também omite IV, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmação IV está correta, mas a III não. O autor se posiciona do início ao fim: critica a “confiança cega” e conclui que “a eficiência que dispensa explicações não é progresso”."
+        }
+      ],
+      "pegadinhaFCC": "A assertiva sobre neutralidade descreve a notícia, não o artigo de opinião. A FCC cobra a distinção entre gêneros pela finalidade: o artigo de opinião defende tese com argumentos, tem marcas de posicionamento e costuma terminar com fecho conclusivo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais traços caracterizam o artigo de opinião?",
+        "resposta": "Defesa explícita de uma tese, argumentos e exemplos que a sustentam, marcas de posicionamento (juízos de valor, recomendações) e conclusão que retoma o ponto de vista. Diferentemente da notícia, não busca neutralidade."
+      },
+      "conceitosChave": ["Gêneros textuais", "Argumentação"],
+      "fundamentacao": "Marcuschi, Produção textual, análise de gêneros e compreensão (Parábola, 2008), capítulo sobre gêneros textuais; Bakhtin, Estética da criação verbal (gêneros do discurso); texto lp-t03."
+    },
+    {
+      "id": "lp-013",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Flexão, vozes verbais e correlação de tempos e modos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t03",
+      "enunciadoBase": "No 2º parágrafo, lê-se: “Se os dados históricos que alimentam o sistema refletirem distorções antigas [...], a máquina não as corrigirá: aprenderá com elas e as reproduzirá”. Substituindo-se “refletirem” por “refletissem”, a correlação entre tempos e modos verbais estará plenamente adequada em:",
+      "variantesEnunciado": [
+        "Considere o trecho do 2º parágrafo “Se os dados históricos que alimentam o sistema refletirem distorções antigas [...], a máquina não as corrigirá: aprenderá com elas e as reproduzirá”. Caso a forma “refletirem” seja substituída por “refletissem”, a frase em que os demais verbos estão corretamente ajustados é:",
+        "Ao reescrever o trecho “Se os dados históricos que alimentam o sistema refletirem distorções antigas [...], a máquina não as corrigirá: aprenderá com elas e as reproduzirá” (2º parágrafo) com a forma “refletissem”, mantém-se a adequada correlação entre tempos e modos verbais em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Se os dados históricos refletissem distorções antigas, a máquina não as corrigirá: aprenderá com elas e as reproduzirá.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O imperfeito do subjuntivo (“refletissem”) apresenta a condição como hipotética, e a consequência deve vir no futuro do pretérito. O futuro do presente (“corrigirá”, “aprenderá”, “reproduzirá”) correlaciona-se com o futuro do subjuntivo (“refletirem”), como no original."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Se os dados históricos refletissem distorções antigas, a máquina não as corrigiria: aprenderia com elas e as reproduziria.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No período condicional, a correlação é: futuro do subjuntivo + futuro do presente (“Se refletirem..., não as corrigirá”) para hipótese possível; imperfeito do subjuntivo + futuro do pretérito (“Se refletissem..., não as corrigiria”) para hipótese menos provável ou irreal. Trocado o tempo da condição, todos os verbos da consequência passam ao futuro do pretérito: “corrigiria”, “aprenderia”, “reproduziria”.",
+          "versaoInvertidaFalsa": "Com a condição no imperfeito do subjuntivo (“Se os dados refletissem”), a consequência deve permanecer no futuro do presente: “a máquina não as corrigirá”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Se os dados históricos refletissem distorções antigas, a máquina não as corrigira: aprendera com elas e reproduzira-as.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Corrigira”, “aprendera” e “reproduzira” estão no pretérito mais-que-perfeito do indicativo, que indica fato passado anterior a outro passado. Esse tempo não exprime a consequência de uma hipótese; o correto é o futuro do pretérito."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Se os dados históricos refletissem distorções antigas, a máquina não as corrija: aprenda com elas e as reproduza.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O presente do subjuntivo (“corrija”, “aprenda”, “reproduza”) não pode expressar, na oração principal, a consequência de uma condição hipotética. Exige-se o futuro do pretérito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Caso os dados históricos refletissem distorções antigas, a máquina não as corrigirá: aprenderia com elas e as reproduziria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mistura tempos: “corrigirá” (futuro do presente) com “aprenderia” e “reproduziria” (futuro do pretérito). Com a condição no imperfeito do subjuntivo (“Caso [...] refletissem”), todos os verbos da consequência devem estar no futuro do pretérito."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca apenas o tempo da condição e verifica se o candidato ajusta todos os verbos da consequência. O par mais cobrado: futuro do subjuntivo com futuro do presente; imperfeito do subjuntivo com futuro do pretérito. O mais-que-perfeito do indicativo (“corrigira”) é armadilha de forma parecida.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a correlação verbal correta em períodos condicionais com “se”?",
+        "resposta": "Futuro do subjuntivo + futuro do presente (“Se refletirem, corrigirá”); imperfeito do subjuntivo + futuro do pretérito (“Se refletissem, corrigiria”); mais-que-perfeito do subjuntivo + futuro do pretérito composto (“Se tivessem refletido, teria corrigido”)."
+      },
+      "conceitosChave": ["Correlação verbal: condicionais", "Modos verbais: subjuntivo"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Verbo” (emprego dos tempos do subjuntivo e do futuro do pretérito); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Correlação de tempos”; texto lp-t03, 2º parágrafo."
+    },
+    {
+      "id": "lp-014",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Pontuação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "lp-t03",
+      "enunciadoBase": "Atente para a pontuação dos trechos “o Estado ganhará em agilidade, e o contribuinte, em economia” (1º parágrafo) e “Se os dados históricos que alimentam o sistema refletirem distorções antigas — fiscalizações concentradas sempre nas mesmas regiões, por exemplo —, a máquina não as corrigirá” (2º parágrafo). Considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "Considere os sinais de pontuação empregados em “o Estado ganhará em agilidade, e o contribuinte, em economia” (1º parágrafo) e em “Se os dados históricos que alimentam o sistema refletirem distorções antigas — fiscalizações concentradas sempre nas mesmas regiões, por exemplo —, a máquina não as corrigirá” (2º parágrafo). Considere as afirmativas a seguir.",
+        "A respeito da pontuação de dois trechos do artigo — “o Estado ganhará em agilidade, e o contribuinte, em economia” (1º parágrafo) e “Se os dados históricos que alimentam o sistema refletirem distorções antigas — fiscalizações concentradas sempre nas mesmas regiões, por exemplo —, a máquina não as corrigirá” (2º parágrafo) —, considere as afirmações abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No primeiro trecho, a vírgula depois de “contribuinte” marca a omissão do verbo “ganhará”, já expresso na oração anterior.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Lê-se “e o contribuinte [ganhará] em economia”: a vírgula ocupa o lugar do verbo elíptico (zeugma)."
+        },
+        {
+          "texto": "No segundo trecho, os travessões isolam um exemplo das “distorções antigas” e poderiam ser substituídos por parênteses sem prejuízo da correção.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Travessões duplos e parênteses isolam intercalações explicativas ou exemplificativas e são intercambiáveis nessa função."
+        },
+        {
+          "texto": "No segundo trecho, a vírgula depois do segundo travessão é indevida, pois separa o sujeito “a máquina” de seu verbo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A vírgula fecha a oração adverbial condicional anteposta (“Se os dados [...] refletirem distorções antigas”); “a máquina” vem depois dela e continua unida a “corrigirá”."
+        },
+        {
+          "texto": "No primeiro trecho, a vírgula antes de “e” é proibida, porque a conjunção aditiva nunca pode ser precedida de vírgula.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A vírgula antes de “e” é admitida, entre outros casos, quando as orações coordenadas têm sujeitos diferentes (“o Estado” e “o contribuinte”)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: em “e o contribuinte, em economia”, a vírgula assinala a elipse do verbo “ganhará” (zeugma). II: os travessões duplos isolam uma intercalação exemplificativa (“por exemplo”) e equivalem, nessa função, aos parênteses. III é falsa: a vírgula fecha a oração adverbial condicional anteposta, separando-a da principal; não há vírgula entre “a máquina” e “corrigirá”. IV é falsa: a vírgula antes de “e” é admitida quando as orações têm sujeitos diferentes.",
+          "versaoInvertidaFalsa": "No trecho “e o contribuinte, em economia”, a vírgula separa indevidamente o sujeito “o contribuinte” de seu complemento, pois nenhum verbo foi omitido."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa. A vírgula depois do segundo travessão marca o fim da oração subordinada condicional anteposta; o sujeito “a máquina” vem logo depois e permanece unido ao verbo “corrigirá”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está correta, mas a IV é falsa: não há proibição absoluta de vírgula antes de “e”; ela é usual quando as orações coordenadas têm sujeitos distintos, como “o Estado” e “o contribuinte”. Falta a I, também correta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmações falsas. A vírgula do segundo trecho fecha a oração condicional anteposta, e a do primeiro, antes de “e”, é legítima com sujeitos diferentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I está correta, mas a IV não: a regra “nunca há vírgula antes de e” é uma generalização indevida; com sujeitos diferentes, a vírgula antes da aditiva é aceita. Falta a II, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A FCC adora a vírgula da elipse verbal (zeugma), que parece separar sujeito e complemento. Também cobra a vírgula depois do travessão: ela pertence à estrutura da frase (fim da oração condicional anteposta), e não ao trecho intercalado.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve a vírgula em “o Estado ganhará em agilidade, e o contribuinte, em economia”?",
+        "resposta": "A vírgula depois de “contribuinte” indica a omissão do verbo “ganhará”, já expresso antes (zeugma). Ela não separa sujeito de complemento: ocupa o lugar do verbo elíptico."
+      },
+      "conceitosChave": ["Pontuação: vírgula", "Pontuação: travessão", "Figuras de linguagem: zeugma"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pontuação” (vírgula para indicar a elipse do verbo; vírgula com orações adverbiais antepostas); Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pontuação” (travessão e parênteses); texto lp-t03, 1º e 2º parágrafos."
+    },
+    {
+      "id": "lp-015",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "assertivas",
+      "textoApoioId": "lp-t04",
+      "enunciadoBase": "O texto trata das causas, das consequências e das soluções para a ilha de calor urbana. Considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "Com base nas informações do texto de divulgação científica sobre a ilha de calor urbana, considere as afirmativas a seguir.",
+        "A respeito do fenômeno descrito no texto, de suas causas e das medidas que o atenuam, considere as afirmações abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A diferença de temperatura entre áreas densamente construídas e as regiões vizinhas tende a se acentuar depois do pôr do sol.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O 1º parágrafo diz que as áreas construídas registram temperaturas mais altas “sobretudo depois do pôr do sol”."
+        },
+        {
+          "texto": "A transpiração das plantas consome energia que, de outro modo, aqueceria o ar, o que explica o papel da vegetação no resfriamento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a explicação do 2º parágrafo para o “resfriamento natural que falta às avenidas”."
+        },
+        {
+          "texto": "Segundo o texto, a arborização de calçadas, por si só, é suficiente para eliminar o fenômeno nas grandes cidades.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O 4º parágrafo afirma que nenhuma medida “é milagrosa isoladamente” e que o efeito aparece quando elas se somam."
+        },
+        {
+          "texto": "O uso de aparelhos de ar-condicionado, embora alivie o calor dos interiores, contribui para aquecer o ambiente externo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os aparelhos “lançam ao ambiente o calor que retiram dos interiores” e alimentam um “círculo vicioso” (2º e 3º parágrafos)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão corretas, mas a IV também: o texto afirma que os aparelhos de ar-condicionado lançam para fora o calor retirado dos interiores e que, quanto mais aparelhos ligados, “mais calor é despejado nas ruas”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa: o texto afirma que nenhuma medida é “milagrosa isoladamente” e que o efeito aparece quando elas se somam. Além disso, a resposta omite I e IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que contraria o 4º parágrafo (“Nenhuma delas é milagrosa isoladamente”), e exclui a II, que reproduz a explicação do 2º parágrafo sobre a transpiração das plantas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: as áreas construídas registram temperaturas mais altas “sobretudo depois do pôr do sol” (1º parágrafo). II: as plantas, “ao transpirarem, consomem energia que de outro modo aqueceria o ar” (2º parágrafo). IV: os aparelhos de ar-condicionado “lançam ao ambiente o calor que retiram dos interiores” e alimentam um “círculo vicioso” (2º e 3º parágrafos). III é falsa: “Nenhuma delas é milagrosa isoladamente; [...] o efeito aparece quando elas se somam” (4º parágrafo).",
+          "versaoInvertidaFalsa": "Segundo o texto, a diferença de temperatura entre a cidade e as regiões vizinhas é maior durante o dia, quando a radiação solar atinge diretamente o asfalto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III, não. A resposta também deixa de fora I e II, que correspondem a informações explícitas do 1º e do 2º parágrafos."
+        }
+      ],
+      "pegadinhaFCC": "A assertiva falsa usa “por si só” para generalizar o que o texto relativiza (“Nenhuma delas é milagrosa isoladamente”). Em questões de localização de informação, palavras como “suficiente”, “sempre” e “por si só” costumam indicar extrapolação.",
+      "resumoFlashcard": {
+        "pergunta": "Segundo “Por que a cidade esquenta”, quais fatores produzem a ilha de calor urbana?",
+        "resposta": "Materiais que absorvem radiação de dia e a devolvem à noite (asfalto, concreto, telhados escuros), escassez de vegetação, prédios que dificultam a circulação dos ventos e calor lançado por motores e aparelhos de ar-condicionado. O efeito é mais forte depois do pôr do sol."
+      },
+      "conceitosChave": ["Interpretação: localização de informação", "Extrapolação"],
+      "fundamentacao": "Texto lp-t04, 1º a 4º parágrafos; localização de informações explícitas e identificação de extrapolação."
+    },
+    {
+      "id": "lp-016",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Denotação, conotação e figuras de linguagem",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t04",
+      "enunciadoBase": "No 2º parágrafo, o segmento “como se a cidade inteira fosse uma pedra deixada ao sol” constitui",
+      "variantesEnunciado": [
+        "Considerando-se a linguagem figurada, o segmento “como se a cidade inteira fosse uma pedra deixada ao sol”, do 2º parágrafo, é corretamente classificado como",
+        "O autor recorre à linguagem figurada para explicar o fenômeno descrito. No 2º parágrafo, “como se a cidade inteira fosse uma pedra deixada ao sol” é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "uma comparação, que associa o comportamento térmico da cidade ao de uma pedra exposta ao sol.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A conjunção comparativa hipotética “como se” estabelece uma comparação (símile) explícita: a cidade absorve radiação de dia e a devolve lentamente à noite, como faz uma pedra deixada ao sol. Diferentemente da metáfora, a comparação traz o conectivo que explicita a semelhança (“como”, “como se”, “tal qual”).",
+          "versaoInvertidaFalsa": "No 2º parágrafo, o segmento “como se a cidade inteira fosse uma pedra deixada ao sol” é uma metáfora, pois não apresenta conectivo que explicite a semelhança entre os termos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "uma hipérbole, que exagera deliberadamente a quantidade de radiação solar que o asfalto e o concreto podem absorver.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há exagero intencional: a imagem ilustra um processo real (absorção diurna e liberação noturna de calor). A hipérbole amplia deliberadamente um fato (“morri de calor”); aqui, a função é didática, típica da divulgação científica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "uma antítese, que opõe o calor acumulado pela cidade durante o dia ao frio registrado nas zonas rurais vizinhas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A antítese aproxima termos de sentidos opostos. O segmento não opõe calor e frio; relaciona por semelhança a cidade e a pedra, por meio do conectivo “como se”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "um eufemismo, que atenua os danos que as ondas de calor mais intensas causam à saúde dos moradores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O eufemismo suaviza uma ideia desagradável. O segmento trata do mecanismo físico de acúmulo de calor, e não dos danos à saúde, mencionados só no 3º parágrafo e sem atenuação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma personificação, que atribui à cidade a capacidade humana de sentir o calor do sol e de se proteger dele.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A personificação atribui características humanas a seres inanimados. Comparar a cidade a uma pedra, outro ser inanimado, não lhe dá traços humanos. No texto, há personificação no fim (“voltar a respirar”), não nesse trecho."
+        }
+      ],
+      "pegadinhaFCC": "A presença do conectivo (“como se”) é o que distingue a comparação da metáfora. A banca oferece hipérbole e personificação para quem associa toda imagem expressiva a exagero ou a humanização.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre comparação e metáfora?",
+        "resposta": "Na comparação (símile), a semelhança é explicitada por um conectivo (“como”, “como se”, “tal qual”): “como se a cidade fosse uma pedra”. Na metáfora, a aproximação é implícita, sem conectivo: “a cidade é uma pedra ao sol”."
+      },
+      "conceitosChave": ["Figuras de linguagem: comparação", "Figuras de linguagem: metáfora"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Figuras de linguagem” (comparação e metáfora); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Estilística”; texto lp-t04, 2º parágrafo."
+    },
+    {
+      "id": "lp-017",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Coordenação, subordinação e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t04",
+      "enunciadoBase": "Mantendo-se a correção e o sentido, o segmento “à medida que”, em “o termômetro do painel cai alguns graus à medida que os prédios rareiam” (1º parágrafo), pode ser substituído por:",
+      "variantesEnunciado": [
+        "No 1º parágrafo, a locução “à medida que” (em “o termômetro do painel cai alguns graus à medida que os prédios rareiam”) admite, sem prejuízo da correção e do sentido, a substituição por:",
+        "Considerando-se a relação de sentido que estabelece no trecho “o termômetro do painel cai alguns graus à medida que os prédios rareiam”, a locução “à medida que” pode ser corretamente substituída por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "uma vez que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com o indicativo, “uma vez que” é causal: apresentaria a rarefação dos prédios como causa da queda do termômetro, e não como processo que varia junto com ela. A relação original é de proporção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "à proporção que",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “À medida que” é locução conjuntiva proporcional: a temperatura cai na proporção em que os prédios rareiam. “À proporção que” tem o mesmo valor e mantém a correção (com acento grave, por ser locução feminina). Também serviria “conforme”. Não se confunda “à medida que” com “na medida em que”, de uso sobretudo causal.",
+          "versaoInvertidaFalsa": "No 1º parágrafo, “à medida que” equivale a “uma vez que”, pois a locução apresenta a rarefação dos prédios como causa da queda de temperatura."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ainda que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Ainda que” é concessiva e exige subjuntivo (“ainda que os prédios rareiem”). Além do erro de modo verbal, o sentido mudaria: a queda de temperatura ocorreria apesar da rarefação dos prédios, e não em proporção a ela."
+        },
+        {
+          "id": "opt-4",
+          "texto": "contanto que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Contanto que” é condicional e também pede subjuntivo. A substituição transformaria a variação proporcional em condição para a queda de temperatura, alterando o sentido e a correção."
+        },
+        {
+          "id": "opt-5",
+          "texto": "de tal maneira que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “De tal maneira que” é consecutiva: apresentaria a rarefação dos prédios como consequência da queda do termômetro, invertendo a relação lógica do texto."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores mantêm a estrutura de locução conjuntiva, mas trocam a relação lógica (causa, concessão, condição, consequência). O candidato deve reconhecer que o trecho expressa a variação simultânea de dois fatos, isto é, proporção.",
+      "resumoFlashcard": {
+        "pergunta": "Que relação de sentido estabelece a locução “à medida que”?",
+        "resposta": "Proporção: dois fatos variam juntos (“a temperatura cai à medida que os prédios rareiam”). Equivale a “à proporção que” e “conforme”. Não se confunde com “na medida em que”, usada sobretudo com valor causal, nem com as formas híbridas “à medida em que” e “na medida que”."
+      },
+      "conceitosChave": ["Conectivos: valor semântico", "Conectivos: proporção"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Conjunções subordinativas proporcionais”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Locuções conjuntivas”; texto lp-t04, 1º parágrafo."
+    },
+    {
+      "id": "lp-018",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Concordância nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere as frases: (1) Seguem …… ao ofício as planilhas com os valores contratados. (2) Para a análise das propostas, é …… a presença de um técnico da área de TI. (3) Os membros da comissão ficaram …… preocupados com o prazo de entrega. (4) Houve …… reclamações neste mês do que no anterior. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Atente para as frases a seguir, extraídas de comunicações internas de uma unidade técnica: (1) Seguem …… ao ofício as planilhas com os valores contratados. (2) Para a análise das propostas, é …… a presença de um técnico da área de TI. (3) Os membros da comissão ficaram …… preocupados com o prazo de entrega. (4) Houve …… reclamações neste mês do que no anterior. De acordo com a norma-padrão, as lacunas são preenchidas, respectivamente, por:",
+        "Nas frases (1) Seguem …… ao ofício as planilhas com os valores contratados; (2) Para a análise das propostas, é …… a presença de um técnico da área de TI; (3) Os membros da comissão ficaram …… preocupados com o prazo de entrega; e (4) Houve …… reclamações neste mês do que no anterior, as regras de concordância nominal são atendidas com o preenchimento, na ordem dada, por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "anexo − necessário − meios − menas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Erra as quatro lacunas: “anexo” deve concordar com “as planilhas”; com o artigo (“a presença”), “necessário” concorda com o substantivo; “meio” com valor de advérbio (= um pouco) é invariável; e “menas” não existe na norma-padrão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "anexas − necessária − meio − menos",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. (1) “Anexo” é adjetivo e concorda com o substantivo a que se refere: “Seguem anexas [...] as planilhas” (a forma invariável seria “em anexo”). (2) Em “é necessário”, o adjetivo varia quando o sujeito vem determinado por artigo: “é necessária a presença”. (3) “Meio”, modificando o adjetivo “preocupados”, é advérbio (= um tanto) e não varia. (4) “Menos” é invariável: não existe “menas”.",
+          "versaoInvertidaFalsa": "anexo − necessário − meios − menos, pois “anexo” e “necessário” são invariáveis, e “meio” concorda com o adjetivo que modifica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "anexas − necessário − meio − menos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “anexas”, “meio” e “menos”, mas erra “necessário”. Como o sujeito “a presença de um técnico” está determinado pelo artigo “a”, o adjetivo concorda: “é necessária a presença”. Sem artigo, ficaria “é necessário presença”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "anexo − necessária − meio − menas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “necessária” e “meio”, mas erra “anexo”, que deve concordar com “as planilhas”, e emprega “menas”, forma inexistente na norma-padrão (“menos” é invariável)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "anexas − necessária − meios − menos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “anexas”, “necessária” e “menos”, mas flexiona “meio”, que, modificando o adjetivo “preocupados”, é advérbio e permanece invariável: “ficaram meio preocupados”."
+        }
+      ],
+      "pegadinhaFCC": "A FCC combina numa só questão palavras que variam (“anexo”, “necessário” com artigo) e que não variam (“meio” advérbio, “menos”). O critério decisivo é a classe gramatical no contexto: “meio” é numeral antes de substantivo (“meia hora”) e advérbio antes de adjetivo (“meio preocupados”).",
+      "resumoFlashcard": {
+        "pergunta": "Quando “é necessário” varia e quando “meio” varia?",
+        "resposta": "“É necessário” varia se o sujeito tiver artigo ou determinante (“é necessária a presença”); sem determinante, fica invariável (“é necessário presença”). “Meio” varia como numeral (“meia hora”) e não varia como advérbio (“ficaram meio preocupados”)."
+      },
+      "conceitosChave": ["Concordância nominal", "Palavras variáveis e invariáveis"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Concordância nominal” (anexo, meio, menos; “é necessário”); Cegalla, Novíssima Gramática da Língua Portuguesa, “Concordância nominal: casos especiais”."
+    },
+    {
+      "id": "lp-019",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Regência nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A regência verbal está plenamente adequada à norma-padrão na frase:",
+      "variantesEnunciado": [
+        "Está correta, quanto à regência verbal, a seguinte frase:",
+        "Considerando-se a norma-padrão da língua, a frase em que todos os verbos estão empregados com a regência adequada é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Os técnicos preferem mais o atendimento presencial do que o remoto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Preferir” é transitivo direto e indireto e rege a preposição “a”: prefere-se uma coisa a outra. A norma-padrão rejeita “preferir mais” (redundante, pois preferir já indica escolha) e “do que”. Correto: “preferem o atendimento presencial ao remoto”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Os jurisdicionados não obedeceram o prazo fixado para a entrega das contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Obedecer” (e “desobedecer”) é transitivo indireto e exige a preposição “a”: “não obedeceram ao prazo”. É um dos verbos de regência mais cobrados pela FCC justamente porque o uso coloquial o trata como transitivo direto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Informamos aos interessados de que o resultado será publicado amanhã.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Informar” admite duas construções: informar algo a alguém (“Informamos aos interessados que...”) ou informar alguém de algo (“Informamos os interessados de que...”). A frase mistura as duas e fica com dois complementos preposicionados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Os auditores assistiram à apresentação em que se discutiu o novo sistema.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No sentido de ver, presenciar, “assistir” é transitivo indireto e rege a preposição “a”; somada ao artigo de “a apresentação”, ocorre a crase: “assistiram à apresentação”. No sentido de ajudar, prestar assistência, seria transitivo direto (“o médico assistiu o paciente”). Em “em que se discutiu o novo sistema”, a passiva sintética concorda com o sujeito singular.",
+          "versaoInvertidaFalsa": "No sentido de ver, o verbo assistir é transitivo direto, como em “Os auditores assistiram a apresentação em que se discutiu o novo sistema”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A equipe esqueceu do compromisso marcado com o gestor da unidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Esquecer” é transitivo direto (“esqueceu o compromisso”); só rege a preposição “de” na forma pronominal (“esqueceu-se do compromisso”). O mesmo vale para “lembrar”. A frase mistura as duas construções."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa verbos cuja regência coloquial difere da norma-padrão: “assistir” (ver) e “obedecer” com “a”, “preferir” sem “mais” e sem “do que”, “esquecer/lembrar” com “de” só na forma pronominal, “informar” com um objeto direto e um indireto.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a regência de “assistir” nos sentidos de ver e de ajudar?",
+        "resposta": "Ver, presenciar: transitivo indireto, com “a” (“assistiu ao jogo”, “assistiu à reunião”). Ajudar, prestar assistência: transitivo direto (“o médico assistiu o paciente”). No sentido de caber, competir, também é indireto (“assiste ao réu o direito”)."
+      },
+      "conceitosChave": ["Regência verbal", "Regência: assistir, obedecer, preferir"],
+      "fundamentacao": "Celso Pedro Luft, Dicionário Prático de Regência Verbal (verbetes assistir, obedecer, preferir, esquecer e informar); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Regência”."
+    },
+    {
+      "id": "lp-020",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Flexão, vozes verbais e correlação de tempos e modos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere as frases: (1) Se o relator …… (intervir) no processo, a equipe será ouvida novamente. (2) Quando a comissão …… (ver) os documentos, poderá emitir o parecer. (3) Os técnicos se …… (propor) a revisar todos os contratos no mês passado. (4) Se a unidade …… (manter) o cronograma, o sistema entrará em produção em março. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Atente para as frases abaixo, em que os verbos entre parênteses devem ser flexionados de acordo com a norma-padrão: (1) Se o relator …… (intervir) no processo, a equipe será ouvida novamente. (2) Quando a comissão …… (ver) os documentos, poderá emitir o parecer. (3) Os técnicos se …… (propor) a revisar todos os contratos no mês passado. (4) Se a unidade …… (manter) o cronograma, o sistema entrará em produção em março. Completam, correta e respectivamente, as lacunas:",
+        "Em comunicações internas de uma unidade técnica, foram redigidas as frases: (1) Se o relator …… (intervir) no processo, a equipe será ouvida novamente. (2) Quando a comissão …… (ver) os documentos, poderá emitir o parecer. (3) Os técnicos se …… (propor) a revisar todos os contratos no mês passado. (4) Se a unidade …… (manter) o cronograma, o sistema entrará em produção em março. As formas verbais que preenchem, correta e respectivamente, as lacunas são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "intervir − ver − propuseram − manter",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Usa o infinitivo onde se exige o futuro do subjuntivo. “Intervir” e “manter” seguem a conjugação de “vir” e “ter”: se ele vier → se ele intervier; se ele tiver → se ele mantiver. E o futuro do subjuntivo de “ver” é “vir” (“quando a comissão vir”)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "interviesse − vir − propuseram − mantivesse",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Interviesse” e “mantivesse” são formas do pretérito imperfeito do subjuntivo e não se correlacionam com os futuros “será ouvida” e “entrará”. Com o futuro do presente na oração principal, a condicional pede o futuro do subjuntivo: “intervier”, “mantiver”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "intervier − vir − propuseram − mantiver",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os derivados seguem o verbo primitivo: “intervir” como “vir” (se ele vier → se ele intervier), “manter” como “ter” (se ele tiver → se ele mantiver) e “propor” como “pôr” (eles puseram → eles propuseram). O futuro do subjuntivo de “ver” é “vir” (quando eu vir, quando ela vir), que não se confunde com o infinitivo do verbo “vir”.",
+          "versaoInvertidaFalsa": "intervir − ver − proporam − manter, pois os derivados de vir, ter e pôr seguem a conjugação regular dos verbos terminados em -ir, -er e -or."
+        },
+        {
+          "id": "opt-4",
+          "texto": "intervier − ver − proporam − mantiver",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “intervier” e “mantiver”, mas erra “ver” (o futuro do subjuntivo é “vir”) e “proporam” (“propor” segue “pôr”: puseram → propuseram)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "intervir − vir − proporam − manter",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta apenas “vir”. “Intervir” e “manter” no lugar do futuro do subjuntivo e “proporam” no lugar de “propuseram” são erros frequentes de flexão de verbos derivados de “vir”, “ter” e “pôr”."
+        }
+      ],
+      "pegadinhaFCC": "Os derivados de “vir”, “ter”, “pôr” e “ver” seguem o verbo primitivo. O erro coloquial (“se ele intervir”, “se ele manter”, “quando eu ver”, “eles proporam”) é exatamente o que a banca põe nas alternativas.",
+      "resumoFlashcard": {
+        "pergunta": "Como se flexionam no futuro do subjuntivo os verbos intervir, manter e ver?",
+        "resposta": "Seguem os primitivos: intervir como vir (“se ele intervier”), manter como ter (“se ele mantiver”); ver tem futuro do subjuntivo “vir” (“quando ela vir”). No pretérito perfeito, propor segue pôr: “eles propuseram”."
+      },
+      "conceitosChave": ["Flexão verbal: irregulares", "Futuro do subjuntivo"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Verbos irregulares” (vir, ter, pôr, ver e derivados); Cegalla, Novíssima Gramática da Língua Portuguesa, “Conjugação dos verbos irregulares”."
+    }
+  ]
+}

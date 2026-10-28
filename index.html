@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Workspace de estudo para o concurso TCE-GO 2026 (FCC) — Técnico de Controle Externo, TI." />
+    <title>Caderno FCC · TCE-GO TI</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Aplica tema e fonte antes da primeira pintura (sem flash claro/escuro).
+      (function () {
+        try {
+          var bruto = localStorage.getItem("asperfcc:ui");
+          var estado = bruto ? (JSON.parse(bruto).state || {}) : {};
+          var raiz = document.documentElement;
+          var tema = estado.tema || "sistema";
+          if (tema === "claro") raiz.dataset.theme = "light";
+          else if (tema === "escuro") raiz.dataset.theme = "dark";
+          if (estado.fonteLeitura && estado.fonteLeitura !== "newsreader") raiz.dataset.readingFont = estado.fonteLeitura;
+          if (estado.tamanhoLeitura === 17) raiz.dataset.readingSize = "17";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

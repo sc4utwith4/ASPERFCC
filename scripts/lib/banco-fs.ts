@@ -15,7 +15,7 @@ export function lerJson(arquivo: string): unknown {
   try {
     return JSON.parse(bruto);
   } catch (e) {
-    throw new Error(`JSON inválido em ${relativo(arquivo)}: ${(e as Error).message}`);
+    throw new Error(`JSON inválido em ${relativo(arquivo)}: ${(e as Error).message}`, { cause: e });
   }
 }
 

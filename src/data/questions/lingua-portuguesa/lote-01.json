@@ -1,0 +1,569 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "lp-001",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t01",
+      "enunciadoBase": "Considerando-se o texto como um todo, depreende-se corretamente que o narrador",
+      "variantesEnunciado": [
+        "De acordo com o texto, especialmente com o 3º e o 4º parágrafos, é correto afirmar que o narrador",
+        "Infere-se da crônica, no que diz respeito à digitalização do arquivo, que o narrador",
+        "Conclui-se corretamente do texto que o narrador, ao relatar seu trabalho na comissão de digitalização,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "lamenta a digitalização do arquivo, pois a imagem do escâner, por ser plana, condena ao esquecimento o processo que o papel conservava.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O narrador afirma o contrário: sem a digitalização, o processo “continuaria condenado à ferrugem”, e o arquivo digital “democratiza a memória” (4º parágrafo). Ele também nega o saudosismo (“Não escrevo isto por saudosismo”). A ressalva sobre a imagem “plana” não equivale a lamentar a digitalização."
+        },
+        {
+          "id": "opt-2",
+          "texto": "reconhece que a digitalização amplia o acesso à memória, mas observa que a reprodução digital não conserva tudo o que o original continha.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 4º parágrafo afirma que “o arquivo digital democratiza a memória”, ao passo que o papel a aprisionava; o 3º mostra que o escâner não reproduziu o cheiro, o peso nem a hesitação das emendas: a imagem “conserva o registro e perde a espessura”. A posição do narrador é de adesão crítica: reconhece o ganho e aponta a perda, sintetizada na ideia de que “toda memória preservada é também uma memória traduzida”.",
+          "versaoInvertidaFalsa": "rejeita a digitalização do arquivo por saudosismo, pois considera que a reprodução digital aprisiona a memória que o papel tornava acessível a todos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "considera o processo de 1974 relevante sobretudo pelo assunto de que tratava, a compra de carteiras escolares, mais do que pelas anotações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto qualifica o assunto como “prosaico” e diz que o que prendeu o narrador “foram as margens”, isto é, as anotações do servidor desconfiado (2º parágrafo). A alternativa inverte a hierarquia de importância estabelecida pelo narrador."
+        },
+        {
+          "id": "opt-4",
+          "texto": "atribui ao servidor anônimo a iniciativa de digitalizar o arquivo, já que foi a desconfiança dele que motivou a criação da comissão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem foi designado para a comissão de digitalização foi o próprio narrador (1º parágrafo). O servidor anônimo é o autor das anotações de 1974; o texto não lhe atribui nenhuma relação com a digitalização. A alternativa mistura personagens e tempos distintos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "conclui que a imagem digital, por reproduzir fielmente cada traço, torna dispensável a preservação dos documentos em papel.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não defende o descarte do papel. Ao contrário, enumera o que a imagem não reproduz (cheiro, peso, hesitação das emendas) e conclui que ela “é fiel, mas é plana”. A fidelidade ao traço não implica, para o narrador, que o original se torne dispensável: a alternativa extrapola o texto."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece leituras extremas (rejeição saudosista ou adesão sem ressalvas) para quem lê só um dos parágrafos. O texto sustenta as duas faces: a digitalização democratiza a memória (4º parágrafo), mas a imagem “perde a espessura” (3º parágrafo).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a posição do narrador de “A gaveta de baixo” sobre a digitalização do arquivo?",
+        "resposta": "Adesão crítica: ele reconhece que o arquivo digital democratiza a memória, que o papel aprisionava, mas observa que a imagem é “plana” e não conserva cheiro, peso e hesitações do original. Por isso conclui que toda memória preservada é também traduzida."
+      },
+      "conceitosChave": ["Interpretação: posição do autor", "Inferência textual"],
+      "fundamentacao": "Texto lp-t01, 3º e 4º parágrafos; leitura inferencial (identificação do ponto de vista do narrador)."
+    },
+    {
+      "id": "lp-002",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Coordenação, subordinação e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "lp-t01",
+      "enunciadoBase": "Mantendo-se o sentido e a correção, o segmento “ao passo que”, em “O arquivo digital democratiza a memória, ao passo que o papel a aprisionava numa sala que poucos visitavam” (4º parágrafo), pode ser substituído por:",
+      "variantesEnunciado": [
+        "Considerando-se o contexto, o conectivo “ao passo que” (4º parágrafo) pode ser substituído, sem prejuízo da correção e do sentido, por:",
+        "No trecho “O arquivo digital democratiza a memória, ao passo que o papel a aprisionava”, a locução “ao passo que” poderia dar lugar, mantida a relação de sentido original, a:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "à medida que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “À medida que” exprime proporção (dois processos que variam juntos, como em “a temperatura cai à medida que os prédios rareiam”). “Ao passo que” pode ter esse valor, mas no trecho opõe duas situações: o digital democratiza, o papel aprisionava. É a armadilha da dupla leitura do conectivo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "visto que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Visto que” é conjunção causal. A substituição faria do aprisionamento da memória pelo papel a causa de o arquivo digital democratizá-la, relação que o texto não estabelece: as duas orações apenas se contrapõem."
+        },
+        {
+          "id": "opt-3",
+          "texto": "de modo que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “De modo que” é consecutiva: apresentaria o aprisionamento pelo papel como consequência da democratização digital, o que é ilógico, inclusive no tempo (“aprisionava” está no passado). O valor original é de contraste."
+        },
+        {
+          "id": "opt-4",
+          "texto": "enquanto",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No trecho, “ao passo que” opõe duas situações contrárias (o arquivo digital democratiza a memória × o papel a aprisionava). Nesse valor de contraste, equivale a “enquanto”, que mantém a correção e o sentido: “O arquivo digital democratiza a memória, enquanto o papel a aprisionava...”. Lembre que “ao passo que” também pode indicar proporção; é o contexto que decide.",
+          "versaoInvertidaFalsa": "No trecho do 4º parágrafo, “ao passo que” equivale a “à medida que”, pois estabelece entre as orações uma relação de proporção, e não de contraste."
+        },
+        {
+          "id": "opt-5",
+          "texto": "contanto que",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Contanto que” é condicional e exige subjuntivo (“contanto que o papel a aprisionasse”). Além do erro de modo verbal, transformaria o contraste em condição, alterando o sentido do período."
+        }
+      ],
+      "pegadinhaFCC": "“Ao passo que” tem dois valores (proporção e contraste), e a banca oferece “à medida que” para quem decorou só o primeiro. No trecho, as orações se opõem (democratiza × aprisionava), e o equivalente é “enquanto”.",
+      "resumoFlashcard": {
+        "pergunta": "Quais valores pode ter a locução “ao passo que” e qual é o equivalente de cada um?",
+        "resposta": "Pode indicar proporção (= à medida que, à proporção que) ou contraste entre fatos (= enquanto). O contexto define o valor: quando as orações apresentam situações opostas, é contraste."
+      },
+      "conceitosChave": ["Conectivos: valor semântico", "Conectivos: proporção × contraste"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., capítulo das conjunções (locuções proporcionais e valor opositivo de “enquanto” e “ao passo que”); Cegalla, Novíssima Gramática da Língua Portuguesa, “Conjunções”; texto lp-t01, 4º parágrafo."
+    },
+    {
+      "id": "lp-003",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Morfossintaxe e pronomes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "lp-t01",
+      "enunciadoBase": "Atente para os seguintes segmentos do 4º parágrafo: “o papel a aprisionava numa sala que poucos visitavam” e “Cabe a nós, que a traduzimos, lembrar que por trás de cada arquivo há alguém”. Considere as afirmações abaixo.",
+      "variantesEnunciado": [
+        "Considere os trechos “o papel a aprisionava numa sala que poucos visitavam” e “Cabe a nós, que a traduzimos, lembrar que por trás de cada arquivo há alguém”, ambos do 4º parágrafo, e as afirmativas abaixo sobre os pronomes e conectivos neles empregados.",
+        "No 4º parágrafo, o narrador emprega pronomes e conectivos em “o papel a aprisionava numa sala que poucos visitavam” e em “Cabe a nós, que a traduzimos, lembrar que por trás de cada arquivo há alguém”. A respeito desses elementos, considere as afirmações a seguir."
+      ],
+      "assertivas": [
+        {
+          "texto": "Em “o papel a aprisionava”, o pronome “a” retoma “a memória” e exerce a função de objeto direto.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Reescrevendo: “o papel aprisionava a memória”. O pronome oblíquo átono “a” é o objeto direto de “aprisionava”."
+        },
+        {
+          "texto": "Em “numa sala que poucos visitavam”, o pronome relativo “que” retoma “sala” e exerce a função de sujeito do verbo “visitavam”.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O relativo retoma “sala”, mas é objeto direto: “poucos visitavam a sala”. O sujeito de “visitavam” é “poucos”."
+        },
+        {
+          "texto": "Em “Cabe a nós, que a traduzimos”, o relativo “que” retoma o pronome “nós”, razão pela qual o verbo “traduzimos” está na 1ª pessoa do plural.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Quando o relativo “que” é sujeito, o verbo da oração adjetiva concorda com o antecedente: “nós, que a traduzimos”."
+        },
+        {
+          "texto": "Em “lembrar que por trás de cada arquivo há alguém”, o “que” é pronome relativo, pois retoma o verbo “lembrar”.",
+          "verdadeira": false,
+          "explicacao": "Falsa. É conjunção integrante: não retoma termo algum e introduz a oração subordinada substantiva objetiva direta de “lembrar” (lembrar isso)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmação II, que é falsa: em “numa sala que poucos visitavam”, o sujeito de “visitavam” é “poucos”; o relativo “que” (= a qual) é o objeto direto (“poucos visitavam a sala”). As afirmações I e III estão corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmações falsas. Em II, o “que” é objeto direto, não sujeito; em IV, o “que” é conjunção integrante, que introduz a oração objetiva direta de “lembrar”, e não pronome relativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: “a” retoma “a memória” e é objeto direto de “aprisionava” (“o papel aprisionava a memória”). III: o relativo “que” retoma “nós”, e o verbo da oração adjetiva concorda com o antecedente (“nós traduzimos”). II é falsa porque o sujeito de “visitavam” é “poucos” e o “que” é objeto direto; IV é falsa porque o “que” depois de “lembrar” é conjunção integrante, que introduz oração subordinada substantiva objetiva direta (substituível por “isso”).",
+          "versaoInvertidaFalsa": "Em “Cabe a nós, que a traduzimos”, o verbo da oração adjetiva deveria estar na 3ª pessoa do singular, pois o relativo “que” não transmite ao verbo a pessoa do antecedente “nós”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmação III está correta, mas a IV não: o “que” de “lembrar que por trás de cada arquivo há alguém” não retoma termo algum; é conjunção integrante, e a oração que ele introduz funciona como objeto direto de “lembrar”. Também falta a afirmação I, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmação I é verdadeira, mas não é a única: a III também está correta, pois o verbo da oração adjetiva iniciada por “que” concorda com o antecedente “nós” (“que a traduzimos”)."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura funções do “que” (relativo sujeito, relativo objeto, conjunção integrante). Teste prático: se dá para trocar por “o qual/a qual”, é relativo; se dá para trocar por “isso”, é integrante. Para achar a função do relativo, reescreva a oração com o antecedente: “poucos visitavam a sala”.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar a função sintática do pronome relativo “que”?",
+        "resposta": "Substitua o relativo pelo antecedente e reescreva a oração adjetiva: em “a sala que poucos visitavam”, obtém-se “poucos visitavam a sala”, logo o “que” é objeto direto. Se o “que” não retoma nada e equivale a “isso”, é conjunção integrante."
+      },
+      "conceitosChave": ["Pronome relativo: função sintática", "Pronomes: referência", "Que: relativo × integrante"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Pronome relativo” e “Orações subordinadas substantivas”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Pronomes relativos”; texto lp-t01, 4º parágrafo."
+    },
+    {
+      "id": "lp-004",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Concordância nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "textoApoioId": "lp-t01",
+      "enunciadoBase": "Considere as frases elaboradas a partir do texto: (1) O móvel de aço estava emperrado porque ninguém o abria …… décadas. (2) Talvez ……, naquela gaveta, outros processos esquecidos, mas o narrador não chegou a procurá-los. (3) …… cinquenta anos que o processo repousava na gaveta quando o narrador o encontrou. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Com base na crônica, foram redigidas as frases a seguir: (1) O móvel de aço estava emperrado porque ninguém o abria …… décadas. (2) Talvez ……, naquela gaveta, outros processos esquecidos, mas o narrador não chegou a procurá-los. (3) …… cinquenta anos que o processo repousava na gaveta quando o narrador o encontrou. Completam, correta e respectivamente, as lacunas:",
+        "Atente para as frases abaixo, inspiradas no 1º e no 2º parágrafos do texto: (1) O móvel de aço estava emperrado porque ninguém o abria …… décadas. (2) Talvez ……, naquela gaveta, outros processos esquecidos, mas o narrador não chegou a procurá-los. (3) …… cinquenta anos que o processo repousava na gaveta quando o narrador o encontrou. De acordo com a norma-padrão, as lacunas são preenchidas, respectivamente, por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "haviam − houvessem − Faziam",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Põe no plural três verbos impessoais. “Haver” no sentido de tempo decorrido ou de existir e “fazer” indicando tempo não têm sujeito e ficam na 3ª pessoa do singular. “Décadas”, “processos” e “anos” não são sujeitos com que o verbo deva concordar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "havia − houvesse − Fazia",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. (1) “havia décadas”: “haver” indica tempo decorrido, é impessoal e, em correlação com o pretérito imperfeito “abria”, assume a forma “havia” (e não “há”), como no próprio texto. (2) “Talvez houvesse outros processos”: “haver” = existir, impessoal, no subjuntivo pedido por “talvez” anteposto; “outros processos” é objeto direto, por isso o verbo não vai ao plural. (3) “Fazia cinquenta anos”: “fazer” indicando tempo é impessoal e, no contexto passado (“repousava”, “encontrou”), fica no imperfeito.",
+          "versaoInvertidaFalsa": "haviam − houvessem − Faziam, pois os verbos haver e fazer concordam com os substantivos no plural que os acompanham."
+        },
+        {
+          "id": "opt-3",
+          "texto": "há − houvesse − Faz",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A concordância (singular) está certa, mas a correlação temporal não: com verbos no passado (“abria”, “repousava”, “encontrou”), o tempo decorrido se expressa por “havia” e “fazia”. “Faz cinquenta anos que o processo repousava [...] quando o narrador o encontrou” mistura presente e passado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "havia − houvessem − Fazia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “havia” e “Fazia”, mas erra “houvessem”: no sentido de existir, “haver” é impessoal também no subjuntivo, e “outros processos esquecidos” é objeto direto. O correto é “Talvez houvesse outros processos”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "haviam − houvesse − Faziam",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “houvesse”, mas flexiona no plural “haviam” e “Faziam”. Indicando tempo decorrido, “haver” e “fazer” são impessoais; “décadas” e “cinquenta anos” não são sujeitos, e o verbo permanece no singular."
+        }
+      ],
+      "pegadinhaFCC": "O plural dos termos seguintes (“décadas”, “processos”, “anos”) induz o candidato a flexionar verbos impessoais. Além da concordância, a FCC cobra a correlação: em contexto passado, usa-se “havia/fazia”, e não “há/faz”.",
+      "resumoFlashcard": {
+        "pergunta": "Como ficam os verbos haver e fazer quando indicam tempo decorrido e quando haver significa existir?",
+        "resposta": "São impessoais e ficam na 3ª pessoa do singular: “havia décadas”, “fazia anos”, “talvez houvesse processos”. O auxiliar de locução também fica no singular (“deve haver erros”). Em contexto passado, use “havia/fazia” em vez de “há/faz”."
+      },
+      "conceitosChave": ["Concordância: verbos impessoais", "Correlação verbal: havia × há"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Concordância verbal” (verbos impessoais haver e fazer); Cegalla, Novíssima Gramática da Língua Portuguesa, “Concordância verbal: verbos impessoais”; texto lp-t01, 1º parágrafo (“ninguém abria havia décadas”)."
+    },
+    {
+      "id": "lp-005",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Compreensão e interpretação de textos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t02",
+      "enunciadoBase": "Considerando-se a argumentação desenvolvida no ensaio, é correto afirmar que o autor",
+      "variantesEnunciado": [
+        "De acordo com o ensaio, em sua argumentação central, o autor",
+        "A leitura do texto permite concluir corretamente que o autor",
+        "Infere-se da argumentação desenvolvida ao longo dos quatro parágrafos que o autor"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "rejeita a metáfora da vitrine por considerá-la falsa, já que a exposição de informações ao olhar alheio não tem efeito algum sobre a corrupção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autor afirma que a imagem é “sedutora e, em parte, verdadeira”, pois o que se expõe “tende a corromper-se menos” (1º parágrafo). Ele não a rejeita; relativiza-a, mostrando que expor não basta. A generalização (“efeito algum”) é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "considera o sigilo mais difícil de denunciar do que a opacidade por excesso, porque o sigilo se apresenta disfarçado de abertura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a comparação do 2º parágrafo: a opacidade por excesso é que é “mais difícil de denunciar do que o sigilo”, porque “se apresenta com as roupas da abertura”. O sigilo, por ser explícito, é mais fácil de identificar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "sustenta que a transparência depende da possibilidade efetiva de compreender, comparar e contestar os dados, e não apenas de sua publicação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 3º parágrafo define a transparência como “uma relação entre quem informa e quem é informado” e afirma que um dado só se torna transparente “quando alguém consegue compreendê-lo, compará-lo e, se for o caso, contestá-lo”. O 4º completa: a publicação “apenas inaugura” o dever de prestar contas. A tese desloca o foco da disponibilidade formal para a inteligibilidade e o uso efetivo da informação.",
+          "versaoInvertidaFalsa": "sustenta que a transparência se realiza plenamente com a publicação dos dados, ainda que ninguém consiga compreendê-los, compará-los ou contestá-los."
+        },
+        {
+          "id": "opt-4",
+          "texto": "defende que a adoção de formatos abertos basta para que um dado se torne transparente, o que dispensa a tradução do jargão técnico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Formatos abertos são uma das exigências, ao lado de “linguagem clara” e, “sobretudo”, da disposição para traduzir o jargão técnico (3º parágrafo). A alternativa transforma uma condição necessária em suficiente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "afirma que a publicação das informações encerra o dever de prestar contas, cabendo ao cidadão, a partir daí, examiná-las sozinho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 4º parágrafo afirma o oposto: é um “equívoco” supor que a publicação encerra o dever de prestar contas, pois “ela apenas o inaugura”. O autor também exige instituições “dispostas a responder às perguntas”; o cidadão não fica sozinho."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores invertem comparações do texto (sigilo × opacidade por excesso) ou transformam condição necessária em suficiente (formatos abertos). A tese está no 3º parágrafo: transparência é relação, não propriedade do documento.",
+      "resumoFlashcard": {
+        "pergunta": "Por que, no ensaio “A vitrine e o cofre”, publicar dados não equivale a ser transparente?",
+        "resposta": "Porque a transparência é uma relação: o dado só é transparente quando alguém consegue compreendê-lo, compará-lo e contestá-lo. Publicação ilegível gera “opacidade por excesso”, mais difícil de denunciar que o sigilo, e a publicação apenas inaugura o dever de prestar contas."
+      },
+      "conceitosChave": ["Interpretação: tese do autor", "Inferência textual"],
+      "fundamentacao": "Texto lp-t02, 1º a 4º parágrafos (tese no 3º parágrafo); leitura global e identificação da tese."
+    },
+    {
+      "id": "lp-006",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Denotação, conotação e figuras de linguagem",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t02",
+      "enunciadoBase": "Considerando-se o contexto, traduz-se adequadamente o sentido de um segmento do texto em:",
+      "variantesEnunciado": [
+        "Mantém-se o sentido de um segmento do texto, considerado o contexto, na paráfrase proposta em:",
+        "No contexto em que se encontra, um segmento do ensaio está corretamente interpretado em:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“mais confunde do que mostra” (1º parágrafo) = tanto mostra quanto confunde",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Mais confunde do que mostra” estabelece uma comparação de superioridade: a vitrine abarrotada confunde mais do que mostra. “Tanto mostra quanto confunde” é comparação de igualdade e atenua a crítica do autor, alterando o sentido."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“opacidade por excesso” (2º parágrafo) = obscuridade resultante da escassez de informações",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A expressão designa a obscuridade gerada pelo excesso de dados mal apresentados (a planilha de quarenta mil linhas sem legenda), e não pela falta deles. A paráfrase troca “excesso” por seu antônimo, “escassez”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“se apresenta com as roupas da abertura” (2º parágrafo) = disfarça-se de transparência",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O segmento é conotativo: a opacidade é personificada como alguém que se veste com “as roupas da abertura”, isto é, que se disfarça de transparência. Por isso, segundo o autor, ela é “mais difícil de denunciar do que o sigilo”: aparenta ser o contrário do que é. A metáfora da roupa (aparência que encobre) sustenta a ideia de que publicar tudo pode equivaler a esconder.",
+          "versaoInvertidaFalsa": "No 2º parágrafo, o segmento “se apresenta com as roupas da abertura” significa que a opacidade por excesso revela abertamente seu caráter sigiloso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“torná-la percorrível” (3º parágrafo) = torná-la mais breve, reduzindo-a ao essencial",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Percorrível” é o que se pode percorrer: o autor quer uma realidade que o cidadão consiga atravessar e explorar, sem que seja simplificada. “Torná-la mais breve” confunde percorrer com encurtar e contraria a ressalva de que não se trata de simplificar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“as metáforas que agradam a todos” (1º parágrafo) = as metáforas que ninguém compreende",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Metáforas que agradam a todos” são imagens consensuais, aceitas sem resistência; por isso o autor recomenda desconfiar delas. Nada no trecho indica que sejam incompreensíveis: a paráfrase inventa um sentido."
+        }
+      ],
+      "pegadinhaFCC": "Em questões de sentido no contexto, a FCC troca um termo por seu antônimo (“excesso” por “escassez”) ou por um sentido que não serve (“percorrível” por “breve”). O segmento conotativo correto é lido pela metáfora: vestir as roupas de algo é disfarçar-se dele.",
+      "resumoFlashcard": {
+        "pergunta": "No ensaio “A vitrine e o cofre”, o que significa dizer que a opacidade por excesso “se apresenta com as roupas da abertura”?",
+        "resposta": "É uma metáfora com personificação: a opacidade se disfarça de transparência. Por publicar tudo, ainda que de forma ilegível, ela parece abertura e, por isso, é mais difícil de denunciar do que o sigilo."
+      },
+      "conceitosChave": ["Denotação e conotação", "Figuras de linguagem: metáfora", "Sinonímia contextual"],
+      "fundamentacao": "Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Figuras de linguagem” (metáfora); Bechara, Moderna Gramática Portuguesa, 38ª ed., “Estilística”; texto lp-t02, 1º a 3º parágrafos."
+    },
+    {
+      "id": "lp-007",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Reescrita: equivalência e transformação de estruturas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "lp-t02",
+      "enunciadoBase": "Uma redação alternativa para o trecho “Não se trata de simplificar a realidade, e sim de torná-la percorrível” (3º parágrafo), em que se mantêm a correção e o sentido original, é:",
+      "variantesEnunciado": [
+        "Mantendo-se a correção e o sentido, o trecho “Não se trata de simplificar a realidade, e sim de torná-la percorrível”, do 3º parágrafo, pode ser reescrito da seguinte forma:",
+        "Está correta e preserva o sentido do original a seguinte reescrita do período final do 3º parágrafo (“Não se trata de simplificar a realidade, e sim de torná-la percorrível”):"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Não se tratam de simplificar a realidade, mas de torná-la percorrível.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mantém o sentido, mas erra a concordância: “tratar de” é verbo transitivo indireto, e o “se” é índice de indeterminação do sujeito. Nesse caso, o verbo fica obrigatoriamente na 3ª pessoa do singular: “Não se trata de...”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Trata-se de simplificar a realidade, a fim de torná-la percorrível.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Altera o sentido: o original nega que se trate de simplificar; a nova redação afirma a simplificação e a apresenta como meio (“a fim de”) para tornar a realidade percorrível, contrariando o autor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Não se trata de simplificar a realidade; trata-se, antes, de torná-la percorrível.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O original é uma estrutura de retificação (“não X, e sim Y”): nega-se uma interpretação e afirma-se a correta. A nova redação preserva isso com o ponto e vírgula e com “antes” (= pelo contrário, de preferência), que reafirma a retificação. A concordância está correta: “trata-se” fica no singular porque o “se” indetermina o sujeito de um verbo transitivo indireto.",
+          "versaoInvertidaFalsa": "Trata-se de simplificar a realidade, e não de torná-la percorrível."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Não se trata de simplificar a realidade, portanto de torná-la percorrível.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Portanto” é conclusivo: faria de “torná-la percorrível” uma consequência de não simplificar, quando no original há oposição retificadora entre as duas ideias (“e sim”). A relação lógica muda."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Trata-se de tornar a realidade percorrível, ainda que para isso seja preciso simplificá-la.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A concessiva “ainda que para isso seja preciso simplificá-la” admite a simplificação como custo aceitável, o que o autor nega expressamente (“Não se trata de simplificar a realidade”). O sentido é alterado."
+        }
+      ],
+      "pegadinhaFCC": "Duas armadilhas clássicas: flexionar “trata-se” no plural (o “se” com verbo transitivo indireto indetermina o sujeito) e trocar o “e sim” retificador por conectivo conclusivo ou concessivo, que muda a relação entre as ideias.",
+      "resumoFlashcard": {
+        "pergunta": "Por que “Não se trata de simplificar” não admite “Não se tratam”?",
+        "resposta": "Porque “tratar de” é transitivo indireto e o “se” é índice de indeterminação do sujeito: não há sujeito com que concordar, e o verbo fica na 3ª pessoa do singular. Só com verbo transitivo direto o “se” é apassivador e o verbo concorda com o sujeito paciente."
+      },
+      "conceitosChave": ["Reescrita: manutenção de sentido", "Concordância: se índice de indeterminação"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Concordância verbal” (verbo com “se” indeterminador) e “Conjunções coordenativas adversativas”; Cegalla, Novíssima Gramática da Língua Portuguesa, “Pronome se: índice de indeterminação do sujeito”; texto lp-t02, 3º parágrafo."
+    },
+    {
+      "id": "lp-008",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Concordância nominal e verbal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "lp-t02",
+      "enunciadoBase": "A concordância verbal está plenamente observada na seguinte frase, elaborada a partir do texto:",
+      "variantesEnunciado": [
+        "Considerando-se a norma-padrão, está correta quanto à concordância verbal a seguinte frase, construída com base no ensaio:",
+        "Entre as frases abaixo, inspiradas no texto, aquela em que as normas de concordância verbal estão inteiramente respeitadas é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Devem haver, entre os dados publicados, informações que ninguém consegue compreender.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Haver”, no sentido de existir, é impessoal e transmite essa impessoalidade ao auxiliar da locução: “Deve haver informações”. “Informações” é objeto direto, não sujeito; por isso “devem” está errado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Pense-se em planilhas com milhares de linhas, publicadas sem legenda para as siglas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Pensar em” é transitivo indireto; o “se” é índice de indeterminação do sujeito, e o verbo fica na 3ª pessoa do singular (“Pense-se em planilhas”), ainda que o complemento esteja no plural. O particípio “publicadas” concorda com “planilhas”. É a mesma estrutura do 2º parágrafo (“Pense-se numa planilha”).",
+          "versaoInvertidaFalsa": "Com o verbo pensar, o pronome se é apassivador, e por isso a frase correta seria “Pensem-se em planilhas com milhares de linhas”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Informações expostas sem que hajam pessoas que as examinem são como cartas fechadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na oração “sem que haja pessoas”, “haver” significa existir e é impessoal: fica no singular também no subjuntivo. “Hajam” só seria possível como auxiliar de tempo composto (“hajam examinado”). O restante da frase está correto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A vitrine só cumpre sua função quando diante dela param pessoas que observa com atenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pronome relativo “que” retoma “pessoas”, e o verbo da oração adjetiva concorda com esse antecedente: “pessoas que observam”. A forma “observa” desfaz a concordância."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Faltava às colunas da planilha explicações que permitissem compreendê-las.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito de “faltar” é “explicações que permitissem compreendê-las”, posposto ao verbo; a concordância é obrigatória: “Faltavam às colunas da planilha explicações”. Sujeito depois do verbo é uma das armadilhas mais frequentes da FCC."
+        }
+      ],
+      "pegadinhaFCC": "A frase correta parece errada para quem aplica mecanicamente a regra da passiva sintética: com verbo transitivo indireto (“pensar em”), o “se” indetermina o sujeito e o verbo não vai ao plural. Os distratores exploram haver impessoal, relativo “que” e sujeito posposto.",
+      "resumoFlashcard": {
+        "pergunta": "Quando o verbo acompanhado de “se” vai ao plural?",
+        "resposta": "Só quando o verbo é transitivo direto e o “se” é apassivador: “Publicam-se os dados” (os dados são publicados). Com verbo transitivo indireto ou intransitivo, o “se” indetermina o sujeito e o verbo fica no singular: “Pense-se em planilhas”, “Precisa-se de técnicos”."
+      },
+      "conceitosChave": ["Concordância: se índice de indeterminação", "Concordância: verbos impessoais", "Concordância: sujeito posposto"],
+      "fundamentacao": "Bechara, Moderna Gramática Portuguesa, 38ª ed., “Concordância verbal”; Cunha & Cintra, Nova Gramática do Português Contemporâneo, capítulo “Concordância” (verbo com pronome se; verbos impessoais); texto lp-t02, 2º e 4º parágrafos."
+    },
+    {
+      "id": "lp-009",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Redação Oficial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Em ofício dirigido a uma Conselheira de Tribunal de Contas, um servidor redigiu: “Informo a Vossa Excelência que o relatório solicitado por …… gabinete já foi concluído. Caso Vossa Excelência …… de acordo, a equipe técnica o apresentará na próxima semana, e Vossa Excelência será …… do horário com antecedência.” Segundo o Manual de Redação da Presidência da República (3ª ed., 2018), preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Um técnico preparou a minuta de um ofício a ser enviado a uma Conselheira de Tribunal de Contas, com o trecho: “Informo a Vossa Excelência que o relatório solicitado por …… gabinete já foi concluído. Caso Vossa Excelência …… de acordo, a equipe técnica o apresentará na próxima semana, e Vossa Excelência será …… do horário com antecedência.” De acordo com as regras de concordância com pronomes de tratamento do Manual de Redação da Presidência da República (3ª ed., 2018), completam, correta e respectivamente, as lacunas:",
+        "O trecho a seguir integra minuta de comunicação oficial endereçada a uma Conselheira de Tribunal de Contas: “Informo a Vossa Excelência que o relatório solicitado por …… gabinete já foi concluído. Caso Vossa Excelência …… de acordo, a equipe técnica o apresentará na próxima semana, e Vossa Excelência será …… do horário com antecedência.” Observado o Manual de Redação da Presidência da República (3ª ed., 2018), as lacunas são preenchidas, correta e respectivamente, por:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "seu − esteja − informada",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Manual estabelece que os pronomes de tratamento, embora se dirijam ao interlocutor, levam verbo e possessivo para a 3ª pessoa (“seu gabinete”, “Vossa Excelência esteja”), e que os adjetivos referidos a eles concordam com o sexo da pessoa, e não com o substantivo da locução: “informada”, por se tratar de uma Conselheira. Conselheiros de Tribunais de Contas recebem o tratamento Vossa Excelência.",
+          "versaoInvertidaFalsa": "vosso − estejais − informada, pois o pronome de tratamento, por se dirigir ao interlocutor, leva verbo e possessivo à 2ª pessoa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "seu − esteja − informado",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Possessivo e verbo estão corretos, mas o adjetivo (particípio) referido ao pronome de tratamento concorda com o sexo da pessoa a quem se refere. Dirigindo-se a uma Conselheira, escreve-se “Vossa Excelência será informada”; “informado” só caberia para um destinatário homem."
+        },
+        {
+          "id": "opt-3",
+          "texto": "vosso − estejais − informada",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os pronomes de tratamento referem-se à 2ª pessoa do discurso, mas levam verbo e possessivo para a 3ª pessoa. “Vosso” e “estejais” contrariam o Manual, que dá o exemplo “Vossa Senhoria nomeará seu substituto” (e não “vosso”)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "vosso − esteja − informada",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o verbo e o adjetivo, mas usa o possessivo de 2ª pessoa. Com pronomes de tratamento, o possessivo é sempre de 3ª pessoa: “solicitado por seu gabinete”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "seu − estejais − informada",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o possessivo e o adjetivo, mas flexiona o verbo na 2ª pessoa do plural. O verbo concorda em 3ª pessoa com o núcleo da locução (Excelência): “Caso Vossa Excelência esteja de acordo”."
+        }
+      ],
+      "pegadinhaFCC": "O pronome de tratamento se dirige ao interlocutor (2ª pessoa do discurso), o que leva o candidato a usar “vosso” e “estejais”. A concordância gramatical é de 3ª pessoa, e o adjetivo segue o sexo da autoridade.",
+      "resumoFlashcard": {
+        "pergunta": "Como se faz a concordância com “Vossa Excelência” segundo o Manual de Redação da Presidência?",
+        "resposta": "Verbos e possessivos ficam na 3ª pessoa (“Vossa Excelência conhece seu gabinete”); adjetivos concordam com o sexo da pessoa (“Vossa Excelência está atarefado”, para homem; “atarefada”, para mulher)."
+      },
+      "conceitosChave": ["Redação Oficial: pronomes de tratamento", "Concordância com pronomes de tratamento"],
+      "fundamentacao": "Manual de Redação da Presidência da República, 3ª ed. (2018), seção “Pronomes de tratamento” — concordância com os pronomes de tratamento (“Vossa Senhoria nomeará seu substituto”; “Vossa Excelência está atarefado/atarefada”)."
+    },
+    {
+      "id": "lp-010",
+      "materiaSlug": "lingua-portuguesa",
+      "subtopico": "Ortografia, acentuação e crase",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com o Acordo Ortográfico em vigor (Decreto nº 6.583/2008), está correta a grafia de todas as palavras da frase:",
+      "variantesEnunciado": [
+        "Considerando-se as regras do Acordo Ortográfico vigente, todas as palavras estão corretamente grafadas em:",
+        "A grafia de todas as palavras está de acordo com o Acordo Ortográfico da Língua Portuguesa, promulgado pelo Decreto nº 6.583/2008, na frase:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A assembléia aprovou o plano de infraestrutura, considerado uma idéia heroica pelos moradores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pelo Acordo, os ditongos abertos “ei” e “oi” de palavras paroxítonas perderam o acento: “assembleia”, “ideia”, “heroica”. A frase acerta “infraestrutura” e “heroica”, mas mantém o acento em “assembléia” e “idéia”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "O vôo foi adiado, e os passageiros, que já sentiam enjôo, leem agora o aviso com atenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O hiato “oo” deixou de ser acentuado: “voo”, “enjoo”. A frase acerta “leem” (sem acento, como “creem”, “veem” e “deem”), mas erra “vôo” e “enjôo”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "A equipe de autoavaliação propôs um sistema antirruído para o micro-ondas do refeitório.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Autoavaliação”: prefixo terminado em vogal seguido de vogal diferente, sem hífen. “Antirruído”: prefixo terminado em vogal seguido de “r”, que se dobra. “Micro-ondas”: prefixo terminado na mesma vogal que inicia o segundo elemento, com hífen. “Propôs” mantém o acento da oxítona terminada em “o” seguido de “s”. Todas seguem a Base XVI do Acordo.",
+          "versaoInvertidaFalsa": "A equipe de auto-avaliação propôs um sistema anti-ruído para o microondas do refeitório."
+        },
+        {
+          "id": "opt-4",
+          "texto": "O contra-regra, com sua auto-estima abalada, pára o ensaio sempre que alguém erra a fala.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pelo Acordo, escreve-se “contrarregra” (dobra-se o “r” depois de prefixo terminado em vogal), “autoestima” (vogais diferentes, sem hífen) e “para” (o acento diferencial de “pára” foi abolido)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Os técnicos têm alta frequência no curso e lêem os relatórios com tranqüilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “Têm” (plural de “ter”) mantém o circunflexo e “frequência” está correta sem trema, mas “lêem” perdeu o acento (“leem”) e o trema foi abolido em “tranquilidade”."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura numa mesma frase grafias certas e erradas pelo Acordo. Os pontos mais cobrados: ditongos abertos de paroxítonas (“ideia”), hiatos “oo/ee” (“voo”, “leem”), diferenciais abolidos (“para”) e o hífen com prefixos (“antirruído”, “micro-ondas”, “autoestima”).",
+      "resumoFlashcard": {
+        "pergunta": "Como fica o hífen com prefixos terminados em vogal, pelo Acordo Ortográfico?",
+        "resposta": "Antes de “r” ou “s”, a consoante se dobra e não há hífen (“antirruído”, “contrarregra”, “autossustentável”); antes de vogal igual, usa-se hífen (“micro-ondas”, “anti-inflamatório”); antes de vogal diferente, junta-se (“autoestima”, “infraestrutura”)."
+      },
+      "conceitosChave": ["Acordo Ortográfico", "Hífen com prefixos", "Acentuação gráfica"],
+      "fundamentacao": "Acordo Ortográfico da Língua Portuguesa (Decreto nº 6.583/2008), Base IX (acentuação de paroxítonas e hiatos), Base XIV (trema) e Base XVI (hífen em formações com prefixos); VOLP/ABL, 5ª ed."
+    }
+  ]
+}

@@ -1,0 +1,593 @@
+{
+  "materiaSlug": "engenharia-software-ia-agentes",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "eng-ia-001",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Fundamentos de IA no desenvolvimento e LLMs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da janela de contexto de um modelo de linguagem de grande porte (LLM), é correto afirmar que ela",
+      "variantesEnunciado": [
+        "Sobre o conceito de janela de contexto em modelos de linguagem de grande porte usados por assistentes de codificação, é correto afirmar que ela",
+        "Um técnico do Tribunal estuda o funcionamento de LLMs para orientar o uso de assistentes de programação. Quanto à janela de contexto desses modelos, é correto afirmar que ela",
+        "Considerando o funcionamento de assistentes de codificação baseados em LLMs, é correto afirmar que a janela de contexto do modelo"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "corresponde ao corpus de dados usado no pré-treinamento, razão pela qual documentos enviados na conversa passam a integrar permanentemente o conhecimento do modelo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A janela de contexto é a “memória de trabalho” da requisição e não se confunde com o corpus de treinamento. O que o usuário envia na conversa não altera os pesos do modelo: some quando a sessão termina, salvo mecanismos externos de memória. A troca entre contexto e treinamento é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é medida em caracteres, e não em tokens, de modo que o mesmo texto ocupa exatamente o mesmo espaço em qualquer modelo e em qualquer idioma.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Janelas de contexto são medidas em tokens. Um token pode corresponder a palavra, subpalavra, caractere ou byte, e a relação entre caracteres e tokens varia conforme o modelo (tokenizador) e o idioma. Por isso, o mesmo texto pode consumir quantidades diferentes de tokens em modelos distintos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "abrange tudo o que o modelo pode considerar ao gerar a resposta, como prompt de sistema, histórico, resultados de ferramentas e a própria saída produzida.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação da Anthropic, a janela de contexto é todo o texto que o modelo pode referenciar ao gerar uma resposta, incluindo a própria resposta. Na prática, contam o prompt de sistema, as mensagens (com resultados de ferramentas, imagens e documentos), as definições de ferramentas e a saída gerada, inclusive o raciocínio estendido. É uma memória de trabalho, distinta do corpus de treinamento.",
+          "versaoInvertidaFalsa": "abrange apenas as instruções digitadas pelo usuário, de modo que resultados de ferramentas, definições de ferramentas e a resposta gerada não consomem espaço da janela de contexto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deve ser preenchida ao máximo, pois a precisão e a capacidade de recordação do modelo crescem sempre que se acrescentam tokens ao contexto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mais contexto não é automaticamente melhor. À medida que a contagem de tokens cresce, a precisão e a recordação se degradam (context rot). Por isso a engenharia de contexto busca o menor conjunto de tokens de alto sinal, e não o preenchimento máximo da janela."
+        },
+        {
+          "id": "opt-5",
+          "texto": "inclui somente a última mensagem do usuário, já que as mensagens anteriores ficam armazenadas nos pesos do modelo durante a sessão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os pesos do modelo não guardam a conversa. Em cada requisição, o histórico relevante precisa ser reenviado e ocupa a janela: os turnos se acumulam no contexto até o limite. Sem compactação ou memória externa, o que sai da janela deixa de ser considerado."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a janela de contexto (memória de trabalho da requisição) pelo corpus de treinamento e insinua que mais tokens sempre melhoram o resultado. A janela inclui entrada e saída, e o excesso de contexto degrada a recordação (context rot).",
+      "resumoFlashcard": {
+        "pergunta": "O que conta na janela de contexto de um LLM?",
+        "resposta": "Tudo o que o modelo pode referenciar ao gerar a resposta: prompt de sistema, mensagens, resultados e definições de ferramentas e a própria saída. É medida em tokens, é distinta do corpus de treinamento e, quando muito cheia, degrada a recordação (context rot)."
+      },
+      "conceitosChave": ["LLM: janela de contexto", "Context rot"],
+      "fundamentacao": "Anthropic, documentação “Context windows” (platform.claude.com/docs/en/build-with-claude/context-windows); Glossário Anthropic, verbetes “Context window” e “Tokens”; Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025)."
+    },
+    {
+      "id": "eng-ia-002",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Fundamentos de IA no desenvolvimento e LLMs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma equipe de TI do Tribunal usa um LLM, via API, para gerar rascunhos de consultas SQL que alimentam relatórios de auditoria. Para obter respostas reproduzíveis, o analista configurou a temperatura em 0 e concluiu que, a partir daí, a mesma solicitação produzirá sempre exatamente o mesmo texto e dispensará conferência. Sobre essa conclusão, é correto afirmar que",
+      "variantesEnunciado": [
+        "Na Diretoria de TI, um desenvolvedor integra um LLM ao sistema de prestação de contas para sugerir consultas SQL. Ele fixa a temperatura em 0 e faz a afirmação de que, com isso, toda chamada idêntica devolverá exatamente a mesma consulta, que poderá ser usada sem conferência. Sobre essa afirmação, é correto afirmar que",
+        "Em um piloto de automação de relatórios de fiscalização, o responsável configura a temperatura de um LLM em 0 e registra no plano de testes a premissa de que as saídas passam a ser idênticas a cada execução e, portanto, dispensam validação. Sobre essa premissa, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "está correta, pois com temperatura 0 o modelo passa a consultar o banco de dados antes de responder, o que elimina a possibilidade de consultas incorretas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A temperatura não dá ao modelo acesso a dados: ela só altera o modo como o próximo token é amostrado. Para que a consulta reflita o esquema real, é preciso fornecer o esquema no contexto ou ferramentas de consulta, e ainda assim executar e validar o SQL."
+        },
+        {
+          "id": "opt-2",
+          "texto": "está equivocada, pois temperatura baixa reduz a aleatoriedade e favorece as continuações mais prováveis, mas não assegura saídas idênticas entre chamadas nem consultas corretas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A temperatura controla a aleatoriedade da amostragem: valores baixos produzem saídas mais conservadoras, próximas das continuações mais prováveis. A própria documentação da Anthropic adverte que, mesmo com temperatura 0, os resultados não são totalmente determinísticos, e entradas idênticas podem gerar saídas diferentes. Além disso, uma resposta mais estável não é necessariamente correta: o SQL gerado deve ser executado, testado e revisado.",
+          "versaoInvertidaFalsa": "está correta, pois a temperatura 0 torna a amostragem plenamente determinística, de modo que entradas idênticas sempre produzem saídas idênticas e corretas, dispensando a validação das consultas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "está equivocada, pois apenas temperaturas elevadas reduzem alucinações, já que permitem ao modelo explorar mais alternativas de continuação antes de escolher, entre elas, a resposta mais correta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Temperatura alta aumenta a diversidade e tende a elevar a variação, inclusive de erros, sem melhorar a factualidade. Para reduzir alucinações, o que funciona é ancorar o modelo em contexto confiável (esquema, documentação) e validar a saída. A alternativa inverte o efeito do parâmetro."
+        },
+        {
+          "id": "opt-4",
+          "texto": "está correta, pois a temperatura é um hiperparâmetro de treinamento e, quando fixada em 0, congela os pesos do modelo, o que torna as saídas idênticas, reprodutíveis e, portanto, auditáveis sem revisão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A temperatura é um parâmetro de inferência ajustado em cada requisição. Ela não é hiperparâmetro de treinamento e não altera pesos. Os pesos de um modelo servido por API já são fixos durante a inferência, e mesmo assim as saídas podem variar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "está equivocada, pois a temperatura controla o tamanho da janela de contexto, e o valor 0 faz o modelo descartar o histórico, o que torna cada resposta imprevisível.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tamanho da janela de contexto é característica do modelo e da requisição (tokens de entrada e saída), não da temperatura. A alternativa mistura dois conceitos distintos para atrair quem associa “temperatura 0” a “memória zerada”."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a crença de que temperatura 0 garante determinismo e acerto. Temperatura baixa só reduz a aleatoriedade. A documentação oficial afirma que nem com temperatura 0 a saída é totalmente determinística, e estabilidade não é sinônimo de correção.",
+      "resumoFlashcard": {
+        "pergunta": "O que a temperatura controla em um LLM e o que ela não garante?",
+        "resposta": "Controla a aleatoriedade da amostragem dos próximos tokens: baixa favorece as continuações mais prováveis, alta aumenta a diversidade. Nem com temperatura 0 há determinismo total entre chamadas, e uma saída estável não é necessariamente correta, por isso a validação continua necessária."
+      },
+      "conceitosChave": ["LLM: temperatura", "Validação determinística"],
+      "fundamentacao": "Glossário Anthropic, verbete “Temperature” (platform.claude.com/docs/en/about-claude/glossary): “Even with temperature set to 0, the results will not be fully deterministic”."
+    },
+    {
+      "id": "eng-ia-003",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Fundamentos de IA no desenvolvimento e LLMs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere o texto a seguir, sobre os fundamentos dos LLMs usados em assistentes de codificação. A arquitetura ……, apresentada em 2017 no artigo “Attention Is All You Need”, baseia-se no mecanismo de …… e dispensa recorrência e convoluções, o que favorece a paralelização do treinamento. Em aplicações de busca semântica, trechos de código e de documentação são convertidos em ……, vetores numéricos cuja proximidade indica similaridade de significado. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere o trecho de um material de capacitação da área de TI. Os LLMs atuais derivam da arquitetura ……, proposta em 2017, cujo núcleo é o mecanismo de ……, que dispensa o processamento recorrente da sequência. Para localizar documentação relevante por significado, e não por palavras idênticas, os textos são representados como ……, isto é, vetores comparáveis por medidas de similaridade. Preenchem, correta e respectivamente, as lacunas:",
+        "Em um parecer sobre ferramentas de IA para desenvolvimento, um técnico escreveu: os modelos de linguagem modernos usam a arquitetura ……, que se apoia no mecanismo de …… em vez de recorrência e convolução; já a busca semântica em bases de código depende de ……, vetores cuja distância reflete a proximidade de sentido entre trechos. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "LSTM − retropropagação no tempo − tokens",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LSTM é uma rede recorrente, justamente o tipo de arquitetura que o Transformer dispensou. Retropropagação no tempo é técnica de treinamento de redes recorrentes, e tokens são as unidades de texto, não os vetores de similaridade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Transformer − convolução − hashes criptográficos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O nome da arquitetura está certo, mas o Transformer dispensa convoluções e usa atenção. Hashes criptográficos servem para verificar integridade: pequenas mudanças no texto geram valores totalmente diferentes, o oposto do que se espera de uma representação de similaridade semântica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "recorrente (RNN) − atenção − embeddings",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Redes recorrentes (RNN) processam a sequência passo a passo e foram exatamente o modelo superado em 2017 pela arquitetura baseada só em atenção. O mecanismo e o termo “embeddings” estão certos, mas o nome da arquitetura não."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Transformer − autoatenção − embeddings",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Vaswani et al. (2017) propuseram o Transformer, “baseado somente em mecanismos de atenção, dispensando inteiramente recorrência e convoluções”, com atenção multi-cabeça (autoatenção) e camadas feed-forward, o que permite paralelizar o treinamento. Embeddings são representações vetoriais em que textos de significado parecido ficam próximos, base da busca semântica e do RAG.",
+          "versaoInvertidaFalsa": "A arquitetura Transformer, de 2017, baseia-se em recorrência e convoluções; na busca semântica, trechos de texto são convertidos em tokens, cuja proximidade indica similaridade de significado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Transformer − autoatenção − tokens",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas tokens são as unidades em que o texto é segmentado para o modelo (palavras, subpalavras, caracteres), não os vetores cuja proximidade mede similaridade semântica. Essa função é dos embeddings."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura nomes corretos com mecanismos errados (convolução, recorrência) e troca embeddings por tokens. Para acertar, lembre que o Transformer dispensa recorrência e convolução e que a similaridade semântica é medida entre embeddings, não entre tokens.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a inovação central do Transformer e o que são embeddings?",
+        "resposta": "O Transformer (Vaswani et al., 2017) usa apenas mecanismos de atenção (autoatenção multi-cabeça), sem recorrência nem convoluções, o que facilita a paralelização. Embeddings são vetores numéricos que representam textos de modo que significados parecidos fiquem próximos no espaço vetorial."
+      },
+      "conceitosChave": ["Transformer: autoatenção", "Embeddings", "LLM: tokens"],
+      "fundamentacao": "Vaswani et al., “Attention Is All You Need” (NeurIPS 2017, arXiv 1706.03762), resumo; Anthropic, documentação “Embeddings” (platform.claude.com/docs/en/build-with-claude/embeddings)."
+    },
+    {
+      "id": "eng-ia-004",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Fundamentos de IA no desenvolvimento e LLMs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao elaborar orientações sobre o uso de assistentes de codificação baseados em LLMs, a equipe de TI do Tribunal reuniu observações sobre os limites desses modelos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um treinamento interno sobre IA generativa aplicada ao desenvolvimento de sistemas de controle externo, o instrutor apresentou observações sobre o comportamento dos LLMs. Considere as afirmativas abaixo.",
+        "Ao revisar a política de uso de assistentes de programação em projetos de sistemas de fiscalização, um técnico registrou constatações sobre as limitações dos modelos de linguagem. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Como o modelo é pré-treinado para prever o próximo token, a fluência e a segurança aparente de uma resposta não indicam, por si, que ela seja factualmente correta.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. LLMs autorregressivos geram a continuação estatisticamente plausível. A OWASP (LLM09:2025) descreve a alucinação como conteúdo que parece preciso, mas é fabricado. Tom confiante não é evidência de acerto."
+        },
+        {
+          "texto": "Por causa da data de corte do treinamento, o modelo pode sugerir funções obsoletas ou inexistentes de uma biblioteca lançada ou alterada depois desse marco.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O modelo desconhece mudanças posteriores ao seu treinamento e tende a reproduzir APIs antigas ou a inventar chamadas plausíveis. Fornecer no contexto a documentação da versão em uso reduz o problema."
+        },
+        {
+          "texto": "Configurar a temperatura em 0 elimina as alucinações, pois o modelo passa a responder somente com informações verificadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A temperatura só controla a aleatoriedade da amostragem. Uma continuação muito provável pode ser falsa, e nem com temperatura 0 a saída é totalmente determinística."
+        },
+        {
+          "texto": "Incluir no contexto a documentação oficial e trechos relevantes do código reduz o risco de respostas sem fundamento, mas não dispensa testes e revisão.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A ancoragem (grounding) por RAG ou leitura de arquivos melhora a precisão. O glossário da Anthropic e a OWASP indicam que ela não elimina erros, e por isso a validação do resultado continua necessária."
+        },
+        {
+          "texto": "Quanto mais tokens forem colocados na janela de contexto, maior será a capacidade do modelo de recordar com precisão cada informação fornecida.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A documentação da Anthropic descreve o fenômeno oposto, o context rot: com o crescimento da contagem de tokens, a precisão e a recordação se degradam."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa: temperatura 0 não elimina alucinações, pois só reduz a aleatoriedade da amostragem, e uma continuação muito provável ainda pode ser falsa. As afirmativas I, II e IV estão certas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa V é falsa: a documentação descreve o context rot, em que mais tokens degradam a recordação. A combinação também deixa de fora as afirmativas I e IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Combina a afirmativa I, verdadeira, com as afirmativas III e V, ambas falsas: temperatura 0 não elimina alucinações e excesso de contexto piora a recordação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e IV são verdadeiras, mas a II também é: a data de corte faz o modelo desconhecer APIs posteriores ao treinamento e sugerir funções obsoletas ou inexistentes. A resposta fica incompleta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (fluência não prova factualidade), a II (data de corte leva a APIs obsoletas ou inventadas) e a IV (ancoragem reduz, mas não elimina, o risco). São falsas a III (temperatura 0 não elimina alucinação) e a V (o context rot mostra que excesso de tokens degrada a recordação).",
+          "versaoInvertidaFalsa": "Incluir no contexto a documentação oficial e o código relevante elimina as alucinações do modelo, tornando dispensáveis os testes e a revisão do código gerado."
+        }
+      ],
+      "pegadinhaFCC": "As afirmativas falsas usam soluções “mágicas” plausíveis: temperatura 0 contra alucinação e contexto máximo para melhor recordação. Ancoragem reduz o risco, mas nenhuma medida dispensa a validação.",
+      "resumoFlashcard": {
+        "pergunta": "Quais limites dos LLMs exigem validação do código que eles geram?",
+        "resposta": "Eles preveem o próximo token (fluência não é factualidade), têm data de corte do conhecimento (APIs obsoletas ou inventadas) e perdem precisão com contexto excessivo (context rot). Ancoragem reduz o risco, e testes e revisão continuam obrigatórios."
+      },
+      "conceitosChave": ["LLM: alucinação", "LLM: temperatura", "Context rot"],
+      "fundamentacao": "OWASP Top 10 for LLM Applications 2025, LLM09:2025 Misinformation; Glossário Anthropic, verbetes “Pretraining”, “Temperature” e “RAG”; Anthropic, “Context windows” (context rot)."
+    },
+    {
+      "id": "eng-ia-005",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Programação baseada em intenção e linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No desenvolvimento orientado a linguagem natural, a programação baseada em intenção (Intent-Based Programming) caracteriza-se por",
+      "variantesEnunciado": [
+        "A respeito da programação baseada em intenção (Intent-Based Programming) no desenvolvimento assistido por IA, é correto afirmar que ela se caracteriza por",
+        "Um técnico do Tribunal precisa explicar a gestores o que muda quando se adota a programação baseada em intenção com agentes de IA. Ele deve informar que essa abordagem se caracteriza por"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "expressar o resultado desejado, as restrições e os critérios de aceite, deixando ao sistema a derivação do procedimento, sem afastar a validação humana.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Não há definição normativa única, mas as fontes convergem: na programação baseada em intenção, o desenvolvedor declara “o quê” (objetivo, restrições, limites e critérios de aceite verificáveis), e o sistema ou agente deriva “o como”. Intenções vagas geram código que parece certo e se comporta mal, por isso a responsabilidade de validar com testes e revisão continua humana.",
+          "versaoInvertidaFalsa": "detalhar o procedimento passo a passo e dispensar critérios de aceite, pois o modelo deduz sozinho o resultado esperado e o código gerado dispensa validação humana."
+        },
+        {
+          "id": "opt-2",
+          "texto": "detalhar, linha a linha, cada instrução que a ferramenta deve escrever, de modo que o modelo apenas traduza o roteiro para a sintaxe da linguagem escolhida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ditar o procedimento linha a linha é programação imperativa feita por meio de um tradutor, o oposto da ideia de declarar o resultado e deixar o sistema escolher o caminho. A alternativa descreve “o como”, não “o quê”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "dispensar critérios de aceite, já que o modelo infere a intenção do usuário com precisão e, por isso, o código gerado não precisa de testes automatizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A intenção precisa ser verificável: critérios de aceite são justamente o que permite checar se o código atende ao que se pretendia. Abordagens como o desenvolvimento orientado a especificação transformam cenários de aceite em testes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir o código-fonte por comandos de voz interpretados em tempo de execução, sem geração de artefatos versionáveis ou revisáveis.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A linguagem natural é a interface para expressar a intenção, mas o resultado continua sendo código, versionado e revisável. Nada no conceito exige voz nem elimina artefatos de software."
+        },
+        {
+          "id": "opt-5",
+          "texto": "restringir-se a linguagens declarativas como SQL e HTML, nas quais o programador descreve o procedimento de execução de cada consulta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ideia de declarar “o quê” lembra o paradigma declarativo, mas não se limita a ele. Em SQL e HTML, aliás, o programador não descreve o procedimento de execução: quem decide como executar a consulta é o otimizador do SGBD."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca “o quê” por “o como” (roteiro linha a linha) e sugere que a intenção bem escrita dispensa testes. A intenção correta inclui restrições e critérios de aceite verificáveis, e a validação continua humana.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza a programação baseada em intenção?",
+        "resposta": "Declarar o resultado desejado, as restrições e critérios de aceite verificáveis, deixando ao sistema (LLM/agente) a escolha do procedimento. O desenvolvedor continua responsável por validar o resultado com testes e revisão."
+      },
+      "conceitosChave": ["Programação baseada em intenção"],
+      "fundamentacao": "GitHub Spec Kit, documento “spec-driven.md” (“intent-driven development”; cenários de aceite viram testes); arXiv 2603.17150, “Intent Formalization” (2026); Claude Code, Best practices (“say what fixed looks like”)."
+    },
+    {
+      "id": "eng-ia-006",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Programação baseada em intenção e linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um servidor da área de TI pediu a um agente de codificação: “melhore o módulo de cálculo de prazos dos processos de contas”. Na verdade, ele precisava apenas que a contagem deixasse de incluir os feriados. O agente reescreveu várias funções, acrescentou uma biblioteca e alterou assinaturas de métodos usados por outros sistemas. Para expressar a intenção em nova tentativa, a reformulação mais adequada é:",
+      "variantesEnunciado": [
+        "No sistema de protocolo eletrônico, um técnico pediu a um agente de IA: “deixe o cálculo de prazos melhor”. O que ele realmente queria era que a contagem de prazos excluísse os feriados. O agente refatorou o módulo inteiro, incluiu uma dependência nova e mudou assinaturas consumidas por outros sistemas. Para expressar a intenção em nova tentativa, a reformulação mais adequada é:",
+        "Durante a manutenção do módulo de prazos de um sistema de fiscalização, um desenvolvedor escreveu ao agente apenas “aperfeiçoe esse código”, quando seu objetivo era excluir os feriados da contagem. O agente alterou funções em excesso, adicionou biblioteca e quebrou contratos com outros sistemas. Para expressar a intenção em nova tentativa, a reformulação mais adequada é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“Seja ambicioso: aplique todas as melhorias que julgar úteis e modernize o módulo por completo, adotando as bibliotecas que preferir, sem se preocupar com o restante do sistema.”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pedir “ambição” amplia o escopo, efeito útil quando se quer a versão mais completa de uma funcionalidade, mas que aqui repete o problema original: mudanças além do necessário, novas dependências e quebra de contratos com outros sistemas. Faltam objetivo concreto, restrições e critério de conclusão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“Pense passo a passo, com muito cuidado, e lembre-se de que esta tarefa é MUITO IMPORTANTE, MUITO IMPORTANTE, MUITO IMPORTANTE para o Tribunal e para os auditores.”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ênfase repetida e expressões como “pense passo a passo” não informam ao agente o que deve mudar, o que não pode mudar nem quando o trabalho está pronto. A documentação do Claude Code observa que esse tipo de frase é texto comum e não substitui informação específica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“Na linha 42, troque o laço for por um while; na linha 57, renomeie a variável d para dias; depois, apague todos os comentários antigos e reformate o arquivo inteiro.”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A instrução linha a linha é procedimental: descreve “o como” e não traz o objetivo, que é excluir feriados. Além de não resolver o defeito, impõe alterações cosméticas sem critério de aceite."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“Corrija a contagem de prazos para excluir os feriados; não adicione dependências nem altere assinaturas públicas; conclua quando os testes atuais e um novo teste com feriados passarem.”",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A reformulação expressa a intenção completa: o objetivo (excluir feriados da contagem), as restrições (sem novas dependências, sem alterar assinaturas públicas) e um critério de aceite verificável (testes existentes e novo teste passando). É o que a documentação de boas práticas recomenda: dizer o sintoma, o escopo e como fica o “corrigido”, dando ao agente um check que retorna aprovado ou reprovado.",
+          "versaoInvertidaFalsa": "“Melhore o módulo de prazos como julgar melhor, inclusive alterando assinaturas e incluindo bibliotecas; não é necessário definir critério de conclusão, pois o agente sabe quando a tarefa está pronta.”"
+        },
+        {
+          "id": "opt-5",
+          "texto": "“Reescreva o módulo do zero em uma linguagem mais moderna e, só depois de concluída toda a reescrita, avalie se o comportamento continua compatível com o dos demais sistemas do Tribunal.”",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reescrever do zero em outra linguagem extrapola a necessidade e adia a verificação de compatibilidade para o fim, o que aumenta o risco. A boa intenção define limites de escopo antes da execução, não depois."
+        }
+      ],
+      "pegadinhaFCC": "Distratores sedutores: “seja ambicioso”, ênfase em maiúsculas e roteiro linha a linha. Só a alternativa com objetivo, restrições e critério de aceite verificável expressa a intenção de forma que o agente consiga atingir e comprovar.",
+      "resumoFlashcard": {
+        "pergunta": "Quais elementos tornam uma intenção bem especificada para um agente de codificação?",
+        "resposta": "Objetivo concreto (o que deve mudar), restrições (o que não pode mudar, como dependências e assinaturas públicas) e critério de aceite verificável (testes que devem passar). Assim o agente sabe o escopo e consegue comprovar a conclusão."
+      },
+      "conceitosChave": ["Programação baseada em intenção", "Critérios de aceite verificáveis"],
+      "fundamentacao": "Claude Code, Best practices (“Write a specific prompt”; “Give Claude a check to run”), code.claude.com/docs/en/best-practices; GitHub Spec Kit, “spec-driven.md”."
+    },
+    {
+      "id": "eng-ia-007",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Programação baseada em intenção e linguagem natural",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para acelerar um portal de consulta pública que exibirá dados de jurisdicionados, uma equipe propõe adotar o “vibe coding”: descrever as telas em linguagem natural, aceitar as alterações do agente sem ler os diffs e colar mensagens de erro até que a aplicação funcione. Outra parte da equipe defende o desenvolvimento orientado a especificação. Considerando os riscos e as práticas envolvidas, é correto concluir que",
+      "variantesEnunciado": [
+        "No projeto de um painel público com informações de contratos de municípios jurisdicionados, um grupo sugere o “vibe coding” (pedir as telas em linguagem natural, aceitar as mudanças do agente sem ler os diffs e colar os erros até funcionar), e outro prefere o desenvolvimento orientado a especificação. Considerando os riscos e as práticas envolvidas, é correto concluir que",
+        "Uma equipe precisa entregar rapidamente um serviço de consulta a dados de prestação de contas de jurisdicionados. Metade dos desenvolvedores quer aceitar sem leitura os diffs produzidos pelo agente de IA e corrigir colando mensagens de erro (“vibe coding”); a outra metade propõe partir de uma especificação. Considerando os riscos e as práticas envolvidas, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o vibe coding, como descrito por Karpathy em 2025, é uma variante do TDD, pois cada mensagem de erro colada na conversa funciona como um teste automatizado que valida a aplicação de ponta a ponta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No TDD, testes são escritos antes do código e permanecem como verificação automatizada e repetível. Colar erros até “funcionar” é tentativa e erro sem critério de aceite e sem regressão. Karpathy descreveu o vibe coding justamente como “esquecer que o código existe” e aceitar mudanças sem ler os diffs."
+        },
+        {
+          "id": "opt-2",
+          "texto": "para um sistema com dados de terceiros, aceitar diffs sem leitura é inadequado; convém tornar a intenção verificável em especificação, critérios de aceite e testes, com revisão e integração contínua.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O vibe coding (termo de Andrej Karpathy, fevereiro de 2025) tolera aceitar código sem leitura, o que pode servir a protótipos descartáveis, mas é inadequado para um sistema público com dados de terceiros. O desenvolvimento orientado a especificação (por exemplo, o GitHub Spec Kit) torna a especificação a fonte da verdade, converte cenários de aceite em testes e mantém revisão e validação contínua. Assim a intenção vira algo verificável.",
+          "versaoInvertidaFalsa": "para um sistema com dados de terceiros, aceitar diffs sem leitura é adequado, desde que o agente receba as telas em linguagem natural; especificação, critérios de aceite e testes tornam-se dispensáveis."
+        },
+        {
+          "id": "opt-3",
+          "texto": "no desenvolvimento orientado a especificação, o código é a única fonte da verdade, e a especificação é descartada logo após a primeira geração, para evitar que divirja da implementação e gere retrabalho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o SDD. Segundo o documento do Spec Kit, especificações deixam de servir ao código, e o código passa a servir às especificações: a especificação é o artefato primário e evolui com o projeto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a abordagem orientada a especificação é incompatível com agentes de IA, pois exige que todo o código seja escrito manualmente a partir do documento de requisitos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SDD foi pensado justamente para agentes: a especificação, o plano técnico e as tarefas orientam a geração do código pelo agente (o Spec Kit funciona com Copilot, Claude Code, Gemini CLI e outros). O que muda é a fonte da verdade, não quem digita o código."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o risco do vibe coding se limita ao desempenho, pois falhas de segurança e de privacidade são bloqueadas automaticamente pelo modelo, que recusa gerar código inseguro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Modelos não bloqueiam automaticamente falhas de segurança e privacidade. Código gerado pode conter vulnerabilidades, dependências inexistentes ou exposição de dados, e o vibe coding retira justamente a revisão que detectaria esses problemas."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta o vibe coding como se fosse TDD e inverte o papel da especificação no SDD. Guarde: no SDD, a especificação é a fonte da verdade e os cenários de aceite viram testes; aceitar diffs sem ler é incompatível com sistemas críticos.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre vibe coding e desenvolvimento orientado a especificação?",
+        "resposta": "Vibe coding (Karpathy, 2025) é aceitar o código gerado sem ler os diffs, guiando-se pelo resultado aparente, o que só se justifica em protótipos descartáveis. No desenvolvimento orientado a especificação, a especificação é a fonte da verdade, os cenários de aceite viram testes e a validação é contínua."
+      },
+      "conceitosChave": ["Vibe coding × spec-driven", "Programação baseada em intenção"],
+      "fundamentacao": "GitHub Spec Kit, “spec-driven.md” (inversão de poder; especificação como fonte da verdade); post de Andrej Karpathy no X (02/02/2025), conforme fontes secundárias; Claude Code, Best practices."
+    },
+    {
+      "id": "eng-ia-008",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Engenharia de contexto e de prompts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na engenharia de prompts, a técnica que inclui no próprio prompt alguns pares de entrada e saída desejada, para orientar o formato, o tom e a estrutura da resposta do modelo, denomina-se",
+      "variantesEnunciado": [
+        "Para padronizar a redação de mensagens de commit geradas por IA, um técnico inseriu no prompt três exemplos de alterações acompanhadas da mensagem esperada. Essa técnica de engenharia de prompts denomina-se",
+        "Ao pedir a um LLM que classifique chamados da central de serviços, a equipe acrescentou ao prompt alguns chamados já classificados, como modelo do formato da resposta. A técnica empregada denomina-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "zero-shot prompting.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No zero-shot, o modelo recebe apenas a instrução, sem exemplos resolvidos. O enunciado descreve exatamente o contrário: o prompt traz pares de entrada e saída como modelo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ajuste fino (fine-tuning).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ajuste fino é treinamento adicional de um modelo pré-treinado com novos dados, o que altera seus pesos. Exemplos colocados no prompt não modificam o modelo: valem apenas para aquela requisição."
+        },
+        {
+          "id": "opt-3",
+          "texto": "geração aumentada por recuperação (RAG).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No RAG, trechos relevantes de uma base externa são recuperados no momento da consulta e inseridos no contexto como conhecimento. A técnica do enunciado não recupera conhecimento: fornece exemplos de formato e estilo da resposta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cadeia de raciocínio (chain-of-thought).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cadeia de raciocínio pede que o modelo explicite etapas intermediárias antes da resposta. Pode até ser combinada com exemplos, mas o que o enunciado descreve, pares de entrada e saída para orientar formato e tom, é o few-shot."
+        },
+        {
+          "id": "opt-5",
+          "texto": "few-shot (multishot) prompting.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação da Anthropic, exemplos são “uma das formas mais confiáveis de direcionar formato, tom e estrutura da saída”, e alguns exemplos bem elaborados (few-shot ou multishot) melhoram precisão e consistência. A recomendação é que sejam relevantes, diversos, para não induzir padrões indesejados, e delimitados por tags como <example>.",
+          "versaoInvertidaFalsa": "zero-shot prompting, técnica em que pares de entrada e saída são incluídos no prompt para que o modelo reproduza o formato e o tom esperados."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece termos vizinhos: zero-shot (sem exemplos), fine-tuning (altera pesos), RAG (recupera conhecimento) e CoT (explicita raciocínio). O que define o few-shot é a presença de exemplos no próprio prompt.",
+      "resumoFlashcard": {
+        "pergunta": "O que é few-shot (multishot) prompting e como bons exemplos devem ser?",
+        "resposta": "É incluir no prompt alguns exemplos de entrada e saída para orientar formato, tom e estrutura da resposta. Os exemplos devem ser relevantes, diversos, para não induzir padrões indesejados, e bem delimitados, por exemplo com tags <example>."
+      },
+      "conceitosChave": ["Prompt: few-shot"],
+      "fundamentacao": "Anthropic, “Prompting best practices”, seção “Use examples effectively” (platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices); Glossário Anthropic, verbetes “Fine-tuning” e “RAG”."
+    },
+    {
+      "id": "eng-ia-009",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Engenharia de contexto e de prompts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na padronização dos prompts usados por assistentes de codificação no Tribunal, um técnico reuniu recomendações de engenharia de prompts. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar um guia interno de boas práticas para pedidos a LLMs em tarefas de desenvolvimento de sistemas de controle externo, a coordenação de TI listou orientações de engenharia de prompts. Considere as afirmativas abaixo.",
+        "Em uma oficina sobre uso de IA na revisão de código dos sistemas do Tribunal, os participantes debateram técnicas de engenharia de prompts. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Definir no prompt de sistema o papel do modelo (por exemplo, “revisor de código Python com foco em segurança”) ajuda a focalizar o comportamento e o tom das respostas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação da Anthropic recomenda definir um papel no prompt de sistema: até uma frase focaliza comportamento e tom."
+        },
+        {
+          "texto": "Envolver instruções, contexto, exemplos e dados de entrada em tags próprias, como <instructions> e <input>, reduz interpretações equivocadas em prompts complexos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Tags XML ajudam o modelo a separar sem ambiguidade instruções, contexto, exemplos e entradas variáveis, o que reduz interpretações equivocadas."
+        },
+        {
+          "texto": "Os exemplos de few-shot devem ser diversos e cobrir casos de borda, para que o modelo não reproduza padrões indesejados de um único exemplo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Exemplos devem ser relevantes, diversos e estruturados. A diversidade evita que o modelo copie particularidades não intencionais de um exemplo."
+        },
+        {
+          "texto": "Em prompts com documentos longos, a pergunta deve vir antes dos documentos, pois o modelo dá menos peso ao que aparece no fim do contexto.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A recomendação é a inversa: documentos longos no topo e a consulta no fim. A documentação relata melhora de até 30% na qualidade com a pergunta ao final."
+        },
+        {
+          "texto": "Pedir ao modelo que raciocine passo a passo antes de responder garante a correção do código gerado, o que dispensa testes.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Raciocinar antes de responder pode melhorar tarefas complexas, mas não garante correção. O código continua precisando de testes e revisão."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é verdadeira, mas a IV é falsa: a orientação oficial é colocar documentos longos no topo e a pergunta no fim. A combinação também omite II e III, que são corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas II e III são verdadeiras, mas a V é falsa: pedir raciocínio passo a passo não garante correção nem dispensa testes. A combinação também omite a I, que é correta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Papel no prompt de sistema (I), delimitação com tags XML (II) e exemplos diversos (III) estão na documentação de boas práticas da Anthropic. A IV inverte a orientação para contexto longo (documentos no topo, pergunta no fim) e a V atribui à cadeia de raciocínio uma garantia que ela não oferece.",
+          "versaoInvertidaFalsa": "Misturar instruções, contexto, exemplos e dados de entrada em um único bloco, sem tags de separação, reduz interpretações equivocadas em prompts complexos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III, IV e V.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a IV inverte a recomendação para contextos longos e a V promete uma garantia inexistente: o raciocínio explícito ajuda, mas não substitui a verificação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é verdadeira, mas a IV é falsa: em contexto longo, a orientação é colocar os documentos no topo e a pergunta no fim. Faltam ainda I e II, ambas verdadeiras."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa IV inverte a ordem recomendada para contexto longo (documentos no topo, pergunta no fim), e a V transforma uma técnica útil, a cadeia de raciocínio, em garantia de correção.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são boas práticas de engenharia de prompts para assistentes de codificação?",
+        "resposta": "Definir papel no prompt de sistema, separar instruções, contexto, exemplos e entradas com tags XML, usar exemplos relevantes e diversos e, em contexto longo, pôr os documentos no topo e a pergunta no fim. Pedir raciocínio ajuda, mas não garante correção."
+      },
+      "conceitosChave": ["Prompt: delimitadores XML", "Prompt: few-shot"],
+      "fundamentacao": "Anthropic, “Prompting best practices”, seções “Give Claude a role”, “Structure prompts with XML tags”, “Use examples effectively” e “Long context prompting” (platform.claude.com)."
+    },
+    {
+      "id": "eng-ia-010",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Engenharia de contexto e de prompts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em uma sessão longa com um agente de codificação, a equipe passou a carregar no contexto, “para que nada falte”, todo o repositório do sistema de auditoria, os manuais e os logs dos últimos meses. As respostas pioraram: o agente esquecia restrições ditas no início e confundia módulos. Segundo os princípios da engenharia de contexto, a medida mais adequada é",
+      "variantesEnunciado": [
+        "Para que o agente de IA “conhecesse tudo”, um desenvolvedor anexou à conversa o código completo do sistema de protocolo, a documentação de todas as APIs e os registros de chamados do semestre. Com o tempo, o agente passou a ignorar regras informadas no início e a misturar componentes. Segundo os princípios da engenharia de contexto, a medida mais adequada é",
+        "Em uma refatoração extensa do sistema de prestação de contas, a sessão do agente acumulou milhares de linhas de logs, manuais e arquivos lidos integralmente. A qualidade das respostas caiu, com esquecimento de restrições e confusão entre módulos. Segundo os princípios da engenharia de contexto, a medida mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "curar o menor conjunto de informações de alto sinal, carregando arquivos sob demanda a partir de identificadores leves e usando compactação, notas persistentes e subagentes.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a Anthropic, contexto é recurso finito com retornos decrescentes. Com muitos tokens, a recordação se degrada (context rot), e o objetivo passa a ser “o menor conjunto possível de tokens de alto sinal”. As técnicas indicadas são recuperação just-in-time (manter caminhos de arquivo e consultas e carregar sob demanda), compactação do histórico, notas persistidas fora da janela e subagentes com janelas limpas que devolvem resumos.",
+          "versaoInvertidaFalsa": "carregar integralmente repositório, manuais e logs em toda sessão, pois a precisão do agente cresce na mesma proporção do volume de tokens colocado na janela de contexto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "aumentar a temperatura do modelo, pois a degradação observada decorre de respostas excessivamente conservadoras diante de um contexto muito amplo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A temperatura controla a aleatoriedade da amostragem e não resolve a diluição da atenção causada por contexto excessivo. O sintoma descrito, esquecer restrições iniciais e confundir módulos, é típico de context rot, não de excesso de conservadorismo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "duplicar no início e no fim do contexto todos os manuais e logs carregados, já que a repetição integral do material, por si só, garante que o agente recorde cada uma das restrições informadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Duplicar material volumoso aumenta ainda mais os tokens e agrava a degradação. Restrições persistentes devem ficar em local próprio, como um arquivo de memória do projeto, e o restante deve ser carregado de forma seletiva."
+        },
+        {
+          "id": "opt-4",
+          "texto": "realizar ajuste fino do modelo com o repositório a cada sessão, pois a engenharia de contexto se limita a reescrever o prompt de sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Engenharia de contexto vai além do prompt de sistema: abrange a curadoria de tudo o que entra na janela (ferramentas, histórico, dados recuperados, memória). Ajuste fino a cada sessão seria caro, lento e não resolveria a seleção do contexto da tarefa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "manter o carregamento integral, pois a janela de contexto funciona como memória ilimitada, e a perda de precisão se deve apenas à lentidão da rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A janela de contexto é limitada (cada modelo tem seu tamanho máximo), e a documentação associa a perda de precisão ao crescimento da contagem de tokens (context rot), não à rede."
+        }
+      ],
+      "pegadinhaFCC": "A banca aposta na intuição de que “mais contexto é melhor”. O ponto central da engenharia de contexto é o oposto: curar poucos tokens de alto sinal e trazer o resto sob demanda.",
+      "resumoFlashcard": {
+        "pergunta": "O que a engenharia de contexto recomenda quando a sessão de um agente fica sobrecarregada?",
+        "resposta": "Tratar o contexto como recurso finito: curar o menor conjunto de tokens de alto sinal, recuperar informação just-in-time por identificadores (caminhos, consultas), compactar o histórico, registrar notas persistentes e isolar tarefas em subagentes."
+      },
+      "conceitosChave": ["Engenharia de contexto", "Context rot"],
+      "fundamentacao": "Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025); Anthropic, “Context windows” (context rot)."
+    }
+  ]
+}

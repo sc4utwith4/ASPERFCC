@@ -1,0 +1,536 @@
+{
+  "materiaSlug": "legislacao-aplicada-ti",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "leg-ti-001",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Ao disciplinar a segurança no tratamento de dados pessoais, a Lei nº 13.709/2018 (LGPD) estabelece, no art. 46, § 2º, que as medidas de segurança, técnicas e administrativas, deverão ser observadas desde a fase de …… do produto ou do serviço até a sua ……. Esse comando é associado pela doutrina à ideia de privacidade ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Um analista do Tribunal, ao redigir o documento de visão de um novo sistema de prestação de contas, citou o art. 46, § 2º, da LGPD: as medidas de segurança, técnicas e administrativas, deverão ser observadas desde a fase de …… do produto ou do serviço até a sua ……. Ele registrou que o dispositivo expressa a privacidade ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Na capacitação sobre proteção de dados oferecida às equipes de desenvolvimento, explicou-se que, segundo a Lei nº 13.709/2018, as medidas de segurança deverão ser observadas desde a fase de …… do produto ou do serviço até a sua ……, o que corresponde ao conceito de privacidade ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "concepção − execução − por padrão (privacy by default)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros termos reproduzem o art. 46, § 2º, mas observar a segurança desde o projeto é a privacidade desde a concepção (privacy by design). Privacidade por padrão (privacy by default) é outra ideia: a configuração inicial do produto já deve ser a mais protetiva, tratando apenas os dados necessários."
+        },
+        {
+          "id": "opt-2",
+          "texto": "concepção − desativação − desde a concepção (privacy by design)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei manda observar as medidas “até a sua execução”, e não até a desativação. A troca é sutil: o dever de segurança depois do fim do tratamento existe, mas está no art. 47 (“mesmo após o seu término”), e não no § 2º do art. 46."
+        },
+        {
+          "id": "opt-3",
+          "texto": "concepção − execução − desde a concepção (privacy by design)",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O § 2º do art. 46 da LGPD manda observar as medidas de segurança “desde a fase de concepção do produto ou do serviço até a sua execução”. É a positivação da privacidade desde a concepção (privacy by design): requisitos de proteção de dados entram no projeto, e não como remendo depois da implantação. O art. 49 reforça a ideia ao exigir que os sistemas sejam estruturados para atender aos requisitos de segurança e aos princípios da lei.",
+          "versaoInvertidaFalsa": "Segundo o art. 46, § 2º, da LGPD, as medidas de segurança devem ser observadas desde a fase de homologação do produto ou do serviço até a sua desativação, o que corresponde à privacidade por padrão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "contratação − execução − por padrão (privacy by default)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O marco inicial previsto na lei é a concepção do produto ou do serviço, anterior à contratação e ao desenvolvimento. Além disso, o terceiro termo troca privacy by design por privacy by default, que diz respeito à configuração padrão mais protetiva."
+        },
+        {
+          "id": "opt-5",
+          "texto": "homologação − execução − desde a concepção (privacy by design)",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Começar as medidas apenas na homologação contraria o próprio sentido da privacidade desde a concepção: na homologação o sistema já está construído. A lei antecipa o dever para a fase de concepção, e a alternativa erra justamente o termo que dá nome ao conceito."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o marco temporal da lei (concepção por homologação ou contratação; execução por desativação) e confunde privacy by design com privacy by default. O art. 46, § 2º, fala em “concepção” e “execução”; o dever de segurança após o término está no art. 47.",
+      "resumoFlashcard": {
+        "pergunta": "Qual dispositivo da LGPD positiva a privacidade desde a concepção (privacy by design) e o que ele exige?",
+        "resposta": "O art. 46, § 2º: as medidas de segurança, técnicas e administrativas, devem ser observadas desde a fase de concepção do produto ou do serviço até a sua execução. O art. 49 complementa: os sistemas devem ser estruturados para atender aos requisitos de segurança, às boas práticas e aos princípios da lei."
+      },
+      "conceitosChave": ["LGPD: privacy by design", "LGPD: segurança (art. 46)"],
+      "fundamentacao": "Lei 13.709/2018 (LGPD), art. 46, caput e § 2º; art. 47; art. 49."
+    },
+    {
+      "id": "leg-ti-002",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Entre os princípios do art. 6º da LGPD, aquele que impõe a limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos, e que fundamenta a prática conhecida como minimização de dados, é o princípio da",
+      "variantesEnunciado": [
+        "Ao revisar o formulário de cadastro do portal de jurisdicionados, a equipe de TI do Tribunal removeu campos que não eram indispensáveis ao serviço, como estado civil e profissão. Essa decisão concretiza o princípio da LGPD que limita o tratamento ao mínimo necessário para a realização de suas finalidades, com dados pertinentes, proporcionais e não excessivos, isto é, o princípio da",
+        "Nos termos do art. 6º da Lei nº 13.709/2018, a limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos em relação às finalidades do tratamento, corresponde ao princípio da"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "adequação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Adequação (art. 6º, II) é a compatibilidade do tratamento com as finalidades informadas ao titular, de acordo com o contexto. Ela pergunta se o tratamento combina com o propósito declarado, e não se a quantidade de dados é a mínima. É o distrator clássico por ser o princípio vizinho."
+        },
+        {
+          "id": "opt-2",
+          "texto": "necessidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O princípio da necessidade (art. 6º, III) limita o tratamento ao mínimo necessário para a realização das finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos. É a base legal da minimização: em um sistema, coletar só os campos indispensáveis, restringir acessos ao estritamente necessário e reter os dados apenas pelo tempo exigido pela finalidade.",
+          "versaoInvertidaFalsa": "O princípio da LGPD que limita o tratamento ao mínimo necessário, com dados pertinentes, proporcionais e não excessivos em relação às finalidades, é o princípio da adequação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "finalidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Finalidade (art. 6º, I) exige propósitos legítimos, específicos, explícitos e informados ao titular, vedado o tratamento posterior incompatível. Define para que o dado é tratado; a quantidade mínima de dados é tema do princípio da necessidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "prevenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Prevenção (art. 6º, VIII) é a adoção de medidas para prevenir a ocorrência de danos em virtude do tratamento. Relaciona-se à segurança e à privacidade desde a concepção, mas não descreve a limitação ao mínimo necessário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "qualidade dos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Qualidade dos dados (art. 6º, V) garante aos titulares exatidão, clareza, relevância e atualização dos dados. A palavra “relevância” pode atrair, mas o princípio trata da correção do dado, e não do volume mínimo coletado."
+        }
+      ],
+      "pegadinhaFCC": "A FCC coloca lado a lado princípios de nome e conteúdo vizinhos. Adequação = compatibilidade com a finalidade informada; necessidade = mínimo necessário (minimização); finalidade = propósito legítimo, específico e explícito.",
+      "resumoFlashcard": {
+        "pergunta": "Qual princípio da LGPD fundamenta a minimização de dados e qual é o seu conteúdo?",
+        "resposta": "O princípio da necessidade (art. 6º, III): limitação do tratamento ao mínimo necessário para atingir as finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos."
+      },
+      "conceitosChave": ["LGPD: princípio da necessidade", "LGPD: princípios (art. 6º)"],
+      "fundamentacao": "Lei 13.709/2018, art. 6º, I, II, III, V e VIII."
+    },
+    {
+      "id": "leg-ti-003",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com o Regulamento de Comunicação de Incidente de Segurança, aprovado pela Resolução CD/ANPD nº 15/2024, a comunicação à ANPD de incidente de segurança que possa acarretar risco ou dano relevante aos titulares deve ser feita pelo controlador no prazo de",
+      "variantesEnunciado": [
+        "Considere que a equipe de resposta a incidentes do Tribunal confirmou, numa segunda-feira, que um acesso indevido ao banco do sistema de protocolo expôs dados pessoais de jurisdicionados, com potencial de dano relevante. Segundo a Resolução CD/ANPD nº 15/2024, o controlador deve comunicar o incidente à ANPD no prazo de",
+        "Nos termos do regulamento da ANPD que disciplina a comunicação de incidentes de segurança (Resolução CD/ANPD nº 15/2024), o controlador que identificar incidente capaz de acarretar risco ou dano relevante aos titulares deve comunicá-lo à autoridade no prazo de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "72 horas, contadas da ocorrência do ataque, à semelhança do Regulamento Geral de Proteção de Dados europeu.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As 72 horas são o prazo do GDPR (art. 33). A ANPD adotou prazo em dias úteis, e a contagem não começa na data do ataque, mas no conhecimento, pelo controlador, de que o incidente atingiu dados pessoais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "dois dias úteis, contados da conclusão da perícia técnica que confirme a extensão do incidente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dois dias úteis era a recomendação da ANPD antes do regulamento. Além disso, o marco inicial não é a conclusão de perícia: o controlador comunica no prazo e pode complementar as informações depois, em até 20 dias úteis."
+        },
+        {
+          "id": "opt-3",
+          "texto": "três dias úteis, contados do conhecimento pelo controlador de que o incidente afetou dados pessoais.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 6º do RCIS fixa três dias úteis, ressalvado prazo previsto em legislação específica, contados do conhecimento pelo controlador de que o incidente afetou dados pessoais. Informações ainda indisponíveis podem ser complementadas em até 20 dias úteis, e agentes de pequeno porte têm prazos em dobro. O regulamento concretiza o “prazo razoável” do art. 48, § 1º, da LGPD.",
+          "versaoInvertidaFalsa": "Pelo RCIS, o controlador deve comunicar o incidente à ANPD em três dias úteis contados da data do ataque, ainda que só tome conhecimento do comprometimento de dados pessoais depois."
+        },
+        {
+          "id": "opt-4",
+          "texto": "vinte dias úteis, contados da data em que o operador tiver comunicado o incidente ao controlador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Vinte dias úteis é o prazo para complementar a comunicação já feita, e não para a comunicação inicial. E o marco não depende do operador: o dever é do controlador e conta-se do seu próprio conhecimento de que dados pessoais foram afetados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cinco dias úteis, contados da data em que o encarregado tiver concluído a avaliação de risco do incidente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há prazo de cinco dias úteis nem marco vinculado ao encarregado. O encarregado é canal de comunicação entre controlador, titulares e ANPD; a obrigação de comunicar é do controlador (art. 48 da LGPD)."
+        }
+      ],
+      "pegadinhaFCC": "Mistura de prazos: 72 horas (GDPR), 2 dias úteis (orientação antiga da ANPD), 20 dias úteis (complementação) e 3 dias úteis (comunicação inicial). O marco inicial também é testado: conta-se do conhecimento de que o incidente afetou dados pessoais, e não do ataque.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o prazo para o controlador comunicar à ANPD um incidente de segurança relevante e a partir de quando ele corre?",
+        "resposta": "Três dias úteis (RCIS, art. 6º), contados do conhecimento pelo controlador de que o incidente afetou dados pessoais. A comunicação pode ser complementada em até 20 dias úteis, e agentes de pequeno porte têm prazos em dobro."
+      },
+      "conceitosChave": ["LGPD: comunicação de incidente"],
+      "fundamentacao": "Lei 13.709/2018, art. 48, § 1º; Resolução CD/ANPD nº 15/2024 (Regulamento de Comunicação de Incidente de Segurança), art. 6º; Resolução CD/ANPD nº 2/2022 (agentes de tratamento de pequeno porte)."
+    },
+    {
+      "id": "leg-ti-004",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: neutralidade de rede",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Segundo o art. 9º do Marco Civil da Internet (Lei nº 12.965/2014), o responsável pela transmissão, comutação ou roteamento tem o dever de tratar de forma …… quaisquer pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação. A discriminação ou degradação do tráfego será regulamentada por decreto, ouvidos o …… e a Anatel, e somente poderá decorrer de requisitos técnicos indispensáveis à prestação adequada dos serviços e aplicações e da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um curso interno sobre o Marco Civil da Internet, explicou-se que, pelo art. 9º da Lei nº 12.965/2014, quem realiza transmissão, comutação ou roteamento deve tratar de forma …… quaisquer pacotes de dados; que a discriminação ou degradação do tráfego depende de regulamentação, ouvidos o …… e a Anatel; e que ela só pode decorrer de requisitos técnicos indispensáveis ou da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao analisar a contratação de link de internet para o Tribunal, um técnico lembrou que, conforme o Marco Civil, o provedor deve tratar de forma …… os pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação, e que eventual degradação do tráfego, regulamentada após oitiva do …… e da Anatel, só se admite por requisitos técnicos indispensáveis ou para priorizar serviços de ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "isonômica − Comitê Gestor da Internet − segurança pública",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros termos estão certos, mas a exceção legal é a priorização de serviços de emergência (art. 9º, § 1º, II), e não de “segurança pública”. A regulamentação restringe a priorização a comunicações dos serviços de emergência e a avisos à população em situações de desastre, emergência ou calamidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "diferenciada − Comitê Gestor da Internet − emergência",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A neutralidade exige tratamento isonômico, e não diferenciado. Admitir tratamento diferenciado como regra inverteria o princípio: a diferenciação é exceção, restrita às hipóteses do § 1º e sujeita às condições do § 2º."
+        },
+        {
+          "id": "opt-3",
+          "texto": "isonômica − Conselho Administrativo de Defesa Econômica − emergência",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei manda ouvir o Comitê Gestor da Internet (CGI.br) e a Anatel. O sistema de defesa da concorrência atua na apuração de infrações à ordem econômica, mas não é o órgão a ser ouvido na regulamentação prevista no art. 9º, § 1º."
+        },
+        {
+          "id": "opt-4",
+          "texto": "isonômica − Comitê Gestor da Internet − emergência",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O caput do art. 9º impõe o tratamento isonômico dos pacotes, núcleo da neutralidade de rede. O § 1º reserva a regulamentação ao Presidente da República (art. 84, IV, da CF), ouvidos o CGI.br e a Anatel, e limita a discriminação ou degradação a requisitos técnicos indispensáveis e à priorização de serviços de emergência. O Decreto 8.771/2016 é essa regulamentação e trata tais medidas como excepcionais.",
+          "versaoInvertidaFalsa": "Pelo art. 9º do Marco Civil, a discriminação de tráfego é regulamentada após oitiva da ANPD e da Anatel e pode decorrer da priorização de serviços de utilidade pública escolhidos pelo provedor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "isonômica − Autoridade Nacional de Proteção de Dados − utilidade pública",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ANPD não é o órgão a ser ouvido na regulamentação da neutralidade, e “utilidade pública” alargaria indevidamente a exceção. A lei fala apenas em serviços de emergência, além dos requisitos técnicos indispensáveis."
+        }
+      ],
+      "pegadinhaFCC": "A FCC troca os órgãos ouvidos na regulamentação (CGI.br e Anatel) por outros que atuam no ecossistema digital, como o CADE e a ANPD, e amplia a exceção de “emergência” para conceitos vagos, como segurança pública ou utilidade pública.",
+      "resumoFlashcard": {
+        "pergunta": "Em que hipóteses o Marco Civil admite discriminação ou degradação do tráfego e quem é ouvido na regulamentação?",
+        "resposta": "Apenas em duas: requisitos técnicos indispensáveis à prestação adequada dos serviços e aplicações e priorização de serviços de emergência (art. 9º, § 1º). A regulamentação é por decreto presidencial, ouvidos o CGI.br e a Anatel (Decreto 8.771/2016)."
+      },
+      "conceitosChave": ["Marco Civil: neutralidade de rede"],
+      "fundamentacao": "Lei 12.965/2014, art. 9º, caput e § 1º; Decreto 8.771/2016, arts. 4º e 5º."
+    },
+    {
+      "id": "leg-ti-005",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: proteção de dados e guarda de registros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Nos termos do Marco Civil da Internet, na provisão de conexão, cabe ao administrador de sistema autônomo manter os registros de conexão, sob sigilo, em ambiente controlado e de segurança, pelo prazo de ……; o provedor de aplicações de internet constituído na forma de pessoa jurídica, que exerça essa atividade de forma organizada, profissionalmente e com fins econômicos, deve manter os registros de acesso a aplicações pelo prazo de ……; e, na provisão de conexão, é vedado guardar ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Durante a análise de uma proposta de contratação de link dedicado, a comissão do Tribunal revisou as obrigações do Marco Civil: o administrador de sistema autônomo deve manter os registros de conexão pelo prazo de ……; o provedor de aplicações pessoa jurídica, com atividade organizada, profissional e com fins econômicos, deve manter os registros de acesso a aplicações pelo prazo de ……; e o provedor de conexão não pode guardar ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Conforme a Lei nº 12.965/2014, os registros de conexão devem ser mantidos pelo administrador de sistema autônomo por ……, os registros de acesso a aplicações devem ser mantidos pelo provedor de aplicações organizado profissionalmente e com fins econômicos por ……, e ao provedor de conexão é vedado guardar ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "6 meses − 1 ano − os registros de acesso a aplicações de internet",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os prazos: são 1 ano para os registros de conexão (art. 13) e 6 meses para os registros de acesso a aplicações (art. 15). A inversão é a pegadinha mais comum sobre o tema."
+        },
+        {
+          "id": "opt-2",
+          "texto": "1 ano − 6 meses − os registros de acesso a aplicações de internet",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 13 impõe ao administrador de sistema autônomo a guarda dos registros de conexão por 1 ano, responsabilidade que não pode ser transferida a terceiros. O art. 15 obriga o provedor de aplicações (pessoa jurídica, atividade organizada, profissional e com fins econômicos) a guardar os registros de acesso a aplicações por 6 meses. O art. 14 veda ao provedor de conexão guardar registros de acesso a aplicações, separação que impede que um único agente reúna o histórico completo de navegação do usuário.",
+          "versaoInvertidaFalsa": "Pelo Marco Civil, o provedor de conexão guarda os registros de conexão por 6 meses e o provedor de aplicações guarda os registros de acesso a aplicações por 1 ano, sendo permitido ao provedor de conexão guardar registros de acesso a aplicações."
+        },
+        {
+          "id": "opt-3",
+          "texto": "1 ano − 6 meses − os dados cadastrais dos usuários do serviço",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os prazos estão certos, mas o art. 14 veda ao provedor de conexão guardar registros de acesso a aplicações, e não dados cadastrais. Os dados cadastrais (qualificação pessoal, filiação e endereço) podem inclusive ser requisitados por autoridade administrativa competente (art. 10, § 3º)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "5 anos − 1 ano − os registros de acesso a aplicações de internet",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Marco Civil não prevê prazo de 5 anos para registros de conexão, e o prazo dos registros de acesso a aplicações é de 6 meses. Prazos maiores dependem de requerimento cautelar (arts. 13, § 2º, e 15, § 2º) ou de ordem judicial."
+        },
+        {
+          "id": "opt-5",
+          "texto": "1 ano − 3 meses − o conteúdo das comunicações privadas dos usuários",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O prazo dos registros de acesso a aplicações é de 6 meses, e a vedação do art. 14 recai sobre os registros de acesso a aplicações. O conteúdo das comunicações privadas é protegido pelo art. 10, § 2º, e só pode ser disponibilizado mediante ordem judicial."
+        }
+      ],
+      "pegadinhaFCC": "Inversão dos prazos (1 ano para conexão, 6 meses para aplicações) e troca do objeto da vedação do art. 14: o provedor de conexão não pode guardar registros de acesso a aplicações.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os prazos de guarda de registros no Marco Civil e qual vedação recai sobre o provedor de conexão?",
+        "resposta": "Registros de conexão: 1 ano, pelo administrador de sistema autônomo (art. 13). Registros de acesso a aplicações: 6 meses, pelo provedor de aplicações pessoa jurídica com fins econômicos (art. 15). O provedor de conexão não pode guardar registros de acesso a aplicações (art. 14)."
+      },
+      "conceitosChave": ["Marco Civil: guarda de registros"],
+      "fundamentacao": "Lei 12.965/2014, art. 10, §§ 2º e 3º; art. 13, caput e § 1º; art. 14; art. 15, caput."
+    },
+    {
+      "id": "leg-ti-006",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a equipe de TI do Tribunal está finalizando um portal de serviços para jurisdicionados. Na versão de homologação, o perfil de cada usuário é exibido publicamente por padrão, os campos opcionais de telefone e endereço vêm habilitados e a caixa de inscrição em boletins informativos aparece pré-marcada. Um técnico propôs que, sem nenhuma ação do usuário, o portal passe a operar apenas com os dados necessários ao serviço, com perfil não público e sem inscrições automáticas, cabendo ao próprio usuário ampliar o compartilhamento, se quiser. A proposta do técnico corresponde",
+      "variantesEnunciado": [
+        "Ao homologar um aplicativo de agendamento de atendimento presencial no Tribunal, a equipe notou que a geolocalização vinha ligada por padrão, o histórico de agendamentos ficava visível para outros usuários e o cadastro em pesquisas de satisfação vinha pré-marcado. Um técnico sugeriu que o aplicativo passasse a iniciar com todas essas opções desligadas, tratando somente os dados necessários ao agendamento, e que o usuário as ativasse se quisesse. A sugestão corresponde",
+        "Na revisão de um sistema de ouvidoria do Tribunal, constatou-se que o formulário vinha configurado para divulgar o nome do manifestante na resposta pública, coletava dados opcionais de contato e trazia pré-marcada a autorização para receber comunicações institucionais. Recomendou-se que, por padrão, o nome não fosse divulgado, os campos opcionais ficassem desabilitados e nenhuma autorização viesse marcada, ampliando-se o tratamento apenas por escolha do titular. A recomendação corresponde"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "à privacidade desde a concepção (privacy by design), que se esgota na fase de projeto e não alcança a configuração com que o sistema entra em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Privacy by design manda incorporar a proteção desde o projeto, mas não “se esgota” nele: o art. 46, § 2º, fala em observar as medidas da concepção até a execução. Além disso, a proposta descrita trata da configuração inicial entregue ao usuário, que é o núcleo da privacidade por padrão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "à privacidade por padrão (privacy by default): a configuração inicial deve ser a mais protetiva, o que na LGPD decorre do princípio da necessidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Privacidade por padrão (privacy by default) significa que, sem nenhuma ação do titular, o produto já opera com a configuração mais protetiva e trata só os dados necessários a cada finalidade. A LGPD não usa a expressão, mas a ideia decorre do princípio da necessidade (art. 6º, III), somado aos arts. 46, § 2º, e 49. O GDPR a prevê expressamente no art. 25(2).",
+          "versaoInvertidaFalsa": "A privacidade por padrão (privacy by default) admite que o sistema inicie com o compartilhamento máximo de dados, cabendo ao usuário ativar, uma a uma, as proteções que desejar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ao princípio da transparência, que se cumpre plenamente com a exibição dos dados do perfil, desde que o usuário seja avisado nos termos de uso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Transparência (art. 6º, VI) garante informações claras e acessíveis sobre o tratamento, mas não autoriza expor dados por padrão. Avisar nos termos de uso não supre a exigência de tratar apenas o necessário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "à anonimização dos dados cadastrais, que passam a não ser considerados dados pessoais após a desativação dos campos opcionais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desabilitar campos opcionais reduz a coleta, mas não anonimiza nada: os dados que continuam sendo coletados identificam o usuário e permanecem dados pessoais (art. 5º, I, e art. 12)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a uma medida meramente facultativa de usabilidade, sem relação com a LGPD, pois o consentimento colhido em caixa pré-marcada é válido sempre que os termos de uso o mencionarem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Consentimento exige manifestação livre, informada e inequívoca para finalidade determinada (art. 5º, XII), e o art. 8º, § 4º, torna nulas as autorizações genéricas. Caixa pré-marcada não expressa manifestação inequívoca, e a medida tem relação direta com a LGPD."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve a configuração mais protetiva “sem nenhuma ação do usuário” sem nomeá-la e oferece privacy by design como distrator. By design = proteção embutida no projeto; by default = configuração inicial mais protetiva. A LGPD não usa a expressão by default, mas a ideia decorre do princípio da necessidade.",
+      "resumoFlashcard": {
+        "pergunta": "O que é privacidade por padrão (privacy by default) e como ela se relaciona com a LGPD?",
+        "resposta": "É a exigência de que o produto ou serviço já funcione, sem ação do titular, com a configuração mais protetiva, tratando só os dados necessários a cada finalidade. A LGPD não usa a expressão; a ideia decorre do princípio da necessidade (art. 6º, III) e dos arts. 46, § 2º, e 49. O GDPR a prevê expressamente no art. 25(2)."
+      },
+      "conceitosChave": ["LGPD: privacy by default", "LGPD: princípio da necessidade"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, XII; art. 6º, III e VI; art. 8º, § 4º; arts. 46, § 2º, e 49; Regulamento (UE) 2016/679 (GDPR), art. 25(2); SGD/PPSI, Guia sobre Privacidade desde a Concepção e por Padrão."
+    },
+    {
+      "id": "leg-ti-007",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para permitir que a unidade de informações estratégicas do Tribunal analise padrões de denúncias recebidas pela ouvidoria, a equipe de dados substituiu o nome e o CPF de cada denunciante por um código aleatório. A tabela que relaciona cada código ao denunciante foi mantida pela própria equipe de dados em servidor segregado, com acesso restrito e registro de auditoria, e não foi entregue aos analistas. À luz da LGPD, os dados entregues aos analistas são",
+      "variantesEnunciado": [
+        "Para estudar o tempo de tramitação de processos de aposentadoria analisados pelo Tribunal, a equipe de dados trocou o nome e a matrícula de cada servidor interessado por um identificador aleatório e guardou a tabela de correspondência em servidor segregado, com acesso restrito e trilha de auditoria, sem entregá-la aos pesquisadores do próprio Tribunal que farão o estudo. À luz da LGPD, os dados entregues aos pesquisadores são",
+        "Antes de enviar uma base de chamados da central de serviços de TI a uma equipe de ciência de dados do próprio Tribunal, o administrador substituiu o nome e o e-mail dos solicitantes por códigos gerados aleatoriamente e manteve, em ambiente separado e protegido, a tabela que vincula cada código ao solicitante. À luz da LGPD, os dados recebidos pela equipe de ciência de dados são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "anonimizados e, por isso, deixam de ser dados pessoais, uma vez que os analistas que os recebem não têm acesso à tabela que permitiria a reidentificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fato de os destinatários não verem a tabela não torna o dado anonimizado: o controlador, que é o próprio Tribunal, continua podendo reidentificar os titulares por meios próprios. O art. 12 exclui do conceito de dado anonimizado justamente o processo que pode ser revertido com meios próprios ou com esforços razoáveis."
+        },
+        {
+          "id": "opt-2",
+          "texto": "anonimizados, desde que a tabela de correspondência também seja criptografada, hipótese em que a LGPD deixa de incidir tanto sobre a base analítica quanto sobre a tabela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Criptografar a tabela é boa prática de segurança, mas não muda a natureza do dado: quem detém a chave e a tabela reverte o processo. A LGPD continua incidindo sobre as duas bases."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pseudonimizados e seguem sendo dados pessoais, pois a reidentificação continua possível com a informação adicional que o controlador mantém separada e protegida.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A técnica descrita é a pseudonimização (art. 13, § 4º): o dado perde a possibilidade de associação, direta ou indireta, ao indivíduo, senão pelo uso de informação adicional mantida separadamente pelo controlador em ambiente controlado e seguro. Como a reversão é possível, os dados continuam pessoais e sujeitos a toda a LGPD, embora a pseudonimização seja boa medida de segurança e de minimização.",
+          "versaoInvertidaFalsa": "Dados em que nome e CPF foram trocados por código aleatório, com a tabela de correspondência guardada pelo controlador em ambiente seguro, são anonimizados e deixam de ser dados pessoais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "anonimizados em relação aos analistas e pseudonimizados em relação ao controlador, de modo que a LGPD passa a incidir apenas sobre a tabela de correspondência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os analistas integram o próprio controlador, que guarda a tabela e pode reverter a substituição por meios próprios. Não há como fatiar a natureza do dado dentro da mesma organização: a base analítica continua sendo dado pessoal, e a LGPD incide sobre ela e sobre a tabela."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dados bloqueados, pois a substituição do identificador por código suspende temporariamente qualquer operação de tratamento até que haja nova autorização do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bloqueio (art. 5º, XIII) é a suspensão temporária de qualquer operação de tratamento, mediante guarda do dado. No caso, os dados continuam sendo tratados pelos analistas, de modo que não há bloqueio."
+        }
+      ],
+      "pegadinhaFCC": "A FCC aposta na confusão entre “quem recebe não consegue identificar” e “ninguém consegue identificar”. Se o controlador guarda a informação adicional que permite reverter, é pseudonimização, e o dado continua pessoal.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença prática entre pseudonimização e anonimização na LGPD?",
+        "resposta": "Na pseudonimização (art. 13, § 4º), a reidentificação continua possível com informação adicional mantida separadamente pelo controlador, e o dado segue pessoal. Na anonimização (art. 5º, XI, e art. 12), a associação ao titular se perde com meios técnicos razoáveis, e o dado deixa de ser pessoal, salvo se puder ser revertido com meios próprios ou esforços razoáveis."
+      },
+      "conceitosChave": ["LGPD: pseudonimização", "LGPD: anonimização"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, XI e XIII; art. 12, caput; art. 13, § 4º."
+    },
+    {
+      "id": "leg-ti-008",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o Tribunal contratou empresa de computação em nuvem para hospedar o sistema de gestão de pessoal, cabendo à contratada apenas executar o tratamento conforme as instruções do Tribunal. A empresa detectou acesso não autorizado a uma base com dados funcionais e bancários de servidores, com potencial de fraude financeira. Segundo a LGPD e a regulamentação da ANPD, a comunicação do incidente à ANPD e aos titulares",
+      "variantesEnunciado": [
+        "O Tribunal contratou empresa especializada para operar o serviço de folha de pagamento em nuvem, seguindo as instruções do Tribunal quanto ao tratamento. A empresa identificou que credenciais de acesso e dados bancários de servidores foram copiados por um invasor, com risco concreto de fraude. Segundo a LGPD e a regulamentação da ANPD, a comunicação do incidente à ANPD e aos titulares",
+        "Um fornecedor que hospeda, por conta e ordem do Tribunal, a plataforma de cursos da escola de contas informou ter sofrido acesso indevido a uma base com dados de pagamento de inscrições de servidores, com possibilidade de uso fraudulento. Segundo a LGPD e a regulamentação da ANPD, a comunicação do incidente à ANPD e aos titulares"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cabe à empresa contratada, pois foi em sua infraestrutura que o incidente ocorreu, ficando o Tribunal dispensado de qualquer providência perante a ANPD e os titulares.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 48 da LGPD atribui o dever de comunicar ao controlador, e não ao operador. O local físico do incidente não transfere a obrigação. Cabe à contratada apoiar o controlador e seguir suas instruções (art. 39), o que o contrato deve detalhar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cabe ao encarregado pelo tratamento de dados pessoais, que responde pessoalmente perante a ANPD pelo cumprimento da LGPD, em substituição ao controlador e ao operador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O encarregado é canal de comunicação entre controlador, titulares e ANPD (art. 5º, VIII, e art. 41). Ele pode operacionalizar o envio, mas não substitui o controlador nem assume pessoalmente a responsabilidade pela conformidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cabe ao Tribunal, na condição de controlador, mesmo tendo o incidente ocorrido na infraestrutura da contratada, por envolver dados financeiros com risco relevante.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 48 da LGPD atribui ao controlador o dever de comunicar à ANPD e ao titular o incidente que possa acarretar risco ou dano relevante. Pelo RCIS, há risco relevante quando o incidente puder afetar significativamente interesses e direitos fundamentais e envolver ao menos um critério, entre eles dados financeiros e dados de autenticação em sistemas. A comunicação à ANPD deve ocorrer em três dias úteis do conhecimento de que dados pessoais foram afetados.",
+          "versaoInvertidaFalsa": "Quando o incidente ocorre na infraestrutura do operador, cabe a ele, e não ao controlador, comunicar a ANPD e os titulares, ainda que envolva dados financeiros com risco de fraude."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é dispensada, porque somente incidentes que envolvam dados pessoais sensíveis, como os de saúde ou biométricos, exigem comunicação à ANPD e aos titulares.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dados sensíveis são apenas um dos critérios do RCIS. Dados financeiros, dados de autenticação em sistemas, dados de crianças, adolescentes ou idosos, dados sob sigilo e dados em larga escala também caracterizam o risco relevante, desde que possa haver afetação significativa dos titulares."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deve ser feita apenas aos titulares afetados, pois a ANPD só precisa ser informada quando houver determinação judicial ou requisição expressa da própria autoridade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 48 manda comunicar à autoridade nacional e ao titular. A comunicação à ANPD não depende de ordem judicial nem de requisição da autoridade: é dever espontâneo do controlador, com prazo fixado pelo RCIS."
+        }
+      ],
+      "pegadinhaFCC": "A banca desloca o dever de comunicar para quem “sofreu” o incidente (o operador) ou para o encarregado. Pela LGPD, quem comunica é o controlador, e dados financeiros bastam como critério de risco relevante, sem exigir dado sensível.",
+      "resumoFlashcard": {
+        "pergunta": "Quem deve comunicar à ANPD e aos titulares um incidente ocorrido na infraestrutura de um operador contratado?",
+        "resposta": "O controlador (art. 48 da LGPD). O operador trata os dados segundo as instruções do controlador e deve apoiá-lo, mas não assume o dever legal de comunicação. O encarregado é apenas o canal."
+      },
+      "conceitosChave": ["LGPD: comunicação de incidente", "LGPD: controlador × operador"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, VI a VIII; arts. 39, 41 e 48; Resolução CD/ANPD nº 15/2024 (RCIS), arts. 5º e 6º; Resolução CD/ANPD nº 18/2024 (atuação do encarregado)."
+    },
+    {
+      "id": "leg-ti-009",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Requisitos de segurança em contratações de TIC",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na elaboração do termo de referência para contratar a sustentação de sistemas do Tribunal, a equipe de planejamento precisa disciplinar o tratamento de dados pessoais que a contratada realizará. Considerando a LGPD e boas práticas de segurança da informação em contratações de TIC, é adequado prever que a contratada",
+      "variantesEnunciado": [
+        "Ao preparar a minuta de contrato para a contratação de serviço de hospedagem do portal de transparência do Tribunal, que implicará acesso da contratada a dados pessoais de usuários, a comissão quer prever obrigações de proteção de dados. Considerando a LGPD e boas práticas de segurança da informação em contratações de TIC, é adequado prever que a contratada",
+        "O Tribunal vai contratar empresa para desenvolver e manter um aplicativo de atendimento ao cidadão, o que exigirá que a contratada trate dados pessoais em nome do órgão. Na definição das obrigações contratuais, considerando a LGPD e boas práticas de segurança da informação em contratações de TIC, é adequado prever que a contratada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "defina as finalidades e os meios do tratamento dos dados pessoais, já que é ela quem detém o conhecimento técnico necessário para tomar decisões sobre o tratamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem toma as decisões sobre o tratamento é o controlador (art. 5º, VI). Se a contratada definisse finalidades e meios, deixaria de ser operadora. O operador trata os dados em nome do controlador e segundo as suas instruções (art. 5º, VII, e art. 39)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "fique dispensada de assinar termo de confidencialidade quando comprovar certificação ABNT NBR ISO/IEC 27001, que substitui obrigações contratuais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A certificação ISO/IEC 27001 é evidência de maturidade, mas não substitui obrigações contratuais nem o compromisso de confidencialidade de quem acessa informações do órgão. As boas práticas (ISO/IEC 27002:2022, controle 5.20) mandam fixar os requisitos de segurança no próprio acordo com o fornecedor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "possa subcontratar livremente o processamento em nuvem, sem prévia autorização do Tribunal, desde que o subcontratado mantenha seus servidores em território nacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A subcontratação, sobretudo do processamento, deve depender de autorização do controlador e manter os mesmos requisitos de segurança. A localização dos servidores no Brasil não dispensa esse controle; o tema é a gestão da cadeia de fornecimento (ISO/IEC 27002:2022, controle 5.21)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "trate os dados só conforme instruções documentadas do Tribunal, comunique-lhe incidentes, admita auditorias e, no encerramento, devolva ou elimine os dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A contratada é operadora (art. 5º, VII) e deve tratar os dados segundo as instruções do controlador (art. 39). Boas práticas de contratação de TIC traduzem isso em cláusulas: instruções documentadas, comunicação de incidentes ao controlador (que comunica a ANPD, art. 48), auditoria, sigilo, controle da subcontratação e devolução ou eliminação dos dados no encerramento. O dever de segurança continua após o término do tratamento (art. 47).",
+          "versaoInvertidaFalsa": "Na contratação de sustentação de sistemas, é adequado que a contratada defina, segundo seu próprio critério técnico, como e para que tratar os dados pessoais do Tribunal, dispensando instruções documentadas do controlador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "responda por danos aos titulares somente se houver culpa exclusiva sua, pois o descumprimento das instruções do Tribunal é risco que recai integralmente sobre o controlador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pelo art. 42, § 1º, I, o operador responde solidariamente quando descumpre a legislação ou deixa de seguir as instruções lícitas do controlador, hipótese em que se equipara ao controlador. A cláusula proposta contraria a lei."
+        }
+      ],
+      "pegadinhaFCC": "A FCC testa a divisão de papéis: o operador executa segundo instruções; quem decide é o controlador. Também explora as ideias equivocadas de que certificação substitui cláusula contratual e de que o operador nunca responde pelos danos.",
+      "resumoFlashcard": {
+        "pergunta": "Que cláusulas de proteção de dados não podem faltar no contrato com um operador de TIC?",
+        "resposta": "Tratamento só conforme instruções documentadas do controlador (art. 39), confidencialidade, comunicação de incidentes ao controlador, direito de auditoria, controle de subcontratação e devolução ou eliminação dos dados ao fim do contrato. O dever de segurança persiste após o término (art. 47)."
+      },
+      "conceitosChave": ["Contratações de TIC: cláusulas de segurança", "LGPD: controlador × operador"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, VI e VII; arts. 39, 42, § 1º, I, 47 e 48; ABNT NBR ISO/IEC 27002:2022, controles 5.19 a 5.21; SGD/PPSI, Guia de Requisitos e Obrigações quanto a Privacidade e à Segurança da Informação."
+    },
+    {
+      "id": "leg-ti-010",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RN 13/2016: Comitê Estratégico de TI (CETI)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Nos termos da Resolução Normativa nº 13/2016 do Tribunal de Contas do Estado de Goiás, o Comitê Estratégico de Tecnologia da Informação (CETI) é",
+      "variantesEnunciado": [
+        "Um servidor recém-empossado na área de TI do Tribunal perguntou qual é a natureza do Comitê Estratégico de Tecnologia da Informação. Conforme a Resolução Normativa nº 13/2016, o CETI é",
+        "A respeito do Comitê Estratégico de Tecnologia da Informação (CETI), instituído no Tribunal de Contas do Estado de Goiás pela Resolução Normativa nº 13/2016, é correto afirmar que o comitê é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "órgão singular de natureza deliberativa, vinculado à Diretoria de Tecnologia da Informação, com mandato temporário que deve ser renovado a cada exercício financeiro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI é colegiado, e não órgão singular; sua natureza é consultiva e seu caráter é permanente. Também não é vinculado à Diretoria de TI: é instância estratégica que orienta e acompanha a área."
+        },
+        {
+          "id": "opt-2",
+          "texto": "órgão colegiado de natureza consultiva e caráter permanente, com responsabilidades estratégicas e executivas relacionadas à tecnologia da informação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 1º da RN 13/2016 define o CETI como órgão colegiado de natureza consultiva, de caráter permanente, com responsabilidades estratégicas e executivas. Entre suas competências estão coordenar estratégias, diretrizes e políticas de TI, analisar planos e indicadores, validar o orçamento de TI, priorizar ações e investimentos e acompanhar projetos e conflitos de recursos. É também o CETI que aprova o PDTI, por ordem de serviço.",
+          "versaoInvertidaFalsa": "Pela RN 13/2016, o CETI é órgão singular de natureza deliberativa e caráter temporário, subordinado à Diretoria de Tecnologia da Informação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "comissão temporária constituída para cada contratação de solução de TIC, com a atribuição exclusiva de julgar as propostas apresentadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Comissões e agentes de contratação são figuras da Lei 14.133/2021. O CETI é permanente e atua no nível estratégico da governança de TI, e não no julgamento de propostas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "unidade administrativa subordinada à Diretoria de Tecnologia da Informação, responsável pela operação dos sistemas e pelo suporte técnico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Operação de sistemas e suporte técnico são atividades de gestão executadas pela Diretoria de TI e por suas unidades. O CETI é instância colegiada de governança, e não unidade operacional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "órgão colegiado de natureza judicante, competente para apreciar recursos contra decisões técnicas da área de tecnologia da informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI não tem natureza judicante nem aprecia recursos. Sua natureza é consultiva, com atribuições estratégicas como priorizar investimentos e validar o orçamento de TI."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os atributos do CETI: colegiado por singular, consultivo por deliberativo ou judicante, permanente por temporário. Guarde a tríade da RN 13/2016: colegiado, consultivo e permanente, com responsabilidades estratégicas e executivas.",
+      "resumoFlashcard": {
+        "pergunta": "Como a RN 13/2016 do TCE-GO caracteriza o CETI?",
+        "resposta": "Como órgão colegiado de natureza consultiva e caráter permanente, com responsabilidades estratégicas e executivas (art. 1º). Ele coordena estratégias e políticas de TI, analisa planos e indicadores, valida o orçamento de TI, prioriza investimentos e aprova o PDTI por ordem de serviço."
+      },
+      "conceitosChave": ["CETI (RN 13/2016)"],
+      "fundamentacao": "TCE-GO, Resolução Normativa nº 13/2016, arts. 1º e 2º (fatos verificados em docs/pesquisa/_normativos-tce-go.md)."
+    }
+  ]
+}

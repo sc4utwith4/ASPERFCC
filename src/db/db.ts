@@ -207,6 +207,10 @@ export class BancoLocal extends Dexie {
       reportes: "id, questaoId",
       config: "chave",
     });
+    this.version(2).stores({
+      tentativas: "++id, questaoId, materiaSlug, bateriaId, pacoteId, dia, resultado, contexto, respondidaEm, [materiaSlug+dia]",
+      reportes: "id, questaoId, criadoEm",
+    });
   }
 }
 

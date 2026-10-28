@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "legislacao-aplicada-ti",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "leg-ti-011",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Certificação digital em sistemas informatizados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil), instituída pela Medida Provisória nº 2.200-2/2001, é correto afirmar:",
+      "variantesEnunciado": [
+        "Ao especificar o módulo de assinatura digital do sistema de processo eletrônico do Tribunal, a equipe de TI estudou a estrutura da ICP-Brasil, instituída pela MP nº 2.200-2/2001. Sobre essa infraestrutura, é correto afirmar:",
+        "Nos termos da Medida Provisória nº 2.200-2/2001, que instituiu a Infraestrutura de Chaves Públicas Brasileira para garantir a autenticidade, a integridade e a validade jurídica de documentos em forma eletrônica, é correto afirmar:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "As Autoridades de Registro emitem os certificados digitais dos usuários finais, cabendo às Autoridades Certificadoras apenas a identificação presencial dos titulares.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os papéis estão invertidos. As AC emitem, expedem, distribuem, revogam e gerenciam os certificados (art. 6º); as AR identificam e cadastram os usuários, encaminham as solicitações às AC e mantêm registros de suas operações (art. 7º)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "O par de chaves criptográficas do titular é gerado pela Autoridade Certificadora, que mantém cópia da chave privada para permitir sua recuperação em caso de perda.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O parágrafo único do art. 6º determina que o par de chaves será gerado sempre pelo próprio titular e que a chave privada de assinatura é de seu exclusivo controle, uso e conhecimento. Uma AC que guardasse cópia da chave privada destruiria a base do não repúdio."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Documentos eletrônicos assinados com certificados não emitidos pela ICP-Brasil não produzem efeito jurídico em nenhuma hipótese, ainda que as partes os admitam como válidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 10, § 2º, admite outros meios de comprovação da autoria e da integridade, inclusive certificados não emitidos pela ICP-Brasil, desde que admitidos pelas partes como válidos ou aceitos pela pessoa a quem for oposto o documento. É a base da assinatura eletrônica avançada da Lei 14.063/2020."
+        },
+        {
+          "id": "opt-4",
+          "texto": "As declarações constantes de documentos eletrônicos produzidos com certificação ICP-Brasil gozam de presunção absoluta de veracidade, que não admite prova em contrário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 10, § 1º, estabelece que essas declarações presumem-se verdadeiras em relação aos signatários, remetendo à regra do Código Civil sobre documentos assinados. É presunção relativa, que admite prova em contrário, e não absoluta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "O ITI exerce a função de AC Raiz, primeira autoridade da cadeia de certificação, à qual é vedado emitir certificados para o usuário final.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 13 da MP 2.200-2 atribui ao ITI a função de AC Raiz, primeira autoridade da cadeia de certificação, que emite os certificados das AC de nível imediatamente subsequente e fiscaliza e audita as AC e as AR. O parágrafo único do art. 5º veda à AC Raiz emitir certificados para o usuário final; quem os emite são as AC credenciadas, com apoio das AR na identificação dos titulares.",
+          "versaoInvertidaFalsa": "Na ICP-Brasil, a AC Raiz, função exercida pelo ITI, emite diretamente os certificados dos usuários finais, dispensando a atuação das Autoridades Certificadoras credenciadas."
+        }
+      ],
+      "pegadinhaFCC": "A FCC troca os papéis da cadeia (AC Raiz, AC e AR), inverte quem gera o par de chaves e transforma a presunção relativa de veracidade em absoluta. Lembre: AC Raiz não emite para usuário final; AC emite; AR identifica e cadastra; o titular gera e controla a chave privada.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os papéis da AC Raiz, das AC e das AR na ICP-Brasil?",
+        "resposta": "AC Raiz (ITI): primeira autoridade da cadeia, emite os certificados das AC subsequentes e fiscaliza a cadeia, sendo-lhe vedado emitir para usuário final. AC: emitem, revogam e gerenciam certificados e publicam listas de revogados. AR: identificam e cadastram usuários e encaminham as solicitações às AC."
+      },
+      "conceitosChave": ["ICP-Brasil"],
+      "fundamentacao": "Medida Provisória 2.200-2/2001, arts. 1º, 2º, 5º (parágrafo único), 6º (parágrafo único), 7º, 10 (§§ 1º e 2º) e 13."
+    },
+    {
+      "id": "leg-ti-012",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LC estadual 205/2025 (IA em Goiás)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A Lei Complementar estadual nº 205, de 19 de maio de 2025, que instituiu em Goiás a política estadual de fomento à inovação em inteligência artificial,",
+      "variantesEnunciado": [
+        "Em reunião sobre o uso de IA no setor público goiano, um técnico do Tribunal resumiu a Lei Complementar estadual nº 205/2025, que instituiu a política estadual de fomento à inovação em inteligência artificial. Sobre essa lei, é correto afirmar que ela",
+        "Apontada como o primeiro marco legal estadual de inteligência artificial do país, a Lei Complementar nº 205/2025, do Estado de Goiás,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "criou o Núcleo de Ética e Inovação em IA (NEI-IA), órgão consultivo e multissetorial que regulamenta, coordena e supervisiona o Sandbox Estadual Permanente de IA.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A LC 205/2025 criou o NEI-IA, órgão de natureza consultiva e multissetorial na estrutura da Secretaria-Geral de Governo, e instituiu o Sandbox Estadual Permanente de IA (capítulo VIII, art. 32 e seguintes), ambiente regulatório experimental para desenvolver, testar e implementar soluções de IA. Cabe ao NEI-IA regulamentar, coordenar e supervisionar o sandbox.",
+          "versaoInvertidaFalsa": "A LC 205/2025 criou o NEI-IA como agência reguladora com poder sancionatório, à qual cabe autorizar previamente o funcionamento de todo sistema de IA privado em Goiás."
+        },
+        {
+          "id": "opt-2",
+          "texto": "criou agência reguladora estadual de inteligência artificial, com poder para autorizar previamente o desenvolvimento de qualquer sistema de IA por empresas privadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei não criou agência reguladora nem exige autorização prévia para desenvolver IA. Ao contrário, assegura ao setor privado liberdade para desenvolver e operar sistemas de IA para fins lícitos, com intervenção estatal excepcional e subsidiária."
+        },
+        {
+          "id": "opt-3",
+          "texto": "condicionou a operação de sistemas de IA no setor privado a licença estadual, por considerar que a intervenção do Estado nessa atividade deve ser a regra.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei inverte essa lógica: a liberdade do setor privado é a regra, e a intervenção do Estado é excepcional e subsidiária, em linha com a Lei federal de Liberdade Econômica (Lei 13.874/2019)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "entrou em vigor somente após vacatio legis de cento e oitenta dias, prazo concedido para a adaptação dos órgãos e entidades estaduais às novas exigências.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LC 205/2025 entrou em vigor na data de sua publicação, sem vacatio legis. Goiás foi apontado como o primeiro estado a ter um marco legal próprio de inteligência artificial."
+        },
+        {
+          "id": "opt-5",
+          "texto": "vedou a adoção de modelos de IA de código aberto pela administração estadual, por razões de segurança da informação e de proteção de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei faz o oposto: entre seus objetivos está estimular soluções de IA abertas, e ela prestigia o software aberto e os modelos de código aberto (open source), inclusive no ambiente do sandbox."
+        }
+      ],
+      "pegadinhaFCC": "A banca projeta sobre a lei goiana um modelo regulatório intervencionista (agência, licença prévia), quando a LC 205/2025 é lei de fomento: liberdade para o setor privado, intervenção excepcional e subsidiária, NEI-IA consultivo e sandbox experimental.",
+      "resumoFlashcard": {
+        "pergunta": "Quais estruturas a LC-GO 205/2025 criou para a governança da IA no estado?",
+        "resposta": "O Núcleo de Ética e Inovação em IA (NEI-IA), órgão consultivo, multissetorial e permanente, e o Sandbox Estadual Permanente de IA, ambiente regulatório experimental. O NEI-IA regulamenta, coordena e supervisiona o sandbox."
+      },
+      "conceitosChave": ["LC-GO 205/2025", "NEI-IA", "Sandbox de IA"],
+      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025, arts. 1º, 6º, 27 e 32 e seguintes (fatos em docs/pesquisa/_normativos-tce-go.md e docs/pesquisa/legislacao-aplicada-ti.md)."
+    },
+    {
+      "id": "leg-ti-013",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 17/2024: Política de Segurança da Informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Conforme a Resolução Administrativa nº 17/2024 do Tribunal de Contas do Estado de Goiás, a Política de Segurança da Informação estabelece diretrizes, objetivos e responsabilidades voltados a assegurar",
+      "variantesEnunciado": [
+        "Durante a integração de novos servidores, a área de TI apresentou a Política de Segurança da Informação do Tribunal, aprovada pela Resolução Administrativa nº 17/2024. Segundo essa resolução, a política estabelece diretrizes, objetivos e responsabilidades voltados a assegurar",
+        "Nos termos do art. 2º da Resolução Administrativa nº 17/2024, que dispõe sobre a Política de Segurança da Informação do TCE-GO, as diretrizes, os objetivos e as responsabilidades nela previstos visam a assegurar"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a confidencialidade e a integridade das informações classificadas como sigilosas, aplicando-se exclusivamente à Diretoria de Tecnologia da Informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A PSI não se limita à confidencialidade e à integridade nem às informações sigilosas, e não se aplica só à área de TI. O art. 2º abrange quatro propriedades (disponibilidade, integridade, confidencialidade e autenticidade) e todas as unidades do Tribunal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a disponibilidade, a integridade, a confidencialidade e a autenticidade das informações, aplicando-se apenas às unidades de TI e às empresas terceirizadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As quatro propriedades estão certas, mas o alcance está errado: a política se aplica a todas as unidades do Tribunal, e não apenas às de TI e a terceirizados. Segurança da informação é responsabilidade de toda a organização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a legalidade, a impessoalidade, a moralidade e a publicidade dos atos administrativos praticados por meio de sistemas informatizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Legalidade, impessoalidade, moralidade e publicidade são princípios da Administração Pública (art. 37 da CF/88). A alternativa troca as propriedades da segurança da informação pelos princípios constitucionais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a integridade e a irretratabilidade das informações dos sistemas críticos, aplicando-se somente às unidades que operam esses sistemas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Irretratabilidade (não repúdio) não figura entre as propriedades listadas no art. 2º da PSI, e a política não se restringe a sistemas críticos. O texto fala em disponibilidade, integridade, confidencialidade e autenticidade, para todas as unidades."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a disponibilidade, a integridade, a confidencialidade e a autenticidade das informações, aplicando-se a todas as unidades do Tribunal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 2º da RA 17/2024 dispõe que a PSI estabelece diretrizes, objetivos e responsabilidades para garantir a disponibilidade, a integridade, a confidencialidade e a autenticidade das informações, e que se aplica a todas as unidades do Tribunal. A política foi aprovada em 19/09/2024 e revogou a política anterior, de 2022.",
+          "versaoInvertidaFalsa": "Pela RA 17/2024, a Política de Segurança da Informação do TCE-GO trata apenas da confidencialidade e da integridade e se aplica somente à Diretoria de Tecnologia da Informação."
+        }
+      ],
+      "pegadinhaFCC": "A FCC costuma acertar as propriedades e errar o alcance (“apenas a TI”), ou trocar uma das propriedades por outra vizinha, como irretratabilidade. Na RA 17/2024 são quatro propriedades (disponibilidade, integridade, confidencialidade e autenticidade) e o alcance é todo o Tribunal.",
+      "resumoFlashcard": {
+        "pergunta": "Que propriedades a PSI do TCE-GO (RA 17/2024) busca assegurar e qual é o seu alcance?",
+        "resposta": "Disponibilidade, integridade, confidencialidade e autenticidade das informações (art. 2º). A política se aplica a todas as unidades do Tribunal."
+      },
+      "conceitosChave": ["PSI do TCE-GO"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 17/2024, art. 2º (fatos verificados em docs/pesquisa/_normativos-tce-go.md); CF/88, art. 37, caput."
+    },
+    {
+      "id": "leg-ti-014",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "PDTI 2025–2026",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O Plano Diretor de Tecnologia da Informação (PDTI) 2025–2026 do Tribunal de Contas do Estado de Goiás foi aprovado por",
+      "variantesEnunciado": [
+        "Ao preparar a apresentação do planejamento de TI para o biênio, a equipe da área de TI do Tribunal precisou indicar o ato de aprovação do PDTI 2025–2026. Esse plano foi aprovado por",
+        "No âmbito do Tribunal de Contas do Estado de Goiás, o Plano Diretor de Tecnologia da Informação para o biênio 2025–2026, instrumento de planejamento da área de TI, foi aprovado por"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Ordem de Serviço do Comitê Estratégico de TI (OS nº 001/2025-CETI), colegiado ao qual compete analisar planos e indicadores de desempenho de TI.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Conforme o edital do concurso, o PDTI 2025–2026 foi aprovado pela Ordem de Serviço nº 001/2025-CETI, a exemplo do PDTI 2023–2024, aprovado pela OS nº 002/2023-CETI. A escolha é coerente com a RN 13/2016, que atribui ao CETI analisar planos e indicadores de TI, validar o orçamento da área e priorizar ações e investimentos.",
+          "versaoInvertidaFalsa": "O PDTI 2025–2026 do TCE-GO foi aprovado por portaria da Diretoria de Tecnologia da Informação, cabendo ao CETI apenas tomar ciência do plano depois de publicado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Resolução Administrativa do Tribunal Pleno, por se tratar de instrumento que altera a estrutura organizacional e as competências da Diretoria de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PDTI não altera a estrutura organizacional, matéria tratada em resolução administrativa (como a RA 14/2025). O plano foi aprovado por ordem de serviço do CETI."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Portaria da Diretoria de Tecnologia da Informação, unidade que, por ser executora do plano, detém competência exclusiva para aprová-lo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A área de TI executa o plano, mas não o aprova sozinha. A aprovação cabe ao colegiado estratégico, o que reforça a governança: quem executa não é quem prioriza e valida."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Instrução normativa da Secretaria de Governo Digital, órgão central do SISP ao qual os planos de TI dos tribunais de contas estão subordinados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A SGD é órgão central do SISP, sistema do Poder Executivo federal. O Tribunal de Contas estadual tem autonomia administrativa, e seu PDTI foi aprovado internamente, pelo CETI."
+        },
+        {
+          "id": "opt-5",
+          "texto": "decreto do Governador do Estado, porque o plano integra o planejamento plurianual do Poder Executivo estadual e dele depende para ter eficácia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Tribunal tem autonomia funcional, administrativa e financeira, e seu planejamento de TI não depende de ato do Governador. A aprovação ocorreu por ordem de serviço do CETI."
+        }
+      ],
+      "pegadinhaFCC": "O detalhe cobrado é o instrumento e o órgão: ordem de serviço do CETI. A banca oferece instrumentos de outros níveis (resolução do Pleno, portaria da área de TI, norma federal, decreto estadual).",
+      "resumoFlashcard": {
+        "pergunta": "Como foi aprovado o PDTI 2025–2026 do TCE-GO?",
+        "resposta": "Pela Ordem de Serviço nº 001/2025-CETI, isto é, pelo Comitê Estratégico de TI, colegiado que, pela RN 13/2016, analisa planos e indicadores, valida o orçamento e prioriza ações e investimentos de TI."
+      },
+      "conceitosChave": ["PDTI", "CETI (RN 13/2016)"],
+      "fundamentacao": "Edital TCE-GO nº 01/2026, Anexo II (Legislação Aplicada à TI): PDTI 2025–2026 aprovado pela OS nº 001/2025-CETI; TCE-GO, RN 13/2016, art. 2º; Lei estadual 16.168/2007, art. 7º (autonomia)."
+    },
+    {
+      "id": "leg-ti-015",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na fase de levantamento de requisitos de um novo sistema de autuação de processos, a equipe de TI do Tribunal incluiu requisitos não funcionais de proteção de dados, como criptografia dos campos de CPF, controle de acesso por perfil e trilhas de auditoria. O gerente do projeto propôs adiar esses requisitos para depois da homologação, “quando o sistema já estiver funcionando com dados reais”. À luz da LGPD, a proposta é",
+      "variantesEnunciado": [
+        "Durante o planejamento de um painel analítico com dados de servidores do Tribunal, a equipe previu, desde o início, mascaramento de dados, perfis de acesso e registro de consultas. O coordenador sugeriu retirar esses itens do escopo inicial e implementá-los “numa segunda versão, após a homologação”, para acelerar a entrega. À luz da LGPD, a sugestão é",
+        "Um técnico do Tribunal, ao revisar o backlog de um aplicativo de peticionamento, encontrou histórias de usuário de segurança (criptografia, autenticação multifator e trilhas de auditoria) marcadas para depois da homologação, sob o argumento de que “só importam quando houver dados reais em produção”. À luz da LGPD, a decisão de planejamento é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "adequada, porque a LGPD só exige medidas de segurança a partir do momento em que o tratamento de dados pessoais efetivamente começa, isto é, com o sistema em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 46, § 2º, antecipa o dever para a fase de concepção do produto ou do serviço. Esperar a produção significa colocar dados reais em um sistema sem as salvaguardas mínimas, o que contraria também os princípios da segurança e da prevenção (art. 6º, VII e VIII)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "adequada, desde que o Tribunal elabore relatório de impacto à proteção de dados pessoais logo após a implantação, documento que supre a ausência das medidas na fase de projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RIPD (art. 5º, XVII, e art. 38) documenta riscos e medidas de mitigação; ele não substitui as medidas. Elaborá-lo depois de implantar um sistema sem salvaguardas inverte a lógica preventiva da lei."
+        },
+        {
+          "id": "opt-3",
+          "texto": "inadequada, porque a LGPD exige que todo sistema público obtenha certificação ABNT NBR ISO/IEC 27701 antes de ser homologado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A conclusão (inadequada) está certa, mas o fundamento é falso: a LGPD não exige certificação ISO/IEC 27701 de nenhum sistema. O fundamento correto é o art. 46, § 2º, combinado com o art. 49."
+        },
+        {
+          "id": "opt-4",
+          "texto": "adequada, porque órgãos públicos estão dispensados do art. 46 da LGPD quando tratam dados para executar suas competências legais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O poder público trata dados para cumprir suas competências (art. 23), mas não fica dispensado das regras de segurança. Os arts. 46 a 49 se aplicam a todos os agentes de tratamento, públicos e privados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "inadequada, pois as medidas de segurança devem ser observadas desde a concepção do sistema até a sua execução, e ele deve ser estruturado para atender a esses requisitos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 46, § 2º, da LGPD manda observar as medidas de segurança, técnicas e administrativas, desde a fase de concepção do produto ou do serviço até a sua execução, e o art. 49 exige que os sistemas sejam estruturados para atender aos requisitos de segurança, às boas práticas e aos princípios da lei. Adiar criptografia, controle de acesso e trilhas de auditoria para depois da homologação contraria a privacidade desde a concepção.",
+          "versaoInvertidaFalsa": "Pela LGPD, é adequado adiar os requisitos de segurança de um sistema para depois da homologação, pois as medidas só são exigíveis quando o tratamento de dados reais começa."
+        }
+      ],
+      "pegadinhaFCC": "A alternativa com a conclusão certa e o fundamento errado (certificação ISO 27701) é armadilha típica da FCC. O fundamento legal é o art. 46, § 2º (da concepção à execução), reforçado pelo art. 49.",
+      "resumoFlashcard": {
+        "pergunta": "Requisitos de segurança e privacidade podem ser deixados para depois da homologação de um sistema, segundo a LGPD?",
+        "resposta": "Não. O art. 46, § 2º, exige as medidas desde a fase de concepção até a execução, e o art. 49 exige sistemas estruturados para atender aos requisitos de segurança e aos princípios da lei. É a privacidade desde a concepção (privacy by design)."
+      },
+      "conceitosChave": ["LGPD: privacy by design", "LGPD: segurança (art. 46)"],
+      "fundamentacao": "Lei 13.709/2018, art. 6º, VII e VIII; art. 23; art. 38; art. 46, § 2º; art. 49."
+    },
+    {
+      "id": "leg-ti-016",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de dados do Tribunal pretende publicar, no portal de dados abertos, uma base estatística derivada de processos de fiscalização, depois de submetê-la a técnicas de anonimização. Sobre o regime dos dados anonimizados na LGPD, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Antes de compartilhar com uma universidade uma base de indicadores de gestão de pessoal, o Tribunal submeteu os dados a técnicas de generalização e supressão. Um analista foi encarregado de verificar o regime jurídico dos dados anonimizados na LGPD. Considere as afirmativas abaixo.",
+        "No treinamento da equipe que mantém o portal de dados abertos do Tribunal, discutiu-se quando um dado anonimizado deixa de ser, ou volta a ser, dado pessoal segundo a Lei nº 13.709/2018. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Dados anonimizados não são considerados dados pessoais, salvo quando o processo de anonimização for revertido utilizando exclusivamente meios próprios ou quando, com esforços razoáveis, puder ser revertido.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o texto do art. 12, caput: a exclusão do conceito de dado pessoal cede quando a anonimização é reversível por meios próprios ou com esforços razoáveis."
+        },
+        {
+          "texto": "A razoabilidade do esforço de reversão deve levar em conta fatores objetivos, como o custo e o tempo necessários para reverter o processo, de acordo com as tecnologias disponíveis.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o § 1º do art. 12, que manda considerar custo, tempo e tecnologias disponíveis, além da utilização exclusiva de meios próprios."
+        },
+        {
+          "texto": "Dados utilizados para a formação do perfil comportamental de determinada pessoa natural, se identificada, podem ser considerados dados pessoais para os fins da LGPD.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o § 2º do art. 12: perfis comportamentais de pessoa natural identificada podem ser tratados como dados pessoais."
+        },
+        {
+          "texto": "Uma vez anonimizado com as técnicas disponíveis no momento do tratamento, o dado jamais volta a ser considerado pessoal, ainda que novas tecnologias permitam a reidentificação com esforço razoável.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O critério do art. 12 é dinâmico: se a evolução tecnológica tornar a reversão possível com esforço razoável, o dado volta a ser pessoal. Por isso a anonimização deve ser reavaliada periodicamente."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As afirmativas I, II e III reproduzem o caput e os §§ 1º e 2º do art. 12 da LGPD. A IV é falsa: a avaliação de reversibilidade é dinâmica e considera as tecnologias disponíveis, de modo que um dado anonimizado pode voltar a ser pessoal se a reidentificação se tornar viável com esforço razoável.",
+          "versaoInvertidaFalsa": "Segundo a LGPD, dados anonimizados nunca voltam a ser considerados pessoais, ainda que a evolução tecnológica permita reverter a anonimização com esforços razoáveis."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa III, que também é verdadeira: o § 2º do art. 12 permite considerar dados pessoais aqueles usados para formar o perfil comportamental de pessoa natural identificada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, que é falsa (a reidentificação viável com esforço razoável faz o dado voltar a ser pessoal), e exclui a I, que reproduz o caput do art. 12."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exclui as afirmativas II e III, ambas verdadeiras (§§ 1º e 2º do art. 12), e inclui a IV, que contraria o caráter dinâmico do critério de reversibilidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa. A LGPD não trata a anonimização como estado permanente: ela depende dos meios técnicos razoáveis disponíveis e pode ser revertida com a evolução tecnológica."
+        }
+      ],
+      "pegadinhaFCC": "A banca transforma a anonimização em estado definitivo. Pela LGPD, ela é avaliada por meios técnicos razoáveis e disponíveis, considerando custo, tempo e tecnologia; se a reversão ficar viável, o dado volta a ser pessoal.",
+      "resumoFlashcard": {
+        "pergunta": "Quando um dado anonimizado volta a ser considerado dado pessoal pela LGPD?",
+        "resposta": "Quando o processo puder ser revertido com meios próprios ou com esforços razoáveis, avaliados por fatores objetivos como custo, tempo e tecnologias disponíveis (art. 12 e § 1º). Também podem ser pessoais os dados usados para formar perfil comportamental de pessoa identificada (§ 2º)."
+      },
+      "conceitosChave": ["LGPD: anonimização"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, III e XI; art. 12, caput e §§ 1º a 3º."
+    },
+    {
+      "id": "leg-ti-017",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: neutralidade de rede",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um provedor de conexão à internet passou a degradar a velocidade dos pacotes de uma plataforma de videoconferência concorrente, mantendo velocidade plena para a plataforma de videoconferência oferecida por empresa do seu próprio grupo econômico. Servidores do Tribunal que participam de audiências por videoconferência relataram o problema. À luz do Marco Civil da Internet e de sua regulamentação, a conduta do provedor é",
+      "variantesEnunciado": [
+        "Uma operadora de banda larga que também controla, por meio de empresa coligada do mesmo grupo econômico, um serviço de armazenamento em nuvem passou a reduzir a velocidade dos pacotes destinados a serviços de armazenamento concorrentes, preservando a do serviço do grupo. A equipe de TI do Tribunal percebeu lentidão nas sincronizações com o fornecedor concorrente. À luz do Marco Civil da Internet e de sua regulamentação, a conduta da operadora é",
+        "Um provedor de conexão passou a limitar a banda de um serviço de streaming de vídeo concorrente, sem restringir o serviço de streaming oferecido por empresa do mesmo grupo econômico do provedor. Usuários, entre eles servidores do Tribunal em trabalho remoto, perceberam a diferença de desempenho. À luz do Marco Civil da Internet e de sua regulamentação, a conduta do provedor é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "vedada, pois viola o tratamento isonômico dos pacotes e privilegia aplicação de empresa do próprio grupo econômico, conduta proibida pelo Decreto 8.771/2016.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 9º do Marco Civil impõe ao responsável pela transmissão, comutação ou roteamento tratar de forma isonômica quaisquer pacotes, sem distinção por origem, destino, serviço ou aplicação. O Decreto 8.771/2016 (art. 9º) veda condutas que privilegiem aplicações ofertadas pelo próprio responsável ou por empresas de seu grupo econômico, assim como a priorização de pacotes em razão de arranjos comerciais. Degradar o concorrente não se enquadra nas exceções técnicas nem na priorização de emergência.",
+          "versaoInvertidaFalsa": "À luz do Marco Civil, o provedor de conexão pode degradar o tráfego de aplicação concorrente e privilegiar a de empresa do seu grupo, desde que informe a prática no contrato com o usuário."
+        },
+        {
+          "id": "opt-2",
+          "texto": "permitida, pois a liberdade dos modelos de negócios é princípio do Marco Civil e prevalece sobre a neutralidade de rede sempre que houver concorrência efetiva no mercado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A liberdade dos modelos de negócios é princípio do art. 3º, VIII, mas apenas “desde que não conflitem com os demais princípios” da lei, entre eles a neutralidade de rede (art. 3º, IV). Não há prevalência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "permitida, desde que o provedor informe previamente aos usuários, no contrato, a prática de priorização adotada em favor da plataforma do grupo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A transparência (art. 9º, § 2º, III) é condição adicional para as discriminações admitidas, e não autorização para práticas vedadas. Informar no contrato não legitima privilegiar aplicação do próprio grupo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "vedada apenas se houver ordem judicial específica reconhecendo o dano, pois a neutralidade de rede depende de provocação do Poder Judiciário para se tornar exigível do provedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A neutralidade é dever legal direto do responsável pela transmissão, comutação ou roteamento, sujeito à fiscalização administrativa (Anatel, defesa do consumidor e defesa da concorrência). Não depende de ordem judicial para ser exigível."
+        },
+        {
+          "id": "opt-5",
+          "texto": "permitida, por se enquadrar como requisito técnico indispensável à prestação adequada do serviço, dado o alto consumo de banda da aplicação degradada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os requisitos técnicos indispensáveis são os ligados à segurança da rede (como spam e negação de serviço) e a situações excepcionais de congestionamento (Decreto 8.771/2016, art. 5º, § 1º). Degradar apenas a aplicação concorrente, e não um tipo de tráfego em geral, revela motivação comercial."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece justificativas aparentemente legítimas (modelo de negócio, transparência contratual, requisito técnico) para uma conduta discriminatória. O decisivo é que o provedor privilegia aplicação do próprio grupo, conduta vedada expressamente pelo decreto regulamentador.",
+      "resumoFlashcard": {
+        "pergunta": "Um provedor de conexão pode privilegiar o tráfego de aplicação de empresa do seu grupo econômico?",
+        "resposta": "Não. O art. 9º do Marco Civil exige tratamento isonômico dos pacotes, e o Decreto 8.771/2016 veda condutas que privilegiem aplicações do próprio provedor ou de seu grupo econômico e a priorização por arranjos comerciais. Transparência contratual não legitima a prática."
+      },
+      "conceitosChave": ["Marco Civil: neutralidade de rede", "Decreto 8.771/2016"],
+      "fundamentacao": "Lei 12.965/2014, art. 3º, IV e VIII; art. 9º, caput e §§ 1º e 2º; Decreto 8.771/2016, art. 5º, § 1º, e art. 9º."
+    },
+    {
+      "id": "leg-ti-018",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: proteção de dados e guarda de registros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No curso de uma apuração administrativa, autoridade com competência legal expressa para requisitar dados cadastrais solicitou diretamente a um provedor de conexão, sem ordem judicial, (1) a qualificação pessoal, a filiação e o endereço do titular de determinado contrato de assinatura, identificado pelo número do contrato, e (2) os registros de conexão desse assinante nos últimos três meses. Nos termos do Marco Civil da Internet, o provedor",
+      "variantesEnunciado": [
+        "Em procedimento administrativo, órgão com competência legal expressa para requisitar dados cadastrais oficiou a uma operadora pedindo, sem autorização judicial, (1) a qualificação pessoal, a filiação e o endereço do titular de um contrato de banda larga identificado pelo número e (2) as datas, os horários e os endereços IP das conexões desse titular no último mês. Nos termos do Marco Civil da Internet, a operadora",
+        "Uma autoridade administrativa legalmente competente para requisitar dados cadastrais pediu a um provedor de conexão, por ofício e sem ordem judicial, os dados de qualificação pessoal, filiação e endereço do titular de um contrato e, ainda, o histórico de registros de conexão desse titular no último trimestre. Nos termos do Marco Civil da Internet, o provedor"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "deve fornecer as duas informações, pois a competência legal da autoridade administrativa dispensa ordem judicial para quaisquer dados relacionados ao usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A exceção do art. 10, § 3º, alcança somente os dados cadastrais (qualificação pessoal, filiação e endereço). Registros de conexão e de acesso a aplicações só são disponibilizados mediante ordem judicial (art. 10, § 1º, e art. 13, § 5º)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "não pode fornecer nenhuma das informações, porque qualquer dado relativo ao usuário, inclusive o cadastral, depende de ordem judicial para ser disponibilizado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 10, § 3º, ressalva expressamente o acesso aos dados cadastrais pelas autoridades administrativas que detenham competência legal para requisitá-los. Generalizar a exigência de ordem judicial é o erro."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deve fornecer apenas os registros de conexão, já que os dados cadastrais estão protegidos por sigilo absoluto e só podem ser obtidos com consentimento do titular.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte o regime: os dados cadastrais é que podem ser requisitados pela autoridade administrativa competente, enquanto os registros de conexão exigem autorização judicial."
+        },
+        {
+          "id": "opt-4",
+          "texto": "pode fornecer os dados cadastrais à autoridade competente, mas os registros de conexão só podem ser disponibilizados mediante ordem judicial.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 10, § 1º, condiciona a disponibilização dos registros de conexão e de acesso a aplicações a ordem judicial, e o art. 13, § 5º, reforça que a entrega dos registros de conexão deve ser precedida de autorização judicial. Já o § 3º do art. 10 permite o acesso aos dados cadastrais (qualificação pessoal, filiação e endereço) pela autoridade administrativa com competência legal, que deve indicar o fundamento legal e a motivação do pedido (Decreto 8.771/2016, art. 11).",
+          "versaoInvertidaFalsa": "Pelo Marco Civil, a autoridade administrativa com competência legal pode obter diretamente do provedor, sem ordem judicial, tanto os dados cadastrais quanto os registros de conexão do usuário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deve fornecer as duas informações apenas se o assinante consentir de forma livre, expressa e informada, hipótese em que a autoridade fica dispensada de fundamentar o pedido.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O regime de acesso por autoridades não se baseia no consentimento do assinante. Os dados cadastrais dependem de competência legal da autoridade, com fundamento e motivação; os registros dependem de ordem judicial."
+        }
+      ],
+      "pegadinhaFCC": "A FCC explora a fronteira entre dados cadastrais (requisitáveis por autoridade administrativa competente) e registros de conexão ou de acesso a aplicações (sempre com ordem judicial). Inverter ou generalizar a regra é o erro mais comum.",
+      "resumoFlashcard": {
+        "pergunta": "Autoridade administrativa pode obter de um provedor, sem ordem judicial, dados do usuário? Quais?",
+        "resposta": "Apenas os dados cadastrais (qualificação pessoal, filiação e endereço), e desde que tenha competência legal, indicando fundamento e motivação (Marco Civil, art. 10, § 3º; Decreto 8.771/2016, art. 11). Registros de conexão e de acesso a aplicações exigem ordem judicial."
+      },
+      "conceitosChave": ["Marco Civil: ordem judicial", "Marco Civil: guarda de registros"],
+      "fundamentacao": "Lei 12.965/2014, art. 10, §§ 1º e 3º; art. 13, § 5º; Decreto 8.771/2016, art. 11."
+    },
+    {
+      "id": "leg-ti-019",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Pela LGPD, o controlador e o operador devem manter registro das operações de tratamento de dados pessoais que realizarem, especialmente quando baseado no ……. A autoridade nacional poderá determinar ao controlador que elabore ……, que deverá conter, no mínimo, a descrição dos tipos de dados coletados, a …… utilizada para a coleta e para a garantia da segurança das informações e a análise do controlador com relação a medidas, salvaguardas e mecanismos de mitigação de risco adotados. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao estruturar o inventário de dados pessoais dos sistemas do Tribunal, a equipe registrou que, segundo a LGPD, controlador e operador devem manter registro das operações de tratamento, especialmente quando baseado no ……, e que a autoridade nacional poderá exigir do controlador ……, com, no mínimo, a descrição dos tipos de dados coletados, a …… utilizada para a coleta e para a garantia da segurança das informações e a análise das medidas, salvaguardas e mecanismos de mitigação de risco. Preenchem, correta e respectivamente, as lacunas:",
+        "Nos termos dos arts. 37 e 38 da Lei nº 13.709/2018, o registro das operações de tratamento é exigido sobretudo quando o tratamento se baseia no ……; a autoridade nacional pode determinar ao controlador a elaboração de ……, cujo conteúdo mínimo inclui a descrição dos tipos de dados coletados, a …… usada na coleta e na garantia da segurança das informações e a análise das medidas de mitigação de risco. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "consentimento − relatório de impacto à proteção de dados pessoais − metodologia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 37 destaca o legítimo interesse, e não o consentimento. A razão é que o legítimo interesse depende de ponderação feita pelo próprio controlador, o que exige documentação mais cuidadosa (o art. 10, § 3º, prevê inclusive a solicitação de RIPD nessa hipótese)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "legítimo interesse − plano de resposta a incidentes − metodologia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O documento previsto no art. 38 é o relatório de impacto à proteção de dados pessoais (RIPD), definido no art. 5º, XVII. Plano de resposta a incidentes é boa prática de segurança, mas não é o documento descrito no dispositivo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "legítimo interesse − relatório de impacto à proteção de dados pessoais − tecnologia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O parágrafo único do art. 38 fala na “metodologia utilizada para a coleta e para a garantia da segurança das informações”, e não em tecnologia. A troca de um único termo é típica da banca."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cumprimento de obrigação legal − relatório de impacto à proteção de dados pessoais − metodologia",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O registro das operações é exigido qualquer que seja a base legal, mas o art. 37 dá ênfase ao legítimo interesse, e não ao cumprimento de obrigação legal ou regulatória."
+        },
+        {
+          "id": "opt-5",
+          "texto": "legítimo interesse − relatório de impacto à proteção de dados pessoais − metodologia",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 37 impõe a controlador e operador o registro das operações de tratamento, especialmente quando baseado no legítimo interesse. O art. 38 permite à autoridade nacional determinar a elaboração do RIPD, cujo conteúdo mínimo (parágrafo único) inclui a descrição dos tipos de dados coletados, a metodologia de coleta e de garantia da segurança e a análise das medidas, salvaguardas e mecanismos de mitigação de risco. Na prática, o registro funciona como inventário de dados e alimenta o RIPD.",
+          "versaoInvertidaFalsa": "Pela LGPD, o registro das operações de tratamento é exigido apenas do controlador e somente quando o tratamento se basear no consentimento do titular."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a base legal destacada no art. 37 (legítimo interesse) e um termo do conteúdo mínimo do RIPD (metodologia por tecnologia). Atenção também: o registro é dever do controlador e do operador.",
+      "resumoFlashcard": {
+        "pergunta": "Quem deve manter registro das operações de tratamento e qual é o conteúdo mínimo do RIPD na LGPD?",
+        "resposta": "Controlador e operador, especialmente quando o tratamento se basear no legítimo interesse (art. 37). O RIPD deve conter, no mínimo, a descrição dos tipos de dados coletados, a metodologia de coleta e de garantia da segurança e a análise das medidas, salvaguardas e mecanismos de mitigação de risco (art. 38, parágrafo único)."
+      },
+      "conceitosChave": ["LGPD: registro das operações", "LGPD: RIPD"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, XVII; art. 10, § 3º; arts. 37 e 38, parágrafo único."
+    },
+    {
+      "id": "leg-ti-020",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em parecer sobre a adoção de privacidade desde a concepção e por padrão no desenvolvimento dos sistemas do Tribunal, um analista relacionou esses conceitos ao texto da LGPD. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar um guia interno de desenvolvimento seguro para as equipes de sistemas do Tribunal, a área de TI reuniu afirmações sobre privacidade desde a concepção (privacy by design) e privacidade por padrão (privacy by default) à luz da LGPD. Considere as afirmativas abaixo.",
+        "Em auditoria sobre a maturidade em proteção de dados do processo de desenvolvimento de software de um jurisdicionado, a equipe do Tribunal examinou como a LGPD trata a privacidade desde a concepção e por padrão. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A LGPD determina que as medidas de segurança, técnicas e administrativas, sejam observadas desde a fase de concepção do produto ou do serviço até a sua execução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 46, § 2º, base legal da privacidade desde a concepção."
+        },
+        {
+          "texto": "A expressão “privacidade por padrão” (privacy by default) está definida expressamente no art. 5º da LGPD, ao lado das definições de anonimização e de pseudonimização.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A LGPD não usa a expressão, e a pseudonimização nem está no art. 5º (está no art. 13, § 4º). O conceito de privacy by default é doutrinário e está expresso no GDPR (art. 25); na LGPD, decorre sobretudo do princípio da necessidade."
+        },
+        {
+          "texto": "A configuração padrão mais protetiva, que trata apenas os dados necessários a cada finalidade sem exigir ação do titular, concretiza o princípio da necessidade previsto no art. 6º, III, da LGPD.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A privacidade por padrão é a tradução, em configuração de sistema, da limitação do tratamento ao mínimo necessário para a finalidade."
+        },
+        {
+          "texto": "Os sistemas utilizados para o tratamento de dados pessoais devem ser estruturados de forma a atender aos requisitos de segurança, aos padrões de boas práticas e de governança e aos princípios gerais da LGPD.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 49, que reforça a privacidade desde a concepção ao exigir que o próprio sistema seja estruturado para cumprir a lei."
+        },
+        {
+          "texto": "Por se tratar de exigência ligada ao projeto de sistemas, a privacidade desde a concepção aplica-se apenas a sistemas que tratem dados pessoais sensíveis.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 46, § 2º, e o art. 49 alcançam qualquer tratamento de dados pessoais. Dados sensíveis pedem salvaguardas mais rigorosas, mas não delimitam a aplicação do conceito."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A afirmativa I reproduz o art. 46, § 2º; a III liga a configuração padrão mais protetiva ao princípio da necessidade (art. 6º, III); a IV reproduz o art. 49. A II é falsa porque a LGPD não define privacy by default (e a pseudonimização está no art. 13, § 4º), e a V é falsa porque a privacidade desde a concepção vale para todo tratamento de dados pessoais, e não só para dados sensíveis.",
+          "versaoInvertidaFalsa": "A LGPD só exige que as medidas de segurança sejam observadas a partir da execução do produto ou do serviço, e não desde a sua concepção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa: a LGPD não define privacy by default no art. 5º. E exclui a III, verdadeira, que vincula a configuração padrão mais protetiva ao princípio da necessidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui duas afirmativas falsas (II e V) e deixa de fora as afirmativas I e IV, que reproduzem os arts. 46, § 2º, e 49 da LGPD."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e IV estão corretas, mas a III também está: a privacidade por padrão concretiza o princípio da necessidade. A alternativa é incompleta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa V, falsa, que restringe indevidamente a privacidade desde a concepção aos dados sensíveis, e exclui a I, que reproduz o art. 46, § 2º."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que a LGPD define expressamente privacy by default (não define) e restringe o conceito a dados sensíveis. O texto legal está nos arts. 46, § 2º, e 49; a privacidade por padrão é construção doutrinária ancorada na necessidade (art. 6º, III) e expressa no GDPR, art. 25.",
+      "resumoFlashcard": {
+        "pergunta": "Quais dispositivos da LGPD sustentam a privacidade desde a concepção e por padrão?",
+        "resposta": "Art. 46, § 2º (medidas de segurança da concepção à execução), art. 49 (sistemas estruturados para atender aos requisitos de segurança, boas práticas, governança e princípios) e art. 6º, III (necessidade), que fundamenta a configuração padrão mais protetiva. A expressão privacy by default não aparece na LGPD."
+      },
+      "conceitosChave": ["LGPD: privacy by design", "LGPD: privacy by default", "LGPD: princípio da necessidade"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º; art. 6º, III; art. 13, § 4º; art. 46, § 2º; art. 49; Regulamento (UE) 2016/679 (GDPR), art. 25."
+    }
+  ]
+}

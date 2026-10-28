@@ -1,0 +1,136 @@
+{
+  "materiaSlug": "lingua-portuguesa",
+  "textos": [
+    {
+      "id": "lp-t01",
+      "titulo": "A gaveta de baixo",
+      "idioma": "pt",
+      "genero": "Crônica",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Quando me designaram para a comissão de digitalização do arquivo, confesso que imaginei uma tarefa burocrática, dessas que se cumprem com café requentado e paciência de monge. Bastaria, pensei, alimentar o escâner com folhas amareladas e conferir, de tempos em tempos, se as imagens saíam legíveis. Não contava com a gaveta de baixo: a última de um móvel de aço que ninguém abria havia décadas, emperrada pela ferrugem e, talvez, pelo esquecimento.",
+        "Lá dentro, entre pastas de cartolina e grampos que já tinham perdido a função, repousava um processo de 1974 sobre a compra de carteiras escolares. O assunto não poderia ser mais prosaico. O que me prendeu foram as margens: um servidor de caligrafia inclinada anotara dúvidas a cada página. “Preço acima do usual?”, perguntava ele, a lápis, ao lado de uma planilha. Mais adiante, em letra apressada: “Conferir se as carteiras chegaram.” Não sei se chegaram. Sei que alguém, meio século atrás, desconfiou de um número e teve a coragem de registrar a desconfiança.",
+        "Digitalizei o processo inteiro, folha por folha. O escâner, eficiente, reproduziu cada traço do lápis, cada algarismo da planilha, até a mancha de café que se espalhava pela capa como o mapa de um país inexistente. Não reproduziu, porém, o cheiro de papel guardado, nem o peso da pasta nas mãos, nem a hesitação que se percebia nas emendas, aquele instante em que o anotador parece ter pensado duas vezes antes de escrever. A imagem é fiel, mas é plana: conserva o registro e perde a espessura.",
+        "Não escrevo isto por saudosismo. Sem a digitalização, aquele processo continuaria condenado à ferrugem, e a desconfiança do servidor anônimo jamais chegaria a outros olhos. O arquivo digital democratiza a memória, ao passo que o papel a aprisionava numa sala que poucos visitavam. Ainda assim, desconfio — e foi com aquele servidor que aprendi a desconfiar — de que toda memória preservada é também uma memória traduzida. Cabe a nós, que a traduzimos, lembrar que por trás de cada arquivo há alguém que, um dia, achou que valia a pena perguntar."
+      ]
+    },
+    {
+      "id": "lp-t02",
+      "titulo": "A vitrine e o cofre",
+      "idioma": "pt",
+      "genero": "Ensaio",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Fala-se de transparência como se fala de uma vitrine: bastaria expor os números para que todos os vissem. A imagem é sedutora e, em parte, verdadeira, pois aquilo que se oferece ao olhar alheio tende a corromper-se menos. Convém, no entanto, desconfiar das metáforas que agradam a todos. Uma vitrine abarrotada, iluminada por refletores mal posicionados, mais confunde do que mostra, e há modos de exibir que equivalem, na prática, a esconder.",
+        "Pense-se numa planilha com quarenta mil linhas, publicada num formato que só programas específicos conseguem abrir, sem legenda para as siglas nem explicação para as colunas. Do ponto de vista formal, a informação está disponível; do ponto de vista do cidadão, é tão inacessível quanto se estivesse trancada num cofre. Trata-se de uma opacidade por excesso, mais difícil de denunciar do que o sigilo, porque se apresenta com as roupas da abertura. Ninguém pode acusar de omissão quem publicou tudo, ainda que ninguém tenha conseguido ler nada.",
+        "A transparência, portanto, não é uma propriedade dos documentos, mas uma relação entre quem informa e quem é informado. Um dado só se torna transparente quando alguém consegue compreendê-lo, compará-lo e, se for o caso, contestá-lo. Isso exige linguagem clara, formatos abertos e, sobretudo, disposição para traduzir o jargão técnico sem empobrecer o conteúdo. Quem já tentou decifrar uma conta de energia elétrica sabe que ter diante de si todos os números não equivale a compreender o que se paga. Não se trata de simplificar a realidade, e sim de torná-la percorrível.",
+        "Resta desfazer um último equívoco: o de que a publicação encerra o dever de prestar contas. Ela apenas o inaugura. Informações expostas sem que haja quem as examine são como cartas que ninguém abre, e o exame de nada adianta se as instituições não estiverem dispostas a responder às perguntas que dele resultarem. A vitrine, afinal, só cumpre sua função quando alguém para diante dela, observa com atenção e tem a quem perguntar o preço."
+      ]
+    },
+    {
+      "id": "lp-t03",
+      "titulo": "Quem audita o algoritmo?",
+      "idioma": "pt",
+      "genero": "Artigo de opinião",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Não há mais como fingir que se trata de ficção científica. Em diversos órgãos públicos, sistemas automatizados já selecionam quais contratos merecem fiscalização mais detida, quais pedidos de benefício devem ser revistos e quais denúncias têm prioridade. A promessa é tentadora: se uma máquina for capaz de examinar em minutos o que equipes inteiras levariam meses para analisar, o Estado ganhará em agilidade, e o contribuinte, em economia.",
+        "O problema não está na ferramenta, mas na confiança cega que ela costuma inspirar. Um algoritmo não é um oráculo imparcial; é um conjunto de escolhas humanas convertidas em código. Alguém decidiu quais variáveis seriam consideradas, que peso caberia a cada uma e que margem de erro seria tolerável. Se os dados históricos que alimentam o sistema refletirem distorções antigas — fiscalizações concentradas sempre nas mesmas regiões, por exemplo —, a máquina não as corrigirá: aprenderá com elas e as reproduzirá com a autoridade de quem parece não ter opinião.",
+        "Daí a pergunta que dá título a este artigo. Se o cidadão tem o direito de saber por que foi preterido, e o gestor tem o dever de justificar seus atos, a decisão automatizada não pode ser uma caixa-preta. É preciso que os critérios sejam documentados, que os resultados sejam auditados periodicamente e que haja sempre a possibilidade de revisão por uma pessoa capaz de discordar da máquina. Explicabilidade, nesse contexto, não é capricho técnico, e sim condição de legitimidade.",
+        "Nada disso recomenda o abandono da tecnologia, que, bem empregada, pode tornar o controle mais inteligente e menos arbitrário. Recomenda, isto sim, que ela seja tratada como qualquer outro instrumento de poder: com entusiasmo moderado e vigilância permanente. Nenhum gestor sensato assinaria um parecer sem saber quem o redigiu e com base em quê; não há razão para exigir menos de um sistema. Afinal, a eficiência que dispensa explicações não é progresso; é apenas uma forma mais veloz de errar sem ser visto."
+      ]
+    },
+    {
+      "id": "lp-t04",
+      "titulo": "Por que a cidade esquenta",
+      "idioma": "pt",
+      "genero": "Texto de divulgação científica",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Quem já percorreu de carro, numa noite de verão, o trajeto entre o centro de uma grande cidade e a zona rural vizinha talvez tenha notado que o termômetro do painel cai alguns graus à medida que os prédios rareiam. Não se trata de impressão. Os climatologistas dão ao fenômeno o nome de ilha de calor urbana: áreas densamente construídas tendem a registrar temperaturas mais altas do que as regiões que as cercam, sobretudo depois do pôr do sol.",
+        "A explicação começa no chão. Asfalto, concreto e telhados escuros absorvem grande parte da radiação solar ao longo do dia e a devolvem lentamente durante a noite, como se a cidade inteira fosse uma pedra deixada ao sol. Some-se a isso a escassez de vegetação: as plantas, ao transpirarem, consomem energia que de outro modo aqueceria o ar, e é justamente esse resfriamento natural que falta às avenidas. Além disso, prédios altos e próximos uns dos outros dificultam a circulação dos ventos, enquanto motores e aparelhos de ar-condicionado lançam ao ambiente o calor que retiram dos interiores.",
+        "As consequências não se limitam ao desconforto. Ondas de calor mais intensas agravam doenças cardiovasculares e respiratórias e atingem com mais força idosos, crianças e moradores de bairros pouco arborizados. Instala-se, ainda, um círculo vicioso: quanto mais quente a cidade, mais se recorre ao ar-condicionado; e, quanto mais aparelhos ligados, mais calor é despejado nas ruas.",
+        "Felizmente, o problema admite soluções conhecidas. Entre as medidas que reduzem a temperatura local e, de quebra, melhoram a qualidade de vida, estão a arborização de calçadas, a ampliação de parques, a adoção de telhados verdes ou pintados de cores claras e a preservação de cursos d'água. Nenhuma delas é milagrosa isoladamente; o que os especialistas costumam destacar é que o efeito aparece quando elas se somam. A cidade que aqueceu por acúmulo de decisões pode, por acúmulo de decisões, voltar a respirar."
+      ]
+    },
+    {
+      "id": "lp-t05",
+      "titulo": "Nota orientativa sobre a divulgação de dados de contratos",
+      "idioma": "pt",
+      "genero": "Texto técnico-administrativo",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Esta nota tem por objetivo orientar as unidades administrativas quanto à divulgação, em sítio oficial, das informações relativas aos contratos firmados pelo órgão. As orientações aqui reunidas não substituem a legislação aplicável, à qual se subordinam; destinam-se, antes, a uniformizar procedimentos e a evitar que a publicação, embora formalmente realizada, deixe de cumprir sua finalidade, que é permitir ao cidadão o acompanhamento efetivo da gestão.",
+        "Recomenda-se que os dados sejam disponibilizados em formato aberto, legível por máquina, e acompanhados de dicionário que explique o significado de cada campo. Devem constar, no mínimo, o objeto do contrato, o nome do contratado, o valor global, a vigência e os aditivos eventualmente celebrados. Os valores serão expressos em reais, com indicação da data de referência. Sempre que houver alteração contratual, a informação deverá ser atualizada no prazo fixado em regulamento, de modo que a versão publicada corresponda, a qualquer tempo, à situação vigente.",
+        "Na redação das descrições, deve-se privilegiar a linguagem clara. As siglas serão desdobradas na primeira ocorrência, e os termos técnicos indispensáveis virão acompanhados de breve explicação. Descrições genéricas, como “aquisição de material diverso”, devem ser evitadas, uma vez que impedem a identificação do que efetivamente foi contratado e dificultam a comparação de preços entre contratos semelhantes. Sempre que possível, os textos serão revisados por servidor que não tenha participado de sua elaboração, a fim de verificar se são compreensíveis para quem não conhece o assunto.",
+        "A divulgação não poderá expor dados pessoais além do estritamente necessário à identificação das partes. Endereço residencial, número de documento de identidade e dados bancários de pessoas físicas deverão ser omitidos ou mascarados, em observância ao princípio da necessidade, previsto na legislação de proteção de dados. Eventuais dúvidas sobre a aplicação desta nota serão dirimidas pela unidade responsável pela política de transparência, à qual também caberá acompanhar o cumprimento das orientações."
+      ]
+    },
+    {
+      "id": "lp-t06",
+      "titulo": "A assembleia do ponto de ônibus",
+      "idioma": "pt",
+      "genero": "Crônica",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Todo fim de tarde, o ponto de ônibus da esquina vira uma pequena assembleia. Ninguém ali foi convocado, ninguém pediu a palavra, e, no entanto, todos parecem conhecer o regimento: quem chega primeiro fica sob a marquise, quem chega depois se contenta com a sombra do poste, e todos, sem exceção, inclinam o pescoço na direção de onde o ônibus deveria vir.",
+        "Na terça-feira, uma senhora de sombrinha xadrez quebrou o silêncio. Dirigiu-se ao rapaz que digitava no celular e quis saber se o 312 já tinha passado. Ele nem levantou os olhos: “Está a sete minutos, segundo o aplicativo.” A senhora considerou a resposta por um instante e devolveu, sem ironia aparente: “Sete minutos de aplicativo ou sete minutos de verdade?”",
+        "O rapaz, enfim, ergueu a cabeça. Que pergunta era aquela? O mapa mostrava o ônibus avançando, um ícone azul deslizando pela avenida, tudo calculado por satélite. Mas a senhora tinha razão, e ele sabia disso: quantas vezes o ícone não ficara parado no mesmo cruzamento enquanto os minutos prometidos se multiplicavam? Riu, meio sem graça, e admitiu que o aplicativo às vezes também esperava o ônibus.",
+        "Foi o bastante para que a assembleia ganhasse vida. Um senhor de pasta contou que perdera uma entrevista de emprego por confiar no relógio do celular; uma estudante jurou que o 312 tinha vontade própria; alguém lembrou, com saudade, o cobrador que anunciava os atrasos aos gritos. Durante sete minutos — ou doze, ou quinze, ninguém conferiu —, desconhecidos discutiram a natureza do tempo com a seriedade de filósofos e o humor de vizinhos.",
+        "Quando o ônibus finalmente dobrou a esquina, a conversa se desfez com a mesma naturalidade com que havia começado. Cada um voltou a ser passageiro, e a cidade, que por alguns minutos fora praça, voltou a ser apenas caminho. Fiquei pensando que os aplicativos medem com precisão a distância entre dois pontos, mas ainda não aprenderam a calcular o que acontece entre as pessoas que esperam."
+      ]
+    },
+    {
+      "id": "lp-t07",
+      "titulo": "Elogio da leitura lenta",
+      "idioma": "pt",
+      "genero": "Ensaio",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Lemos hoje mais palavras do que qualquer geração anterior, e talvez nunca tenhamos lido tão pouco. A contradição é apenas aparente. Passamos o dia diante de telas que nos oferecem manchetes, mensagens, legendas e avisos, e a esse fluxo contínuo damos, por comodidade, o nome de leitura. Mas deslizar os olhos sobre um texto à procura da informação útil é coisa diversa de habitá-lo, isto é, de permitir que ele nos desacomode.",
+        "Os gregos antigos legaram-nos uma imagem que serve bem a quem lê devagar. Penélope, enquanto esperava o regresso de Ulisses, tecia durante o dia uma mortalha e a desfazia durante a noite, adiando o momento em que teria de escolher um novo marido. Costuma-se ver nesse gesto apenas astúcia; prefiro ver nele uma lição de método. Ler bem é, em certa medida, tecer e desfazer: avançar uma página, voltar duas, desmanchar a primeira impressão para que outra, mais sólida, ocupe o seu lugar.",
+        "O mesmo poema homérico nos oferece outra imagem, menos lembrada nas escolas. Para ouvir o canto das sereias sem se lançar ao mar, Ulisses mandou que os companheiros o amarrassem ao mastro. A distração contemporânea tem algo daquele canto: é irresistível justamente porque promete o que desejamos — novidade, aprovação, companhia. Quem quer ler com atenção precisa, à maneira do herói, inventar as próprias cordas, seja um horário sem notificações, seja um livro de papel que não vibra no bolso.",
+        "Nada disso implica condenar a tecnologia, que multiplicou o acesso aos textos de forma antes inimaginável. O que está em jogo é a qualidade da relação que estabelecemos com eles. Um leitor apressado acumula informações; um leitor lento constrói sentidos. E, num tempo em que tudo nos convida a passar adiante, demorar-se sobre uma frase pode ser o mais discreto — e o mais necessário — dos atos de resistência."
+      ]
+    },
+    {
+      "id": "lp-t08",
+      "titulo": "O balcão que virou tela",
+      "idioma": "pt",
+      "genero": "Artigo de opinião",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Houve um tempo em que resolver qualquer pendência com o poder público significava enfrentar filas, preencher formulários em três vias e voltar no dia seguinte porque faltava um carimbo. Poucos sentem saudade dessa época, e com razão. A migração dos serviços para plataformas digitais poupou horas de deslocamento, reduziu custos e transformou certos procedimentos — a emissão de uma certidão, o agendamento de uma consulta — em questão de minutos.",
+        "É preciso, contudo, perguntar quem essa comodidade de fato alcança. Para quem dispõe de bom aparelho, conexão estável e familiaridade com aplicativos, o balcão que virou tela é uma conquista. Para o trabalhador que divide um celular antigo com a família, para o idoso que nunca criou uma senha, para o morador de áreas onde o sinal vai e vem, a mesma tela pode ser uma porta fechada. Muitas vezes, a dificuldade não está no aparelho, mas no próprio desenho do serviço: menus que se ramificam sem fim, termos técnicos sem explicação, senhas que expiram sem aviso. Nesses casos, a digitalização não elimina a fila: apenas a torna invisível, porque quem não consegue entrar no sistema nem sequer chega a ser contado entre os que esperam.",
+        "Não se trata de defender a volta do carimbo. Trata-se de reconhecer que um serviço público só é universal quando prevê caminhos para os que tropeçam. Manter canais de atendimento presencial ou telefônico, simplificar a linguagem das plataformas e oferecer pontos de apoio em que alguém possa auxiliar o cidadão custa pouco diante do que se evita: a transformação de um direito em privilégio de quem domina a tecnologia.",
+        "O balcão antigo tinha muitos defeitos, mas tinha também uma virtude que os aplicativos ainda não reproduziram: diante dele havia uma pessoa, capaz de perceber a dúvida no rosto de quem chegava. Talvez o desafio da administração digital seja justamente este: conservar, em meio aos algoritmos, a capacidade de enxergar quem ficou do lado de fora."
+      ]
+    },
+    {
+      "id": "lp-t09",
+      "titulo": "Onde o tempo anda devagar",
+      "idioma": "pt",
+      "genero": "Reportagem",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Na sala de higienização, o silêncio só é interrompido pelo ruído discreto dos pincéis. Debruçados sobre mesas forradas de papel neutro, quatro técnicos removem, folha por folha, a poeira acumulada em documentos que atravessaram mais de um século. O trabalho é lento por definição: uma única caixa de processos antigos pode ocupar a equipe por semanas, e ninguém ali parece ter pressa. “Aqui, quem corre estraga”, resume a conservadora que coordena o laboratório, sem tirar os olhos de uma ata manuscrita.",
+        "Os inimigos do papel são conhecidos. A umidade excessiva favorece a proliferação de fungos; o calor acelera reações químicas que tornam as fibras quebradiças; traças e cupins se alimentam da celulose; grampos e clipes de metal enferrujam e deixam manchas que atravessam várias folhas. Há, porém, um adversário mais insidioso, porque nasce no próprio documento: a acidez. Boa parte do papel fabricado a partir do século XIX contém substâncias que, com o tempo, o amarelam e o fragilizam, de modo que certas folhas se esfarelam ao simples toque.",
+        "Para enfrentar esses danos, o laboratório recorre a técnicas que combinam química e paciência. Folhas rasgadas são reforçadas com um papel japonês finíssimo, fixado com adesivo à base de amido; documentos ácidos passam por tratamentos que neutralizam a acidez e retardam a degradação. Fitas adesivas, aplicadas no passado com a melhor das intenções, estão entre os danos mais difíceis de reverter. A coordenadora explica que a regra de ouro da profissão é a reversibilidade: qualquer intervenção deve poder ser desfeita no futuro, caso surja uma técnica melhor.",
+        "Perguntada sobre a digitalização, que muitos imaginam capaz de tornar o papel dispensável, ela sorri. Diz que a imagem digital é uma aliada, pois poupa o original do manuseio constante, mas lembra que arquivos eletrônicos também envelhecem: formatos caem em desuso, mídias se deterioram, programas deixam de existir. “Preservar não é guardar uma vez”, afirma. “É cuidar sempre.” Ao fim da tarde, as folhas higienizadas voltam às caixas, agora de papelão neutro, à espera de alguém que, um dia, venha consultá-las."
+      ]
+    },
+    {
+      "id": "lp-t10",
+      "titulo": "O que significa prestar contas",
+      "idioma": "pt",
+      "genero": "Ensaio",
+      "fonte": "Texto inédito escrito para esta plataforma",
+      "paragrafos": [
+        "Poucas expressões da língua administrativa são tão ricas quanto “prestar contas”. O verbo vem do latim praestare, que reunia sentidos como oferecer, garantir e pôr-se à frente; o substantivo liga-se a contar, verbo que em português conserva, lado a lado, a ideia de enumerar e a de narrar. Quem presta contas, portanto, não apenas apresenta números: põe-se diante de alguém, oferece uma narrativa e responsabiliza-se por ela.",
+        "Essa dupla face costuma ser esquecida. Reduzida a planilhas, a prestação de contas converte-se num ritual contábil, em que basta que as somas fechem para que tudo pareça em ordem. Ora, uma despesa pode estar corretamente registrada e, ainda assim, ser inútil, excessiva ou mal planejada. Os números dizem quanto se gastou; só a narrativa explica por que se gastou, e é dela que depende o juízo sobre a qualidade da gestão. Uma conta que fecha não é necessariamente uma conta que convence.",
+        "Por trás da expressão há também uma relação de confiança. O cidadão delega ao gestor o poder de decidir sobre recursos que não lhe pertencem e, em troca, espera dele explicações. Quando o controle desaparece, a confiança degenera em fé, que dispensa provas; quando a desconfiança se torna absoluta, o controle degenera em suspeita, que nenhuma prova satisfaz. Entre esses dois extremos, as instituições de controle exercem um papel delicado: o de verificar sem presumir a culpa e o de cobrar sem paralisar quem precisa agir.",
+        "Talvez por isso a prestação de contas mais valiosa seja aquela feita antes que alguém a exija: menos um dever que se cumpre ao fim do mandato do que um hábito que se pratica todos os dias. O gestor que documenta suas escolhas, expõe seus critérios e admite seus erros não está apenas cumprindo uma formalidade; está ensinando ao público que o poder, numa república, é sempre emprestado. E o que é emprestado, cedo ou tarde, precisa ser devolvido acompanhado de uma boa explicação."
+      ]
+    }
+  ]
+}

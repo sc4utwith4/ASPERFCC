@@ -31,6 +31,12 @@
   --color-danger-text: var(--status-danger-text);
   --color-danger-soft: var(--status-danger-soft);
   --color-on-accent: var(--on-accent);
+  --color-chart-solido: var(--chart-solido);
+  --color-chart-fragil: var(--chart-fragil);
+  --color-chart-erro: var(--chart-erro);
+  --color-chart-foco: var(--chart-foco);
+  --color-chart-neutro: var(--chart-neutro);
+  --color-chart-grade: var(--chart-grade);
   --color-transparent: transparent;
   --color-current: currentColor;
 
@@ -151,7 +157,14 @@
     background: var(--highlight-slate);
   }
 
+  /* Números alinhados sem trocar a fonte (tabelas, contadores em linha) */
   .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+
+  /* Dados e cronômetros: JetBrains Mono com dígitos de largura fixa (o layout não treme) */
+  .dado {
     font-family: var(--font-data);
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1, "zero" 0;
@@ -234,4 +247,155 @@
     animation-duration: 0ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+dialog.dialogo::backdrop {
+  background: rgba(22, 24, 22, 0.34);
+}
+dialog.dialogo[open] {
+  animation: surgir var(--dur-slow) var(--ease-quiet);
+}
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.range {
+  accent-color: var(--accent-primary);
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Flashcard: virada suave (200ms); com movimento reduzido, troca direta */
+.flashcard-cena {
+  perspective: 1400px;
+}
+.flashcard {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  text-align: left;
+  transform-style: preserve-3d;
+  transition: transform var(--dur-slow) var(--ease-quiet);
+}
+.flashcard.virado {
+  transform: rotateY(180deg);
+}
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem;
+  overflow-y: auto;
+  backface-visibility: hidden;
+}
+.flashcard-verso {
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .flashcard,
+  .flashcard.virado {
+    transform: none;
+  }
+  .flashcard-verso {
+    transform: none;
+    visibility: hidden;
+  }
+  .flashcard.virado .flashcard-verso {
+    visibility: visible;
+  }
+  .flashcard.virado .flashcard-face:not(.flashcard-verso) {
+    visibility: hidden;
+  }
+}
+
+/* Conteúdo do editor Cornell (ProseMirror) */
+.editor-cornell h2,
+.reading h2 {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 1.5em 0 0.5em;
+}
+.editor-cornell h3,
+.reading h3 {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 1.3em 0 0.4em;
+}
+.editor-cornell > *:first-child {
+  margin-top: 0;
+}
+.editor-cornell ul,
+.editor-cornell ol {
+  padding-left: 1.3em;
+  margin-top: 0.75em;
+}
+.editor-cornell ul {
+  list-style: disc;
+}
+.editor-cornell ol {
+  list-style: decimal;
+}
+.editor-cornell li + li {
+  margin-top: 0.3em;
+}
+.editor-cornell ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0.1em;
+}
+.editor-cornell ul[data-type="taskList"] li {
+  display: flex;
+  gap: 0.55em;
+  align-items: flex-start;
+}
+.editor-cornell ul[data-type="taskList"] li > label {
+  margin-top: 0.28em;
+}
+.editor-cornell ul[data-type="taskList"] input[type="checkbox"] {
+  accent-color: var(--accent-primary);
+  width: 15px;
+  height: 15px;
+}
+.editor-cornell ul[data-type="taskList"] li[data-checked="true"] > div {
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  text-decoration-color: var(--text-muted);
+}
+.editor-cornell mark {
+  border-radius: 2px;
+  padding: 0 0.12em;
+  color: inherit;
+}
+.editor-cornell code {
+  font-family: var(--font-data);
+  font-size: 0.84em;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+}
+.editor-cornell p + p,
+.editor-cornell p + ul,
+.editor-cornell ul + p {
+  margin-top: 1.25em;
+}
+
+/* Folha pautada do estudo de caso */
+.folha-linhas {
+  line-height: 28px;
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, var(--border-subtle) 27px 28px);
+  background-attachment: local;
+  background-position: 0 0.55rem;
+  resize: vertical;
 }

@@ -1,0 +1,584 @@
+{
+  "materiaSlug": "engenharia-software-ia-agentes",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "eng-ia-011",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Engenharia de contexto e de prompts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere o texto sobre técnicas para tarefas de longa duração executadas por agentes. Quando a conversa se aproxima do limite da janela, a …… resume o histórico e reinicia o trabalho a partir do resumo; na ……, o agente registra regularmente notas persistidas fora da janela, que podem ser recuperadas depois; e, com o uso de ……, tarefas focadas são executadas em janelas de contexto limpas, que devolvem ao agente principal apenas resumos condensados. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere o resumo de uma palestra sobre agentes de IA em projetos extensos. Perto do limite da janela, a …… condensa o histórico e reinicia a sessão com o resumo; com a ……, o agente grava periodicamente anotações fora da janela para consultá-las mais tarde; e, por meio de ……, subtarefas são executadas em contextos limpos, que retornam só uma síntese ao agente principal. Preenchem, correta e respectivamente, as lacunas:",
+        "Em um guia de engenharia de contexto para a equipe de sistemas do Tribunal, constou: a …… substitui a conversa extensa por um resumo quando a janela está quase cheia; a …… mantém, fora da janela, registros que o agente escreve e relê depois; e o emprego de …… isola tarefas específicas em janelas próprias, que devolvem resultados condensados. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "tokenização − compactação − subagentes",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tokenização é a segmentação do texto em tokens, não o resumo do histórico. A compactação está na lacuna errada: a segunda descreve notas persistidas fora da janela (tomada de notas estruturada ou memória agentiva)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "compactação − tomada de notas estruturada − subagentes",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Anthropic, em “Effective context engineering for AI agents”, descreve as três técnicas para tarefas longas. A compactação resume a conversa perto do limite e reinicia com o resumo. A tomada de notas estruturada (memória agentiva) persiste notas fora da janela para recuperá-las depois. Os subagentes trabalham em janelas limpas e devolvem resumos condensados ao agente líder.",
+          "versaoInvertidaFalsa": "Quando a conversa se aproxima do limite da janela, a tokenização resume o histórico; a compactação registra notas fora da janela; e os subagentes compartilham a mesma janela de contexto do agente principal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "compactação − geração aumentada por recuperação − ajuste fino",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas RAG recupera trechos de uma base externa em tempo de consulta e não consiste em o próprio agente registrar notas de progresso. Ajuste fino altera pesos e não executa tarefas em janelas isoladas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "quantização − memória agentiva − janelas deslizantes",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quantização reduz a precisão numérica de pesos ou vetores para economizar memória e não resume conversas. “Memória agentiva” caberia na segunda lacuna, mas janelas deslizantes descartam o início da conversa e não delegam tarefas a contextos limpos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "poda de pesos − tomada de notas estruturada − subagentes",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Poda de pesos é técnica de compressão do modelo, aplicada no treinamento ou na otimização, e não resume o histórico da conversa. As demais lacunas estão certas, mas a primeira invalida a alternativa."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha termos de compressão de modelos (quantização, poda) e de recuperação (RAG) com técnicas de gestão de contexto. As três técnicas para tarefas longas são compactação, notas estruturadas e subagentes.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as três técnicas de contexto para tarefas longas de agentes?",
+        "resposta": "Compactação (resumir o histórico perto do limite e recomeçar com o resumo), tomada de notas estruturada ou memória agentiva (notas persistidas fora da janela) e subagentes (tarefas em janelas limpas que devolvem resumos)."
+      },
+      "conceitosChave": ["Compactação de contexto", "Memória de agentes", "Subagentes"],
+      "fundamentacao": "Anthropic Engineering, “Effective context engineering for AI agents” (29/09/2025), seção sobre tarefas de longo horizonte (compaction, structured note-taking, sub-agent architectures)."
+    },
+    {
+      "id": "eng-ia-012",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a documentação oficial da Anthropic, o Claude Code é",
+      "variantesEnunciado": [
+        "Um técnico do Tribunal avalia ferramentas para apoiar a manutenção de sistemas. Conforme a documentação oficial da Anthropic, o Claude Code é",
+        "No estudo de agentes de codificação em interfaces de terminal e IDE, é correto afirmar que o Claude Code, conforme sua documentação oficial, é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um complemento de autocompletar para editores de código que sugere a próxima linha com base apenas no arquivo aberto, sem executar comandos de shell nem editar outros arquivos do projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve um assistente inline. A documentação do Claude Code destaca a diferença: o agente busca e lê vários arquivos, faz edições coordenadas, executa testes e comandos e trabalha com git, em vez de ver só o arquivo atual."
+        },
+        {
+          "id": "opt-2",
+          "texto": "um ambiente de desenvolvimento derivado do VS Code, centrado em um gerenciador que despacha vários agentes em paralelo e produz artefatos verificáveis, como planos de implementação e walkthroughs.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde ao Google Antigravity, plataforma agent-first com editor derivado do VS Code, Agent Manager para orquestrar vários agentes e artefatos como planos de implementação e walkthroughs. A troca entre produtos correlatos é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "um protocolo aberto, baseado em JSON-RPC 2.0, que padroniza a conexão de aplicações de IA a fontes de dados e ferramentas externas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a definição do Model Context Protocol (MCP), padrão aberto lançado pela Anthropic em novembro de 2024. O Claude Code usa o MCP para se conectar a serviços externos, mas não se confunde com ele."
+        },
+        {
+          "id": "opt-4",
+          "texto": "uma ferramenta de codificação agentiva que lê a base de código, edita arquivos, executa comandos e se integra às ferramentas de desenvolvimento, no terminal, na IDE, no desktop e no navegador.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a definição oficial: o Claude Code é uma ferramenta de codificação agentiva que lê a base de código, edita arquivos, executa comandos e se integra às ferramentas de desenvolvimento, disponível no terminal, em IDEs (VS Code, JetBrains), no app desktop e no navegador. Também trabalha com git e pode rodar sem interação em scripts e CI (claude -p).",
+          "versaoInvertidaFalsa": "um assistente que apenas sugere trechos de código no editor, sem ler outros arquivos do projeto, sem executar comandos e sem integrar-se a ferramentas de desenvolvimento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "um serviço exclusivamente em nuvem, que só opera sobre repositórios hospedados pela própria Anthropic e não tem acesso a arquivos ou ao terminal da máquina local.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O uso mais comum é local: no terminal do desenvolvedor, com acesso aos arquivos do projeto, ao shell e ao estado do git, sob permissões. Também há sessões em nuvem, mas o produto não é exclusivamente em nuvem."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o Claude Code por produtos e padrões vizinhos: assistente de autocompletar, Antigravity (Google) e MCP (protocolo). O traço decisivo é agir: ler o projeto, editar arquivos e executar comandos, em várias superfícies.",
+      "resumoFlashcard": {
+        "pergunta": "Como a documentação oficial define o Claude Code?",
+        "resposta": "Como ferramenta de codificação agentiva que lê a base de código, edita arquivos, executa comandos e se integra às ferramentas de desenvolvimento. Está disponível no terminal, em IDEs, no app desktop e no navegador, e roda também sem interação (claude -p)."
+      },
+      "conceitosChave": ["Claude Code: visão geral", "Agentes de codificação"],
+      "fundamentacao": "Claude Code, documentação “Overview” (code.claude.com/docs/en/overview) e “How Claude Code works” (code.claude.com/docs/en/how-claude-code-works)."
+    },
+    {
+      "id": "eng-ia-013",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de sistemas do Tribunal quer que o Claude Code conheça, em toda sessão, os comandos de build e de teste, as convenções de nomenclatura e as decisões de arquitetura do repositório, com essas instruções compartilhadas pelo controle de versão. Um desenvolvedor também quer registrar preferências pessoais para o mesmo projeto, sem enviá-las ao repositório. A configuração adequada é",
+      "variantesEnunciado": [
+        "No repositório do sistema de prestação de contas, a coordenação quer que o agente Claude Code receba em toda sessão as convenções do projeto, os comandos de teste e as decisões de arquitetura, compartilhadas com todos via Git. Um analista deseja manter, só para si, ajustes pessoais para esse mesmo projeto. A configuração adequada é",
+        "Para evitar repetir em cada conversa as regras do projeto do sistema de fiscalização (build, testes e padrões), a equipe decide registrá-las de forma versionada para uso do Claude Code; uma desenvolvedora quer ainda anotar preferências próprias do projeto que não devem ir para o repositório. A configuração adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "registrar as instruções da equipe em ./CLAUDE.md (ou ./.claude/CLAUDE.md), versionado, e as preferências pessoais em ./CLAUDE.local.md, incluído no .gitignore.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela documentação de memória do Claude Code, as instruções de projeto ficam em ./CLAUDE.md ou ./.claude/CLAUDE.md e são compartilhadas com a equipe pelo controle de versão. Preferências pessoais do projeto vão para ./CLAUDE.local.md, que deve ir para o .gitignore. Há ainda o escopo de usuário (~/.claude/CLAUDE.md, para todos os projetos) e a política gerenciada da organização. Os arquivos são lidos no início de cada sessão e concatenados.",
+          "versaoInvertidaFalsa": "registrar as instruções da equipe em ./CLAUDE.local.md, que é versionado e compartilhado, e as preferências pessoais em ./CLAUDE.md, que permanece fora do controle de versão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "registrar tudo em ~/.claude/CLAUDE.md, que é versionado com o projeto e lido apenas quando o desenvolvedor digita o comando /memory.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ~/.claude/CLAUDE.md é o arquivo de usuário: vale para todos os projetos daquela pessoa e não é compartilhado pelo repositório. Além disso, o CLAUDE.md é carregado automaticamente no início de cada sessão; o comando /memory serve para editar esses arquivos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "registrar as instruções da equipe em .claude/settings.json, pois o CLAUDE.md é ignorado quando há arquivo de configurações, e as pessoais em variáveis de ambiente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O settings.json guarda configurações técnicas (permissões, hooks, variáveis), não instruções de projeto em linguagem natural, e sua presença não faz o CLAUDE.md ser ignorado. Os dois mecanismos coexistem com papéis diferentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "registrar as instruções da equipe em ./CLAUDE.md e confiar que elas funcionam como configuração imposta, bloqueando qualquer ação contrária do agente sem necessidade de hooks.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas a documentação afirma que o Claude trata o CLAUDE.md como contexto, não como configuração imposta. Para bloquear uma ação independentemente do que o modelo decidir, usam-se hooks PreToolUse ou regras de permissão (deny)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "registrar as preferências pessoais em ./CLAUDE.md e as da equipe em ./CLAUDE.local.md, que é o arquivo destinado a ser compartilhado pelo controle de versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os papéis: CLAUDE.local.md é o arquivo pessoal, a ser incluído no .gitignore, e o ./CLAUDE.md é o arquivo de projeto compartilhado com a equipe."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte os papéis de CLAUDE.md (projeto, versionado) e CLAUDE.local.md (pessoal, no .gitignore) e apresenta o CLAUDE.md como imposição. Ele é contexto lido em toda sessão; o bloqueio efetivo exige hook ou regra deny.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os escopos de CLAUDE.md no Claude Code?",
+        "resposta": "Política gerenciada (organização), usuário (~/.claude/CLAUDE.md, todos os projetos), projeto (./CLAUDE.md ou ./.claude/CLAUDE.md, versionado) e local (./CLAUDE.local.md, pessoal, no .gitignore). Todos são lidos no início da sessão e concatenados como contexto, não como regra imposta."
+      },
+      "conceitosChave": ["Claude Code: CLAUDE.md", "Memória de agentes"],
+      "fundamentacao": "Claude Code, documentação “How Claude remembers your project” (code.claude.com/docs/en/memory), seção “Choose where to put CLAUDE.md files”."
+    },
+    {
+      "id": "eng-ia-014",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na avaliação do Claude Code para apoiar a manutenção dos sistemas do Tribunal, foram levantadas as seguintes características da ferramenta. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um grupo de trabalho estudou recursos do Claude Code antes de adotá-lo na Diretoria de TI e anotou o seguinte. Considere as afirmativas abaixo.",
+        "Durante a prova de conceito de um agente de codificação em terminal para os sistemas de controle externo, a equipe registrou estas constatações sobre o Claude Code. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No modo de planejamento (plan mode), o agente lê arquivos e explora o código para propor um plano, mas não edita o código-fonte até que o plano seja aprovado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação descreve o plan mode assim: Claude lê arquivos, executa comandos de exploração e escreve um plano, mas não edita o código-fonte; as edições ficam bloqueadas até a aprovação."
+        },
+        {
+          "texto": "Subagentes executam tarefas em janela de contexto própria, com prompt de sistema e acesso a ferramentas específicos, e devolvem um resumo à conversa principal.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Subagentes são assistentes especializados que rodam em janela de contexto própria, com prompt de sistema, ferramentas e permissões próprias, e devolvem resumo."
+        },
+        {
+          "texto": "Hooks são orientações em linguagem natural, gravadas no CLAUDE.md, que o modelo pode seguir ou não, conforme o contexto da tarefa.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Hooks são comandos de shell configurados em arquivos de settings e executados pelo Claude Code em eventos do ciclo de vida. Dão controle determinístico, sem depender da decisão do modelo."
+        },
+        {
+          "texto": "Com a opção -p, o Claude Code executa uma solicitação de forma não interativa, o que permite usá-lo em scripts e pipelines de integração contínua.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A opção -p (--print) executa o Claude Code de forma não interativa, com saída em texto, JSON ou stream-json, para scripts e CI."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: hooks não são orientações em linguagem natural, e sim comandos de shell executados de forma determinística nos eventos configurados (PreToolUse, PostToolUse, Stop etc.)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é verdadeira, mas a III é falsa: hooks são comandos determinísticos, não orientações em linguagem natural. Ficaram de fora a I e a II, ambas corretas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão de acordo com a documentação a I (o plan mode explora e propõe sem editar o código até a aprovação), a II (subagentes têm contexto, prompt e ferramentas próprios e devolvem resumo) e a IV (-p executa sem interação, útil em scripts e CI). A III confunde hooks com instruções do CLAUDE.md: hooks são comandos de shell configurados em settings que garantem controle determinístico.",
+          "versaoInvertidaFalsa": "No modo de planejamento, o agente edita diretamente o código-fonte enquanto elabora o plano, e a aprovação do usuário serve apenas para registrar as mudanças já aplicadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a III é falsa: hooks são comandos de shell que o Claude Code executa sempre, não orientações que o modelo possa ignorar. Faltam a II e a IV, também verdadeiras."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa, e exclui a I, que é verdadeira: o plan mode explora e propõe sem editar o código até a aprovação. A II e a IV estão certas."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa III atribui aos hooks a natureza do CLAUDE.md. A diferença cobrada é que hooks são determinísticos (o harness executa sempre), enquanto o CLAUDE.md é contexto que o modelo pode ou não seguir.",
+      "resumoFlashcard": {
+        "pergunta": "O que distingue plan mode, subagentes, hooks e o modo -p no Claude Code?",
+        "resposta": "Plan mode explora e propõe plano sem editar o código até a aprovação. Subagentes trabalham em contexto próprio e devolvem resumo. Hooks são comandos de shell determinísticos disparados por eventos do ciclo de vida. -p executa sem interação, para scripts e CI."
+      },
+      "conceitosChave": ["Claude Code: modo de planejamento", "Subagentes", "Claude Code: hooks"],
+      "fundamentacao": "Claude Code, documentação “Permission modes” (plan mode), “Create custom subagents”, “Automate actions with hooks” e “Run Claude Code programmatically” (code.claude.com/docs/en)."
+    },
+    {
+      "id": "eng-ia-015",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No repositório do sistema de fiscalização, o arquivo .env guarda credenciais e a pasta src/gen/ contém código gerado automaticamente, que não pode ser editado à mão. A equipe escreveu no CLAUDE.md, em letras maiúsculas, “NUNCA LEIA O .env E NUNCA EDITE src/gen/”, mas o agente ainda violou a regra em algumas sessões. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se",
+      "variantesEnunciado": [
+        "No projeto do portal de prestação de contas, o arquivo .env contém segredos de integração e a pasta src/gen/ guarda clientes de API gerados por ferramenta. Mesmo com o aviso “NUNCA LEIA O .env E NUNCA EDITE src/gen/” no CLAUDE.md, o agente às vezes desrespeitou a orientação. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se",
+        "Uma auditoria interna constatou que o agente de codificação usado pela equipe abriu o arquivo .env e alterou arquivos de src/gen/ (código gerado), apesar da proibição escrita em maiúsculas no CLAUDE.md do repositório. Para que essas restrições valham sempre, independentemente da decisão do modelo, deve-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "repetir a instrução no CLAUDE.md com ainda mais ênfase e no início do arquivo, pois a posição e o destaque da regra no contexto determinam se o agente fica obrigado a cumpri-la em todas as sessões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CLAUDE.md é lido como contexto, não como configuração imposta. A documentação lembra que nenhuma ênfase garante obediência e sugere que, se for preciso enfatizar cada vez mais uma linha, ela deve virar hook."
+        },
+        {
+          "id": "opt-2",
+          "texto": "configurar um hook PostToolUse com matcher Edit|Write que saia com código 2, pois esse evento ocorre antes da ferramenta e impede a edição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. PostToolUse roda depois que a ferramenta teve sucesso. O código 2 apenas devolve o stderr ao Claude, porque a edição já aconteceu. Para impedir a ação, o evento é o PreToolUse."
+        },
+        {
+          "id": "opt-3",
+          "texto": "criar uma regra allow específica para src/gen/, que prevalece sobre regras deny mais genéricas e, assim, restringe o acesso à pasta protegida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No Claude Code, as regras são avaliadas na ordem deny, ask e allow, e a especificidade não muda essa ordem. Uma regra allow não abre exceção em uma deny e muito menos funciona como restrição."
+        },
+        {
+          "id": "opt-4",
+          "texto": "iniciar as sessões no modo bypassPermissions, que desativa os pedidos de confirmação e faz o agente obedecer estritamente ao CLAUDE.md.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bypassPermissions dispensa a camada de permissões e deve ser usado só em ambientes isolados, como containers e VMs. Ele não torna o CLAUDE.md obrigatório; ao contrário, remove salvaguardas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "incluir Read(./.env) nas regras deny de permissão e usar um hook PreToolUse com matcher Edit|Write que bloqueie, com código de saída 2, edições em src/gen/.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Prompt e CLAUDE.md são instruções não determinísticas que o modelo pode deixar de seguir. Hooks e regras deny são aplicados pelo harness sempre. A regra deny Read(./.env) impede que as ferramentas de arquivo leiam o .env, e o hook PreToolUse, que roda antes da ferramenta e bloqueia quando sai com código 2, barra edições em src/gen/. O stderr volta ao Claude como motivo do bloqueio.",
+          "versaoInvertidaFalsa": "manter as restrições apenas no CLAUDE.md, pois esse arquivo funciona como configuração imposta pelo harness e bloqueia qualquer leitura ou edição contrária às instruções registradas."
+        }
+      ],
+      "pegadinhaFCC": "As armadilhas são três: tratar o CLAUDE.md como imposição, trocar PreToolUse (antes, bloqueia) por PostToolUse (depois, não impede) e supor que uma allow específica vence uma deny. No Claude Code a deny é avaliada primeiro.",
+      "resumoFlashcard": {
+        "pergunta": "Como impor no Claude Code uma regra que não pode ter exceção?",
+        "resposta": "Com mecanismos determinísticos aplicados pelo harness: regras deny de permissão (por exemplo, Read(./.env)) e hooks PreToolUse que bloqueiam a ação ao sair com código 2. O CLAUDE.md orienta o modelo, mas não garante obediência."
+      },
+      "conceitosChave": ["Claude Code: hooks", "Claude Code: permissões", "Claude Code: CLAUDE.md"],
+      "fundamentacao": "Claude Code, “Best practices” (instruções determinísticas × não determinísticas), “Automate actions with hooks” (PreToolUse, exit 2), “Configure permissions” (ordem deny > ask > allow; Read(./.env)) e “Extend Claude Code” (“Put guardrails in hooks”)."
+    },
+    {
+      "id": "eng-ia-016",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do Google Antigravity, plataforma de desenvolvimento agentiva lançada pelo Google em novembro de 2025, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre o Google Antigravity, ambiente de desenvolvimento orientado a agentes apresentado junto com o Gemini 3, é correto afirmar que",
+        "Um técnico do Tribunal compara agentes de codificação e precisa descrever o Google Antigravity. É correto afirmar que essa plataforma"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é um protocolo aberto de comunicação entre agentes e ferramentas, concorrente do MCP, e não oferece editor nem interface própria para o desenvolvedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Antigravity não é um protocolo: é uma plataforma com editor derivado do VS Code e uma superfície de gerenciamento de agentes. Protocolos de interoperabilidade, como o MCP, são suportados pela plataforma, mas são outra categoria."
+        },
+        {
+          "id": "opt-2",
+          "texto": "adota abordagem agent-first, com um gerenciador para orquestrar vários agentes em paralelo e artefatos, como planos de implementação e walkthroughs, para revisar o trabalho.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Antigravity foi apresentado com o Gemini 3 como plataforma agent-first. Além do editor, oferece o Agent Manager, que despacha e acompanha vários agentes em paralelo, em diferentes workspaces. Os agentes planejam, executam e verificam tarefas no editor, no terminal e no navegador, e documentam o trabalho em artefatos (listas de tarefas, plano de implementação, walkthrough, capturas e gravações), mais fáceis de verificar que logs brutos e sujeitos a comentários do usuário.",
+          "versaoInvertidaFalsa": "adota abordagem centrada no editor, com um único agente por vez e sem artefatos intermediários, de modo que a revisão do trabalho ocorre apenas sobre os logs brutos das ferramentas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "restringe os agentes ao editor de texto, sem acesso ao terminal ou ao navegador, para que toda alteração seja digitada pelo desenvolvedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os agentes do Antigravity atuam no editor, no terminal e no navegador, inclusive para verificar o próprio trabalho, por exemplo abrindo a aplicação e capturando telas. Restringi-los ao editor contraria a proposta agentiva."
+        },
+        {
+          "id": "opt-4",
+          "texto": "registra o trabalho dos agentes somente como logs brutos de chamadas de ferramentas, sem artefatos intermediários que o usuário possa revisar ou comentar enquanto o agente ainda está trabalhando.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O diferencial divulgado é justamente substituir logs brutos por artefatos (planos, listas de tarefas, walkthroughs, screenshots), que o usuário comenta para orientar o agente sem interromper o trabalho."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é uma biblioteca de embeddings para busca vetorial, usada como alternativa a bancos como o pgvector em pipelines de RAG.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Embeddings e bancos vetoriais pertencem ao tema de RAG. O Antigravity é um ambiente de desenvolvimento com agentes, não uma biblioteca de busca vetorial."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde o Antigravity com protocolo (MCP) e com componentes de RAG e nega seus traços distintivos: execução de vários agentes pelo Agent Manager e artefatos verificáveis no lugar de logs brutos.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os traços distintivos do Google Antigravity?",
+        "resposta": "É uma plataforma agent-first (novembro de 2025) com editor e Agent Manager para orquestrar vários agentes em paralelo. Os agentes atuam no editor, no terminal e no navegador e documentam o trabalho em artefatos verificáveis (plano de implementação, walkthrough, capturas), que o usuário comenta."
+      },
+      "conceitosChave": ["Antigravity: Agent Manager e artefatos", "Agentes de codificação"],
+      "fundamentacao": "Google Developers Blog, “Build with Google Antigravity, our new agentic development platform” (nov/2025); documentação antigravity.google (“Plan”, “Walkthrough”); Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "eng-ia-017",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Agentes de codificação em CLI e IDE",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Para automatizar a revisão noturna de dependências em servidores sem interface gráfica, a equipe de TI comparou o Claude Code e a Antigravity CLI do Google. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Antes de adotar um agente de codificação em rotinas automatizadas da central de serviços, executadas em servidores sem interface gráfica, um técnico confrontou recursos do Claude Code e da Antigravity CLI. Considere as afirmativas abaixo.",
+        "Em estudo para executar agentes de IA em pipelines de integração contínua do Tribunal, foram anotadas as seguintes características do Claude Code e da Antigravity CLI. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "As duas ferramentas oferecem execução não interativa (headless), adequada a scripts, pipelines e servidores acessados por SSH ou containers remotos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No Claude Code, claude -p (--print) roda sem interação, com saída em texto ou JSON. O Google recomenda a Antigravity CLI para execução headless, por exemplo via SSH ou em containers remotos."
+        },
+        {
+          "texto": "No Claude Code, servidores MCP de escopo de projeto declarados em .mcp.json exigem aprovação do usuário antes do uso em sessões interativas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Por segurança, o Claude Code pede aprovação, em sessões interativas, antes de usar servidores de escopo de projeto do .mcp.json."
+        },
+        {
+          "texto": "A Antigravity CLI, o app desktop, a IDE e o SDK do Antigravity usam harnesses de agente distintos e incompatíveis entre si, sem compartilhar skills ou plugins.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Segundo o Google, embora cada interface pareça diferente, todas rodam sobre o mesmo harness de agente subjacente, com suporte a plugins e skills."
+        },
+        {
+          "texto": "O modo que ignora as solicitações de permissão (no Claude Code, bypassPermissions) é o recomendado para o uso cotidiano em estações de trabalho conectadas à internet.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A documentação do Claude Code restringe o bypassPermissions a ambientes isolados, como containers, VMs ou dev containers sem acesso à internet, e alerta que ele não protege contra prompt injection."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a II estão certas, mas a III é falsa: o Google afirma que Antigravity 2.0, CLI, IDE e SDK compartilham o mesmo harness de agente e oferecem plugins e skills."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a IV é falsa: ignorar permissões é aceitável só em ambiente isolado. Além disso, a combinação omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a III (os harnesses são o mesmo, não distintos) e a IV (o bypass é para ambientes isolados, não para o uso cotidiano)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I procede: claude -p e a Antigravity CLI, que o Google recomenda para execução headless (SSH, containers remotos), atendem a automação sem interface. A II também: o Claude Code pede aprovação antes de usar servidores do .mcp.json em sessões interativas. A III contraria o Google, segundo o qual todas as superfícies do Antigravity rodam sobre o mesmo harness, e a IV contraria a documentação, que restringe o bypassPermissions a ambientes isolados.",
+          "versaoInvertidaFalsa": "Nenhuma das duas ferramentas permite execução não interativa, de modo que a automação em servidores sem interface gráfica exige sempre um operador respondendo às solicitações do agente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera tudo verdadeiro, mas a III e a IV são falsas: as superfícies do Antigravity compartilham o mesmo harness, e o bypass de permissões é desaconselhado fora de ambientes isolados."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa IV parece pragmática (“evitar interrupções”), mas o modo que ignora permissões é desaconselhado fora de ambientes isolados. A III nega o harness compartilhado entre as superfícies do Antigravity.",
+      "resumoFlashcard": {
+        "pergunta": "Como Claude Code e Antigravity CLI atendem à automação sem interface gráfica?",
+        "resposta": "Ambos têm execução headless: claude -p no Claude Code e a Antigravity CLI, superfície de terminal recomendada pelo Google para SSH e containers e que compartilha o harness do Antigravity. Ignorar permissões (bypassPermissions) só é aceitável em ambientes isolados."
+      },
+      "conceitosChave": ["Antigravity CLI", "Claude Code: modo não interativo (-p)", "Claude Code: permissões"],
+      "fundamentacao": "Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026); Claude Code, “Run Claude Code programmatically” (-p), “Connect Claude Code to tools via MCP” (escopo de projeto) e “Permission modes” (bypassPermissions).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "eng-ia-018",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a documentação do Claude Code, ao receber uma tarefa, o agente percorre um ciclo agentivo composto pelas fases de",
+      "variantesEnunciado": [
+        "Conforme a documentação oficial do Claude Code, o chamado ciclo agentivo, que o agente percorre ao executar uma tarefa, compreende as fases de",
+        "Um técnico explica à sua equipe como um agente de codificação trabalha. De acordo com a documentação do Claude Code, o ciclo agentivo é formado pelas fases de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "coletar contexto, agir e verificar os resultados, repetidas até a conclusão da tarefa e passíveis de interrupção pelo usuário a qualquer momento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A documentação descreve o ciclo agentivo em três fases que se misturam: coletar contexto, agir e verificar resultados. O ciclo se adapta: uma pergunta pode exigir só coleta de contexto, enquanto a correção de um bug percorre as três fases repetidamente. O modelo decide cada passo pelo que aprendeu no anterior, e o usuário pode interromper e redirecionar a qualquer momento.",
+          "versaoInvertidaFalsa": "agir, verificar e só então coletar o contexto, executadas uma única vez em sequência rígida, sem possibilidade de o usuário interromper ou redirecionar o agente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "planejar, implantar e monitorar, executadas uma única vez e em sequência fixa, sem retorno às fases anteriores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Planejar, implantar e monitorar lembra um ciclo de DevOps. O ciclo agentivo é iterativo: cada ação produz informação que orienta a próxima, com correções de curso ao longo do caminho."
+        },
+        {
+          "id": "opt-3",
+          "texto": "receber o prompt, gerar a resposta completa e encerrar, ficando a verificação a cargo exclusivo do usuário após a entrega.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve um assistente de pergunta e resposta, sem ferramentas. No ciclo agentivo, o próprio agente verifica o trabalho, por exemplo rodando testes, e itera antes de concluir."
+        },
+        {
+          "id": "opt-4",
+          "texto": "treinar, validar e testar o modelo com os dados do projeto, de modo que os pesos sejam ajustados a cada tarefa recebida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Treino, validação e teste são etapas do ciclo de aprendizado de máquina. O agente não altera os pesos do modelo ao executar tarefas: ele usa ferramentas e contexto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "compilar, empacotar e publicar, em pipeline determinístico configurado previamente pelo usuário, sem nenhuma decisão tomada pelo modelo durante a execução da tarefa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pipeline com etapas predefinidas e sem decisão do modelo corresponde a um fluxo determinístico, como CI/CD ou um workflow. No ciclo agentivo, o modelo escolhe dinamicamente as ferramentas e os próximos passos."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece ciclos de outras áreas (DevOps, machine learning, CI/CD). O ciclo agentivo é iterativo, com o próprio agente verificando o resultado, e o humano pode intervir a qualquer momento.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as fases do ciclo agentivo segundo a documentação do Claude Code?",
+        "resposta": "Coletar contexto, agir e verificar resultados, em ciclo que se repete e se adapta à tarefa até a conclusão. O modelo decide cada passo a partir do resultado do anterior, e o usuário pode interromper e redirecionar a qualquer momento."
+      },
+      "conceitosChave": ["Ciclo agentivo"],
+      "fundamentacao": "Claude Code, documentação “How Claude Code works”, seção “The agentic loop” (code.claude.com/docs/en/how-claude-code-works)."
+    },
+    {
+      "id": "eng-ia-019",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um agente de codificação recebeu a tarefa de corrigir a geração de relatórios de um sistema de auditoria e encerrou a sessão afirmando: “Pronto, tudo funcionando”. No dia seguinte, a equipe descobriu que a correção quebrara outra funcionalidade. Para que o agente consiga verificar o próprio trabalho e corrigir falhas antes de concluir, a providência mais eficaz é",
+      "variantesEnunciado": [
+        "Após ajustar o cálculo de indicadores de um painel de fiscalização, um agente de IA informou: “Concluído, sem erros”. Dias depois, verificou-se que a mudança havia quebrado a exportação de planilhas. Para que o agente consiga verificar o próprio trabalho e corrigir falhas antes de concluir, a providência mais eficaz é",
+        "Em várias tarefas, o agente de codificação da equipe declarou o trabalho terminado sem que a funcionalidade estivesse de fato correta, e as falhas só eram notadas pelos usuários do sistema de protocolo. Para que o agente consiga verificar o próprio trabalho e corrigir falhas antes de concluir, a providência mais eficaz é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aumentar a temperatura do modelo, para que ele explore mais alternativas de implementação antes de declarar a tarefa concluída.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A temperatura afeta a diversidade das respostas, não a capacidade de verificar o resultado. Sem um check executável, o agente continua se baseando na aparência de concluído."
+        },
+        {
+          "id": "opt-2",
+          "texto": "exigir que o agente escreva, ao final, um resumo detalhado afirmando que todos os testes passaram, dispensando a execução da suíte.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um resumo de “tudo passou” sem execução não é evidência. A documentação recomenda pedir o comando executado e sua saída, porque a afirmação isolada diz muito pouco."
+        },
+        {
+          "id": "opt-3",
+          "texto": "desativar os testes que falharem durante a sessão, para que o agente não interrompa o trabalho e consiga entregar, no prazo combinado, ao menos a funcionalidade principal do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desativar testes que falham elimina justamente o sinal que indicaria a regressão. É uma forma de “passar” sem corrigir, o oposto da autocorreção."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir os testes por um segundo LLM que avalie o código por leitura, por ser essa a forma mais robusta e rápida de verificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. LLM-as-a-judge pode complementar a avaliação de critérios difusos, mas a Anthropic o descreve como “geralmente não muito robusto” e com custo de latência. Regras, linting e testes são as formas mais confiáveis de feedback."
+        },
+        {
+          "id": "opt-5",
+          "texto": "fornecer ao agente um check executável com resultado aprovado ou reprovado, como a suíte de testes, o build e o linter, e pedir a saída como evidência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo a documentação, Claude para quando o trabalho parece pronto. Com algo que retorna aprovado ou reprovado (testes, código de saída do build, linter, comparação com fixture), o agente faz a mudança, roda o check e, se algo quebra, lê a saída e corrige antes de rodar de novo. É a verificação autônoma com autocorreção. Pedir o comando e a saída como evidência completa a prática.",
+          "versaoInvertidaFalsa": "aceitar a declaração do agente como evidência suficiente, pois um agente de codificação sempre executa a suíte de testes antes de afirmar que a tarefa está concluída, ainda que não lhe seja fornecido nenhum check."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece substitutos sedutores para a verificação: autodeclaração, juiz LLM e até desativar testes. A autocorreção depende de um check executável e objetivo cuja saída o agente lê e usa para corrigir.",
+      "resumoFlashcard": {
+        "pergunta": "Do que um agente precisa para verificar e corrigir o próprio trabalho (self-healing)?",
+        "resposta": "De um check executável com resultado aprovado ou reprovado (testes, build, linter, comparação com fixture). Com ele, o agente altera o código, roda o check, lê a falha, corrige e repete até passar, e deve apresentar a saída como evidência."
+      },
+      "conceitosChave": ["Autocorreção (self-healing)", "Validação determinística"],
+      "fundamentacao": "Claude Code, “Best practices”, seção “Give Claude a check to run” (code.claude.com/docs/en/best-practices); Claude Blog, “Building agents with the Claude Agent SDK” (29/09/2025), seção “Verify your work”."
+    },
+    {
+      "id": "eng-ia-020",
+      "materiaSlug": "engenharia-software-ia-agentes",
+      "subtopico": "Ciclo agentivo: contexto, planejamento, ação e verificação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para garantir a checagem de tipos em um projeto TypeScript, a equipe incluiu em .claude/settings.json um hook do evento Stop com o comando pnpm tsc --noEmit 1>&2 || exit 2. Em seguida, pediu ao Claude Code uma alteração que introduzia um erro de tipo. Considerando o funcionamento documentado dos hooks, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em um repositório TypeScript do sistema de protocolo, a equipe configurou no Claude Code um hook do evento Stop com o comando pnpm tsc --noEmit 1>&2 || exit 2 e depois solicitou ao agente uma mudança que gerava erro de tipo. Considerando o funcionamento documentado dos hooks, é correto afirmar que",
+        "Um técnico quer que o agente só conclua tarefas quando a checagem de tipos passar. Para isso, cadastra em .claude/settings.json o hook Stop pnpm tsc --noEmit 1>&2 || exit 2 e testa com um pedido que provoca erro de tipo. Considerando o funcionamento documentado dos hooks, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o hook é executado antes de cada chamada de ferramenta e impede o agente de editar arquivos enquanto houver erros de tipo no projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem roda antes de cada chamada de ferramenta é o PreToolUse. O Stop dispara quando Claude tenta encerrar a resposta, e o hook descrito não impede edições: impede a conclusão enquanto o typecheck falhar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o código de saída 2 sinaliza sucesso ao Claude Code, que encerra o turno normalmente e apenas registra a saída do compilador em log.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nos hooks do Claude Code, o código de saída 2 significa bloqueio. No Stop, ele impede o fim do turno e devolve o stderr ao Claude como motivo, longe de sinalizar sucesso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ao tentar encerrar o turno, o agente é impedido pelo código de saída 2, recebe os erros do compilador pelo stderr e continua trabalhando até a checagem passar.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A documentação de boas práticas traz este exemplo. O hook Stop roda quando Claude tenta terminar o turno; se o tsc falha, o || exit 2 bloqueia a parada, e o que foi impresso no stderr (por isso o 1>&2) volta ao Claude como razão de não poder concluir. O agente corrige e tenta de novo até o typecheck passar ou até o limite de bloqueios consecutivos. É a verificação imposta pelo harness, não deixada ao critério do modelo.",
+          "versaoInvertidaFalsa": "ao tentar encerrar o turno, o agente conclui normalmente, porque o código de saída 2 indica sucesso e a saída do compilador não é repassada ao modelo, que só a veria em um log."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a saída do compilador é exibida apenas ao usuário, pois mensagens de hooks nunca chegam ao modelo, de modo que o agente não sabe por que foi bloqueado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No código 2, o stderr do hook é devolvido ao Claude como feedback. É exatamente por isso que o exemplo redireciona a saída do compilador para o stderr, permitindo que o agente leia os erros e os corrija."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o hook substitui a necessidade de checagem de tipos no pipeline de integração contínua, já que garante, por si só, que nenhum código com erro de tipo chegue ao repositório remoto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O hook atua na sessão local do agente e não substitui as verificações do pipeline de CI, que cobrem todas as alterações, inclusive as feitas sem o agente. Os controles se complementam."
+        }
+      ],
+      "pegadinhaFCC": "Os detalhes decisivos são o evento (Stop, ao fim do turno, e não PreToolUse) e o significado do código 2 (bloquear e devolver o stderr ao Claude). Quem troca esses pontos cai nos distratores.",
+      "resumoFlashcard": {
+        "pergunta": "O que faz um hook Stop que termina com exit 2 no Claude Code?",
+        "resposta": "Impede que Claude encerre o turno e devolve ao modelo o que foi escrito no stderr como motivo. Com um comando de verificação (por exemplo, tsc --noEmit), o agente é mandado de volta ao trabalho até o check passar: é verificação imposta pelo harness."
+      },
+      "conceitosChave": ["Claude Code: hooks", "Autocorreção (self-healing)"],
+      "fundamentacao": "Claude Code, “Best practices”, seção “Enforce the check with a Stop hook”; “Automate actions with hooks” (eventos, exit code 2) (code.claude.com/docs/en)."
+    }
+  ]
+}

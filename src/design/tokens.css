@@ -39,6 +39,14 @@
   --shadow-float: 0 18px 48px -24px rgba(48, 44, 30, 0.28), 0 2px 8px -4px rgba(48, 44, 30, 0.12);
   --temperature-tint: 255 166 77;
 
+  /* Gráficos (validados com dataviz/validate_palette.js: CVD e visão normal ok; croma baixo por decisão do spec) */
+  --chart-solido: #4A6B5B;
+  --chart-fragil: #B87D4B;
+  --chart-erro: #8B4444;
+  --chart-foco: #5B6E82;
+  --chart-neutro: #CFCAB6;
+  --chart-grade: #E2DEC9;
+
   /* Tipografia */
   --font-ui: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-reading: "Newsreader Variable", "Newsreader", "Source Serif 4 Variable", Georgia, serif;
@@ -83,6 +91,13 @@
     --status-danger-soft: rgba(168, 84, 84, 0.18);
     --on-accent: #161816;
     --shadow-float: 0 18px 48px -20px rgba(6, 8, 6, 0.7), 0 2px 8px -4px rgba(6, 8, 6, 0.5);
+
+    --chart-solido: #56816A;
+    --chart-fragil: #C2905C;
+    --chart-erro: #A85454;
+    --chart-foco: #7B93AB;
+    --chart-neutro: #3D433D;
+    --chart-grade: #2C302C;
   }
 }
 
@@ -113,6 +128,13 @@
   --status-danger-soft: rgba(168, 84, 84, 0.18);
   --on-accent: #161816;
   --shadow-float: 0 18px 48px -20px rgba(6, 8, 6, 0.7), 0 2px 8px -4px rgba(6, 8, 6, 0.5);
+
+  --chart-solido: #56816A;
+  --chart-fragil: #C2905C;
+  --chart-erro: #A85454;
+  --chart-foco: #7B93AB;
+  --chart-neutro: #3D433D;
+  --chart-grade: #2C302C;
 }
 
 :root[data-reading-font="source-serif"] {

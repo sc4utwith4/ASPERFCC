@@ -1,0 +1,592 @@
+{
+  "materiaSlug": "seguranca-informacao",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "seg-info-011",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "OWASP Top 10:2025 e codificação segura (DevSecOps)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na OWASP Top 10:2025, a categoria que se mantém na primeira posição e que passou a incorporar a falsificação de requisição do lado do servidor (SSRF), antes tratada como categoria própria, é a",
+      "variantesEnunciado": [
+        "Ao elaborar material de apoio sobre a OWASP Top 10:2025 para as equipes de desenvolvimento do Tribunal, um técnico precisou indicar a categoria que permanece em 1º lugar e que absorveu o Server-Side Request Forgery (SSRF), que era a A10 da edição de 2021. Trata-se da",
+        "Em uma auditoria de sistemas, a equipe do Tribunal precisou enquadrar uma falha de SSRF segundo a OWASP Top 10:2025, edição em que essa fraqueza deixou de ser categoria autônoma e foi agrupada na categoria que lidera a lista. Essa categoria é a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "A10:2025 – Server-Side Request Forgery, mantida como categoria autônoma no fim da lista.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na edição de 2021, o SSRF era a A10. Em 2025, ele foi incorporado à A01 (CWE-918), e a posição A10 passou a ser ocupada pela categoria nova Mishandling of Exceptional Conditions."
+        },
+        {
+          "id": "opt-2",
+          "texto": "A05:2025 – Injection, que reúne todas as falhas de manipulação de entradas, inclusive o SSRF.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A A05:2025 Injection reúne falhas como SQL injection e cross-site scripting, mas não recebeu o SSRF. A OWASP indica expressamente que o SSRF foi incorporado à categoria de controle de acesso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "A03:2025 – Software Supply Chain Failures, por envolver requisições a recursos de terceiros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A A03:2025 trata de comprometimentos na cadeia de dependências, de build e de distribuição de software. O SSRF, que força o servidor a fazer requisições a destinos indevidos, não foi agrupado ali."
+        },
+        {
+          "id": "opt-4",
+          "texto": "A02:2025 – Security Misconfiguration, já que o SSRF decorre de servidores mal configurados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A A02:2025 Security Misconfiguration subiu para o 2º lugar, mas não absorveu o SSRF. Configurações seguras ajudam a mitigá-lo, mas a classificação oficial o coloca na A01."
+        },
+        {
+          "id": "opt-5",
+          "texto": "A01:2025 – Broken Access Control, que segue como o risco mais grave da lista.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A A01:2025 Broken Access Control (Controle de Acesso Quebrado) permanece em 1º lugar e, segundo a introdução oficial da OWASP Top 10:2025, incorporou o Server-Side Request Forgery (CWE-918), antes A10:2021. A categoria tem 40 CWEs, inclusive o CSRF (CWE-352), e sua prevenção exige controle de acesso aplicado no servidor, negando por padrão.",
+          "versaoInvertidaFalsa": "A01:2025 – Broken Access Control, que deixou o 1º lugar para a Security Misconfiguration e perdeu o SSRF para uma categoria própria."
+        }
+      ],
+      "pegadinhaFCC": "A banca aposta em quem decorou a lista de 2021, em que o SSRF era a A10. Em 2025, o SSRF foi absorvido pela A01 Broken Access Control, e a A10 passou a ser Mishandling of Exceptional Conditions.",
+      "resumoFlashcard": {
+        "pergunta": "Onde ficou o SSRF na OWASP Top 10:2025?",
+        "resposta": "Foi incorporado à A01:2025 Broken Access Control (CWE-918), que continua em 1º lugar. A posição A10 passou a ser da nova categoria Mishandling of Exceptional Conditions."
+      },
+      "conceitosChave": ["OWASP Top 10:2025: A01", "OWASP Top 10:2025: mudanças"],
+      "fundamentacao": "OWASP Top 10:2025, Introdução e A01:2025 Broken Access Control (lista de CWEs mapeadas, inclusive CWE-918 e CWE-352)."
+    },
+    {
+      "id": "seg-info-012",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Princípios: confidencialidade, integridade, disponibilidade, autenticidade e não repúdio",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere três ocorrências registradas pela central de serviços do Tribunal: na primeira, uma planilha com dados pessoais de jurisdicionados ficou acessível, por erro de permissão, a qualquer usuário da internet; na segunda, valores de um relatório de auditoria já concluído foram alterados sem autorização; na terceira, o sistema de prestação de contas aceitou um arquivo enviado em nome de um gestor sem verificar se o remetente era de fato esse gestor. As propriedades de segurança da informação comprometidas foram, respectivamente, a ……, a …… e a ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na análise de três incidentes do Tribunal, constatou-se que um backup de pareceres sigilosos foi copiado por pessoa não autorizada; que um registro de pagamento já conferido foi modificado indevidamente; e que um e-mail que se passava pela Presidência foi aceito pelo sistema de protocolo sem nenhuma verificação da origem. Essas situações violaram, respectivamente, a ……, a …… e a ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Um técnico de controle externo classificou três achados de auditoria em um jurisdicionado: dados de servidores expostos em pasta pública da rede; alteração indevida de notas de empenho já validadas; e aceitação, pelo sistema de compras, de proposta enviada em nome de empresa sem verificação de quem a remeteu. As propriedades comprometidas foram, respectivamente, a ……, a …… e a ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "confidencialidade − integridade − autenticidade",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A exposição da planilha a quem não deveria conhecê-la viola a confidencialidade; a alteração não autorizada dos valores viola a integridade (exatidão e completude, ou, na LAI, informação não modificada); e aceitar arquivo sem verificar se o remetente é quem diz ser compromete a autenticidade, a propriedade de que a entidade é o que alega ser (ISO/IEC 27000) ou de que a informação foi produzida ou expedida por determinado indivíduo (LAI, art. 4º, VII).",
+          "versaoInvertidaFalsa": "confidencialidade − integridade − disponibilidade, pois aceitar arquivo sem verificar o remetente compromete a disponibilidade do sistema de prestação de contas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "disponibilidade − integridade − confidencialidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira ocorrência não tornou a planilha inacessível; ao contrário, deu acesso a quem não devia, o que é quebra de confidencialidade. E a terceira não trata de sigilo, mas de verificação da origem (autenticidade)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "confidencialidade − autenticidade − integridade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a segunda e a terceira lacunas. Alterar valores sem autorização viola a integridade; aceitar arquivo sem verificar quem o enviou compromete a autenticidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "integridade − confidencialidade − disponibilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca as propriedades: exposição indevida é confidencialidade, e não integridade; alteração indevida é integridade, e não confidencialidade; e a terceira ocorrência não envolve indisponibilidade do sistema."
+        },
+        {
+          "id": "opt-5",
+          "texto": "confidencialidade − disponibilidade − não repúdio",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A segunda ocorrência não tornou o relatório indisponível, e sim alterado, o que viola a integridade. A terceira envolve a verificação de quem enviou o arquivo, isto é, a autenticidade da origem."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve as ocorrências sem nomear a propriedade e oferece permutações. Exposição a não autorizados é confidencialidade; alteração indevida é integridade; não verificar quem enviou é autenticidade (não confundir com disponibilidade nem com não repúdio).",
+      "resumoFlashcard": {
+        "pergunta": "Como distinguir confidencialidade, integridade e autenticidade em um incidente?",
+        "resposta": "A confidencialidade é violada quando a informação chega a quem não deveria conhecê-la; a integridade, quando a informação é alterada sem autorização; a autenticidade, quando não se garante que a origem (pessoa ou sistema) é quem alega ser."
+      },
+      "conceitosChave": ["Princípios CIDAN"],
+      "fundamentacao": "ISO/IEC 27000:2018, seção 3 (confidencialidade, integridade e autenticidade); Lei nº 12.527/2011, art. 4º, VI a VIII."
+    },
+    {
+      "id": "seg-info-013",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Classificação da informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A Secretaria de Controle Externo do Tribunal produz relatórios preliminares de auditoria com achados ainda não submetidos ao contraditório. Ao implantar o esquema de classificação da informação previsto na ABNT NBR ISO/IEC 27002:2022, a equipe de TI discutiu quem deve classificar esses relatórios e como tratar a classificação ao longo do tempo. Segundo a norma, a orientação adequada é",
+      "variantesEnunciado": [
+        "Ao estruturar a política de classificação da informação de um tribunal de contas com base na ABNT NBR ISO/IEC 27002:2022, discutiu-se a quem cabe classificar os papéis de trabalho das auditorias e se a classificação pode mudar ao longo do ciclo de vida do documento. Segundo a norma, a orientação adequada é",
+        "Considere que a unidade de gestão documental do Tribunal pediu à TI um procedimento para classificar pareceres técnicos ainda em elaboração, que mais tarde se tornarão públicos. Conforme os controles de classificação e de rotulagem da ABNT NBR ISO/IEC 27002:2022, a orientação adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "atribuir a classificação ao administrador de banco de dados, que detém a custódia técnica dos dados e, por isso, conhece o valor de cada documento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O administrador de banco de dados é custodiante: guarda e opera os dados conforme regras definidas por outros. A responsabilidade pela classificação é do proprietário da informação, a área que responde por ela; confundir custodiante com proprietário é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "classificar no nível mais alto todos os documentos da secretaria, o que elimina o risco de subclassificação e dispensa as revisões periódicas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A norma alerta contra a superclassificação, que gera custos e controles desnecessários e prejudica o acesso legítimo, tanto quanto contra a subclassificação. A revisão periódica continua necessária."
+        },
+        {
+          "id": "opt-3",
+          "texto": "fixar a classificação no momento da criação do documento, em caráter definitivo, para garantir a estabilidade dos controles de proteção aplicados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sensibilidade da informação muda ao longo do tempo: um relatório preliminar sigiloso pode tornar-se público após o julgamento. Por isso a classificação deve ser revista periodicamente, e não fixada de forma definitiva."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deixar a classificação a cargo do proprietário da informação, segundo as necessidades de sigilo, integridade e disponibilidade, com revisão periódica.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo controle 5.12 da ABNT NBR ISO/IEC 27002:2022, a informação é classificada segundo as necessidades de segurança (confidencialidade, integridade e disponibilidade) e os requisitos das partes interessadas, inclusive legais; os proprietários da informação respondem pela classificação, que deve ser revista ao longo do tempo. O controle 5.13 complementa com procedimentos de rotulagem conforme o esquema adotado.",
+          "versaoInvertidaFalsa": "deixar a classificação a cargo do custodiante técnico da informação, segundo as necessidades de sigilo, integridade e disponibilidade, sem necessidade de revisões posteriores."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dispensar a rotulagem dos relatórios sempre que a classificação já constar do inventário de ativos, uma vez que o rótulo seria redundante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O controle 5.13 (rotulagem de informações) existe justamente para que quem manuseia o documento reconheça a classificação e aplique o tratamento devido. O registro no inventário não substitui o rótulo."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o proprietário da informação pelo custodiante técnico (DBA, administrador de sistemas) e vende a classificação máxima e definitiva como mais segura. A norma pede classificação pelo proprietário, proporcional à necessidade e revista ao longo do tempo.",
+      "resumoFlashcard": {
+        "pergunta": "Quem classifica a informação e com que critérios, segundo a ISO/IEC 27002:2022?",
+        "resposta": "O proprietário da informação, considerando as necessidades de confidencialidade, integridade e disponibilidade e os requisitos das partes interessadas, inclusive legais. A classificação é revista ao longo do tempo e complementada por rotulagem (controles 5.12 e 5.13)."
+      },
+      "conceitosChave": ["Classificação da informação: proprietário"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27002:2022, controles 5.12 (classificação da informação) e 5.13 (rotulagem de informações)."
+    },
+    {
+      "id": "seg-info-014",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Controle de acesso e gestão de identidades (IAM)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em auditoria de acessos do sistema de gestão processual do Tribunal, verificou-se que um servidor transferido da área de fiscalização de obras para a área administrativa manteve todos os perfis antigos, somados aos novos, inclusive o de aprovação de relatórios técnicos. O fenômeno observado e o controle que o previne são, respectivamente,",
+      "variantesEnunciado": [
+        "A recertificação de acessos de um sistema do Tribunal revelou que servidores que mudaram de lotação nos últimos anos mantêm os perfis de todas as unidades por onde passaram, além dos perfis atuais. O fenômeno observado e o controle que o previne são, respectivamente,",
+        "Ao auditar a gestão de identidades de um jurisdicionado, a equipe do Tribunal constatou que um analista movido para outro setor manteve as permissões do cargo anterior, entre elas a de autorizar pagamentos, acumuladas às novas. O fenômeno observado e o controle que o previne são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "acúmulo de privilégios (privilege creep); login único (SSO), que centraliza a autenticação e elimina os perfis duplicados de cada sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fenômeno está certo, mas o controle não. O SSO centraliza a autenticação (quem é o usuário) e não corrige a autorização (o que ele pode fazer); os perfis acumulados continuariam ativos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "acúmulo de privilégios (privilege creep); revisão periódica dos direitos de acesso e remoção dos perfis anteriores na movimentação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O acúmulo de privilégios ocorre quando direitos de acesso são somados a cada movimentação sem remoção dos anteriores, o que viola o menor privilégio e a segregação de funções. O controle 5.18 da ABNT NBR ISO/IEC 27002:2022 prevê provisão, revisão periódica, ajuste e remoção de direitos de acesso, inclusive na mudança de função, dentro do ciclo de vida da identidade (admissão, movimentação e desligamento).",
+          "versaoInvertidaFalsa": "acúmulo de privilégios (privilege creep); manutenção dos perfis anteriores até o desligamento do servidor, para não interromper as atividades durante a transição."
+        },
+        {
+          "id": "opt-3",
+          "texto": "escalada de privilégios por exploração de vulnerabilidade; aplicação imediata das correções de segurança no servidor de aplicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não houve exploração de falha técnica: os privilégios foram mantidos pelo próprio processo de concessão de acessos. Aplicar correções de segurança não remove perfis concedidos e não revogados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "falha de autenticação; exigência de autenticação multifator para todos os usuários que acessam o sistema de gestão processual.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O servidor autenticou-se legitimamente; o problema está na autorização excessiva. A MFA fortalece a autenticação, mas não retira permissões herdadas de funções anteriores."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uso compartilhado de credenciais; adoção do modelo discricionário, no qual o próprio servidor decide quais perfis deve manter.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há indício de credenciais compartilhadas, e o controle discricionário, em que o usuário decide, agravaria o problema. A concessão deve ser feita pelo responsável pelo sistema com base na função atual."
+        }
+      ],
+      "pegadinhaFCC": "A banca acerta o nome do fenômeno e erra o controle, oferecendo SSO ou MFA, que tratam de autenticação. Privilégio acumulado é problema de autorização: revisão periódica e remoção de perfis na movimentação.",
+      "resumoFlashcard": {
+        "pergunta": "O que é acúmulo de privilégios (privilege creep) e como preveni-lo?",
+        "resposta": "É a soma de direitos de acesso a cada mudança de função sem retirada dos anteriores. Previne-se com gestão do ciclo de vida da identidade (admissão, movimentação e desligamento), remoção de perfis na movimentação e revisão periódica dos acessos."
+      },
+      "conceitosChave": ["IAM: ciclo de vida de identidades", "IAM: autenticação × autorização"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27002:2022, controles 5.3 (segregação de funções), 5.15 (controle de acesso), 5.16 (gestão de identidade) e 5.18 (direitos de acesso)."
+    },
+    {
+      "id": "seg-info-015",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Infraestrutura de chaves públicas, certificados e assinatura digital",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No processo de assinatura digital de um documento eletrônico com base em criptografia assimétrica, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao explicar aos servidores do Tribunal como funciona a assinatura de pareceres no processo eletrônico com certificado digital, o técnico descreveu o mecanismo criptográfico envolvido. Sobre esse mecanismo, é correto afirmar que",
+        "Considere a assinatura digital de um relatório de auditoria em PDF por um auditor que possui certificado digital ICP-Brasil. Acerca do funcionamento dessa assinatura, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o documento inteiro é cifrado com a chave pública do destinatário, o que garante ao mesmo tempo a autoria e o sigilo do conteúdo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cifrar com a chave pública do destinatário serve à confidencialidade, e não à autoria: qualquer pessoa pode usar a chave pública de alguém. A assinatura usa a chave privada do signatário."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o resumo do documento é cifrado com a chave pública do signatário, e o destinatário o confere com a chave privada da autoridade certificadora.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as chaves: o resumo é cifrado com a chave privada do signatário, e a conferência usa a chave pública dele, obtida do certificado. A chave privada da AC só é usada para assinar certificados e listas de revogação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a assinatura assegura integridade, autenticidade e confidencialidade, o que dispensa o uso de cifra em documentos sigilosos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A assinatura digital garante integridade, autenticidade e não repúdio, mas não confidencialidade: o documento assinado continua legível. Para sigilo é preciso cifrar o conteúdo, por exemplo com a chave pública do destinatário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a verificação exige a chave privada do signatário, que deve ser enviada ao destinatário junto com o documento assinado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A chave privada é de uso exclusivo do titular e jamais é enviada. A verificação usa a chave pública do signatário, que consta do certificado digital."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o hash do documento é cifrado com a chave privada do signatário, e a verificação usa a chave pública correspondente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na assinatura digital, calcula-se o resumo criptográfico (hash) do documento e cifra-se esse resumo com a chave privada do signatário. O verificador recalcula o hash, decifra a assinatura com a chave pública do signatário, obtida do certificado, e compara os valores: se coincidirem, comprovam-se a integridade e a autoria, base do não repúdio.",
+          "versaoInvertidaFalsa": "o hash do documento é cifrado com a chave pública do signatário, e a verificação usa a chave privada dele, que o destinatário recebe com o documento."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a chave privada pela pública e atribui à assinatura um sigilo que ela não dá. Assina-se com a chave privada do signatário; verifica-se com a chave pública dele.",
+      "resumoFlashcard": {
+        "pergunta": "Como se gera e se verifica uma assinatura digital?",
+        "resposta": "Gera-se o hash do documento e cifra-se esse resumo com a chave privada do signatário. Na verificação, recalcula-se o hash e decifra-se a assinatura com a chave pública do signatário; se os resumos coincidirem, confirmam-se integridade e autoria."
+      },
+      "conceitosChave": ["Assinatura digital"],
+      "fundamentacao": "MP nº 2.200-2/2001, art. 6º, parágrafo único (chave privada sob controle exclusivo do titular); FIPS 186-5 (Digital Signature Standard); Stallings, Criptografia e Segurança de Redes (assinaturas digitais)."
+    },
+    {
+      "id": "seg-info-016",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Backup, continuidade de negócios e recuperação de desastres",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A política de backup do servidor de arquivos do Tribunal prevê cópia completa aos domingos, às 23h, e cópias incrementais de segunda a sábado, também às 23h. Na quinta-feira, às 10h, o disco do servidor falhou e foi substituído. Para recuperar o estado mais recente disponível, a equipe deve restaurar",
+      "variantesEnunciado": [
+        "No sistema de arquivos digitalizados do protocolo do Tribunal, faz-se backup completo todo domingo às 23h e backups incrementais de segunda a sábado às 23h. Uma falha de hardware na quinta-feira, às 10h, exigiu a restauração dos dados em novo equipamento. Para recuperar o estado mais recente disponível, a equipe deve restaurar",
+        "Considere um servidor de documentos com backup completo semanal aos domingos, às 23h, e backups incrementais diários de segunda a sábado, às 23h. Se o servidor for perdido na quinta-feira às 10h, para recuperar o estado mais recente disponível, a equipe deve restaurar"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o completo de domingo e os incrementais de segunda, terça e quarta, nessa ordem, perdendo-se o que mudou após as 23h de quarta.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O backup incremental copia apenas o que mudou desde o último backup de qualquer tipo. Por isso a restauração exige o último completo (domingo) e todos os incrementais posteriores (segunda, terça e quarta), aplicados em ordem cronológica. A cópia de quinta só ocorreria às 23h, de modo que se perdem as alterações feitas entre as 23h de quarta e as 10h de quinta: a política tolera perda de até cerca de 24 horas (RPO implícito).",
+          "versaoInvertidaFalsa": "o completo de domingo e apenas o incremental de quarta, porque o incremental acumula as alterações feitas desde a última cópia completa, sem perda de dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o completo de domingo e somente o incremental de quarta-feira, que acumula todas as alterações feitas desde a cópia completa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve o comportamento do backup diferencial, que acumula tudo o que mudou desde o último completo. No incremental, a cópia de quarta contém só as alterações desde terça, de modo que as de segunda e terça também são necessárias."
+        },
+        {
+          "id": "opt-3",
+          "texto": "somente o incremental de quarta-feira, pois cada incremental contém a imagem integral dos arquivos alterados na semana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum incremental basta sozinho: ele depende do completo e dos incrementais anteriores da cadeia. E o incremental não contém a imagem integral dos arquivos alterados na semana, apenas as mudanças desde a cópia anterior."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o completo de domingo e os incrementais de segunda a quinta-feira, sem perda de dados, pois a cópia de quinta já estava agendada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cópia de quinta-feira estava agendada para as 23h e não chegou a ser feita, porque a falha ocorreu às 10h. Há, portanto, perda das alterações feitas desde as 23h de quarta-feira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o completo de domingo e os incrementais de segunda, terça e quarta, em qualquer ordem, já que cada incremental registra arquivos distintos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O conjunto de cópias está certo, mas a ordem importa: os incrementais devem ser aplicados em sequência cronológica, porque um mesmo arquivo pode ter sido alterado em vários dias, e a versão mais recente deve prevalecer."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve o incremental com a regra do diferencial (só o último mais o completo) e conta com a distração de que a cópia de quinta ainda não existia às 10h. Incremental: completo + todos os incrementais, em ordem.",
+      "resumoFlashcard": {
+        "pergunta": "Como se restaura um backup incremental e um diferencial?",
+        "resposta": "No incremental, restaura-se o último completo e todos os incrementais posteriores, em ordem cronológica. No diferencial, basta o último completo e o último diferencial, que acumula tudo o que mudou desde o completo."
+      },
+      "conceitosChave": ["Backup: completo, incremental e diferencial", "Continuidade: RPO e RTO"],
+      "fundamentacao": "ABNT NBR ISO/IEC 27002:2022, controle 8.13 (backup das informações); literatura técnica sobre estratégias de backup completo, incremental e diferencial."
+    },
+    {
+      "id": "seg-info-017",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Malware, ransomware, phishing e engenharia social",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em uma semana, a central de serviços do Tribunal registrou três tentativas de golpe: (1) servidores receberam SMS com link para uma falsa página de troca de senha do portal; (2) um servidor recebeu ligação de alguém que se apresentou como técnico do suporte e pediu o código do autenticador para “concluir uma manutenção”; (3) o Conselheiro-Presidente recebeu e-mail personalizado, com dados reais de sua agenda, pedindo autorização urgente de um pagamento. Essas modalidades de ataque denominam-se, respectivamente,",
+      "variantesEnunciado": [
+        "Um relatório de conscientização do Tribunal descreveu três golpes recentes: mensagens de texto no celular com link para falso formulário de recadastramento; telefonemas de suposto analista de TI que solicitava o código de verificação do autenticador; e mensagem eletrônica cuidadosamente personalizada, dirigida a um Conselheiro, solicitando transferência urgente de recursos. Essas modalidades de ataque denominam-se, respectivamente,",
+        "Considere três tentativas de engenharia social contra um órgão jurisdicionado: (1) SMS com link fraudulento de “atualização cadastral”; (2) chamada telefônica de falso suporte pedindo a senha de uso único do usuário; (3) e-mail sob medida enviado ao dirigente máximo do órgão, com pedido de aprovação imediata de despesa. Essas modalidades de ataque denominam-se, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pharming, vishing e whaling.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pharming redireciona a vítima para site falso por manipulação de DNS ou do arquivo hosts, sem depender de mensagem com link. O SMS com link fraudulento caracteriza smishing."
+        },
+        {
+          "id": "opt-2",
+          "texto": "smishing, whaling e vishing.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca a segunda e a terceira modalidades. A ligação telefônica caracteriza vishing (voice phishing), e o e-mail personalizado dirigido ao dirigente máximo caracteriza whaling."
+        },
+        {
+          "id": "opt-3",
+          "texto": "vishing, smishing e whaling.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas primeiras: phishing por SMS é smishing, e por voz (telefone) é vishing. A terceira, dirigida ao alto escalão, está corretamente nomeada, o que torna a alternativa atraente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "smishing, vishing e whaling.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Smishing é o phishing por SMS; vishing, por voz (ligação telefônica, inclusive com pedido de códigos de MFA); e whaling é o spear phishing dirigido a altos dirigentes, com mensagem personalizada que dá credibilidade a pedidos urgentes, como pagamentos. A defesa combina conscientização, confirmação por outro canal, autenticação resistente a phishing e dupla aprovação de pagamentos.",
+          "versaoInvertidaFalsa": "smishing, vishing e pharming, pois todo e-mail personalizado dirigido a autoridade, com pedido urgente de pagamento, é classificado como pharming."
+        },
+        {
+          "id": "opt-5",
+          "texto": "smishing, vishing e pharming.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras estão certas, mas o terceiro caso não é pharming, que depende de redirecionamento por envenenamento de DNS. E-mail personalizado dirigido ao dirigente máximo é whaling."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o canal de cada golpe (SMS = smishing; voz = vishing) e oferece pharming, que é redirecionamento por DNS, como isca. Phishing dirigido ao alto escalão é whaling.",
+      "resumoFlashcard": {
+        "pergunta": "O que distingue smishing, vishing, whaling e pharming?",
+        "resposta": "Smishing usa SMS; vishing usa voz (telefone); whaling é spear phishing dirigido a altos dirigentes; pharming redireciona a vítima a site falso por manipulação de DNS ou do arquivo hosts, sem precisar que ela clique em link."
+      },
+      "conceitosChave": ["Phishing: variações", "Engenharia social"],
+      "fundamentacao": "CERT.br, Cartilha de Segurança para Internet (golpes na internet: phishing e pharming); ABNT NBR ISO/IEC 27002:2022, controle 6.3 (conscientização, educação e treinamento em segurança da informação)."
+    },
+    {
+      "id": "seg-info-018",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Firewalls, antivírus e IDS/IPS",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Na especificação técnica de uma contratação de soluções de proteção de rede e de estações de trabalho para o Tribunal, a equipe registrou características de diferentes mecanismos de detecção e bloqueio. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar o estudo técnico preliminar para renovar as ferramentas de segurança de rede e de endpoints do Tribunal, a equipe comparou métodos de detecção e tipos de solução disponíveis no mercado. Considere as afirmativas abaixo.",
+        "Em auditoria sobre a segurança perimetral de um jurisdicionado, o técnico do Tribunal analisou as características dos mecanismos de detecção e prevenção de intrusões em uso no órgão. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A detecção por assinatura tende a apresentar poucos falsos positivos para ameaças conhecidas, mas não reconhece ataques inéditos para os quais não exista padrão cadastrado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A comparação com padrões conhecidos é precisa para o que já foi catalogado, mas cega para variantes e ataques de dia zero."
+        },
+        {
+          "texto": "A detecção por anomalia compara a atividade com um perfil de comportamento considerado normal, o que permite identificar ataques novos, ao custo de mais falsos positivos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Por desvio em relação ao perfil normal, pode apontar ataques nunca vistos, mas também sinaliza atividades legítimas incomuns."
+        },
+        {
+          "texto": "Uma solução de EDR coleta telemetria contínua dos endpoints, detecta comportamentos suspeitos e permite respostas como isolar a máquina da rede.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O EDR vai além do antivírus por assinatura: registra eventos do endpoint, analisa comportamento e oferece ações de resposta, como isolamento e encerramento de processos."
+        },
+        {
+          "texto": "Um firewall de nova geração (NGFW) decide exclusivamente com base em endereços IP de origem e destino e em portas, sem identificar aplicações nem usuários.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Decidir só por IP e porta é o filtro de pacotes tradicional; o NGFW identifica aplicações e usuários e integra inspeção profunda e prevenção de intrusão."
+        },
+        {
+          "texto": "Um IDS de rede posicionado em modo passivo, recebendo cópia do tráfego, bloqueia por si só os pacotes maliciosos antes que cheguem ao destino.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O IDS passivo, alimentado por porta espelhada ou TAP, apenas detecta e alerta; bloquear exige equipamento em linha, como um IPS."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: o NGFW vai além de IP e porta, identificando aplicações e usuários e integrando inspeção profunda de pacotes e prevenção de intrusão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a I, verdadeira, e inclui a V, falsa: o IDS passivo, que recebe cópia do tráfego por porta espelhada ou TAP, apenas detecta e alerta; o bloqueio exige um IPS em linha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a IV é falsa, e a combinação deixa de fora a II e a III, que descrevem corretamente a detecção por anomalia e o EDR."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Combina a III, verdadeira, com as duas falsas (IV e V). O NGFW identifica aplicações e usuários, e o IDS em modo passivo não bloqueia tráfego."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I e a II descrevem os dois métodos clássicos de detecção da NIST SP 800-94: assinatura (precisa para o conhecido, cega para o inédito) e anomalia (detecta o novo, com mais falsos positivos). A III descreve o EDR, que vai além do antivírus por assinatura ao monitorar comportamento e permitir resposta, como isolar o equipamento. A IV e a V são falsas: o NGFW reconhece aplicações e usuários, e o IDS passivo apenas alerta.",
+          "versaoInvertidaFalsa": "A detecção por anomalia identifica apenas ataques previamente cadastrados em uma base de padrões, razão pela qual é incapaz de detectar ataques inéditos e quase não gera falsos positivos."
+        }
+      ],
+      "pegadinhaFCC": "A banca reduz o NGFW a um filtro de IP e porta e atribui ao IDS passivo a capacidade de bloquear. Bloqueio em linha é papel do IPS; assinatura falha no inédito, e anomalia gera mais falsos positivos.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre detecção por assinatura e por anomalia?",
+        "resposta": "A detecção por assinatura compara a atividade com padrões de ataques conhecidos: poucos falsos positivos, mas não detecta o inédito. A por anomalia compara com um perfil de comportamento normal: pode detectar ataques novos, mas gera mais falsos positivos."
+      },
+      "conceitosChave": ["Detecção: assinatura × anomalia", "IDS × IPS"],
+      "fundamentacao": "NIST SP 800-94 (Guide to Intrusion Detection and Prevention Systems, 2007), metodologias de detecção e tipos de IDPS; ABNT NBR ISO/IEC 27002:2022, controles 8.7 (proteção contra malware) e 8.16 (atividades de monitoramento)."
+    },
+    {
+      "id": "seg-info-019",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Zero Trust",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na arquitetura de confiança zero descrita na NIST SP 800-207, o componente que executa o algoritmo de confiança e decide conceder, negar ou revogar o acesso a um recurso, o componente que estabelece ou encerra o caminho de comunicação, comandando a aplicação dessa decisão, e o componente que efetivamente habilita, monitora e encerra a conexão junto ao recurso são, respectivamente,",
+      "variantesEnunciado": [
+        "Um técnico do Tribunal, ao estudar a NIST SP 800-207 para orientar a adoção de Zero Trust no acesso ao processo eletrônico, identificou três componentes lógicos: o que decide se o acesso é concedido, com base na política e em fontes de dados de risco; o que configura a sessão e instrui a aplicação da decisão; e o que, posicionado junto ao recurso, permite ou bloqueia a conexão. Esses componentes são, respectivamente,",
+        "Considere uma arquitetura Zero Trust conforme a NIST SP 800-207, em que um componente avalia identidade, postura do dispositivo e inteligência de ameaças para decidir sobre o acesso; outro gera as credenciais de sessão e comanda o ponto de aplicação; e um terceiro, junto ao recurso, efetivamente libera ou encerra a conexão. Esses componentes são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Policy Administrator, Policy Engine e Policy Enforcement Point.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois primeiros. Quem executa o algoritmo de confiança e decide é o Policy Engine; o Policy Administrator executa a decisão, estabelecendo ou encerrando o caminho de comunicação e comandando o PEP."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Policy Engine, Policy Administrator e Policy Enforcement Point.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na NIST SP 800-207 (seção 3), o Policy Engine (PE) decide com base na política e em fontes como monitoramento contínuo, inteligência de ameaças, logs e gestão de identidades; o Policy Administrator (PA) estabelece ou encerra o caminho de comunicação, gerando credenciais de sessão e comandando o Policy Enforcement Point (PEP), que habilita, monitora e encerra a conexão junto ao recurso. PE e PA formam, juntos, o Policy Decision Point (PDP).",
+          "versaoInvertidaFalsa": "Policy Enforcement Point, Policy Administrator e Policy Engine, pois na NIST SP 800-207 é o ponto de aplicação que executa o algoritmo de confiança e decide sobre o acesso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Policy Enforcement Point, Policy Engine e Policy Administrator.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PEP não decide: apenas aplica a decisão junto ao recurso. A ordem correta é PE (decide), PA (comanda e estabelece a sessão) e PEP (aplica)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Policy Engine, Policy Enforcement Point e Policy Administrator.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o primeiro e troca os dois últimos: quem estabelece o caminho e comanda a aplicação é o Policy Administrator, e quem atua junto ao recurso liberando ou encerrando a conexão é o Policy Enforcement Point."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Policy Decision Point, Policy Enforcement Point e Policy Engine.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PDP é o conjunto formado por PE e PA, e não um terceiro componente que se combine com eles nessa sequência. Além disso, o PEP não estabelece o caminho de comunicação, e o PE não atua junto ao recurso."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve as funções sem nomear os componentes e embaralha a ordem. Decide = Policy Engine; comanda e estabelece a sessão = Policy Administrator; aplica junto ao recurso = PEP. PE + PA = PDP.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os componentes centrais da arquitetura Zero Trust da NIST SP 800-207?",
+        "resposta": "O Policy Engine decide sobre o acesso (algoritmo de confiança); o Policy Administrator estabelece ou encerra o caminho de comunicação e comanda o PEP; o Policy Enforcement Point habilita, monitora e encerra a conexão junto ao recurso. PE e PA compõem o PDP."
+      },
+      "conceitosChave": ["Zero Trust: NIST SP 800-207"],
+      "fundamentacao": "NIST SP 800-207, Zero Trust Architecture (2020), seção 3 (componentes lógicos: Policy Engine, Policy Administrator e Policy Enforcement Point)."
+    },
+    {
+      "id": "seg-info-020",
+      "materiaSlug": "seguranca-informacao",
+      "subtopico": "Gestão de riscos, vulnerabilidades e incidentes",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe responsável pela gestão de vulnerabilidades do Tribunal passou a priorizar correções com base nos identificadores CVE e nas pontuações do CVSS v4.0, versão publicada pelo FIRST em 2023. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em auditoria sobre o processo de gestão de vulnerabilidades de um jurisdicionado, a equipe do Tribunal analisou como o órgão usa os identificadores CVE e o CVSS v4.0, publicado pelo FIRST em 2023. Considere as afirmativas abaixo.",
+        "Para padronizar os relatórios de varredura de vulnerabilidades dos sistemas do Tribunal, a equipe de segurança elaborou orientações sobre CVE, CWE e CVSS v4.0. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O CVE identifica uma vulnerabilidade específica e publicamente conhecida, ao passo que o CWE classifica tipos de fraquezas de software e de hardware.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O CVE é a instância (uma falha concreta em determinado produto), e o CWE é a categoria de fraqueza, como injeção de SQL ou controle de acesso ausente."
+        },
+        {
+          "texto": "No CVSS v4.0, o grupo de métricas Temporal da versão 3.x foi mantido com o mesmo nome e com as mesmas métricas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O grupo Temporal foi substituído pelo grupo Threat, centrado na maturidade do exploit."
+        },
+        {
+          "texto": "Uma vulnerabilidade com pontuação 9,3 enquadra-se na faixa qualitativa Critical, que vai de 9,0 a 10,0.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. As faixas do CVSS v4.0 são: None 0,0; Low 0,1 a 3,9; Medium 4,0 a 6,9; High 7,0 a 8,9; e Critical 9,0 a 10,0."
+        },
+        {
+          "texto": "As métricas do grupo Supplemental fornecem contexto adicional, como a possibilidade de automação da exploração, sem alterar a pontuação calculada.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Métricas como Automatable, Safety e Recovery entram no vetor como informação complementar, mas não modificam o escore."
+        },
+        {
+          "texto": "A pontuação do grupo Base expressa, por si só, o risco que a vulnerabilidade representa para o Tribunal, dispensando informações sobre exposição e criticidade dos ativos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O escore Base mede a gravidade técnica intrínseca; o risco para a organização depende também da ameaça (exploração ativa), da exposição e da criticidade do ativo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: no CVSS v4.0, o grupo Temporal da versão 3.x foi substituído pelo grupo Threat, centrado na maturidade do exploit. As afirmativas I, III e IV estão corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a V são falsas. O grupo Temporal virou Threat, e o escore Base mede a gravidade técnica intrínseca da vulnerabilidade, e não o risco para a organização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é verdadeira, mas a V é falsa: a própria especificação do CVSS orienta complementar o escore Base com métricas de ameaça e de ambiente, e o risco depende também da exposição e da criticidade do ativo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: o CVE identifica vulnerabilidades específicas, e o CWE cataloga tipos de fraqueza. III: no CVSS v4.0, Critical vai de 9,0 a 10,0 (High, 7,0 a 8,9; Medium, 4,0 a 6,9; Low, 0,1 a 3,9). IV: o grupo Supplemental (Safety, Automatable, Recovery, Value Density, Vulnerability Response Effort e Provider Urgency) traz contexto adicional sem alterar o escore. A II erra porque o grupo Temporal foi substituído pelo Threat, e a V confunde gravidade com risco.",
+          "versaoInvertidaFalsa": "No CVSS v4.0, as métricas do grupo Supplemental, como Automatable, alteram a pontuação final da vulnerabilidade, elevando-a sempre que a exploração pode ser automatizada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é verdadeira, mas a V é falsa, e ficam de fora a I e a IV, que também estão corretas. Gravidade técnica não se confunde com risco para a organização."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa o nome antigo do grupo Temporal (v3.x), atribui às métricas Supplemental efeito sobre o escore e trata o escore Base como risco. No v4.0: Base, Threat, Environmental e Supplemental, e Supplemental não altera a nota.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os grupos de métricas do CVSS v4.0 e o que mudou em relação à v3.x?",
+        "resposta": "Base, Threat, Environmental e Supplemental. O grupo Temporal da v3.x foi substituído pelo Threat, e o Supplemental é novo e não altera o escore. As faixas qualitativas são Low 0,1–3,9, Medium 4,0–6,9, High 7,0–8,9 e Critical 9,0–10,0."
+      },
+      "conceitosChave": ["Gestão de vulnerabilidades: CVE e CVSS"],
+      "fundamentacao": "FIRST, CVSS v4.0 Specification (2023) e calculadora oficial (grupos de métricas e faixas qualitativas); MITRE, programas CVE e CWE; ABNT NBR ISO/IEC 27002:2022, controle 8.8 (gestão de vulnerabilidades técnicas)."
+    }
+  ]
+}

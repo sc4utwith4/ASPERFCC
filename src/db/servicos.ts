@@ -59,8 +59,12 @@ export async function bateriaAtiva(slug: MateriaSlug): Promise<Bateria | undefin
 export async function iniciarBateria(slug: MateriaSlug, tamanhoBloco: number): Promise<Bateria> {
   const ativa = await bateriaAtiva(slug);
   if (ativa) {
-    if (ativa.tamanhoBloco !== tamanhoBloco) await db.baterias.update(ativa.id, { tamanhoBloco });
-    return { ...ativa, tamanhoBloco };
+    // Lotes novos (importados ou gerados) entram no fim da bateria em andamento.
+    const presentes = new Set(ativa.questaoIds);
+    const novas = (await questoesDaMateria(slug)).map((q) => q.id).filter((id) => !presentes.has(id));
+    const questaoIds = novas.length ? [...ativa.questaoIds, ...novas] : ativa.questaoIds;
+    if (ativa.tamanhoBloco !== tamanhoBloco || novas.length) await db.baterias.update(ativa.id, { tamanhoBloco, questaoIds });
+    return { ...ativa, tamanhoBloco, questaoIds };
   }
   const anteriores = await bateriasDaMateria(slug);
   return anteriores.length === 0 ? criarBateriaCiclo(slug, tamanhoBloco) : gerarBateriaVariantes(slug, tamanhoBloco);
