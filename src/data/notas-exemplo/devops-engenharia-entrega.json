@@ -1,0 +1,47 @@
+{
+  "id": "nota-devops-01",
+  "materiaSlug": "devops-engenharia-entrega",
+  "titulo": "Objetos do Kubernetes e o problema que cada um resolve",
+  "subtopico": "Kubernetes",
+  "pistas": [
+    {
+      "pergunta": "Por que não se publica um Pod \"solto\" em produção?",
+      "resposta": "O Pod é efêmero: se ele morrer ou o nó cair, nada o recria. Um controlador, como o Deployment, mantém o número desejado de réplicas."
+    },
+    {
+      "pergunta": "O que o Deployment acrescenta ao ReplicaSet?",
+      "resposta": "Atualizações declarativas: troca de versão gradual (rolling update) e rollback, criando e escalando ReplicaSets por baixo."
+    },
+    {
+      "pergunta": "Quando usar StatefulSet em vez de Deployment?",
+      "resposta": "Em cargas com estado que exigem identidade estável (nome e endereço previsíveis), ordem de criação e volume persistente próprio por réplica, como bancos de dados."
+    },
+    {
+      "pergunta": "Para que serve um DaemonSet?",
+      "resposta": "Para manter uma cópia do Pod em cada nó (ou nos nós selecionados), como agentes de coleta de logs e de monitoramento."
+    },
+    {
+      "pergunta": "Qual a diferença entre Job e CronJob?",
+      "resposta": "O Job executa uma tarefa até ela terminar com sucesso; o CronJob cria Jobs periodicamente, conforme uma expressão no formato cron."
+    },
+    {
+      "pergunta": "Como diferem os Services ClusterIP, NodePort e LoadBalancer?",
+      "resposta": "ClusterIP (padrão) expõe só dentro do cluster; NodePort abre a mesma porta em todos os nós; LoadBalancer pede ao provedor um balanceador externo."
+    },
+    {
+      "pergunta": "A senha do banco vai em ConfigMap ou em Secret? Basta isso?",
+      "resposta": "Em Secret. Mas, por padrão, o conteúdo fica só codificado em base64 no etcd, não cifrado: é preciso ativar a criptografia em repouso e restringir o acesso com RBAC."
+    },
+    {
+      "pergunta": "Qual a diferença entre readiness probe e liveness probe?",
+      "resposta": "Readiness falhando tira o Pod do balanceamento do Service, sem reiniciá-lo; liveness falhando faz o kubelet reiniciar o container."
+    }
+  ],
+  "conteudoMarkdown": "## A ideia central: estado desejado\n\nNo Kubernetes você **declara** o que quer (por exemplo, 3 réplicas da imagem v2) e os controladores trabalham em laço para que o estado real convirja para o desejado. É isso que permite autorrecuperação e implantações sem intervenção manual.\n\n- **kube-apiserver:** porta de entrada de todas as operações.\n- **etcd:** guarda o estado do cluster.\n- **kube-scheduler:** escolhe o nó de cada Pod, olhando os **requests**.\n- **kube-controller-manager:** executa os controladores (Deployment, ReplicaSet, Job...).\n- **kubelet:** em cada nó, garante que os containers dos Pods estejam rodando; **kube-proxy** mantém as regras de rede dos Services.\n\n## Cargas de trabalho\n\n1. **Pod:** menor unidade implantável; um ou mais containers que compartilham rede e volumes.\n2. **ReplicaSet:** mantém N cópias de um Pod.\n3. **Deployment:** gerencia ReplicaSets para fazer *rolling update* e *rollback*. É o padrão para aplicações sem estado.\n4. **StatefulSet:** identidade estável e volume por réplica, para cargas com estado.\n5. **DaemonSet:** um Pod por nó (agentes).\n6. **Job / CronJob:** tarefas que terminam; o CronJob as agenda.\n\n## Expor e configurar\n\n- **Service:** endereço estável na frente de Pods que mudam. Tipos: ClusterIP, NodePort e LoadBalancer.\n- **Ingress:** roteamento HTTP/HTTPS por host e caminho; precisa de um *Ingress controller*. A **Gateway API** é a evolução desse modelo.\n- **ConfigMap:** configuração não sensível. **Secret:** dado sensível, que ==por padrão é só base64, não criptografia==.\n- **Namespace:** separa recursos e permite cotas e políticas por equipe ou ambiente.\n\n## Saúde e recursos\n\n- Probes: **liveness** reinicia o container travado; **readiness** decide se o Pod recebe tráfego; **startup** protege aplicações de inicialização lenta.\n- **Requests** reservam capacidade e orientam o agendamento; **limits** são o teto. Excedeu o limite de CPU: sofre *throttling*. Excedeu o de memória: pode ser encerrado (OOMKilled).\n- **HPA:** réplicas desejadas = teto(réplicas atuais × uso atual ÷ alvo), com o uso medido sobre os requests.\n\n> Na FCC, as trocas clássicas são readiness × liveness, requests × limits e \"Secret é criptografado\" (não é, por padrão).\n\n## Checklist de prova\n\n- [ ] Aplicação sem estado? Deployment. Com estado? StatefulSet.\n- [ ] Um agente por nó? DaemonSet. Tarefa agendada? CronJob.\n- [ ] Acesso só interno? ClusterIP. Roteamento por domínio? Ingress.\n- [ ] Pod fora do balanceamento sem reiniciar? Readiness.",
+  "sintese": "O Kubernetes reconcilia o estado real com o declarado: Deployment para aplicações sem estado, StatefulSet para as com estado, DaemonSet por nó e Job/CronJob para tarefas. Services dão endereço estável; Secrets são só base64 por padrão; readiness tira do tráfego e liveness reinicia; requests orientam o agendamento e limits limitam.",
+  "fontes": [
+    "Documentação oficial do Kubernetes (kubernetes.io): Workloads, Service, Ingress, ConfigMaps, Secrets",
+    "Kubernetes: Configure Liveness, Readiness and Startup Probes",
+    "Kubernetes: Resource Management for Pods and Containers; Horizontal Pod Autoscaling"
+  ]
+}
