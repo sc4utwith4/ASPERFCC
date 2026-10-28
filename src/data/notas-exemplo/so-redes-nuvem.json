@@ -1,0 +1,50 @@
+{
+  "id": "nota-so-redes-01",
+  "materiaSlug": "so-redes-nuvem",
+  "titulo": "Endereçamento IPv4/IPv6 e sub-redes (CIDR) sem calculadora",
+  "subtopico": "Endereçamento IPv4 e IPv6",
+  "pistas": [
+    {
+      "pergunta": "Quantos endereços utilizáveis por hosts há numa sub-rede IPv4 /26?",
+      "resposta": "62: são 2^6 = 64 endereços, menos o de rede e o de broadcast (2^(32−prefixo) − 2)."
+    },
+    {
+      "pergunta": "Qual é a máscara decimal do prefixo /27 e o tamanho do bloco?",
+      "resposta": "255.255.255.224; o bloco no último octeto é 256 − 224 = 32 endereços."
+    },
+    {
+      "pergunta": "Quais são a rede e o broadcast de 172.16.45.130/26?",
+      "resposta": "Bloco de 64 no último octeto: 130 fica entre 128 e 191, então a rede é 172.16.45.128 e o broadcast, 172.16.45.191."
+    },
+    {
+      "pergunta": "Quais são as faixas privadas da RFC 1918?",
+      "resposta": "10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16; não são roteadas na internet e chegam a ela por NAT."
+    },
+    {
+      "pergunta": "Quantos bits tem um endereço IPv6 e como ele é escrito?",
+      "resposta": "128 bits, em 8 grupos de 16 bits escritos em hexadecimal e separados por dois-pontos."
+    },
+    {
+      "pergunta": "Qual regra limita o uso de \"::\" na abreviação de um endereço IPv6?",
+      "resposta": "O \"::\" substitui uma única sequência contínua de grupos zerados e só pode aparecer uma vez; zeros à esquerda de cada grupo também podem ser omitidos."
+    },
+    {
+      "pergunta": "O IPv6 tem endereço de broadcast?",
+      "resposta": "Não. O IPv6 usa multicast (ff00::/8), por exemplo na descoberta de vizinhos (NDP), que substitui o ARP."
+    },
+    {
+      "pergunta": "Que prefixo identifica o endereço IPv6 link-local e qual o seu alcance?",
+      "resposta": "fe80::/10; é criado automaticamente em cada interface e só vale dentro do enlace local, sem ser roteado."
+    }
+  ],
+  "conteudoMarkdown": "## Por que CIDR\n\nAs classes A, B e C são **história**: hoje a rede é definida pelo prefixo (CIDR), que diz quantos bits iniciais identificam a rede. Em `/26`, 26 bits são de rede e 6 sobram para hosts.\n\n> ==Hosts utilizáveis = 2^(32 − prefixo) − 2==. Os dois descontados são o endereço de rede (todos os bits de host em 0) e o de broadcast (todos em 1).\n\n## Receita em quatro passos (IPv4)\n\n1. Converta o prefixo em máscara: /24 = 255.255.255.0; /25 = .128; /26 = .192; /27 = .224; /28 = .240.\n2. Calcule o **bloco** no octeto \"quebrado\": 256 − valor da máscara (/26 → 64).\n3. A rede é o maior múltiplo do bloco que não passa do endereço; o broadcast é a rede seguinte menos 1.\n4. Os hosts vão da rede + 1 até o broadcast − 1.\n\n## Exemplo resolvido: 172.16.45.130/26\n\n- Máscara: 255.255.255.192; bloco de **64** no último octeto.\n- Múltiplos de 64: 0, 64, **128**, 192. O 130 está entre 128 e 191.\n- Rede: **172.16.45.128**; broadcast: **172.16.45.191**.\n- Hosts: 172.16.45.129 a 172.16.45.190, ou seja, **62** endereços utilizáveis.\n\n## Dividindo uma rede\n\nPara quebrar 192.168.10.0/24 em quatro sub-redes iguais, empreste 2 bits (2^2 = 4): o prefixo passa a /26 e as sub-redes são 192.168.10.0, .64, .128 e .192, cada uma com 62 hosts.\n\n## Faixas especiais que costumam cair\n\n- **Privadas (RFC 1918):** 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16.\n- **Loopback:** 127.0.0.0/8. **Link-local (APIPA):** 169.254.0.0/16, sinal de que o DHCP não respondeu.\n- **Enlace ponto a ponto:** /31 tem só 2 endereços e, por exceção (RFC 3021), os dois podem ser usados.\n\n## IPv6 em uma página\n\n- 128 bits, 8 grupos de 16 bits em hexadecimal. Exemplo: 2001:0db8:0000:0000:0000:ff00:0042:8329 vira **2001:db8::ff00:42:8329**.\n- O `::` aparece **uma vez só**; zeros à esquerda de cada grupo podem sumir.\n- Tipos: global unicast (2000::/3), link-local (fe80::/10), unique local (fc00::/7), multicast (ff00::/8) e loopback (::1).\n- **Não há broadcast**: o multicast cumpre esse papel, e o NDP substitui o ARP.\n- Sub-rede típica de LAN: /64, o que permite a autoconfiguração sem estado (SLAAC).\n\n## Checklist de prova\n\n- [ ] Converti o prefixo em máscara e em tamanho de bloco?\n- [ ] Achei o múltiplo do bloco que não passa do endereço?\n- [ ] Descontei rede e broadcast ao contar hosts?\n- [ ] No IPv6, usei o \"::\" uma única vez?",
+  "sintese": "Prefixo CIDR define quantos bits são de rede; o bloco (256 − máscara) localiza rede e broadcast, e os hosts são 2^(bits de host) − 2. No IPv6, 128 bits em hexadecimal, \"::\" uma vez só, sem broadcast e com /64 nas LANs.",
+  "fontes": [
+    "RFC 4632 — Classless Inter-domain Routing (CIDR)",
+    "RFC 1918 — Address Allocation for Private Internets",
+    "RFC 3021 — Using 31-Bit Prefixes on IPv4 Point-to-Point Links",
+    "RFC 4291 — IP Version 6 Addressing Architecture",
+    "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
+    "RFC 4862 — IPv6 Stateless Address Autoconfiguration (SLAAC)"
+  ]
+}
