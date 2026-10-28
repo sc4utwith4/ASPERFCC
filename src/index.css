@@ -1,0 +1,237 @@
+@import "tailwindcss";
+@import "./design/tokens.css";
+
+/* A paleta padrão do Tailwind é desligada: só existem as cores do design system. */
+@theme {
+  --color-*: initial;
+  --shadow-*: initial;
+  --animate-*: initial;
+}
+
+@theme inline {
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-ink: var(--text-primary);
+  --color-ink-2: var(--text-secondary);
+  --color-ink-3: var(--text-muted);
+  --color-line: var(--border-subtle);
+  --color-line-control: var(--border-control);
+  --color-accent: var(--accent-primary);
+  --color-accent-text: var(--accent-primary-text);
+  --color-accent-soft: var(--accent-primary-soft);
+  --color-accent-2: var(--accent-secondary);
+  --color-accent-2-text: var(--accent-secondary-text);
+  --color-accent-2-soft: var(--accent-secondary-soft);
+  --color-note: var(--highlight-note);
+  --color-warning: var(--status-warning);
+  --color-warning-text: var(--status-warning-text);
+  --color-warning-soft: var(--status-warning-soft);
+  --color-danger: var(--status-danger);
+  --color-danger-text: var(--status-danger-text);
+  --color-danger-soft: var(--status-danger-soft);
+  --color-on-accent: var(--on-accent);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-reading);
+  --font-mono: var(--font-data);
+
+  --shadow-float: var(--shadow-float);
+  --ease-quiet: var(--ease-quiet);
+}
+
+@layer base {
+  html {
+    background: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 14px;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  ::selection {
+    background: var(--highlight-note);
+    color: inherit;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  button,
+  [role="button"],
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  input,
+  textarea,
+  select {
+    color: inherit;
+    font: inherit;
+  }
+
+  ::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  /* Barras de rolagem discretas */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-control) transparent;
+  }
+}
+
+@layer components {
+  /* Coluna de leitura: 60–68ch, entrelinha 1.7, parágrafos com respiro */
+  .reading {
+    font-family: var(--font-reading);
+    font-size: var(--reading-size);
+    line-height: var(--reading-leading);
+    max-width: var(--reading-measure);
+    font-optical-sizing: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+  .reading p,
+  .reading li {
+    margin: 0;
+  }
+  .reading p + p,
+  .reading p + ul,
+  .reading ul + p,
+  .reading p + ol,
+  .reading blockquote + p,
+  .reading p + blockquote {
+    margin-top: 1.25em;
+  }
+  .reading blockquote {
+    margin: 1.25em 0;
+    padding-left: 1em;
+    border-left: 2px solid var(--border-control);
+    color: var(--text-secondary);
+  }
+  .reading mark {
+    color: inherit;
+    padding: 0 0.12em;
+    border-radius: 2px;
+    background: var(--highlight-note);
+  }
+  .reading mark[data-color="sage"] {
+    background: var(--highlight-sage);
+  }
+  .reading mark[data-color="slate"] {
+    background: var(--highlight-slate);
+  }
+
+  .tabular {
+    font-family: var(--font-data);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "zero" 0;
+    letter-spacing: 0;
+  }
+
+  .kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6em;
+    height: 1.55em;
+    padding: 0 0.4em;
+    font-family: var(--font-data);
+    font-size: 11px;
+    line-height: 1;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-bottom-width: 2px;
+    border-bottom-color: var(--border-control);
+    border-radius: 4px;
+  }
+
+  .quiet-transition {
+    transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+    transition-duration: var(--dur-base);
+    transition-timing-function: var(--ease-quiet);
+  }
+
+  .surface-panel {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+  }
+
+  .surface-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+  }
+
+  .field {
+    width: 100%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-control);
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    transition: border-color var(--dur-fast) var(--ease-quiet);
+  }
+  .field:focus-visible {
+    border-color: var(--accent-primary);
+    outline-offset: 1px;
+  }
+
+  .strike {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--text-muted);
+    color: var(--text-muted);
+  }
+}
+
+/* Filtro de temperatura (madrugada): sobreposição âmbar por multiplicação */
+.temperature-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483000;
+  mix-blend-mode: multiply;
+  background: rgb(var(--temperature-tint) / var(--temperature-alpha, 0));
+  transition: background-color var(--dur-slow) var(--ease-quiet);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

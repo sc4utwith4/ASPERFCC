@@ -1,0 +1,53 @@
+{
+  "id": "bd-001",
+  "materiaSlug": "banco-de-dados",
+  "subtopico": "Transações e propriedades ACID",
+  "origem": "Inédita padrão FCC",
+  "nivel": "Intermediário",
+  "formato": "caso-pratico",
+  "enunciadoBase": "Um técnico de controle externo acompanha a migração do sistema de autuação de processos do Tribunal para um SGBD relacional. Durante os testes, duas sessões concorrentes atualizam o mesmo processo: a primeira registra o despacho e, antes do COMMIT, a segunda lê o status já alterado e gera uma notificação ao jurisdicionado. Em seguida, a primeira sessão executa ROLLBACK, e a notificação fica baseada em um dado que nunca foi efetivado. O fenômeno observado e a propriedade ACID diretamente envolvida são, respectivamente,",
+  "variantesEnunciado": [
+    "Na homologação de um módulo de prestação de contas, um analista observa que a sessão B consultou o valor de um empenho alterado pela sessão A ainda não confirmada; logo depois, A executou ROLLBACK, e B já havia usado o valor para calcular um relatório. O fenômeno observado e a propriedade ACID diretamente envolvida são, respectivamente,",
+    "Em um teste de carga do sistema de protocolo eletrônico, uma transação T2 lê o status de um documento modificado por T1 antes de T1 confirmar a operação; T1 é desfeita na sequência, mas T2 já havia enviado um e-mail com base nessa leitura. O fenômeno e a propriedade ACID diretamente relacionada são, respectivamente,"
+  ],
+  "alternativas": [
+    {
+      "id": "opt-1",
+      "texto": "leitura suja (dirty read) e isolamento.",
+      "correta": true,
+      "explicacaoDetalhada": "CORRETA. Ler um dado alterado por outra transação ainda não confirmada é a leitura suja (dirty read). Quem impede esse efeito é o isolamento: o nível READ COMMITTED (padrão no PostgreSQL e no Oracle) já não permite que uma transação enxergue alterações não confirmadas de outra.",
+      "versaoInvertidaFalsa": "leitura suja (dirty read) e durabilidade, pois é a durabilidade que impede uma transação de ler dados ainda não confirmados por outra."
+    },
+    {
+      "id": "opt-2",
+      "texto": "leitura não repetível (non-repeatable read) e consistência.",
+      "correta": false,
+      "explicacaoDetalhada": "INCORRETA. Na leitura não repetível, a mesma transação lê duas vezes o mesmo registro e obtém valores diferentes porque outra transação confirmou uma alteração entre as leituras. No caso, a leitura ocorreu antes do COMMIT e o dado foi desfeito, o que caracteriza leitura suja. A troca de anomalia é a pegadinha."
+    },
+    {
+      "id": "opt-3",
+      "texto": "leitura fantasma (phantom read) e atomicidade.",
+      "correta": false,
+      "explicacaoDetalhada": "INCORRETA. Leitura fantasma é o surgimento ou desaparecimento de linhas que satisfazem um predicado quando a mesma consulta é repetida, por inserções ou exclusões confirmadas por outra transação. Não é o caso. A atomicidade garante 'tudo ou nada' da própria transação, e foi ela que permitiu o ROLLBACK da primeira sessão."
+    },
+    {
+      "id": "opt-4",
+      "texto": "atualização perdida (lost update) e durabilidade.",
+      "correta": false,
+      "explicacaoDetalhada": "INCORRETA. Atualização perdida ocorre quando duas transações leem o mesmo valor e ambas o sobrescrevem, e uma das gravações se perde. Aqui a segunda sessão apenas leu. A durabilidade trata da permanência do que foi confirmado, mesmo após falhas, e não da visibilidade entre transações concorrentes."
+    },
+    {
+      "id": "opt-5",
+      "texto": "deadlock e consistência, pois as sessões disputaram o mesmo bloqueio.",
+      "correta": false,
+      "explicacaoDetalhada": "INCORRETA. Deadlock é a espera circular entre transações que mantêm bloqueios necessários uma à outra. Nenhuma sessão ficou bloqueada no cenário. A alternativa usa um termo conhecido para atrair quem associa concorrência a deadlock."
+    }
+  ],
+  "pegadinhaFCC": "A banca descreve a anomalia sem nomeá-la e oferece outras anomalias de concorrência como distratores. O detalhe decisivo é a leitura ANTES do COMMIT, seguida de ROLLBACK, e a propriedade que evita isso é o isolamento, não a durabilidade.",
+  "resumoFlashcard": {
+    "pergunta": "O que é leitura suja (dirty read) e qual propriedade ACID a evita?",
+    "resposta": "É ler um dado alterado por outra transação ainda não confirmada, que pode ser desfeita depois. O isolamento a evita: a partir do nível READ COMMITTED, alterações não confirmadas de outras transações não ficam visíveis."
+  },
+  "conceitosChave": ["Anomalias de concorrência", "ACID: isolamento"],
+  "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. sobre controle de concorrência; padrão SQL (níveis de isolamento READ UNCOMMITTED a SERIALIZABLE); documentação do PostgreSQL, Transaction Isolation."
+}
