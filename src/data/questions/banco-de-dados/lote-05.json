@@ -1,0 +1,643 @@
+{
+  "materiaSlug": "banco-de-dados",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "bd-041",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico revisa consultas SQL do sistema de auditoria que combinam resultados com operadores de conjunto e filtram linhas com subconsultas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na revisão de relatórios que unem resultados de várias consultas e usam subconsultas nos filtros, a equipe de banco de dados discute o comportamento do SQL. Considere as afirmativas abaixo.",
+        "Sobre operadores de conjunto (UNION e UNION ALL) e subconsultas com NOT IN e EXISTS na linguagem SQL, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "UNION ALL elimina as linhas duplicadas do resultado combinado, ao passo que UNION as preserva, razão pela qual UNION tende a ser mais barato.",
+          "verdadeira": false,
+          "explicacao": "Falsa. É o contrário: UNION elimina duplicatas, o que exige ordenação ou hash, e UNION ALL apenas concatena os resultados, sendo em geral mais barato."
+        },
+        {
+          "texto": "Se a subconsulta usada em WHERE id NOT IN (SELECT ...) retornar ao menos um NULL, a consulta externa não retornará linha alguma.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. x NOT IN (2, NULL) equivale a x <> 2 AND x <> NULL; a segunda comparação é UNKNOWN, e o resultado nunca é TRUE. Comportamento conferido em execução; NOT EXISTS não tem esse problema."
+        },
+        {
+          "texto": "EXISTS retorna verdadeiro quando a subconsulta produz ao menos uma linha, independentemente das colunas listadas em seu SELECT.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. EXISTS só testa se há linhas; por isso é comum escrever SELECT 1 ou SELECT * na subconsulta, com o mesmo efeito."
+        },
+        {
+          "texto": "No resultado de um UNION, os nomes das colunas são os da última consulta combinada.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os nomes das colunas do resultado vêm da primeira consulta, como mostram o padrão SQL e os SGBDs usuais (conferido em execução)."
+        },
+        {
+          "texto": "Uma subconsulta correlacionada referencia colunas da consulta externa e, conceitualmente, é avaliada para cada linha da consulta externa.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Por depender da linha externa, a subconsulta correlacionada é reavaliada a cada linha, embora o otimizador possa reescrevê-la como junção."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão certas, mas a I inverte UNION e UNION ALL: quem elimina duplicatas é o UNION. E falta a V, que descreve corretamente a subconsulta correlacionada."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. NOT IN com NULL na subconsulta não retorna linhas (II); EXISTS só verifica se há linhas (III); a subconsulta correlacionada depende da linha externa (V). A I inverte UNION e UNION ALL, e a IV erra a origem dos nomes das colunas, que vêm da primeira consulta.",
+          "versaoInvertidaFalsa": "Se a subconsulta usada em WHERE id NOT IN (SELECT ...) retornar ao menos um NULL, o NULL é ignorado e a consulta externa retorna normalmente as linhas cujo id não aparece na lista."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só a V está certa nesse grupo. A I troca os papéis de UNION e UNION ALL, e a IV atribui os nomes das colunas à última consulta, e não à primeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II, III e V estão certas, mas a IV é falsa: no UNION, prevalecem os nomes das colunas da primeira consulta, e não os da última, como se conferiu em execução."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. III e V estão certas, mas falta a II: um único NULL devolvido pela subconsulta faz o NOT IN resultar em UNKNOWN para todas as linhas."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha mais perigosa é o NOT IN com NULL na subconsulta, que zera o resultado sem erro. A banca também inverte UNION e UNION ALL.",
+      "resumoFlashcard": {
+        "pergunta": "Por que NOT IN com subconsulta que retorna NULL não devolve linhas?",
+        "resposta": "Porque x NOT IN (a, NULL) equivale a x <> a AND x <> NULL, e a comparação com NULL é UNKNOWN; o resultado nunca é TRUE. NOT EXISTS evita o problema."
+      },
+      "conceitosChave": ["SQL: subconsultas", "SQL: UNION × UNION ALL", "SQL: NULL e lógica de três valores"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Subquery Expressions' (EXISTS, IN e NOT IN com nulos) e 'Combining Queries' (UNION, UNION ALL); comportamentos conferidos em sqlite3 3.45.1."
+    },
+    {
+      "id": "bd-042",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A tabela CONTRATO (contrato, orgao, valor) tem as linhas ('C1', 'SES', 500), ('C2', 'SES', 500), ('C3', 'SES', 200), ('C4', 'SEDUC', 300), ('C5', 'SEDUC', 100) e ('C6', 'SEINFRA', 900). Para listar o maior contrato de cada órgão, um técnico executou: SELECT orgao, contrato, valor FROM (SELECT orgao, contrato, valor, RANK() OVER (PARTITION BY orgao ORDER BY valor DESC) AS pos FROM contrato) t WHERE pos = 1; O número de linhas retornadas e o efeito de trocar RANK() por ROW_NUMBER() são, respectivamente,",
+      "variantesEnunciado": [
+        "Em uma auditoria de contratações, um técnico quer o contrato de maior valor de cada órgão na tabela CONTRATO (contrato, orgao, valor), cujas linhas são ('C1', 'SES', 500), ('C2', 'SES', 500), ('C3', 'SES', 200), ('C4', 'SEDUC', 300), ('C5', 'SEDUC', 100) e ('C6', 'SEINFRA', 900). Ele usou: SELECT orgao, contrato, valor FROM (SELECT orgao, contrato, valor, RANK() OVER (PARTITION BY orgao ORDER BY valor DESC) AS pos FROM contrato) t WHERE pos = 1; O número de linhas retornadas e o efeito de trocar RANK() por ROW_NUMBER() são, respectivamente,",
+        "Considere a consulta SELECT orgao, contrato, valor FROM (SELECT orgao, contrato, valor, RANK() OVER (PARTITION BY orgao ORDER BY valor DESC) AS pos FROM contrato) t WHERE pos = 1; aplicada à tabela CONTRATO (contrato, orgao, valor) com as linhas ('C1', 'SES', 500), ('C2', 'SES', 500), ('C3', 'SES', 200), ('C4', 'SEDUC', 300), ('C5', 'SEDUC', 100) e ('C6', 'SEINFRA', 900). O número de linhas retornadas e o efeito de trocar RANK() por ROW_NUMBER() são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "3 linhas, pois RANK() devolve uma única linha por partição; com ROW_NUMBER(), seriam 4 linhas, por causa do empate.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte o comportamento das funções. RANK() repete a posição em empates (C1 e C2 ficam com 1), e ROW_NUMBER() numera sequencialmente, deixando só uma linha com 1 em cada órgão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "6 linhas, pois funções de janela não reduzem o número de linhas, mesmo com o filtro externo; com ROW_NUMBER(), também 6.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A função de janela, de fato, não agrupa linhas, mas a consulta externa filtra pos = 1. Sem esse filtro, as 6 linhas apareceriam com suas posições."
+        },
+        {
+          "id": "opt-3",
+          "texto": "4 linhas; com ROW_NUMBER(), também seriam 4, pois as duas funções tratam os empates da mesma forma.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A contagem com RANK() está certa, mas ROW_NUMBER() nunca repete números dentro da partição: um dos contratos empatados da SES receberia 2, e o resultado teria 3 linhas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "3 linhas, pois PARTITION BY agrupa as linhas como o GROUP BY; com ROW_NUMBER(), a consulta falharia por haver empate.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. PARTITION BY define as janelas sobre as quais a função é calculada, sem colapsar linhas como o GROUP BY. Empates não geram erro em nenhuma das funções."
+        },
+        {
+          "id": "opt-5",
+          "texto": "4 linhas, pois RANK() atribui a mesma posição a valores empatados; com ROW_NUMBER(), seriam 3 linhas, uma por órgão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na SES, C1 e C2 empatam com 500 e recebem posição 1 com RANK(); somam-se C4 (SEDUC) e C6 (SEINFRA): 4 linhas. ROW_NUMBER() numera 1, 2, 3 sem repetir, e restaria uma linha por órgão, 3 no total; a escolha entre C1 e C2 ficaria indefinida sem um critério de desempate no ORDER BY. Contagens conferidas em execução.",
+          "versaoInvertidaFalsa": "3 linhas, pois RANK() atribui posições distintas a valores empatados; com ROW_NUMBER(), seriam 4 linhas, já que ele repete a posição em empates."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte RANK() e ROW_NUMBER() e confunde PARTITION BY com GROUP BY. RANK repete a posição em empates; ROW_NUMBER nunca repete; função de janela não colapsa linhas.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre RANK(), DENSE_RANK() e ROW_NUMBER()?",
+        "resposta": "ROW_NUMBER() numera as linhas da partição sem repetir (1, 2, 3). RANK() repete a posição em empates e pula as seguintes (1, 1, 3). DENSE_RANK() repete sem pular (1, 1, 2). Nenhuma delas reduz o número de linhas."
+      },
+      "conceitosChave": ["SQL: funções de janela"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Window Functions' (tutorial e tabela de funções row_number, rank e dense_rank); resultado conferido em sqlite3 3.45.1 com os dados do enunciado."
+    },
+    {
+      "id": "bd-043",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Transações e propriedades ACID",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No PostgreSQL do sistema de execução orçamentária, a transação T1 atualiza a dotação A e, em seguida, tenta atualizar a dotação B; ao mesmo tempo, a transação T2 atualiza B e tenta atualizar A. As duas ficam paradas, cada uma aguardando o bloqueio mantido pela outra. Nessa situação,",
+      "variantesEnunciado": [
+        "Em um teste de concorrência no PostgreSQL, a sessão S1 executa UPDATE no empenho 10 e depois no empenho 20, enquanto a sessão S2 atualiza primeiro o empenho 20 e depois o 10. Ambas ficam paradas, cada uma esperando o bloqueio de linha mantido pela outra. Nessa situação,",
+        "Durante o fechamento do exercício, em PostgreSQL, duas transações atualizam os mesmos dois registros em ordens opostas e passam a esperar, cada uma, o bloqueio mantido pela outra, sem que nenhuma consiga prosseguir. Nessa situação,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "há um deadlock: o SGBD detecta o ciclo de espera e interrompe uma das transações com erro, liberando a outra; padronizar a ordem de acesso aos registros previne a repetição.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Deadlock é a espera circular: cada transação mantém um bloqueio de que a outra precisa. O PostgreSQL verifica a existência do ciclo após o tempo de deadlock_timeout (1 segundo por padrão) e aborta uma das transações com o erro 'deadlock detected'; a aplicação deve desfazê-la e repeti-la. Acessar os registros sempre na mesma ordem elimina o ciclo.",
+          "versaoInvertidaFalsa": "há um deadlock: o SGBD não detecta o ciclo de espera, e as transações permanecem bloqueadas até que o DBA encerre uma das sessões; a ordem de acesso aos registros é irrelevante."
+        },
+        {
+          "id": "opt-2",
+          "texto": "há um livelock, que só se resolve elevando o nível de isolamento para SERIALIZABLE, nível no qual não ocorrem esperas por bloqueio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No livelock, as transações continuam ativas, mas sem progredir; aqui elas estão paradas em espera. E o SERIALIZABLE não elimina bloqueios de escrita: UPDATEs concorrentes na mesma linha continuam esperando e podem até gerar erros de serialização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "há uma leitura suja, pois cada transação lê o valor não confirmado da outra; o problema se resolve com o nível READ COMMITTED.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhuma transação lê o dado não confirmado da outra: ambas esperam. Além disso, o PostgreSQL nunca permite leitura suja, e READ COMMITTED já é o seu nível padrão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as transações ficam bloqueadas indefinidamente, pois o SGBD não detecta deadlocks, cabendo ao DBA encerrar manualmente uma das sessões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. SGBDs como PostgreSQL e Oracle detectam deadlocks automaticamente e escolhem uma vítima. A intervenção manual não é necessária para desfazer o ciclo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o SGBD confirma automaticamente as duas transações para liberar os bloqueios, preservando as atualizações já feitas por ambas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Confirmar transações por conta própria violaria a atomicidade e a vontade da aplicação. A resolução consiste em abortar uma das transações, desfazendo seu trabalho."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde deadlock com livelock ou leitura suja e sugere que o SGBD não o detecta. A prevenção clássica é a ordem padronizada de acesso aos recursos.",
+      "resumoFlashcard": {
+        "pergunta": "O que é deadlock e como o SGBD o trata?",
+        "resposta": "É a espera circular entre transações que mantêm bloqueios necessários umas às outras. O SGBD detecta o ciclo e aborta uma delas (vítima), liberando as demais; padronizar a ordem de acesso aos registros previne o problema."
+      },
+      "conceitosChave": ["Bloqueios e deadlock"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Explicit Locking', seção 'Deadlocks', e parâmetro deadlock_timeout; Elmasri & Navathe, Sistemas de Banco de Dados, cap. sobre técnicas de controle de concorrência (deadlock)."
+    },
+    {
+      "id": "bd-044",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Índices e otimização de consultas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico analisa o desempenho das consultas do sistema de protocolo e a política de indexação das tabelas mais acessadas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na revisão de desempenho do banco que atende à central de serviços de TI, a equipe discute critérios para criar índices e interpretar as escolhas do otimizador. Considere as afirmativas abaixo.",
+        "Sobre índices, seletividade e estatísticas na otimização de consultas em bancos de dados relacionais, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Quanto mais índices uma tabela tiver, melhor será o desempenho de INSERT, UPDATE e DELETE, pois as linhas ficam mais fáceis de localizar.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Cada índice precisa ser atualizado nas operações de escrita e ocupa espaço. Índices aceleram leituras seletivas, mas encarecem INSERT, UPDATE e DELETE."
+        },
+        {
+          "texto": "Uma condição de baixa seletividade, que retorna grande parte das linhas, tende a levar o otimizador a preferir a varredura sequencial ao uso de índice.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Ler muitas linhas pelo índice implica muitos acessos aleatórios à tabela, e ler a tabela inteira em sequência pode sair mais barato."
+        },
+        {
+          "texto": "Aplicar uma função sobre a coluna indexada, como em WHERE UPPER(nome) = 'ANA', permite usar normalmente um índice B-tree comum criado sobre nome.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O índice guarda os valores de nome, e não de UPPER(nome). Para essa condição, cria-se um índice sobre a expressão (por exemplo, CREATE INDEX ... ON servidor (UPPER(nome)))."
+        },
+        {
+          "texto": "Estatísticas desatualizadas podem levar o otimizador a estimar mal a quantidade de linhas e a escolher um plano ineficiente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O otimizador baseado em custo estima a cardinalidade com as estatísticas. Após grandes cargas, convém atualizá-las (ANALYZE no PostgreSQL, DBMS_STATS no Oracle)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está certa, mas a I ignora o custo de manutenção dos índices nas escritas. Falta a IV, que descreve corretamente o efeito de estatísticas desatualizadas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e IV estão certas, mas a III é falsa: uma função aplicada à coluna impede o uso do índice comum, sendo preciso um índice sobre a expressão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas escolhidas são justamente as falsas: índices encarecem as escritas, e função sobre a coluna inutiliza o índice B-tree comum."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Condições pouco seletivas favorecem a varredura sequencial (II), e estatísticas desatualizadas distorcem as estimativas do otimizador (IV). A I ignora o custo dos índices nas escritas, e a III ignora que o índice comum guarda o valor da coluna, e não o resultado da função.",
+          "versaoInvertidaFalsa": "Uma condição de baixa seletividade, que retorna grande parte das linhas, leva o otimizador a sempre preferir o índice à varredura sequencial."
+        },
+        {
+          "id": "opt-5",
+          "texto": "IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está certa, mas a II também: com baixa seletividade, o acesso por índice gera muitas leituras aleatórias, e a varredura sequencial costuma ser mais barata."
+        }
+      ],
+      "pegadinhaFCC": "A banca vende índice como solução universal. Índices custam nas escritas, só compensam com boa seletividade e não servem a funções aplicadas sobre a coluna, salvo índice de expressão.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o otimizador pode ignorar um índice existente?",
+        "resposta": "Porque a condição é pouco seletiva (retorna muitas linhas), porque há função aplicada à coluna sem índice de expressão ou porque as estatísticas estão desatualizadas e distorcem as estimativas de custo."
+      },
+      "conceitosChave": ["Seletividade e estatísticas", "Índices: custo e benefício"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Indexes on Expressions', 'Using EXPLAIN' e 'Statistics Used by the Planner'; Elmasri & Navathe, Sistemas de Banco de Dados, cap. sobre ajuste de índices."
+    },
+    {
+      "id": "bd-045",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Procedures, triggers e views",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No PostgreSQL, a respeito das diferenças entre procedures (CREATE PROCEDURE) e functions (CREATE FUNCTION), é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao migrar rotinas de fechamento mensal para o PostgreSQL, um desenvolvedor precisa decidir entre CREATE PROCEDURE e CREATE FUNCTION. Sobre as diferenças entre procedures e functions nesse SGBD, é correto afirmar que",
+        "Considerando os objetos programáveis do PostgreSQL, é correto afirmar, quanto às diferenças entre procedures (CREATE PROCEDURE) e functions (CREATE FUNCTION), que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a function é executada com CALL e pode confirmar transações com COMMIT, enquanto a procedure só pode ser chamada dentro de um SELECT.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os papéis: procedures são executadas com CALL, e functions são chamadas em expressões, como em um SELECT. Function não pode executar COMMIT nem ROLLBACK."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ambas podem ser usadas em expressões de um SELECT e controlar transações com COMMIT e ROLLBACK, diferindo apenas na sintaxe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Procedures não podem ser usadas em expressões, e functions não podem controlar transações. A diferença é de comportamento, não só de sintaxe."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a procedure é executada com CALL e, se o CALL não estiver em bloco de transação explícito, pode executar COMMIT e ROLLBACK, o que uma function não pode.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Procedures surgiram no PostgreSQL 11 e são executadas com CALL, fora de expressões. Quando o CALL não está dentro de um bloco de transação explícito (BEGIN ... COMMIT), a procedure pode confirmar ou desfazer o trabalho com COMMIT e ROLLBACK, iniciando nova transação em seguida; procedures SECURITY DEFINER não podem fazê-lo. Functions executam sempre dentro da transação de quem as chama.",
+          "versaoInvertidaFalsa": "a function é executada com CALL e, se o CALL não estiver em bloco de transação explícito, pode executar COMMIT e ROLLBACK, o que uma procedure não pode."
+        },
+        {
+          "id": "opt-4",
+          "texto": "procedures só podem ser escritas em SQL puro, ao passo que functions aceitam linguagens procedurais como PL/pgSQL.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Procedures e functions podem ser escritas em SQL, PL/pgSQL e outras linguagens procedurais instaladas. A linguagem não as distingue."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a procedure é executada automaticamente em resposta a INSERT, UPDATE ou DELETE na tabela a que está associada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve um trigger. No PostgreSQL, o trigger executa uma function que retorna o tipo trigger; procedures só rodam quando chamadas com CALL."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte quem é chamado com CALL e quem pode controlar transações, ou confunde procedure com trigger. Só a procedure faz COMMIT e ROLLBACK, e só quando o CALL não está em bloco explícito.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as diferenças práticas entre procedure e function no PostgreSQL?",
+        "resposta": "A procedure é executada com CALL e pode fazer COMMIT e ROLLBACK quando o CALL não está em bloco de transação explícito. A function é usada em expressões, como em um SELECT, e roda sempre dentro da transação de quem a chama."
+      },
+      "conceitosChave": ["Procedures × functions"],
+      "fundamentacao": "Documentação do PostgreSQL 18, comandos CREATE PROCEDURE e CALL (controle de transação e restrição para SECURITY DEFINER) e seção 'Transaction Management' do PL/pgSQL."
+    },
+    {
+      "id": "bd-046",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "PostgreSQL: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Sobre recursos de monitoramento e ajuste de desempenho do PostgreSQL, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico precisa identificar as consultas que mais consomem tempo no PostgreSQL do sistema de prestação de contas e ajustar o servidor. Sobre os recursos disponíveis para isso, é correto afirmar que",
+        "A respeito de ferramentas e parâmetros de administração de desempenho do PostgreSQL, usados na sustentação dos bancos de dados de sistemas internos, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o comando ANALYZE reconstrói fisicamente os índices da tabela, eliminando o inchaço causado por atualizações frequentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem reconstrói índices é o REINDEX. O ANALYZE apenas coleta estatísticas sobre a distribuição dos dados para o planejador."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a extensão pg_stat_statements acumula estatísticas de execução por instrução, como chamadas e tempo total, e precisa ser carregada em shared_preload_libraries.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O pg_stat_statements registra, para cada instrução normalizada, o número de execuções, o tempo total e médio, as linhas e o uso de buffers. Como requer memória compartilhada adicional, deve constar de shared_preload_libraries no postgresql.conf, e a extensão é criada no banco com CREATE EXTENSION.",
+          "versaoInvertidaFalsa": "a extensão pg_stat_statements acumula estatísticas de execução por instrução, como chamadas e tempo total, e dispensa qualquer configuração em shared_preload_libraries."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o parâmetro work_mem define o tamanho do cache de páginas de dados compartilhado por todas as sessões do servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cache compartilhado de páginas é o shared_buffers. O work_mem é a memória de cada operação de ordenação ou hash, e uma consulta pode usar vários desses espaços ao mesmo tempo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a visão pg_stat_activity guarda o histórico de todas as consultas executadas desde a inicialização do servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pg_stat_activity mostra uma linha por processo do servidor, com o estado e a consulta atual ou a mais recente de cada sessão. Não é um histórico acumulado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o comando REINDEX atualiza as estatísticas usadas pelo planejador e deve ser executado após cada carga de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O REINDEX reconstrói índices (por corrupção ou inchaço) e não substitui o ANALYZE, que é quem atualiza as estatísticas após grandes cargas."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as funções de ANALYZE e REINDEX e as de work_mem e shared_buffers, e trata a pg_stat_activity como histórico. Para histórico agregado por consulta, usa-se pg_stat_statements.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve o pg_stat_statements e como habilitá-lo?",
+        "resposta": "Acumula estatísticas de execução por instrução normalizada (chamadas, tempo, linhas, buffers) e ajuda a achar as consultas mais custosas. Deve constar de shared_preload_libraries, pois usa memória compartilhada, e ser criado com CREATE EXTENSION."
+      },
+      "conceitosChave": ["PostgreSQL: monitoramento de desempenho"],
+      "fundamentacao": "Documentação do PostgreSQL 18, apêndice 'pg_stat_statements' (carga via shared_preload_libraries), 'Resource Consumption' (shared_buffers e work_mem), 'The Cumulative Statistics System' (pg_stat_activity) e comandos ANALYZE e REINDEX."
+    },
+    {
+      "id": "bd-047",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Oracle Database: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe responsável por um banco Oracle revisa a estratégia de backup com o RMAN e de contingência com o Oracle Data Guard. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na revisão do plano de continuidade de um banco Oracle crítico, um técnico analisa os backups feitos com RMAN e o ambiente de contingência com Oracle Data Guard. Considere as afirmativas abaixo.",
+        "Sobre backup com o Oracle Recovery Manager (RMAN) e contingência com o Oracle Data Guard, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um backup incremental de nível 0 copia todos os blocos usados dos arquivos de dados e serve de base para os incrementais de nível 1.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O nível 0 equivale a um backup completo, mas registrado como base da estratégia incremental."
+        },
+        {
+          "texto": "Um incremental de nível 1 diferencial copia todos os blocos alterados desde o último nível 0, ignorando os incrementais de nível 1 feitos depois dele.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Essa é a definição do incremental cumulativo. O diferencial, que é o padrão do nível 1, copia os blocos alterados desde o último incremental de nível 1 ou 0, o que for mais recente."
+        },
+        {
+          "texto": "No Data Guard, um standby físico é mantido pela aplicação do redo recebido do primário (Redo Apply), permanecendo idêntico a ele bloco a bloco.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O standby físico aplica o redo diretamente aos blocos. O standby lógico, por sua vez, converte o redo em instruções SQL (SQL Apply)."
+        },
+        {
+          "texto": "Maximum Protection é o modo de proteção padrão do Data Guard, por privilegiar o desempenho do primário com transporte assíncrono de redo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O padrão é Maximum Performance, com transporte assíncrono. Maximum Protection é o modo de perda zero, com transporte síncrono, no qual o primário deixa de operar se não puder gravar o redo em ao menos um standby."
+        },
+        {
+          "texto": "O RMAN pode registrar os metadados de backup no control file do banco-alvo, sendo opcional o uso de um catálogo de recuperação (recovery catalog).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O repositório do RMAN fica sempre no control file; o recovery catalog, em outro banco, é opcional e amplia o histórico e os recursos."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão certas, mas a II descreve o incremental cumulativo, e não o diferencial. Falta a V, verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só a V está certa nesse grupo. A II troca diferencial por cumulativo, e a IV aponta Maximum Protection como padrão, quando o padrão é Maximum Performance."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O nível 0 é a base com todos os blocos usados (I); o standby físico é mantido por Redo Apply (III); o repositório do RMAN fica no control file, e o catálogo é opcional (V). A II define o cumulativo, não o diferencial, e a IV erra o modo padrão, que é Maximum Performance.",
+          "versaoInvertidaFalsa": "Maximum Performance é o modo de proteção de perda zero do Data Guard, com transporte síncrono, e Maximum Protection é o modo padrão, com transporte assíncrono de redo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. III e V estão certas, mas a IV não: Maximum Protection é o modo síncrono de perda zero, e o padrão é Maximum Performance. Falta a I, verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e V estão certas, mas a III também: o standby físico é mantido idêntico ao primário pela aplicação do redo (Redo Apply)."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca incremental diferencial por cumulativo e aponta o modo mais restritivo do Data Guard como padrão. Diferencial: desde o último incremental. Cumulativo: desde o último nível 0. Padrão: Maximum Performance.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre incremental diferencial e cumulativo no RMAN, e qual é o modo padrão do Data Guard?",
+        "resposta": "O nível 1 diferencial (padrão) copia o que mudou desde o último incremental de nível 1 ou 0; o cumulativo copia o que mudou desde o último nível 0. O modo padrão do Data Guard é Maximum Performance, com transporte assíncrono."
+      },
+      "conceitosChave": ["Oracle: RMAN", "Oracle: Data Guard"],
+      "fundamentacao": "Oracle Database Backup and Recovery User's Guide (incremental level 0, differential e cumulative; RMAN repository e recovery catalog); Oracle Data Guard Concepts and Administration (26ai), cap. 'Oracle Data Guard Protection Modes'."
+    },
+    {
+      "id": "bd-048",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "NoSQL: documentos, chave-valor, wide-column e grafos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na avaliação de tecnologias NoSQL para novos serviços do Tribunal, a equipe de arquitetura levantou características do MongoDB, do Redis e do Neo4j. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao comparar bancos NoSQL para um projeto de modernização, um técnico reuniu informações sobre o MongoDB (documentos), o Redis (chave-valor) e o Neo4j (grafos). Considere as afirmativas abaixo.",
+        "Sobre os modelos NoSQL orientados a documentos, chave-valor e grafos, representados respectivamente pelo MongoDB, pelo Redis e pelo Neo4j, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No MongoDB, os documentos são armazenados em BSON e cada um está limitado a 16 MB, o que desaconselha embutir listas que cresçam sem limite.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O limite de tamanho do documento BSON é de 16 MB; dados maiores usam GridFS, e listas sem limite costumam ser modeladas por referência."
+        },
+        {
+          "texto": "No MongoDB, todos os documentos de uma coleção precisam ter os mesmos campos, definidos por esquema obrigatório na criação da coleção.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O esquema é flexível: documentos de uma mesma coleção podem ter campos diferentes. A validação de esquema existe, mas é opcional."
+        },
+        {
+          "texto": "No Redis, a persistência RDB grava snapshots pontuais, enquanto o AOF registra as operações de escrita, oferecendo, em geral, menor perda potencial de dados.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Com o AOF e a política padrão appendfsync everysec, perde-se no máximo cerca de um segundo de escritas; com RDB, perde-se o que veio depois do último snapshot."
+        },
+        {
+          "texto": "No Neo4j, entidades são nós e vínculos são relacionamentos com propriedades, o que favorece consultas que percorrem conexões em vários níveis.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O modelo de grafo de propriedades, consultado em Cypher, é indicado para redes de vínculos, como relações societárias entre fornecedores."
+        },
+        {
+          "texto": "No Redis, o comando EXPIRE associa um tempo de vida (TTL) a uma chave, que é removida automaticamente quando o prazo se esgota.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O comando TTL consulta o tempo restante, e PERSIST remove a expiração. É a base do uso do Redis como cache e armazenamento de sessões."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I (limite de 16 MB do BSON), III (RDB × AOF), IV (grafo de propriedades) e V (EXPIRE e TTL) estão certas. A II é falsa porque o MongoDB tem esquema flexível, com validação apenas opcional.",
+          "versaoInvertidaFalsa": "No Redis, a persistência AOF grava snapshots pontuais, enquanto o RDB registra cada operação de escrita, oferecendo, em geral, menor perda potencial de dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa (o MongoDB não exige esquema fixo), e exclui a I, que é verdadeira quanto ao formato BSON e ao limite de 16 MB."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e V estão certas, mas a II é falsa. Ficam de fora a III e a IV, que descrevem corretamente a persistência do Redis e o modelo de grafo do Neo4j."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. III e IV estão certas, mas faltam a I e a V, também verdadeiras: o limite de 16 MB por documento no MongoDB e a expiração de chaves com EXPIRE no Redis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I, III e V estão certas, mas falta a IV: modelar entidades como nós e vínculos como relacionamentos é justamente o ponto forte do Neo4j."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao MongoDB um esquema rígido e troca as definições de RDB e AOF. Documento = esquema flexível; RDB = snapshot; AOF = log de operações.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre RDB e AOF no Redis?",
+        "resposta": "O RDB grava snapshots pontuais do conjunto de dados: arquivo compacto, restauração rápida, mas perde o que veio depois do último snapshot. O AOF registra cada escrita e, com fsync a cada segundo (padrão), perde no máximo cerca de um segundo."
+      },
+      "conceitosChave": ["NoSQL: documentos (MongoDB)", "NoSQL: chave-valor (Redis)", "NoSQL: grafos (Neo4j)"],
+      "fundamentacao": "Documentação do MongoDB, 'MongoDB Limits and Thresholds' (BSON Document Size: 16 MB) e 'Schema Validation'; documentação do Redis, 'Redis persistence' e comando EXPIRE; redis.conf do repositório oficial (appendfsync everysec); documentação do Neo4j, 'Graph database concepts'."
+    },
+    {
+      "id": "bd-049",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Replicação, backup, recuperação e alta disponibilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Para permitir a recuperação até um ponto no tempo (PITR) no PostgreSQL, a equipe precisa de um backup-base do cluster, obtido, por exemplo, com ……, e do arquivamento contínuo dos segmentos de ……, configurado pelo parâmetro archive_command ou archive_library. Na recuperação, o instante desejado é informado no parâmetro …… e cria-se o arquivo recovery.signal no diretório de dados. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na política de recuperação de um cluster PostgreSQL, definiu-se que o PITR dependerá de um backup-base feito com ……, do arquivamento contínuo dos segmentos de ……, por meio de archive_command ou archive_library, e, na restauração, da indicação do instante-alvo no parâmetro ……, com a criação do arquivo recovery.signal. Preenchem, correta e respectivamente, as lacunas:",
+        "Para recuperar um banco PostgreSQL até um minuto antes de um DELETE indevido, o DBA restaura o backup-base gerado com ……, disponibiliza os segmentos de …… arquivados desde então, informa o instante desejado em …… e cria o arquivo recovery.signal. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pg_dump − WAL − recovery_target_time",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pg_dump gera cópia lógica de um banco, sobre a qual não se reaplica WAL. O backup-base do PITR é físico, do cluster inteiro."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pg_basebackup − WAL − recovery_min_apply_delay",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas recovery_min_apply_delay retarda a aplicação do WAL em um standby (réplica atrasada); não define o ponto em que a recuperação deve parar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pg_restore − redo − recovery_target_time",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pg_restore restaura dumps lógicos nos formatos custom, directory ou tar, e não gera backup-base. 'Redo log' é a terminologia do Oracle; no PostgreSQL, o log de transações é o WAL."
+        },
+        {
+          "id": "opt-4",
+          "texto": "pg_basebackup − WAL − recovery_target_time",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O PITR combina um backup físico do cluster (pg_basebackup ou a API de backup de baixo nível) com os segmentos de WAL arquivados continuamente desde ele. Na restauração, configuram-se restore_command e recovery_target_time e cria-se recovery.signal; o servidor reaplica o WAL até o instante indicado.",
+          "versaoInvertidaFalsa": "pg_dump − redo − recovery_min_apply_delay"
+        },
+        {
+          "id": "opt-5",
+          "texto": "pg_dumpall − WAL − recovery_target_name",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pg_dumpall gera cópia lógica de todos os bancos e papéis do cluster, sem servir de base para reaplicação de WAL. E recovery_target_name aponta um ponto de restauração nomeado, e não um instante."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o backup físico (pg_basebackup) pelos utilitários lógicos (pg_dump, pg_dumpall, pg_restore) e usa termos do Oracle (redo) e parâmetros reais, mas de outra finalidade.",
+      "resumoFlashcard": {
+        "pergunta": "O que é necessário para PITR no PostgreSQL?",
+        "resposta": "Um backup-base físico (por exemplo, pg_basebackup), o arquivamento contínuo do WAL (archive_command ou archive_library) e, na restauração, restore_command, um alvo como recovery_target_time e o arquivo recovery.signal."
+      },
+      "conceitosChave": ["PITR com WAL"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Continuous Archiving and Point-in-Time Recovery (PITR)' (archive_command, archive_library, recovery.signal) e 'Recovery Target' (recovery_target_time, recovery_target_name); parâmetro recovery_min_apply_delay."
+    },
+    {
+      "id": "bd-050",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Normalização e desnormalização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A tabela SERVIDOR (matricula, nome, telefones) armazena na coluna telefones valores como '3201-0000; 99999-1111; 98888-2222'. Em relação à normalização, essa modelagem",
+      "variantesEnunciado": [
+        "Em uma auditoria do cadastro funcional, um técnico encontra a tabela SERVIDOR (matricula, nome, telefones), cuja coluna telefones guarda valores como '3201-0000; 99999-1111; 98888-2222'. Em relação à normalização, essa modelagem",
+        "Considere a tabela SERVIDOR (matricula, nome, telefones), em que o campo telefones reúne vários números separados por ponto e vírgula, como '3201-0000; 99999-1111; 98888-2222'. Em relação à normalização, essa modelagem"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "viola a 2FN, pois telefones depende apenas de parte da chave primária, e a solução é criar um índice sobre a coluna.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A chave primária, matricula, é simples, e uma tabela com chave simples não tem dependência parcial. Além disso, índice não é técnica de normalização."
+        },
+        {
+          "id": "opt-2",
+          "texto": "viola a 3FN, pois telefones depende transitivamente de matricula por meio de nome, e a solução é mover nome para outra tabela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há dependência nome → telefones; os dois atributos dependem diretamente da matrícula. O problema está na estrutura do valor guardado em telefones, que reúne vários números."
+        },
+        {
+          "id": "opt-3",
+          "texto": "está normalizada, pois a 1FN apenas proíbe chaves primárias compostas, e a coluna é uma cadeia de caracteres válida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 1FN não trata de chaves compostas: ela exige que cada atributo tenha valores atômicos. Ser uma cadeia válida para o SGBD não torna o valor atômico do ponto de vista do modelo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "viola a BCNF, mas não a 1FN, pois o SGBD aceita a cadeia como valor único, e a solução é dividir a coluna em telefone1, telefone2 e telefone3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O problema é de 1FN, e a solução proposta cria um grupo repetitivo, que limita a quantidade de telefones, gera nulos e também é condenado pela 1FN."
+        },
+        {
+          "id": "opt-5",
+          "texto": "viola a 1FN, que exige atributos atômicos, e a solução usual é criar uma tabela de telefones com chave estrangeira para SERVIDOR.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Guardar vários telefones em um único campo torna o atributo multivalorado, o que fere a 1FN, que exige valores atômicos e proíbe grupos repetitivos. A solução é criar a tabela TELEFONE_SERVIDOR (matricula, telefone), com chave estrangeira para SERVIDOR, permitindo qualquer quantidade de números e buscas por telefone.",
+          "versaoInvertidaFalsa": "atende à 1FN, que admite atributos multivalorados, e a solução usual é manter os telefones no mesmo campo, separados por ponto e vírgula."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece formas normais superiores (2FN, 3FN, BCNF) para um problema de atomicidade e propõe colunas telefone1, telefone2..., um grupo repetitivo que também viola a 1FN.",
+      "resumoFlashcard": {
+        "pergunta": "O que exige a 1FN e como corrigir um atributo multivalorado?",
+        "resposta": "A 1FN exige atributos atômicos e proíbe grupos repetitivos. Um atributo multivalorado, como vários telefones em um campo, vira uma tabela própria com chave estrangeira para a entidade original."
+      },
+      "conceitosChave": ["Normalização: 1FN"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Fundamentos de dependências funcionais e normalização', seção sobre a primeira forma normal (atributos atômicos e técnicas de correção de atributos multivalorados)."
+    }
+  ]
+}

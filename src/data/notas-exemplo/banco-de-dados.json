@@ -1,0 +1,48 @@
+{
+  "id": "nota-bd-01",
+  "materiaSlug": "banco-de-dados",
+  "titulo": "Níveis de isolamento e anomalias de concorrência",
+  "subtopico": "Transações e propriedades ACID",
+  "pistas": [
+    {
+      "pergunta": "O que é leitura suja (dirty read)?",
+      "resposta": "É ler um dado alterado por outra transação que ainda não fez COMMIT. Se ela for desfeita, a leitura terá usado um valor que nunca existiu oficialmente."
+    },
+    {
+      "pergunta": "Qual a diferença entre leitura não repetível e leitura fantasma?",
+      "resposta": "Na não repetível, a mesma linha relida tem outro valor, porque outra transação a alterou e confirmou. Na fantasma, a mesma consulta por predicado devolve linhas a mais ou a menos, porque outra transação inseriu ou excluiu e confirmou."
+    },
+    {
+      "pergunta": "Quais anomalias cada nível do padrão SQL impede?",
+      "resposta": "READ UNCOMMITTED não impede nenhuma das três clássicas; READ COMMITTED impede a leitura suja; REPEATABLE READ impede também a não repetível; SERIALIZABLE impede todas, inclusive a fantasma."
+    },
+    {
+      "pergunta": "Qual é o nível de isolamento padrão no PostgreSQL e no Oracle?",
+      "resposta": "READ COMMITTED nos dois. Nenhum deles permite leitura suja: no PostgreSQL, quem pede READ UNCOMMITTED recebe o comportamento de READ COMMITTED."
+    },
+    {
+      "pergunta": "O REPEATABLE READ do PostgreSQL permite leitura fantasma?",
+      "resposta": "Não. A transação usa um único snapshot, tirado na primeira instrução, e não enxerga linhas confirmadas depois. O padrão SQL admitiria o fantasma, mas aceita garantias maiores."
+    },
+    {
+      "pergunta": "Qual propriedade ACID trata das anomalias de concorrência?",
+      "resposta": "O isolamento. Durabilidade é a permanência do que foi confirmado; atomicidade é o tudo ou nada; consistência é a preservação das regras de integridade."
+    },
+    {
+      "pergunta": "O que a aplicação deve fazer quando o SERIALIZABLE do PostgreSQL aborta uma transação?",
+      "resposta": "Repetir a transação desde o início. O erro de serialização (SQLSTATE 40001) é o preço do isolamento completo sem bloqueios de leitura."
+    },
+    {
+      "pergunta": "Como o MVCC se relaciona com o isolamento?",
+      "resposta": "Cada transação lê um snapshot de versões confirmadas, e por isso leitores não bloqueiam escritores e vice-versa. O nível define se o snapshot é renovado a cada instrução (READ COMMITTED) ou fixado para a transação inteira (REPEATABLE READ e SERIALIZABLE)."
+    }
+  ],
+  "conteudoMarkdown": "## A pergunta que decide a questão\n\nQuase toda questão sobre concorrência se resolve com duas perguntas: **o que a outra transação já havia confirmado no momento da leitura?** e **a mesma consulta foi repetida sobre a mesma linha ou sobre um predicado?** A banca descreve o cenário sem nomear a anomalia e oferece as vizinhas como distratores. Esta nota organiza as anomalias, os níveis do padrão SQL e o que muda no PostgreSQL e no Oracle.\n\n## As anomalias, uma a uma\n\n- **Leitura suja (dirty read)**: T2 lê um valor que T1 alterou e ainda não confirmou. Se T1 executar ROLLBACK, T2 terá agido com base em um dado que nunca foi efetivado.\n- **Leitura não repetível (non-repeatable read)**: T1 lê uma linha, T2 altera essa linha e confirma, e T1, ao reler, encontra outro valor. O foco é **a mesma linha**.\n- **Leitura fantasma (phantom read)**: T1 executa uma consulta por condição (por exemplo, processos pendentes), T2 insere ou exclui linhas que satisfazem a condição e confirma, e T1, ao repetir a consulta, vê **linhas a mais ou a menos**. O foco é **o conjunto definido pelo predicado**.\n- **Anomalia de serialização**: o resultado de transações concorrentes, todas confirmadas, não corresponde a nenhuma ordem serial possível entre elas.\n- **Atualização perdida (lost update)**: duas transações leem o mesmo valor e ambas o sobrescrevem, e a primeira gravação desaparece. Não está na tabela clássica do padrão, mas aparece em provas.\n\n> Dica de leitura: leitura ANTES do COMMIT da outra transação indica leitura suja; valor diferente na mesma linha indica não repetível; quantidade diferente de linhas indica fantasma.\n\n## Os níveis do padrão SQL\n\nO padrão define quatro níveis pelo que **não pode** acontecer em cada um. Quanto mais alto o nível, menos anomalias e, em geral, mais custo (esperas, bloqueios ou transações abortadas).\n\n## Tabela-resumo (em lista)\n\n- **READ UNCOMMITTED**: permite leitura suja, não repetível e fantasma. No PostgreSQL, comporta-se como READ COMMITTED; no Oracle, não é oferecido.\n- **READ COMMITTED**: impede leitura suja; permite não repetível e fantasma. É o ==padrão no PostgreSQL e no Oracle==.\n- **REPEATABLE READ**: impede leitura suja e não repetível; o padrão SQL permite fantasma. No PostgreSQL, ==também impede o fantasma==, mas pode sofrer anomalia de serialização e devolver erro de serialização quando a transação tenta alterar uma linha modificada por outra.\n- **SERIALIZABLE**: impede todas as anomalias. No PostgreSQL, usa a técnica SSI (Serializable Snapshot Isolation) e pode abortar transações com erro de serialização, que devem ser repetidas. No Oracle, a transação enxerga os dados como estavam em seu início e recebe erro se tentar alterar linha modificada por transação confirmada depois disso.\n\n## Como o PostgreSQL implementa\n\nO PostgreSQL usa **MVCC** (controle de concorrência multiversão): cada UPDATE cria uma nova versão da linha, e cada transação enxerga um **snapshot** das versões confirmadas. Por isso **leitores não bloqueiam escritores, e escritores não bloqueiam leitores**.\n\n- Em **READ COMMITTED**, cada instrução tira um snapshot novo. Duas leituras na mesma transação podem ver dados diferentes, o que explica a não repetível e a fantasma.\n- Em **REPEATABLE READ** e **SERIALIZABLE**, o snapshot é tirado na primeira instrução e vale para a transação inteira.\n- Escritas concorrentes sobre a mesma linha continuam usando bloqueios de linha: a segunda transação espera a primeira terminar.\n\nO preço do MVCC são as versões mortas, que o **VACUUM** (ou o autovacuum) precisa recolher.\n\n## Como o Oracle implementa\n\nO Oracle oferece READ COMMITTED (padrão), SERIALIZABLE e o modo READ ONLY. A **leitura consistente** reconstrói, com dados de **undo**, a versão dos blocos no momento adequado: o início da instrução, em READ COMMITTED, ou o início da transação, em SERIALIZABLE. Se o undo necessário já foi sobrescrito, a consulta falha com ORA-01555 (*snapshot too old*). Como no PostgreSQL, não há leitura suja e consultas não bloqueiam escritas.\n\n## Pegadinhas frequentes\n\n- Atribuir à **durabilidade** o que é do **isolamento**. Durabilidade é sobreviver a falhas após o COMMIT.\n- Chamar de **não repetível** o surgimento de linha nova: isso é **fantasma**.\n- Aplicar ao PostgreSQL a tabela do padrão e afirmar que seu REPEATABLE READ permite fantasma.\n- Supor que um nível mais alto elimina **deadlocks**. Bloqueios de escrita existem em qualquer nível; deadlock é espera circular, detectada pelo SGBD, que aborta uma vítima.\n- Supor que o PostgreSQL permite leitura suja quando se pede READ UNCOMMITTED.\n\n## Checklist de revisão\n\n- [ ] Sei identificar a anomalia pelo momento da leitura (antes ou depois do COMMIT da outra transação).\n- [ ] Distingo mesma linha (não repetível) de mesmo predicado (fantasma).\n- [ ] Sei de cor o que cada nível do padrão impede.\n- [ ] Sei as diferenças do PostgreSQL: READ UNCOMMITTED = READ COMMITTED; REPEATABLE READ sem fantasma; SERIALIZABLE com erros a repetir.\n- [ ] Sei que o padrão do PostgreSQL e do Oracle é READ COMMITTED.",
+  "sintese": "As anomalias se reconhecem pela pergunta certa: leu antes do COMMIT alheio (suja), releu a mesma linha e mudou (não repetível) ou repetiu o predicado e o número de linhas mudou (fantasma). Os níveis do padrão impedem, em escada, suja, não repetível e fantasma. PostgreSQL e Oracle usam READ COMMITTED como padrão e nunca permitem leitura suja; o REPEATABLE READ do PostgreSQL vai além do padrão e também barra o fantasma, enquanto o SERIALIZABLE pode abortar transações que a aplicação deve repetir.",
+  "fontes": [
+    "Documentação do PostgreSQL 18, capítulo 'Concurrency Control', seção 'Transaction Isolation' (tabela de níveis e fenômenos) e seções 'Read Committed', 'Repeatable Read' e 'Serializable Isolation Level'",
+    "Oracle Database Concepts (26ai), cap. 'Data Concurrency and Consistency' (níveis READ COMMITTED, SERIALIZABLE e READ ONLY; leitura consistente com undo)",
+    "Elmasri & Navathe, Sistemas de Banco de Dados, caps. sobre processamento de transações e controle de concorrência",
+    "Padrão ISO/IEC 9075 (SQL), definição dos níveis de isolamento READ UNCOMMITTED a SERIALIZABLE"
+  ]
+}
