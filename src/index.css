@@ -17,6 +17,7 @@
   --color-ink-3: var(--text-muted);
   --color-line: var(--border-subtle);
   --color-line-control: var(--border-control);
+  --color-line-field: var(--border-field);
   --color-accent: var(--accent-primary);
   --color-accent-text: var(--accent-primary-text);
   --color-accent-soft: var(--accent-primary-soft);
@@ -210,7 +211,7 @@
   .field {
     width: 100%;
     background: var(--bg-elevated);
-    border: 1px solid var(--border-control);
+    border: 1px solid var(--border-field);
     border-radius: 8px;
     padding: 0.55rem 0.7rem;
     transition: border-color var(--dur-fast) var(--ease-quiet);

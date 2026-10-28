@@ -54,7 +54,7 @@ export default function FlashcardsPage() {
             <label htmlFor="materia-cards" className="sr-only">
               Matéria
             </label>
-            <select id="materia-cards" value={materia} onChange={(e) => setParams(e.target.value === "todas" ? {} : { materia: e.target.value })} className="h-8 rounded-lg border border-line-control bg-elevated px-2 text-[12.5px]">
+            <select id="materia-cards" value={materia} onChange={(e) => setParams(e.target.value === "todas" ? {} : { materia: e.target.value })} className="h-8 rounded-lg border border-line-field bg-elevated px-2 text-[12.5px]">
               <option value="todas">Todas as matérias</option>
               {MATERIAS.map((m) => (
                 <option key={m.slug} value={m.slug}>

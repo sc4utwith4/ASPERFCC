@@ -185,7 +185,7 @@ export function Alternador({ ativo, onChange, rotulo, descricao }: { ativo: bool
         role="switch"
         aria-checked={ativo}
         onClick={() => onChange(!ativo)}
-        className={cx("quiet-transition relative mt-0.5 h-[18px] w-8 shrink-0 rounded-full border", ativo ? "border-accent bg-accent" : "border-line-control bg-surface")}
+        className={cx("quiet-transition relative mt-0.5 h-[18px] w-8 shrink-0 rounded-full border", ativo ? "border-accent bg-accent" : "border-line-field bg-surface")}
       >
         <span className={cx("quiet-transition absolute top-[2px] size-3 rounded-full", ativo ? "left-[16px] bg-on-accent" : "left-[2px] bg-ink-3")} />
       </button>

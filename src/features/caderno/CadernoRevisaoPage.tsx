@@ -123,7 +123,7 @@ function Filtro({ rotulo, valor, onChange, opcoes, desabilitado }: { rotulo: str
       <label htmlFor={id} className="text-[12px] text-ink-2">
         {rotulo}
       </label>
-      <select id={id} value={valor} onChange={(e) => onChange(e.target.value)} disabled={desabilitado} className="h-8 max-w-[240px] rounded-lg border border-line-control bg-elevated px-2 text-[12.5px] text-ink disabled:opacity-50">
+      <select id={id} value={valor} onChange={(e) => onChange(e.target.value)} disabled={desabilitado} className="h-8 max-w-[240px] rounded-lg border border-line-field bg-elevated px-2 text-[12.5px] text-ink disabled:opacity-50">
         {opcoes.map(([v, r]) => (
           <option key={v} value={v}>
             {r}

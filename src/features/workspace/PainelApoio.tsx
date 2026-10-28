@@ -117,7 +117,7 @@ function Caixa({ marcada, onClick, rotulo, pequena }: { marcada: boolean; onClic
       aria-checked={marcada}
       aria-label={rotulo}
       onClick={onClick}
-      className={cx("quiet-transition mt-0.5 flex shrink-0 items-center justify-center rounded border", pequena ? "size-3.5" : "size-4", marcada ? "border-accent bg-accent text-on-accent" : "border-line-control bg-elevated")}
+      className={cx("quiet-transition mt-0.5 flex shrink-0 items-center justify-center rounded border", pequena ? "size-3.5" : "size-4", marcada ? "border-accent bg-accent text-on-accent" : "border-line-field bg-elevated")}
     >
       {marcada && <Check size={pequena ? 10 : 12} strokeWidth={2.4} />}
     </button>

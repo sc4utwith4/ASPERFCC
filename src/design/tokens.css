@@ -16,7 +16,8 @@
   --text-secondary: #545852;
   --text-muted: #82867F; /* só placeholder, desabilitado e legenda decorativa (3,4:1) */
   --border-subtle: #E2DEC9;
-  --border-control: #BDB7A0; /* contorno de campos editáveis */
+  --border-control: #BDB7A0; /* linhas de apoio: botões secundários, tracejados, citações */
+  --border-field: #8A8675; /* limite de campos e controles: ≥ 3:1 (WCAG 1.4.11) */
 
   --accent-primary: #4A6B5B;
   --accent-primary-text: #4A6B5B;
@@ -74,6 +75,7 @@
     --text-muted: #6B6C66;
     --border-subtle: #2C302C;
     --border-control: #4A514A;
+    --border-field: #707670;
     --accent-primary: #68937D;
     --accent-primary-text: #79A08C;
     --accent-secondary: #7B93AB;
@@ -111,6 +113,7 @@
   --text-muted: #6B6C66;
   --border-subtle: #2C302C;
   --border-control: #4A514A;
+  --border-field: #707670;
   --accent-primary: #68937D;
   --accent-primary-text: #79A08C;
   --accent-secondary: #7B93AB;

@@ -52,7 +52,7 @@ export default function NotasPage() {
             <label className="sr-only" htmlFor="filtro-materia">
               Filtrar por matéria
             </label>
-            <select id="filtro-materia" value={materiaFiltro} onChange={(e) => setParams(e.target.value === "todas" ? {} : { materia: e.target.value })} className="h-8 rounded-lg border border-line-control bg-elevated px-2 text-[12.5px]">
+            <select id="filtro-materia" value={materiaFiltro} onChange={(e) => setParams(e.target.value === "todas" ? {} : { materia: e.target.value })} className="h-8 rounded-lg border border-line-field bg-elevated px-2 text-[12.5px]">
               <option value="todas">Todas as matérias</option>
               {MATERIAS.map((m) => (
                 <option key={m.slug} value={m.slug}>
