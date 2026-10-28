@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "so-redes-nuvem",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "so-redes-001",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Windows e Linux: processos, memória e sistemas de arquivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No gerenciamento de processos de um sistema operacional multiprogramado, um processo em execução que solicita uma operação de entrada e saída passa ao estado bloqueado (ou em espera). Concluída essa operação, o processo",
+      "variantesEnunciado": [
+        "Um processo de geração de relatórios, ao requisitar dados de um dispositivo de armazenamento, libera a CPU e fica no estado bloqueado. Quando o dispositivo sinaliza, por meio de uma interrupção, que a operação terminou, esse processo",
+        "Considere o modelo clássico de estados de processos, com os estados novo, pronto, executando, bloqueado e terminado. Um processo que aguardava, no estado bloqueado, o término de uma leitura em disco, ao ter essa leitura concluída,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "retorna diretamente ao estado executando, pois já havia sido escolhido pelo escalonador antes de solicitar a operação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não existe, no modelo clássico, a transição direta de bloqueado para executando. Ao ser desbloqueado, o processo precisa voltar à fila de prontos e disputar novamente a CPU, porque outro processo pode estar executando nesse momento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "passa ao estado terminado, já que a conclusão da operação de entrada e saída encerra o ciclo de vida do processo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O processo só vai para o estado terminado quando conclui sua execução ou é encerrado (por erro ou por sinal, por exemplo). A conclusão de uma operação de E/S apenas remove a condição de espera, e o processo continua ativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "passa ao estado pronto e aguarda ser novamente selecionado pelo escalonador para usar a CPU.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Quando o evento esperado ocorre (fim da E/S, sinalizado por interrupção), o processo sai de bloqueado e vai para pronto, entrando na fila de processos aptos. Só volta a executar quando o escalonador o despacha. As transições clássicas são: pronto → executando (despacho), executando → pronto (preempção ou fim do quantum), executando → bloqueado (espera por evento) e bloqueado → pronto (ocorrência do evento).",
+          "versaoInvertidaFalsa": "retorna diretamente ao estado executando, sem passar pela fila de prontos, porque o fim da operação devolve a CPU ao processo que a solicitou."
+        },
+        {
+          "id": "opt-4",
+          "texto": "permanece bloqueado até que seu quantum de tempo expire, momento em que volta a executar normalmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A expiração do quantum é o que leva um processo do estado executando para o estado pronto, em escalonamento preemptivo como o Round Robin. Ela não tem relação com o desbloqueio de um processo que aguardava E/S."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é movido para o estado novo, no qual o sistema operacional recria seu bloco de controle de processo (PCB).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O estado novo corresponde à criação do processo, quando o PCB é alocado pela primeira vez. Um processo desbloqueado mantém o mesmo PCB, que é apenas atualizado e movido para a fila de prontos."
+        }
+      ],
+      "pegadinhaFCC": "A banca tenta induzir a transição direta de bloqueado para executando, que não existe no modelo clássico. O processo desbloqueado volta à fila de prontos e depende do escalonador.",
+      "resumoFlashcard": {
+        "pergunta": "Para qual estado vai um processo bloqueado quando a operação de E/S que ele aguardava termina?",
+        "resposta": "Vai para o estado pronto, entrando na fila de processos aptos a executar. Só volta a executar quando o escalonador o despacha; não há transição direta de bloqueado para executando."
+      },
+      "conceitosChave": ["Processos: estados e transições"],
+      "fundamentacao": "Silberschatz, Galvin e Gagne, Fundamentos de Sistemas Operacionais, capítulo 'Processos', seção 'Estado do processo'; Tanenbaum e Bos, Sistemas Operacionais Modernos, seção 'Estados de processos'."
+    },
+    {
+      "id": "so-redes-002",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Shell Linux, PowerShell e automação por scripts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico do Tribunal prepara um servidor Linux que receberá documentos de trabalho de uma equipe de auditoria. Ele deseja que, por padrão, os arquivos criados pelos usuários tenham leitura e escrita para o dono, somente leitura para o grupo e nenhum acesso para os demais, e que os diretórios criados tenham acesso total para o dono, leitura e entrada (execução) para o grupo e nenhum acesso para os demais. Considerando os modos-base 666 para arquivos e 777 para diretórios, o valor de umask adequado e as permissões resultantes, em notação octal, são, respectivamente,",
+      "variantesEnunciado": [
+        "Ao configurar um servidor Linux compartilhado por servidores da área de fiscalização, o administrador precisa garantir que arquivos novos fiquem com leitura e escrita para o dono, leitura para o grupo e nenhum acesso para outros, e que diretórios novos fiquem com acesso total para o dono, leitura e execução para o grupo e nenhum acesso para outros. Partindo dos modos-base 666 (arquivos) e 777 (diretórios), a umask e as permissões resultantes são, respectivamente,",
+        "Em um servidor de arquivos Linux de uma unidade técnica, deseja-se que arquivos recém-criados recebam o modo rw-r----- e diretórios recém-criados, o modo rwxr-x---. Considerando os modos-base 666 e 777, o valor de umask e a notação octal dos modos desejados são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "027, com arquivos em 640 e diretórios em 750.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A umask indica os bits que serão retirados dos modos-base. Com 027, nada é retirado do dono (0), retira-se a escrita do grupo (2) e retiram-se todos os bits dos demais (7): arquivos 666 → 640 (rw-r-----) e diretórios 777 → 750 (rwxr-x---). É exatamente o que o cenário pede.",
+          "versaoInvertidaFalsa": "022, com arquivos em 644 e diretórios em 755, valores que já negam qualquer acesso aos demais usuários."
+        },
+        {
+          "id": "opt-2",
+          "texto": "750, com arquivos em 640 e diretórios em 750, pois a umask indica a permissão final desejada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A umask não é a permissão desejada, e sim a máscara dos bits que serão retirados. Com umask 750, arquivos nasceriam com 026 (----w-rw-) e diretórios com 027 (----w-rwx), o oposto do pretendido. Confundir máscara e permissão final é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "022, com arquivos em 644 e diretórios em 755.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A umask 022 é o padrão de muitas distribuições e resulta em arquivos 644 e diretórios 755. Ela concede leitura (e, nos diretórios, entrada) aos demais usuários, o que contraria o requisito de nenhum acesso para outros."
+        },
+        {
+          "id": "opt-4",
+          "texto": "037, com arquivos em 640 e diretórios em 740.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A umask 037 gera arquivos 640, como desejado, mas retira também a execução do grupo nos diretórios, que ficam em 740 (rwxr-----). Sem o bit x, os membros do grupo não conseguem entrar no diretório nem acessar seus arquivos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "077, com arquivos em 600 e diretórios em 700.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A umask 077 é a mais restritiva usual: arquivos 600 e diretórios 700. Atende ao requisito para os demais usuários, mas nega ao grupo a leitura dos arquivos e a entrada nos diretórios, que o cenário exige."
+        }
+      ],
+      "pegadinhaFCC": "Confundir a umask (bits retirados) com a permissão final e escolher 022, padrão de muitas distribuições, que ainda concede leitura aos demais. Também é preciso lembrar que diretório sem x para o grupo não pode ser acessado pelo grupo.",
+      "resumoFlashcard": {
+        "pergunta": "Como a umask determina as permissões de arquivos e diretórios novos no Linux?",
+        "resposta": "A umask lista os bits que serão retirados dos modos-base 666 (arquivos) e 777 (diretórios). Com umask 027, arquivos nascem com 640 (rw-r-----) e diretórios com 750 (rwxr-x---)."
+      },
+      "conceitosChave": ["Linux: permissões e umask"],
+      "fundamentacao": "POSIX.1-2017 (IEEE Std 1003.1), utilitários umask e chmod; páginas de manual umask(2) e chmod(1) do Linux."
+    },
+    {
+      "id": "so-redes-003",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Active Directory e LDAP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No Active Directory Domain Services (AD DS), a unidade organizacional (OU) é",
+      "variantesEnunciado": [
+        "Ao planejar a estrutura lógica do diretório corporativo de um órgão público, o administrador precisa distinguir os componentes do Active Directory. Nesse contexto, a unidade organizacional (OU) é",
+        "Na estrutura lógica do Active Directory Domain Services, que inclui florestas, árvores, domínios e unidades organizacionais, além dos controladores de domínio, a unidade organizacional (OU) é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o limite de segurança mais amplo do diretório, que reúne uma ou mais árvores com esquema e catálogo global comuns.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição é a da floresta, que reúne uma ou mais árvores, compartilha esquema, configuração e catálogo global e é considerada a fronteira de segurança do AD DS. A OU existe dentro de um domínio e não delimita segurança."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o conjunto de domínios que compartilham um espaço de nomes DNS contíguo, ligados por relações de confiança transitivas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a definição de árvore: domínios com espaço de nomes DNS contíguo (por exemplo, exemplo.gov.br e ti.exemplo.gov.br) unidos por confianças transitivas. A OU não agrupa domínios; ela organiza objetos dentro de um domínio."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o servidor que armazena uma cópia gravável do banco de dados do diretório e autentica usuários e computadores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve o controlador de domínio (DC), servidor que mantém uma cópia gravável do banco do diretório, replica as alterações e atua como centro de distribuição de chaves do Kerberos. A OU é um contêiner lógico, não um servidor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "um contêiner do domínio usado para organizar objetos, delegar tarefas administrativas e vincular GPOs.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A OU é um contêiner dentro do domínio que agrupa usuários, grupos e computadores conforme a estrutura administrativa. Ela permite delegar tarefas (por exemplo, redefinir senhas de um setor) e é o nível mais granular ao qual se vinculam GPOs, aplicadas depois das de site e de domínio.",
+          "versaoInvertidaFalsa": "o limite de segurança do domínio, ao qual se concedem permissões em recursos, mas que não admite a vinculação de GPOs nem a delegação de tarefas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma entidade de segurança à qual se concedem permissões em pastas compartilhadas, assim como ocorre com os grupos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A OU não é entidade de segurança: não possui SID nem pode receber permissões em pastas ou recursos. Para conceder acesso, usam-se contas de usuário e grupos de segurança; a OU serve para organizar, delegar e aplicar políticas."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir à OU o papel de floresta, árvore, controlador de domínio ou grupo de segurança. A OU organiza, delega e recebe GPOs, mas não é limite de segurança nem entidade à qual se concedem permissões.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve uma unidade organizacional (OU) no Active Directory?",
+        "resposta": "É um contêiner dentro de um domínio para organizar objetos (usuários, computadores e grupos), delegar tarefas administrativas e vincular GPOs. Não é entidade de segurança: permissões em recursos são concedidas a usuários e grupos."
+      },
+      "conceitosChave": ["AD: estrutura lógica"],
+      "fundamentacao": "Microsoft Learn, 'Active Directory Domain Services Overview' e guias de projeto da estrutura lógica do AD DS (florestas, domínios e unidades organizacionais)."
+    },
+    {
+      "id": "so-redes-004",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Virtualização e containers",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de infraestrutura do Tribunal avalia migrar um conjunto de microsserviços, hoje executados em máquinas virtuais, para containers em hosts Linux. Um analista argumenta que os containers iniciam em segundos e consomem menos memória do que as máquinas virtuais. A justificativa técnica correta para essa diferença é que os containers",
+      "variantesEnunciado": [
+        "Ao comparar a execução de um sistema de protocolo eletrônico em máquinas virtuais e em containers, a equipe de TI do Tribunal observou que os containers sobem quase instantaneamente e ocupam bem menos memória. Essa diferença decorre do fato de que os containers",
+        "Considere que um técnico precisa explicar, em reunião de planejamento, por que um mesmo servidor físico comporta muito mais containers do que máquinas virtuais executando a mesma aplicação. A explicação tecnicamente correta é que os containers"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "emulam o hardware completo por meio de um hipervisor tipo 2, que é mais leve do que o hipervisor tipo 1 usado pelas máquinas virtuais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Containers não usam hipervisor nem emulam hardware. Hipervisores tipo 2 rodam sobre um sistema operacional hospedeiro e costumam ter mais sobrecarga que os de tipo 1; de todo modo, ambos executam máquinas virtuais com sistema convidado completo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "compartilham o kernel do sistema operacional hospedeiro, com isolamento por namespaces e limites de recursos por cgroups.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O container é um conjunto de processos do hospedeiro isolados pelo kernel: os namespaces dão a cada container sua própria visão de PIDs, rede, pontos de montagem e nome de host, e os cgroups limitam CPU, memória e E/S. Como não há sistema operacional convidado a inicializar, a partida é rápida e o consumo de memória é menor. Em contrapartida, o isolamento é mais fraco que o de uma VM, pois o kernel é compartilhado.",
+          "versaoInvertidaFalsa": "executam cada um seu próprio kernel, o que os isola completamente do hospedeiro, enquanto os cgroups apenas registram o consumo de recursos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "carregam um kernel próprio e reduzido em cada imagem, o que dispensa a inicialização dos serviços do sistema operacional convidado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A imagem de um container leva bibliotecas e binários de espaço de usuário, mas não carrega kernel próprio: todos os containers do host usam o kernel do hospedeiro. Kernel próprio é característica das máquinas virtuais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "executam diretamente sobre o firmware do servidor, sem sistema operacional hospedeiro, o que elimina a camada de virtualização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Containers dependem de um sistema operacional hospedeiro, cujo kernel oferece namespaces e cgroups. O que roda diretamente sobre o hardware, sem sistema hospedeiro, é o hipervisor tipo 1 (bare metal), usado em máquinas virtuais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dispensam isolamento entre aplicações, pois todos os processos de todos os containers compartilham o mesmo espaço de PIDs e de rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os containers são isolados entre si justamente pelos namespaces, que separam a visão de PIDs, de rede e de sistema de arquivos. Compartilhar o kernel não significa compartilhar o mesmo espaço de nomes de processos e de rede."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao container um kernel próprio ou um hipervisor. O container é um processo isolado do hospedeiro: namespaces isolam a visão de recursos e cgroups limitam o consumo, sobre o mesmo kernel.",
+      "resumoFlashcard": {
+        "pergunta": "Por que containers são mais leves que máquinas virtuais?",
+        "resposta": "Porque compartilham o kernel do sistema hospedeiro e não inicializam um sistema operacional convidado. O isolamento vem dos namespaces (visão de PIDs, rede, montagens etc.), e os limites de CPU e memória vêm dos cgroups."
+      },
+      "conceitosChave": ["Virtualização: VM × container", "Containers: namespaces e cgroups"],
+      "fundamentacao": "Páginas de manual namespaces(7) e cgroups(7) do Linux; Open Container Initiative (OCI), Runtime Specification; documentação do Docker, 'What is a container?'."
+    },
+    {
+      "id": "so-redes-005",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Arquitetura TCP/IP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "No estabelecimento de uma conexão TCP, o cliente envia um segmento com o sinalizador ……; o servidor responde com um segmento que traz os sinalizadores ……; e o cliente conclui o procedimento com um segmento ……. Esse processo, conhecido como ……, antecede a troca de dados da aplicação. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Antes que um navegador troque mensagens HTTP/2 com um servidor web, o TCP estabelece a conexão: o cliente transmite um segmento com o sinalizador ……, o servidor devolve um segmento com os sinalizadores …… e o cliente finaliza enviando um segmento ……. Esse procedimento é chamado de ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao analisar a captura de tráfego de um sistema interno do Tribunal, um técnico observa a abertura de uma conexão TCP: primeiro, um segmento ……; em seguida, a resposta do servidor com ……; por fim, um segmento …… enviado pelo cliente. A sequência caracteriza o ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "SYN − SYN e ACK − FIN − three-way handshake",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sinalizador FIN é usado no encerramento da conexão, quando uma das partes informa que não tem mais dados a enviar. O terceiro segmento da abertura é uma confirmação (ACK) do SYN enviado pelo servidor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ACK − SYN e ACK − SYN − three-way handshake",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem está invertida: quem inicia a conexão envia SYN, que sincroniza o número de sequência inicial, e não ACK. O cliente só envia a confirmação depois de receber o SYN+ACK do servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "SYN − RST e ACK − ACK − three-way handshake",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O RST (reset) aborta ou recusa uma conexão, por exemplo quando não há serviço escutando na porta. O servidor que aceita a conexão responde com SYN e ACK, confirmando o SYN do cliente e enviando o próprio número de sequência inicial."
+        },
+        {
+          "id": "opt-4",
+          "texto": "SYN − SYN e ACK − ACK − four-way handshake",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os sinalizadores estão certos, mas o nome não: a expressão 'four-way' costuma designar o encerramento, com FIN e ACK em cada sentido. A abertura em três segmentos é o three-way handshake."
+        },
+        {
+          "id": "opt-5",
+          "texto": "SYN − SYN e ACK − ACK − three-way handshake",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O cliente envia SYN com seu número de sequência inicial; o servidor responde SYN+ACK, confirmando o SYN e informando o próprio número inicial; o cliente devolve ACK. Concluído esse three-way handshake (RFC 9293), a conexão fica no estado ESTABLISHED nos dois lados e os dados podem trafegar.",
+          "versaoInvertidaFalsa": "O cliente envia SYN, o servidor responde com SYN e ACK e o cliente conclui com FIN, no procedimento chamado three-way handshake."
+        }
+      ],
+      "pegadinhaFCC": "Trocar a abertura (SYN, SYN+ACK, ACK) pelo encerramento, que usa FIN e costuma ser descrito em quatro etapas, ou inverter a ordem dos sinalizadores.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as etapas do three-way handshake do TCP?",
+        "resposta": "O cliente envia SYN, o servidor responde SYN+ACK e o cliente confirma com ACK. Só então a conexão está estabelecida e os dados da aplicação podem trafegar; o encerramento usa FIN."
+      },
+      "conceitosChave": ["TCP: three-way handshake"],
+      "fundamentacao": "RFC 9293 (Transmission Control Protocol), seção 3.5, 'Establishing a Connection'."
+    },
+    {
+      "id": "so-redes-006",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Endereçamento IPv4 e IPv6",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Uma estação foi configurada com o endereço IPv4 10.20.45.200/21. A máscara de sub-rede, o endereço da rede e o endereço de broadcast dessa sub-rede são, respectivamente,",
+      "variantesEnunciado": [
+        "Durante a análise do inventário de rede de uma unidade técnica, um técnico encontrou um servidor com o endereço 10.20.45.200 e prefixo /21. A máscara, o endereço de rede e o endereço de broadcast correspondentes são, respectivamente,",
+        "Considere a interface de um equipamento configurada como 10.20.45.200/21, em notação CIDR. Os valores de máscara de sub-rede, endereço de rede e endereço de broadcast dessa interface são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "255.255.248.0, 10.20.45.0 e 10.20.45.255.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A máscara está certa, mas a rede e o broadcast foram calculados como se o prefixo fosse /24, mantendo o terceiro octeto fixo. Com /21, o terceiro octeto também é dividido em blocos de 8, e 45 pertence ao bloco de 40 a 47."
+        },
+        {
+          "id": "opt-2",
+          "texto": "255.255.240.0, 10.20.32.0 e 10.20.47.255.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esses valores correspondem ao prefixo /20 (máscara 255.255.240.0, blocos de 16 no terceiro octeto: 32 a 47). O prefixo informado é /21, cuja máscara é 255.255.248.0."
+        },
+        {
+          "id": "opt-3",
+          "texto": "255.255.248.0, 10.20.40.0 e 10.20.48.0.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Máscara e rede estão corretas, mas 10.20.48.0 é o endereço da próxima sub-rede /21. O broadcast é o último endereço do bloco atual, 10.20.47.255, imediatamente antes do início do bloco seguinte."
+        },
+        {
+          "id": "opt-4",
+          "texto": "255.255.248.0, 10.20.40.0 e 10.20.47.255.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O prefixo /21 tem 21 bits de rede: 255.255.248.0 (11111000 no terceiro octeto). O salto no terceiro octeto é 256 − 248 = 8, formando blocos 0, 8, 16, 24, 32, 40, 48…; como 45 está entre 40 e 47, a rede é 10.20.40.0 e o broadcast é 10.20.47.255. Restam 11 bits de host, ou seja, 2^11 − 2 = 2.046 endereços utilizáveis (10.20.40.1 a 10.20.47.254).",
+          "versaoInvertidaFalsa": "255.255.252.0, 10.20.44.0 e 10.20.47.255, pois o prefixo /21 forma blocos de 4 no terceiro octeto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "255.255.252.0, 10.20.44.0 e 10.20.47.255.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esses valores são os de um prefixo /22 (máscara 255.255.252.0, blocos de 4 no terceiro octeto: 44 a 47). O broadcast coincide, mas a máscara e o endereço de rede não correspondem ao /21."
+        }
+      ],
+      "pegadinhaFCC": "Com prefixo /21, o octeto que se divide é o terceiro, em blocos de 8 (40 a 47). A banca oferece cálculos feitos como se o prefixo fosse /24, /20 ou /22 e um broadcast igual ao endereço da próxima rede.",
+      "resumoFlashcard": {
+        "pergunta": "Como encontrar a rede e o broadcast de 10.20.45.200/21?",
+        "resposta": "A máscara /21 é 255.255.248.0, e o salto no terceiro octeto é 256 − 248 = 8. Como 45 está entre 40 e 47, a rede é 10.20.40.0 e o broadcast é 10.20.47.255, com 2.046 hosts utilizáveis."
+      },
+      "conceitosChave": ["IPv4: cálculo de sub-redes (CIDR)"],
+      "fundamentacao": "RFC 4632 (Classless Inter-domain Routing, CIDR); RFC 950 (sub-redes IPv4); RFC 791 (IPv4). Cálculos conferidos com o módulo ipaddress do Python."
+    },
+    {
+      "id": "so-redes-007",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "DNS e DHCP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de redes do Tribunal revisa a configuração dos serviços de resolução de nomes e de endereçamento automático da rede interna. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma auditoria de infraestrutura de TI, um técnico precisa avaliar afirmações sobre o funcionamento do DNS e do DHCP em um órgão público. Considere as afirmativas abaixo.",
+        "Ao elaborar material de treinamento para a central de serviços, um analista reuniu afirmações sobre registros DNS e sobre a concessão de endereços via DHCP. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um registro MX indica o servidor de correio do domínio e, havendo mais de um, o de menor valor de preferência é tentado primeiro.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O MX associa o domínio a nomes de servidores de correio com um valor de preferência; os remetentes tentam primeiro o menor valor e usam os demais como contingência (RFC 5321, seção 5.1)."
+        },
+        {
+          "texto": "O registro PTR associa um nome de host a um endereço IPv6, enquanto o registro AAAA é usado na resolução reversa.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os papéis estão invertidos: o AAAA mapeia um nome para um endereço IPv6 (RFC 3596), e o PTR é o registro da resolução reversa, nas zonas in-addr.arpa (IPv4) e ip6.arpa (IPv6)."
+        },
+        {
+          "texto": "No DHCP, a obtenção de uma concessão segue as mensagens Discover, Offer, Request e Acknowledge, trocadas por UDP nas portas 67 (servidor) e 68 (cliente).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o processo DORA do RFC 2131: o cliente procura servidores (Discover), recebe ofertas (Offer), solicita uma delas (Request) e recebe a confirmação (Acknowledge). O servidor escuta na porta UDP 67 e o cliente, na 68."
+        },
+        {
+          "texto": "O DNS utiliza exclusivamente o UDP na porta 53, inclusive nas transferências de zona entre os servidores primário e secundário.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O DNS usa a porta 53 em UDP e em TCP. As transferências de zona (AXFR/IXFR) usam TCP, que também é empregado quando a resposta não cabe em UDP; o RFC 7766 torna obrigatório o suporte a TCP."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que inverte os papéis dos registros: o AAAA faz o mapeamento direto de nome para endereço IPv6, e o PTR é que atende à resolução reversa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I descreve corretamente o MX e sua preferência (o menor valor é tentado primeiro), e a III descreve o processo DORA do DHCP com as portas UDP 67 e 68. A II inverte AAAA e PTR, e a IV ignora o uso de TCP pelo DNS em transferências de zona e em respostas grandes.",
+          "versaoInvertidaFalsa": "Havendo mais de um registro MX para o domínio, o servidor de correio com o maior valor de preferência é tentado primeiro, e os de menor valor servem de contingência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas: a II troca os papéis de AAAA e PTR, e a IV afirma que o DNS nunca usa TCP, o que é desmentido pelas transferências de zona."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Embora a I e a III estejam corretas, a IV é falsa: as transferências de zona entre primário e secundário são feitas por TCP na porta 53, e o suporte a TCP é obrigatório segundo o RFC 7766."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV é falsa, pois o DNS também usa TCP. Além disso, a alternativa deixa de fora a I, que descreve corretamente a preferência dos registros MX."
+        }
+      ],
+      "pegadinhaFCC": "Inverter os papéis de AAAA e PTR e afirmar que o DNS usa apenas UDP: transferências de zona e respostas grandes usam TCP na mesma porta 53.",
+      "resumoFlashcard": {
+        "pergunta": "Quando o DNS usa TCP em vez de UDP?",
+        "resposta": "O DNS usa a porta 53 em UDP e em TCP. O TCP é usado nas transferências de zona (AXFR/IXFR) e quando a resposta não cabe no UDP (bit TC ligado), e seu suporte é obrigatório segundo o RFC 7766."
+      },
+      "conceitosChave": ["DNS: tipos de registro", "DHCP: processo DORA"],
+      "fundamentacao": "RFC 1035 (DNS), seções 3.3 e 4.2; RFC 3596 (registro AAAA); RFC 7766 (DNS sobre TCP); RFC 5321, seção 5.1 (uso de registros MX); RFC 2131 (DHCP), seções 3.1 e 4.1."
+    },
+    {
+      "id": "so-redes-008",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "HTTP/2, HTTP/3, HTTPS, SMTP, FTP e SSH",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das versões 2 e 3 do protocolo HTTP, é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma equipe que moderniza o portal de serviços de um órgão público estuda os protocolos HTTP/2 e HTTP/3 para reduzir a latência de acesso. Sobre essas versões, é correto afirmar que",
+        "Considerando as especificações do HTTP/2 (RFC 9113) e do HTTP/3 (RFC 9114), é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o HTTP/3 mantém o TCP como transporte, mas substitui o TLS por um mecanismo próprio de criptografia, o QPACK.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O HTTP/3 não usa TCP: ele roda sobre o QUIC, que opera sobre UDP. Além disso, o QPACK não é mecanismo de criptografia, e sim o formato de compressão de cabeçalhos do HTTP/3 (RFC 9204); a proteção vem do TLS 1.3 integrado ao QUIC."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o HTTP/2 é um protocolo textual, ao contrário do HTTP/3, que foi o primeiro a adotar o enquadramento binário das mensagens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O enquadramento binário é justamente a principal mudança do HTTP/2 (RFC 9113) em relação ao HTTP/1.1, que é textual. O HTTP/3 mantém mensagens em quadros binários, mas não foi o primeiro a adotá-los."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o HTTP/2 elimina o bloqueio de cabeça de fila em qualquer nível, pois seus fluxos multiplexados são independentes até no transporte.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O HTTP/2 elimina o bloqueio de cabeça de fila na camada HTTP, mas todos os fluxos compartilham uma única conexão TCP: a perda de um segmento faz o TCP reter os dados seguintes até a retransmissão, atrasando todos os fluxos. Resolver isso é uma das motivações do QUIC."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o HTTP/3 dispensa criptografia, já que o QUIC opera sobre UDP e a confidencialidade fica a cargo da própria aplicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O QUIC incorpora o TLS 1.3 ao próprio handshake (RFC 9001) e cifra praticamente todo o tráfego, inclusive boa parte das informações de transporte. No HTTP/3 não há modo sem criptografia."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o HTTP/3 opera sobre o QUIC, que usa UDP e integra o TLS 1.3, e comprime cabeçalhos com o QPACK, sucessor do HPACK.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O HTTP/3 (RFC 9114) mapeia a semântica HTTP sobre o QUIC (RFC 9000), transporte sobre UDP com TLS 1.3 integrado, fluxos independentes e migração de conexão. Como o HPACK do HTTP/2 pressupõe entrega ordenada, o HTTP/3 adota o QPACK (RFC 9204), que evita bloqueio entre fluxos.",
+          "versaoInvertidaFalsa": "o HTTP/3 opera sobre o TCP com TLS 1.3 e comprime cabeçalhos com o HPACK, o mesmo formato usado pelo HTTP/2."
+        }
+      ],
+      "pegadinhaFCC": "Confundir o QPACK (compressão de cabeçalhos) com criptografia e supor que o HTTP/2 elimina todo bloqueio de cabeça de fila: sobre o TCP, a perda de um segmento ainda atrasa todos os fluxos.",
+      "resumoFlashcard": {
+        "pergunta": "O que muda do HTTP/2 para o HTTP/3?",
+        "resposta": "O HTTP/2 multiplexa fluxos binários sobre uma conexão TCP e comprime cabeçalhos com HPACK. O HTTP/3 roda sobre o QUIC (UDP, com TLS 1.3 integrado), usa QPACK e evita que a perda de um pacote bloqueie todos os fluxos."
+      },
+      "conceitosChave": ["HTTP/3 e QUIC", "HTTP/2: multiplexação"],
+      "fundamentacao": "RFC 9113 (HTTP/2); RFC 7541 (HPACK); RFC 9114 (HTTP/3); RFC 9204 (QPACK); RFC 9000 e RFC 9001 (QUIC e uso do TLS no QUIC)."
+    },
+    {
+      "id": "so-redes-009",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "VPN, balanceamento de carga, proxies e firewalls",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um firewall com estado (stateful) protege a rede do Tribunal, avalia as regras na ordem em que aparecem, aplica a primeira que corresponde ao tráfego e termina com uma negação implícita. A política de entrada para a DMZ é: (1) permitir TCP de qualquer origem para 10.0.10.20, porta 443; (2) permitir TCP de qualquer origem para qualquer servidor da DMZ, portas 80 e 443; (3) bloquear todo tráfego originado de 203.0.113.0/24; (4) permitir TCP de 198.51.100.7 para 10.0.10.30, porta 22. Após um alerta, a equipe constatou que o host 203.0.113.45, que deveria estar bloqueado, acessa por HTTPS o portal hospedado em 10.0.10.20. Nesse caso, é correto concluir que",
+      "variantesEnunciado": [
+        "Considere um firewall de borda com inspeção de estado que processa as regras de cima para baixo, aplica a primeira correspondência e nega implicitamente o que não for permitido. Para a DMZ, as regras de entrada são: (1) permitir TCP de qualquer origem para 10.0.10.20, porta 443; (2) permitir TCP de qualquer origem para qualquer servidor da DMZ, portas 80 e 443; (3) bloquear todo tráfego originado de 203.0.113.0/24; (4) permitir TCP de 198.51.100.7 para 10.0.10.30, porta 22. Um analista verificou que o endereço 203.0.113.45, incluído em lista de bloqueio, continua acessando via HTTPS o servidor 10.0.10.20. É correto concluir que",
+        "Em uma auditoria de configuração de firewall, um técnico de controle externo analisa as seguintes regras de entrada para a DMZ, avaliadas em ordem, com primeira correspondência e negação implícita ao final: (1) permitir TCP de qualquer origem para 10.0.10.20, porta 443; (2) permitir TCP de qualquer origem para qualquer servidor da DMZ, portas 80 e 443; (3) bloquear todo tráfego originado de 203.0.113.0/24; (4) permitir TCP de 198.51.100.7 para 10.0.10.30, porta 22. O registro de eventos mostra conexões HTTPS bem-sucedidas de 203.0.113.45 para 10.0.10.20. Sobre esse achado, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a regra 3 não chega a ser avaliada para esse tráfego, já permitido pela regra 1; o bloqueio deve ser posicionado antes das permissões.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na avaliação por primeira correspondência, o pacote de 203.0.113.45 para 10.0.10.20:443 casa com a regra 1 (e casaria também com a 2) e é aceito ali; a regra 3 só seria examinada para tráfego que não tivesse casado antes. A correção é mover o bloqueio específico para o topo, antes das permissões amplas, e revisar periodicamente a ordem das regras, como recomenda o NIST SP 800-41.",
+          "versaoInvertidaFalsa": "a regra 3 prevalece sobre as regras 1 e 2 por ser de bloqueio, de modo que o acesso observado só pode decorrer de falha no equipamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o firewall com estado avalia primeiro as regras de bloqueio, de modo que a falha está na máscara /24 informada na regra 3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Firewalls de primeira correspondência não reordenam regras por tipo: valem a posição e o primeiro casamento. A máscara /24 da regra 3 está correta, pois abrange de 203.0.113.0 a 203.0.113.255, incluindo o host 203.0.113.45."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a negação implícita do final prevalece sobre as permissões explícitas, e o acesso observado decorre de defeito no equipamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A negação implícita só se aplica ao tráfego que não casou com nenhuma regra explícita. Como a regra 1 permitiu o acesso, a negação final nem chegou a ser usada; não há indício de defeito, e sim de erro de ordenação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a regra 4 libera o acesso, pois regras com origem específica prevalecem sobre regras com origem em sub-rede, qualquer que seja a posição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A especificidade não altera a ordem de avaliação em firewalls de primeira correspondência. Além disso, a regra 4 trata de SSH (porta 22) a partir de 198.51.100.7 para outro servidor e não tem relação com o tráfego observado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o firewall tratou a conexão como tráfego de retorno, já que filtros com estado aceitam automaticamente pacotes destinados a portas abertas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tabela de estados aceita automaticamente o retorno de conexões já autorizadas, e não conexões novas iniciadas de fora. Aqui o próprio host externo iniciou a conexão, que foi aceita porque casou com a regra 1."
+        }
+      ],
+      "pegadinhaFCC": "Supor que regras de bloqueio ou mais específicas têm precedência automática. Na primeira correspondência vale a posição: um bloqueio colocado abaixo de uma permissão ampla não alcança o tráfego já permitido.",
+      "resumoFlashcard": {
+        "pergunta": "Por que uma regra de bloqueio pode não ter efeito em um firewall de primeira correspondência?",
+        "resposta": "Porque as regras são avaliadas de cima para baixo e a primeira que corresponde decide. Se uma permissão ampla vem antes, o tráfego é aceito e o bloqueio posterior nunca é alcançado; bloqueios específicos devem vir antes das permissões gerais."
+      },
+      "conceitosChave": ["Firewall: ordem das regras", "Firewall: filtragem com estado"],
+      "fundamentacao": "NIST SP 800-41 Rev. 1 (Guidelines on Firewalls and Firewall Policy), seções 2 e 4; RFC 5737 (faixas de endereços IPv4 reservadas para documentação)."
+    },
+    {
+      "id": "so-redes-010",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Nuvem: IaaS, PaaS, SaaS e serverless",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a definição de computação em nuvem do NIST (SP 800-145), é uma das cinco características essenciais do modelo",
+      "variantesEnunciado": [
+        "Ao elaborar o termo de referência para contratar serviços em nuvem, a equipe de TI de um órgão público consultou a definição do NIST (SP 800-145). De acordo com esse documento, é uma das características essenciais da computação em nuvem",
+        "Em um estudo técnico preliminar sobre a migração de sistemas para a nuvem, o analista citou as características essenciais definidas pelo NIST no SP 800-145. Uma delas é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a contratação por prazo mínimo de doze meses, que permite ao provedor amortizar a infraestrutura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Prazo contratual não é característica do modelo de nuvem. Ao contrário, o NIST associa a nuvem ao provisionamento sob demanda e ao serviço medido, em que se paga pelo uso, sem compromisso fixo inerente ao modelo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a hospedagem dos dados em datacenter situado obrigatoriamente no território do contratante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A localização dos dados pode ser exigência legal ou contratual, mas não integra a definição do NIST. No agrupamento de recursos, o cliente em geral não controla a localização exata e pode, no máximo, escolhê-la em nível mais alto (país, região ou datacenter)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o amplo acesso à rede, com recursos acessíveis por mecanismos padronizados a partir de dispositivos diversos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O amplo acesso à rede (broad network access) é uma das cinco características essenciais do SP 800-145: os recursos ficam disponíveis pela rede e são acessados por mecanismos padronizados a partir de plataformas heterogêneas, como celulares, tablets, notebooks e estações. As outras quatro são autosserviço sob demanda, agrupamento de recursos, elasticidade rápida e serviço medido.",
+          "versaoInvertidaFalsa": "o amplo acesso à rede, que, no entanto, o NIST trata como recurso opcional, e não como característica essencial do modelo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a disponibilidade mínima de 99,99%, assegurada em contrato para todos os modelos de serviço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Níveis de disponibilidade são definidos em acordos de nível de serviço (SLA) de cada provedor e de cada serviço. Não há percentual mínimo na definição do NIST, nem garantia uniforme para todos os modelos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o gerenciamento do sistema operacional pelo cliente, que mantém controle sobre a infraestrutura física.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mesmo no IaaS, em que o cliente administra o sistema operacional, ele não gerencia nem controla a infraestrutura física subjacente. No PaaS e no SaaS, nem o sistema operacional fica a cargo do cliente."
+        }
+      ],
+      "pegadinhaFCC": "Confundir características essenciais do modelo com cláusulas contratuais (prazo, localização, SLA). As cinco são: autosserviço sob demanda, amplo acesso à rede, agrupamento de recursos, elasticidade rápida e serviço medido.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as cinco características essenciais da nuvem segundo o NIST SP 800-145?",
+        "resposta": "Autosserviço sob demanda, amplo acesso à rede, agrupamento (pooling) de recursos, elasticidade rápida e serviço medido. O documento também define três modelos de serviço (SaaS, PaaS e IaaS) e quatro de implantação (privada, comunitária, pública e híbrida)."
+      },
+      "conceitosChave": ["Nuvem: NIST SP 800-145"],
+      "fundamentacao": "NIST SP 800-145, The NIST Definition of Cloud Computing (2011), seção 2, 'Essential Characteristics'."
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "materiaSlug": "so-redes-nuvem",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "so-redes-011",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Windows e Linux: processos, memória e sistemas de arquivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No servidor de processamento noturno do Tribunal, duas rotinas concorrentes de consolidação de dados ficaram paradas indefinidamente. A análise mostrou que a rotina A obteve acesso exclusivo à tabela de empenhos e aguardava a tabela de pagamentos, enquanto a rotina B mantinha acesso exclusivo à tabela de pagamentos e aguardava a de empenhos. Nenhum dos bloqueios pode ser retirado à força. Para evitar que a situação se repita sem eliminar a exclusividade dos acessos, a medida que ataca diretamente uma das condições necessárias ao impasse é",
+      "variantesEnunciado": [
+        "Duas tarefas agendadas no servidor de banco de dados de um órgão de controle travaram ao mesmo tempo: a tarefa 1 bloqueou com exclusividade o arquivo de contratos e esperava o arquivo de aditivos, enquanto a tarefa 2 bloqueou com exclusividade o arquivo de aditivos e esperava o de contratos. Os bloqueios não podem ser revogados à força. Sem abrir mão da exclusividade dos acessos, a medida que elimina diretamente uma condição necessária ao impasse é",
+        "Em um sistema de processamento em lote, constatou-se que dois processos ficam presos: cada um detém, com exclusividade, um recurso de que o outro precisa, e nenhum libera o que possui. Mantida a exclusão mútua e sem possibilidade de retirar recursos à força, a providência que impede estruturalmente a repetição do problema é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aumentar a prioridade da rotina A, o que garante que ela sempre obtenha os dois recursos antes da rotina B.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Prioridade influencia a escolha de quem usa a CPU, não a liberação de recursos já obtidos. Se B já detém a tabela de pagamentos, A continuará esperando, por mais prioritária que seja; prioridades fixas ainda podem causar inanição das rotinas menos prioritárias."
+        },
+        {
+          "id": "opt-2",
+          "texto": "impor a todas as rotinas uma mesma ordem de aquisição: sempre a tabela de empenhos antes da de pagamentos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O impasse (deadlock) exige quatro condições simultâneas, as condições de Coffman: exclusão mútua, posse e espera, não preempção e espera circular. Mantida a exclusividade e sem preempção, resta negar a posse e espera (pedir tudo de uma vez) ou a espera circular. Com uma ordem global de aquisição, nenhuma rotina pode deter um recurso de ordem maior e esperar por um de ordem menor, e o ciclo A → B → A deixa de ser possível.",
+          "versaoInvertidaFalsa": "impor uma ordem global de aquisição dos recursos, medida que elimina a exclusão mútua, mas mantém possível a espera circular entre as rotinas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aumentar a memória do servidor, pois o impasse decorre da falta de quadros de página para as duas rotinas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A falta de quadros de memória leva à paginação excessiva (thrashing), não a impasse. No caso, o problema é a espera circular por recursos lógicos (tabelas) mantidos com exclusividade, que mais memória não resolve."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reduzir o quantum do escalonador Round Robin, para que as rotinas alternem com mais frequência no uso da CPU.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O quantum afeta a alternância no uso da CPU, mas as rotinas estão bloqueadas à espera de recursos, não de processador. Nenhuma das quatro condições de Coffman é afetada pelo tamanho do quantum."
+        },
+        {
+          "id": "opt-5",
+          "texto": "executar as duas rotinas como threads de um mesmo processo, já que threads compartilham recursos e não entram em impasse.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Threads de um mesmo processo também disputam bloqueios (mutexes, travas de tabela) e podem entrar em impasse exatamente da mesma forma. Compartilhar o espaço de endereçamento não elimina a espera circular."
+        }
+      ],
+      "pegadinhaFCC": "Propor soluções de escalonamento ou de memória para um problema de recursos. O deadlock exige as quatro condições de Coffman ao mesmo tempo, e a ordenação global dos recursos quebra a espera circular.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as quatro condições necessárias para um deadlock e como a ordenação de recursos o previne?",
+        "resposta": "Exclusão mútua, posse e espera, não preempção e espera circular, todas simultâneas. Ao obrigar todos a pedir recursos numa mesma ordem global, a espera circular se torna impossível e o impasse é prevenido."
+      },
+      "conceitosChave": ["Deadlock: condições de Coffman"],
+      "fundamentacao": "Coffman, Elphick e Shoshani, 'System Deadlocks', ACM Computing Surveys (1971); Silberschatz, Galvin e Gagne, Fundamentos de Sistemas Operacionais, capítulo 'Deadlocks' (caracterização e prevenção)."
+    },
+    {
+      "id": "so-redes-012",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Shell Linux, PowerShell e automação por scripts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico do Tribunal incluiu na crontab de um servidor Linux, que usa o cron padrão da distribuição (cronie), a linha “30 3 1 * 1 /opt/scripts/relatorio.sh”, com o objetivo de gerar um relatório de auditoria às 3h30 do primeiro dia do mês, mas somente quando esse dia cair em uma segunda-feira. Considerando a semântica documentada no crontab(5), essa linha fará o script ser executado às 3h30",
+      "variantesEnunciado": [
+        "Para compactar logs às 3h30 apenas quando o primeiro dia do mês for uma segunda-feira, um administrador cadastrou na crontab de um servidor com cronie a linha “30 3 1 * 1 /opt/scripts/relatorio.sh”. De acordo com o comportamento descrito no crontab(5), o script será executado às 3h30",
+        "Considere a entrada “30 3 1 * 1 /opt/scripts/relatorio.sh” na crontab de um servidor Linux com o cron padrão (cronie). O responsável acredita que ela dispara o script somente no dia 1 que for segunda-feira. Conforme o crontab(5), o script será executado, na verdade, às 3h30"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apenas nos dias 1 que caírem em segunda-feira, como pretendido, pois os campos de dia do mês e de dia da semana se combinam por E.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a interpretação intuitiva, mas não a documentada: com os dois campos de dia restritos, o cron os combina por OU, e não por E. Assim, o script também rodará nas segundas-feiras que não forem dia 1."
+        },
+        {
+          "id": "opt-2",
+          "texto": "em todas as segundas-feiras de janeiro, pois o terceiro campo da linha indica o mês de execução.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem dos campos é minuto, hora, dia do mês, mês e dia da semana. O '1' na terceira posição é o dia do mês, e o '*' na quarta indica todos os meses; não há restrição ao mês de janeiro."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apenas às segundas-feiras, pois, quando os dois campos de dia estão preenchidos, o de dia da semana prevalece sobre o de dia do mês.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum dos campos prevalece sobre o outro. Quando ambos estão restritos, a execução ocorre se qualquer um deles coincidir, e por isso o script roda tanto no dia 1 quanto às segundas-feiras."
+        },
+        {
+          "id": "opt-4",
+          "texto": "uma única vez, no próximo dia 1 que cair em segunda-feira, já que o cron não repete agendamentos com dia do mês fixo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As entradas da crontab são recorrentes: valem em todo minuto cujo horário corresponda à expressão. Agendamentos de execução única ficam a cargo de outro utilitário, como o at."
+        },
+        {
+          "id": "opt-5",
+          "texto": "no dia 1 de cada mês e também em todas as segundas-feiras, pois, com os dois campos de dia restritos, basta que um deles coincida.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os campos são minuto, hora, dia do mês, mês e dia da semana. Segundo o crontab(5), quando o dia do mês e o dia da semana estão ambos restritos (diferentes de *), o comando roda se qualquer um deles coincidir: aqui, às 3h30 de todo dia 1 e de toda segunda-feira. Para exigir as duas condições, agenda-se por um dos campos e testa-se o outro no próprio script (por exemplo, com date +%u).",
+          "versaoInvertidaFalsa": "apenas nos dias 1 que caírem em segunda-feira, pois, com os dois campos de dia restritos, o cron exige que ambos coincidam."
+        }
+      ],
+      "pegadinhaFCC": "Supor que dia do mês e dia da semana se combinam por E. Quando ambos são restritos, o cron executa se qualquer um coincidir, o que multiplica as execuções.",
+      "resumoFlashcard": {
+        "pergunta": "Como o cron trata uma linha com dia do mês e dia da semana restritos, como '30 3 1 * 1'?",
+        "resposta": "Executa quando qualquer um dos dois campos coincidir (OU): às 3h30 de todo dia 1 e de toda segunda-feira. Para exigir as duas condições, agenda-se por um campo e testa-se o outro no script."
+      },
+      "conceitosChave": ["Linux: agendamento com cron"],
+      "fundamentacao": "Página de manual crontab(5) do cronie (derivado do Vixie cron), descrição dos campos de data e hora e nota sobre a combinação de dia do mês e dia da semana."
+    },
+    {
+      "id": "so-redes-013",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Active Directory e LDAP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Após a manutenção de uma estação de trabalho do Tribunal ingressada no domínio Active Directory, os usuários passaram a receber falhas de autenticação ao fazer logon e ao acessar compartilhamentos de rede, embora as senhas estejam corretas e as contas, habilitadas e sem bloqueio. O técnico verificou que o relógio da estação está doze minutos adiantado em relação ao do controlador de domínio, que mantém a política Kerberos padrão. A causa mais provável e a providência adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Um servidor membro do domínio, recém-restaurado a partir de backup, passou a rejeitar o acesso de usuários às suas pastas compartilhadas, embora as credenciais estejam corretas e as contas, habilitadas e sem bloqueio. O técnico constatou que o relógio do servidor está doze minutos adiantado em relação ao controlador de domínio, que mantém a política Kerberos padrão. A causa mais provável e a providência adequada são, respectivamente,",
+        "Na central de serviços de TI, chegam chamados de falha de logon em uma única estação do domínio, logo após a troca da bateria da placa-mãe. As senhas estão corretas e as contas, habilitadas e sem bloqueio; o relógio da estação está doze minutos à frente do relógio do controlador de domínio, que usa a política Kerberos padrão. A causa mais provável e a providência adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a defasagem de horário supera a tolerância padrão de 5 minutos do Kerberos; deve-se corrigir a sincronização de tempo da estação com a hierarquia do domínio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Kerberos usa carimbos de tempo nos autenticadores para impedir a reutilização de mensagens capturadas (replay). Por padrão, a política 'Tolerância máxima para a sincronização do relógio do computador' admite 5 minutos de diferença; acima disso, o KDC rejeita as solicitações. A solução é restabelecer a sincronização (serviço w32time) com a hierarquia de tempo do domínio, que tem no topo o emulador PDC do domínio raiz da floresta, e não ampliar a tolerância.",
+          "versaoInvertidaFalsa": "a defasagem de horário está dentro da tolerância padrão de 15 minutos do Kerberos; a causa deve ser procurada no bloqueio das contas dos usuários."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o bloqueio das contas por tentativas inválidas; deve-se desbloqueá-las no console de usuários e computadores do domínio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O enunciado informa senhas corretas e contas habilitadas e sem bloqueio. Além disso, o sintoma atinge todos os usuários de uma mesma máquina logo após uma intervenção, o que aponta para um problema da máquina, não das contas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a expiração do tíquete TGT, que dura 12 minutos por padrão; deve-se ampliar sua validade na GPO do domínio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na política padrão do domínio, o TGT vale 10 horas (renovável por até 7 dias), e não 12 minutos. Ampliar a validade dos tíquetes não corrige a rejeição causada pela diferença de horário entre cliente e KDC."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a falta do registro A da estação no DNS; deve-se criá-lo manualmente, pois o Kerberos depende dele para validar senhas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O DNS é essencial para localizar os controladores de domínio (registros SRV), mas o registro A da estação não é usado para validar senhas. E a falta dele não explicaria a coincidência com a defasagem de doze minutos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o uso do NTLM no lugar do Kerberos; deve-se habilitar o LDAP na porta 389, que substitui o Kerberos na autenticação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. LDAP é protocolo de acesso ao diretório, não substituto do Kerberos na autenticação. O Kerberos é o protocolo padrão de autenticação em domínios AD desde o Windows 2000, e o NTLM, declarado preterido pela Microsoft em 2024, é apenas um mecanismo legado de contingência."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir o problema a senha, bloqueio de conta ou DNS e esquecer que o Kerberos depende de relógios sincronizados. A tolerância padrão é de 5 minutos, e a solução é corrigir o tempo, não ampliar a tolerância.",
+      "resumoFlashcard": {
+        "pergunta": "Por que a diferença de horário impede a autenticação Kerberos no Active Directory?",
+        "resposta": "Porque o Kerberos usa carimbos de tempo para evitar ataques de repetição (replay). Por padrão, o domínio tolera até 5 minutos de diferença entre cliente e KDC; acima disso a autenticação falha, e a solução é sincronizar o relógio com a hierarquia de tempo do domínio."
+      },
+      "conceitosChave": ["AD: Kerberos"],
+      "fundamentacao": "RFC 4120 (Kerberos V5), premissa de relógios aproximadamente sincronizados e uso de carimbos de tempo contra replay; Microsoft Learn, política 'Maximum tolerance for computer clock synchronization' (padrão de 5 minutos) e documentação do Serviço de Tempo do Windows (w32time)."
+    },
+    {
+      "id": "so-redes-014",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Virtualização e containers",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito dos hipervisores usados na virtualização de servidores, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao especificar a plataforma de virtualização dos servidores de um órgão público, a equipe de TI comparou hipervisores tipo 1 e tipo 2. Sobre esses tipos, é correto afirmar que",
+        "Um técnico precisa explicar à equipe de suporte a diferença entre o hipervisor usado nos servidores do datacenter e o aplicativo de virtualização instalado nas estações dos desenvolvedores. A esse respeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o hipervisor tipo 2 é instalado diretamente sobre o hardware e, por isso, oferece desempenho superior ao do tipo 1.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os tipos: quem é instalado diretamente sobre o hardware é o tipo 1. O tipo 2 depende de um sistema operacional hospedeiro, o que acrescenta uma camada e, em geral, mais sobrecarga."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o VirtualBox e o VMware Workstation são exemplos típicos de hipervisores tipo 1, próprios para datacenters.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. VirtualBox e VMware Workstation são hipervisores tipo 2, instalados como aplicativos sobre Windows, Linux ou macOS. Em datacenters predominam os de tipo 1, como ESXi, Hyper-V e Xen."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o hipervisor tipo 1 executa diretamente sobre o hardware, como o VMware ESXi, enquanto o tipo 2 roda sobre um sistema operacional hospedeiro.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O hipervisor tipo 1 (nativo ou bare metal) roda diretamente sobre o hardware e controla os recursos entregues às máquinas virtuais; exemplos: VMware ESXi, Microsoft Hyper-V e Xen. O tipo 2 (hospedado) é um aplicativo sobre um sistema operacional comum, como o VirtualBox e o VMware Workstation, mais usado em estações de trabalho e testes.",
+          "versaoInvertidaFalsa": "o hipervisor tipo 2 executa diretamente sobre o hardware, como o VMware ESXi, enquanto o tipo 1 roda sobre um sistema operacional hospedeiro."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o hipervisor tipo 1 dispensa extensões de virtualização no processador, exigidas apenas pelos hipervisores tipo 2.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Hipervisores modernos de ambos os tipos se apoiam nas extensões de virtualização assistida por hardware (Intel VT-x, AMD-V) para obter desempenho; o tipo 1 não as dispensa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as máquinas virtuais de um hipervisor tipo 1 compartilham o kernel do hospedeiro, como acontece com os containers.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cada máquina virtual executa seu próprio sistema operacional convidado, com kernel próprio, sobre hardware virtualizado. Compartilhar o kernel do hospedeiro é característica dos containers, não das VMs."
+        }
+      ],
+      "pegadinhaFCC": "Inverter os tipos ou classificar ferramentas de estação (VirtualBox, VMware Workstation) como tipo 1. O tipo 1 roda sobre o hardware; o tipo 2, sobre um sistema operacional hospedeiro.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre hipervisor tipo 1 e tipo 2?",
+        "resposta": "O tipo 1 (bare metal) roda diretamente sobre o hardware, como ESXi, Hyper-V e Xen. O tipo 2 (hospedado) roda como aplicativo sobre um sistema operacional, como VirtualBox e VMware Workstation."
+      },
+      "conceitosChave": ["Virtualização: hipervisores"],
+      "fundamentacao": "Popek e Goldberg, 'Formal Requirements for Virtualizable Third Generation Architectures', Communications of the ACM (1974); Tanenbaum e Bos, Sistemas Operacionais Modernos, capítulo 'Virtualização e a nuvem' (hipervisores tipo 1 e tipo 2)."
+    },
+    {
+      "id": "so-redes-015",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Arquitetura TCP/IP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No modelo TCP/IP de quatro camadas descrito no RFC 1122, ao ser enviada uma requisição HTTP, os dados da aplicação descem pela pilha e recebem cabeçalhos em cada camada. Sobre esse encapsulamento, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao explicar à equipe de suporte como uma requisição do navegador chega ao servidor do portal institucional, um técnico descreveu o encapsulamento no modelo TCP/IP de quatro camadas do RFC 1122. Sobre esse processo, é correto afirmar que",
+        "Considere que uma estação envia dados de uma aplicação a um servidor em outra rede, passando por dois roteadores. Em relação ao encapsulamento no modelo TCP/IP de quatro camadas (RFC 1122), é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o protocolo IP acrescenta as portas de origem e de destino, que identificam o processo da aplicação no host remoto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Portas de origem e de destino pertencem ao cabeçalho da camada de transporte (TCP ou UDP). O cabeçalho IP traz os endereços lógicos de origem e de destino, o TTL e o identificador do protocolo transportado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o ARP atua na camada de transporte, convertendo nomes de domínio em endereços IP antes da abertura da conexão TCP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem converte nomes em endereços IP é o DNS, serviço da camada de aplicação. O ARP descobre o endereço MAC correspondente a um endereço IPv4 da rede local e opera na fronteira entre as camadas de enlace e internet."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o quadro Ethernet é encapsulado dentro do pacote IP, que por sua vez é encapsulado no segmento TCP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem está invertida: o segmento TCP vai dentro do pacote IP, que vai dentro do quadro. O quadro é a unidade mais externa, a que é efetivamente transmitida no meio físico."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a camada de transporte forma o segmento TCP, que é encapsulado em um pacote IP e, depois, em um quadro na camada de enlace.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os dados da aplicação recebem o cabeçalho TCP (portas, números de sequência) e formam o segmento; a camada internet acrescenta o cabeçalho IP (endereços de origem e destino) e forma o pacote; a camada de enlace o envolve em um quadro (por exemplo, Ethernet, com endereços MAC). No destino, cada camada remove o seu cabeçalho, no processo inverso de desencapsulamento.",
+          "versaoInvertidaFalsa": "a camada de transporte forma o pacote IP, que é encapsulado em um segmento TCP e, depois, em um quadro na camada de enlace."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o endereço MAC de destino permanece o mesmo ao longo de todo o caminho, enquanto o IP de destino muda a cada roteador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: a cada salto, o roteador gera um novo quadro, com os MACs de origem e de destino do enlace seguinte, enquanto os endereços IP de origem e de destino se mantêm fim a fim (salvo quando há NAT)."
+        }
+      ],
+      "pegadinhaFCC": "Trocar a ordem do encapsulamento ou atribuir portas ao IP e resolução de nomes ao ARP. Também cai a inversão MAC × IP: o MAC muda a cada salto, e o IP se mantém fim a fim.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a ordem de encapsulamento no modelo TCP/IP?",
+        "resposta": "Dados da aplicação → segmento (TCP) ou datagrama (UDP) → pacote IP → quadro de enlace → bits no meio físico. No destino, o processo se inverte, e cada camada retira o próprio cabeçalho."
+      },
+      "conceitosChave": ["TCP/IP: camadas e encapsulamento"],
+      "fundamentacao": "RFC 1122 (Requirements for Internet Hosts — Communication Layers), seção 1.1.3; RFC 826 (ARP); Kurose e Ross, Redes de Computadores e a Internet, capítulo 1 (camadas de protocolo e encapsulamento)."
+    },
+    {
+      "id": "so-redes-016",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Endereçamento IPv4 e IPv6",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Pertence a uma das faixas de endereços IPv4 privados definidas no RFC 1918 o endereço",
+      "variantesEnunciado": [
+        "Ao revisar o plano de endereçamento da rede interna de um órgão público, um técnico precisa identificar qual endereço pertence às faixas privadas do RFC 1918. Trata-se do endereço",
+        "Em uma auditoria de rede, constatou-se que uma estação usava um endereço de uma das faixas reservadas para redes privadas pelo RFC 1918. Esse endereço pode ser"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "172.20.5.10",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O RFC 1918 reserva três blocos para uso privado: 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16. O bloco 172.16.0.0/12 vai de 172.16.0.0 a 172.31.255.255, e por isso 172.20.5.10 é privado. Esses endereços não são roteados na internet e dependem de NAT para acessá-la.",
+          "versaoInvertidaFalsa": "172.20.5.10 é endereço público, pois o bloco privado 172.16.0.0/12 termina em 172.16.255.255."
+        },
+        {
+          "id": "opt-2",
+          "texto": "172.32.10.1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloco privado 172.16.0.0/12 termina em 172.31.255.255; 172.32.10.1 está logo fora dele e é um endereço público. A armadilha é supor que toda a faixa iniciada por 172 é privada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "192.169.0.10",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloco privado é 192.168.0.0/16. O endereço 192.169.0.10 apenas se parece com ele, mas pertence ao espaço público de endereçamento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "100.64.12.3",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloco 100.64.0.0/10 é o espaço compartilhado para o NAT de grande escala das operadoras (CGNAT), definido no RFC 6598. Não é privado no sentido do RFC 1918 e não deve ser usado como rede interna comum."
+        },
+        {
+          "id": "opt-5",
+          "texto": "169.254.20.7",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloco 169.254.0.0/16 é de endereços de enlace local (RFC 3927), atribuídos automaticamente quando a estação não obtém configuração, como no APIPA do Windows. Não integra as faixas do RFC 1918."
+        }
+      ],
+      "pegadinhaFCC": "Confundir 172.16.0.0/12 com toda a faixa iniciada por 172 e tratar como RFC 1918 os blocos 100.64.0.0/10 (CGNAT) e 169.254.0.0/16 (enlace local), que têm outras finalidades.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as faixas de endereços privados do RFC 1918?",
+        "resposta": "10.0.0.0/8, 172.16.0.0/12 (de 172.16.0.0 a 172.31.255.255) e 192.168.0.0/16. Os blocos 100.64.0.0/10 (CGNAT) e 169.254.0.0/16 (enlace local) são reservados para outros fins."
+      },
+      "conceitosChave": ["IPv4: endereços privados e NAT"],
+      "fundamentacao": "RFC 1918 (Address Allocation for Private Internets), seção 3; RFC 6598 (bloco 100.64.0.0/10); RFC 3927 (bloco 169.254.0.0/16)."
+    },
+    {
+      "id": "so-redes-017",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "DNS e DHCP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O portal de serviços do Tribunal foi migrado para um novo servidor, e o registro A do nome do portal, cujo TTL é de 86.400 segundos, foi atualizado às 10h na zona autoritativa; os servidores autoritativos primário e secundário passaram a responder com o novo endereço. No restante do dia, porém, parte dos usuários continuou sendo direcionada ao endereço antigo, enquanto outros já acessavam o novo. A explicação técnica e a boa prática para futuras migrações são, respectivamente,",
+      "variantesEnunciado": [
+        "Após a troca do servidor do sistema de peticionamento eletrônico, o registro A do respectivo nome foi alterado na zona autoritativa, mantendo-se o TTL de 86.400 segundos. Os servidores autoritativos primário e secundário já respondem com o novo endereço, mas, durante várias horas, parte dos usuários continuou chegando ao servidor antigo. A explicação técnica e a boa prática para próximas migrações são, respectivamente,",
+        "Considere que o endereço IP de um serviço web de um órgão público mudou e que o registro A correspondente, com TTL de um dia (86.400 s), foi atualizado imediatamente nos servidores autoritativos, que já respondem com o novo valor. Ainda assim, algumas redes continuaram resolvendo o nome para o IP antigo por várias horas. A explicação técnica e a boa prática para futuras migrações são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "falha na transferência de zona para o servidor secundário, que só ocorre uma vez por dia; e desativar o secundário durante migrações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O enunciado informa que os autoritativos primário e secundário já respondem com o novo endereço, o que afasta falha de transferência de zona. Desativar o secundário reduziria a disponibilidade do DNS sem resolver o cache dos resolvedores."
+        },
+        {
+          "id": "opt-2",
+          "texto": "propagação lenta do registro entre os servidores raiz, que replicam todas as zonas da internet; e pedir aos servidores raiz a atualização imediata.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os servidores raiz não armazenam as zonas dos domínios: apenas indicam os servidores dos domínios de topo (referências). A expressão 'propagação de DNS' descreve, na prática, a expiração dos caches pelo TTL."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os resolvedores recursivos mantêm em cache a resposta antiga até o fim do TTL; e reduzir o TTL do registro com antecedência à mudança.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Cada resolvedor recursivo (e o cache local das estações) guarda a resposta pelo tempo indicado no TTL; com 86.400 s, a resposta antiga pode ser reutilizada por até 24 horas após a última consulta feita antes da mudança. Por isso convivem usuários no endereço antigo e no novo. A boa prática é baixar o TTL (por exemplo, para alguns minutos) com antecedência de pelo menos um TTL antigo, migrar e depois restaurar o valor.",
+          "versaoInvertidaFalsa": "os resolvedores recursivos descartam o cache assim que o registro muda na zona autoritativa; e aumentar o TTL antes da mudança acelera a migração."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o uso de consultas iterativas pelas estações, que dispensam cache; e configurar os clientes para enviar somente consultas recursivas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As estações normalmente fazem consultas recursivas ao resolvedor, e é o resolvedor que faz as consultas iterativas à raiz, ao TLD e ao autoritativo. O comportamento observado vem do cache, que existe justamente nos resolvedores recursivos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a ausência de registro PTR para o novo endereço, que impede a resolução direta; e criar o registro reverso antes da migração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PTR serve à resolução reversa (de endereço para nome) e não interfere na resolução direta do nome do portal, que depende do registro A. A falta de PTR não explicaria usuários indo ao endereço antigo."
+        }
+      ],
+      "pegadinhaFCC": "Culpar a 'propagação' pelos servidores raiz ou a transferência de zona, quando o efeito decorre do cache por TTL nos resolvedores. A boa prática é reduzir o TTL antes da mudança, e não depois.",
+      "resumoFlashcard": {
+        "pergunta": "Por que, após a alteração de um registro DNS, alguns usuários ainda resolvem o endereço antigo?",
+        "resposta": "Porque resolvedores e clientes mantêm a resposta em cache pelo tempo do TTL. Com TTL de 86.400 s, o valor antigo pode persistir por até 24 horas; reduz-se o TTL com antecedência para encurtar essa janela."
+      },
+      "conceitosChave": ["DNS: resolução e cache (TTL)"],
+      "fundamentacao": "RFC 1034, seções 3.6 e 4.3 (TTL, resolvedores e cache); RFC 1035, seção 3.2.1 (campo TTL); RFC 2181, seção 8 (TTL)."
+    },
+    {
+      "id": "so-redes-018",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "HTTP/2, HTTP/3, HTTPS, SMTP, FTP e SSH",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Ao configurar o cliente de correio dos servidores do Tribunal para o envio de mensagens por meio do servidor institucional, um técnico precisa usar a submissão autenticada e cifrada, reservando a porta 25 para a retransmissão entre servidores de correio. As configurações adequadas para o envio são",
+      "variantesEnunciado": [
+        "A equipe de TI de um órgão público vai padronizar o envio de e-mails pelos clientes de correio das estações, exigindo autenticação e criptografia e deixando a porta 25 apenas para a troca de mensagens entre servidores de correio. As configurações de envio adequadas são",
+        "Um sistema interno do Tribunal precisa enviar notificações por e-mail por meio do servidor de correio institucional, como cliente autenticado e com o canal cifrado. Sabendo que a porta 25 deve ficar restrita à retransmissão entre servidores, as configurações adequadas para o envio são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "porta 25 com STARTTLS ou porta 110 com TLS implícito, pois ambas se destinam à submissão por clientes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A porta 25 é a de retransmissão entre servidores, que o próprio cenário quer reservar, e a 110 é a do POP3, protocolo de recuperação de mensagens, não de envio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "porta 143 com STARTTLS ou porta 993 com TLS implícito, as portas padronizadas para a submissão de mensagens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As portas 143 e 993 pertencem ao IMAP (sem e com TLS implícito), protocolo usado para acessar caixas postais, e não para enviar mensagens."
+        },
+        {
+          "id": "opt-3",
+          "texto": "porta 21 com AUTH TLS ou porta 990 com TLS implícito, que o SMTP compartilha com o FTPS.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As portas 21 e 990 são do FTP e do FTPS implícito. O SMTP não as utiliza; a confusão explora a expressão 'TLS implícito', presente em vários protocolos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "porta 465 com STARTTLS ou porta 587 com TLS implícito, conforme a recomendação do RFC 8314.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As portas estão invertidas: o STARTTLS é usado na 587, e a 465 é a de TLS implícito. A inversão é armadilha comum porque as duas portas atendem à submissão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "porta 587 com STARTTLS ou porta 465 com TLS implícito, ambas com autenticação do usuário.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A porta 587 é a de submissão (RFC 6409): o cliente se conecta, eleva a sessão com STARTTLS e se autentica. A porta 465 foi padronizada pelo RFC 8314 para submissão com TLS implícito, em que a sessão já nasce cifrada, opção que esse RFC recomenda. A porta 25 fica para a retransmissão entre servidores (MTA a MTA).",
+          "versaoInvertidaFalsa": "porta 25 com STARTTLS, pois a submissão por clientes e a retransmissão entre servidores usam obrigatoriamente a mesma porta."
+        }
+      ],
+      "pegadinhaFCC": "Inverter 587 (STARTTLS) e 465 (TLS implícito) ou trocar portas de envio pelas de leitura de caixa postal (POP3 110/995, IMAP 143/993).",
+      "resumoFlashcard": {
+        "pergunta": "Quais portas o SMTP usa para retransmissão e para submissão?",
+        "resposta": "A porta 25 é usada na retransmissão entre servidores (MTA a MTA). A submissão por clientes usa a 587, com STARTTLS (RFC 6409), ou a 465, com TLS implícito (RFC 8314), sempre com autenticação."
+      },
+      "conceitosChave": ["SMTP: portas e submissão"],
+      "fundamentacao": "RFC 5321 (SMTP); RFC 6409 (Message Submission for Mail); RFC 8314 (Cleartext Considered Obsolete: Use of TLS for Email Submission and Access), seção 3."
+    },
+    {
+      "id": "so-redes-019",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Redes sem fio",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das gerações de redes sem fio padronizadas pelo IEEE e nomeadas comercialmente pela Wi-Fi Alliance, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao especificar pontos de acesso sem fio para as salas de reunião de um órgão público, a equipe de TI precisou relacionar os nomes comerciais Wi-Fi 4 a Wi-Fi 7 aos padrões IEEE 802.11. Sobre o tema, é correto afirmar que",
+        "Em um estudo de modernização da rede sem fio do Tribunal, um técnico comparou as gerações Wi-Fi e seus recursos. A esse respeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Wi-Fi 5 corresponde ao IEEE 802.11n e foi a primeira geração certificada a operar tanto em 2,4 GHz quanto em 5 GHz.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O IEEE 802.11n é o Wi-Fi 4; o Wi-Fi 5 é o 802.11ac, que opera somente em 5 GHz. A troca entre as letras dos padrões e os números das gerações é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Wi-Fi 6 corresponde ao IEEE 802.11ax e introduziu o OFDMA, e o Wi-Fi 6E estende esse padrão à faixa de 6 GHz.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Wi-Fi 6 é o IEEE 802.11ax, que trouxe OFDMA, MU-MIMO nos dois sentidos, modulação 1024-QAM e Target Wake Time, operando em 2,4 e 5 GHz. O Wi-Fi 6E é o mesmo 802.11ax estendido à faixa de 6 GHz, menos congestionada. A sequência é: Wi-Fi 4 = 802.11n, Wi-Fi 5 = 802.11ac, Wi-Fi 6/6E = 802.11ax e Wi-Fi 7 = 802.11be.",
+          "versaoInvertidaFalsa": "o Wi-Fi 6 corresponde ao IEEE 802.11ac e introduziu o OFDMA, e o Wi-Fi 6E estende esse padrão à faixa de 2,4 GHz."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Wi-Fi 7 corresponde ao IEEE 802.11ac e se limita à faixa de 5 GHz, com canais de até 160 MHz.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Wi-Fi 7 é o IEEE 802.11be (aprovado em 2024), que opera em 2,4, 5 e 6 GHz, admite canais de 320 MHz e modulação 4096-QAM. Canais de até 160 MHz restritos a 5 GHz caracterizam o 802.11ac (Wi-Fi 5)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Wi-Fi 6E é uma geração própria, baseada no IEEE 802.11be, que dispensa o WPA3 na faixa de 6 GHz.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Wi-Fi 6E não se baseia em outro padrão: é o 802.11ax operando em 6 GHz. Nessa faixa, a certificação exige WPA3 (ou Enhanced Open em redes abertas), e o WPA2 não é admitido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o Wi-Fi 4 corresponde ao IEEE 802.11ax e trouxe a operação com múltiplos enlaces simultâneos (MLO).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Wi-Fi 4 é o IEEE 802.11n, que popularizou o MIMO e os canais de 40 MHz. A operação com múltiplos enlaces (MLO) é novidade do Wi-Fi 7 (802.11be)."
+        }
+      ],
+      "pegadinhaFCC": "Embaralhar a correspondência entre nomes comerciais e padrões (n = 4, ac = 5, ax = 6/6E, be = 7) e atribuir recursos de uma geração a outra, como o MLO, que é do Wi-Fi 7.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a correspondência entre as gerações Wi-Fi e os padrões IEEE 802.11?",
+        "resposta": "Wi-Fi 4 = 802.11n; Wi-Fi 5 = 802.11ac; Wi-Fi 6 = 802.11ax (2,4 e 5 GHz) e Wi-Fi 6E = 802.11ax em 6 GHz; Wi-Fi 7 = 802.11be, com canais de 320 MHz e MLO."
+      },
+      "conceitosChave": ["Wi-Fi: padrões IEEE 802.11"],
+      "fundamentacao": "IEEE Std 802.11ax-2021; IEEE Std 802.11be-2024 (aprovado em 26/09/2024 e publicado em 2025); Wi-Fi Alliance, nomenclatura geracional (Wi-Fi 4, 5, 6, 6E e 7)."
+    },
+    {
+      "id": "so-redes-020",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Escalabilidade, alta disponibilidade, nuvem híbrida e monitoramento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um sistema de processo eletrônico do Tribunal é composto por um balanceador de carga com disponibilidade de 99,9%, dois servidores de aplicação idênticos em configuração ativo-ativo, cada um com disponibilidade de 99%, e um único servidor de banco de dados com disponibilidade de 99,5%. O sistema funciona se o balanceador, pelo menos um dos servidores de aplicação e o banco estiverem operando, e as falhas são independentes. A disponibilidade aproximada do sistema e o componente que mais limita esse resultado são, respectivamente,",
+      "variantesEnunciado": [
+        "Considere uma arquitetura com um balanceador de carga (disponibilidade de 99,9%), dois servidores web redundantes ativo-ativo (99% cada) e um único servidor de banco de dados (99,5%). O serviço permanece disponível se o balanceador, ao menos um servidor web e o banco estiverem operando, e as falhas são independentes. A disponibilidade aproximada do serviço e o componente que mais a limita são, respectivamente,",
+        "Em uma auditoria de continuidade de um sistema crítico, o técnico levantou: balanceador de carga com 99,9% de disponibilidade, dois servidores de aplicação idênticos em paralelo, com 99% cada, e banco de dados único com 99,5%. Admitindo falhas independentes e que basta um servidor de aplicação ativo, a disponibilidade aproximada do conjunto e o componente que mais a reduz são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "97,42%, e o par de servidores de aplicação, pois cada servidor acrescenta uma nova possibilidade de falha ao conjunto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor de 97,42% resulta de multiplicar todos os componentes como se estivessem em série (0,99 × 0,99 × 0,999 × 0,995). Servidores redundantes em paralelo aumentam a disponibilidade: o sistema só para se os dois falharem ao mesmo tempo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "99,50%, pois a disponibilidade de componentes em série é igual à do menos disponível, no caso o banco de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em série, a disponibilidade é o produto das disponibilidades, sempre menor que a do componente mais fraco, e não igual a ela. O banco é de fato o elo mais fraco, mas o valor de 99,50% ignora a contribuição dos demais componentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "99,49%, já que o balanceador não interfere na disponibilidade por apenas repassar as requisições aos servidores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor de 99,49% (0,9999 × 0,995) desconsidera o balanceador. Como todo o tráfego passa por ele, o balanceador é componente em série e sua disponibilidade de 99,9% entra no produto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "99,39%, e o banco de dados, que, sem redundância e com a menor disponibilidade, é o componente que mais reduz a disponibilidade do sistema.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Primeiro, o par ativo-ativo em paralelo: 1 − (1 − 0,99)² = 1 − 0,0001 = 0,9999. Depois, os três blocos em série se multiplicam: 0,999 × 0,9999 × 0,995 ≈ 0,99391, ou seja, cerca de 99,39%. O banco, ponto único de falha com 99,5%, é o fator que mais derruba o resultado; o passo seguinte para melhorar seria torná-lo redundante, por exemplo com réplica e failover.",
+          "versaoInvertidaFalsa": "99,39%, e o balanceador de carga, que, por receber todas as requisições, limita mais o sistema do que o banco de dados de 99,5%."
+        },
+        {
+          "id": "opt-5",
+          "texto": "98,41%, e o balanceador de carga, por ser o único ponto de entrada de todas as requisições.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor de 98,41% (0,99 × 0,999 × 0,995) trata o par de servidores como se fosse um só, ignorando a redundância. O balanceador também é ponto único de falha, mas, com 99,9%, limita menos que o banco, de 99,5%."
+        }
+      ],
+      "pegadinhaFCC": "Tratar componentes redundantes como se estivessem em série ou supor que a disponibilidade em série é igual à do componente mais fraco. Em paralelo, multiplicam-se as indisponibilidades; em série, as disponibilidades.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular a disponibilidade de componentes em série e em paralelo?",
+        "resposta": "Em série, multiplicam-se as disponibilidades (A1 × A2 × …). Em paralelo, calcula-se 1 − (1 − A1) × (1 − A2) × …. Dois servidores de 99% em paralelo chegam a 99,99%, e o conjunto fica limitado pelos pontos únicos de falha."
+      },
+      "conceitosChave": ["Alta disponibilidade: cálculo"],
+      "fundamentacao": "Teoria de confiabilidade de sistemas (combinação de blocos em série e em paralelo); Beyer et al., Site Reliability Engineering (O'Reilly, 2016), capítulo 'Embracing Risk'. Valores conferidos por script em Python."
+    }
+  ]
+}
