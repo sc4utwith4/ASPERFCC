@@ -1,0 +1,664 @@
+{
+  "materiaSlug": "governanca-ti",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "gov-ti-041",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao estruturar o catálogo de práticas da área de TI de um jurisdicionado conforme o ITIL 4, um técnico classificou as 34 práticas de gerenciamento nas três categorias previstas no modelo. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em capacitação sobre o ITIL 4 para a equipe de TI do Tribunal, o instrutor apresentou as práticas de gerenciamento e suas categorias. Considere as afirmativas abaixo.",
+        "Para definir responsáveis por práticas do ITIL 4 em uma secretaria estadual, a coordenação de TI precisou agrupar as práticas segundo as categorias do modelo. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "As 34 práticas dividem-se em 14 práticas de gerenciamento geral, 17 de gerenciamento de serviços e 3 de gerenciamento técnico.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a divisão adotada pelo ITIL 4 para suas 34 práticas de gerenciamento."
+        },
+        {
+          "texto": "Gerenciamento de implantação (deployment) é prática de gerenciamento técnico, ao passo que gerenciamento de liberação (release) é prática de gerenciamento de serviços.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. As três práticas técnicas são gerenciamento de implantação, gerenciamento de infraestrutura e plataforma e desenvolvimento e gerenciamento de software. Liberação é prática de gerenciamento de serviços."
+        },
+        {
+          "texto": "Gerenciamento de portfólio e gerenciamento de projetos são práticas de gerenciamento de serviços, por tratarem do ciclo de vida dos serviços.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Portfólio e projetos são práticas de gerenciamento geral, adaptadas da gestão organizacional, ao lado de estratégia, riscos, arquitetura, fornecedores e outras."
+        },
+        {
+          "texto": "Gerenciamento de ativos de TI e gerenciamento de continuidade de serviço são práticas de gerenciamento geral.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Ambas são práticas de gerenciamento de serviços, ao lado de incidentes, problemas, mudanças, configuração, catálogo, nível de serviço, central de serviços e outras."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, falsa: portfólio e projetos são práticas de gerenciamento geral, e não de gerenciamento de serviços. As afirmativas I e II, essas sim, estão corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa, porque ativos de TI e continuidade de serviço são práticas de gerenciamento de serviços. Também omite a afirmativa I, verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O ITIL 4 tem 34 práticas: 14 gerais (como portfólio, projetos, riscos e estratégia), 17 de gerenciamento de serviços (como liberação, ativos de TI, continuidade, incidentes e mudanças) e 3 técnicas (implantação, infraestrutura e plataforma e desenvolvimento e gerenciamento de software). As afirmativas III e IV classificam práticas na categoria errada.",
+          "versaoInvertidaFalsa": "No ITIL 4, gerenciamento de implantação e gerenciamento de liberação são práticas de gerenciamento técnico, e portfólio e projetos são práticas de gerenciamento de serviços."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas III e IV são falsas, e a II, verdadeira, foi omitida. Implantação (prática técnica) e liberação (prática de serviço) ficam em categorias diferentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas: portfólio e projetos são práticas gerais, e ativos de TI e continuidade são práticas de gerenciamento de serviços."
+        }
+      ],
+      "pegadinhaFCC": "A banca cobra a classificação fina das práticas: implantação é técnica, mas liberação é de serviço; portfólio e projetos são gerais; ativos de TI e continuidade são de serviço. A contagem 14 + 17 + 3 = 34 também costuma aparecer alterada.",
+      "resumoFlashcard": {
+        "pergunta": "Como se dividem as 34 práticas do ITIL 4 e quais são as técnicas?",
+        "resposta": "São 14 de gerenciamento geral, 17 de gerenciamento de serviços e 3 de gerenciamento técnico. As técnicas são gerenciamento de implantação, gerenciamento de infraestrutura e plataforma e desenvolvimento e gerenciamento de software."
+      },
+      "conceitosChave": [
+        "ITIL 4: práticas"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5 (ITIL management practices: 14 práticas de gerenciamento geral, 17 de gerenciamento de serviços e 3 de gerenciamento técnico)."
+    },
+    {
+      "id": "gov-ti-042",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI do Tribunal está revisando sua política de habilitação de mudanças (change enablement) à luz do ITIL 4. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em auditoria do processo de mudanças de um jurisdicionado, a equipe do Tribunal adotou o ITIL 4 como referência de boas práticas. Considere as afirmativas abaixo.",
+        "Ao elaborar o manual de gestão de mudanças de uma secretaria estadual, um técnico consultou a prática de habilitação de mudanças do ITIL 4. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A avaliação de risco de uma mudança padrão é feita quando seu procedimento é criado ou modificado, não sendo necessário repeti-la a cada execução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A mudança padrão é pré-autorizada: o risco é avaliado na criação ou na alteração do procedimento, e cada execução dispensa nova autorização."
+        },
+        {
+          "texto": "Mudanças emergenciais dispensam qualquer avaliação e autorização, pois a urgência impede a atuação de uma autoridade de mudança.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Mudanças emergenciais têm avaliação e autorização expeditas, e pode haver autoridade de mudança específica para elas, em geral com poucos gestores seniores. Na medida do possível, passam pelos mesmos testes, avaliação e autorização das mudanças normais."
+        },
+        {
+          "texto": "A autoridade de mudança pode variar conforme o tipo e o risco da mudança, não sendo necessário que seja sempre um comitê centralizado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No ITIL 4, os modelos de mudança definem quem avalia e autoriza. A autoridade pode ser uma pessoa, um grupo ou um mecanismo automatizado, e mudanças de alto impacto podem exigir instâncias superiores."
+        },
+        {
+          "texto": "Em mudanças emergenciais, pode ser aceitável concluir parte da documentação depois da implementação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O ITIL 4 admite adiar parte da documentação de mudanças emergenciais e, por restrição de tempo, implementá-las às vezes com menos testes."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa: mudanças emergenciais não dispensam avaliação e autorização, que apenas são expeditas. Também omite III e IV, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa, e omite a I, verdadeira. A mudança padrão é pré-autorizada: a avaliação de risco ocorre na criação ou alteração do procedimento, e não a cada execução."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa. A urgência acelera a avaliação e a autorização da mudança emergencial, mas não as elimina."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa I, verdadeira: a avaliação de risco da mudança padrão ocorre na criação ou na alteração do procedimento, e não a cada execução."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo ITIL 4, a mudança padrão tem o risco avaliado quando seu procedimento é criado ou alterado (I). A autoridade de mudança varia conforme o tipo e o risco, sem exigir comitê centralizado (III). Em emergências, parte da documentação pode ser concluída depois (IV). A II é falsa porque a mudança emergencial tem avaliação e autorização expeditas, e não dispensadas.",
+          "versaoInvertidaFalsa": "No ITIL 4, a mudança emergencial dispensa avaliação e autorização, e toda mudança normal deve ser aprovada por um comitê consultivo de mudanças centralizado."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde 'expedito' com 'dispensado' na mudança emergencial e insiste na ideia, típica de versões antigas, de que toda mudança exige um CAB centralizado. No ITIL 4, a autoridade de mudança é definida conforme o tipo e o risco.",
+      "resumoFlashcard": {
+        "pergunta": "Como o ITIL 4 trata a avaliação e a autorização de mudanças padrão e emergenciais?",
+        "resposta": "Na mudança padrão, o risco é avaliado na criação ou alteração do procedimento, e cada execução já está pré-autorizada. Na emergencial, avaliação e autorização são expeditas, pode haver autoridade própria e parte da documentação pode ser concluída depois."
+      },
+      "conceitosChave": [
+        "Gestão de serviços: tipos de mudança",
+        "ITIL 4: habilitação de mudanças"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, prática de controle de mudanças (change control), denominada habilitação de mudanças (change enablement) no guia da prática: mudanças padrão, normais e emergenciais, autoridade de mudança e cronograma de mudanças."
+    },
+    {
+      "id": "gov-ti-043",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na Lei 14.133/2021, a …… é cláusula contratual definidora de riscos e de responsabilidades entre as partes e caracterizadora do equilíbrio econômico-financeiro inicial do contrato. O edital deverá obrigatoriamente contemplá-la quando a contratação se referir a obras e serviços de …… ou quando forem adotados os regimes de contratação integrada e semi-integrada. Já o contrato que previr a operação continuada de sistemas estruturantes de tecnologia da informação poderá ter vigência máxima de …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao planejar a contratação de solução de TI de grande porte, a equipe do Tribunal verificou que a Lei 14.133/2021 define a …… como cláusula que distribui riscos e responsabilidades e caracteriza o equilíbrio econômico-financeiro inicial, obrigatória no edital em obras e serviços de …… e nos regimes de contratação integrada e semi-integrada, e que admite vigência máxima de …… para contrato de operação continuada de sistemas estruturantes de TI. Preenchem, correta e respectivamente, as lacunas:",
+        "Segundo a Lei 14.133/2021, a cláusula que define riscos e responsabilidades entre as partes e caracteriza o equilíbrio econômico-financeiro inicial é a …… ; ela é obrigatória no edital de obras e serviços de …… e nos regimes de contratação integrada e semi-integrada; e o contrato de operação continuada de sistemas estruturantes de tecnologia da informação pode durar até …… . Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "análise de riscos − grande vulto − 10 anos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A análise de riscos é etapa da fase preparatória (art. 18, X), e não a cláusula contratual que distribui riscos, chamada matriz de riscos (art. 6º, XXVII). Dez anos é o limite de prorrogação de serviços e fornecimentos contínuos (art. 107), e não o prazo de sistemas estruturantes de TI."
+        },
+        {
+          "id": "opt-2",
+          "texto": "matriz de riscos − grande vulto − 15 anos",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Matriz de riscos é a cláusula contratual que define riscos e responsabilidades entre as partes e caracteriza o equilíbrio econômico-financeiro inicial (art. 6º, XXVII). O edital deve contemplá-la obrigatoriamente em obras e serviços de grande vulto e nos regimes de contratação integrada e semi-integrada (art. 22, § 3º). O contrato de operação continuada de sistemas estruturantes de TI pode ter vigência máxima de 15 anos (art. 114).",
+          "versaoInvertidaFalsa": "Na Lei 14.133/2021, a matriz de riscos é obrigatória em toda contratação de TIC, e o contrato de operação continuada de sistemas estruturantes de TI pode durar no máximo 10 anos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "matriz de riscos − natureza intelectual − 10 anos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A obrigatoriedade da matriz no edital está ligada a obras e serviços de grande vulto e aos regimes de contratação integrada e semi-integrada, e não a serviços de natureza intelectual. O prazo de sistemas estruturantes de TI é de até 15 anos (art. 114)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "matriz de riscos − grande vulto − 5 anos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cinco anos é o prazo inicial admitido para contratos de serviços e fornecimentos contínuos (art. 106), prorrogáveis até dez anos (art. 107). Para a operação continuada de sistemas estruturantes de TI, a lei admite até 15 anos (art. 114)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "garantia contratual − serviços comuns de engenharia − 15 anos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Garantia contratual é instrumento para assegurar a execução, e não a cláusula que distribui riscos e responsabilidades. A obrigatoriedade da matriz não se vincula a serviços comuns de engenharia, mas ao grande vulto e aos regimes integrado e semi-integrado."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca matriz de riscos por análise de riscos e mistura os prazos de vigência da lei: 5 anos (contínuos, art. 106), 10 anos (prorrogação, art. 107) e 15 anos (sistemas estruturantes de TI, art. 114).",
+      "resumoFlashcard": {
+        "pergunta": "Na Lei 14.133/2021, quando a matriz de riscos é obrigatória e qual é a vigência máxima de contrato de sistemas estruturantes de TI?",
+        "resposta": "A matriz é obrigatória no edital de obras e serviços de grande vulto e nos regimes de contratação integrada e semi-integrada (art. 22, § 3º). O contrato de operação continuada de sistemas estruturantes de TI pode ter até 15 anos (art. 114)."
+      },
+      "conceitosChave": [
+        "Lei 14.133: matriz de riscos",
+        "Lei 14.133: vigência dos contratos"
+      ],
+      "fundamentacao": "Lei 14.133/2021, art. 6º, XXVII (matriz de riscos), art. 18, X (análise de riscos), art. 22, § 3º, e arts. 106, 107 e 114 (vigência)."
+    },
+    {
+      "id": "gov-ti-044",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma equipe de auditoria do Tribunal avalia a governança das contratações de TIC de um jurisdicionado estadual, usando a Lei 14.133/2021 como critério e a Instrução Normativa SGD/ME nº 94/2022, aplicável ao Poder Executivo federal, como referência de boas práticas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao planejar fiscalização sobre contratações de soluções de TIC de uma secretaria estadual, a equipe do Tribunal adotou a Lei 14.133/2021 como critério e a IN SGD/ME nº 94/2022, editada para o Executivo federal, como referência de boas práticas. Considere as afirmativas abaixo.",
+        "Em curso para jurisdicionados sobre governança de contratações de TIC, o instrutor tratou da Lei 14.133/2021 e, como boa prática federal, da IN SGD/ME nº 94/2022. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A alta administração do órgão é responsável pela governança das contratações e deve implementar processos e estruturas, inclusive de gestão de riscos e controles internos, para avaliar, direcionar e monitorar os processos licitatórios e os contratos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o que dispõe o parágrafo único do art. 11 da Lei 14.133/2021, que inclui entre as finalidades assegurar o alinhamento das contratações ao planejamento estratégico e às leis orçamentárias."
+        },
+        {
+          "texto": "Na estrutura de linhas de defesa prevista na lei, o tribunal de contas integra a segunda linha, ao lado da assessoria jurídica e do controle interno do próprio órgão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pelo art. 169, a segunda linha é formada pelas unidades de assessoramento jurídico e de controle interno do próprio órgão. O órgão central de controle interno da Administração e o tribunal de contas compõem a terceira linha."
+        },
+        {
+          "texto": "Em observância ao princípio da segregação de funções, é vedada a designação do mesmo agente público para atuação simultânea em funções mais suscetíveis a riscos, de modo a reduzir a possibilidade de ocultação de erros e de fraudes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 7º, § 1º, da Lei 14.133/2021, dirigida à autoridade que designa os agentes que atuam nas contratações."
+        },
+        {
+          "texto": "Segundo a IN SGD/ME nº 94/2022, a empresa que fornece a solução de TIC pode ser contratada também para avaliar, mensurar ou apoiar a fiscalização dessa mesma solução, desde que por contrato distinto.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A IN veda que a contratada que provê a solução de TIC seja a mesma que a avalia, mensura ou apoia sua fiscalização, quando esses serviços forem objeto de contratação (art. 4º). Contrato distinto não afasta o conflito de interesses."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A afirmativa I reproduz o art. 11, parágrafo único, da Lei 14.133/2021 (governança das contratações a cargo da alta administração), e a III, o art. 7º, § 1º (segregação de funções). A II é falsa porque o tribunal de contas integra a terceira linha (art. 169, III). A IV é falsa porque a IN SGD/ME nº 94/2022 veda que quem fornece a solução também a avalie ou apoie sua fiscalização (art. 4º).",
+          "versaoInvertidaFalsa": "Na Lei 14.133/2021, a governança das contratações cabe à unidade de compras, e o tribunal de contas atua na segunda linha de defesa, ao lado do controle interno do próprio órgão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa: o tribunal de contas, ao lado do órgão central de controle interno, compõe a terceira linha de defesa (art. 169, III), e não a segunda."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas são falsas, e as verdadeiras (I e III) ficaram de fora. A combinação atrai quem confunde as linhas de defesa e supõe que contratos distintos eliminam o conflito de interesses."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa: a IN SGD/ME nº 94/2022 proíbe que a mesma contratada forneça a solução e a avalie, mensure ou apoie sua fiscalização (art. 4º)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa I, verdadeira, e inclui a IV, falsa. A responsabilidade da alta administração pela governança das contratações está expressa no art. 11, parágrafo único, da Lei 14.133/2021."
+        }
+      ],
+      "pegadinhaFCC": "A banca desloca o tribunal de contas da terceira para a segunda linha de defesa e sugere que um contrato distinto resolveria o conflito entre fornecer e fiscalizar a mesma solução. Também testa a responsabilidade da alta administração e a segregação de funções.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as três linhas de defesa das contratações na Lei 14.133/2021?",
+        "resposta": "1ª: servidores, agentes de licitação e autoridades que atuam na governança do órgão; 2ª: assessoramento jurídico e controle interno do próprio órgão; 3ª: órgão central de controle interno da Administração e tribunal de contas (art. 169)."
+      },
+      "conceitosChave": [
+        "Lei 14.133: governança das contratações",
+        "Lei 14.133: linhas de defesa",
+        "Contratações de TIC: IN SGD/ME 94/2022"
+      ],
+      "fundamentacao": "Lei 14.133/2021, art. 7º, § 1º (segregação de funções), art. 11, parágrafo único (governança das contratações), e art. 169, I a III (linhas de defesa); IN SGD/ME nº 94/2022, art. 4º (vedação de que a fornecedora da solução de TIC a avalie, mensure ou apoie sua fiscalização), norma aplicável aos órgãos do SISP."
+    },
+    {
+      "id": "gov-ti-045",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Estratégia Nacional de Governo Digital (ENGD 2024–2027)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em estudo para subsidiar a fiscalização de iniciativas de transformação digital, uma equipe do Tribunal analisou o Decreto 12.069/2024, que trata da Estratégia Nacional de Governo Digital (ENGD) e da Rede Gov.br. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao preparar material de capacitação sobre governo digital para gestores municipais, um técnico resumiu dispositivos do Decreto 12.069/2024, que institui a Estratégia Nacional de Governo Digital para 2024 a 2027. Considere as afirmativas abaixo.",
+        "Uma secretaria estadual pretende alinhar sua estratégia de governo digital à Estratégia Nacional de Governo Digital, disciplinada pelo Decreto 12.069/2024, e reuniu alguns dispositivos desse decreto. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Entre os objetivos específicos da estratégia, está implementar e manter solução estruturante de identificação única e nacional, associada à Carteira de Identidade Nacional, com validade para todos os entes federativos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o objetivo do art. 9º, III, do decreto, ao lado de outros nove, como qualificar a governança das políticas de governo digital e desenvolver competências das equipes."
+        },
+        {
+          "texto": "A adesão à Rede Gov.br é obrigatória para os Estados e os Municípios que recebam recursos federais destinados à transformação digital.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A adesão dos entes federativos à Rede Gov.br é voluntária (art. 11, § 1º). O decreto não condiciona a adesão ao recebimento de recursos federais."
+        },
+        {
+          "texto": "Infraestruturas públicas digitais são soluções estruturantes de aplicação transversal, que seguem os princípios da universalidade e da interoperabilidade e podem ser usadas por entidades dos setores público e privado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a definição do art. 4º, III. O decreto reconhece como infraestrutura pública digital de identificação civil o conjunto formado pelo Serviço de Identificação do Cidadão e pela Plataforma gov.br (art. 18)."
+        },
+        {
+          "texto": "O decreto dispensou a edição de estratégia específica para a administração pública federal, que passou a ser orientada exclusivamente pela estratégia nacional.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 21 determinou que o Poder Executivo federal publicasse, em noventa dias, a Estratégia de Governo Digital para 2024 a 2027 no âmbito da administração pública federal, distinta da estratégia nacional."
+        },
+        {
+          "texto": "A estratégia nacional será reeditada a cada quatro anos, com vigência coincidente com a do Plano Plurianual, e revista ao menos dois anos após sua edição.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o que dispõe o art. 6º do decreto, que atribui à Secretaria de Governo Digital a articulação das edições e revisões, com participação de entes federativos, sociedade civil, academia e setor privado."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa: a adesão à Rede Gov.br é voluntária (art. 11, § 1º). Também omite a V, verdadeira, sobre a periodicidade da estratégia."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas II e IV são falsas. A adesão à Rede Gov.br é voluntária, e o decreto determinou a edição de estratégia própria da administração pública federal (art. 21)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa, e omite III e V, verdadeiras. A estratégia nacional convive com a estratégia federal de governo digital, cuja publicação foi determinada pelo art. 21."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O decreto prevê, entre os objetivos específicos, a identificação única e nacional associada à Carteira de Identidade Nacional (art. 9º, III). Define infraestruturas públicas digitais como soluções estruturantes, universais e interoperáveis, de uso público e privado (art. 4º, III). E fixa reedição quadrienal, coincidente com o PPA, com revisão ao menos dois anos após a edição (art. 6º). A II é falsa porque a adesão é voluntária, e a IV é falsa porque o art. 21 determinou estratégia própria para a administração federal.",
+          "versaoInvertidaFalsa": "A estratégia nacional terá vigência indeterminada, sem revisões periódicas, e substitui qualquer estratégia de governo digital da administração pública federal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa, e omite a I, verdadeira. A identificação única e nacional associada à Carteira de Identidade Nacional é objetivo expresso do art. 9º, III."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde a estratégia nacional (todos os entes, Rede Gov.br de adesão voluntária) com a estratégia federal (administração pública federal) e transforma a adesão voluntária em obrigatória. As afirmativas verdadeiras cobram a literalidade do decreto.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a periodicidade da Estratégia Nacional de Governo Digital segundo o Decreto 12.069/2024?",
+        "resposta": "É reeditada a cada quatro anos, com vigência coincidente com a do Plano Plurianual, e revista ao menos dois anos após sua edição (art. 6º). A Secretaria de Governo Digital do MGI articula as edições e revisões."
+      },
+      "conceitosChave": [
+        "ENGD 2024–2027: objetivos",
+        "ENGD 2024–2027: Rede Gov.br",
+        "ENGD × estratégia federal de governo digital"
+      ],
+      "fundamentacao": "Decreto 12.069/2024, arts. 4º, III (infraestruturas públicas digitais), 6º (reedição e revisão), 9º, III (identificação única e nacional), 11, § 1º (adesão voluntária à Rede Gov.br), 18 (IPD de identificação civil) e 21 (estratégia da administração pública federal)."
+    },
+    {
+      "id": "gov-ti-046",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Sobre a cascata de metas do COBIT 2019, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao desenhar o sistema de governança de I&T de um jurisdicionado, a equipe do Tribunal usou a cascata de metas do COBIT 2019 para priorizar objetivos de governança e gestão. Sobre essa cascata, é correto afirmar que",
+        "Em nota técnica comparando o COBIT 2019 com o COBIT 5, um técnico descreveu como as necessidades das partes interessadas são traduzidas em prioridades para o sistema de governança. Sobre a cascata de metas do COBIT 2019, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "parte das 17 metas corporativas, desdobradas em 17 metas relacionadas à TI e, por fim, em metas dos habilitadores (enablers).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a cascata do COBIT 5, com 17 metas corporativas, 17 metas relacionadas à TI e metas dos habilitadores. O COBIT 2019 reduziu as metas para 13 corporativas e 13 de alinhamento e passou a usar 'componentes' no lugar de 'habilitadores'."
+        },
+        {
+          "id": "opt-2",
+          "texto": "parte das necessidades das partes interessadas e se desdobra em 13 metas corporativas e 13 metas de alinhamento, ligadas aos objetivos de governança e gestão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No COBIT 2019, a cascata vai dos direcionadores e das necessidades das partes interessadas às metas corporativas (13), destas às metas de alinhamento (13) e, por fim, aos objetivos de governança e gestão. 'Metas de alinhamento' substituiu 'metas relacionadas à TI' do COBIT 5, para deixar claro que não são responsabilidade exclusiva da área de TI. Os mapeamentos entre os níveis ajudam a priorizar objetivos.",
+          "versaoInvertidaFalsa": "parte dos objetivos de governança e gestão, que se desdobram em 17 metas relacionadas à TI e em 17 metas corporativas, conforme a nomenclatura mantida desde o COBIT 5."
+        },
+        {
+          "id": "opt-3",
+          "texto": "inicia-se nos objetivos de governança e gestão, dos quais derivam as metas de alinhamento e, depois, as metas corporativas, em sentido ascendente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cascata é descendente: começa nas necessidades das partes interessadas e nas metas corporativas e chega aos objetivos de governança e gestão. Inverter o sentido descaracteriza a lógica de traduzir necessidades em prioridades."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substitui os fatores de desenho, tornando dispensável considerar perfil de risco, porte e papel da TI na definição do sistema de governança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cascata de metas é usada em conjunto com os fatores de desenho. Aliás, as metas corporativas são um dos onze fatores de desenho, ao lado de perfil de risco, papel da TI, porte e outros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "estabelece correspondência única e obrigatória, de modo que cada meta corporativa se relaciona com um só objetivo de governança ou de gestão do modelo principal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os mapeamentos da cascata são de muitos para muitos, com relações primárias e secundárias. Uma meta corporativa se liga a várias metas de alinhamento, que se ligam a vários objetivos, e a organização deve adaptar a cascata ao seu contexto."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece a cascata do COBIT 5 (17 + 17 metas, metas relacionadas à TI, habilitadores) como se fosse a do COBIT 2019, além de inverter o sentido e criar correspondência um para um. No COBIT 2019, são 13 metas corporativas e 13 de alinhamento.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a sequência da cascata de metas do COBIT 2019?",
+        "resposta": "Direcionadores e necessidades das partes interessadas → 13 metas corporativas → 13 metas de alinhamento → objetivos de governança e gestão. 'Metas de alinhamento' substituiu 'metas relacionadas à TI' do COBIT 5."
+      },
+      "conceitosChave": [
+        "COBIT 2019: cascata de metas",
+        "COBIT 2019 × COBIT 5"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology (cascata de metas: metas corporativas e metas de alinhamento); COBIT 2019 Framework: Governance and Management Objectives, apêndices de mapeamento; ISACA. COBIT 5 (2012) (cascata de metas do COBIT 5)."
+    },
+    {
+      "id": "gov-ti-047",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "No ITIL 4, serviço é um meio de possibilitar a …… de valor, facilitando os resultados que os clientes desejam alcançar sem que tenham de gerenciar custos e riscos específicos. A funcionalidade oferecida para atender a uma necessidade específica, isto é, a adequação ao propósito, é chamada de …… , ao passo que a certeza de que o serviço atenderá aos requisitos acordados, como disponibilidade, capacidade e continuidade, isto é, a adequação ao uso, é chamada de …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em treinamento sobre o ITIL 4, o instrutor explicou que um serviço viabiliza a …… de valor entre provedor e consumidor. Ao avaliar o novo sistema de prestação de contas, os jurisdicionados verificam se ele faz o que precisam, característica chamada de …… , e se o faz com a disponibilidade, a capacidade e a continuidade acordadas, característica chamada de …… . Preenchem, correta e respectivamente, as lacunas:",
+        "Segundo o ITIL 4, o valor de um serviço não é simplesmente entregue pelo provedor, mas resulta da …… entre provedor e consumidor; e o serviço deve combinar …… , que é a adequação ao propósito, e …… , que é a adequação ao uso. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cocriação − utilidade − garantia",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No ITIL 4, serviço é um meio de possibilitar a cocriação de valor, facilitando os resultados que os clientes desejam alcançar sem que gerenciem custos e riscos específicos. Utilidade é a funcionalidade que atende a uma necessidade (adequação ao propósito, o que o serviço faz). Garantia é a certeza de que o serviço atenderá aos requisitos acordados (adequação ao uso, como o serviço funciona), abrangendo disponibilidade, capacidade, segurança e continuidade.",
+          "versaoInvertidaFalsa": "No ITIL 4, o valor é entregue unilateralmente pelo provedor, a garantia é a adequação ao propósito e a utilidade é a adequação ao uso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "entrega − garantia − utilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ITIL 4 abandona a ideia de valor apenas entregue pelo provedor e adota a cocriação, com participação ativa do consumidor. A alternativa também inverte utilidade (adequação ao propósito) e garantia (adequação ao uso)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cocriação − garantia − utilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a cocriação, mas inverte os demais conceitos. A funcionalidade que atende à necessidade é a utilidade, e a certeza de atender aos requisitos acordados de disponibilidade, capacidade e continuidade é a garantia."
+        },
+        {
+          "id": "opt-4",
+          "texto": "captura − utilidade − conformidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ITIL 4 usa o termo cocriação de valor, e não captura. A adequação ao uso chama-se garantia, e não conformidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "transferência − funcionalidade − disponibilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor não é transferido do provedor ao consumidor, mas cocriado. Funcionalidade e disponibilidade são aspectos da utilidade e da garantia, respectivamente, e não os nomes desses conceitos."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte utilidade (o que o serviço faz, adequação ao propósito) e garantia (como o serviço funciona, adequação ao uso) e substitui cocriação por ideias de entrega ou transferência unilateral de valor.",
+      "resumoFlashcard": {
+        "pergunta": "No ITIL 4, o que são utilidade e garantia?",
+        "resposta": "Utilidade é a funcionalidade que atende a uma necessidade (adequação ao propósito). Garantia é a certeza de que o serviço atenderá aos requisitos acordados, como disponibilidade, capacidade, segurança e continuidade (adequação ao uso). Ambas são necessárias para a cocriação de valor."
+      },
+      "conceitosChave": [
+        "ITIL 4: cocriação de valor",
+        "ITIL 4: utilidade e garantia"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 2 (conceitos-chave: valor e cocriação de valor, serviço, utilidade e garantia)."
+    },
+    {
+      "id": "gov-ti-048",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na central de serviços do Tribunal, o pedido de um servidor para acesso a uma pasta compartilhada, previsto como parte normal da prestação do serviço, deve ser tratado como …… ; a interrupção não planejada do serviço de correio eletrônico é um …… ; e a mudança de estado com significado para a gestão de um serviço ou item de configuração, como o alerta de disco com 90% de ocupação emitido pela ferramenta de monitoramento, é um …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um jurisdicionado, a solicitação de instalação de software homologado, prevista no catálogo como parte normal do serviço, caracteriza …… ; a queda inesperada do sistema de folha de pagamento caracteriza …… ; e o registro, pela ferramenta de monitoramento, de que a temperatura de um servidor ultrapassou o limite configurado caracteriza …… . Preenchem, correta e respectivamente, as lacunas:",
+        "Segundo o ITIL 4, o pedido de um usuário que inicia ação já acordada como parte normal da entrega do serviço é …… ; a interrupção não planejada de um serviço ou a redução de sua qualidade é …… ; e qualquer mudança de estado com significado para a gestão de um serviço ou item de configuração é …… . Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "incidente − problema − evento",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pedido de acesso previsto como parte normal do serviço não é incidente, pois não há interrupção nem degradação, e sim requisição de serviço. A interrupção do correio é incidente; problema é a causa, ou causa potencial, de incidentes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "requisição de serviço − problema − incidente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira está certa, mas a interrupção não planejada do correio é incidente, e não problema. O alerta de disco a 90% é evento: pode ou não exigir ação e só vira incidente se houver interrupção ou degradação do serviço."
+        },
+        {
+          "id": "opt-3",
+          "texto": "mudança padrão − incidente − erro conhecido",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Embora requisições possam ser atendidas por mudanças padrão, o pedido do usuário é, em si, requisição de serviço. Erro conhecido é problema analisado e não resolvido, e não alerta de monitoramento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "requisição de serviço − incidente − evento",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No ITIL 4, requisição de serviço é o pedido de um usuário que inicia ação acordada como parte normal da entrega do serviço, como um pedido de acesso. Incidente é a interrupção não planejada de um serviço ou a redução de sua qualidade. Evento é qualquer mudança de estado com significado para a gestão de um serviço ou item de configuração, detectada em geral por ferramentas de monitoramento. O alerta de disco pode exigir ação preventiva, mas ainda não é incidente.",
+          "versaoInvertidaFalsa": "No ITIL 4, o pedido de acesso previsto no catálogo é um incidente, a interrupção não planejada do correio é um problema e o alerta de disco é uma requisição de serviço."
+        },
+        {
+          "id": "opt-5",
+          "texto": "evento − incidente − problema",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pedido do usuário não é evento, e sim requisição de serviço. O alerta de disco não é problema, pois não há, por ora, causa de incidente identificada: é um evento a ser tratado pelo monitoramento."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca rótulos de registros do gerenciamento de serviços: requisição (pedido normal), incidente (interrupção ou degradação), problema (causa de incidentes), erro conhecido (problema analisado) e evento (mudança de estado significativa). Um alerta, por si só, não é incidente.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre requisição de serviço, incidente e evento no ITIL 4?",
+        "resposta": "Requisição de serviço é o pedido do usuário por ação acordada como parte normal do serviço. Incidente é a interrupção não planejada ou a redução da qualidade de um serviço. Evento é uma mudança de estado significativa para a gestão de um serviço ou item de configuração."
+      },
+      "conceitosChave": [
+        "Gestão de serviços: incidente × problema",
+        "ITIL 4: requisição de serviço e evento"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de requisições de serviço, de gerenciamento de incidentes e de monitoramento e gerenciamento de eventos (definições de requisição de serviço, incidente e evento)."
+    },
+    {
+      "id": "gov-ti-049",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Métodos ágeis em projetos de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um tribunal de contas precisa implantar, até a data fixada em resolução, um novo módulo de recebimento de prestações de contas. A infraestrutura e o contrato de licenças exigem marcos, cronograma e aprovações formais definidos desde o início, enquanto as telas e as regras de validação devem evoluir com o retorno dos jurisdicionados em entregas curtas. A abordagem de desenvolvimento mais adequada para esse projeto é",
+      "variantesEnunciado": [
+        "Uma secretaria estadual vai lançar portal de serviços com data definida em lei. A contratação da hospedagem e a migração de dados exigem planejamento detalhado e marcos formais, mas as funcionalidades voltadas ao cidadão precisam ser refinadas a partir de testes com usuários a cada poucas semanas. A abordagem de desenvolvimento mais adequada para esse projeto é",
+        "No projeto de um sistema de auditoria contínua de um jurisdicionado, a aquisição de servidores e o contrato de suporte seguem cronograma e aprovações fixados desde o início, ao passo que os painéis analíticos serão construídos em iterações curtas, ajustadas pelo retorno dos auditores. A abordagem de desenvolvimento mais adequada para esse projeto é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "puramente preditiva, pois a existência de prazo legal impede qualquer uso de entregas iterativas e incrementais no projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Prazo fixo não impede entregas iterativas; ao contrário, entregas curtas reduzem o risco de chegar ao prazo com um produto inadequado. O PMBOK reconhece abordagens preditivas, adaptativas e híbridas, escolhidas conforme o contexto."
+        },
+        {
+          "id": "opt-2",
+          "texto": "puramente adaptativa, com eliminação de marcos e aprovações formais, já que o Scrum não admite nenhum planejamento antecipado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Scrum tem planejamento (Sprint Planning, Meta do Produto, Product Backlog ordenado), apenas de forma adaptativa. Além disso, eliminar marcos e aprovações ignoraria exigências reais do contrato e da infraestrutura."
+        },
+        {
+          "id": "opt-3",
+          "texto": "híbrida, combinando elementos preditivos para a infraestrutura e o contrato com ciclos iterativos e incrementais para as funcionalidades sujeitas a feedback.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A abordagem híbrida combina elementos preditivos e adaptativos no mesmo projeto. Partes com requisitos estáveis e restrições formais (contrato, infraestrutura, marcos) são planejadas de forma preditiva, e partes com requisitos incertos, que dependem de retorno dos usuários, avançam em iterações e incrementos. O PMBOK, na 7ª e na 8ª edições, e o Agile Practice Guide tratam da escolha e da adaptação da abordagem conforme o contexto.",
+          "versaoInvertidaFalsa": "híbrida, combinando ciclos iterativos para a infraestrutura e o contrato com planejamento preditivo detalhado e congelado para as funcionalidades que dependem de feedback."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Kanban, porque é o único método que permite conciliar prazos fixos com requisitos variáveis, dispensando os marcos de projeto e as aprovações formais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Kanban é útil para gerenciar fluxo contínuo de trabalho, mas não é o 'único' método capaz de lidar com prazos e requisitos variáveis, nem dispensa os marcos contratuais do caso. A generalização denuncia o erro."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cascata com fases sobrepostas (paralelismo), técnica de compressão de cronograma que dispensa o retorno dos usuários durante todo o projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sobrepor fases (fast tracking) é técnica de compressão de cronograma dentro de uma abordagem preditiva e não incorpora o retorno frequente dos usuários. O caso pede ciclos curtos com feedback para parte do escopo."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece extremos (puramente preditiva ou puramente adaptativa) e generalizações ('único método'). Quando parte do escopo é estável e formal e parte depende de feedback, a resposta é a abordagem híbrida.",
+      "resumoFlashcard": {
+        "pergunta": "Quando é indicada a abordagem híbrida em projetos de TI?",
+        "resposta": "Quando partes do projeto têm requisitos estáveis e restrições formais (contrato, infraestrutura, marcos), tratadas de forma preditiva, e outras têm requisitos incertos, que dependem de feedback, tratadas em ciclos iterativos e incrementais."
+      },
+      "conceitosChave": [
+        "Abordagem híbrida",
+        "Abordagens preditiva, adaptativa e híbrida"
+      ],
+      "fundamentacao": "PMI. PMBOK Guide, 8th ed. (2025), abordagens preditiva, adaptativa e híbrida e adaptação (tailoring); PMI. PMBOK Guide, 7th ed. (2021), domínio de desempenho Abordagem de Desenvolvimento e Ciclo de Vida; PMI e Agile Alliance. Agile Practice Guide (2017), cap. 3 (ciclos de vida híbridos)."
+    },
+    {
+      "id": "gov-ti-050",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "PMBOK 8ª edição",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em relação à 7ª edição, uma mudança efetivamente trazida pelo Guia PMBOK 8ª edição foi",
+      "variantesEnunciado": [
+        "Ao atualizar o manual de projetos do Tribunal, um técnico precisou registrar o que mudou do Guia PMBOK 7ª edição para a 8ª edição. Uma mudança efetivamente trazida pela 8ª edição foi",
+        "Em curso preparatório, o professor comparou o Guia PMBOK 7ª edição com a 8ª edição, publicada pelo PMI em 2025. Entre as mudanças efetivamente trazidas pela 8ª edição, está"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o abandono das abordagens adaptativas, com retorno exclusivo ao ciclo de vida preditivo e às 10 áreas de conhecimento consagradas na 6ª edição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 8ª edição continua aplicável a abordagens preditivas, adaptativas e híbridas, com orientação de adaptação (tailoring), e não retomou as 10 áreas de conhecimento. Os temas dessas áreas reaparecem reorganizados nos sete domínios de desempenho."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a ampliação do número de princípios de 12 para 13, com a inclusão de um princípio específico de sustentabilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 8ª edição consolidou os 12 princípios da 7ª em 6. A sustentabilidade é um desses seis princípios, e não um 13º acrescido aos anteriores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a substituição do domínio Risco pelo domínio Incerteza, para tratar ameaças e oportunidades de forma integrada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as edições. Incerteza era domínio da 7ª edição; a 8ª tem o domínio Risco entre seus sete domínios de desempenho (Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a eliminação dos domínios de desempenho, substituídos por cinco grupos de processos de aplicação sequencial e obrigatória em todos os projetos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os domínios foram mantidos e reorganizados em sete. As cinco áreas de foco retomam os nomes dos grupos de processos, mas sem sequência rígida, e os processos são não prescritivos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o retorno da orientação por processos, de modo não prescritivo, e a cobertura ampliada de temas como inteligência artificial, PMO e aquisições.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o PMI, a 8ª edição mantém a base de princípios e domínios da 7ª, simplificada (6 princípios e 7 domínios). Traz de volta a orientação por processos, agora não prescritiva (40 processos em cinco áreas de foco), e amplia a cobertura de inteligência artificial, escritórios de gerenciamento de projetos (PMO) e aquisições.",
+          "versaoInvertidaFalsa": "a manutenção da ausência de processos adotada na 7ª edição, sem ampliação da cobertura de temas como inteligência artificial, PMO e aquisições."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte o que pertence a cada edição (Incerteza × Risco, 12 × 6 princípios) e sugere retrocessos que não ocorreram, como o abandono das abordagens adaptativas. A mudança real é o retorno dos processos, não prescritivos, e a cobertura ampliada de temas como IA, PMO e aquisições.",
+      "resumoFlashcard": {
+        "pergunta": "Quais foram as principais mudanças do PMBOK 8ª edição em relação à 7ª?",
+        "resposta": "Consolidação de 12 para 6 princípios, redução de 8 para 7 domínios (com Finanças, Governança e Risco), retorno de 40 processos não prescritivos em cinco áreas de foco e ampliação da cobertura de IA, PMO e aquisições."
+      },
+      "conceitosChave": [
+        "PMBOK 8: estrutura",
+        "PMBOK 6 × 7 × 8"
+      ],
+      "fundamentacao": "PMI. PMBOK Guide, 8th ed., and The Standard for Project Management (2025); página oficial do PMI (pmi.org/standards/pmbok): princípios e domínios simplificados, orientação por processos não prescritiva e cobertura ampliada de IA, PMO e aquisições; PMBOK Guide, 7th ed. (2021)."
+    }
+  ]
+}

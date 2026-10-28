@@ -52,7 +52,9 @@
         "pergunta": "Quais são as quatro dimensões do gerenciamento de serviços no ITIL 4?",
         "resposta": "Organizações e pessoas; informação e tecnologia; parceiros e fornecedores; e fluxos de valor e processos. Elas se aplicam a todo o sistema de valor de serviço e sofrem influência de fatores externos (PESTLE)."
       },
-      "conceitosChave": ["ITIL 4: quatro dimensões"],
+      "conceitosChave": [
+        "ITIL 4: quatro dimensões"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 3 (The four dimensions of service management), seções sobre cada dimensão e sobre os fatores externos (PESTLE)."
     },
     {
@@ -76,13 +78,13 @@
         },
         {
           "id": "opt-2",
-          "texto": "estabelecer metas de nível de serviço baseadas no negócio e assegurar que a entrega seja avaliada, monitorada e gerenciada em relação a elas.",
+          "texto": "estabelecer metas claras de nível de serviço baseadas no negócio e assegurar que a entrega seja avaliada, monitorada e gerenciada em relação a elas.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Esse é o propósito do gerenciamento de nível de serviço, que define metas claras e acompanha a entrega em relação a elas. O catálogo pode informar os níveis acordados, mas não é a prática que os estabelece."
         },
         {
           "id": "opt-3",
-          "texto": "manter informações precisas sobre a configuração dos serviços e dos itens que os sustentam, incluindo os relacionamentos entre eles.",
+          "texto": "manter informações precisas e confiáveis sobre a configuração dos serviços e dos itens que os sustentam, incluindo os relacionamentos entre eles.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Esse é o propósito do gerenciamento de configuração de serviço, que mantém os registros de itens de configuração e de seus relacionamentos (por exemplo, em uma CMDB). O catálogo descreve os serviços e as ofertas ao público, e não a configuração técnica."
         },
@@ -94,7 +96,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "fornecer fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e assegurar que esteja disponível ao público pertinente.",
+          "texto": "fornecer fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e torná-la disponível ao público pertinente.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. Segundo o ITIL 4, o gerenciamento do catálogo de serviços fornece uma fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e garante que ela esteja disponível para o público pertinente. O catálogo pode ter visões diferentes para usuários, clientes e equipes técnicas, e costuma servir de base para as requisições de serviço.",
           "versaoInvertidaFalsa": "manter registro de todos os serviços planejados, ativos e desativados, com seus custos e dependências técnicas, para orientar as decisões de investimento da organização."
@@ -105,7 +107,10 @@
         "pergunta": "Qual é o propósito da prática de gerenciamento do catálogo de serviços no ITIL 4?",
         "resposta": "Fornecer uma fonte única de informações consistentes sobre todos os serviços e ofertas de serviço e garantir que ela esteja disponível ao público pertinente, com visões adequadas a cada público."
       },
-      "conceitosChave": ["Gestão de serviços: catálogo de serviços", "ITIL 4 × ITIL v3"],
+      "conceitosChave": [
+        "Gestão de serviços: catálogo de serviços",
+        "ITIL 4 × ITIL v3"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, propósitos das práticas de gerenciamento do catálogo de serviços, de nível de serviço, de configuração de serviço, de central de serviços e de portfólio."
     },
     {
@@ -136,7 +141,7 @@
         },
         {
           "id": "opt-3",
-          "texto": "o critério e a ponderação são regulares, pois a lei permite qualquer peso para a proposta técnica, desde que a escolha esteja justificada no ETP.",
+          "texto": "o critério e a ponderação são regulares, pois a lei permite qualquer peso para a proposta técnica, desde que a escolha esteja devidamente justificada no ETP.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A justificativa no ETP é condição para escolher o critério, mas não afasta o limite legal: a proposta técnica pode ter, no máximo, 70% de valoração (art. 36, § 2º)."
         },
@@ -158,7 +163,10 @@
         "pergunta": "Quando cabe o critério de técnica e preço em TIC e qual é o limite de peso da proposta técnica na Lei 14.133/2021?",
         "resposta": "Cabe, entre outras hipóteses, para bens e serviços especiais de TIC, quando o ETP demonstrar que a qualidade técnica acima dos requisitos mínimos é relevante (art. 36, § 1º, III). A proposta técnica pode ter, no máximo, 70% de valoração (art. 36, § 2º)."
       },
-      "conceitosChave": ["Lei 14.133: critérios de julgamento", "Contratações de TIC: técnica e preço"],
+      "conceitosChave": [
+        "Lei 14.133: critérios de julgamento",
+        "Contratações de TIC: técnica e preço"
+      ],
       "fundamentacao": "Lei 14.133/2021, art. 33, IV, e art. 36, caput e §§ 1º (incisos I a V) e 2º; art. 6º, XIII e XLI, e art. 29 (pregão para bens e serviços comuns)."
     },
     {
@@ -211,7 +219,10 @@
         "pergunta": "Quais elementos compõem o modelo de governança de TI da ISO/IEC 38500:2024?",
         "resposta": "Engajar as partes interessadas, avaliar, dirigir e monitorar. O engajamento foi incluído na edição de 2024, em alinhamento com a ISO 37000. A edição de 2015 trazia apenas avaliar, dirigir e monitorar."
       },
-      "conceitosChave": ["ISO/IEC 38500:2024", "ISO/IEC 38500: modelo de governança"],
+      "conceitosChave": [
+        "ISO/IEC 38500:2024",
+        "ISO/IEC 38500: modelo de governança"
+      ],
       "fundamentacao": "ISO/IEC 38500:2024, Foreword (inclusão de 'engage stakeholders' no modelo) e seção do modelo para a governança de TI (engajar as partes interessadas, avaliar, dirigir e monitorar); ISO 37000:2021 (princípio do engajamento das partes interessadas); ISO/IEC 38500:2015 (modelo avaliar-dirigir-monitorar)."
     },
     {
@@ -264,7 +275,10 @@
         "pergunta": "Na Lei 14.129/2021, qual é a diferença entre governo como plataforma e plataformas de governo digital?",
         "resposta": "Governo como plataforma é a infraestrutura tecnológica que facilita o uso de dados de acesso público e a interação entre agentes para inovação e serviços (art. 4º, VI). Plataformas de governo digital são as ferramentas e os serviços comuns, em regra centralizados e compartilhados, necessários à oferta digital de serviços (art. 4º, VIII)."
       },
-      "conceitosChave": ["Lei 14.129: definições", "Lei 14.129: governo como plataforma"],
+      "conceitosChave": [
+        "Lei 14.129: definições",
+        "Lei 14.129: governo como plataforma"
+      ],
       "fundamentacao": "Lei 14.129/2021, art. 4º, I (autosserviço), II (Base Nacional de Serviços Públicos), VI (governo como plataforma), VII (laboratório de inovação), VIII (plataformas de governo digital), IX (registros de referência) e X (transparência ativa)."
     },
     {
@@ -319,7 +333,7 @@
           "id": "opt-3",
           "texto": "I, II, III e IV.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o DSS tem 6 objetivos, e o APO, com 14, é o domínio mais extenso do COBIT 2019."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o DSS tem 6 objetivos, e o APO, com 14, é o domínio mais extenso do COBIT 2019. As demais afirmativas são verdadeiras."
         },
         {
           "id": "opt-4",
@@ -340,8 +354,11 @@
         "pergunta": "Como se distribuem os 40 objetivos de governança e gestão do COBIT 2019?",
         "resposta": "EDM 5, APO 14, BAI 11, DSS 6 e MEA 4. Em relação aos 37 processos do COBIT 5, entraram APO14 (Dados), BAI11 (Projetos) e MEA04 (Garantia)."
       },
-      "conceitosChave": ["COBIT 2019: domínios e objetivos", "COBIT 2019 × COBIT 5"],
-      "fundamentacao": "ISACA. COBIT 2019 Framework: Governance and Management Objectives (lista dos 40 objetivos por domínio); COBIT 2019 Framework: Introduction and Methodology, cap. 4 (modelo principal e relação entre objetivo, processo e componentes); ISACA, artigo 'COBIT 2019 and COBIT 5 Comparison' (2020)."
+      "conceitosChave": [
+        "COBIT 2019: domínios e objetivos",
+        "COBIT 2019 × COBIT 5"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Governance and Management Objectives (lista dos 40 objetivos por domínio); COBIT 2019 Framework: Introduction and Methodology (modelo principal e relação entre objetivo, processo e componentes); ISACA, artigo 'COBIT 2019 and COBIT 5 Comparison' (2020)."
     },
     {
       "id": "gov-ti-027",
@@ -393,7 +410,10 @@
         "pergunta": "Como a Lei de Little relaciona WIP, vazão e tempo de ciclo no Kanban?",
         "resposta": "Em fluxo estável, tempo médio de ciclo = WIP médio ÷ vazão média. Com vazão constante, reduzir o WIP reduz o tempo de ciclo. Exemplo: 30 itens ÷ 10 por semana = 3 semanas."
       },
-      "conceitosChave": ["Kanban: fluxo e limite de WIP", "Kanban: Lei de Little"],
+      "conceitosChave": [
+        "Kanban: fluxo e limite de WIP",
+        "Kanban: Lei de Little"
+      ],
       "fundamentacao": "Vacanti, D.; Coleman, J. The Kanban Guide (2020), seções sobre as medidas de fluxo (WIP, vazão, idade do item de trabalho e tempo de ciclo) e a Lei de Little; Little, J. D. C. A proof for the queuing formula L = λW. Operations Research, 1961."
     },
     {
@@ -455,7 +475,7 @@
           "id": "opt-4",
           "texto": "I, II, III e IV.",
           "correta": false,
-          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa, pois atribui à orientação ao usuário o que pertence à contribuição corporativa."
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa, pois atribui à orientação ao usuário o ponto de vista da alta administração, que pertence à contribuição corporativa. As demais são verdadeiras."
         },
         {
           "id": "opt-5",
@@ -469,8 +489,11 @@
         "pergunta": "Quais são as perspectivas do BSC de TI de Van Grembergen e o que cada uma avalia?",
         "resposta": "Contribuição corporativa (visão da alta administração e valor dos investimentos), orientação ao usuário (visão dos usuários), excelência operacional (eficiência dos processos de TI) e orientação futura (preparação para desafios futuros). Os objetivos derivam da estratégia institucional."
       },
-      "conceitosChave": ["BSC de TI", "Governança de TI: alinhamento estratégico"],
-      "fundamentacao": "Van Grembergen, W. The balanced scorecard and IT governance. Information Systems Control Journal, v. 2, 2000; Van Grembergen, W.; De Haes, S. Enterprise Governance of Information Technology (Springer), cap. sobre o BSC de TI; Kaplan, R. S.; Norton, D. P. A Estratégia em Ação: Balanced Scorecard."
+      "conceitosChave": [
+        "BSC de TI",
+        "Governança de TI: alinhamento estratégico"
+      ],
+      "fundamentacao": "Van Grembergen, W. The balanced scorecard and IT governance. Information Systems Control Journal, 2000; Van Grembergen, W.; De Haes, S. Enterprise Governance of Information Technology (Springer), parte sobre o BSC de TI; Kaplan, R. S.; Norton, D. P. A Estratégia em Ação: Balanced Scorecard."
     },
     {
       "id": "gov-ti-029",
@@ -487,7 +510,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "gerenciamento de configuração de serviço, cujo foco principal é o valor financeiro e o licenciamento dos itens, e não seus relacionamentos.",
+          "texto": "gerenciamento de configuração de serviço, cujo foco principal é o valor financeiro e o licenciamento dos itens, e não os relacionamentos entre eles nem sua configuração.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A alternativa inverte os focos. O gerenciamento de configuração de serviço mantém informações sobre os itens de configuração e seus relacionamentos, para apoiar a análise de impacto e outras práticas. Valor financeiro, licenciamento e ciclo de vida dos ativos são o foco do gerenciamento de ativos de TI."
         },
@@ -511,7 +534,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "gerenciamento de ativos de TI, que planeja e gerencia o ciclo de vida dos ativos, apoiando o controle de custos, a conformidade contratual e decisões de reuso e descarte.",
+          "texto": "gerenciamento de ativos de TI, que planeja e gerencia o ciclo de vida dos ativos, apoiando o controle de custos, a conformidade contratual e o reuso e o descarte.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. No ITIL 4, o gerenciamento de ativos de TI planeja e gerencia o ciclo de vida completo de todos os ativos de TI. O objetivo é maximizar valor, controlar custos, gerenciar riscos, apoiar decisões de compra, reuso, retirada e descarte e cumprir requisitos regulatórios e contratuais, como os de licenciamento. Licenças ociosas, instalações sem licença e equipamentos sem destinação são falhas típicas dessa prática, que corresponde ao objetivo BAI09 do COBIT 2019.",
           "versaoInvertidaFalsa": "gerenciamento de configuração de serviço, que planeja e gerencia o ciclo de vida, o valor financeiro e o licenciamento dos ativos, enquanto o gerenciamento de ativos cuida dos relacionamentos entre itens."
@@ -522,7 +545,10 @@
         "pergunta": "Qual é a diferença entre gerenciamento de ativos de TI e gerenciamento de configuração de serviço no ITIL 4?",
         "resposta": "O gerenciamento de ativos cuida do ciclo de vida, do custo, do licenciamento e da conformidade dos ativos de valor financeiro. O gerenciamento de configuração mantém informação precisa sobre os itens de configuração e seus relacionamentos, para apoiar a entrega do serviço."
       },
-      "conceitosChave": ["Gestão de ativos de TI", "Ativo de TI × item de configuração"],
+      "conceitosChave": [
+        "Gestão de ativos de TI",
+        "Ativo de TI × item de configuração"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de ativos de TI e de gerenciamento de configuração de serviço (definições de ativo de TI e de item de configuração); ISACA, COBIT 2019, objetivos BAI09 (Managed Assets) e BAI10 (Managed Configuration); ISO/IEC 19770-1 (gestão de ativos de TI)."
     },
     {
@@ -546,7 +572,7 @@
         },
         {
           "id": "opt-2",
-          "texto": "depende de lei local que transfira à União a gestão dos serviços digitais do ente, como condição de acesso às infraestruturas públicas digitais.",
+          "texto": "depende de lei local que transfira à União a gestão dos serviços digitais do ente, como condição prévia de acesso às infraestruturas públicas digitais federais.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. O decreto não prevê transferência de competências à União. A Rede Gov.br é colaborativa, e a adesão permite acesso gratuito a ferramentas e infraestruturas públicas digitais quando disponíveis para governos locais (art. 15), sem centralizar a gestão dos serviços."
         },
@@ -558,7 +584,7 @@
         },
         {
           "id": "opt-4",
-          "texto": "é voluntária e implica os compromissos de publicar estratégia de governo digital própria, em consonância com a ENGD, e de seguir as recomendações da Secretaria de Governo Digital.",
+          "texto": "é voluntária e implica os compromissos de publicar estratégia própria, alinhada à ENGD, e de seguir as recomendações da Secretaria de Governo Digital.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. A Rede Gov.br tem natureza colaborativa e reúne União, Estados, DF e Municípios. A adesão é voluntária (art. 11, § 1º). Ao aderir, o ente pode ter acesso gratuito a ferramentas da Plataforma gov.br e às infraestruturas públicas digitais, quando disponíveis para governos locais. Também assume os compromissos de publicar estratégia própria em consonância com a ENGD e de seguir as recomendações da Secretaria de Governo Digital (art. 13, III, e art. 15, § 1º).",
           "versaoInvertidaFalsa": "é obrigatória e implica a substituição da estratégia de governo digital do ente pela estratégia federal, dispensado o acompanhamento das recomendações da Secretaria de Governo Digital."
@@ -575,7 +601,9 @@
         "pergunta": "Como funciona a adesão dos entes federativos à Rede Gov.br no Decreto 12.069/2024?",
         "resposta": "É voluntária (art. 11, § 1º). Quem adere pode ter acesso gratuito a ferramentas da Plataforma gov.br e às infraestruturas públicas digitais, quando disponíveis, e se compromete a publicar estratégia própria em consonância com a ENGD e a seguir as recomendações da Secretaria de Governo Digital (art. 15)."
       },
-      "conceitosChave": ["ENGD 2024–2027: Rede Gov.br"],
+      "conceitosChave": [
+        "ENGD 2024–2027: Rede Gov.br"
+      ],
       "fundamentacao": "Decreto 12.069/2024, arts. 11 (natureza colaborativa e adesão voluntária), 12 (governança da Rede Gov.br), 13, III (recomendações da Secretaria de Governo Digital) e 15 (acesso gratuito e compromissos da adesão)."
     }
   ]

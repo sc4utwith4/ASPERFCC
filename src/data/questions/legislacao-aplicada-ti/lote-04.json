@@ -1,0 +1,635 @@
+{
+  "materiaSlug": "legislacao-aplicada-ti",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "leg-ti-031",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Ao adotar a privacidade desde a concepção no novo sistema de gestão de processos, a equipe de TI do Tribunal passou a (1) antecipar-se aos riscos, realizando análise de riscos de privacidade e incorporando controles antes de escrever o código, para evitar que danos aos titulares chegassem a ocorrer, e (2) manter evidências documentadas, como relatórios de testes de segurança, trilhas de auditoria e registros das decisões de projeto, capazes de demonstrar à ANPD que as medidas adotadas são eficazes. Os princípios da LGPD concretizados, respectivamente, pelas práticas (1) e (2) são os da",
+      "variantesEnunciado": [
+        "No projeto do novo portal de prestação de contas, a equipe do Tribunal decidiu (1) identificar os riscos aos titulares e embutir controles ainda na arquitetura, para que os danos não chegassem a ocorrer, e (2) arquivar pareceres de revisão, resultados de testes de intrusão e trilhas de auditoria que permitam comprovar, se a ANPD pedir, que as medidas funcionam. Os princípios da LGPD concretizados, respectivamente, pelas práticas (1) e (2) são os da",
+        "Ao implantar um programa de privacidade nos sistemas do Tribunal, a área de TI passou a (1) avaliar os riscos de cada nova funcionalidade antes do desenvolvimento, adotando medidas para evitar a ocorrência de danos, e (2) documentar e testar periodicamente os controles, guardando provas de sua eficácia para apresentar ao órgão regulador. Os princípios da LGPD concretizados, respectivamente, pelas práticas (1) e (2) são os da"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "segurança e transparência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A segurança (art. 6º, VII) tem relação com a prática (1), mas a ênfase descrita é evitar que o dano ocorra, núcleo da prevenção. E demonstrar à ANPD a eficácia das medidas não é transparência (informação clara aos titulares), e sim responsabilização e prestação de contas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "necessidade e qualidade dos dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Necessidade trata do volume mínimo de dados, e qualidade dos dados trata de exatidão, clareza e atualização. Nenhum dos dois descreve antecipar-se a danos ou comprovar a eficácia das medidas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "prevenção e transparência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A prática (1) é prevenção, mas a (2) não é transparência: transparência é garantir aos titulares informações claras sobre o tratamento. Comprovar perante a autoridade a eficácia das medidas é responsabilização e prestação de contas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "prevenção e responsabilização e prestação de contas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Prevenção (art. 6º, VIII) é a adoção de medidas para prevenir a ocorrência de danos em virtude do tratamento, o que a análise de riscos antes do código materializa. Responsabilização e prestação de contas (art. 6º, X) é a demonstração, pelo agente, da adoção de medidas eficazes e capazes de comprovar o cumprimento das normas, inclusive da eficácia dessas medidas; as evidências documentadas servem a isso. Os dois princípios dão sentido prático ao art. 46, § 2º.",
+          "versaoInvertidaFalsa": "Manter evidências documentadas que demonstrem à ANPD a eficácia das medidas de proteção concretiza o princípio da transparência, e não o da responsabilização e prestação de contas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "adequação e responsabilização e prestação de contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A prática (2) é responsabilização e prestação de contas, mas a (1) não é adequação, que trata da compatibilidade do tratamento com as finalidades informadas ao titular."
+        }
+      ],
+      "pegadinhaFCC": "Dois pares de princípios vizinhos servem de armadilha: transparência (informar o titular) e responsabilização (demonstrar eficácia ao regulador); segurança e prevenção. A expressão “demonstrar a eficácia das medidas” é literal do art. 6º, X.",
+      "resumoFlashcard": {
+        "pergunta": "Qual princípio da LGPD exige demonstrar a eficácia das medidas de proteção adotadas?",
+        "resposta": "O da responsabilização e prestação de contas (art. 6º, X): o agente deve demonstrar a adoção de medidas eficazes e capazes de comprovar o cumprimento das normas, inclusive a eficácia dessas medidas. Já a prevenção (art. 6º, VIII) exige medidas para evitar que o dano ocorra."
+      },
+      "conceitosChave": ["LGPD: privacy by design", "LGPD: princípios (art. 6º)"],
+      "fundamentacao": "Lei 13.709/2018, art. 6º, II, III, V, VI, VII, VIII e X; art. 46, § 2º."
+    },
+    {
+      "id": "leg-ti-032",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a LGPD, os dados pessoais devem ser eliminados após o término de seu tratamento, no âmbito e nos limites técnicos das atividades. Entre as hipóteses em que a lei autoriza a conservação dos dados, inclui-se",
+      "variantesEnunciado": [
+        "Encerrado um curso de capacitação que a escola de contas do Tribunal ofereceu a jurisdicionados, a equipe quer manter informações sobre os participantes para estatísticas internas, sem compartilhá-las. Segundo a LGPD, que manda eliminar os dados após o término do tratamento, entre as hipóteses de conservação autorizadas inclui-se",
+        "Nos termos do art. 16 da Lei nº 13.709/2018, terminado o tratamento, os dados pessoais devem ser eliminados, mas a lei autoriza sua conservação em hipóteses específicas, entre as quais se inclui"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 16 autoriza a conservação, após o término do tratamento, para: cumprimento de obrigação legal ou regulatória (I); estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização (II); transferência a terceiro, respeitados os requisitos da lei (III); e uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados (IV). Para estatísticas internas, a saída é anonimizar e não compartilhar.",
+          "versaoInvertidaFalsa": "Pela LGPD, terminado o tratamento, o controlador pode conservar os dados para uso próprio sem anonimizá-los e compartilhá-los com terceiros, desde que os pseudonimize."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o estudo por órgão de pesquisa, vedada a anonimização dos dados, para preservar a utilidade estatística da base.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O inciso II garante, sempre que possível, a anonimização dos dados conservados para estudo por órgão de pesquisa. A alternativa inverte a regra ao vedar a anonimização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a transferência a terceiro, independentemente da observância dos requisitos de tratamento previstos na lei.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O inciso III só autoriza a transferência a terceiro desde que respeitados os requisitos de tratamento de dados dispostos na lei. Não há conservação “independentemente” desses requisitos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o uso exclusivo do controlador, admitido o compartilhamento com parceiros, desde que os dados sejam apenas pseudonimizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O inciso IV exige uso exclusivo do controlador, vedado o acesso por terceiro, e dados anonimizados. Pseudonimização não basta, porque o dado pseudonimizado continua pessoal, e o compartilhamento com parceiros é vedado nessa hipótese."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a formação de bases para eventual uso futuro do controlador, por prazo indeterminado, sem necessidade de anonimização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD não admite conservação por prazo indeterminado para eventual uso futuro sem anonimização. Isso contrariaria a regra da eliminação e o princípio da necessidade."
+        }
+      ],
+      "pegadinhaFCC": "A troca de anonimizados por pseudonimizados e a inclusão de compartilhamento com terceiros na hipótese de uso exclusivo do controlador são as armadilhas. O art. 16, IV, exige as duas condições: uso exclusivo e dados anonimizados.",
+      "resumoFlashcard": {
+        "pergunta": "Em quais hipóteses a LGPD autoriza conservar dados pessoais após o término do tratamento?",
+        "resposta": "Art. 16: obrigação legal ou regulatória; estudo por órgão de pesquisa (com anonimização sempre que possível); transferência a terceiro, respeitada a lei; e uso exclusivo do controlador, vedado o acesso por terceiro, desde que anonimizados os dados."
+      },
+      "conceitosChave": ["LGPD: eliminação e conservação", "LGPD: anonimização"],
+      "fundamentacao": "Lei 13.709/2018, art. 6º, III; art. 15; art. 16, I a IV."
+    },
+    {
+      "id": "leg-ti-033",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em auditoria no sistema de protocolo eletrônico do Tribunal, constatou-se que os registros de log da aplicação gravavam o CPF completo dos usuários e os tokens de sessão em texto claro, eram mantidos sem prazo definido e podiam ser consultados por todos os desenvolvedores, inclusive terceirizados. À luz da LGPD, é correto afirmar que essa prática",
+      "variantesEnunciado": [
+        "Uma revisão de código no sistema de prestação de contas do Tribunal revelou que a aplicação registrava em log, sem mascaramento, o CPF e os tokens de sessão dos jurisdicionados, que esses arquivos não tinham prazo de descarte e que qualquer integrante das equipes de desenvolvimento, inclusive terceirizados, podia lê-los. À luz da LGPD, é correto afirmar que essa prática",
+        "Durante a análise de um incidente, a equipe de segurança do Tribunal percebeu que os logs de uma API de consulta processual armazenavam o CPF integral dos solicitantes e os tokens de acesso em texto claro, retidos indefinidamente e acessíveis a toda a equipe técnica. À luz da LGPD, é correto afirmar que essa prática"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é regular, pois logs são registros técnicos que não se submetem à LGPD, ainda que contenham dados pessoais, já que servem só à depuração do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Qualquer operação com dados pessoais é tratamento (art. 5º, X), inclusive o armazenamento em logs. CPF é dado pessoal, e tokens de sessão são dados de autenticação, cuja exposição pode até caracterizar incidente de risco relevante."
+        },
+        {
+          "id": "opt-2",
+          "texto": "viola apenas o princípio da transparência, que se resolve informando aos usuários, na política de privacidade, que os logs contêm o CPF e os tokens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Informar o titular não legitima tratamento excessivo nem inseguro. O problema central é de necessidade (dados além do mínimo) e de segurança (texto claro, acesso amplo, retenção indefinida)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é regular desde que os logs sejam armazenados em servidores no Brasil, requisito suficiente para atender às exigências de segurança da LGPD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A localização dos servidores não é critério de segurança da LGPD. O art. 46 exige medidas técnicas e administrativas aptas a proteger os dados de acessos não autorizados, o que a localização, por si só, não garante."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deve ser mantida por obrigação legal, pois o Marco Civil determina a guarda indefinida de todos os logs de aplicação com dados completos dos usuários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 15 do Marco Civil trata da guarda de registros de acesso a aplicações (data, hora e IP) por 6 meses pelo provedor de aplicações com fins econômicos; não manda guardar indefinidamente logs com dados completos. O Decreto 8.771/2016 (art. 13, § 2º) manda reter a menor quantidade possível de dados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "contraria os princípios da necessidade e da segurança e exige medidas como mascarar o CPF, retirar os tokens dos logs, restringir o acesso e fixar prazo de retenção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Registrar o CPF completo e tokens em logs excede o mínimo necessário (necessidade, art. 6º, III), e mantê-los em texto claro, sem prazo e com acesso amplo afronta a segurança (art. 6º, VII) e o dever do art. 46 de adotar medidas técnicas e administrativas contra acessos não autorizados. O art. 49 exige sistemas estruturados para atender a esses requisitos. Medidas típicas: mascaramento, exclusão de segredos dos logs, controle de acesso por necessidade de conhecer e política de retenção.",
+          "versaoInvertidaFalsa": "Logs de aplicação são registros técnicos fora do alcance da LGPD, de modo que podem guardar CPF completo e tokens em texto claro, por prazo indefinido e com acesso amplo."
+        }
+      ],
+      "pegadinhaFCC": "A FCC aposta na ideia de que logs “técnicos” estão fora da LGPD ou de que a transparência resolve tudo. Log com dado pessoal é tratamento e precisa respeitar necessidade, segurança e retenção mínima.",
+      "resumoFlashcard": {
+        "pergunta": "Logs de aplicação que gravam dados pessoais estão sujeitos à LGPD?",
+        "resposta": "Sim. Armazenar dados pessoais em log é tratamento (art. 5º, X). É preciso registrar só o necessário (art. 6º, III), proteger com medidas técnicas e administrativas (art. 46), restringir o acesso e definir prazo de retenção; segredos como tokens não devem ir para o log."
+      },
+      "conceitosChave": ["LGPD: segurança (art. 46)", "LGPD: princípio da necessidade"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, X; art. 6º, III, VI e VII; arts. 46 e 49; Lei 12.965/2014, art. 15; Decreto 8.771/2016, art. 13, § 2º."
+    },
+    {
+      "id": "leg-ti-034",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: neutralidade de rede",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao analisar propostas de provedores para a contratação de acesso à internet pelo Tribunal, a comissão examinou práticas de gerenciamento de tráfego à luz do Marco Civil da Internet e do Decreto nº 8.771/2016. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em estudo sobre a oferta de serviços de conectividade para órgãos públicos, a equipe de TI do Tribunal reuniu afirmações sobre neutralidade de rede com base no Marco Civil da Internet e no Decreto nº 8.771/2016. Considere as afirmativas abaixo.",
+        "Durante a fiscalização de um contrato de conectividade firmado por um jurisdicionado, a equipe do Tribunal avaliou se as práticas do provedor respeitavam o Marco Civil da Internet e o Decreto nº 8.771/2016. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A discriminação ou a degradação de tráfego são medidas excepcionais, admitidas apenas por requisitos técnicos indispensáveis ou pela priorização de serviços de emergência, com o cumprimento dos requisitos do art. 9º, § 2º, do Marco Civil.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 4º do Decreto 8.771/2016, que qualifica essas medidas como excepcionais e exige o cumprimento de todos os requisitos do art. 9º, § 2º, da lei."
+        },
+        {
+          "texto": "São admitidos acordos entre o responsável pela transmissão, comutação ou roteamento e provedores de aplicação para priorizar pacotes em razão de arranjos comerciais, desde que divulgados de forma transparente aos usuários.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 9º, II, do Decreto 8.771/2016 veda condutas ou acordos que priorizem pacotes de dados em razão de arranjos comerciais; a transparência não convalida a prática vedada."
+        },
+        {
+          "texto": "Serviços especializados, otimizados por qualidade, velocidade ou segurança, ficam fora do alcance do decreto desde que não sejam substitutos da internet em seu caráter público e irrestrito e se destinem a grupos específicos de usuários com controle estrito de admissão.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 2º, parágrafo único, II, do Decreto 8.771/2016; as duas condições são cumulativas."
+        },
+        {
+          "texto": "Na provisão de conexão, é permitido analisar o conteúdo dos pacotes de dados para direcionar publicidade ao usuário, desde que essa prática conste de cláusula do contrato de adesão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 9º, § 3º, do Marco Civil veda bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes. Além disso, o art. 7º, IX, exige consentimento expresso e destacado das demais cláusulas, o que não se confunde com cláusula de adesão."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: o decreto veda a priorização de pacotes por arranjos comerciais, e a transparência não torna lícita a prática."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz o art. 4º do Decreto 8.771/2016 (excepcionalidade da discriminação e da degradação); a III reproduz o art. 2º, parágrafo único, II (serviços especializados, com as duas condições cumulativas). A II é falsa porque o art. 9º, II, do decreto veda priorizar pacotes por arranjos comerciais, e a IV é falsa porque o art. 9º, § 3º, do Marco Civil veda analisar o conteúdo dos pacotes na provisão de conexão.",
+          "versaoInvertidaFalsa": "Pelo Decreto 8.771/2016, a priorização de pacotes em razão de arranjos comerciais entre provedor de conexão e provedor de aplicação é admitida, desde que divulgada de forma transparente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas indicadas são falsas: a priorização por arranjos comerciais é vedada (art. 9º, II, do decreto), e a análise do conteúdo dos pacotes é proibida (art. 9º, § 3º, do Marco Civil)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV é falsa, porque a análise do conteúdo dos pacotes é vedada, e a alternativa omite a I, que reproduz o art. 4º do decreto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, falsa: cláusula de contrato de adesão não autoriza a análise do conteúdo dos pacotes, vedada pelo art. 9º, § 3º, do Marco Civil."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa a transparência e a cláusula contratual como se legitimassem práticas vedadas (priorização comercial e inspeção de conteúdo). Os pontos válidos são a excepcionalidade da discriminação e o regime dos serviços especializados.",
+      "resumoFlashcard": {
+        "pergunta": "O que o Decreto 8.771/2016 diz sobre arranjos comerciais e serviços especializados?",
+        "resposta": "Veda condutas ou acordos que priorizem pacotes em razão de arranjos comerciais ou que privilegiem aplicações do próprio provedor ou de seu grupo (art. 9º). Serviços especializados ficam fora do decreto se não substituírem a internet pública e se destinarem a grupos específicos com controle estrito de admissão (art. 2º, parágrafo único, II)."
+      },
+      "conceitosChave": ["Decreto 8.771/2016", "Marco Civil: neutralidade de rede"],
+      "fundamentacao": "Lei 12.965/2014, art. 7º, IX; art. 9º, § 3º; Decreto 8.771/2016, art. 2º, parágrafo único, II; art. 4º; art. 9º, II."
+    },
+    {
+      "id": "leg-ti-035",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: proteção de dados e guarda de registros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao revisar a política de privacidade e os procedimentos de guarda de dados do portal de serviços do Tribunal, a equipe de TI comparou suas práticas com o Marco Civil da Internet e com o Decreto nº 8.771/2016. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em auditoria sobre a gestão de dados de usuários do aplicativo de serviços de um jurisdicionado, a equipe do Tribunal verificou a aderência das práticas do aplicativo ao Marco Civil da Internet e ao Decreto nº 8.771/2016. Considere as afirmativas abaixo.",
+        "Ao elaborar os termos de uso do novo aplicativo de consulta processual, a equipe de TI do Tribunal estudou as regras de proteção de dados e de guarda de registros do Marco Civil da Internet e de seu decreto regulamentador. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O usuário tem direito à exclusão definitiva dos dados pessoais que tiver fornecido a determinada aplicação de internet, a seu requerimento, ao término da relação entre as partes, ressalvadas as hipóteses de guarda obrigatória de registros.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 7º, X, do Marco Civil, com a redação dada pela LGPD."
+        },
+        {
+          "texto": "Na provisão de aplicações de internet, é vedada a guarda de dados pessoais que sejam excessivos em relação à finalidade para a qual foi dado consentimento pelo titular.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 16, II, do Marco Civil, que concretiza a minimização no ambiente das aplicações."
+        },
+        {
+          "texto": "O fornecimento a terceiros de dados pessoais e de registros de conexão e de acesso a aplicações é livre quando destinado a fins estatísticos, dispensando consentimento ou previsão legal.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 7º, VII, assegura o não fornecimento a terceiros, salvo mediante consentimento livre, expresso e informado ou nas hipóteses previstas em lei. Não há exceção genérica para fins estatísticos."
+        },
+        {
+          "texto": "Na guarda de registros e de dados pessoais, os provedores devem manter inventário detalhado dos acessos aos registros, com o momento, a duração, a identidade do responsável pelo acesso e o arquivo acessado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 13, III, do Decreto 8.771/2016, ao lado de controle estrito de acesso, autenticação e técnicas de inviolabilidade, como a encriptação."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e II estão corretas, mas a IV também está: o inventário detalhado dos acessos é diretriz do art. 13, III, do Decreto 8.771/2016."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa (não há liberação para fins estatísticos sem consentimento ou previsão legal), e omite a I, que reproduz o art. 7º, X, do Marco Civil."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz o art. 7º, X, do Marco Civil (exclusão definitiva ao término da relação, ressalvadas as guardas obrigatórias); a II reproduz o art. 16, II (vedação à guarda de dados excessivos); a IV reproduz o art. 13, III, do Decreto 8.771/2016 (inventário detalhado dos acessos aos registros). A III é falsa porque o art. 7º, VII, exige consentimento livre, expresso e informado ou previsão legal para o fornecimento a terceiros.",
+          "versaoInvertidaFalsa": "Pelo Marco Civil, o provedor pode fornecer a terceiros os dados pessoais e os registros dos usuários para fins estatísticos, sem consentimento e sem previsão legal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa, e omite a II, verdadeira, que veda a guarda de dados pessoais excessivos em relação à finalidade consentida (art. 16, II)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III é falsa, pois não há exceção para fins estatísticos, e a alternativa omite as afirmativas I e II, ambas verdadeiras."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa falsa cria uma exceção inexistente (fins estatísticos) ao dever de não fornecer dados a terceiros. As demais são literais do Marco Civil (arts. 7º, X, e 16, II) e do decreto (art. 13, III).",
+      "resumoFlashcard": {
+        "pergunta": "Que padrões de segurança o Decreto 8.771/2016 exige na guarda de registros e dados pessoais?",
+        "resposta": "Controle estrito de acesso com responsabilidades definidas, mecanismos de autenticação (como a dupla) para individualizar o responsável, inventário detalhado dos acessos (momento, duração, identidade e arquivo) e técnicas de inviolabilidade, como a encriptação (art. 13). E reter a menor quantidade possível de dados (§ 2º)."
+      },
+      "conceitosChave": ["Marco Civil: guarda de registros", "Decreto 8.771/2016"],
+      "fundamentacao": "Lei 12.965/2014, art. 7º, VII e X; art. 16, II; Decreto 8.771/2016, art. 13, I a IV e § 2º."
+    },
+    {
+      "id": "leg-ti-036",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Requisitos de segurança em contratações de TIC",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal contratou empresa para desenvolver e sustentar o sistema de ouvidoria, com cláusula expressa de que os dados pessoais dos manifestantes só poderiam ser tratados para a execução do contrato, conforme instruções documentadas do Tribunal. Descobriu-se que a contratada usou essas manifestações para treinar um modelo de inteligência artificial que comercializa a outros clientes, o que causou danos a titulares. À luz da LGPD, é correto afirmar que a contratada",
+      "variantesEnunciado": [
+        "Uma empresa contratada para hospedar e manter o sistema de gestão de pessoas do Tribunal, obrigada por contrato a seguir as instruções documentadas do órgão, passou a usar os dados funcionais dos servidores para oferecer, por conta própria, produtos financeiros a eles, o que gerou danos aos titulares. À luz da LGPD, é correto afirmar que a contratada",
+        "Contratada para digitalizar e indexar processos do Tribunal segundo instruções documentadas do órgão, uma empresa aproveitou os dados pessoais das partes para enriquecer uma base própria que vende a escritórios de cobrança, causando danos aos titulares. À luz da LGPD, é correto afirmar que a contratada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "equipara-se ao controlador quanto a esse tratamento e responde solidariamente pelos danos, por ter descumprido as instruções lícitas do Tribunal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O operador trata os dados segundo as instruções do controlador (art. 39). Pelo art. 42, § 1º, I, o operador responde solidariamente pelos danos quando descumpre a legislação ou não segue as instruções lícitas do controlador, hipótese em que se equipara ao controlador. Ao usar os dados para finalidade própria, a contratada passou a decidir sobre o tratamento, assumindo também os deveres de controlador quanto a ele. As excludentes do art. 43 não se aplicam ao caso.",
+          "versaoInvertidaFalsa": "Pela LGPD, o operador que usa dados do controlador para finalidade própria, contrariando suas instruções, não responde perante os titulares, cabendo ao controlador arcar sozinho com os danos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "não responde perante os titulares, pois, sendo operadora, toda a responsabilidade pelos danos recai exclusivamente sobre o Tribunal, que a contratou.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A responsabilidade não recai exclusivamente sobre o controlador. O art. 42, § 1º, I, estabelece a responsabilidade solidária do operador que descumpre a lei ou as instruções lícitas do controlador."
+        },
+        {
+          "id": "opt-3",
+          "texto": "só responderia se os dados utilizados fossem sensíveis, já que o uso de dados pessoais comuns para finalidade própria do operador é livre na LGPD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Qualquer tratamento de dados pessoais exige base legal e finalidade legítima e informada (art. 6º, I), sejam os dados sensíveis ou não. O uso para finalidade própria desviou-se da finalidade e das instruções do controlador."
+        },
+        {
+          "id": "opt-4",
+          "texto": "fica isenta se demonstrar que anonimizou os dados depois de utilizá-los, porque a anonimização posterior convalida o tratamento realizado sem base legal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Anonimizar depois não apaga o tratamento irregular já ocorrido nem os danos causados. O desvio de finalidade e o descumprimento das instruções permanecem como fundamento da responsabilização."
+        },
+        {
+          "id": "opt-5",
+          "texto": "responde apenas contratualmente perante o Tribunal, pois a LGPD não prevê responsabilidade civil do operador perante os titulares em nenhuma hipótese.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD prevê responsabilidade civil do operador perante os titulares (art. 42), inclusive solidária nas hipóteses do § 1º, I. A relação contratual com o Tribunal não afasta essa responsabilidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a crença de que o operador nunca responde perante o titular. Quando descumpre a lei ou as instruções lícitas do controlador, ele se equipara ao controlador e responde solidariamente (art. 42, § 1º, I).",
+      "resumoFlashcard": {
+        "pergunta": "Quando o operador responde solidariamente pelos danos causados aos titulares?",
+        "resposta": "Quando descumpre as obrigações da legislação de proteção de dados ou não segue as instruções lícitas do controlador; nesse caso, equipara-se ao controlador (art. 42, § 1º, I), salvo as excludentes do art. 43."
+      },
+      "conceitosChave": ["LGPD: controlador × operador", "Contratações de TIC: cláusulas de segurança"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, VI e VII; art. 6º, I; art. 39; art. 42, § 1º, I; art. 43."
+    },
+    {
+      "id": "leg-ti-037",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Certificação digital em sistemas informatizados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao definir os níveis de assinatura eletrônica aceitos pelos sistemas do Tribunal, a equipe de TI estudou a Lei nº 14.063/2020. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em parecer sobre a política de assinaturas eletrônicas a ser adotada no processo eletrônico do Tribunal, um técnico resumiu as regras da Lei nº 14.063/2020. Considere as afirmativas abaixo.",
+        "Durante auditoria sobre a gestão documental eletrônica de um jurisdicionado, a equipe do Tribunal verificou se os níveis de assinatura adotados atendiam à Lei nº 14.063/2020. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A assinatura eletrônica simples é a que utiliza certificado não emitido pela ICP-Brasil e permite detectar qualquer modificação posterior do documento assinado.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A afirmativa atribui à simples características da avançada (detecção de modificação posterior). A simples é a que permite identificar o signatário ou anexa ou associa dados a outros dados do signatário (art. 4º, I)."
+        },
+        {
+          "texto": "A assinatura eletrônica avançada pode utilizar certificados não emitidos pela ICP-Brasil, desde que admitidos pelas partes como válidos ou aceitos pela pessoa a quem for oposto o documento, e deve estar associada ao signatário de maneira unívoca, permitindo detectar qualquer modificação posterior.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 4º, II, que também exige dados de criação da assinatura sob controle exclusivo do signatário, com elevado nível de confiança."
+        },
+        {
+          "texto": "A assinatura eletrônica qualificada, que utiliza certificado digital ICP-Brasil, é a de nível mais baixo de confiabilidade e só pode ser usada em interações de menor impacto.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A qualificada tem o nível mais elevado de confiabilidade (art. 4º, § 1º) e é admitida em qualquer interação eletrônica com ente público (art. 5º, § 1º, III)."
+        },
+        {
+          "texto": "É obrigatório o uso de assinatura eletrônica qualificada nos atos assinados por chefes de Poder, por Ministros de Estado ou por titulares de Poder ou de órgão constitucionalmente autônomo de ente federativo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 5º, § 2º, I."
+        },
+        {
+          "texto": "A assinatura eletrônica simples pode ser admitida em qualquer interação com ente público, inclusive nas que envolvam informações protegidas por grau de sigilo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 5º, § 1º, I, admite a simples apenas em interações de menor impacto e que não envolvam informações protegidas por grau de sigilo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa: detectar modificação posterior é característica da assinatura avançada, e não da simples."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa V é falsa: a assinatura simples não é admitida em interações que envolvam informações protegidas por grau de sigilo (art. 5º, § 1º, I)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas indicadas são falsas: a I atribui à simples traços da avançada, e a III inverte o nível de confiabilidade da qualificada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II reproduz o art. 4º, II (avançada: certificado não ICP-Brasil ou outro meio admitido pelas partes, vínculo unívoco com o signatário e detecção de modificações), e a IV reproduz o art. 5º, § 2º, I (qualificada obrigatória para chefes de Poder, Ministros de Estado e titulares de Poder ou órgão autônomo). A I é falsa (mistura simples e avançada), a III é falsa (a qualificada é a mais confiável) e a V é falsa (a simples não vale para informações sob sigilo).",
+          "versaoInvertidaFalsa": "Pela Lei 14.063/2020, a assinatura eletrônica qualificada é a de menor confiabilidade, razão pela qual a lei a restringe a interações de menor impacto com entes públicos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III e a V são falsas: a qualificada é a de maior confiabilidade, e a simples não é admitida quando houver informação protegida por grau de sigilo."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as características entre níveis (simples e avançada), inverte a hierarquia de confiabilidade e amplia a admissão da simples para informações sigilosas. Hierarquia: simples, avançada e, no topo, qualificada (ICP-Brasil).",
+      "resumoFlashcard": {
+        "pergunta": "Como a Lei 14.063/2020 classifica as assinaturas eletrônicas?",
+        "resposta": "Simples (identifica o signatário ou associa dados), avançada (certificado não ICP-Brasil ou outro meio aceito, vínculo unívoco, controle exclusivo e detecção de alterações) e qualificada (certificado ICP-Brasil, nível mais elevado de confiabilidade, obrigatória para chefes de Poder e titulares de órgãos autônomos)."
+      },
+      "conceitosChave": ["Assinaturas eletrônicas (Lei 14.063)"],
+      "fundamentacao": "Lei 14.063/2020, art. 4º, I a III e § 1º; art. 5º, § 1º, I e III, e § 2º, I."
+    },
+    {
+      "id": "leg-ti-038",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LC estadual 205/2025 (IA em Goiás)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma secretaria do Poder Executivo goiano passou a usar um sistema de inteligência artificial que indefere automaticamente pedidos de um benefício estadual, sem intervenção humana. Um cidadão que teve o pedido negado solicitou a revisão da decisão e informações sobre os critérios usados. Considerando a LGPD e a Lei Complementar estadual nº 205/2025, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um órgão da administração estadual de Goiás adotou um modelo de IA que classifica automaticamente pedidos de isenção de taxas e nega os que considera de risco, sem análise humana. Uma requerente cujo pedido foi negado pediu a revisão da decisão e explicações sobre os critérios. Considerando a LGPD e a Lei Complementar estadual nº 205/2025, é correto afirmar que",
+        "Uma autarquia estadual goiana passou a cancelar automaticamente cadastros em um programa social com base na pontuação de um algoritmo, sem intervenção de servidores. Um beneficiário excluído pediu revisão e informações sobre os critérios adotados. Considerando a LGPD e a Lei Complementar estadual nº 205/2025, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a LGPD exige que toda revisão de decisão automatizada seja feita por pessoa natural, e a LC 205/2025 apenas reproduz essa mesma regra para o âmbito da administração estadual goiana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD não exige revisão por pessoa natural: o § 3º do art. 20, que previa essa exigência, foi vetado, e o veto foi mantido pelo Congresso em 2019. A garantia de revisão humana na administração goiana vem da LC 205/2025, e não da LGPD."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o cidadão não tem direito à revisão, pois a LGPD só garante esse direito quando a decisão automatizada envolve dados pessoais sensíveis ou dados de crianças e adolescentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 20 da LGPD garante a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem os interesses do titular, sem restringi-la a dados sensíveis ou a dados de crianças e adolescentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a LGPD assegura a revisão de decisões unicamente automatizadas, sem exigir revisor humano, e a LC 205/2025 garante a possibilidade de revisão humana quando a decisão afetar direitos significativos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 20 da LGPD dá ao titular o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses, com informações claras sobre critérios e procedimentos (§ 1º); desde o veto ao § 3º, a lei não exige que a revisão seja humana. A LC-GO 205/2025 vai além no âmbito estadual: assegura, na administração pública, a possibilidade de revisão humana das decisões automatizadas que afetem direitos significativos, como o indeferimento de um benefício.",
+          "versaoInvertidaFalsa": "A LGPD garante que toda decisão automatizada seja revista por pessoa natural, razão pela qual a LC-GO 205/2025 nada acrescentou quanto à revisão humana na administração estadual."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a LC 205/2025 proíbe a administração pública estadual de usar sistemas de IA em decisões que afetem direitos, de modo que o ato é nulo independentemente de revisão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LC 205/2025 é lei de fomento e promove usos seguros e benéficos da IA no poder público estadual; não proíbe seu uso em decisões, mas assegura a possibilidade de revisão humana quando afetarem direitos significativos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o controlador pode recusar qualquer informação sobre os critérios da decisão, alegando segredo comercial e industrial, sem que a autoridade nacional possa auditar o tratamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O segredo comercial e industrial pode limitar a informação (art. 20, § 1º), mas, nesse caso, a autoridade nacional pode realizar auditoria para verificar aspectos discriminatórios no tratamento automatizado (art. 20, § 2º)."
+        }
+      ],
+      "pegadinhaFCC": "Contraste entre a LGPD (revisão garantida, mas não necessariamente humana, após o veto ao § 3º do art. 20) e a LC-GO 205/2025 (possibilidade de revisão humana na administração estadual para decisões que afetem direitos significativos).",
+      "resumoFlashcard": {
+        "pergunta": "A LGPD exige revisão humana de decisões automatizadas? E a LC-GO 205/2025?",
+        "resposta": "A LGPD garante a revisão de decisões unicamente automatizadas, mas não exige que seja humana (§ 3º do art. 20 vetado). A LC-GO 205/2025 assegura, na administração pública estadual, a possibilidade de revisão humana de decisões automatizadas que afetem direitos significativos."
+      },
+      "conceitosChave": ["LGPD: decisões automatizadas", "LC-GO 205/2025"],
+      "fundamentacao": "Lei 13.709/2018, art. 20, caput e §§ 1º e 2º (§ 3º vetado; veto mantido em 02/10/2019); Lei Complementar estadual (GO) nº 205/2025 (revisão humana na administração pública, conforme docs/pesquisa/_normativos-tce-go.md)."
+    },
+    {
+      "id": "leg-ti-039",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 14/2024: Política de Governança Organizacional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em estudo sobre a Política de Governança Organizacional do Tribunal (Resolução Administrativa nº 14/2024), que se inspira na Resolução TCU nº 320/2020, um analista relacionou a política a modelos de referência de governança. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao preparar um treinamento sobre governança para gestores do Tribunal, a área de planejamento relacionou a Política de Governança Organizacional (Resolução Administrativa nº 14/2024) com o Decreto federal nº 9.203/2017 e com modelos como a ISO/IEC 38500 e o COBIT 2019. Considere as afirmativas abaixo.",
+        "Em auditoria operacional sobre governança de TI em um jurisdicionado, a equipe do Tribunal usou como parâmetro a concepção de governança adotada pela própria política do TCE-GO (RA nº 14/2024) e os modelos de referência do mercado. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Avaliar, direcionar e monitorar são funções típicas da governança, enquanto planejar, executar e controlar as operações do dia a dia são funções típicas da gestão.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A distinção é central na ISO/IEC 38500 (avaliar, dirigir, monitorar) e no COBIT 2019 (governança: domínio EDM; gestão: domínios APO, BAI, DSS e MEA)."
+        },
+        {
+          "texto": "A governança organizacional baseia-se em mecanismos de liderança, estratégia e controle, conceito que a política do Tribunal compartilha com o Decreto federal nº 9.203/2017.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a tríade do art. 2º, I, do Decreto 9.203/2017, adotada pela política do Tribunal."
+        },
+        {
+          "texto": "Como a governança é exercida pela alta administração, a política dispensa a participação das demais instâncias e torna desnecessária a segregação de funções nas unidades.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Governança envolve um sistema de instâncias e estruturas (no Tribunal, o SGO/TCE-GO), e a segregação de funções é mecanismo de controle que a própria governança promove."
+        },
+        {
+          "texto": "Um comitê que prioriza investimentos de TI conforme a estratégia institucional e acompanha seus resultados exerce atividade de governança de TI, e não de gestão operacional.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Priorizar investimentos (direcionar) e acompanhar resultados (monitorar) são atividades de governança, como as atribuídas ao CETI pela RN 13/2016."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e II estão corretas, mas a IV também está: priorizar investimentos de TI e acompanhar resultados são atividades de governança."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa, e omite a I, que distingue corretamente governança (avaliar, direcionar, monitorar) e gestão (planejar, executar, controlar)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa: governança não dispensa as demais instâncias nem a segregação de funções. E omite a II, que reproduz o conceito do Decreto 9.203/2017."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III é falsa, já que a governança não dispensa as demais instâncias nem a segregação de funções, e a alternativa omite a I e a II, ambas verdadeiras."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I expressa a distinção clássica entre governança (avaliar, direcionar, monitorar) e gestão (planejar, executar, controlar); a II reproduz o conceito de governança do Decreto 9.203/2017, compartilhado pela política do Tribunal; a IV qualifica corretamente a priorização de investimentos e o acompanhamento de resultados como governança de TI. A III é falsa porque governança é um sistema de instâncias e estruturas, e a segregação de funções é um de seus mecanismos de controle.",
+          "versaoInvertidaFalsa": "Avaliar, direcionar e monitorar são funções típicas da gestão operacional, cabendo à governança executar e controlar as atividades do dia a dia."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte governança e gestão ou sugere que a governança se esgota na alta administração. Governança avalia, direciona e monitora por meio de um sistema de instâncias e mecanismos (inclusive a segregação de funções); gestão planeja, executa e controla.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre governança e gestão?",
+        "resposta": "Governança avalia, direciona e monitora a gestão, por meio de mecanismos de liderança, estratégia e controle (Decreto 9.203/2017; ISO/IEC 38500). Gestão planeja, constrói, executa e monitora as operações (no COBIT 2019, domínios APO, BAI, DSS e MEA)."
+      },
+      "conceitosChave": ["Governança organizacional", "Governança × gestão"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (conferir no texto oficial); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; ABNT NBR ISO/IEC 38500 (modelo avaliar–dirigir–monitorar); COBIT 2019 (domínios EDM, APO, BAI, DSS e MEA); TCE-GO, RN 13/2016.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-ti-040",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "PDTI 2025–2026",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da relação entre o Plano Diretor de Tecnologia da Informação (PDTI) do Tribunal, cuja edição 2025–2026 foi aprovada pela Ordem de Serviço nº 001/2025-CETI, e as contratações de soluções de TIC, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao planejar a contratação de uma solução de gestão eletrônica de documentos, a equipe de TI do Tribunal discutiu o papel do PDTI 2025–2026, aprovado pela Ordem de Serviço nº 001/2025-CETI. Sobre a relação entre o PDTI e as contratações de soluções de TIC, é correto afirmar que",
+        "Em capacitação sobre planejamento de TI, explicou-se a relação entre o Plano Diretor de Tecnologia da Informação do Tribunal, aprovado para o biênio 2025–2026 pelo Comitê Estratégico de TI, e as contratações de soluções de TIC regidas pela Lei nº 14.133/2021. Sobre essa relação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o PDTI substitui o estudo técnico preliminar, de modo que as contratações nele previstas ficam dispensadas de demonstrar a necessidade, as estimativas e o levantamento de mercado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PDTI é instrumento de planejamento do período e não substitui o ETP, documento da fase preparatória de cada contratação (art. 18, I e § 1º, da Lei 14.133/2021), com elementos mínimos obrigatórios como a necessidade, as estimativas e o posicionamento conclusivo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o estudo técnico preliminar de cada contratação deve demonstrar o alinhamento ao planejamento do órgão, que inclui o PDTI e o plano de contratações anual, quando houver.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O PDTI é instrumento de diagnóstico, planejamento e gestão dos recursos e processos de TI para um período, alinhado à estratégia institucional. A Lei 14.133/2021 exige que o ETP demonstre a previsão da contratação no plano de contratações anual, sempre que elaborado, indicando seu alinhamento com o planejamento da Administração (art. 18, § 1º, II), e o plano anual deve garantir alinhamento com o planejamento estratégico (art. 12, VII). No Tribunal, o CETI analisa planos e prioriza investimentos de TI, e foi ele quem aprovou o PDTI 2025–2026.",
+          "versaoInvertidaFalsa": "A contratação de solução de TIC prevista no PDTI aprovado pelo CETI dispensa estudo técnico preliminar, pois o plano já demonstra a necessidade e o alinhamento estratégico."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o PDTI é documento meramente informativo, sem relação com as contratações, que se orientam apenas pela disponibilidade orçamentária do exercício.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PDTI orienta prioridades e investimentos de TI e se conecta às contratações pelo alinhamento exigido no planejamento (Lei 14.133/2021, arts. 12, VII, e 18, § 1º, II). Não é documento meramente informativo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a aprovação do PDTI pelo CETI torna automática a contratação das soluções nele listadas, dispensando a fase preparatória e os demais artefatos previstos na Lei nº 14.133/2021.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum plano torna automática uma contratação. Cada contratação passa pela fase preparatória (ETP, termo de referência, estimativa de valor, análise de riscos) prevista no art. 18 da Lei 14.133/2021."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as contratações de TIC só podem ser realizadas no último ano de vigência do PDTI, depois que o comitê avaliar formalmente o cumprimento de todas as metas previstas para o biênio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há regra que restrinja as contratações ao último ano de vigência do plano. O PDTI organiza as necessidades e prioridades ao longo do período, e as contratações ocorrem conforme o planejamento."
+        }
+      ],
+      "pegadinhaFCC": "A banca transforma o PDTI em atalho (dispensa de ETP ou contratação automática) ou em peça decorativa. O correto é o encadeamento: estratégia, PDTI, plano de contratações anual e ETP de cada contratação, que demonstra o alinhamento.",
+      "resumoFlashcard": {
+        "pergunta": "Como o PDTI se relaciona com as contratações de TIC?",
+        "resposta": "O PDTI é instrumento de diagnóstico, planejamento e gestão de TI alinhado à estratégia. Cada contratação mantém sua fase preparatória, e o ETP deve demonstrar a previsão no plano de contratações anual, quando houver, e o alinhamento ao planejamento (Lei 14.133/2021, arts. 12, VII, e 18, § 1º, II)."
+      },
+      "conceitosChave": ["PDTI", "Lei 14.133: ETP"],
+      "fundamentacao": "Lei 14.133/2021, art. 12, VII; art. 18, I e § 1º, II; Guia de PDTIC do SISP (conceito de PDTI); TCE-GO, RN 13/2016, art. 2º; Edital TCE-GO nº 01/2026 (PDTI 2025–2026 aprovado pela OS nº 001/2025-CETI). Conteúdo do PDTI 2025–2026 não verificado.",
+      "revisarFonteOficial": true
+    }
+  ]
+}

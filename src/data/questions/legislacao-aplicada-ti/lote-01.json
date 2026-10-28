@@ -123,7 +123,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "72 horas, contadas da ocorrência do ataque, à semelhança do Regulamento Geral de Proteção de Dados europeu.",
+          "texto": "72 horas, contadas da ocorrência do ataque, como prevê o regulamento europeu de proteção de dados.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. As 72 horas são o prazo do GDPR (art. 33). A ANPD adotou prazo em dias úteis, e a contagem não começa na data do ataque, mas no conhecimento, pelo controlador, de que o incidente atingiu dados pessoais."
         },
@@ -148,7 +148,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "cinco dias úteis, contados da data em que o encarregado tiver concluído a avaliação de risco do incidente.",
+          "texto": "cinco dias úteis, contados da conclusão, pelo encarregado, da avaliação de risco do incidente.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Não há prazo de cinco dias úteis nem marco vinculado ao encarregado. O encarregado é canal de comunicação entre controlador, titulares e ANPD; a obrigação de comunicar é do controlador (art. 48 da LGPD)."
         }
@@ -168,40 +168,40 @@
       "origem": "Inédita padrão FCC",
       "nivel": "Básico",
       "formato": "lacunas",
-      "enunciadoBase": "Segundo o art. 9º do Marco Civil da Internet (Lei nº 12.965/2014), o responsável pela transmissão, comutação ou roteamento tem o dever de tratar de forma …… quaisquer pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação. A discriminação ou degradação do tráfego será regulamentada por decreto, ouvidos o …… e a Anatel, e somente poderá decorrer de requisitos técnicos indispensáveis à prestação adequada dos serviços e aplicações e da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
+      "enunciadoBase": "Segundo o art. 9º do Marco Civil da Internet (Lei nº 12.965/2014), o responsável pela transmissão, comutação ou roteamento tem o dever de tratar de forma …… quaisquer pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação. A discriminação ou degradação do tráfego será regulamentada por decreto, ouvidos …… e a Anatel, e somente poderá decorrer de requisitos técnicos indispensáveis à prestação adequada dos serviços e aplicações e da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
       "variantesEnunciado": [
-        "Em um curso interno sobre o Marco Civil da Internet, explicou-se que, pelo art. 9º da Lei nº 12.965/2014, quem realiza transmissão, comutação ou roteamento deve tratar de forma …… quaisquer pacotes de dados; que a discriminação ou degradação do tráfego depende de regulamentação, ouvidos o …… e a Anatel; e que ela só pode decorrer de requisitos técnicos indispensáveis ou da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
-        "Ao analisar a contratação de link de internet para o Tribunal, um técnico lembrou que, conforme o Marco Civil, o provedor deve tratar de forma …… os pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação, e que eventual degradação do tráfego, regulamentada após oitiva do …… e da Anatel, só se admite por requisitos técnicos indispensáveis ou para priorizar serviços de ……. Preenchem, correta e respectivamente, as lacunas:"
+        "Em um curso interno sobre o Marco Civil da Internet, explicou-se que, pelo art. 9º da Lei nº 12.965/2014, quem realiza transmissão, comutação ou roteamento deve tratar de forma …… quaisquer pacotes de dados; que a discriminação ou degradação do tráfego depende de regulamentação, ouvidos …… e a Anatel; e que ela só pode decorrer de requisitos técnicos indispensáveis ou da priorização de serviços de ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao analisar a contratação de link de internet para o Tribunal, um técnico lembrou que, conforme o Marco Civil, o provedor deve tratar de forma …… os pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação, e que eventual degradação do tráfego, regulamentada depois de ouvidos …… e a Anatel, só se admite por requisitos técnicos indispensáveis ou para priorizar serviços de ……. Preenchem, correta e respectivamente, as lacunas:"
       ],
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "isonômica − Comitê Gestor da Internet − segurança pública",
+          "texto": "isonômica − o Comitê Gestor da Internet − segurança pública",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Os dois primeiros termos estão certos, mas a exceção legal é a priorização de serviços de emergência (art. 9º, § 1º, II), e não de “segurança pública”. A regulamentação restringe a priorização a comunicações dos serviços de emergência e a avisos à população em situações de desastre, emergência ou calamidade."
         },
         {
           "id": "opt-2",
-          "texto": "diferenciada − Comitê Gestor da Internet − emergência",
+          "texto": "diferenciada − o Comitê Gestor da Internet − emergência",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A neutralidade exige tratamento isonômico, e não diferenciado. Admitir tratamento diferenciado como regra inverteria o princípio: a diferenciação é exceção, restrita às hipóteses do § 1º e sujeita às condições do § 2º."
         },
         {
           "id": "opt-3",
-          "texto": "isonômica − Conselho Administrativo de Defesa Econômica − emergência",
+          "texto": "isonômica − o Conselho Administrativo de Defesa Econômica − emergência",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A lei manda ouvir o Comitê Gestor da Internet (CGI.br) e a Anatel. O sistema de defesa da concorrência atua na apuração de infrações à ordem econômica, mas não é o órgão a ser ouvido na regulamentação prevista no art. 9º, § 1º."
         },
         {
           "id": "opt-4",
-          "texto": "isonômica − Comitê Gestor da Internet − emergência",
+          "texto": "isonômica − o Comitê Gestor da Internet − emergência",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. O caput do art. 9º impõe o tratamento isonômico dos pacotes, núcleo da neutralidade de rede. O § 1º reserva a regulamentação ao Presidente da República (art. 84, IV, da CF), ouvidos o CGI.br e a Anatel, e limita a discriminação ou degradação a requisitos técnicos indispensáveis e à priorização de serviços de emergência. O Decreto 8.771/2016 é essa regulamentação e trata tais medidas como excepcionais.",
           "versaoInvertidaFalsa": "Pelo art. 9º do Marco Civil, a discriminação de tráfego é regulamentada após oitiva da ANPD e da Anatel e pode decorrer da priorização de serviços de utilidade pública escolhidos pelo provedor."
         },
         {
           "id": "opt-5",
-          "texto": "isonômica − Autoridade Nacional de Proteção de Dados − utilidade pública",
+          "texto": "isonômica − a Autoridade Nacional de Proteção de Dados − utilidade pública",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. A ANPD não é o órgão a ser ouvido na regulamentação da neutralidade, e “utilidade pública” alargaria indevidamente a exceção. A lei fala apenas em serviços de emergência, além dos requisitos técnicos indispensáveis."
         }
@@ -341,7 +341,7 @@
         },
         {
           "id": "opt-2",
-          "texto": "anonimizados, desde que a tabela de correspondência também seja criptografada, hipótese em que a LGPD deixa de incidir tanto sobre a base analítica quanto sobre a tabela.",
+          "texto": "anonimizados, desde que a tabela de correspondência também seja criptografada, caso em que a LGPD deixa de incidir sobre ambas as bases.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Criptografar a tabela é boa prática de segurança, mas não muda a natureza do dado: quem detém a chave e a tabela reverte o processo. A LGPD continua incidindo sobre as duas bases."
         },
@@ -360,7 +360,7 @@
         },
         {
           "id": "opt-5",
-          "texto": "dados bloqueados, pois a substituição do identificador por código suspende temporariamente qualquer operação de tratamento até que haja nova autorização do titular.",
+          "texto": "dados bloqueados, pois a troca do identificador por código suspende temporariamente o tratamento até nova autorização do titular.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. Bloqueio (art. 5º, XIII) é a suspensão temporária de qualquer operação de tratamento, mediante guarda do dado. No caso, os dados continuam sendo tratados pelos analistas, de modo que não há bloqueio."
         }
@@ -400,7 +400,7 @@
         },
         {
           "id": "opt-3",
-          "texto": "cabe ao Tribunal, na condição de controlador, mesmo tendo o incidente ocorrido na infraestrutura da contratada, por envolver dados financeiros com risco relevante.",
+          "texto": "cabe ao Tribunal, na condição de controlador, mesmo tendo o incidente ocorrido na infraestrutura da contratada, por envolver dados financeiros com risco relevante aos titulares.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. O art. 48 da LGPD atribui ao controlador o dever de comunicar à ANPD e ao titular o incidente que possa acarretar risco ou dano relevante. Pelo RCIS, há risco relevante quando o incidente puder afetar significativamente interesses e direitos fundamentais e envolver ao menos um critério, entre eles dados financeiros e dados de autenticação em sistemas. A comunicação à ANPD deve ocorrer em três dias úteis do conhecimento de que dados pessoais foram afetados.",
           "versaoInvertidaFalsa": "Quando o incidente ocorre na infraestrutura do operador, cabe a ele, e não ao controlador, comunicar a ANPD e os titulares, ainda que envolva dados financeiros com risco de fraude."
@@ -494,7 +494,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "órgão singular de natureza deliberativa, vinculado à Diretoria de Tecnologia da Informação, com mandato temporário que deve ser renovado a cada exercício financeiro.",
+          "texto": "órgão singular de natureza deliberativa, vinculado à Diretoria de TI, com mandato temporário renovável a cada exercício.",
           "correta": false,
           "explicacaoDetalhada": "INCORRETA. O CETI é colegiado, e não órgão singular; sua natureza é consultiva e seu caráter é permanente. Também não é vinculado à Diretoria de TI: é instância estratégica que orienta e acompanha a área."
         },

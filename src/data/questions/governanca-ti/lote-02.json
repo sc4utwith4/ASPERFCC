@@ -52,8 +52,10 @@
         "pergunta": "Quais são os sete componentes do sistema de governança no COBIT 2019?",
         "resposta": "Processos; estruturas organizacionais; princípios, políticas e frameworks; informação; cultura, ética e comportamento; pessoas, habilidades e competências; e serviços, infraestrutura e aplicações. No COBIT 5, eram chamados de habilitadores."
       },
-      "conceitosChave": ["COBIT 2019: componentes"],
-      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology, cap. 4 (componentes do sistema de governança); COBIT 2019 Framework: Governance and Management Objectives, estrutura de cada objetivo (processo, estruturas organizacionais com matriz RACI, fluxos e itens de informação, pessoas, habilidades e competências, políticas e procedimentos, cultura, serviços, infraestrutura e aplicações)."
+      "conceitosChave": [
+        "COBIT 2019: componentes"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology (componentes do sistema de governança); COBIT 2019 Framework: Governance and Management Objectives, estrutura de cada objetivo (processo, estruturas organizacionais com matriz RACI, fluxos e itens de informação, pessoas, habilidades e competências, políticas e procedimentos, cultura, serviços, infraestrutura e aplicações)."
     },
     {
       "id": "gov-ti-012",
@@ -105,7 +107,9 @@
         "pergunta": "Quais são as seis atividades da cadeia de valor de serviço do ITIL 4 e o que faz obter/construir?",
         "resposta": "Planejar, melhorar, engajar, projetar e fazer a transição, obter/construir e entregar e dar suporte. Obter/construir garante que os componentes do serviço estejam disponíveis quando e onde necessários e conforme as especificações."
       },
-      "conceitosChave": ["ITIL 4: cadeia de valor de serviço"],
+      "conceitosChave": [
+        "ITIL 4: cadeia de valor de serviço"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 4, seção sobre a cadeia de valor de serviço (propósito de cada uma das seis atividades)."
     },
     {
@@ -158,7 +162,10 @@
         "pergunta": "Quais são os três tipos de mudança do ITIL 4 e o que caracteriza cada um?",
         "resposta": "Padrão: baixo risco, documentada e pré-autorizada. Emergencial: implementada o quanto antes, com avaliação e autorização expeditas. Normal: programada, avaliada e autorizada por uma autoridade de mudança conforme o processo."
       },
-      "conceitosChave": ["Gestão de serviços: tipos de mudança", "ITIL 4: habilitação de mudanças"],
+      "conceitosChave": [
+        "Gestão de serviços: tipos de mudança",
+        "ITIL 4: habilitação de mudanças"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, prática de controle de mudanças (change control), denominada habilitação de mudanças (change enablement) no guia da prática: mudanças padrão, normais e emergenciais."
     },
     {
@@ -211,7 +218,10 @@
         "pergunta": "Na Lei 14.133/2021, quando cabem o pregão e o diálogo competitivo?",
         "resposta": "O pregão é obrigatório para bens e serviços comuns, definidos objetivamente por especificações usuais de mercado, com critério de menor preço ou maior desconto. O diálogo competitivo é para objetos inovadores, que exigem adaptar soluções do mercado e cujas especificações a Administração não consegue definir com precisão."
       },
-      "conceitosChave": ["Lei 14.133: modalidades", "Lei 14.133: critérios de julgamento"],
+      "conceitosChave": [
+        "Lei 14.133: modalidades",
+        "Lei 14.133: critérios de julgamento"
+      ],
       "fundamentacao": "Lei 14.133/2021, art. 6º, XIII (bens e serviços comuns), XXXIX (concurso), XLI (pregão) e XLII (diálogo competitivo); arts. 28, 29, 32 e 39."
     },
     {
@@ -264,7 +274,10 @@
         "pergunta": "Qual é o objetivo geral da Estratégia Nacional de Governo Digital 2024–2027 (Decreto 12.069/2024)?",
         "resposta": "A busca de um Estado mais inclusivo, eficaz, proativo, participativo e sustentável (art. 8º). Ele se desdobra em dez objetivos específicos (art. 9º) e em prioridades para 2024–2027 (art. 10)."
       },
-      "conceitosChave": ["ENGD 2024–2027: objetivos", "ENGD 2024–2027: estrutura do decreto"],
+      "conceitosChave": [
+        "ENGD 2024–2027: objetivos",
+        "ENGD 2024–2027: estrutura do decreto"
+      ],
       "fundamentacao": "Decreto 12.069/2024, arts. 2º, 4º, III, 8º, 9º, 10, I, e 11 a 15."
     },
     {
@@ -317,7 +330,10 @@
         "pergunta": "Quais são os sete domínios de desempenho do PMBOK 8ª edição?",
         "resposta": "Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco. Eles substituem os oito domínios da 7ª edição e retomam, de forma reorganizada, temas das antigas áreas de conhecimento."
       },
-      "conceitosChave": ["PMBOK 8: domínios de desempenho", "PMBOK 6 × 7 × 8"],
+      "conceitosChave": [
+        "PMBOK 8: domínios de desempenho",
+        "PMBOK 6 × 7 × 8"
+      ],
       "fundamentacao": "PMI. PMBOK Guide, 8th ed. (2025), domínios de desempenho Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco; PMBOK Guide, 7th ed. (2021), domínios de desempenho; PMBOK Guide, 6th ed. (2017), áreas de conhecimento."
     },
     {
@@ -370,7 +386,9 @@
         "pergunta": "Quais são os compromissos associados aos artefatos no Guia do Scrum (2020)?",
         "resposta": "Product Backlog: Meta do Produto. Sprint Backlog: Meta da Sprint. Incremento: Definição de Pronto. Os compromissos foram introduzidos na versão de 2020 para reforçar a transparência e o foco."
       },
-      "conceitosChave": ["Scrum: artefatos e compromissos"],
+      "conceitosChave": [
+        "Scrum: artefatos e compromissos"
+      ],
       "fundamentacao": "Schwaber, K.; Sutherland, J. Guia do Scrum (2020), seção 'Artefatos do Scrum' (Product Backlog e Meta do Produto; Sprint Backlog e Meta da Sprint; Incremento e Definição de Pronto)."
     },
     {
@@ -423,8 +441,11 @@
         "pergunta": "Como Weill e Ross definem governança de TI?",
         "resposta": "Como a especificação dos direitos decisórios e do modelo de responsabilização (accountability) para estimular comportamentos desejáveis no uso da TI. A definição abrange cinco decisões: princípios, arquitetura, infraestrutura, necessidades de aplicações e investimentos e priorização."
       },
-      "conceitosChave": ["Governança de TI: direitos decisórios", "Governança × gestão de TI"],
-      "fundamentacao": "Weill, P.; Ross, J. W. IT Governance: How Top Performers Manage IT Decision Rights for Superior Results. Harvard Business School Press, 2004, cap. 1 (definição) e cap. 2 (cinco decisões e arquétipos de decisão)."
+      "conceitosChave": [
+        "Governança de TI: direitos decisórios",
+        "Governança × gestão de TI"
+      ],
+      "fundamentacao": "Weill, P.; Ross, J. W. IT Governance: How Top Performers Manage IT Decision Rights for Superior Results. Harvard Business School Press, 2004 (definição de governança de TI, cinco decisões de TI e arquétipos de decisão)."
     },
     {
       "id": "gov-ti-019",
@@ -476,7 +497,10 @@
         "pergunta": "O que é gestão de portfólio e como se diferencia da gestão de programas?",
         "resposta": "É a gestão centralizada de projetos, programas, portfólios subsidiários e operações para alcançar objetivos estratégicos, priorizando e balanceando investimentos. O programa coordena componentes relacionados para obter benefícios conjuntos. O portfólio decide o que fazer conforme a estratégia."
       },
-      "conceitosChave": ["Gestão de portfólio", "Portfólio × programa × projeto"],
+      "conceitosChave": [
+        "Gestão de portfólio",
+        "Portfólio × programa × projeto"
+      ],
       "fundamentacao": "PMI. The Standard for Portfolio Management, 4th ed. (2017), definições de portfólio e de gestão de portfólio; PMI. The Standard for Program Management (definição de programa); ISACA, COBIT 2019, objetivo APO05 (Managed Portfolio); AXELOS, ITIL 4, prática de gerenciamento de portfólio."
     },
     {
@@ -529,8 +553,10 @@
         "pergunta": "Quais são os quatro valores do fator de desenho 'papel da TI' no COBIT 2019?",
         "resposta": "Suporte (TI não crucial para operar nem para inovar), fábrica (crítica para a operação, mas não para a inovação), reviravolta (vetor de inovação sem dependência operacional crítica) e estratégico (crítica para operar e para inovar)."
       },
-      "conceitosChave": ["COBIT 2019: fatores de desenho"],
-      "fundamentacao": "ISACA. COBIT 2019 Design Guide, cap. 2 (fatores de desenho), fator 'role of IT' (support, factory, turnaround, strategic); COBIT 2019 Framework: Introduction and Methodology, cap. 5 (os onze fatores de desenho)."
+      "conceitosChave": [
+        "COBIT 2019: fatores de desenho"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Design Guide (fatores de desenho; fator 'role of IT': support, factory, turnaround e strategic); COBIT 2019 Framework: Introduction and Methodology (os onze fatores de desenho)."
     }
   ]
 }

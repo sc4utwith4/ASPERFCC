@@ -47,6 +47,10 @@ export interface OpcoesValidacao {
 const POSICIONAL_CI = /(todas as (alternativas|anteriores|op[cç][oõ]es)|nenhuma das (alternativas|anteriores|op[cç][oõ]es)|as duas anteriores|item anterior|op[cç][aã]o anterior)/i;
 const POSICIONAL_LETRA = /\b(?:[Aa]lternativas?|[Ll]etras?|[Oo]p[cç][aã]o)\s+\(?[A-E]\)?(?![A-Za-zÀ-ú])/;
 const ROMANOS = /\b(I|II|III|IV|V)\b/;
+const ROMANOS_GLOBAL = /\b(IV|V|I{1,3})\b/g;
+const INDICE_ROMANO: Record<string, number> = { I: 0, II: 1, III: 2, IV: 3, V: 4 };
+/** Comandos que pedem as afirmativas erradas ("Está incorreto o que se afirma em"). */
+const PEDE_FALSAS = /\b(incorret|fals|errad)/i;
 
 const ALVO_NIVEL: Record<string, number> = { "Básico": 0.2, "Intermediário": 0.5, "Avançado": 0.3 };
 
@@ -129,11 +133,51 @@ export function validarQuestaoNoContexto(q: Questao, lote: Pick<Lote, "materiaSl
   if (q.formato === "assertivas") {
     if (!q.alternativas.some((a) => ROMANOS.test(a.texto))) aviso("formato assertivas, mas nenhuma alternativa cita I, II, III...");
     if (q.assertivas && !q.assertivas.some((s) => s.verdadeira)) aviso("nenhuma assertiva verdadeira: confira o gabarito");
+    if (q.assertivas) problemas.push(...conferirGabaritoAssertivas(q, local));
   }
 
   const correta = q.alternativas.find((a) => a.correta);
   if (correta && correta.versaoInvertidaFalsa && chaveExata(correta.versaoInvertidaFalsa) === chaveExata(correta.texto)) {
     erro("versaoInvertidaFalsa é igual ao texto da alternativa correta");
+  }
+  return problemas;
+}
+
+/** Conjunto de afirmativas citadas numa alternativa ("I e III, apenas" → {0, 2}); undefined se não citar nenhuma. */
+export function afirmativasCitadas(texto: string): Set<number> | undefined {
+  const indices = [...texto.matchAll(ROMANOS_GLOBAL)].map((m) => INDICE_ROMANO[m[1]!]!);
+  return indices.length ? new Set(indices) : undefined;
+}
+
+function mesmoConjunto(a: ReadonlySet<number>, b: ReadonlySet<number>): boolean {
+  return a.size === b.size && [...a].every((x) => b.has(x));
+}
+
+function romanos(conjunto: ReadonlySet<number>): string {
+  const nomes = ["I", "II", "III", "IV", "V"];
+  return conjunto.size ? [...conjunto].sort().map((i) => nomes[i]).join(", ") : "nenhuma";
+}
+
+/**
+ * Nas questões de assertivas, a alternativa correta precisa listar exatamente
+ * as afirmativas verdadeiras (ou as falsas, se o comando pedir as incorretas),
+ * e nenhuma alternativa errada pode listar o mesmo conjunto.
+ */
+function conferirGabaritoAssertivas(q: Questao, local: string): Problema[] {
+  const problemas: Problema[] = [];
+  const assertivas = q.assertivas ?? [];
+  const pedeFalsas = PEDE_FALSAS.test(q.comandoFinal ?? "");
+  const alvo = new Set(assertivas.flatMap((s, i) => (s.verdadeira !== pedeFalsas ? [i] : [])));
+  for (const a of q.alternativas) {
+    const citadas = afirmativasCitadas(a.texto);
+    if (!citadas) continue;
+    if ([...citadas].some((i) => i >= assertivas.length)) {
+      problemas.push({ severidade: "erro", local, mensagem: `alternativa "${a.texto.slice(0, 50)}" cita afirmativa inexistente (há ${assertivas.length})` });
+    } else if (a.correta && !mesmoConjunto(citadas, alvo)) {
+      problemas.push({ severidade: "erro", local, mensagem: `a alternativa correta cita ${romanos(citadas)}, mas as afirmativas ${pedeFalsas ? "falsas" : "verdadeiras"} são ${romanos(alvo)}` });
+    } else if (!a.correta && mesmoConjunto(citadas, alvo)) {
+      problemas.push({ severidade: "erro", local, mensagem: `a alternativa incorreta "${a.texto.slice(0, 50)}" também lista exatamente o gabarito (${romanos(alvo)})` });
+    }
   }
   return problemas;
 }
@@ -181,6 +225,8 @@ function validarConjuntoMateria(slug: MateriaSlug, questoes: readonly Questao[],
       problemas.push({ severidade: "erro", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% das questões (máx. 35%): viés explorável` });
     } else if (proporcao > 0.35) {
       problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% das questões (alvo ≤ 35%)` });
+    } else if (resumo.total >= 30 && proporcao < 0.1) {
+      problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em só ${(proporcao * 100).toFixed(0)}% das questões: viés inverso ("nunca é a mais longa"); alvo entre 10% e 35%` });
     }
     for (const [nivel, alvo] of Object.entries(ALVO_NIVEL)) {
       const real = (resumo.porNivel[nivel] ?? 0) / resumo.total;

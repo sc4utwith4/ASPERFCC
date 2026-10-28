@@ -52,8 +52,11 @@
         "pergunta": "No COBIT 2019, o que distingue governança de gestão e quais domínios correspondem a cada uma?",
         "resposta": "A governança avalia, direciona e monitora (domínio EDM) e costuma caber ao conselho. A gestão planeja, constrói, executa e monitora conforme a direção dada (domínios APO, BAI, DSS e MEA) e cabe à diretoria executiva."
       },
-      "conceitosChave": ["COBIT 2019: governança × gestão", "COBIT 2019: domínios e objetivos"],
-      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology, cap. 3 (governança e gestão) e cap. 4 (princípio 'governança distinta da gestão'); COBIT 2019 Framework: Governance and Management Objectives, descrição dos domínios EDM, APO, BAI, DSS e MEA."
+      "conceitosChave": [
+        "COBIT 2019: governança × gestão",
+        "COBIT 2019: domínios e objetivos"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology (distinção entre governança e gestão; princípio 'governança distinta da gestão'); COBIT 2019 Framework: Governance and Management Objectives, descrição dos domínios EDM, APO, BAI, DSS e MEA."
     },
     {
       "id": "gov-ti-002",
@@ -105,7 +108,10 @@
         "pergunta": "Quais são os cinco componentes do Sistema de Valor de Serviço (SVS) do ITIL 4 e quais são suas entradas e saída?",
         "resposta": "Princípios orientadores, governança, cadeia de valor de serviço, práticas e melhoria contínua. As entradas são oportunidade e demanda, e a saída é valor. As quatro dimensões aplicam-se ao SVS inteiro."
       },
-      "conceitosChave": ["ITIL 4: SVS", "ITIL 4 × ITIL v3"],
+      "conceitosChave": [
+        "ITIL 4: SVS",
+        "ITIL 4 × ITIL v3"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 4 (The ITIL service value system) e cap. 3 (as quatro dimensões do gerenciamento de serviços)."
     },
     {
@@ -158,7 +164,10 @@
         "pergunta": "No ITIL 4, qual é a diferença entre solução de contorno e erro conhecido?",
         "resposta": "Solução de contorno reduz ou elimina o impacto de um incidente ou problema ainda sem resolução completa. Erro conhecido é o problema já analisado e ainda não resolvido. O erro conhecido é gerido no controle de erros até a correção definitiva."
       },
-      "conceitosChave": ["Gestão de serviços: incidente × problema", "ITIL 4: erro conhecido e solução de contorno"],
+      "conceitosChave": [
+        "Gestão de serviços: incidente × problema",
+        "ITIL 4: erro conhecido e solução de contorno"
+      ],
       "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de incidentes e de gerenciamento de problemas (definições de incidente, problema, erro conhecido e solução de contorno; fases de identificação, controle do problema e controle de erros)."
     },
     {
@@ -234,7 +243,10 @@
         "pergunta": "Quais elementos do estudo técnico preliminar são obrigatórios na Lei 14.133/2021?",
         "resposta": "Os incisos I, IV, VI, VIII e XIII do art. 18, § 1º: necessidade, quantidades, valor estimado, justificativa do parcelamento e posicionamento conclusivo. Os demais, como o levantamento de mercado, podem faltar se houver justificativa (art. 18, § 2º)."
       },
-      "conceitosChave": ["Lei 14.133: fase preparatória (ETP)", "Contratações de TIC: planejamento"],
+      "conceitosChave": [
+        "Lei 14.133: fase preparatória (ETP)",
+        "Contratações de TIC: planejamento"
+      ],
       "fundamentacao": "Lei 14.133/2021, art. 6º, XX (estudo técnico preliminar), art. 18, caput e §§ 1º (incisos I a XIII) e 2º, e art. 44 (compra × locação)."
     },
     {
@@ -287,7 +299,10 @@
         "pergunta": "Como está estruturado o Guia PMBOK 8ª edição?",
         "resposta": "Em 6 princípios, 7 domínios de desempenho (Governança, Escopo, Cronograma, Finanças, Partes Interessadas, Recursos e Risco), 5 áreas de foco e 40 processos não prescritivos. O guia vale para abordagens preditivas, adaptativas e híbridas."
       },
-      "conceitosChave": ["PMBOK 8: estrutura", "PMBOK 6 × 7 × 8"],
+      "conceitosChave": [
+        "PMBOK 8: estrutura",
+        "PMBOK 6 × 7 × 8"
+      ],
       "fundamentacao": "PMI. A Guide to the Project Management Body of Knowledge (PMBOK Guide), 8th ed., and The Standard for Project Management (2025); página oficial do PMI (pmi.org/standards/pmbok): seis princípios, sete domínios de desempenho e orientação por processos não prescritiva."
     },
     {
@@ -340,7 +355,10 @@
         "pergunta": "Quais foram as principais mudanças da ISO/IEC 38500:2024 em relação à edição de 2015?",
         "resposta": "Os princípios de governança de TI foram reelaborados e alinhados à ISO 37000, o modelo passou a incluir 'engajar as partes interessadas' além de avaliar, dirigir e monitorar, e um framework de governança de TI foi atualizado a partir do ISO/IEC TR 38502."
       },
-      "conceitosChave": ["ISO/IEC 38500:2024", "ISO/IEC 38500: 2015 × 2024"],
+      "conceitosChave": [
+        "ISO/IEC 38500:2024",
+        "ISO/IEC 38500: 2015 × 2024"
+      ],
       "fundamentacao": "ISO/IEC 38500:2024, Foreword (principais mudanças em relação à ISO/IEC 38500:2015) e Scope; ISO/IEC JTC 1/SC 40, anúncio da revisão e white paper sobre as diferenças entre as edições de 2015 e 2024."
     },
     {
@@ -393,7 +411,10 @@
         "pergunta": "Como a Lei 14.129/2021 trata a exigência de documentos já apresentados e o atendimento presencial?",
         "resposta": "Veda exigir prova de fato já comprovado por documento ou informação válida (art. 3º, XIII). Assegura a permanência da possibilidade de atendimento presencial conforme as características, a relevância e o público-alvo do serviço (art. 3º, XVI)."
       },
-      "conceitosChave": ["Lei 14.129: princípios e diretrizes", "Lei 14.129: atendimento presencial"],
+      "conceitosChave": [
+        "Lei 14.129: princípios e diretrizes",
+        "Lei 14.129: atendimento presencial"
+      ],
       "fundamentacao": "Lei 14.129/2021, art. 2º, III (aplicação aos demais entes que adotarem a lei por ato normativo próprio), art. 3º, VII, XIII, XIV, XV e XVI, e art. 14."
     },
     {
@@ -403,7 +424,7 @@
       "origem": "Inédita padrão FCC",
       "nivel": "Avançado",
       "formato": "caso-pratico",
-      "enunciadoBase": "Considere que, em um tribunal de contas, a área de TI implantou uma plataforma de análise de dados e de inteligência artificial que permitiu cruzar bases de jurisdicionados em larga escala. Aproveitando essa nova capacidade, a alta administração redefiniu a estratégia de fiscalização, que passou a selecionar objetos de auditoria por modelos de risco, e, em seguida, foram reorganizados os processos de trabalho e a estrutura das unidades de controle externo. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de",
+      "enunciadoBase": "Considere que, em um tribunal de contas, a estratégia de TI passou a explorar uma plataforma de análise de dados e de inteligência artificial, capaz de cruzar bases de jurisdicionados em larga escala. Aproveitando essa nova capacidade, a alta administração redefiniu a estratégia de fiscalização, que passou a selecionar objetos de auditoria por modelos de risco, e, em seguida, foram reorganizados os processos de trabalho e a estrutura das unidades de controle externo. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de",
       "variantesEnunciado": [
         "Uma secretaria estadual adotou plataforma de identidade digital e assinatura eletrônica desenvolvida pela área de TI. Com base nessa capacidade tecnológica, a cúpula reformulou a estratégia de atendimento, que passou a priorizar serviços totalmente digitais, e depois redesenhou os processos e a estrutura das unidades de atendimento. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de",
         "Em um órgão público, novas capacidades de computação em nuvem e de automação, oferecidas pela estratégia de TI, levaram a direção a redefinir a estratégia institucional de prestação de serviços. Só então foram ajustados a estrutura organizacional e os processos das áreas finalísticas. No modelo de alinhamento estratégico de Henderson e Venkatraman, essa sequência corresponde à perspectiva de"
@@ -446,7 +467,10 @@
         "pergunta": "No modelo de Henderson e Venkatraman, o que caracteriza a perspectiva de potencial competitivo?",
         "resposta": "A estratégia de TI, explorando capacidades emergentes, viabiliza nova estratégia de negócio, que depois orienta a infraestrutura e os processos organizacionais. Difere da execução da estratégia e da transformação tecnológica, que partem da estratégia de negócio."
       },
-      "conceitosChave": ["Alinhamento estratégico (SAM)", "Governança de TI: alinhamento estratégico"],
+      "conceitosChave": [
+        "Alinhamento estratégico (SAM)",
+        "Governança de TI: alinhamento estratégico"
+      ],
       "fundamentacao": "Henderson, J. C.; Venkatraman, N. Strategic alignment: leveraging information technology for transforming organizations. IBM Systems Journal, v. 32, n. 1, 1993 (domínios, dimensões de ajuste estratégico e de integração funcional e quatro perspectivas de alinhamento)."
     },
     {
@@ -499,7 +523,10 @@
         "pergunta": "No Scrum (Guia 2020), quem decide sobre nova demanda no meio da Sprint e quem pode cancelar a Sprint?",
         "resposta": "A demanda vai para o Product Owner, que ordena o Product Backlog. Durante a Sprint não se fazem mudanças que ponham em risco a Meta da Sprint. Só o PO pode cancelar a Sprint, e apenas se a meta se tornar obsoleta."
       },
-      "conceitosChave": ["Scrum: papéis (accountabilities)", "Scrum: Sprint e Meta da Sprint"],
+      "conceitosChave": [
+        "Scrum: papéis (accountabilities)",
+        "Scrum: Sprint e Meta da Sprint"
+      ],
       "fundamentacao": "Schwaber, K.; Sutherland, J. Guia do Scrum (2020), seções 'Product Owner', 'Scrum Master', 'Developers' e 'Sprint' (regra de não pôr em risco a Meta da Sprint e cancelamento da Sprint)."
     },
     {
@@ -552,7 +579,10 @@
         "pergunta": "O que são MTPD, RTO e RPO e como se relacionam em um plano de continuidade?",
         "resposta": "MTPD é o tempo após o qual os impactos de uma interrupção se tornam inaceitáveis. RTO é o prazo para retomar a atividade e deve ser inferior ao MTPD. RPO é a perda máxima de dados admitida, que define a frequência de backup ou replicação."
       },
-      "conceitosChave": ["Continuidade: RTO, RPO e MTPD", "Continuidade: análise de impacto no negócio (BIA)"],
+      "conceitosChave": [
+        "Continuidade: RTO, RPO e MTPD",
+        "Continuidade: análise de impacto no negócio (BIA)"
+      ],
       "fundamentacao": "ABNT NBR ISO 22301:2020 (ISO 22301:2019), seção 8.2.2 (análise de impacto nos negócios, prazos de retomada e período máximo tolerável); ISO 22300:2021 (definições de MTPD, RTO e RPO); AXELOS, ITIL 4, prática de gerenciamento de continuidade de serviço."
     }
   ]

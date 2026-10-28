@@ -1,0 +1,584 @@
+{
+  "materiaSlug": "legislacao-aplicada-ti",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "leg-ti-021",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal publicou, em seu portal de dados abertos, uma base sobre servidores de jurisdicionados afastados por licença médica. Para “anonimizar” os dados, foram removidos nome, CPF e matrícula, mas mantidos o CEP residencial completo, a data de nascimento, o sexo e o órgão de lotação. Um pesquisador demonstrou que, cruzando a base com informações publicadas em diários oficiais e redes sociais, era possível identificar a maioria dos servidores com pouco tempo e custo. Diante disso, é correto concluir que",
+      "variantesEnunciado": [
+        "Para atender a pedidos de pesquisadores, o Tribunal disponibilizou uma planilha com atendimentos do seu serviço médico, da qual retirou nome e matrícula, mas manteve data de nascimento, sexo, cidade, unidade de lotação e data do atendimento. Uma jornalista identificou diversos servidores em poucas horas, cruzando a planilha com o organograma público e perfis em redes sociais. Diante disso, é correto concluir que",
+        "Uma base de afastamentos por motivo de saúde de servidores de órgãos jurisdicionados foi publicada sem nomes e CPFs, mas com data de nascimento, sexo, CEP e cargo. Testes da própria equipe do Tribunal mostraram que, com consultas simples a fontes abertas, a maioria dos registros podia ser atribuída a pessoas determinadas. Diante disso, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os dados permanecem anonimizados, pois a LGPD considera anonimizado todo dado do qual tenham sido removidos os identificadores diretos, como nome e CPF.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Remover identificadores diretos não basta. O critério da LGPD é a impossibilidade de identificação considerando meios técnicos razoáveis (art. 5º, III e XI). Quase-identificadores como CEP, data de nascimento e sexo, combinados, permitem reidentificar grande parte das pessoas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os dados devem ser tratados como pessoais, e sensíveis por se referirem à saúde, pois a anonimização é reversível com esforços razoáveis de custo e tempo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo art. 12, o dado anonimizado deixa de ser pessoal salvo quando a anonimização puder ser revertida com esforços razoáveis, avaliados por custo, tempo e tecnologias disponíveis (§ 1º). O cruzamento barato com fontes públicas demonstra essa reversibilidade, de modo que os dados são pessoais. E, por se referirem à saúde (licença médica), são dados pessoais sensíveis (art. 5º, II), o que agrava o problema e exige técnicas como generalização, supressão ou agregação antes de nova publicação.",
+          "versaoInvertidaFalsa": "Removidos nome, CPF e matrícula, a base é considerada anonimizada pela LGPD, ainda que CEP, data de nascimento e sexo permitam reidentificar os servidores com pouco esforço."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os dados passaram a ser pseudonimizados, já que a reidentificação depende de informação adicional, e por isso podem continuar publicados sem restrição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pseudonimização pressupõe informação adicional mantida separadamente pelo controlador em ambiente controlado e seguro (art. 13, § 4º). Aqui a reidentificação usa fontes públicas, e de todo modo dado pseudonimizado continua sendo pessoal, o que não autoriza publicação irrestrita."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os dados só seriam considerados pessoais se a reidentificação fosse feita com meios próprios do Tribunal, o que não ocorreu, pois quem a fez foi um terceiro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 12 prevê duas hipóteses de reversão: com meios próprios ou com esforços razoáveis. A segunda não depende de quem reverte; basta que seja viável com custo e tempo razoáveis, como demonstrou o pesquisador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os dados deixam de ser regidos pela LGPD por terem sido publicados em transparência ativa, já que dados tornados públicos pelo controlador perdem a proteção legal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dados de acesso público continuam protegidos: o tratamento deve considerar a finalidade, a boa-fé e o interesse público que justificaram sua disponibilização (art. 7º, § 3º). A publicação não retira a incidência da LGPD."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve uma “anonimização” que só removeu identificadores diretos. O detalhe decisivo é a reidentificação com pouco custo e tempo (esforço razoável, art. 12, § 1º), e o segundo objeto de avaliação é o caráter sensível do dado de saúde.",
+      "resumoFlashcard": {
+        "pergunta": "Remover nome e CPF de uma base basta para anonimizá-la segundo a LGPD?",
+        "resposta": "Não. É preciso que o titular não possa ser identificado com meios técnicos razoáveis. Se quase-identificadores (CEP, data de nascimento, sexo) permitirem reidentificar com custo e tempo razoáveis, o dado continua pessoal (art. 12 e § 1º); se for de saúde, é também sensível (art. 5º, II)."
+      },
+      "conceitosChave": ["LGPD: anonimização", "LGPD: dados sensíveis"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, II, III e XI; art. 7º, § 3º; art. 12, caput e § 1º; art. 13, § 4º."
+    },
+    {
+      "id": "leg-ti-022",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de resposta a incidentes do Tribunal revisa seu procedimento de tratamento de incidentes com dados pessoais à luz da LGPD e do Regulamento de Comunicação de Incidente de Segurança (Resolução CD/ANPD nº 15/2024). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Após um ataque de phishing que comprometeu contas de usuários do sistema de protocolo, a área de TI do Tribunal decidiu revisar seu manual de resposta a incidentes com base na LGPD e na Resolução CD/ANPD nº 15/2024. Considere as afirmativas abaixo.",
+        "Em auditoria sobre a gestão de incidentes de segurança de um jurisdicionado, a equipe do Tribunal verificou a aderência do procedimento à LGPD e ao Regulamento de Comunicação de Incidente de Segurança da ANPD. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A comunicação do incidente deve mencionar, no mínimo, a natureza dos dados afetados, as informações sobre os titulares envolvidos, as medidas técnicas e de segurança utilizadas, os riscos, os motivos da demora, se houver, e as medidas adotadas ou a adotar.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o conteúdo mínimo do art. 48, § 1º, da LGPD, com a ressalva dos segredos comercial e industrial quanto às medidas de segurança."
+        },
+        {
+          "texto": "No juízo de gravidade do incidente, considera-se a eventual comprovação de que foram adotadas medidas técnicas que tornem os dados pessoais afetados ininteligíveis para terceiros não autorizados a acessá-los.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 48, § 3º: criptografia robusta, com chave não comprometida, pesa a favor do controlador na avaliação da gravidade."
+        },
+        {
+          "texto": "O controlador só precisa registrar o incidente quando ele for comunicado à ANPD; incidentes avaliados como sem risco relevante dispensam qualquer documentação.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O RCIS (art. 10) exige o registro de todo incidente, comunicado ou não, mantido por no mínimo cinco anos, inclusive com os motivos da decisão de não comunicar."
+        },
+        {
+          "texto": "Incidente que exponha senhas e tokens de acesso a um sistema, com potencial de afetar significativamente os titulares, enquadra-se nos critérios de risco ou dano relevante do regulamento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Dados de autenticação em sistemas são um dos critérios do RCIS, desde que haja potencial de afetação significativa dos interesses e direitos fundamentais dos titulares."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o registro é exigido para todo incidente, comunicado ou não, por no mínimo cinco anos (RCIS, art. 10)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa, e omite a II e a IV, verdadeiras (art. 48, § 3º, da LGPD e critério de dados de autenticação do RCIS)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz o conteúdo mínimo do art. 48, § 1º; a II reproduz o art. 48, § 3º (dados ininteligíveis); a IV aplica o critério de dados de autenticação em sistemas do RCIS, cumulado com a possibilidade de afetação significativa. A III é falsa porque todo incidente deve ser registrado, comunicado ou não, por no mínimo cinco anos.",
+          "versaoInvertidaFalsa": "Pelo RCIS, incidentes avaliados como sem risco relevante dispensam registro, bastando documentar os incidentes efetivamente comunicados à ANPD."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa, e exclui a I, que reproduz o conteúdo mínimo da comunicação previsto no art. 48, § 1º, da LGPD."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas II e IV estão corretas, mas a I também está, pois reproduz o art. 48, § 1º. A alternativa é incompleta."
+        }
+      ],
+      "pegadinhaFCC": "O ponto sutil é o registro: a banca sugere que só incidentes comunicados precisam ser documentados. Pelo RCIS, todo incidente é registrado, por no mínimo cinco anos. Também vale lembrar que criptografia eficaz (dados ininteligíveis) atenua a gravidade.",
+      "resumoFlashcard": {
+        "pergunta": "Todo incidente com dados pessoais precisa ser registrado, mesmo sem comunicação à ANPD?",
+        "resposta": "Sim. O RCIS (art. 10) exige o registro de todo incidente, comunicado ou não, por no mínimo cinco anos, com a avaliação de risco e, quando for o caso, os motivos da não comunicação."
+      },
+      "conceitosChave": ["LGPD: comunicação de incidente"],
+      "fundamentacao": "Lei 13.709/2018, art. 48, §§ 1º e 3º; Resolução CD/ANPD nº 15/2024 (RCIS), arts. 5º e 10."
+    },
+    {
+      "id": "leg-ti-023",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: neutralidade de rede",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o provedor que fornece o link de internet do Tribunal, diante de um ataque distribuído de negação de serviço que congestionava sua rede, passou a filtrar o tráfego oriundo das origens maliciosas e a limitar o envio de mensagens em massa (spam) a partir de endereços comprometidos. À luz do Marco Civil da Internet e do Decreto nº 8.771/2016, essa conduta é",
+      "variantesEnunciado": [
+        "Durante uma onda de ataques de negação de serviço contra portais de órgãos públicos, o provedor contratado pelo Tribunal passou a descartar o tráfego originado de redes de bots identificadas e a restringir disparos massivos de spam a partir de equipamentos infectados de clientes. À luz do Marco Civil da Internet e do Decreto nº 8.771/2016, essa conduta é",
+        "Um provedor de acesso, para preservar a estabilidade da rede durante um ataque volumétrico de negação de serviço, aplicou filtragem às origens do ataque e limitou o envio de mensagens em massa de clientes comprometidos, o que afetou temporariamente alguns serviços do Tribunal. À luz do Marco Civil da Internet e do Decreto nº 8.771/2016, essa conduta é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "vedada em qualquer hipótese, pois o art. 9º do Marco Civil impõe tratamento isonômico absoluto aos pacotes de dados, sem admitir exceções.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O próprio art. 9º, § 1º, admite discriminação ou degradação decorrente de requisitos técnicos indispensáveis e da priorização de serviços de emergência. A neutralidade é a regra, mas não é absoluta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "admitida somente mediante ordem judicial prévia, já que qualquer discriminação de tráfego depende de autorização do Poder Judiciário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As exceções do art. 9º, § 1º, decorrem da lei e de sua regulamentação, e não de autorização judicial. A fiscalização dos requisitos técnicos cabe à Anatel, consideradas as diretrizes do CGI.br (Decreto 8.771/2016, art. 5º, § 2º)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "admitida, inclusive com análise do conteúdo das comunicações dos usuários e sem necessidade de informá-los, pois a segurança da rede prevalece sobre a privacidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 9º, § 3º, veda bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes, e o § 2º exige informar previamente os usuários sobre as práticas de gerenciamento, inclusive as de segurança. A medida legítima atua sobre o tráfego malicioso, e não sobre o conteúdo das comunicações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "admitida, por ser requisito técnico indispensável ligado à segurança da rede, se o provedor agir com proporcionalidade, transparência e isonomia e informar suas práticas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Decreto 8.771/2016 (art. 5º, § 1º, I) inclui entre os requisitos técnicos indispensáveis o tratamento de questões de segurança de redes, como a restrição ao envio de spam e o controle de ataques de negação de serviço. Mesmo nessas hipóteses, o art. 9º, § 2º, do Marco Civil exige proporcionalidade, transparência e isonomia, abstenção de dano e informação prévia, clara e suficientemente descritiva aos usuários sobre as práticas de gerenciamento.",
+          "versaoInvertidaFalsa": "À luz do Marco Civil, filtrar o tráfego de um ataque de negação de serviço é sempre vedado, porque a neutralidade de rede não admite nenhuma forma de discriminação de pacotes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "admitida apenas com autorização prévia da ANPD, autoridade competente para regular as hipóteses de discriminação e degradação de tráfego na internet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A regulamentação das exceções é feita por decreto presidencial, ouvidos o CGI.br e a Anatel, e a fiscalização dos requisitos técnicos cabe à Anatel. A ANPD não autoriza previamente medidas de gerenciamento de tráfego."
+        }
+      ],
+      "pegadinhaFCC": "A FCC testa os dois extremos: neutralidade “absoluta” ou segurança que “tudo justifica”. O caminho do meio é a lei: requisitos técnicos indispensáveis (spam, negação de serviço, congestionamento excepcional) são admitidos, com proporcionalidade, transparência, isonomia e informação aos usuários.",
+      "resumoFlashcard": {
+        "pergunta": "Mitigar um ataque de negação de serviço viola a neutralidade de rede?",
+        "resposta": "Não. O Decreto 8.771/2016 (art. 5º, § 1º, I) inclui a segurança de redes (restrição a spam e controle de negação de serviço) entre os requisitos técnicos indispensáveis. O provedor deve agir com proporcionalidade, transparência e isonomia e informar suas práticas de gerenciamento (Marco Civil, art. 9º, § 2º)."
+      },
+      "conceitosChave": ["Marco Civil: neutralidade de rede", "Decreto 8.771/2016"],
+      "fundamentacao": "Lei 12.965/2014, art. 9º, §§ 1º a 3º; Decreto 8.771/2016, arts. 4º e 5º, §§ 1º e 2º."
+    },
+    {
+      "id": "leg-ti-024",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: proteção de dados e guarda de registros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "enunciadoBase": "Conforme o Marco Civil da Internet, a autoridade policial ou administrativa ou o Ministério Público poderá requerer cautelarmente que os registros de conexão sejam guardados por prazo …… ao previsto em lei. Nessa hipótese, a autoridade requerente terá o prazo de ……, contados a partir do requerimento, para ingressar com o pedido de autorização judicial de acesso aos registros, e o provedor responsável pela guarda deverá manter …… em relação ao requerimento, que perderá sua eficácia caso o pedido judicial seja indeferido ou não seja protocolado no prazo. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Durante investigação de fraude em licitações, o Ministério Público requereu cautelarmente a um provedor de conexão que guardasse os registros de conexão de determinado usuário por prazo …… ao previsto no Marco Civil. Pela lei, o órgão terá ……, contados do requerimento, para ingressar com o pedido de autorização judicial de acesso, e o provedor deverá manter …… em relação ao requerimento, que perde a eficácia se o pedido for indeferido ou não for protocolado no prazo. Preenchem, correta e respectivamente, as lacunas:",
+        "Nos termos do art. 13 da Lei nº 12.965/2014, é possível requerer cautelarmente a guarda de registros de conexão por prazo …… ao legal; a autoridade requerente dispõe de ……, contados do requerimento, para pedir ao Judiciário autorização de acesso; e o provedor deve manter …… sobre o requerimento, sob pena de frustrar a apuração. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "superior − 60 dias − sigilo",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 13, § 2º, permite o requerimento cautelar de guarda dos registros de conexão por prazo superior a 1 ano; o § 3º dá à autoridade 60 dias, contados do requerimento, para ingressar com o pedido de autorização judicial; e o § 4º impõe ao provedor sigilo sobre o requerimento, que perde eficácia se o pedido for indeferido ou não for protocolado no prazo. Em qualquer caso, o acesso aos registros depende de autorização judicial (§ 5º). O art. 15, § 2º, aplica a mesma lógica aos registros de acesso a aplicações.",
+          "versaoInvertidaFalsa": "Pelo Marco Civil, após requerer cautelarmente a guarda dos registros de conexão, a autoridade tem 30 dias para pedir autorização judicial, e o provedor deve informar o usuário sobre o requerimento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "superior − 30 dias − sigilo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O prazo para ingressar com o pedido de autorização judicial é de 60 dias, e não de 30 (art. 13, § 3º). O restante da alternativa está correto, o que torna a troca do número a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "inferior − 60 dias − publicidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O requerimento cautelar serve para estender a guarda (prazo superior), e não para reduzi-la. E o provedor deve manter sigilo, e não dar publicidade ao requerimento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "superior − 60 dias − publicidade perante o usuário",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros termos estão certos, mas o provedor deve manter sigilo sobre o requerimento (art. 13, § 4º). Avisar o usuário frustraria a investigação que justificou a medida cautelar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "equivalente − 90 dias − sigilo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não faria sentido requerer a guarda por prazo equivalente ao legal, e o prazo para o pedido judicial é de 60 dias. Só o terceiro termo (sigilo) está certo."
+        }
+      ],
+      "pegadinhaFCC": "Prazo alterado (30 ou 90 dias em vez de 60) e troca de sigilo por publicidade. Lembre a sequência do art. 13: guarda por prazo superior a pedido cautelar, 60 dias para o pedido judicial, sigilo do provedor e acesso só com autorização judicial.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona o requerimento cautelar de guarda de registros no Marco Civil?",
+        "resposta": "Autoridade policial ou administrativa ou o MP pode pedir que os registros sejam guardados por prazo superior ao legal; tem 60 dias, contados do requerimento, para pedir autorização judicial de acesso; o provedor mantém sigilo, e o requerimento perde eficácia se o pedido for indeferido ou não protocolado (art. 13, §§ 2º a 5º; art. 15, § 2º)."
+      },
+      "conceitosChave": ["Marco Civil: guarda de registros", "Marco Civil: ordem judicial"],
+      "fundamentacao": "Lei 12.965/2014, art. 13, §§ 2º a 5º; art. 15, § 2º."
+    },
+    {
+      "id": "leg-ti-025",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Requisitos de segurança em contratações de TIC",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de planejamento da contratação de uma solução de gestão de identidades e acessos para o Tribunal precisa registrar os requisitos de segurança da informação nos artefatos previstos na Lei nº 14.133/2021. Sobre esses artefatos, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao planejar a contratação de serviço de backup em nuvem, a equipe do Tribunal discutiu em quais artefatos da Lei nº 14.133/2021 devem constar os requisitos de segurança e a alocação de riscos. Considere as afirmativas abaixo.",
+        "Em auditoria sobre contratações de TIC de um jurisdicionado, a equipe do Tribunal verificou se os requisitos de segurança da informação estavam corretamente distribuídos entre estudo técnico preliminar, termo de referência e contrato, nos termos da Lei nº 14.133/2021. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O estudo técnico preliminar deve evidenciar o problema a ser resolvido e a sua melhor solução, e nele se insere o levantamento de mercado, com a análise das alternativas possíveis e a justificativa técnica e econômica da escolha do tipo de solução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o art. 18, § 1º, caput e inciso V. Requisitos de segurança orientam a comparação entre as alternativas de mercado."
+        },
+        {
+          "texto": "O termo de referência deve conter, entre outros elementos, os requisitos da contratação, o modelo de execução do objeto e o modelo de gestão do contrato, campos adequados para detalhar exigências de segurança e sua fiscalização.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 6º, XXIII, lista esses elementos do termo de referência (alíneas d, e e f)."
+        },
+        {
+          "texto": "A matriz de riscos deve obrigatoriamente constar do edital de toda contratação de solução de TIC, independentemente do vulto ou do regime de execução.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 22 prevê que o edital poderá contemplar matriz de alocação de riscos; ela só é obrigatória em obras e serviços de grande vulto e nos regimes de contratação integrada e semi-integrada (§ 3º). Nas demais contratações, é facultativa, embora recomendável."
+        },
+        {
+          "texto": "Por se tratar de elemento facultativo, a estimativa do valor da contratação pode ser omitida do estudo técnico preliminar, bastando justificar a ausência.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 18, § 2º, torna obrigatórios no ETP ao menos os incisos I, IV, VI, VIII e XIII do § 1º; a estimativa do valor (inciso VI) é um deles."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: a matriz de riscos só é obrigatória em contratações de grande vulto e nos regimes de contratação integrada e semi-integrada (art. 22, § 3º)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está correta, mas a IV é falsa: a estimativa do valor é elemento obrigatório do ETP (art. 18, § 2º). Além disso, a alternativa omite a I, verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui duas afirmativas falsas, a III (matriz de riscos obrigatória em qualquer contratação) e a IV (estimativa do valor facultativa), e omite a II, verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas indicadas são falsas: a matriz de riscos não é obrigatória em toda contratação, e a estimativa do valor não pode ser omitida do ETP."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz o art. 18, § 1º, caput e inciso V (ETP e levantamento de mercado); a II reproduz o art. 6º, XXIII, alíneas d, e e f (requisitos da contratação, modelo de execução e modelo de gestão). A III é falsa porque a matriz de riscos só é obrigatória nos casos do art. 22, § 3º, e a IV é falsa porque a estimativa do valor (inciso VI) está entre os elementos obrigatórios do ETP (art. 18, § 2º).",
+          "versaoInvertidaFalsa": "Pela Lei 14.133/2021, o levantamento de mercado, com a análise das alternativas e a justificativa da solução escolhida, integra o termo de referência, e não o estudo técnico preliminar."
+        }
+      ],
+      "pegadinhaFCC": "Dois detalhes de literalidade: a matriz de riscos só é obrigatória em grande vulto e nos regimes integrado e semi-integrado (art. 22, § 3º), e o ETP tem elementos obrigatórios (art. 18, § 2º: incisos I, IV, VI, VIII e XIII), entre eles a estimativa do valor.",
+      "resumoFlashcard": {
+        "pergunta": "Onde ficam os requisitos de segurança numa contratação de TIC pela Lei 14.133/2021?",
+        "resposta": "No ETP, como requisitos da contratação (art. 18, § 1º, III) que orientam o levantamento de mercado (inciso V); no termo de referência, nos requisitos da contratação, no modelo de execução e no modelo de gestão (art. 6º, XXIII); e, quando houver, na matriz de riscos (art. 6º, XXVII), obrigatória só nos casos do art. 22, § 3º."
+      },
+      "conceitosChave": ["Lei 14.133: ETP", "Lei 14.133: termo de referência", "Lei 14.133: matriz de riscos"],
+      "fundamentacao": "Lei 14.133/2021, art. 6º, XX, XXIII e XXVII; art. 18, § 1º (III e V) e § 2º; art. 22, caput e § 3º."
+    },
+    {
+      "id": "leg-ti-026",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Certificação digital em sistemas informatizados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O sistema de peticionamento eletrônico do Tribunal passou a exigir que todo jurisdicionado faça cadastro prévio no portal, com login e senha, antes de protocolar documentos, inclusive quando o documento estiver assinado com certificado digital emitido no âmbito da ICP-Brasil. Considerando a Lei nº 14.063/2020, essa exigência",
+      "variantesEnunciado": [
+        "Ao especificar o novo módulo de envio de prestações de contas, a equipe de TI do Tribunal propôs bloquear o envio de documentos assinados com certificado ICP-Brasil por usuários que ainda não tivessem concluído o cadastro de login e senha no portal. Considerando a Lei nº 14.063/2020, essa regra",
+        "Um jurisdicionado reclamou que não conseguiu protocolar recurso no Tribunal, embora o documento estivesse assinado com certificado digital ICP-Brasil, porque o sistema exigia cadastro prévio com usuário e senha. Considerando a Lei nº 14.063/2020, a exigência do sistema"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é válida, pois a lei permite que cada ente condicione o uso de qualquer tipo de assinatura eletrônica ao cadastramento prévio do usuário em seus sistemas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ato de cada Poder ou órgão autônomo fixa o nível mínimo de assinatura (art. 5º), mas a própria lei garante que a assinatura qualificada seja admitida em qualquer interação eletrônica com ente público, independentemente de cadastramento prévio (art. 5º, § 1º, III)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "contraria a lei, que manda admitir a assinatura qualificada em qualquer interação eletrônica com ente público, independentemente de cadastramento prévio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 14.063/2020 classifica as assinaturas em simples, avançada e qualificada (art. 4º) e garante que a qualificada, que usa certificado ICP-Brasil, será admitida em qualquer interação eletrônica com ente público, independentemente de cadastramento prévio (art. 5º, § 1º, III). O sistema pode exigir cadastro de quem usa assinatura simples ou avançada, mas não de quem assina com certificado ICP-Brasil.",
+          "versaoInvertidaFalsa": "Pela Lei 14.063/2020, o ente público pode exigir cadastramento prévio para aceitar documentos assinados com certificado ICP-Brasil, pois a assinatura qualificada só é admitida após o credenciamento do usuário."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é válida, porque a assinatura qualificada é a de menor nível de confiabilidade entre as previstas na lei e, por isso, precisa ser complementada por login e senha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: a assinatura qualificada é a de nível mais elevado de confiabilidade (art. 4º, § 1º). Não precisa de complementação por login e senha."
+        },
+        {
+          "id": "opt-4",
+          "texto": "contraria a lei, pois a Lei 14.063/2020 proíbe o uso de login e senha em qualquer interação com ente público, admitindo apenas certificados ICP-Brasil.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei não proíbe login e senha. Ela admite a assinatura simples em interações de menor impacto e sem informações protegidas por grau de sigilo (art. 5º, § 1º, I). O que não se pode é recusar a qualificada por falta de cadastro."
+        },
+        {
+          "id": "opt-5",
+          "texto": "não se submete à lei, já que a Lei 14.063/2020 se aplica somente aos processos judiciais, e não aos processos que tramitam nos tribunais de contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte a regra: o capítulo da Lei 14.063/2020 sobre interações com entes públicos não se aplica aos processos judiciais (art. 2º, parágrafo único, I). Processos administrativos, como os de controle externo, estão abrangidos."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a garantia do art. 5º, § 1º, III: a assinatura qualificada (ICP-Brasil) vale em qualquer interação com ente público, sem cadastro prévio. Atenção também à exclusão dos processos judiciais, frequentemente invertida.",
+      "resumoFlashcard": {
+        "pergunta": "O ente público pode exigir cadastro prévio de quem assina com certificado ICP-Brasil?",
+        "resposta": "Não. Pela Lei 14.063/2020 (art. 5º, § 1º, III), a assinatura eletrônica qualificada será admitida em qualquer interação eletrônica com ente público, independentemente de cadastramento prévio."
+      },
+      "conceitosChave": ["Assinaturas eletrônicas (Lei 14.063)", "ICP-Brasil"],
+      "fundamentacao": "Lei 14.063/2020, art. 2º, parágrafo único, I; art. 4º e § 1º; art. 5º, caput e § 1º, I a III."
+    },
+    {
+      "id": "leg-ti-027",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RN 13/2016: Comitê Estratégico de TI (CETI)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que dois projetos de TI do Tribunal, a modernização do sistema de processo eletrônico e a implantação de uma plataforma de análise de dados, disputam a mesma equipe de desenvolvimento e o mesmo orçamento no exercício, e a área de TI não consegue atender a ambos no prazo. Conforme a Resolução Normativa nº 13/2016, a definição de qual projeto será priorizado deve ser levada",
+      "variantesEnunciado": [
+        "No planejamento do exercício, a área de TI do Tribunal identificou que a migração da infraestrutura para nuvem e o desenvolvimento de um novo portal de transparência dependem dos mesmos especialistas e da mesma dotação orçamentária, não sendo possível executá-los simultaneamente. Conforme a Resolução Normativa nº 13/2016, a definição de qual iniciativa será priorizada deve ser levada",
+        "Duas unidades do Tribunal solicitaram, com urgência, soluções de TI que demandam a mesma equipe técnica e parte relevante do orçamento de TI do ano, gerando conflito de recursos. Conforme a Resolução Normativa nº 13/2016, a decisão sobre a prioridade entre as demandas deve ser levada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ao Comitê de Segurança da Informação, que tem competência para promover e atualizar a Política de Segurança da Informação e, por extensão, para priorizar os projetos de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Comitê de Segurança da Informação tem a competência de promover e atualizar a PSI (Portaria 56/2025), e não a de priorizar o portfólio de projetos de TI. A extensão de competência é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ao encarregado pelo tratamento de dados pessoais, porque ambos os projetos envolvem dados pessoais de jurisdicionados e servidores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O encarregado atua como canal de comunicação sobre proteção de dados (art. 41 da LGPD). Ele pode orientar sobre riscos de privacidade dos projetos, mas não decide prioridades de investimento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ao Comitê Estratégico de TI, a quem compete priorizar as ações e os investimentos de TI e acompanhar os projetos e os conflitos de recursos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A RN 13/2016 atribui ao CETI, entre outras competências, priorizar ações e investimentos de TI, validar o orçamento da área e acompanhar projetos e conflitos de recursos (art. 2º). Conflito entre projetos pela mesma equipe e pelo mesmo orçamento é exatamente a situação que exige decisão da instância estratégica, alinhada aos objetivos institucionais.",
+          "versaoInvertidaFalsa": "Pela RN 13/2016, conflitos de recursos entre projetos de TI são resolvidos pela própria área de TI, cabendo ao CETI apenas tomar conhecimento da decisão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "ao fiscal do contrato de desenvolvimento, que deve decidir com base na ordem cronológica de abertura das demandas no sistema de chamados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fiscal acompanha a execução do contrato (Lei 14.133/2021), sem competência para priorizar o portfólio. A ordem cronológica dos chamados também não é critério de alinhamento estratégico."
+        },
+        {
+          "id": "opt-5",
+          "texto": "aos gestores das unidades demandantes, que devem decidir por consenso, já que a governança de TI não prevê instância colegiada para esse tipo de conflito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Existe instância colegiada própria: o CETI, de caráter permanente, com competência para priorizar ações e investimentos de TI e acompanhar conflitos de recursos."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece instâncias reais, mas com outra competência (Comitê de Segurança da Informação, encarregado, fiscal do contrato). Priorizar investimentos e arbitrar conflitos de recursos de TI é competência do CETI.",
+      "resumoFlashcard": {
+        "pergunta": "No TCE-GO, quem prioriza projetos de TI que disputam os mesmos recursos?",
+        "resposta": "O Comitê Estratégico de TI (CETI), que, pela RN 13/2016, prioriza ações e investimentos de TI, valida o orçamento da área e acompanha projetos e conflitos de recursos."
+      },
+      "conceitosChave": ["CETI (RN 13/2016)", "Governança de TI: priorização"],
+      "fundamentacao": "TCE-GO, Resolução Normativa nº 13/2016, art. 2º; Portaria TCE-GO nº 56/2025 (Comitê de Segurança da Informação); Lei 13.709/2018, art. 41."
+    },
+    {
+      "id": "leg-ti-028",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 14/2024: Política de Governança Organizacional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A Política de Governança Organizacional do Tribunal de Contas do Estado de Goiás (Resolução Administrativa nº 14/2024), inspirada na Resolução TCU nº 320/2020, adota a concepção, também presente no Decreto federal nº 9.203/2017, de que governança corresponde a",
+      "variantesEnunciado": [
+        "Em palestra para servidores recém-empossados, a área de planejamento do Tribunal explicou que a Resolução Administrativa nº 14/2024, que instituiu a Política de Governança Organizacional, segue a linha da Resolução TCU nº 320/2020 e do Decreto federal nº 9.203/2017. Segundo essa concepção, governança corresponde a",
+        "Ao avaliar a governança de um jurisdicionado, um técnico do Tribunal tomou como referência a concepção adotada pela Política de Governança Organizacional do próprio TCE-GO (RA nº 14/2024), alinhada ao Decreto federal nº 9.203/2017, segundo a qual governança corresponde a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "execução das atividades de planejar, construir, operar e monitorar os processos de trabalho, a cargo dos gestores de cada unidade, em busca de eficiência operacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Planejar, construir, operar e monitorar descrevem a gestão (no COBIT 2019, os domínios de gestão APO, BAI, DSS e MEA), executada pelos gestores. A governança avalia, direciona e monitora a gestão; não a executa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "conjunto de controles contábeis e financeiros exercidos exclusivamente pela unidade de controle interno sobre a execução orçamentária do órgão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Controles contábeis e financeiros são parte do controle interno, que é apenas um dos mecanismos de governança. A governança é mais ampla e envolve liderança e estratégia, além do controle."
+        },
+        {
+          "id": "opt-3",
+          "texto": "auditoria independente das contas do órgão, realizada por órgão externo, com a finalidade de emitir parecer sobre a regularidade da gestão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A auditoria independente é uma das formas de avaliação que alimentam a governança, mas não a define. A alternativa confunde governança com controle externo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a atuação da gestão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A RA 14/2024 define governança organizacional como os mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a atuação da gestão, mesma tríade do Decreto federal 9.203/2017 (art. 2º, I) e do Referencial Básico de Governança do TCU. A política também institui o Sistema de Governança Organizacional (SGO/TCE-GO), conjunto de instrumentos e estruturas envolvidos na avaliação, no direcionamento e no monitoramento da organização.",
+          "versaoInvertidaFalsa": "Pela Política de Governança Organizacional do TCE-GO, governança é a execução direta das atividades operacionais pelos gestores, enquanto a avaliação e o monitoramento cabem exclusivamente ao controle externo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "estrutura hierárquica de cargos, funções comissionadas e unidades administrativas, com a respectiva distribuição de competências.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A estrutura organizacional e a distribuição de competências são definidas em outro normativo (no TCE-GO, a RA 14/2025). A estrutura é um dos meios da governança, e não o seu conceito."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca governança por gestão (planejar, construir, operar e monitorar), por controle interno ou por estrutura organizacional. A tríade que define governança é liderança, estratégia e controle, aplicada para avaliar, direcionar e monitorar a gestão.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o conceito de governança organizacional adotado pelo TCE-GO (RA 14/2024)?",
+        "resposta": "Mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a atuação da gestão, na linha da Resolução TCU 320/2020 e do Decreto 9.203/2017 (art. 2º, I)."
+      },
+      "conceitosChave": ["Governança organizacional"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (conceito de governança organizacional e SGO/TCE-GO, conforme o portal do TCE-GO; conferir no texto oficial); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; TCU, Referencial Básico de Governança Organizacional.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-ti-029",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 17/2024: Política de Segurança da Informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em uma mesma semana, o Tribunal registrou dois eventos: (1) um servidor de uma unidade administrativa enviou, por engano, a um destinatário externo uma planilha com dados funcionais restritos de colegas; (2) o portal institucional ficou fora do ar por várias horas em razão de um ataque distribuído de negação de serviço. À luz das propriedades que a Política de Segurança da Informação (RA nº 17/2024) busca assegurar, os eventos (1) e (2) afetaram, respectivamente,",
+      "variantesEnunciado": [
+        "Num mesmo mês, a central de serviços do Tribunal tratou dois incidentes: (1) um relatório com dados restritos de servidores foi encaminhado por engano para uma lista de e-mails externa; (2) o sistema de protocolo eletrônico ficou inacessível por uma tarde devido a um ataque de negação de serviço. À luz das propriedades que a Política de Segurança da Informação (RA nº 17/2024) busca assegurar, os incidentes (1) e (2) afetaram, respectivamente,",
+        "Considere dois eventos ocorridos no Tribunal: (1) uma servidora da área de gestão de pessoas anexou, por descuido, uma planilha com dados restritos de colegas a uma mensagem enviada a um fornecedor; (2) um ataque volumétrico de negação de serviço tornou o portal de jurisprudência indisponível durante a manhã. À luz das propriedades que a Política de Segurança da Informação (RA nº 17/2024) busca assegurar, os eventos (1) e (2) afetaram, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a integridade e a disponibilidade, e a PSI não alcança o primeiro evento, por ter ocorrido em unidade administrativa, e não na Diretoria de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O envio a destinatário não autorizado expõe a informação, violando a confidencialidade; nada foi alterado, então não houve quebra de integridade. Além disso, a PSI se aplica a todas as unidades do Tribunal (art. 2º), inclusive às administrativas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a confidencialidade e a integridade, aplicando-se a PSI a ambos os eventos, por abranger todas as unidades do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro evento afeta a confidencialidade, mas o segundo não afeta a integridade: o portal ficou inacessível, sem alteração indevida de conteúdo. A negação de serviço atinge a disponibilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a autenticidade e a disponibilidade, aplicando-se a PSI a ambos os eventos, por abranger todas as unidades do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Autenticidade diz respeito à garantia da origem e da autoria da informação, o que não está em jogo no envio por engano. O primeiro evento é quebra de confidencialidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a confidencialidade e a autenticidade, e a PSI alcança apenas o segundo evento, por envolver diretamente a infraestrutura de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Há dois erros: o ataque de negação de serviço afeta a disponibilidade, e não a autenticidade, e a PSI não se limita à infraestrutura de TI, aplicando-se a todas as unidades do Tribunal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a confidencialidade e a disponibilidade, aplicando-se a PSI a ambos os eventos, por abranger todas as unidades do Tribunal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Enviar dados restritos a destinatário não autorizado viola a confidencialidade (acesso por quem não deveria ter). Um ataque de negação de serviço que deixa o portal fora do ar viola a disponibilidade (acesso, quando necessário, por quem tem direito). A RA 17/2024 busca assegurar disponibilidade, integridade, confidencialidade e autenticidade e se aplica a todas as unidades do Tribunal (art. 2º), de modo que ambos os eventos estão sob a política.",
+          "versaoInvertidaFalsa": "O envio por engano de dados restritos a destinatário externo viola a integridade da informação, e a PSI do Tribunal só alcança incidentes ocorridos na área de TI."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca propriedades vizinhas (confidencialidade e integridade; disponibilidade e autenticidade) e restringe o alcance da PSI à área de TI. Erro humano em unidade administrativa também é incidente de segurança sob a política.",
+      "resumoFlashcard": {
+        "pergunta": "Qual propriedade é violada por um envio de dados restritos a destinatário errado e qual é violada por um ataque de negação de serviço?",
+        "resposta": "O envio a destinatário não autorizado viola a confidencialidade; a negação de serviço viola a disponibilidade. A PSI do TCE-GO (RA 17/2024) cobre as duas propriedades e todas as unidades do Tribunal."
+      },
+      "conceitosChave": ["PSI do TCE-GO", "Segurança: propriedades da informação"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 17/2024, art. 2º; ABNT NBR ISO/IEC 27000 (definições de confidencialidade, integridade e disponibilidade)."
+    },
+    {
+      "id": "leg-ti-030",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 14/2025: estrutura e competências da Diretoria de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere que, conforme a estrutura organizacional definida pela Resolução Administrativa nº 14/2025, estão vinculados à Diretoria de Tecnologia da Informação do Tribunal o Serviço de Sistemas de Informação, o Serviço de Suporte Técnico de TI, o Serviço de Infraestrutura e Segurança de TI e o Serviço de Inteligência Artificial. Pela natureza das atribuições, (1) a revisão das regras do firewall de perímetro após a descoberta de uma vulnerabilidade na rede e (2) a correção de um defeito na funcionalidade de autuação do sistema de processos cabem, respectivamente, ao",
+      "variantesEnunciado": [
+        "Segundo a estrutura organizacional estabelecida pela Resolução Administrativa nº 14/2025, considere que a Diretoria de Tecnologia da Informação do Tribunal conta com o Serviço de Sistemas de Informação, o Serviço de Suporte Técnico de TI, o Serviço de Infraestrutura e Segurança de TI e o Serviço de Inteligência Artificial. Pela natureza das atribuições, (1) o tratamento de uma vulnerabilidade crítica identificada nos switches e no firewall da rede corporativa e (2) o ajuste de uma regra de negócio com defeito no módulo de prestação de contas do sistema corporativo cabem, respectivamente, ao",
+        "Considere a Diretoria de Tecnologia da Informação do Tribunal com as unidades previstas na Resolução Administrativa nº 14/2025: Serviço de Sistemas de Informação, Serviço de Suporte Técnico de TI, Serviço de Infraestrutura e Segurança de TI e Serviço de Inteligência Artificial. Pela natureza das atribuições, (1) a configuração de novas regras de filtragem no firewall após um alerta de varredura na rede e (2) a correção de erro no cálculo de prazos do sistema de processos cabem, respectivamente, ao"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Serviço de Suporte Técnico de TI e Serviço de Inteligência Artificial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O suporte técnico atende usuários e estações de trabalho, e não a política de segurança do perímetro da rede. O Serviço de Inteligência Artificial tampouco é a unidade natural para corrigir funcionalidade de sistema corporativo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Serviço de Infraestrutura e Segurança de TI e Serviço de Sistemas de Informação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelos nomes e pela finalidade das unidades vinculadas à Diretoria de TI na RA 14/2025, a segurança da infraestrutura de rede (firewall, tratamento de vulnerabilidades) cabe ao Serviço de Infraestrutura e Segurança de TI, e a manutenção corretiva de sistemas corporativos cabe ao Serviço de Sistemas de Informação. Separar essas atribuições também concretiza a segregação de funções entre quem desenvolve sistemas e quem administra o ambiente.",
+          "versaoInvertidaFalsa": "Na estrutura da RA 14/2025, a revisão das regras do firewall de perímetro cabe ao Serviço de Sistemas de Informação, e a correção de defeitos do sistema de processos cabe ao Serviço de Infraestrutura e Segurança de TI."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Serviço de Sistemas de Informação e Serviço de Infraestrutura e Segurança de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte as atribuições: firewall e vulnerabilidade de rede são temas de infraestrutura e segurança, enquanto a correção de funcionalidade de sistema é tema de sistemas de informação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Serviço de Infraestrutura e Segurança de TI e Serviço de Suporte Técnico de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira atribuição está certa, mas a correção de defeito em funcionalidade de sistema não é suporte técnico ao usuário: é manutenção corretiva de software, a cargo da unidade de sistemas de informação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Comitê Estratégico de Tecnologia da Informação e Serviço de Sistemas de Informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI é colegiado estratégico (RN 13/2016) e não executa tarefas operacionais como revisar regras de firewall. Tarefas técnicas cabem às unidades vinculadas à Diretoria de TI."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha as unidades vinculadas à Diretoria de TI e inclui o CETI, instância colegiada de governança, entre os executores. Atribuição operacional de rede e segurança vai para infraestrutura e segurança; manutenção de software vai para sistemas.",
+      "resumoFlashcard": {
+        "pergunta": "Quais unidades estão vinculadas à Diretoria de TI do TCE-GO na RA 14/2025?",
+        "resposta": "Segundo a estrutura divulgada no GNOI: Serviço de Sistemas de Informação, Serviço de Suporte Técnico de TI, Serviço de Infraestrutura e Segurança de TI e Serviço de Inteligência Artificial. Conferir no texto oficial."
+      },
+      "conceitosChave": ["Estrutura da DTI (RA 14/2025)"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025, anexos da estrutura organizacional (unidades vinculadas à Diretoria de TI, conforme resumo do GNOI, ato 25999; conferir no texto oficial); TCE-GO, RN 13/2016 (CETI).",
+      "revisarFonteOficial": true
+    }
+  ]
+}

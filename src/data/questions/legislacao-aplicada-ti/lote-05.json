@@ -1,0 +1,589 @@
+{
+  "materiaSlug": "legislacao-aplicada-ti",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "leg-ti-041",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: privacy by design e by default",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em relação ao conceito de privacidade por padrão (privacy by default) e à forma como ele se relaciona com a LGPD, é correto afirmar que esse conceito",
+      "variantesEnunciado": [
+        "Na revisão do guia de desenvolvimento seguro do Tribunal, discutiu-se o conceito de privacidade por padrão (privacy by default) e sua relação com a Lei nº 13.709/2018. A esse respeito, é correto afirmar que esse conceito",
+        "Ao avaliar a configuração inicial de um aplicativo mantido por um jurisdicionado, a equipe de auditoria do Tribunal tomou como referência o conceito de privacidade por padrão (privacy by default). Sobre esse conceito e sua relação com a LGPD, é correto afirmar que ele"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "está expressamente definido no art. 5º da LGPD, que o descreve como a configuração do sistema escolhida pelo titular ao aceitar os termos de uso do serviço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD não usa a expressão privacy by default nem a define no art. 5º. O conceito é doutrinário e está expresso no GDPR (art. 25); na LGPD, decorre do princípio da necessidade e dos arts. 46, § 2º, e 49. Além disso, ele não depende da escolha do titular: é a configuração inicial."
+        },
+        {
+          "id": "opt-2",
+          "texto": "exige que o titular ative manualmente as opções de proteção de seus dados, cabendo ao sistema iniciar com o compartilhamento máximo para favorecer a usabilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve o oposto do conceito. Na privacidade por padrão, o sistema começa na configuração mais protetiva, e é o titular quem decide, se quiser, ampliar o compartilhamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "significa que, sem ação do titular, o produto já opera com a configuração mais protetiva, tratando só os dados necessários, ideia ligada ao princípio da necessidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Privacidade por padrão é a exigência de que a configuração inicial de produtos e serviços seja a mais protetiva, sem depender de ação do titular, de modo que só os dados necessários a cada finalidade sejam tratados (quantidade, extensão, prazo de conservação e acessibilidade, nos termos do GDPR, art. 25(2)). A LGPD não usa a expressão, mas a ideia decorre do princípio da necessidade (art. 6º, III) e se articula com os arts. 46, § 2º, e 49.",
+          "versaoInvertidaFalsa": "Privacidade por padrão significa que o sistema pode iniciar coletando e compartilhando o máximo de dados, cabendo ao titular desativar, por iniciativa própria, o que não desejar."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aplica-se somente a aplicativos de uso voluntário oferecidos ao público, não alcançando os sistemas internos da administração pública, que tratam dados por obrigação legal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os princípios e deveres da LGPD alcançam o poder público (art. 23 e arts. 46 a 49). Sistemas internos também devem tratar apenas o necessário e vir configurados da forma mais protetiva."
+        },
+        {
+          "id": "opt-5",
+          "texto": "equivale à anonimização obrigatória de todos os dados coletados no momento do cadastro, de modo que o sistema passa a operar sem dados pessoais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Privacidade por padrão não é anonimizar tudo, o que muitas vezes inviabilizaria o próprio serviço. É tratar, por padrão, apenas os dados necessários à finalidade, com as proteções ativadas desde o início."
+        }
+      ],
+      "pegadinhaFCC": "A banca afirma que a LGPD define o conceito (não define), inverte quem age (o titular ativando proteções) ou o confunde com anonimização. Por padrão = configuração inicial mais protetiva, sem ação do titular.",
+      "resumoFlashcard": {
+        "pergunta": "A LGPD define expressamente a privacidade por padrão?",
+        "resposta": "Não. O conceito é doutrinário e expresso no GDPR (art. 25(2)). Na LGPD, decorre do princípio da necessidade (art. 6º, III) e dos arts. 46, § 2º, e 49: o sistema deve iniciar na configuração mais protetiva, tratando só os dados necessários."
+      },
+      "conceitosChave": ["LGPD: privacy by default", "LGPD: princípio da necessidade"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º; art. 6º, III; art. 23; arts. 46, § 2º, e 49; Regulamento (UE) 2016/679 (GDPR), art. 25(2); SGD/PPSI, Guia sobre Privacidade desde a Concepção e por Padrão."
+    },
+    {
+      "id": "leg-ti-042",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: minimização, anonimização e pseudonimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para testar uma nova versão do sistema de cadastro de responsáveis por contas, a equipe de desenvolvimento do Tribunal copiou a base de produção para o ambiente de homologação, substituindo cada CPF pelo seu hash SHA-256, sem sal (salt) nem chave secreta, e mantendo nomes de municípios, cargos e datas de posse. Os desenvolvedores afirmam que a base passou a ser “anônima”. Considerando a LGPD e as características da técnica empregada, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para reproduzir um defeito no sistema de folha do Tribunal, um analista levou uma cópia da base de produção para o ambiente de testes e trocou o CPF de cada servidor pelo hash SHA-256 correspondente, sem sal nem chave secreta, mantendo lotação, cargo e data de admissão. Ele registrou no chamado que a base estava “anonimizada”. Considerando a LGPD e as características da técnica empregada, é correto afirmar que",
+        "Uma equipe terceirizada que desenvolve o novo portal de jurisdicionados recebeu do Tribunal uma base em que os CPFs foram trocados por seus hashes SHA-256, gerados sem sal e sem chave, permanecendo os demais campos (município, cargo e datas). A equipe passou a tratar a base como livre de dados pessoais. Considerando a LGPD e as características da técnica empregada, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a base está anonimizada, pois o SHA-256 é uma função de mão única e, por definição, impede a recuperação do CPF original, o que afasta por completo a incidência da LGPD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ser função de mão única não impede a reversão por força bruta quando o espaço de entradas é pequeno. O CPF tem 9 dígitos de base e 2 verificadores, cerca de um bilhão de combinações, que podem ser calculadas e comparadas rapidamente. O critério da LGPD é o esforço razoável (art. 12, § 1º), e não a teoria da função."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a base está pseudonimizada e, por isso, deixa de ser regida pela LGPD, já que o hash substitui o identificador direto por um código.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ainda que se qualificasse a técnica como pseudonimização, o dado pseudonimizado continua pessoal e sujeito à LGPD (art. 13, § 4º). Além disso, aqui nem há informação adicional guardada à parte: qualquer pessoa pode recalcular os hashes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a base só seria considerada pessoal se o hash fosse revertido com meios próprios do Tribunal, hipótese que a lei descarta sempre que se emprega alguma técnica criptográfica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 12 prevê duas hipóteses de reversão: por meios próprios ou com esforços razoáveis, qualquer que seja a técnica empregada. O uso de uma função criptográfica não afasta essa análise."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os dados continuam pessoais, pois o hash sem sal de um CPF pode ser revertido por enumeração com esforço razoável, devendo-se preferir dados sintéticos ou mascarados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Hash determinístico, sem sal nem chave secreta, de um identificador com espaço pequeno de valores (CPF) é reversível por enumeração ou por tabelas pré-calculadas com custo e tempo razoáveis, de modo que a base não está anonimizada (art. 12 e § 1º) e os dados continuam pessoais. Em atenção ao princípio da necessidade (art. 6º, III) e ao dever de segurança (art. 46), o ambiente de homologação deve usar dados sintéticos ou mascarados de forma irreversível, ou, se indispensáveis dados reais, controles equivalentes aos de produção.",
+          "versaoInvertidaFalsa": "Substituir o CPF pelo seu hash SHA-256 sem sal torna a base anonimizada, pois funções de mão única impedem, com esforço razoável, a recuperação do CPF original."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a cópia é regular, pois o princípio da necessidade não se aplica a ambientes de homologação, que não tratam dados pessoais para finalidade própria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Copiar dados reais para homologação é tratamento, e o princípio da necessidade vale em qualquer ambiente: se o teste pode ser feito com dados sintéticos ou mascarados, usar dados reais é excessivo."
+        }
+      ],
+      "pegadinhaFCC": "A FCC explora a falsa segurança do hash: “mão única” não significa irreversível quando o domínio é pequeno. Hash sem sal de CPF se reverte por enumeração com esforço razoável, e o dado continua pessoal.",
+      "resumoFlashcard": {
+        "pergunta": "Substituir o CPF por seu hash SHA-256 sem sal anonimiza uma base?",
+        "resposta": "Não. O CPF tem cerca de um bilhão de combinações, que podem ser recalculadas e comparadas com esforço razoável; a técnica é reversível e o dado continua pessoal (LGPD, art. 12 e § 1º). Em ambientes de teste, prefira dados sintéticos ou mascaramento irreversível."
+      },
+      "conceitosChave": ["LGPD: anonimização", "LGPD: princípio da necessidade"],
+      "fundamentacao": "Lei 13.709/2018, art. 6º, III; art. 12, caput e § 1º; art. 13, § 4º; art. 46; ANPD, estudo técnico e minuta de guia de anonimização e pseudonimização (consulta pública de 2024)."
+    },
+    {
+      "id": "leg-ti-043",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LGPD: segurança, incidentes e operação de sistemas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere o encarregado pelo tratamento de dados pessoais indicado pelo Tribunal, na condição de controlador, nos termos do art. 41 da LGPD. Segundo essa lei e a regulamentação da ANPD sobre a atuação do encarregado, NÃO constitui atividade ou característica do encarregado",
+      "variantesEnunciado": [
+        "Em treinamento sobre a LGPD para as unidades do Tribunal, explicou-se o papel do encarregado pelo tratamento de dados pessoais indicado pelo órgão. Segundo a LGPD e a regulamentação da ANPD sobre a atuação do encarregado, NÃO constitui atividade ou característica do encarregado",
+        "Ao auditar a estrutura de proteção de dados de um jurisdicionado, a equipe do Tribunal verificou como atuava o encarregado indicado pelo controlador. Segundo a LGPD e a regulamentação da ANPD sobre a atuação do encarregado, NÃO constitui atividade ou característica do encarregado"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "responder pessoalmente perante a ANPD pela conformidade do tratamento, em substituição ao controlador, que fica dispensado dessa responsabilidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Esta é a afirmação que não corresponde ao encarregado. Ele é canal de comunicação entre controlador, titulares e ANPD (art. 5º, VIII) e exerce as atividades do art. 41, § 2º, mas não substitui o controlador: a responsabilidade pela conformidade continua com o agente de tratamento, como reafirma a Resolução CD/ANPD nº 18/2024. As demais alternativas reproduzem o art. 41, § 1º e § 2º, I a III.",
+          "versaoInvertidaFalsa": "Indicado o encarregado, a responsabilidade pela conformidade do tratamento perante a ANPD passa a ser dele, e não mais do controlador."
+        },
+        {
+          "id": "opt-2",
+          "texto": "aceitar reclamações e comunicações dos titulares, prestar esclarecimentos e adotar providências.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esta é atividade do encarregado, prevista no art. 41, § 2º, I: aceitar reclamações e comunicações dos titulares, prestar esclarecimentos e adotar providências. Por isso não responde ao comando, que pede o que NÃO é atividade ou característica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "receber comunicações da autoridade nacional e adotar providências.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Receber comunicações da autoridade nacional e adotar providências é atividade expressa do art. 41, § 2º, II. A alternativa descreve corretamente o encarregado e, portanto, não atende ao comando negativo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "orientar os funcionários e os contratados da entidade a respeito das práticas a serem tomadas em relação à proteção de dados pessoais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Orientar funcionários e contratados sobre as práticas de proteção de dados é atividade do art. 41, § 2º, III, especialmente relevante em órgãos com terceirização de TI. Não responde ao comando negativo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "ter sua identidade e suas informações de contato divulgadas publicamente, de forma clara e objetiva, preferencialmente no sítio eletrônico do controlador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A divulgação pública, clara e objetiva da identidade e do contato do encarregado, preferencialmente no sítio eletrônico do controlador, é exigência do art. 41, § 1º. Trata-se de característica do encarregado, e não da exceção pedida."
+        }
+      ],
+      "pegadinhaFCC": "Questão com comando negativo: quatro alternativas reproduzem o art. 41 e uma atribui ao encarregado a responsabilidade do controlador. O encarregado é canal de comunicação; a responsabilidade pela conformidade é do agente de tratamento.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as atividades do encarregado na LGPD e quem responde pela conformidade?",
+        "resposta": "Aceitar reclamações e comunicações dos titulares, receber comunicações da ANPD, orientar funcionários e contratados e executar demais atribuições (art. 41, § 2º); sua identidade e seu contato são divulgados publicamente (§ 1º). A responsabilidade pela conformidade continua com o controlador (Resolução CD/ANPD 18/2024)."
+      },
+      "conceitosChave": ["LGPD: encarregado"],
+      "fundamentacao": "Lei 13.709/2018, art. 5º, VIII; art. 41, §§ 1º a 3º; Resolução CD/ANPD nº 18/2024 (regulamento sobre a atuação do encarregado)."
+    },
+    {
+      "id": "leg-ti-044",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: neutralidade de rede",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "O art. 3º do Marco Civil da Internet (Lei nº 12.965/2014) enumera os princípios que disciplinam o uso da internet no Brasil. NÃO figura entre esses princípios",
+      "variantesEnunciado": [
+        "Em material de apoio sobre o Marco Civil da Internet preparado para a equipe de TI do Tribunal, foram listados os princípios que disciplinam o uso da internet no Brasil, segundo o art. 3º da Lei nº 12.965/2014. NÃO figura entre esses princípios",
+        "Ao fundamentar um parecer sobre a contratação de serviços de conectividade, um técnico do Tribunal recorreu aos princípios do uso da internet previstos no art. 3º da Lei nº 12.965/2014. NÃO figura entre esses princípios"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a preservação e garantia da neutralidade de rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A preservação e garantia da neutralidade de rede é princípio expresso (art. 3º, IV), detalhado no art. 9º. Por estar no rol, não atende ao comando negativo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a proteção dos dados pessoais, na forma da lei.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A proteção dos dados pessoais, na forma da lei, é o princípio do art. 3º, III, hoje concretizado pela LGPD. Está no rol, de modo que não responde ao comando negativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a preservação da estabilidade, segurança e funcionalidade da rede, por meio de medidas técnicas compatíveis com os padrões internacionais e pelo estímulo ao uso de boas práticas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o princípio do art. 3º, V, que fundamenta, por exemplo, as medidas técnicas de segurança admitidas no gerenciamento do tráfego. Está no rol e não atende ao comando negativo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a liberdade dos modelos de negócios promovidos na internet, desde que não conflitem com os demais princípios estabelecidos na lei.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A liberdade dos modelos de negócios é princípio do art. 3º, VIII, com a ressalva de não conflitar com os demais princípios, como a neutralidade de rede. Está no rol."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a responsabilização objetiva e integral dos provedores de aplicações por todo conteúdo gerado por terceiros, independentemente de notificação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 3º, VI, prevê a responsabilização dos agentes de acordo com suas atividades, nos termos da lei, e não responsabilidade objetiva e integral dos provedores por todo conteúdo de terceiros. O regime de responsabilidade por conteúdo de terceiros está em outros dispositivos (arts. 18 a 21) e foi reinterpretado pelo STF em 2025, mas não é princípio do art. 3º com essa formulação.",
+          "versaoInvertidaFalsa": "Entre os princípios do art. 3º do Marco Civil está a responsabilização objetiva e integral dos provedores de aplicações por todo conteúdo gerado por terceiros, independentemente de notificação."
+        }
+      ],
+      "pegadinhaFCC": "Comando negativo com distrator construído a partir de um princípio real: “responsabilização dos agentes de acordo com suas atividades, nos termos da lei” (art. 3º, VI) vira “responsabilização objetiva e integral dos provedores”. Atenção também à ressalva do princípio da liberdade dos modelos de negócios.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os princípios do uso da internet no art. 3º do Marco Civil?",
+        "resposta": "Liberdade de expressão; proteção da privacidade; proteção dos dados pessoais, na forma da lei; neutralidade de rede; estabilidade, segurança e funcionalidade da rede; responsabilização dos agentes de acordo com suas atividades, nos termos da lei; natureza participativa da rede; e liberdade dos modelos de negócios, desde que não conflitem com os demais princípios."
+      },
+      "conceitosChave": ["Marco Civil: princípios", "Marco Civil: neutralidade de rede"],
+      "fundamentacao": "Lei 12.965/2014, art. 3º, I a VIII; arts. 9º e 18 a 21."
+    },
+    {
+      "id": "leg-ti-045",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Marco Civil: proteção de dados e guarda de registros",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal mantém um portal de serviços na internet, sem finalidade econômica, por meio do qual jurisdicionados consultam processos e enviam documentos. Um servidor afirmou que, por força do art. 15 do Marco Civil da Internet, o Tribunal estaria obrigado, como qualquer provedor de aplicações, a guardar os registros de acesso ao portal pelo prazo de seis meses. Sobre essa afirmação, é correto concluir que",
+      "variantesEnunciado": [
+        "Um órgão jurisdicionado sem fins econômicos mantém um aplicativo para agendamento de serviços públicos. Durante auditoria do Tribunal, um gestor alegou que o órgão estaria obrigado, pelo art. 15 do Marco Civil da Internet, a guardar os registros de acesso ao aplicativo por seis meses, como qualquer provedor de aplicações. Sobre essa alegação, é correto concluir que",
+        "Ao redigir a política de logs do sistema de peticionamento eletrônico, mantido pelo Tribunal sem finalidade econômica, um analista sustentou que o art. 15 do Marco Civil da Internet impõe ao órgão, como a qualquer provedor de aplicações, a guarda dos registros de acesso por seis meses. Sobre essa afirmação, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "está correta, pois o art. 15 alcança todo provedor de aplicações de internet, público ou privado, com ou sem fins econômicos, que deve guardar os registros pelo prazo mínimo de seis meses.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O caput do art. 15 não alcança todo provedor: exige pessoa jurídica que exerça a atividade de forma organizada, profissionalmente e com fins econômicos. Os demais provedores só ficam obrigados por ordem judicial (§ 1º) ou mediante requerimento cautelar (§ 2º)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "não está correta, pois o caput do art. 15 alcança o provedor que atua com fins econômicos, embora ordem judicial possa obrigar outros provedores a guardar registros de fatos específicos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O dever de guardar os registros de acesso a aplicações por seis meses recai sobre o provedor de aplicações constituído como pessoa jurídica que exerça a atividade de forma organizada, profissionalmente e com fins econômicos (art. 15, caput). Provedores fora dessa hipótese, como um portal público sem fins econômicos, podem ser obrigados por ordem judicial, por tempo certo, a guardar registros relativos a fatos específicos em período determinado (§ 1º), e qualquer provedor de aplicações pode receber requerimento cautelar de guarda (§ 2º). Nada impede que o órgão mantenha logs por segurança, observada a LGPD.",
+          "versaoInvertidaFalsa": "Pelo Marco Civil, todo provedor de aplicações, inclusive órgão público sem fins econômicos, está obrigado pelo caput do art. 15 a guardar os registros de acesso por seis meses."
+        },
+        {
+          "id": "opt-3",
+          "texto": "não está correta, pois os órgãos públicos são proibidos pelo Marco Civil de guardar quaisquer registros de acesso a aplicações, sob pena de violação da privacidade dos usuários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Marco Civil não proíbe órgãos públicos de guardar registros de acesso às suas aplicações. A vedação de guardar registros de acesso a aplicações recai sobre o provedor de conexão (art. 14)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "está correta, mas o prazo aplicável é de um ano, e não de seis meses, pois os registros de acesso a portais públicos seguem o regime previsto para os registros de conexão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Registros de acesso a aplicações e registros de conexão têm regimes distintos (arts. 13 e 15). O prazo de um ano é o dos registros de conexão, a cargo do administrador de sistema autônomo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "não está correta, pois o Marco Civil não se aplica às aplicações mantidas por entes públicos, que se regem exclusivamente pela Lei de Acesso à Informação e pela legislação administrativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Marco Civil também disciplina as aplicações de entes do poder público (arts. 24 e 25, por exemplo, sobre governo eletrônico e acessibilidade). A Lei de Acesso à Informação não afasta a incidência da lei."
+        }
+      ],
+      "pegadinhaFCC": "O detalhe decisivo está no caput do art. 15: pessoa jurídica, atividade organizada, profissional e com fins econômicos. A banca generaliza a obrigação para qualquer provedor ou a confunde com o prazo de um ano dos registros de conexão.",
+      "resumoFlashcard": {
+        "pergunta": "Todo provedor de aplicações deve guardar registros de acesso por seis meses?",
+        "resposta": "Não. O caput do art. 15 obriga o provedor pessoa jurídica com atividade organizada, profissional e com fins econômicos. Os demais podem ser obrigados por ordem judicial a guardar registros de fatos específicos em período determinado (§ 1º) ou receber requerimento cautelar (§ 2º)."
+      },
+      "conceitosChave": ["Marco Civil: guarda de registros", "Marco Civil: registros de acesso a aplicações"],
+      "fundamentacao": "Lei 12.965/2014, arts. 13, 14, 15 (caput e §§ 1º a 3º), 24 e 25."
+    },
+    {
+      "id": "leg-ti-046",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Requisitos de segurança em contratações de TIC",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Nos termos do art. 93 da Lei nº 14.133/2021, nas contratações de serviços técnicos especializados que contemplem o desenvolvimento de software, inclusive a respectiva documentação técnica associada,",
+      "variantesEnunciado": [
+        "Ao redigir o termo de referência para contratar o desenvolvimento de um novo sistema de fiscalização, a equipe do Tribunal consultou o art. 93 da Lei nº 14.133/2021, segundo o qual, nas contratações de serviços técnicos especializados que incluam desenvolvimento de software e a documentação técnica associada,",
+        "Em auditoria sobre contratos de fábrica de software de um jurisdicionado, a equipe do Tribunal verificou a cláusula de propriedade intelectual à luz do art. 93 da Lei nº 14.133/2021, que estabelece que, nas contratações de serviços técnicos especializados com desenvolvimento de software e documentação técnica associada,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o contratado cede à Administração apenas o direito de uso do software durante a vigência do contrato, preservando consigo a titularidade patrimonial, o código-fonte e a documentação técnica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 93 exige a cessão de todos os direitos patrimoniais, e não mera licença de uso temporária. Para obra imaterial de caráter tecnológico insuscetível de privilégio, a cessão inclui o fornecimento de dados, documentos e elementos de informação da tecnologia (§ 1º), o que, na prática, abrange código-fonte e documentação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o contratado cede à Administração os direitos morais de autor, de modo que o órgão passa a figurar como autor do programa, sem necessidade de cessão dos direitos patrimoniais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 93 trata da cessão dos direitos patrimoniais. Os direitos morais não se transferem: no caso de software, a Lei 9.609/1998 (art. 2º, § 1º) ressalva ao autor o direito de reivindicar a paternidade do programa, de modo que a Administração não passa a figurar como autora."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a cessão de direitos é sempre obrigatória, inclusive quando o objeto envolver pesquisa e desenvolvimento de caráter científico, tecnológico ou de inovação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O § 2º do art. 93 faculta à Administração deixar de exigir a cessão quando o objeto envolver atividade de pesquisa e desenvolvimento de caráter científico, tecnológico ou de inovação, considerados os princípios e os mecanismos da Lei 10.973/2004."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o autor cede todos os direitos patrimoniais à Administração, que poderá usar e alterar o software sem nova autorização, sendo facultado dispensar a cessão em pesquisa e inovação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 93 determina que, nas contratações de projetos ou serviços técnicos especializados, inclusive de software e da documentação técnica associada, o autor ceda todos os direitos patrimoniais à Administração, que poderá utilizá-los e alterá-los livremente em outras ocasiões, sem nova autorização. O § 1º estende a cessão aos dados e elementos da tecnologia, e o § 2º faculta dispensá-la em pesquisa, desenvolvimento e inovação. Para a segurança e a continuidade, isso garante que o Tribunal possa corrigir vulnerabilidades e trocar de fornecedor sem depender do autor.",
+          "versaoInvertidaFalsa": "Pelo art. 93 da Lei 14.133/2021, a Administração recebe apenas licença de uso do software contratado e depende de nova autorização do autor para alterá-lo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a Administração só pode alterar o software mediante nova autorização do autor, ainda que tenha recebido a cessão dos direitos patrimoniais e toda a documentação técnica associada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A consequência da cessão dos direitos patrimoniais é justamente permitir que a Administração utilize e altere o software livremente, sem necessidade de nova autorização do autor."
+        }
+      ],
+      "pegadinhaFCC": "A FCC troca direitos patrimoniais por morais, transforma a cessão em licença temporária ou suprime a exceção do § 2º. Guarde: cessão de todos os direitos patrimoniais, uso e alteração livres, dispensa facultativa em pesquisa, desenvolvimento e inovação.",
+      "resumoFlashcard": {
+        "pergunta": "O que a Lei 14.133/2021 exige quanto aos direitos sobre software desenvolvido por contratado?",
+        "resposta": "Cessão de todos os direitos patrimoniais à Administração, inclusive da documentação técnica, com uso e alteração livres sem nova autorização (art. 93); fornecimento dos dados e elementos da tecnologia (§ 1º); e faculdade de dispensar a cessão em pesquisa, desenvolvimento e inovação (§ 2º)."
+      },
+      "conceitosChave": ["Lei 14.133: cessão de direitos de software", "Contratações de TIC: cláusulas de segurança"],
+      "fundamentacao": "Lei 14.133/2021, art. 93, caput e §§ 1º e 2º; Lei 10.973/2004; Lei 9.609/1998, art. 2º, § 1º."
+    },
+    {
+      "id": "leg-ti-047",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "Certificação digital em sistemas informatizados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um parecer técnico foi assinado digitalmente com certificado ICP-Brasil e juntado a um processo eletrônico do Tribunal. Meses depois, o certificado do signatário foi revogado a pedido do próprio titular, que deixou o cargo, e em seguida expirou. Para que o sistema continue capaz de comprovar que a assinatura foi produzida quando o certificado ainda era válido, a medida tecnicamente adequada, adotada no momento da assinatura, é",
+      "variantesEnunciado": [
+        "Um relatório de auditoria foi assinado com certificado digital ICP-Brasil e anexado ao processo eletrônico do Tribunal. Tempos depois, o certificado foi revogado a pedido do titular, que se aposentou, e logo em seguida expirou. Para que o sistema continue capaz de comprovar que a assinatura foi produzida quando o certificado ainda era válido, a medida tecnicamente adequada, adotada no momento da assinatura, é",
+        "Ao especificar a preservação de longo prazo dos documentos do processo eletrônico, a equipe de TI do Tribunal precisou garantir que assinaturas ICP-Brasil continuem verificáveis depois que os certificados dos signatários expirarem ou forem revogados. Para comprovar que cada assinatura foi produzida quando o certificado ainda era válido, a medida tecnicamente adequada, adotada no momento da assinatura, é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplicar carimbo do tempo emitido por Autoridade de Carimbo do Tempo credenciada na ICP-Brasil, evidenciando que o documento assinado existia naquela data e hora.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O carimbo do tempo, emitido por Autoridade de Carimbo do Tempo credenciada na ICP-Brasil e sincronizado à Hora Legal Brasileira sob auditoria da AC Raiz, é evidência de que o documento assinado existia na data e na hora nele indicadas. Com isso, a validação da assinatura pode ser feita em relação àquele momento, quando o certificado era válido e não revogado, desde que se preservem também os dados de verificação (como as listas de certificados revogados). É a base das políticas de assinatura com referência de tempo para preservação de longo prazo.",
+          "versaoInvertidaFalsa": "Registrar nos metadados a hora do servidor de aplicação basta para provar o momento da assinatura, com a mesma força do carimbo do tempo emitido por ACT credenciada na ICP-Brasil."
+        },
+        {
+          "id": "opt-2",
+          "texto": "renovar o certificado do signatário depois da expiração, já que o novo certificado revalida retroativamente todas as assinaturas feitas com o certificado anterior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um novo certificado gera nova chave e novas assinaturas, mas não “revalida” as anteriores. A prova do momento da assinatura depende de referência de tempo confiável, como o carimbo do tempo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "registrar nos metadados do documento a hora do servidor de aplicação do Tribunal, que tem a mesma força probatória do carimbo do tempo da ICP-Brasil.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A hora do servidor da própria aplicação pode ser alterada pelo administrador e não é atestada por terceira parte confiável. O carimbo do tempo da ICP-Brasil é emitido por ACT credenciada e auditada, sincronizada à Hora Legal Brasileira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "exigir o carimbo do tempo porque, sem ele, nenhuma assinatura feita com certificado ICP-Brasil tem validade jurídica, ainda que o certificado esteja vigente no momento da assinatura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O uso do carimbo do tempo é facultativo: documentos assinados com certificado ICP-Brasil válido produzem efeitos com ou sem carimbo. Ele serve para provar a tempestividade e viabilizar a validação de longo prazo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma, pois a revogação do certificado torna nulas todas as assinaturas já realizadas com ele, independentemente da data em que foram produzidas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A revogação impede o uso do certificado a partir dela, mas não anula automaticamente as assinaturas anteriores. Por isso é importante poder provar que a assinatura foi feita antes da revogação, o que o carimbo do tempo permite."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece soluções intuitivas e erradas (renovar o certificado, usar a hora do servidor) e falsos absolutos (a revogação anula tudo; o carimbo é obrigatório). O carimbo do tempo é facultativo, mas é ele que prova a existência do documento em data certa.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve o carimbo do tempo da ICP-Brasil em documentos assinados digitalmente?",
+        "resposta": "É evidência, emitida por Autoridade de Carimbo do Tempo credenciada, de que o documento existia na data e hora indicadas. Permite comprovar que a assinatura foi feita quando o certificado era válido, mesmo após expiração ou revogação. Seu uso é facultativo."
+      },
+      "conceitosChave": ["Carimbo do tempo", "ICP-Brasil"],
+      "fundamentacao": "MP 2.200-2/2001, art. 1º; ICP-Brasil, DOC-ICP-11 a 13 (carimbo do tempo) e Resolução CG ICP-Brasil nº 58 (AC Raiz como Entidade de Auditoria do Tempo); RFC 3161 (Time-Stamp Protocol)."
+    },
+    {
+      "id": "leg-ti-048",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "LC estadual 205/2025 (IA em Goiás)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em estudo sobre a Lei Complementar estadual nº 205/2025, que instituiu a política estadual de fomento à inovação em inteligência artificial em Goiás, a equipe de TI do Tribunal reuniu afirmações sobre o conteúdo da lei. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Durante um seminário sobre inteligência artificial no setor público, servidores do Tribunal discutiram o conteúdo da Lei Complementar estadual nº 205/2025, apontada como o primeiro marco legal estadual de IA do país. Considere as afirmativas abaixo.",
+        "Ao planejar o uso de soluções de IA em parceria com órgãos do Executivo goiano, a área de TI do Tribunal analisou a Lei Complementar estadual nº 205/2025, que institui a política estadual de fomento à inovação em IA. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A lei assegura ao setor privado liberdade para desenvolver e operar sistemas de IA para fins lícitos, com intervenção estatal excepcional e subsidiária.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A lei garante a liberdade do setor privado para fins lícitos e qualifica a intervenção do Estado como excepcional e subsidiária, em linha com a Lei federal 13.874/2019."
+        },
+        {
+          "texto": "O desenvolvimento e o uso da IA têm como diretriz central a pessoa humana, e a lei assegura privacidade, proteção de dados e transparência nas interações que envolvam decisões automatizadas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 2º põe a pessoa humana como diretriz central, e a lei assegura privacidade, proteção de dados e transparência nas interações com decisões automatizadas (texto obtido de resumo da fonte oficial; conferir)."
+        },
+        {
+          "texto": "A auditoria e a análise algorítmica de sistemas de IA são obrigatórias e periódicas para todos os sistemas em operação no estado, independentemente da viabilidade técnica.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 7º limita a auditoria e a análise algorítmica às situações absolutamente necessárias para fins de governança e controle, sujeitas à viabilidade técnica."
+        },
+        {
+          "texto": "A lei instituiu o Sandbox Estadual Permanente de IA, ambiente regulatório experimental destinado ao desenvolvimento, à testagem e à implementação de soluções baseadas em IA.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Sandbox Estadual Permanente de IA (art. 32 e seguintes) é ambiente regulatório experimental, regulamentado, coordenado e supervisionado pelo NEI-IA."
+        },
+        {
+          "texto": "O Núcleo de Ética e Inovação em IA (NEI-IA) é órgão de natureza deliberativa, integrante do Poder Judiciário estadual, com competência para aplicar sanções a desenvolvedores privados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O NEI-IA foi criado na estrutura da Secretaria-Geral de Governo, com natureza consultiva, multissetorial e permanente; não é órgão do Judiciário nem tem função sancionatória."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e IV estão corretas, mas a II também está: a pessoa humana é a diretriz central da política, e a lei assegura transparência nas interações com decisões automatizadas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está correta, mas a III e a V são falsas: a auditoria algorítmica é limitada aos casos absolutamente necessários, e o NEI-IA é consultivo e vinculado à Secretaria-Geral de Governo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz a regra de liberdade do setor privado com intervenção excepcional e subsidiária; a II reproduz a diretriz central da pessoa humana e as garantias nas decisões automatizadas; a IV descreve o Sandbox Estadual Permanente de IA. A III é falsa porque a auditoria algorítmica é limitada às situações absolutamente necessárias e sujeita à viabilidade técnica (art. 7º), e a V é falsa porque o NEI-IA é consultivo, multissetorial e integra a Secretaria-Geral de Governo.",
+          "versaoInvertidaFalsa": "A LC-GO 205/2025 tornou a intervenção do Estado a regra no desenvolvimento de IA pelo setor privado, que depende de autorização estatal prévia para operar sistemas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III e a V, ambas falsas (auditoria algorítmica limitada aos casos absolutamente necessários; NEI-IA consultivo e vinculado ao Executivo), e omite a II, verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está correta, mas a III é falsa. A alternativa também omite a I e a IV, que descrevem corretamente a liberdade do setor privado e o sandbox estadual."
+        }
+      ],
+      "pegadinhaFCC": "A banca transforma uma lei de fomento em regime de controle intenso (auditoria obrigatória para todos, órgão sancionador). Na LC-GO 205/2025, a auditoria algorítmica é excepcional e o NEI-IA é consultivo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as linhas mestras da LC-GO 205/2025?",
+        "resposta": "Pessoa humana como diretriz central; liberdade do setor privado com intervenção estatal excepcional e subsidiária; auditoria algorítmica só quando absolutamente necessária e tecnicamente viável; NEI-IA consultivo e multissetorial (na SGG); Sandbox Estadual Permanente de IA; possibilidade de revisão humana na administração pública."
+      },
+      "conceitosChave": ["LC-GO 205/2025", "NEI-IA", "Sandbox de IA"],
+      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025, arts. 2º, 6º, 7º, 27 e 32 (fatos de docs/pesquisa/_normativos-tce-go.md e de docs/pesquisa/legislacao-aplicada-ti.md; os arts. 2º, 7º e 27 vieram de resumos de busca e devem ser conferidos no texto oficial).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-ti-049",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 17/2024: Política de Segurança da Informação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma equipe de auditoria interna examinou a Política de Segurança da Informação do Tribunal, aprovada pela Resolução Administrativa nº 17/2024, e os instrumentos que a complementam. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em capacitação para gestores de unidades do Tribunal, a área de segurança apresentou a Política de Segurança da Informação aprovada pela Resolução Administrativa nº 17/2024 e os instrumentos que a complementam. Considere as afirmativas abaixo.",
+        "Ao preparar um relatório sobre a maturidade em segurança da informação do Tribunal, um técnico descreveu a Política de Segurança da Informação (RA nº 17/2024) e seus instrumentos complementares. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A Portaria nº 56/2025 atribui ao Comitê de Segurança da Informação a competência de promover e atualizar a Política de Segurança da Informação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A Portaria 56/2025 conferiu ao Comitê de Segurança da Informação a competência de promover e atualizar a PSI."
+        },
+        {
+          "texto": "A RA nº 17/2024 manteve em vigor a política de segurança da informação de 2022, que passou a funcionar como norma complementar à nova política.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A RA 17/2024 revogou a política anterior, de 2022, e não a manteve como norma complementar."
+        },
+        {
+          "texto": "O Manual de Segurança da Informação detalha normas específicas de segurança, em consonância com a resolução que aprovou a política.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Manual de Segurança da Informação desdobra a política em normas específicas, em consonância com a resolução."
+        },
+        {
+          "texto": "A política aplica-se exclusivamente à Diretoria de Tecnologia da Informação, cabendo às demais unidades apenas observar recomendações facultativas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 2º da RA 17/2024 estabelece que a política se aplica a todas as unidades do Tribunal."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: a RA 17/2024 revogou a política de segurança da informação de 2022, em vez de mantê-la como norma complementar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas indicadas são falsas: a política de 2022 foi revogada, e a nova política se aplica a todas as unidades do Tribunal, e não só à área de TI."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, falsa: a política não se restringe à Diretoria de TI, pois o art. 2º a estende a todas as unidades do Tribunal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV é falsa, e a alternativa omite a I, que reproduz a competência atribuída ao Comitê de Segurança da Informação pela Portaria 56/2025."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz a competência do Comitê de Segurança da Informação (Portaria 56/2025), e a III descreve o papel do Manual de Segurança da Informação. A II é falsa porque a RA 17/2024 revogou a política de 2022, e a IV é falsa porque a política se aplica a todas as unidades do Tribunal (art. 2º). O desenho segue a lógica da família ISO/IEC 27000: política aprovada pela alta direção, desdobrada em normas e revisada periodicamente por instância própria.",
+          "versaoInvertidaFalsa": "A Política de Segurança da Informação do TCE-GO aplica-se apenas à Diretoria de Tecnologia da Informação, e sua atualização dispensa a atuação de comitê específico."
+        }
+      ],
+      "pegadinhaFCC": "A banca testa a governança da PSI: quem promove e atualiza (Comitê de Segurança da Informação), o destino da política anterior (revogada) e o alcance (todas as unidades). A troca de “revogou” por “manteve” é o detalhe sutil.",
+      "resumoFlashcard": {
+        "pergunta": "Quais instrumentos complementam a PSI do TCE-GO e quem a atualiza?",
+        "resposta": "O Manual de Segurança da Informação, que detalha normas específicas, e a Portaria 56/2025, que atribui ao Comitê de Segurança da Informação promover e atualizar a PSI. A RA 17/2024 revogou a política de 2022 e se aplica a todas as unidades."
+      },
+      "conceitosChave": ["PSI do TCE-GO"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 17/2024, art. 2º; Portaria TCE-GO nº 56/2025; Manual de Segurança da Informação do TCE-GO (fatos verificados em docs/pesquisa/_normativos-tce-go.md); ABNT NBR ISO/IEC 27001:2022, cláusula 5.2 e controle 5.1."
+    },
+    {
+      "id": "leg-ti-050",
+      "materiaSlug": "legislacao-aplicada-ti",
+      "subtopico": "RA 14/2025: estrutura e competências da Diretoria de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a RA nº 14/2025 distribui as competências da Diretoria de Tecnologia da Informação do Tribunal entre unidades distintas, como o Serviço de Sistemas de Informação e o Serviço de Infraestrutura e Segurança de TI. Em uma auditoria interna, verificou-se que um mesmo desenvolvedor escrevia o código, aprovava as próprias alterações e as implantava diretamente em produção, usando credencial administrativa compartilhada e sem ambiente de homologação. A medida que melhor concretiza o princípio de controle subjacente à divisão de competências é",
+      "variantesEnunciado": [
+        "Considere que a RA nº 14/2025 atribui a unidades diferentes da Diretoria de Tecnologia da Informação, como o Serviço de Sistemas de Informação e o Serviço de Infraestrutura e Segurança de TI, competências relativas a sistemas e a infraestrutura. Uma revisão de processos revelou que a mesma analista desenvolvia, homologava e publicava em produção as mudanças do sistema de protocolo, com uma senha de administrador conhecida por toda a equipe. A medida que melhor concretiza o princípio de controle subjacente à divisão de competências é",
+        "Considere que, na estrutura da RA nº 14/2025, sistemas de informação e infraestrutura e segurança de TI ficam a cargo de unidades distintas da Diretoria de TI do Tribunal. Em inspeção, constatou-se que um único técnico codificava, aprovava e implantava diretamente em produção as alterações do portal, sem homologação e com conta administrativa compartilhada. A medida que melhor concretiza o princípio de controle subjacente à divisão de competências é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "manter o fluxo atual e apenas ampliar os testes automatizados, pois a automação, por si só, dispensa a separação entre quem desenvolve, quem aprova e quem implanta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes automatizados são valiosos, mas não substituem a segregação de funções: quem escreve o código não deve ser o único a aprová-lo e implantá-lo. Pipelines com aprovação independente e trilha de auditoria combinam as duas coisas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "concentrar todas as etapas em um único servidor sênior de confiança, o que reduz riscos de falhas de comunicação entre as unidades.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Concentrar todas as etapas em uma pessoa é exatamente o que a segregação de funções busca evitar, porque elimina a revisão independente e facilita erros e fraudes não detectados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "transferir ao Comitê Estratégico de TI a aprovação técnica de cada alteração de código, por ser o colegiado responsável pelas decisões sobre TI no Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI é instância estratégica de governança (RN 13/2016): prioriza investimentos e acompanha projetos. Aprovar cada alteração de código é atividade operacional de gestão de mudanças, a cargo das unidades técnicas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "segregar as funções de desenvolver, aprovar e implantar, separar os ambientes de desenvolvimento, homologação e produção e usar credenciais individuais.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A divisão de competências entre unidades distintas concretiza a segregação de funções, mecanismo de controle que impede que uma só pessoa conduza todas as etapas críticas sem revisão independente (ABNT NBR ISO/IEC 27002:2022, controle 5.3). Somam-se a separação dos ambientes de desenvolvimento, teste e produção (controle 8.31), a gestão de mudanças (8.32) e o uso de credenciais individuais com privilégio mínimo (8.2), em vez de conta administrativa compartilhada.",
+          "versaoInvertidaFalsa": "A segregação de funções recomenda que o mesmo desenvolvedor escreva, aprove e implante as próprias alterações em produção, pois isso aumenta a responsabilização individual."
+        },
+        {
+          "id": "opt-5",
+          "texto": "proibir qualquer alteração no sistema em produção, mesmo corretiva, até o fim da vigência do PDTI, para garantir a estabilidade do ambiente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Congelar o sistema por todo o período compromete a correção de falhas, inclusive de segurança, e não resolve a falta de segregação. Mudanças devem ocorrer sob processo controlado, e não ser proibidas."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece falsas soluções (automação como substituta do controle, concentração em pessoa de confiança, envio ao colegiado estratégico). O princípio é a segregação de funções, com ambientes separados e credenciais individuais.",
+      "resumoFlashcard": {
+        "pergunta": "Que princípio de controle a divisão de competências entre unidades de TI concretiza e como aplicá-lo no ciclo de mudanças?",
+        "resposta": "A segregação de funções (ISO/IEC 27002:2022, 5.3): separar quem desenvolve, quem aprova e quem implanta, com ambientes distintos de desenvolvimento, teste e produção (8.31), gestão de mudanças (8.32) e credenciais individuais com privilégio mínimo (8.2)."
+      },
+      "conceitosChave": ["Estrutura da DTI (RA 14/2025)", "Segregação de funções"],
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025 (unidades vinculadas à Diretoria de TI, conforme resumo do GNOI; conferir no texto oficial); ABNT NBR ISO/IEC 27002:2022, controles 5.3, 8.2, 8.31 e 8.32; TCE-GO, RN 13/2016.",
+      "revisarFonteOficial": true
+    }
+  ]
+}

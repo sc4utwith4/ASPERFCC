@@ -1,0 +1,634 @@
+{
+  "materiaSlug": "governanca-ti",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "gov-ti-031",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "O COBIT 2019 organiza seus princípios em dois conjuntos. Os princípios do …… descrevem os requisitos centrais de um sistema de governança de I&T, como prover valor às partes interessadas e adotar abordagem holística, e somam …… ; os princípios do …… orientam a construção do próprio modelo de referência, como basear-se em um modelo conceitual e ser aberto e flexível, e somam …… . Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em treinamento sobre COBIT 2019, o instrutor explicou que os princípios do …… , que somam …… , tratam de requisitos como a governança distinta da gestão e o sistema de ponta a ponta, enquanto os princípios do …… , que somam …… , tratam de características do modelo, como o alinhamento aos principais padrões. Preenchem, correta e respectivamente, as lacunas:",
+        "No COBIT 2019, os princípios do …… , como o sistema dinâmico e adaptado às necessidades da organização, totalizam …… , ao passo que os princípios do …… , como ser aberto e flexível, totalizam …… . Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "sistema de governança − seis − framework de governança − três",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O COBIT 2019 distingue seis princípios do sistema de governança: prover valor às partes interessadas, abordagem holística, sistema dinâmico, governança distinta da gestão, adaptação às necessidades da organização e sistema de ponta a ponta. Distingue também três princípios do framework de governança: basear-se em modelo conceitual, ser aberto e flexível e estar alinhado aos principais padrões, frameworks e regulamentos.",
+          "versaoInvertidaFalsa": "O COBIT 2019 tem três princípios do sistema de governança e seis princípios do framework de governança, como prover valor às partes interessadas e ser aberto e flexível."
+        },
+        {
+          "id": "opt-2",
+          "texto": "framework de governança − seis − sistema de governança − três",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca os conjuntos. Prover valor às partes interessadas e adotar abordagem holística são princípios do sistema de governança (seis). Modelo conceitual, abertura e flexibilidade e alinhamento a padrões são princípios do framework (três)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "sistema de governança − cinco − framework de governança − quatro",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cinco era o número de princípios do COBIT 5 (atender às necessidades das partes interessadas, cobrir a organização de ponta a ponta, aplicar um framework único e integrado, permitir abordagem holística e separar governança de gestão). O COBIT 2019 tem seis princípios de sistema e três de framework."
+        },
+        {
+          "id": "opt-4",
+          "texto": "sistema de governança − sete − framework de governança − três",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sete é o número de componentes do sistema de governança (processos, estruturas organizacionais, princípios, políticas e frameworks, informação, cultura, pessoas e serviços, infraestrutura e aplicações), e não de princípios. Os princípios do sistema de governança são seis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "modelo principal − seis − sistema de governança − três",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Modelo principal (core model) é o conjunto dos 40 objetivos de governança e gestão, e não um conjunto de princípios. Além disso, a alternativa atribui ao sistema de governança características que são do framework."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura números de outros elementos (os cinco princípios do COBIT 5, os sete componentes) e troca os conjuntos de princípios. São seis do sistema de governança e três do framework de governança.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os princípios do sistema de governança e do framework de governança no COBIT 2019?",
+        "resposta": "Sistema (6): prover valor às partes interessadas, abordagem holística, sistema dinâmico, governança distinta da gestão, adaptado às necessidades da organização e de ponta a ponta. Framework (3): modelo conceitual, aberto e flexível e alinhado aos principais padrões."
+      },
+      "conceitosChave": [
+        "COBIT 2019: princípios",
+        "COBIT 2019 × COBIT 5"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology (princípios do sistema de governança e princípios do framework de governança); ISACA. COBIT 5 (2012) (os cinco princípios do COBIT 5)."
+    },
+    {
+      "id": "gov-ti-032",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ITIL 4",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Ao planejar a automação do fluxo de autuação de processos, a equipe de TI de um tribunal de contas propôs automatizar de imediato todas as etapas atuais, inclusive conferências manuais redundantes. Um servidor ponderou que automatizar um fluxo ainda não otimizado apenas tornaria o desperdício mais rápido e que a automação só deveria ocorrer depois de revisar e enxugar o fluxo. Também sugeriu dividir o trabalho em entregas pequenas, avaliadas pelos usuários ao fim de cada ciclo, para corrigir o rumo. As ponderações do servidor alinham-se, respectivamente, aos princípios orientadores do ITIL 4",
+      "variantesEnunciado": [
+        "Em um jurisdicionado, a área de TI pretendia automatizar integralmente o processo de concessão de diárias tal como ele existe hoje. Uma analista defendeu que primeiro se revisasse e otimizasse o processo, porque automatizar ineficiências apenas as aceleraria, e que a implantação ocorresse em pequenas etapas, cada uma validada pelos usuários antes da seguinte. As ponderações da analista alinham-se, respectivamente, aos princípios orientadores do ITIL 4",
+        "Na modernização do atendimento de uma secretaria estadual, um consultor recomendou otimizar o fluxo de trabalho antes de qualquer automação e organizar a implantação em ciclos curtos, com retorno dos usuários a cada entrega para ajustar as próximas. Essas recomendações alinham-se, respectivamente, aos princípios orientadores do ITIL 4"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "mantenha simples e prático; colabore e promova visibilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Mantenha simples e prático' recomenda eliminar etapas sem valor, mas a ponderação central é a ordem 'otimizar antes de automatizar', expressa no princípio 'otimize e automatize'. 'Colabore e promova visibilidade' trata de envolvimento e transparência, e não do trabalho em ciclos curtos com feedback."
+        },
+        {
+          "id": "opt-2",
+          "texto": "otimize e automatize; progrida iterativamente com feedback.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O princípio 'otimize e automatize' estabelece que se deve otimizar primeiro e só então automatizar, pois automatizar um fluxo ineficiente apenas acelera o desperdício. 'Progrida iterativamente com feedback' recomenda dividir o trabalho em partes menores e gerenciáveis, com ciclos de retorno que permitem ajustar o rumo. Os demais princípios do ITIL 4 são foco no valor, comece onde você está, colabore e promova visibilidade, pense e trabalhe holisticamente e mantenha simples e prático.",
+          "versaoInvertidaFalsa": "comece onde você está; pense e trabalhe holisticamente, pois esses princípios determinam automatizar o fluxo atual antes de otimizá-lo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "comece onde você está; foque no valor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Comece onde você está' recomenda aproveitar o que já existe em vez de partir do zero, e não automatizar o fluxo como está, sem otimizá-lo. 'Foque no valor' é pertinente a qualquer iniciativa, mas não expressa a proposta de entregas pequenas com retorno dos usuários."
+        },
+        {
+          "id": "opt-4",
+          "texto": "otimize e automatize; pense e trabalhe holisticamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira correspondência está certa, mas 'pense e trabalhe holisticamente' trata de considerar o serviço como um todo integrado, e não de entregas pequenas com retorno a cada ciclo, que caracterizam o progresso iterativo com feedback."
+        },
+        {
+          "id": "opt-5",
+          "texto": "pense e trabalhe holisticamente; progrida iterativamente com feedback.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A segunda correspondência está certa, mas a ideia de otimizar antes de automatizar está no princípio 'otimize e automatize', e não na visão holística do serviço."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece pares em que só uma das correspondências está certa e explora a proximidade entre 'mantenha simples e prático' e 'otimize e automatize'. A pista decisiva é a ordem: otimizar antes de automatizar.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os sete princípios orientadores do ITIL 4?",
+        "resposta": "Foco no valor; comece onde você está; progrida iterativamente com feedback; colabore e promova visibilidade; pense e trabalhe holisticamente; mantenha simples e prático; e otimize e automatize (primeiro otimizar, depois automatizar)."
+      },
+      "conceitosChave": [
+        "ITIL 4: princípios orientadores"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 4, seção sobre os princípios orientadores (descrição de cada um dos sete princípios)."
+    },
+    {
+      "id": "gov-ti-033",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de serviços: catálogo, incidentes, problemas, mudanças e configuração",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Antes de aprovar a substituição de um switch de núcleo do datacenter, o gestor de mudanças do Tribunal precisa saber quais serviços dependem desse equipamento, como o portal dos jurisdicionados e o sistema de prestação de contas, para avaliar o impacto e planejar a comunicação aos usuários. Segundo o ITIL 4, a fonte de informação mais adequada para essa análise é",
+      "variantesEnunciado": [
+        "Uma secretaria estadual planeja desligar, para manutenção, o cluster de banco de dados que atende vários sistemas. Para identificar quais serviços e unidades serão afetados e quem deve ser avisado, a área de TI precisa de informação confiável sobre as dependências entre os componentes. Segundo o ITIL 4, a fonte de informação mais adequada para essa análise é",
+        "Diante de um incidente grave no servidor de autenticação de um jurisdicionado, a equipe precisa descobrir rapidamente quais serviços de negócio dependem desse componente para priorizar o atendimento e comunicar os afetados. Segundo o ITIL 4, a fonte de informação mais adequada para essa análise é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o inventário de ativos de TI, que registra valor de aquisição, depreciação e licenciamento dos equipamentos e, por isso, basta para mapear as dependências entre serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O registro de ativos foca valor financeiro, ciclo de vida, contratos e licenças. Pode identificar o switch, mas não descreve, em regra, os relacionamentos entre componentes e serviços necessários à análise de impacto. Ativo de TI e item de configuração são conceitos distintos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o catálogo de serviços, cuja finalidade principal é registrar a configuração física dos equipamentos e o histórico de alterações de firmware de cada um.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O catálogo fornece informações consistentes sobre os serviços e as ofertas disponíveis ao público pertinente. Registrar a configuração física dos equipamentos e o histórico de alterações não é sua finalidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a base de erros conhecidos, que relaciona cada equipamento aos serviços afetados por todos os incidentes já ocorridos na infraestrutura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A base de erros conhecidos registra problemas analisados e ainda não resolvidos, com suas soluções de contorno. Não é um mapa completo de dependências e não serve para avaliar o impacto de uma mudança planejada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o cronograma de mudanças, que lista os serviços dependentes de cada equipamento para que se definam as janelas de manutenção mais adequadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cronograma de mudanças serve para planejar mudanças, apoiar a comunicação, evitar conflitos e alocar recursos. Ele se beneficia da análise de impacto, mas não é a fonte das dependências entre componentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o conjunto de registros dos itens de configuração e de seus relacionamentos, mantido pelo gerenciamento de configuração de serviço, como em uma CMDB.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O gerenciamento de configuração de serviço garante que informações precisas e confiáveis sobre a configuração dos serviços e dos itens de configuração (ICs) que os sustentam estejam disponíveis quando e onde necessário. Isso inclui como os ICs estão configurados e como se relacionam. Mapear quais serviços dependem do switch é exatamente o uso dessa informação na análise de impacto de mudanças e incidentes.",
+          "versaoInvertidaFalsa": "o inventário de ativos de TI, mantido pelo gerenciamento de ativos, que registra os relacionamentos entre itens de configuração e serviços e substitui a CMDB na análise de impacto."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o repositório de configuração (ICs e relacionamentos) por repositórios vizinhos: inventário de ativos (valor e licenças), catálogo (ofertas aos usuários), base de erros conhecidos e cronograma de mudanças. Análise de impacto depende dos relacionamentos entre ICs.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve a informação mantida pelo gerenciamento de configuração de serviço no ITIL 4?",
+        "resposta": "Para disponibilizar dados precisos sobre os serviços, os itens de configuração que os sustentam e os relacionamentos entre eles. É a base da análise de impacto de mudanças, do diagnóstico de incidentes e de outras práticas, em geral registrada em uma CMDB ou CMS."
+      },
+      "conceitosChave": [
+        "Gestão de serviços: configuração (CMDB)",
+        "Ativo de TI × item de configuração"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, práticas de gerenciamento de configuração de serviço (itens de configuração, relacionamentos, CMS e CMDB), de gerenciamento de ativos de TI, de gerenciamento do catálogo de serviços, de gerenciamento de problemas (erros conhecidos) e de controle de mudanças (cronograma de mudanças)."
+    },
+    {
+      "id": "gov-ti-034",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Contratações de TIC (Lei 14.133/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Quanto à fiscalização da execução dos contratos, a Lei 14.133/2021 estabelece que",
+      "variantesEnunciado": [
+        "Durante a execução de contrato de suporte técnico de TI, o fiscal designado pelo Tribunal constatou descumprimento reiterado dos tempos de atendimento, situação cuja solução ultrapassa sua competência. A respeito da fiscalização contratual, a Lei 14.133/2021 estabelece que",
+        "Um técnico recém-designado fiscal de um contrato de licenciamento e sustentação de software consultou a Lei 14.133/2021 para conhecer suas atribuições. Segundo essa lei, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o fiscal pode aplicar diretamente as sanções cabíveis e reter pagamentos, comunicando a decisão à autoridade competente depois de adotá-la.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei atribui ao fiscal o registro das ocorrências e a comunicação aos superiores, em tempo hábil, das situações que exijam decisão ou providência fora de sua competência (art. 117, §§ 1º e 2º). A aplicação de sanções depende de processo próprio, com contraditório, e de decisão da autoridade competente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a fiscalização pode ser integralmente transferida a empresa terceirizada, que passa a responder sozinha pelo acompanhamento técnico de toda a execução do contrato.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei permite contratar terceiros apenas para assistir e subsidiar os fiscais com informações pertinentes (art. 117, caput). O terceiro não pode exercer atribuição própria e exclusiva de fiscal, e sua contratação não exime o fiscal de responsabilidade (art. 117, § 4º)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o fiscal deve anotar em registro próprio as ocorrências da execução e informar aos superiores, em tempo hábil, o que exigir providência fora de sua competência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo art. 117 da Lei 14.133/2021, a execução do contrato é acompanhada e fiscalizada por um ou mais fiscais designados, que podem contar com terceiros contratados para assisti-los. O fiscal anota em registro próprio todas as ocorrências relacionadas à execução, determinando o necessário para regularizar faltas ou defeitos (§ 1º). Também informa a seus superiores, em tempo hábil, a situação que demandar decisão ou providência que ultrapasse sua competência (§ 2º).",
+          "versaoInvertidaFalsa": "o fiscal deve aguardar o fim da vigência para registrar as ocorrências da execução e, quando a situação ultrapassar sua competência, aplicar ele mesmo a providência cabível."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as falhas de execução só devem ser registradas no termo de recebimento definitivo, ao final do contrato, para não tumultuar a relação com a empresa contratada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O registro das ocorrências é contínuo, durante toda a execução (art. 117, § 1º), justamente para permitir a regularização tempestiva das faltas. O recebimento definitivo (art. 140) não substitui o acompanhamento ao longo do contrato."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o fiscal deve ser obrigatoriamente o próprio gestor do contrato, vedada a designação de mais de um agente para acompanhar a mesma contratação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lei admite um ou mais fiscais (art. 117, caput) e exige a observância da segregação de funções na designação de agentes (art. 7º, § 1º). Não há regra que obrigue o gestor a acumular a fiscalização ou que vede mais de um fiscal."
+        }
+      ],
+      "pegadinhaFCC": "A banca amplia indevidamente os poderes do fiscal (aplicar sanção, reter pagamento), permite transferir a fiscalização a terceiros e adia o registro para o fim do contrato. O fiscal registra continuamente e comunica aos superiores o que excede sua competência.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as atribuições do fiscal do contrato no art. 117 da Lei 14.133/2021?",
+        "resposta": "Acompanhar e fiscalizar a execução, anotar em registro próprio as ocorrências e determinar a regularização de faltas ou defeitos (§ 1º). Informar aos superiores, em tempo hábil, o que exceder sua competência (§ 2º). Terceiros contratados apenas assistem e subsidiam o fiscal."
+      },
+      "conceitosChave": [
+        "Lei 14.133: gestão e fiscalização do contrato",
+        "Contratações de TIC: fiscalização"
+      ],
+      "fundamentacao": "Lei 14.133/2021, art. 117, caput e §§ 1º, 2º e 4º; art. 7º, § 1º (segregação de funções); art. 140 (recebimento provisório e definitivo)."
+    },
+    {
+      "id": "gov-ti-035",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "PMBOK 8ª edição",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em capacitação interna sobre gerenciamento de projetos de TI, um instrutor comparou o Guia PMBOK 8ª edição com as edições anteriores. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao revisar a metodologia de projetos de um jurisdicionado, um técnico preparou um quadro comparativo entre o Guia PMBOK 8ª edição e as edições que o antecederam. Considere as afirmativas abaixo.",
+        "Uma equipe do Tribunal discute se deve atualizar seu manual de projetos, hoje baseado na 7ª edição do PMBOK, para a 8ª edição, e listou algumas diferenças entre as edições. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "As áreas de foco retomam os nomes dos antigos grupos de processos (iniciação, planejamento, execução, monitoramento e controle, e encerramento), sem impor sequência rígida.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A 8ª edição agrupa seus 40 processos em cinco áreas de foco com esses nomes, aplicáveis de forma flexível, inclusive de modo iterativo."
+        },
+        {
+          "texto": "Os processos foram reintroduzidos como orientação não prescritiva, adaptável a abordagens preditivas, adaptativas e híbridas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Segundo o PMI, a orientação por processos volta de forma evoluída e não prescritiva, com adaptação (tailoring) ao contexto e à abordagem de desenvolvimento."
+        },
+        {
+          "texto": "Os 12 princípios da 7ª edição foram mantidos, com o acréscimo de um 13º princípio dedicado à sustentabilidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A 8ª edição consolidou os 12 princípios da 7ª em 6. A sustentabilidade passou a figurar entre esses seis, e não como acréscimo aos doze."
+        },
+        {
+          "texto": "O tema risco deixou de ter domínio próprio e passou a integrar o domínio de Incerteza, criado pela 8ª edição.",
+          "verdadeira": false,
+          "explicacao": "Falsa. É o contrário: Incerteza era domínio da 7ª edição. A 8ª edição tem o domínio Risco entre seus sete domínios de desempenho."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As afirmativas I e II descrevem a 8ª edição: cinco áreas de foco com os nomes dos antigos grupos de processos, sem sequência rígida, e 40 processos não prescritivos, adaptáveis a abordagens preditivas, adaptativas e híbridas. A III é falsa porque os princípios foram consolidados em seis. A IV é falsa porque Risco é domínio da 8ª edição, e Incerteza era da 7ª.",
+          "versaoInvertidaFalsa": "A 8ª edição do PMBOK manteve os 12 princípios e a ausência de processos da 7ª edição, limitando-se a renomear os domínios de desempenho."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: a 8ª edição reduziu os princípios de 12 para 6, e a sustentabilidade é um desses seis. Não houve acréscimo de um 13º princípio."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa, pois Incerteza era domínio da 7ª edição e a 8ª tem o domínio Risco. A combinação também omite a afirmativa I, verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ambas são falsas: a 8ª edição tem 6 princípios (e não 13) e o domínio Risco (Incerteza era da 7ª). As afirmativas I e II, verdadeiras, ficaram de fora."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa: a 8ª edição tem domínio próprio de Risco, e Incerteza era o nome do domínio na 7ª edição. A inversão das edições é a pegadinha."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte o que pertence a cada edição: Incerteza (7ª) × Risco (8ª), 12 princípios (7ª) × 6 princípios (8ª). As áreas de foco recuperam os nomes dos grupos de processos sem impor sequência rígida.",
+      "resumoFlashcard": {
+        "pergunta": "O que são as áreas de foco do PMBOK 8ª edição?",
+        "resposta": "São cinco agrupamentos dos 40 processos que retomam os nomes iniciação, planejamento, execução, monitoramento e controle, e encerramento, sem sequência rígida. Os processos são não prescritivos e devem ser adaptados à abordagem preditiva, adaptativa ou híbrida."
+      },
+      "conceitosChave": [
+        "PMBOK 8: áreas de foco e processos",
+        "PMBOK 6 × 7 × 8"
+      ],
+      "fundamentacao": "PMI. PMBOK Guide, 8th ed. (2025): seis princípios, sete domínios de desempenho, cinco áreas de foco e 40 processos não prescritivos; página oficial do PMI (pmi.org/standards/pmbok); PMBOK Guide, 7th ed. (2021): doze princípios e oito domínios, entre eles Incerteza."
+    },
+    {
+      "id": "gov-ti-036",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "ISO/IEC 38500:2024",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma equipe do Tribunal prepara nota técnica sobre a aplicação da ISO/IEC 38500:2024 por jurisdicionados que pretendem estruturar a governança de TI. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em curso sobre governança de TI para gestores municipais, o instrutor apresentou as principais características da ISO/IEC 38500:2024. Considere as afirmativas abaixo.",
+        "O conselho de uma empresa pública estadual pediu parecer sobre a adoção da ISO/IEC 38500:2024 como referência para a governança do uso de TI. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A norma fornece princípios orientadores aos membros dos órgãos de governança e a quem os apoia, aplicando-se a organizações públicas, privadas e sem fins lucrativos, de qualquer porte.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O escopo da norma alcança todas as organizações, independentemente de porte, natureza ou setor, e se dirige aos membros dos órgãos de governança e a quem os assessora."
+        },
+        {
+          "texto": "Por se tratar de norma de requisitos, a conformidade com a ISO/IEC 38500:2024 pode ser certificada por organismo acreditado, como ocorre com os sistemas de gestão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A norma é de orientação (princípios, modelo e framework), sem requisitos certificáveis. A certificação por terceira parte é típica de normas de requisitos de sistemas de gestão, como a ISO/IEC 27001 e a ISO/IEC 20000-1."
+        },
+        {
+          "texto": "A governança de TI é tratada como parte da governança da organização, e o órgão de governança continua responsável pelo uso da TI mesmo quando delega atividades à gestão.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A norma trata a governança de TI como domínio da governança organizacional, alinhada à ISO 37000. A delegação de atividades não transfere a responsabilização (accountability) do órgão de governança."
+        },
+        {
+          "texto": "A edição de 2024 incorporou um framework de governança de TI atualizado a partir do relatório técnico ISO/IEC TR 38502.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O prefácio da edição de 2024 aponta, entre as principais mudanças, a atualização de um framework de governança de TI a partir do ISO/IEC TR 38502."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa, porque a norma não é de requisitos nem certificável. Também omite as afirmativas III e IV, ambas verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A ISO/IEC 38500:2024 orienta os membros dos órgãos de governança e quem os apoia, em qualquer tipo de organização (I). Trata a governança de TI como parte da governança organizacional, sem que a delegação retire a responsabilização do órgão de governança (III). E incorporou um framework atualizado a partir do ISO/IEC TR 38502 (IV). A II é falsa porque a norma não estabelece requisitos certificáveis.",
+          "versaoInvertidaFalsa": "A ISO/IEC 38500:2024 é norma de requisitos certificável, dirigida apenas a empresas privadas de grande porte, e transfere aos gestores a responsabilidade pelo uso da TI."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, falsa, e omite a I, verdadeira. A norma se aplica a organizações de todos os tipos e portes e não é certificável."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, verdadeira: a atualização de um framework de governança de TI a partir do ISO/IEC TR 38502 é uma das principais mudanças declaradas no prefácio da edição de 2024."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa. A ISO/IEC 38500:2024 é norma de orientação, sem requisitos auditáveis para certificação, ao contrário de normas de sistema de gestão como a ISO/IEC 27001."
+        }
+      ],
+      "pegadinhaFCC": "A banca tenta fazer o candidato tratar a ISO/IEC 38500 como norma certificável, igual às de sistema de gestão, e restringir seu alcance. Ela é norma de orientação, aplica-se a qualquer organização e mantém a responsabilização no órgão de governança.",
+      "resumoFlashcard": {
+        "pergunta": "A ISO/IEC 38500:2024 é certificável? A quem se aplica?",
+        "resposta": "Não é certificável: é norma de orientação, com princípios, modelo e framework para os membros dos órgãos de governança e quem os apoia. Aplica-se a organizações públicas, privadas e sem fins lucrativos de qualquer porte."
+      },
+      "conceitosChave": [
+        "ISO/IEC 38500:2024",
+        "Governança × gestão de TI"
+      ],
+      "fundamentacao": "ISO/IEC 38500:2024, Scope (público-alvo e aplicabilidade a todas as organizações), Foreword (principais mudanças, inclusive o framework atualizado a partir do ISO/IEC TR 38502) e seções sobre a governança de TI como parte da governança organizacional; ISO 37000:2021 (princípio de accountability)."
+    },
+    {
+      "id": "gov-ti-037",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Lei do Governo Digital (Lei 14.129/2021)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao avaliar os serviços digitais de uma autarquia federal, uma equipe de auditoria utilizou a Lei 14.129/2021 como critério. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em levantamento sobre a aderência de um órgão federal à Lei do Governo Digital, um técnico organizou os critérios de avaliação a partir da Lei 14.129/2021. Considere as afirmativas abaixo.",
+        "Um Estado estuda adotar, por ato normativo próprio, os comandos da Lei 14.129/2021, e a assessoria resumiu alguns dispositivos da lei. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O número de inscrição no CPF ou no CNPJ é suficiente para identificar o cidadão ou a pessoa jurídica nos bancos de dados de serviços públicos, vedada a exigência de qualquer outro número para esse fim nos cadastros e formulários.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A lei tem seção própria sobre o número suficiente para identificação: CPF ou CNPJ bastam, com gratuidade da inscrição, e os cadastros devem prever campo para esse número, vedada a exigência de outro número para identificação."
+        },
+        {
+          "texto": "As Plataformas de Governo Digital devem ter, no mínimo, ferramenta digital de solicitação de atendimento e de acompanhamento da entrega dos serviços e painel de monitoramento do desempenho dos serviços públicos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o que prevê o art. 20 da Lei 14.129/2021 como funcionalidades mínimas das Plataformas de Governo Digital."
+        },
+        {
+          "texto": "Se o sistema de processo administrativo eletrônico ficar indisponível por motivo técnico no último dia do prazo, este se prorroga automaticamente até as 23h59 do primeiro dia útil seguinte ao da resolução do problema.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 8º, § 1º, considera tempestivos os atos praticados até as 23h59 do último dia do prazo, no horário de Brasília, e o § 2º prevê a prorrogação automática em caso de indisponibilidade técnica do sistema."
+        },
+        {
+          "texto": "A lei aplica-se automaticamente às administrações diretas e indiretas dos Estados e dos Municípios, independentemente de adoção por ato normativo próprio.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pelo art. 2º, III, a lei alcança os demais entes federados apenas se adotarem seus comandos por meio de atos normativos próprios. Na esfera federal, aplica-se aos três Poderes, incluídos o TCU e o MPU."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: Estados e Municípios só se submetem à lei se adotarem seus comandos por ato normativo próprio (art. 2º, III). A combinação também omite II e III, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Faltou a afirmativa I, verdadeira: CPF ou CNPJ são suficientes para identificação nos bancos de dados de serviços públicos, vedada a exigência de outro número para esse fim."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 14.129/2021 adota CPF ou CNPJ como número suficiente para identificação, vedada a exigência de outro número (I). Exige que as Plataformas de Governo Digital tenham ferramenta de solicitação e acompanhamento e painel de monitoramento (II, art. 20). E prorroga automaticamente o prazo quando o sistema eletrônico fica indisponível por motivo técnico (III, art. 8º, § 2º). A IV é falsa porque Estados e Municípios dependem de adoção por ato próprio (art. 2º, III).",
+          "versaoInvertidaFalsa": "A Lei 14.129/2021 aplica-se automaticamente a Estados e Municípios e exige, além do CPF, a apresentação de outro número de identificação nos cadastros de serviços públicos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa. A aplicação aos demais entes federados depende da adoção dos comandos da lei por atos normativos próprios (art. 2º, III, e § 2º)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV, falsa, e omite a I, verdadeira. A adoção do CPF como número suficiente para identificação é um dos pontos mais cobrados da lei."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa falsa explora a abrangência: a lei não se aplica automaticamente a Estados e Municípios. As verdadeiras cobram detalhes literais: CPF ou CNPJ como número suficiente, funcionalidades mínimas das plataformas e prorrogação automática do prazo até as 23h59.",
+      "resumoFlashcard": {
+        "pergunta": "Segundo a Lei 14.129/2021, o que acontece com o prazo se o sistema eletrônico ficar indisponível no último dia?",
+        "resposta": "Fica automaticamente prorrogado até as 23h59 do primeiro dia útil seguinte ao da resolução do problema (art. 8º, § 2º). Em regra, são tempestivos os atos praticados até as 23h59 do último dia do prazo, no horário de Brasília (§ 1º)."
+      },
+      "conceitosChave": [
+        "Lei 14.129: identificação (CPF)",
+        "Lei 14.129: processo eletrônico e prazos",
+        "Lei 14.129: abrangência"
+      ],
+      "fundamentacao": "Lei 14.129/2021, art. 2º, I a III e § 2º (abrangência), art. 8º, §§ 1º e 2º (tempestividade e prorrogação), art. 20 (funcionalidades das Plataformas de Governo Digital) e seção 'Do Número Suficiente para Identificação' (CPF e CNPJ)."
+    },
+    {
+      "id": "gov-ti-038",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Governança de TI e alinhamento estratégico",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em auditoria de governança de TI em uma secretaria estadual, a equipe do Tribunal constatou que o secretário delegou ao chefe da unidade de TI a definição de todas as prioridades de investimento em tecnologia, sem critérios aprovados pela alta administração, sem plano diretor vinculado ao planejamento estratégico e sem acompanhamento de indicadores pela cúpula. À luz dos modelos de governança de TI, a conclusão mais adequada é que",
+      "variantesEnunciado": [
+        "Em um município, o prefeito transferiu à diretoria de informática todas as decisões sobre investimentos e prioridades de TI, sem critérios definidos pela cúpula, sem plano de TI derivado do planejamento estratégico e sem acompanhamento de resultados pela alta gestão. À luz dos modelos de governança de TI, a conclusão mais adequada é que",
+        "Em uma autarquia, constatou-se que a presidência não participa das decisões sobre TI: a unidade técnica escolhe sozinha os projetos, não há plano diretor alinhado à estratégia institucional e a cúpula não acompanha indicadores de TI. À luz dos modelos de governança de TI, a conclusão mais adequada é que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a situação é regular, pois a governança de TI é atribuição técnica e deve ser exercida integralmente pela unidade de TI, que domina as tecnologias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os modelos de governança (ISO/IEC 38500, COBIT 2019) atribuem a governança ao órgão de governança ou à alta administração, e não à área técnica. A unidade de TI executa a gestão conforme a direção recebida."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a falha se restringe à falta de ferramentas automatizadas de monitoramento, que, uma vez adquiridas, dispensariam a participação da alta administração nas decisões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ferramentas podem apoiar o monitoramento, mas não substituem as funções de avaliar, direcionar e monitorar, que cabem à alta administração. A falha central é a ausência de direção estratégica e de responsabilização da cúpula."
+        },
+        {
+          "id": "opt-3",
+          "texto": "bastaria certificar a unidade de TI em norma de gestão de serviços, como a ISO/IEC 20000-1, para suprir a falta de direcionamento estratégico e de critérios de priorização dos investimentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma certificação em gestão de serviços atesta processos de gestão, mas não supre o papel da alta administração de definir direção, critérios de priorização e acompanhamento dos resultados da TI."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a alta administração pode delegar a execução, mas não a responsabilidade de avaliar, direcionar e monitorar a TI, o que requer critérios de priorização, plano alinhado e acompanhamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Nos modelos de governança de TI, como a ISO/IEC 38500 e o COBIT 2019 (domínio EDM), a alta administração ou o órgão de governança responde por avaliar, direcionar e monitorar o uso da TI. A gestão pode ser delegada, mas a responsabilização não. Sem critérios aprovados pela cúpula, sem plano diretor ligado ao planejamento estratégico e sem acompanhamento de indicadores, faltam direção, alinhamento e monitoramento. É a mesma lógica da governança pública do Decreto 9.203/2017 e do art. 11, parágrafo único, da Lei 14.133/2021.",
+          "versaoInvertidaFalsa": "a alta administração pode delegar integralmente a governança de TI à unidade técnica, inclusive a responsabilidade de avaliar, direcionar e monitorar o uso da tecnologia."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a priorização de investimentos é atividade de gestão, razão pela qual não cabe à alta administração definir critérios nem acompanhar os resultados da área de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Definir critérios de priorização e acompanhar resultados são expressões das funções de direcionar e monitorar, próprias da governança. A gestão executa e propõe, mas a decisão sobre o que priorizar, à luz da estratégia, cabe à alta administração."
+        }
+      ],
+      "pegadinhaFCC": "A banca tenta fazer o candidato aceitar que governança de TI é tarefa técnica ou que ferramentas e certificações suprem a falta de direção. A responsabilização por avaliar, direcionar e monitorar permanece na alta administração.",
+      "resumoFlashcard": {
+        "pergunta": "A alta administração pode delegar a governança de TI à unidade técnica?",
+        "resposta": "Pode delegar a execução (gestão), mas não a responsabilização. Cabe a ela avaliar, direcionar e monitorar o uso da TI, com critérios de priorização, planos alinhados à estratégia e acompanhamento de resultados."
+      },
+      "conceitosChave": [
+        "Governança × gestão de TI",
+        "Governança de TI: papel da alta administração"
+      ],
+      "fundamentacao": "ISO/IEC 38500:2024 (papel do órgão de governança e modelo de governança de TI); ISACA, COBIT 2019 (domínio EDM e princípio 'governança distinta da gestão'); Decreto 9.203/2017, art. 2º, I (governança pública: liderança, estratégia e controle para avaliar, direcionar e monitorar); Lei 14.133/2021, art. 11, parágrafo único."
+    },
+    {
+      "id": "gov-ti-039",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "Gestão de portfólio, ativos e continuidade de serviços",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o ITIL 4, a prática de gerenciamento de continuidade de serviço diferencia-se da prática de gerenciamento de disponibilidade porque",
+      "variantesEnunciado": [
+        "Ao revisar o plano de recuperação do datacenter do Tribunal, um técnico precisou distinguir duas práticas do ITIL 4. Nesse modelo, o gerenciamento de continuidade de serviço diferencia-se do gerenciamento de disponibilidade porque",
+        "Em capacitação para a equipe de infraestrutura de um jurisdicionado, explicou-se a diferença entre duas práticas de gerenciamento de serviços do ITIL 4. O gerenciamento de continuidade de serviço diferencia-se do gerenciamento de disponibilidade porque"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "trata das interrupções do dia a dia, como falhas de componentes isolados, enquanto o gerenciamento de disponibilidade cuida apenas de eventos catastróficos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte as práticas. O gerenciamento de disponibilidade busca entregar os níveis de disponibilidade acordados na operação normal, inclusive diante de falhas de componentes. A continuidade trata da manutenção dos serviços em caso de desastre."
+        },
+        {
+          "id": "opt-2",
+          "texto": "substitui a gestão de continuidade de negócios da organização, tornando desnecessária a análise de impacto conduzida pelas áreas finalísticas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A continuidade de serviços de TI apoia a gestão de continuidade de negócios e depende dela, especialmente da análise de impacto no negócio, que define prioridades e objetivos de recuperação. Não a substitui."
+        },
+        {
+          "id": "opt-3",
+          "texto": "limita-se à execução de rotinas de backup, ao passo que o gerenciamento de disponibilidade é que define os objetivos de tempo e de ponto de recuperação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Backup é apenas uma das medidas de recuperação. Os objetivos de tempo e de ponto de recuperação (RTO e RPO) são definidos no âmbito da continuidade, a partir da análise de impacto no negócio."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é prática de gerenciamento técnico, executada exclusivamente pela equipe de infraestrutura, sem participação das áreas de negócio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No ITIL 4, gerenciamento de continuidade de serviço é prática de gerenciamento de serviços, e não técnica. Depende da participação das áreas de negócio para definir prioridades e impactos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "mantém disponibilidade e desempenho em níveis suficientes em caso de desastre, enquanto a disponibilidade busca os níveis acordados na operação normal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No ITIL 4, o gerenciamento de continuidade de serviço garante que a disponibilidade e o desempenho de um serviço sejam mantidos em níveis suficientes em caso de desastre, dando resiliência à organização. O gerenciamento de disponibilidade garante que os serviços entreguem os níveis de disponibilidade acordados para atender às necessidades de clientes e usuários, no dia a dia.",
+          "versaoInvertidaFalsa": "busca entregar os níveis de disponibilidade acordados na operação normal, ao passo que a disponibilidade trata da manutenção dos serviços em níveis suficientes em caso de desastre."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte as práticas (continuidade para falhas comuns, disponibilidade para desastres), reduz a continuidade a backup e a classifica como prática técnica. Continuidade é resposta a desastre; disponibilidade é desempenho acordado na operação normal.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre gerenciamento de continuidade de serviço e gerenciamento de disponibilidade no ITIL 4?",
+        "resposta": "A continuidade mantém disponibilidade e desempenho em níveis suficientes em caso de desastre. A disponibilidade garante os níveis acordados na operação normal. Ambas são práticas de gerenciamento de serviços."
+      },
+      "conceitosChave": [
+        "Continuidade de serviços de TI",
+        "ITIL 4: práticas"
+      ],
+      "fundamentacao": "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), cap. 5, propósitos das práticas de gerenciamento de continuidade de serviço e de gerenciamento de disponibilidade; ABNT NBR ISO 22301:2020 (análise de impacto nos negócios e objetivos de recuperação)."
+    },
+    {
+      "id": "gov-ti-040",
+      "materiaSlug": "governanca-ti",
+      "subtopico": "COBIT 2019",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Na gestão de desempenho do COBIT 2019 (COBIT Performance Management), é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma equipe do Tribunal vai avaliar, com base no COBIT 2019, o desempenho dos processos de gestão de TI de um jurisdicionado e da área de foco de segurança da informação. Sobre a gestão de desempenho desse modelo, é correto afirmar que",
+        "Ao planejar o diagnóstico da governança de I&T de uma secretaria estadual, um técnico estudou a forma como o COBIT 2019 mede o desempenho de processos e de áreas de foco. Sobre esse tema, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os níveis de capacidade, de 0 a 5 e baseados no CMMI, aplicam-se aos processos, e os níveis de maturidade aplicam-se às áreas de foco ou a conjuntos de objetivos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O COBIT 2019 adota esquema de desempenho baseado no CMMI. O nível de capacidade mede quão bem um processo está implementado e funcionando, de 0 a 5: no nível 3, o processo atinge seu propósito de forma organizada, com ativos organizacionais; no 4, também tem desempenho medido quantitativamente; no 5, busca melhoria contínua. O nível de maturidade se associa a áreas de foco (ou a um conjunto de objetivos) e é alcançado quando os níveis de capacidade exigidos são atingidos.",
+          "versaoInvertidaFalsa": "os níveis de maturidade, de 0 a 5 e baseados na ISO/IEC 33000, aplicam-se aos processos, e os níveis de capacidade aplicam-se às áreas de foco ou a conjuntos de objetivos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os níveis de maturidade aplicam-se a cada processo isoladamente, e os níveis de capacidade medem o conjunto de objetivos de uma área de foco.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os conceitos. No COBIT 2019, capacidade refere-se a processos, e maturidade refere-se a áreas de foco ou a conjuntos de objetivos de governança e gestão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a escala de avaliação segue a ISO/IEC 33000, como no COBIT 5, com seis níveis de capacidade aplicáveis apenas aos objetivos de governança do domínio EDM.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O COBIT 5 usava modelo de avaliação baseado na ISO/IEC 15504, depois substituída pela série ISO/IEC 33000. O COBIT 2019 passou a usar esquema baseado no CMMI, aplicável a todos os 40 objetivos, e não só aos do EDM."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o nível de capacidade 4 exige melhoria contínua sistemática do processo, ao passo que o nível 5 se limita à medição quantitativa do desempenho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa troca os níveis. No nível 4, o processo atinge o propósito, é bem definido e tem desempenho medido quantitativamente. No nível 5, a medição é usada para melhorar o desempenho, e a melhoria contínua é buscada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a avaliação de desempenho é obrigatória e deve resultar em nível 5 em todos os processos para que o sistema de governança seja considerado adequado à organização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O COBIT 2019 não obriga avaliações nem exige nível 5 em todos os processos. Os níveis-alvo são definidos no desenho do sistema de governança, considerando os fatores de desenho e a prioridade de cada objetivo."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte capacidade (processo) e maturidade (área de foco), atribui ao COBIT 2019 a escala ISO do COBIT 5 e troca as descrições dos níveis 4 (medição quantitativa) e 5 (melhoria contínua).",
+      "resumoFlashcard": {
+        "pergunta": "No COBIT 2019, qual é a diferença entre nível de capacidade e nível de maturidade?",
+        "resposta": "O nível de capacidade (0 a 5, baseado no CMMI) mede quão bem um processo está implementado e funcionando. O nível de maturidade associa-se a uma área de foco ou a um conjunto de objetivos e é alcançado quando os níveis de capacidade exigidos são atingidos."
+      },
+      "conceitosChave": [
+        "COBIT 2019: capacidade e maturidade"
+      ],
+      "fundamentacao": "ISACA. COBIT 2019 Framework: Introduction and Methodology (gestão de desempenho: níveis de capacidade de processos e níveis de maturidade de áreas de foco); ISACA, 'Effective Capability and Maturity Assessment Using COBIT 2019' (2020)."
+    }
+  ]
+}

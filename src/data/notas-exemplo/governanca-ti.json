@@ -1,0 +1,50 @@
+{
+  "id": "nota-gov-ti-01",
+  "materiaSlug": "governanca-ti",
+  "titulo": "COBIT 2019 × ITIL 4: quem governa, quem gerencia e onde a banca confunde",
+  "subtopico": "COBIT 2019",
+  "pistas": [
+    {
+      "pergunta": "Qual é o único domínio de governança do COBIT 2019?",
+      "resposta": "O EDM (Avaliar, Direcionar e Monitorar). APO, BAI, DSS e MEA são domínios de gestão, inclusive o MEA, apesar de 'monitorar'."
+    },
+    {
+      "pergunta": "Quantos objetivos e domínios tem o COBIT 2019?",
+      "resposta": "São 40 objetivos em 5 domínios: EDM 5, APO 14, BAI 11, DSS 6 e MEA 4. Os novos em relação ao COBIT 5 são APO14, BAI11 e MEA04."
+    },
+    {
+      "pergunta": "Quantos princípios têm o COBIT 2019 e o ITIL 4?",
+      "resposta": "O COBIT 2019 tem 6 princípios do sistema de governança e 3 do framework. O ITIL 4 tem 7 princípios orientadores."
+    },
+    {
+      "pergunta": "Quais são os componentes do Sistema de Valor de Serviço do ITIL 4?",
+      "resposta": "Princípios orientadores, governança, cadeia de valor de serviço, práticas e melhoria contínua. As entradas são oportunidade e demanda, e a saída é valor."
+    },
+    {
+      "pergunta": "As quatro dimensões do ITIL 4 são componentes do SVS?",
+      "resposta": "Não. Organizações e pessoas, informação e tecnologia, parceiros e fornecedores e fluxos de valor e processos aplicam-se a todo o SVS."
+    },
+    {
+      "pergunta": "No COBIT 2019, a que se aplicam os níveis de capacidade e os de maturidade?",
+      "resposta": "A capacidade (0 a 5, baseada no CMMI) aplica-se a processos. A maturidade aplica-se a áreas de foco ou a conjuntos de objetivos."
+    },
+    {
+      "pergunta": "Que objetivos do COBIT 2019 correspondem a incidentes, problemas e mudanças do ITIL 4?",
+      "resposta": "DSS02 (requisições de serviço e incidentes), DSS03 (problemas) e BAI06 (mudanças de TI). Configuração e ativos correspondem a BAI10 e BAI09."
+    },
+    {
+      "pergunta": "Quantas práticas tem o ITIL 4 e como se dividem?",
+      "resposta": "São 34: 14 de gerenciamento geral, 17 de gerenciamento de serviços e 3 de gerenciamento técnico (implantação, infraestrutura e plataforma e desenvolvimento e gerenciamento de software)."
+    }
+  ],
+  "conteudoMarkdown": "## Por que a banca junta os dois\n\nCOBIT 2019 e ITIL 4 aparecem lado a lado no edital e se complementam, mas respondem a perguntas diferentes. O **COBIT 2019** (ISACA) é um modelo de **governança e gestão de informação e tecnologia (I&T)**: diz o que precisa ser dirigido, controlado e gerenciado para que a TI gere valor, otimize riscos e use bem os recursos. O **ITIL 4** é um modelo de **gerenciamento de serviços**: mostra como a organização cocria valor com os usuários por meio de serviços, do pedido à entrega e à melhoria.\n\n> Regra de bolso: o COBIT pergunta o que governar e gerenciar, e com que prioridade; o ITIL mostra como operar e melhorar os serviços.\n\nComo os dois falam de valor, governança, princípios e práticas, a FCC troca números e rótulos entre eles. A seguir, o essencial de cada um e as trocas mais prováveis.\n\n## COBIT 2019 em uma página\n\n- **Governança × gestão**: a governança avalia, direciona e monitora e fica no domínio **EDM**. A gestão planeja, constrói, executa e monitora nos domínios **APO, BAI, DSS e MEA**. ==O MEA é gestão==, apesar do \"monitorar\" no nome.\n- **Princípios**: 6 do **sistema de governança** (valor às partes interessadas, abordagem holística, sistema dinâmico, governança distinta da gestão, adaptação às necessidades, ponta a ponta) e 3 do **framework** (modelo conceitual, aberto e flexível, alinhado aos principais padrões).\n- **40 objetivos**: EDM 5, APO 14, BAI 11, DSS 6 e MEA 4. Novos em relação ao COBIT 5: APO14 (dados), BAI11 (projetos) e MEA04 (garantia).\n- **7 componentes**: processos; estruturas organizacionais; princípios, políticas e frameworks; informação; cultura, ética e comportamento; pessoas, habilidades e competências; serviços, infraestrutura e aplicações.\n- **Personalização**: 11 **fatores de desenho** (estratégia, metas, perfil de risco, papel da TI, modelo de sourcing, porte etc.) e **áreas de foco** (cibersegurança, DevOps, pequenas e médias empresas e outras).\n- **Desempenho**: escala de 0 a 5 baseada no **CMMI**. ==Capacidade vale para processos; maturidade, para áreas de foco==.\n- **Cascata de metas**: necessidades das partes interessadas → 13 metas corporativas → 13 metas de alinhamento → objetivos de governança e gestão.\n\n## ITIL 4 em uma página\n\n- **Sistema de Valor de Serviço (SVS)**: as entradas são oportunidade e demanda, e a saída é valor. São cinco componentes: princípios orientadores, governança, cadeia de valor de serviço, práticas e melhoria contínua.\n- **Cadeia de valor**: planejar, melhorar, engajar, projetar e fazer a transição, obter/construir, entregar e dar suporte. As atividades se combinam em fluxos de valor.\n- **Quatro dimensões**: organizações e pessoas; informação e tecnologia; parceiros e fornecedores; fluxos de valor e processos. Valem para todo o SVS e sofrem influência de fatores externos (PESTLE).\n- **7 princípios orientadores**: foco no valor; comece onde você está; progrida iterativamente com feedback; colabore e promova visibilidade; pense e trabalhe holisticamente; mantenha simples e prático; otimize e automatize.\n- **34 práticas**: 14 de gerenciamento geral, 17 de gerenciamento de serviços e 3 técnicas (implantação; infraestrutura e plataforma; desenvolvimento e gerenciamento de software).\n- **Conceitos-chave**: o serviço possibilita a **cocriação de valor**. Utilidade é a adequação ao propósito; garantia, a adequação ao uso.\n\n## Onde a banca confunde\n\n- **Números de princípios**: 6 + 3 no COBIT 2019 contra 7 no ITIL 4. Cinco princípios era o COBIT 5.\n- **\"Governança\"**: no COBIT, é um domínio com 5 objetivos (EDM). No ITIL 4, é um dos cinco componentes do SVS. Nos dois casos, o órgão de governança avalia, direciona e monitora.\n- **Objetivos × práticas**: o COBIT tem 40 objetivos, cada um ligado a um processo e a componentes. O ITIL 4 tem 34 práticas, que não são \"processos\" nem \"funções\" (termo do ITIL v3).\n- **Componentes × dimensões**: os 7 componentes do COBIT compõem o sistema de governança. As 4 dimensões do ITIL não são componentes do SVS.\n- **Três \"monitorar\"**: o do EDM (governança), o domínio MEA (gestão) e a prática de monitoramento e gerenciamento de eventos do ITIL 4.\n- **Sete passos × sete fases**: o modelo de melhoria contínua do ITIL 4 e o guia de implementação do COBIT 2019 fazem perguntas parecidas (\"onde estamos?\", \"onde queremos estar?\"), mas pertencem a modelos diferentes.\n- **Versões**: COBIT 5 (37 processos, habilitadores, metas relacionadas à TI) e ITIL v3 (ciclo de vida, funções, portfólio formado por funil, catálogo e serviços desativados) são distratores típicos. Em 2026, a PeopleCert lançou o ITIL (Version 5), mas o edital cobra o ITIL 4: nomeie sempre a versão.\n\n## Como os dois se encaixam\n\nNa prática, o COBIT fixa **o que** deve existir e **com que prioridade**, e o ITIL detalha **como** executar. Correspondências úteis:\n\n- Incidentes e requisições (ITIL 4) → DSS02 (Requisições de serviço e incidentes gerenciados).\n- Problemas → DSS03 (Problemas gerenciados).\n- Habilitação de mudanças → BAI06 (Mudanças de TI gerenciadas).\n- Configuração de serviço → BAI10 (Configuração gerenciada); ativos de TI → BAI09 (Ativos gerenciados).\n- Continuidade de serviço → DSS04 (Continuidade gerenciada).\n- Nível de serviço → APO09 (Acordos de serviço gerenciados); portfólio → APO05 (Portfólio gerenciado).\n\n> Em uma auditoria de central de serviços, o COBIT ajuda a definir o critério (o objetivo DSS02 e seus componentes), e o ITIL 4 ajuda a avaliar se o trabalho segue boas práticas de incidentes e requisições.\n\n## Revisão rápida\n\n- [ ] Separo o EDM (governança) dos quatro domínios de gestão.\n- [ ] Sei os números do COBIT 2019: 6 + 3 princípios, 40 objetivos, 7 componentes, 11 fatores de desenho.\n- [ ] Sei os números do ITIL 4: 5 componentes do SVS, 6 atividades, 4 dimensões, 7 princípios, 34 práticas.\n- [ ] Reconheço termos de versões antigas (COBIT 5 e ITIL v3) quando aparecem nas alternativas.\n",
+  "sintese": "O COBIT 2019 é o modelo de governança e gestão de I&T: separa quem dirige (EDM) de quem executa (APO, BAI, DSS e MEA), organiza 40 objetivos e se adapta à organização pelos fatores de desenho. O ITIL 4 é o modelo de gestão de serviços: explica como o SVS, a cadeia de valor e as 34 práticas cocriam valor no dia a dia. Na prova, confiro sempre o número (6 + 3 contra 7 princípios; 40 objetivos contra 34 práticas) e se o termo pertence ao COBIT 2019 e ao ITIL 4 ou a versões antigas.",
+  "fontes": [
+    "ISACA. COBIT 2019 Framework: Introduction and Methodology (princípios, governança × gestão, componentes, fatores de desenho, áreas de foco, cascata de metas e gestão de desempenho).",
+    "ISACA. COBIT 2019 Framework: Governance and Management Objectives (40 objetivos e seus componentes).",
+    "ISACA. COBIT 2019 Design Guide (fatores de desenho).",
+    "ISACA. COBIT 2019 and COBIT 5 Comparison (2020).",
+    "AXELOS. ITIL Foundation: ITIL 4 Edition (2019), caps. 2 a 5.",
+    "docs/pesquisa/governanca-ti.md (pesquisa e pontos de cautela desta matéria)."
+  ]
+}

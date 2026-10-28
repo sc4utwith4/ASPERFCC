@@ -258,3 +258,16 @@ Fontes: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12069.
 10. **Incidente × problema × erro conhecido × workaround** e **ativo × IC**: as trocas de rótulo são a pegadinha mais frequente. Catálogo de serviços ≠ portfólio ≠ CMDB.
 11. **Continuidade**: RTO < MTPD. O RPO mede **perda de dados** e não tempo de retorno. Continuidade cuida de desastre; disponibilidade, da operação normal.
 12. **TCE-GO**: nenhum fato sobre estrutura, sistemas ou adesões do Tribunal foi afirmado. Os cenários são hipotéticos.
+
+### Itens sem confirmação integral (orçamento de buscas esgotado)
+
+13. **Lei 14.129/2021**: o texto integral não foi lido neste ambiente.
+    - A numeração dos incisos do art. 3º usados nas questões (VII, XIII, XIV, XV, XVI) e os arts. 8º, 14 e 20 foram citados de memória, com alta confiança.
+    - A seção do CPF é citada pelo nome, sem número de artigo.
+    - Conferir no Planalto antes de publicar comentários literais.
+14. **IN SGD/ME 94/2022**:
+    - a vigência em 2026 foi inferida de páginas institucionais (ago/2026), sem notícia de revogação;
+    - o art. 4º (fornecedor ≠ avaliador ou fiscal) foi confirmado só por parecer referencial da AGU.
+15. **Recomendações da ENGD**: a Portaria SGD/MGI nº 5.395/2026, que substituiu a nº 4.248/2024, foi confirmada só por notícia e pela URL da tabela comparativa oficial. Os seis princípios da EFGD (Decreto 12.198/2024) vieram de documentos oficiais de PTD, mas o texto do decreto não foi lido. Nenhum dos dois virou gabarito.
+16. **Referências citadas de memória**: os capítulos do *ITIL Foundation: ITIL 4 Edition* (2 = conceitos, 3 = dimensões, 4 = SVS, 5 = práticas) e as seções dos livros do COBIT 2019 foram citados de memória. Nas fundamentações do COBIT, os números de capítulo foram retirados e substituídos pelo nome da seção.
+17. **ITIL (Version 5)** (PeopleCert, jan–fev/2026): detalhes como o ciclo de vida de 8 atividades e as mudanças nas práticas vêm de fontes secundárias divergentes. Só é mencionado como alerta de versão.
