@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "desenvolvimento-sistemas",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "dev-sis-041",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Algoritmos, lógica e estruturas de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal modela a rede de repasses financeiros entre órgãos estaduais como um grafo dirigido e ponderado, com cerca de 5 mil vértices e 20 mil arestas, para identificar caminhos de recursos entre entidades. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Para analisar relações entre empresas fornecedoras e órgãos contratantes, uma equipe de auditoria representou os dados como um grafo dirigido, ponderado e esparso, com milhares de vértices e poucas arestas por vértice. Considere as afirmativas abaixo.",
+        "Um sistema de fiscalização representa os fluxos de transferências entre entidades jurisdicionadas por um grafo dirigido, ponderado e esparso. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Como o grafo é esparso, a lista de adjacências ocupa espaço O(V + E), enquanto a matriz de adjacências ocuparia O(V²).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A lista armazena, para cada vértice, apenas seus vizinhos (O(V + E)); a matriz reserva V × V posições, vantajosa só em grafos densos ou quando é preciso testar a existência de arestas em O(1)."
+        },
+        {
+          "texto": "A busca em largura (BFS), que usa uma fila, encontra o caminho com o menor número de arestas entre dois vértices, mas não necessariamente o de menor soma de pesos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A BFS visita os vértices em ordem crescente de distância medida em número de arestas; em grafo ponderado, o caminho com menos arestas pode ter custo total maior."
+        },
+        {
+          "texto": "O algoritmo de Dijkstra encontra caminhos de menor custo a partir de uma origem, desde que não existam arestas com peso negativo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Dijkstra fixa definitivamente a distância de cada vértice extraído da fila de prioridade, o que só é correto com pesos não negativos; para pesos negativos, usa-se Bellman-Ford."
+        },
+        {
+          "texto": "A busca em profundidade (DFS), implementada com pilha ou recursão, permite detectar ciclos no grafo e, com lista de adjacências, executa em tempo O(V + E).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A DFS aprofunda cada ramo antes de retroceder; em grafo dirigido, encontrar aresta para um vértice ainda na pilha de recursão indica ciclo. Com listas de adjacências, cada vértice e cada aresta são processados uma vez."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Todas são verdadeiras. I: para grafos esparsos (E muito menor que V²), a lista de adjacências economiza espaço. II: a BFS explora por camadas e dá o menor número de arestas, ignorando pesos. III: Dijkstra exige pesos não negativos (com negativos, usa-se Bellman-Ford). IV: a DFS detecta ciclos (em grafo dirigido, pela aresta de retorno) e, com listas de adjacências, roda em O(V + E).",
+          "versaoInvertidaFalsa": "O algoritmo de Dijkstra encontra caminhos de menor custo mesmo com arestas de peso negativo, e por isso dispensa o uso do algoritmo de Bellman-Ford."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a IV, que também é verdadeira: a DFS identifica ciclos pelas arestas de retorno, ao encontrar um vértice que ainda está na pilha de recursão, e tem custo O(V + E) com listas de adjacências."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite I e III, também verdadeiras. A escolha da lista de adjacências para grafo esparso e a restrição do algoritmo de Dijkstra a pesos não negativos são resultados clássicos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite II e IV, verdadeiras. A BFS dá o caminho com menos arestas, não o de menor peso total, e a DFS detecta ciclos em O(V + E)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a I, verdadeira: com 5 mil vértices, a matriz teria 25 milhões de posições para apenas 20 mil arestas, enquanto a lista ocupa espaço proporcional a V + E."
+        }
+      ],
+      "pegadinhaFCC": "Todas as afirmativas são verdadeiras, e a banca conta com o candidato que desconfia de tudo. Pontos-chave: BFS = menos arestas (não menor peso); Dijkstra exige pesos não negativos; lista de adjacências O(V + E) para grafos esparsos.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar BFS, DFS, Dijkstra e Bellman-Ford?",
+        "resposta": "BFS (fila) dá o caminho com menos arestas; DFS (pilha ou recursão) explora em profundidade e detecta ciclos, ambas em O(V + E) com listas de adjacências. Dijkstra calcula caminhos mínimos com pesos não negativos; Bellman-Ford aceita pesos negativos e detecta ciclos negativos."
+      },
+      "conceitosChave": ["Grafos: BFS e DFS", "Complexidade: notação Big-O"],
+      "fundamentacao": "Cormen et al., Algoritmos: Teoria e Prática (3ª ed.), cap. 22 (Algoritmos elementares em grafos: representações, BFS e DFS) e cap. 24 (Caminhos mínimos de fonte única: Bellman-Ford e Dijkstra)."
+    },
+    {
+      "id": "dev-sis-042",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Programação funcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Em programação funcional, uma função que recebe outra função como argumento ou a devolve como resultado é chamada de função ……. Quando uma função interna mantém acesso às variáveis do escopo em que foi criada, mesmo após o término da função externa, forma-se um(a) ……. E uma função que, para os mesmos argumentos, sempre produz o mesmo resultado, sem efeitos colaterais, é dita ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na capacitação da equipe de TI do Tribunal sobre estilo funcional em JavaScript, explicou-se: funções que recebem ou retornam outras funções, como map e filter, são funções ……; uma função interna que preserva o acesso às variáveis do escopo onde foi criada, mesmo depois que a função externa terminou, forma um(a) ……; e funções sem efeitos colaterais, que retornam sempre o mesmo resultado para os mesmos argumentos, são ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Acerca de conceitos de programação funcional: a função …… é a que recebe funções como argumentos ou devolve funções; o(a) …… ocorre quando uma função interna guarda referência ao ambiente léxico de sua criação; e a função …… é determinística e livre de efeitos colaterais. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "recursiva − callback − pura",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Função recursiva é a que chama a si mesma, não a que recebe ou devolve funções. Callback é a função passada como argumento, e não o mecanismo de captura do escopo léxico."
+        },
+        {
+          "id": "opt-2",
+          "texto": "de ordem superior − currying − imutável",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas currying é transformar uma função de vários argumentos em uma sequência de funções de um argumento. E imutável qualifica dados, não funções livres de efeitos colaterais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "anônima − closure − idempotente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Função anônima é a que não tem nome (como lambdas e arrow functions), não necessariamente de ordem superior. Idempotente é a operação cuja aplicação repetida não altera o resultado obtido na primeira, o que difere de pureza."
+        },
+        {
+          "id": "opt-4",
+          "texto": "de ordem superior − closure − pura",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Funções de ordem superior recebem ou retornam funções, como map, filter e reduce. Closure é a combinação de uma função com o ambiente léxico em que foi definida, preservando o acesso a variáveis externas. Função pura é determinística e não produz efeitos colaterais, o que garante transparência referencial.",
+          "versaoInvertidaFalsa": "pura − closure − de ordem superior"
+        },
+        {
+          "id": "opt-5",
+          "texto": "de primeira classe − herança − assíncrona",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dizer que funções são de primeira classe significa que a linguagem as trata como valores, o que viabiliza as funções de ordem superior, mas o termo para a função que recebe ou devolve funções é de ordem superior. Herança é conceito de orientação a objetos, e assíncrona não tem relação com pureza."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca termos vizinhos: ordem superior × primeira classe, closure × callback ou currying, pura × idempotente. Cada um tem definição própria.",
+      "resumoFlashcard": {
+        "pergunta": "O que são função de ordem superior, closure e função pura?",
+        "resposta": "Função de ordem superior recebe ou retorna funções (map, filter, reduce). Closure é uma função que mantém acesso ao escopo léxico em que foi criada. Função pura retorna sempre o mesmo resultado para os mesmos argumentos e não tem efeitos colaterais."
+      },
+      "conceitosChave": ["PF: funções puras", "PF: ordem superior e closures"],
+      "fundamentacao": "MDN Web Docs, 'Closures' e 'First-class Function'; Abelson e Sussman, Structure and Interpretation of Computer Programs (2ª ed.), seção 1.3 (Formulating Abstractions with Higher-Order Procedures)."
+    },
+    {
+      "id": "dev-sis-043",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Java (conceitos básicos)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No sistema de controle de processos, a classe Java Processo tem os atributos numero e ano e sobrescreve equals para considerar iguais os processos com o mesmo número e o mesmo ano, mas não sobrescreve hashCode. Um técnico adiciona a um HashSet<Processo> dois objetos distintos criados com os mesmos número e ano e observa que size() retorna 2. A explicação e a correção adequada são",
+      "variantesEnunciado": [
+        "Em um módulo Java de cadastro de responsáveis, a classe Responsavel sobrescreve equals para considerar iguais os objetos com o mesmo CPF, mas não sobrescreve hashCode. Ao inserir em um HashSet dois objetos distintos com o mesmo CPF, o técnico obtém size() igual a 2. A explicação e a correção adequada são",
+        "A classe Java Contrato sobrescreve equals comparando o número e o órgão contratante, sem sobrescrever hashCode. Dois objetos distintos com os mesmos valores são adicionados a um HashSet<Contrato>, e size() retorna 2. A explicação e a correção adequada são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o HashSet compara elementos apenas com ==; a correção é substituí-lo por ArrayList, que usa equals para impedir duplicatas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O HashSet usa hashCode para localizar o compartimento e equals para confirmar a igualdade. ArrayList não impede duplicatas: aceita quantos elementos iguais forem adicionados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "equals foi sobrescrito com a assinatura errada; a correção é declarar o parâmetro de equals com o tipo da própria classe, em vez de Object, para que o HashSet o utilize.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: equals com parâmetro do tipo da própria classe seria uma sobrecarga, não uma sobrescrita de Object.equals(Object), e as coleções continuariam chamando a versão herdada. A assinatura correta é equals(Object o), preferencialmente com @Override."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o contrato exige que objetos iguais segundo equals tenham o mesmo hashCode; a correção é sobrescrever hashCode com os mesmos atributos usados em equals.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo contrato de Object, se a.equals(b) é verdadeiro, a.hashCode() deve ser igual a b.hashCode(). Sem sobrescrever hashCode, cada objeto tende a ter um hash diferente, herdado de Object, e o HashSet os trata como distintos sem chegar a consultar equals. Sobrescrever hashCode com os mesmos campos usados em equals (por exemplo, com Objects.hash) restaura a unicidade.",
+          "versaoInvertidaFalsa": "o contrato permite que objetos iguais segundo equals tenham hashCode diferentes; a correção é declarar o parâmetro de equals com o tipo da própria classe em vez de Object."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o HashSet não garante unicidade de elementos, apenas a ordem de inserção; a correção é usar LinkedHashSet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O HashSet garante unicidade segundo equals e hashCode e não garante ordem; o LinkedHashSet acrescenta a ordem de inserção, mas depende do mesmo contrato e apresentaria o mesmo problema."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o problema é a mutabilidade dos atributos; a correção é declarar a classe como abstract para impedir instâncias duplicadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Classe abstrata não pode ser instanciada, o que inviabilizaria criar os objetos, e não tem relação com duplicidade. A mutabilidade é um risco adicional (alterar campos de um objeto já inserido o faz se perder no conjunto), mas a causa aqui é a falta de hashCode."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece trocas de coleção e uma correção de equals que, na verdade, cria sobrecarga. A causa é a quebra do contrato entre equals e hashCode: objetos iguais precisam ter o mesmo hash.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o contrato entre equals e hashCode em Java e por que ele importa em HashSet e HashMap?",
+        "resposta": "Objetos iguais segundo equals devem ter o mesmo hashCode. HashSet e HashMap usam o hash para localizar o compartimento e só depois equals; se hashCode não for sobrescrito junto com equals, objetos iguais podem ser tratados como distintos."
+      },
+      "conceitosChave": ["Java: coleções", "Java: equals e hashCode"],
+      "fundamentacao": "Javadoc de java.lang.Object (contrato geral de equals e hashCode) e de java.util.HashSet e HashMap; Bloch, Effective Java (3ª ed.), item 11 (sempre sobrescreva hashCode ao sobrescrever equals)."
+    },
+    {
+      "id": "dev-sis-044",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JavaScript e Node.js",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um serviço Node.js do Tribunal consulta, em paralelo, três APIs de órgãos estaduais com const r = await Promise.all([consultarA(), consultarB(), consultarC()]); Quando a API B falha, a função inteira lança erro e os resultados de A e C, obtidos com sucesso, são descartados. Para aguardar todas as consultas e tratar individualmente sucessos e falhas, o técnico deve",
+      "variantesEnunciado": [
+        "Uma rotina Node.js agrega dados de três sistemas externos com const r = await Promise.all([buscarFolha(), buscarContratos(), buscarConvenios()]); Se um dos sistemas falha, toda a rotina é interrompida e os dados já recebidos dos outros dois são perdidos. Para aguardar todas as respostas e tratar cada sucesso ou falha separadamente, o técnico deve",
+        "Em JavaScript, const r = await Promise.all([consultarA(), consultarB(), consultarC()]); faz a função lançar erro quando consultarB() é rejeitada, perdendo os resultados de consultarA() e consultarC(). Para aguardar todas as promises e tratar individualmente sucessos e falhas, deve-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "trocar Promise.all por Promise.race, que aguarda todas as promises e devolve apenas as resolvidas com sucesso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Promise.race termina com a primeira promise que se resolver ou for rejeitada, qualquer que seja o resultado; não aguarda todas nem filtra os sucessos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "usar Promise.allSettled, que aguarda todas as promises e devolve, para cada uma, um objeto com status fulfilled e value ou rejected e reason.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Promise.allSettled só se resolve quando todas as promises terminam e não rejeita por causa delas: devolve um array com { status: 'fulfilled', value } ou { status: 'rejected', reason } para cada item. Assim, o serviço usa os dados de A e C e registra a falha de B. Promise.all, por sua vez, rejeita assim que qualquer promise é rejeitada (comportamento fail-fast).",
+          "versaoInvertidaFalsa": "usar Promise.allSettled, que rejeita imediatamente quando a primeira promise falha, descartando os resultados das demais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "usar Promise.any, que aguarda todas as promises e lança erro assim que qualquer uma delas for rejeitada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Promise.any resolve com o primeiro sucesso e só rejeita, com AggregateError, se todas forem rejeitadas. Não devolve o resultado de cada consulta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "remover o await, pois Promise.all sem await passa a ignorar as rejeições e a retornar os resultados parciais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sem await, obtém-se apenas a promise pendente; a rejeição continua acontecendo e, sem tratamento, gera rejeição não tratada (unhandled rejection), que no Node.js atual encerra o processo por padrão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "executar as três consultas em sequência, cada uma com seu próprio await, pois promises executadas em paralelo não permitem capturar erros com try/catch.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Erros de promises paralelas podem ser capturados com try/catch em torno do await de Promise.all, ou tratados com allSettled. Serializar as chamadas aumentaria o tempo total sem necessidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a semântica dos combinadores de promises. all: falha no primeiro erro; allSettled: espera todas e informa cada resultado; race: o primeiro a terminar; any: o primeiro sucesso.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre Promise.all, allSettled, race e any?",
+        "resposta": "all resolve com todos os valores ou rejeita na primeira falha; allSettled espera todas e devolve o status e o valor ou motivo de cada uma; race adota o resultado da primeira a terminar; any resolve com o primeiro sucesso e só rejeita se todas falharem."
+      },
+      "conceitosChave": ["JavaScript: promises e async/await"],
+      "fundamentacao": "ECMAScript Language Specification (ECMA-262): Promise.all, Promise.allSettled, Promise.any e Promise.race; MDN Web Docs, páginas desses métodos; documentação do Node.js, opção --unhandled-rejections."
+    },
+    {
+      "id": "dev-sis-045",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "React (front-end)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um componente React de contagem de documentos analisados, um botão chama function registrarDois() { setTotal(total + 1); setTotal(total + 1); }. Com total inicialmente igual a 0, após um clique o valor exibido é 1, e não 2. Além disso, um colega sugeriu que o componente filho Resumo, que recebe total via props, incremente props.total diretamente quando necessário. Sobre a situação, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em um painel React de triagem de processos, a função function adicionarDois() { setTotal(total + 1); setTotal(total + 1); } é chamada por um botão, e total começa em 0. Após um clique, a tela mostra 1. Um colega propõe ainda que o componente filho Contador, que recebe total por props, altere props.total diretamente. Sobre a situação, é correto afirmar que",
+        "Em um componente React, um clique executa setTotal(total + 1); setTotal(total + 1); com total igual a 0, e a interface exibe 1 em vez de 2. Há também a proposta de que um componente filho, que recebe total por props, incremente props.total diretamente. Sobre a situação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o resultado 1 decorre de um defeito do React; a sugestão do colega é adequada, pois props podem ser alteradas pelo filho para manter a sincronia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há defeito: o comportamento é o documentado. E props são somente leitura; alterá-las no filho viola o fluxo de dados unidirecional e não atualiza o estado do pai."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o setter atualiza total imediatamente, e o resultado 1 indica que o segundo setTotal foi ignorado por erro; o filho pode alterar props desde que use useEffect.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O setter não altera total na renderização corrente: agenda uma nova renderização, e total só terá o novo valor na próxima. Nenhuma chamada foi ignorada; ambas pediram total = 1. E useEffect não autoriza mutar props."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o correto seria declarar total com let fora do componente e incrementá-lo diretamente, já que o estado do React só é imutável entre componentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma variável comum, fora do estado, não dispara nova renderização quando muda, e a tela não se atualizaria. O estado deve ser alterado só pelo setter e tratado como imutável."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o resultado se corrige envolvendo as duas chamadas em useMemo; quanto às props, o filho pode alterá-las, e o React propaga a mudança para o pai.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. useMemo memoriza o resultado de um cálculo entre renderizações; não muda a forma como as atualizações de estado são enfileiradas. E o fluxo de dados no React vai do pai para o filho: alterar props no filho não chega ao pai."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cada chamada usa o valor de total daquela renderização, daí o resultado 1; com setTotal(t => t + 1) obtém-se 2; e props são somente leitura, cabendo ao pai passar ao filho uma função que altere o estado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em cada renderização, total é uma constante: as duas chamadas calculam 0 + 1 e pedem total = 1, e o React agrupa as atualizações (batching). A forma funcional setTotal(t => t + 1) recebe o estado pendente mais recente, totalizando 2. Props são somente leitura: para o filho alterar o total, o pai, dono do estado, passa um callback (por exemplo, onIncrementar), mantendo o fluxo unidirecional.",
+          "versaoInvertidaFalsa": "o setter altera total imediatamente, por isso duas chamadas setTotal(total + 1) sempre somam 2; e o filho pode alterar props.total diretamente, pois o React propaga a mudança ao pai."
+        }
+      ],
+      "pegadinhaFCC": "Dois objetos: o estado se comporta como um instantâneo da renderização (use a forma funcional para atualizações que dependem do valor anterior), e props são somente leitura (dados descem, eventos sobem por callbacks).",
+      "resumoFlashcard": {
+        "pergunta": "Por que setX(x + 1) chamado duas vezes no mesmo evento soma só 1 no React?",
+        "resposta": "Porque x é o valor fixo daquela renderização, e as duas chamadas pedem o mesmo valor; o React agrupa as atualizações. Com a forma funcional setX(v => v + 1), cada atualização parte do valor pendente mais recente."
+      },
+      "conceitosChave": ["React: props × state", "React: fluxo unidirecional"],
+      "fundamentacao": "Documentação oficial do React (react.dev): 'State as a Snapshot', 'Queueing a Series of State Updates', 'Passing Props to a Component' (props imutáveis) e 'Sharing State Between Components'."
+    },
+    {
+      "id": "dev-sis-046",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Python para automação e back-end",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico iniciante em Python prepara scripts para automatizar a conferência de planilhas de prestação de contas. Considere as afirmativas abaixo sobre a linguagem.",
+      "variantesEnunciado": [
+        "Ao revisar os primeiros scripts Python de automação escritos por um estagiário da área de TI do Tribunal, um técnico listou observações sobre a linguagem. Considere as afirmativas abaixo.",
+        "Em um treinamento interno de Python para a automação de rotinas administrativas, foram apresentadas características básicas da linguagem. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Python exige que o tipo de cada variável seja declarado antes do uso, como em int total = 0, sob pena de erro de sintaxe.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A tipagem é dinâmica: a variável é criada na atribuição e pode referenciar valores de tipos diferentes ao longo do programa. A sintaxe int total = 0 é inválida em Python."
+        },
+        {
+          "texto": "Os blocos de código são delimitados por chaves, e a indentação serve apenas para facilitar a leitura.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A indentação é parte da sintaxe e delimita os blocos; chaves delimitam dicionários e conjuntos, não blocos de código."
+        },
+        {
+          "texto": "Tuplas são imutáveis, enquanto listas podem ter elementos incluídos, removidos ou alterados após a criação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Tuplas não podem ser alteradas após criadas; listas aceitam append, remove, atribuição por índice e outras operações de modificação."
+        },
+        {
+          "texto": "A expressão \"10\" + 5 gera TypeError, pois, embora a tipagem seja dinâmica, o Python não converte implicitamente string em número nessa operação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A tipagem forte impede somar str com int: é preciso converter explicitamente, com int(\"10\") + 5 ou \"10\" + str(5)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II são justamente as falsas: o Python não exige declaração de tipos, e a indentação delimita os blocos, sem chaves."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, falsa. Em Python, a variável passa a existir na primeira atribuição (total = 0), e o tipo pertence ao valor, não à variável."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. III: tuplas são sequências imutáveis, e listas, mutáveis. IV: o Python tem tipagem dinâmica, mas forte, e não soma str com int implicitamente, lançando TypeError. I é falsa (não há declaração de tipo; anotações como total: int = 0 são opcionais) e II também (a indentação é sintática).",
+          "versaoInvertidaFalsa": "Listas são imutáveis, enquanto tuplas podem ter elementos incluídos, removidos ou alterados após a criação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV também: \"10\" + 5 lança TypeError, porque o Python não faz coerção implícita entre str e int nessa operação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, falsa: em Python, a indentação define os blocos (após if, for, def etc.), e inconsistências geram IndentationError. Omite também a III, verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde tipagem dinâmica com tipagem fraca e transplanta a sintaxe de Java ou C para o Python. Python não declara tipos, delimita blocos por indentação e não converte str em int implicitamente.",
+      "resumoFlashcard": {
+        "pergunta": "O que significa dizer que o Python tem tipagem dinâmica e forte?",
+        "resposta": "Dinâmica: o tipo pertence ao valor e é verificado em tempo de execução, sem declaração prévia de variáveis. Forte: não há conversões implícitas entre tipos incompatíveis, por isso \"10\" + 5 lança TypeError."
+      },
+      "conceitosChave": ["Python: tipagem dinâmica e forte"],
+      "fundamentacao": "Documentação do Python 3: Tutorial, seções 3 (Uma introdução informal), 4.1 (comando if e indentação) e 5.3 (Tuplas e sequências); Referência da Linguagem, seção 2.1.8 (Indentation)."
+    },
+    {
+      "id": "dev-sis-047",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "APIs RESTful, GraphQL e WebSockets",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Entre as restrições do estilo arquitetural REST, descrito por Roy Fielding, a restrição de comunicação sem estado (stateless) significa que",
+      "variantesEnunciado": [
+        "Ao projetar a API de consulta pública de processos do Tribunal no estilo REST, a equipe decidiu que nenhuma informação de sessão do usuário ficaria guardada no servidor. Essa decisão atende à restrição REST de comunicação sem estado (stateless), segundo a qual",
+        "Na tese de Roy Fielding, que define o estilo arquitetural REST, a restrição de interação sem estado (stateless) entre cliente e servidor estabelece que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cada requisição deve conter toda a informação necessária para ser entendida, sem depender de contexto de sessão guardado no servidor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na restrição stateless, o estado da sessão fica no cliente, e cada requisição carrega tudo o que o servidor precisa para processá-la, como o token de acesso no cabeçalho Authorization. Isso melhora visibilidade, confiabilidade e escalabilidade, pois qualquer instância do servidor pode atender qualquer requisição.",
+          "versaoInvertidaFalsa": "o servidor deve armazenar o contexto de sessão de cada cliente, de modo que as requisições possam omitir informações já enviadas anteriormente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o servidor não pode manter dados persistentes, como registros em banco de dados, entre uma requisição e outra do mesmo cliente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A restrição trata do estado da interação (sessão), não do estado dos recursos. O servidor continua guardando dados de negócio em bancos de dados; o que não deve guardar é o contexto da conversa com cada cliente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as respostas nunca podem ser armazenadas em cache, pois isso criaria estado intermediário entre cliente e servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cache é, ele próprio, uma das restrições do REST: as respostas devem indicar se podem ou não ser armazenadas, o que reduz latência e carga. Stateless e cache se complementam."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o cliente deve manter uma única conexão TCP aberta durante toda a sessão, para que o servidor reconheça suas requisições por esse canal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exigir conexão persistente para identificar o cliente seria justamente manter estado de sessão no servidor. No REST, cada requisição se identifica por si mesma."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os recursos devem ser representados exclusivamente em JSON, formato que dispensa o controle de estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O REST não impõe formato de representação: um recurso pode ser representado em JSON, XML, HTML ou outro tipo de mídia, negociado entre cliente e servidor."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde ausência de estado de sessão com ausência de dados persistentes e opõe stateless a cache. Stateless: cada requisição é autossuficiente; o servidor guarda os recursos, não a sessão.",
+      "resumoFlashcard": {
+        "pergunta": "O que significa a restrição stateless no REST?",
+        "resposta": "Cada requisição deve trazer todas as informações necessárias para ser processada, sem depender de contexto de sessão guardado no servidor. O servidor mantém os recursos, mas não o estado da conversa com o cliente, o que facilita a escalabilidade."
+      },
+      "conceitosChave": ["REST: restrições arquiteturais"],
+      "fundamentacao": "Fielding, R. T. Architectural Styles and the Design of Network-based Software Architectures (tese de doutorado, UC Irvine, 2000), cap. 5, seções 5.1.3 (Stateless) e 5.1.4 (Cache)."
+    },
+    {
+      "id": "dev-sis-048",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "OAuth 2.0, OpenID Connect e JWT",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A API de diárias do Tribunal recebe tokens JWT assinados com RS256 pelo provedor de identidade institucional. Na revisão do código de validação, o técnico constata que a assinatura é verificada com a chave pública obtida do JWKS do provedor, mas as claims exp, iss e aud não são conferidas, e tokens com alg igual a none também são aceitos. A correção adequada é",
+      "variantesEnunciado": [
+        "Um técnico audita o middleware de autenticação de uma API do Tribunal que recebe JWT assinados com RS256: a assinatura é verificada com a chave pública do JWKS do emissor, mas exp, iss e aud não são verificadas, e tokens com alg none passam na validação. A correção adequada é",
+        "Uma API valida JWT emitidos com RS256 apenas verificando a assinatura com a chave pública do emissor, sem conferir exp, iss e aud, e aceita tokens cujo cabeçalho indica alg none. A correção adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "passar a verificar a assinatura com a chave privada do provedor, distribuída a todas as APIs, já que RS256 é um algoritmo simétrico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. RS256 é assimétrico (RSA com SHA-256): o provedor assina com a chave privada, que nunca deve ser compartilhada, e as APIs verificam com a chave pública, publicada no JWKS."
+        },
+        {
+          "id": "opt-2",
+          "texto": "decodificar o payload em Base64URL e confiar nas claims, dispensando a verificação de assinatura, que já é feita pelo provedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Qualquer pessoa pode montar um payload em Base64URL; sem verificar a assinatura, a API aceitaria tokens forjados. A assinatura deve ser verificada por quem consome o token."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aceitar tokens expirados por até 24 horas, desde que a claim iat indique emissão no mesmo dia, para evitar novos logins.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. exp define o instante a partir do qual o token não deve ser aceito; as tolerâncias admitidas são pequenas, só para compensar diferenças de relógio (clock skew). Aceitar tokens vencidos por horas amplia a janela de uso indevido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "rejeitar alg none e restringir os algoritmos aceitos ao esperado (RS256), além de validar exp (e nbf, se presente) e conferir se iss é o provedor esperado e se aud identifica a própria API.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelas boas práticas da RFC 8725, a aplicação deve aceitar apenas os algoritmos esperados e jamais tokens não protegidos (alg none) onde se exige assinatura. Além da assinatura, pela RFC 7519, exp e nbf limitam a validade temporal; iss deve corresponder ao emissor confiável; e aud deve identificar o destinatário, para que um token emitido para outra aplicação não seja aceito pela API.",
+          "versaoInvertidaFalsa": "manter a aceitação de alg none por compatibilidade e dispensar a validação de aud, pois a assinatura RS256 já garante que o token foi emitido para esta API."
+        },
+        {
+          "id": "opt-5",
+          "texto": "trocar RS256 por HS256 e usar a chave pública do provedor como segredo HMAC, o que simplifica a validação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa troca reproduz o ataque de confusão de algoritmo: a chave pública é conhecida, então qualquer pessoa poderia gerar um HMAC válido com ela e forjar tokens. Por isso o algoritmo não deve ser escolhido a partir do cabeçalho do token sem restrição."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que a assinatura basta e mistura algoritmos simétricos e assimétricos. É preciso restringir os algoritmos (nada de none nem de troca de RS256 por HS256) e validar exp, nbf, iss e aud.",
+      "resumoFlashcard": {
+        "pergunta": "O que uma API deve validar em um JWT recebido, além da assinatura?",
+        "resposta": "Deve aceitar só os algoritmos esperados (nunca alg none quando se exige assinatura), verificar exp e nbf, conferir se iss é o emissor confiável e se aud identifica a própria API. A assinatura sozinha não garante que o token é válido para aquele uso."
+      },
+      "conceitosChave": ["JWT: estrutura e claims", "JWT: validação"],
+      "fundamentacao": "RFC 7519 (JWT), seções 4.1.1 (iss), 4.1.3 (aud), 4.1.4 (exp), 4.1.5 (nbf) e 7.2 (validação de um JWT); RFC 8725 (JWT BCP), seções 3.1 e 3.2 (verificação e escolha de algoritmos), 3.8 (emissor) e 3.9 (audiência); RFC 7518, seção 3.3 (RS256)."
+    },
+    {
+      "id": "dev-sis-049",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "HTML5, CSS3 e TypeScript",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na construção do leiaute responsivo do portal do Tribunal com HTML5 e CSS3, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico revisa o HTML5 e o CSS3 de um novo sistema web do Tribunal, que deve funcionar em celulares e computadores. Sobre a marcação semântica e os modelos de leiaute do CSS, é correto afirmar que",
+        "Acerca de elementos semânticos do HTML5, do modelo de caixa e dos módulos de leiaute Flexbox e Grid do CSS3, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o elemento <section> substitui <main> e deve ser usado uma única vez por documento para marcar o conteúdo principal da página.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. <main> marca o conteúdo principal do documento (deve haver no máximo um visível), enquanto <section> agrupa conteúdo temático, normalmente com título, e pode aparecer várias vezes. Um não substitui o outro."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Flexbox organiza itens em uma dimensão (linha ou coluna), e o Grid, em linhas e colunas simultaneamente, sendo mais indicado para a estrutura geral da página.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Flexbox distribui espaço entre itens ao longo de um eixo principal e é ideal para componentes como barras de navegação e grupos de botões. O Grid é bidimensional: define trilhas de linhas e colunas (inclusive com a unidade fr) e posiciona itens nelas, o que favorece a estrutura geral da página. Os dois podem ser combinados.",
+          "versaoInvertidaFalsa": "o Grid organiza itens em uma única dimensão, e o Flexbox controla linhas e colunas ao mesmo tempo, sendo o mais indicado para a estrutura geral da página."
+        },
+        {
+          "id": "opt-3",
+          "texto": "com box-sizing: content-box, valor padrão do CSS, a largura definida em width já inclui o padding e a borda do elemento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o inverso: em content-box (padrão), width e height valem só para a área de conteúdo, e padding e borda se somam a ela. Com box-sizing: border-box, a largura declarada já inclui padding e borda."
+        },
+        {
+          "id": "opt-4",
+          "texto": "elementos semânticos como <nav>, <article> e <aside> alteram a aparência da página, mas não trazem nenhum benefício para leitores de tela ou mecanismos de busca.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A vantagem dos elementos semânticos é justamente o significado: tecnologias assistivas os expõem como regiões (navegação, conteúdo complementar), e mecanismos de busca entendem melhor a estrutura. O efeito visual padrão é mínimo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "no Flexbox, a propriedade justify-content alinha os itens no eixo transversal, e align-items, no eixo principal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os eixos: justify-content distribui os itens no eixo principal (definido por flex-direction), e align-items os alinha no eixo transversal."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte conceitos em pares: Flexbox (1D) × Grid (2D), content-box × border-box, justify-content (eixo principal) × align-items (eixo transversal), main × section.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar Flexbox e quando usar Grid no CSS?",
+        "resposta": "Flexbox para distribuir itens em uma dimensão, linha ou coluna, como menus e grupos de botões. Grid para leiautes bidimensionais, com controle de linhas e colunas ao mesmo tempo, como a estrutura geral da página; os dois podem ser combinados."
+      },
+      "conceitosChave": ["CSS: flexbox × grid", "CSS: box model", "HTML5: semântica"],
+      "fundamentacao": "W3C, CSS Flexible Box Layout Module Level 1; W3C, CSS Grid Layout Module Level 2; W3C, CSS Box Sizing Module Level 3 (box-sizing); WHATWG, HTML Living Standard, seções 4.3 (Sections) e 4.4 (Grouping content: o elemento main)."
+    },
+    {
+      "id": "dev-sis-050",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Git (controle de versão)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Sobre tags no Git, usadas para marcar versões de sistemas como v2.3.0, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de TI do Tribunal passou a marcar no Git cada versão implantada do sistema de prestação de contas, como v2.3.0. Sobre o uso de tags, é correto afirmar que",
+        "Ao padronizar o processo de liberação de versões de seus sistemas, a equipe de desenvolvimento decidiu usar tags do Git para identificar cada release. A respeito das tags no Git, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "toda tag é automaticamente enviada ao repositório remoto a cada git push, junto com os commits da branch atual, sem opção adicional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Por padrão, git push não transfere tags. É preciso enviá-las explicitamente (git push origin v2.3.0), enviar todas com --tags ou usar --follow-tags, que envia as tags anotadas alcançáveis a partir dos commits enviados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "tags leves e anotadas são idênticas: ambas armazenam autor, data e mensagem e podem ser assinadas digitalmente com a opção -s.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tag leve é só um ponteiro para um commit, sem metadados próprios. A anotada é um objeto completo no banco de dados do Git, com nome e e-mail de quem a criou, data e mensagem, e pode ser assinada (git tag -s)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "uma tag acompanha a branch e passa a apontar para o novo commit sempre que a branch avança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem avança a cada commit é a branch. A tag é uma referência fixa a um commit específico; para movê-la, é preciso recriá-la (por exemplo, com -f), o que não é recomendado para tags já publicadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o comando git tag v2.3.0 cria uma tag anotada, e a opção -a cria uma tag leve, sem metadados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as opções: sem -a (nem -s ou -m), git tag cria uma tag leve; com -a, cria uma tag anotada, que exige mensagem, informada com -m ou no editor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "git tag -a cria uma tag anotada, objeto com autor, data e mensagem, e as tags precisam ser enviadas explicitamente ao remoto, como em git push origin v2.3.0.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. git tag -a cria uma tag anotada, armazenada como objeto com autor, data e mensagem e recomendada para marcar versões publicadas. Como o push não envia tags por padrão, é necessário enviá-las explicitamente: uma a uma (git push origin v2.3.0), todas (--tags) ou as anotadas alcançáveis (--follow-tags).",
+          "versaoInvertidaFalsa": "git tag v2.3.0, sem opções, cria uma tag anotada com autor, data e mensagem, e todas as tags são enviadas automaticamente ao remoto a cada git push."
+        }
+      ],
+      "pegadinhaFCC": "A banca diz que tags andam com a branch, que vão no push automaticamente e troca leve por anotada. Tag é referência fixa; a anotada (-a) tem metadados; o envio ao remoto é explícito.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre tag leve e tag anotada no Git, e como enviá-las ao remoto?",
+        "resposta": "A tag leve é só um ponteiro para um commit; a anotada (git tag -a) é um objeto com autor, data e mensagem, que pode ser assinado. git push não envia tags por padrão: usa-se git push origin <tag>, --tags ou --follow-tags."
+      },
+      "conceitosChave": ["Git: tags"],
+      "fundamentacao": "Documentação oficial do Git: git-tag (opções -a, -m, -s e -f) e git-push (opções --tags e --follow-tags); Pro Git (2ª ed.), seção 2.6 (Tagging)."
+    }
+  ]
+}

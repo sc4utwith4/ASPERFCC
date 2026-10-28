@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "desenvolvimento-sistemas",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "dev-sis-011",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Algoritmos, lógica e estruturas de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um sistema de consulta de processos do Tribunal mantém os números dos processos em uma árvore binária de busca sem balanceamento. Na carga inicial, os registros foram inseridos em ordem crescente de número, e os técnicos notaram que as buscas ficaram tão lentas quanto uma varredura sequencial. A explicação e uma solução adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Em um serviço que indexa os CPFs de responsáveis por contas, os registros foram inseridos, já ordenados, em uma árvore binária de busca simples, sem rotinas de balanceamento. As consultas passaram a demorar tanto quanto percorrer todos os registros. A explicação e uma solução adequada são, respectivamente,",
+        "Um módulo de auditoria armazena códigos de empenho em uma árvore binária de busca não balanceada, e a carga foi feita em ordem crescente dos códigos. Observou-se desempenho de busca equivalente ao de uma busca sequencial. A explicação e uma solução adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a árvore ficou completa, com altura log n, e a lentidão decorre do custo de comparar chaves; a solução é trocá-la por uma lista encadeada ordenada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inserções em ordem crescente fazem cada novo nó virar filho à direita do anterior; a árvore não fica completa. E trocá-la por lista encadeada ordenada manteria a busca em O(n), sem resolver o problema."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a árvore degenerou em estrutura semelhante a uma lista, com altura proporcional a n e busca O(n); a solução é usar árvore balanceada, como AVL ou rubro-negra.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em uma árvore binária de busca sem balanceamento, inserir chaves já ordenadas gera uma árvore degenerada: cada nó tem um só filho, a altura passa a ser n e a busca vira O(n), como numa lista. Árvores autobalanceadas, como AVL e rubro-negra, fazem rotações nas inserções e remoções e garantem altura O(log n), com busca, inserção e remoção em O(log n) no pior caso.",
+          "versaoInvertidaFalsa": "a árvore ficou perfeitamente balanceada com a inserção ordenada, com busca O(log n); a solução é trocar a árvore AVL por uma árvore binária de busca sem balanceamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a inserção ordenada é o melhor caso da árvore binária de busca, e a lentidão se deve à falta de índices; a solução é percorrer a árvore em pré-ordem a cada consulta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A inserção ordenada é o pior caso da árvore sem balanceamento, não o melhor. E percorrer a árvore em pré-ordem visita todos os nós (O(n)); não é estratégia de busca. É o percurso em ordem (in-order) que produz as chaves ordenadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a árvore binária de busca tem busca O(n log n) em qualquer caso; a solução é reordenar os registros com quicksort antes de cada consulta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A busca em árvore binária de busca custa O(h), em que h é a altura: O(log n) quando balanceada e O(n) quando degenerada. O(n log n) é a complexidade típica de ordenações eficientes, e reordenar antes de cada busca só pioraria o desempenho."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a árvore acumulou colisões entre chaves; a solução é aumentar o fator de carga para redistribuir os elementos entre os nós da estrutura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Colisões e fator de carga são conceitos de tabela hash, não de árvore binária de busca. A alternativa mistura estruturas para atrair quem associa lentidão de busca a colisões."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que a inserção ordenada é favorável ou mistura conceitos de tabela hash (colisão, fator de carga). Em árvore sem balanceamento, a entrada ordenada é o pior caso: altura n e busca O(n).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a complexidade de busca em uma árvore binária de busca e quando ela degenera?",
+        "resposta": "A busca custa O(h), em que h é a altura: O(log n) se a árvore estiver balanceada. Inserir chaves já ordenadas sem balanceamento gera uma árvore degenerada, com altura n e busca O(n); AVL e rubro-negra evitam isso com rotações."
+      },
+      "conceitosChave": ["Árvore binária de busca", "Complexidade: notação Big-O"],
+      "fundamentacao": "Cormen et al., Algoritmos: Teoria e Prática (3ª ed.), cap. 12 (Árvores de busca binária) e cap. 13 (Árvores vermelho-preto); Ziviani, Projeto de Algoritmos, cap. 5 (Pesquisa em memória primária)."
+    },
+    {
+      "id": "dev-sis-012",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Programação orientada a objetos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Em programação orientada a objetos, o princípio que consiste em ocultar o estado interno de um objeto, restringindo o acesso direto aos seus atributos e expondo apenas operações controladas, como métodos de acesso que validam os dados, denomina-se",
+      "variantesEnunciado": [
+        "Na revisão de uma classe Java que representa um processo de contas, um técnico recomendou tornar privados os atributos e oferecer métodos públicos que validem os valores antes de alterá-los. Essa recomendação aplica o princípio da orientação a objetos denominado",
+        "O princípio da programação orientada a objetos segundo o qual os detalhes internos de uma classe ficam ocultos e o acesso aos dados ocorre somente por meio de uma interface pública de métodos é o(a)"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "herança.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Herança é o mecanismo pelo qual uma classe (subclasse) reaproveita e especializa atributos e métodos de outra (superclasse), numa relação do tipo 'é um'. Não trata da proteção do estado interno."
+        },
+        {
+          "id": "opt-2",
+          "texto": "polimorfismo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Polimorfismo é a capacidade de uma mesma chamada assumir comportamentos diferentes conforme o tipo do objeto (sobrescrita) ou dos argumentos (sobrecarga). Não se confunde com restringir o acesso aos atributos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "abstração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Abstração é modelar apenas as características essenciais de uma entidade para o problema, ignorando detalhes irrelevantes. Está relacionada ao encapsulamento, mas a ocultação do estado com acesso controlado por métodos é o encapsulamento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "ligação dinâmica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ligação dinâmica (dynamic binding) é a escolha, em tempo de execução, da implementação de um método conforme o tipo real do objeto; é o que viabiliza a sobrescrita. Não trata da proteção dos atributos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "encapsulamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Encapsulamento é agrupar dados e comportamento em uma classe e ocultar os detalhes internos: atributos privados só são lidos ou alterados por métodos públicos, que podem validar os valores. Isso protege a consistência do objeto e permite mudar a implementação sem afetar quem o utiliza.",
+          "versaoInvertidaFalsa": "O encapsulamento consiste em expor publicamente todos os atributos do objeto, permitindo que qualquer classe os altere diretamente, sem validação."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece conceitos vizinhos, sobretudo abstração, como distratores. Ocultar o estado e controlar o acesso por métodos (atributos privados, getters e setters com validação) é encapsulamento.",
+      "resumoFlashcard": {
+        "pergunta": "O que é encapsulamento em POO?",
+        "resposta": "É ocultar o estado interno do objeto e permitir acesso apenas por operações públicas controladas, como métodos que validam os dados. Protege a consistência do objeto e reduz o acoplamento com quem o utiliza."
+      },
+      "conceitosChave": ["POO: encapsulamento"],
+      "fundamentacao": "Deitel e Deitel, Java: como programar (10ª ed.), caps. 3 e 8 (classes, objetos, encapsulamento e ocultamento de informações); The Java Tutorials (Oracle), 'What Is an Object?' (data encapsulation)."
+    },
+    {
+      "id": "dev-sis-013",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Java (conceitos básicos)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em Java, as exceções são classificadas em verificadas (checked) e não verificadas (unchecked). A respeito dessa classificação, é correto afirmar que",
+      "variantesEnunciado": [
+        "Na revisão de um serviço Java que lê arquivos de prestação de contas e grava os dados em banco, discutiu-se quais exceções o compilador obriga a tratar. Sobre exceções verificadas (checked) e não verificadas (unchecked), é correto afirmar que",
+        "Sobre o modelo de exceções da linguagem Java e a distinção entre exceções checked e unchecked, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "IOException é verificada e deve ser capturada ou declarada com throws, ao passo que subclasses de RuntimeException, como NullPointerException, não são.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Exceções verificadas (Exception e suas subclasses, exceto RuntimeException e derivadas), como IOException e SQLException, são conferidas pelo compilador: o método deve capturá-las ou declará-las com throws. RuntimeException e suas subclasses (NullPointerException, IllegalArgumentException, ArithmeticException), bem como Error, são não verificadas: o compilador não exige tratamento.",
+          "versaoInvertidaFalsa": "NullPointerException é verificada e deve ser capturada ou declarada com throws, ao passo que IOException, subclasse de RuntimeException, não é."
+        },
+        {
+          "id": "opt-2",
+          "texto": "todas as subclasses de Exception são não verificadas, e apenas as subclasses de Error obrigam o tratamento ou a declaração com throws.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a regra. A maioria das subclasses de Exception é verificada; as não verificadas são RuntimeException (e subclasses) e Error. Erros como OutOfMemoryError não precisam ser declarados nem, em regra, devem ser capturados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "NullPointerException e ArithmeticException são verificadas, razão pela qual o compilador exige que todo acesso a objetos e toda divisão ocorram dentro de um bloco try.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. NullPointerException e ArithmeticException derivam de RuntimeException e são não verificadas; o compilador não exige try-catch nem throws para elas. Em geral, indicam falhas de programação a corrigir no código."
+        },
+        {
+          "id": "opt-4",
+          "texto": "exceções não verificadas não podem ser capturadas por blocos catch e sempre encerram a execução da thread em que ocorrem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exceções não verificadas podem ser capturadas normalmente com catch; a diferença é só que o compilador não obriga o tratamento. Elas só encerram a thread se ninguém as capturar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o bloco finally só é executado quando nenhuma exceção é lançada no bloco try correspondente, sendo ignorado nos demais casos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bloco finally executa havendo ou não exceção (e mesmo com return no try), salvo situações extremas, como System.exit ou falha da JVM. Por isso é usado para liberar recursos, papel hoje também assumido pelo try-with-resources."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a classificação: NullPointerException e ArithmeticException parecem graves, mas são unchecked (RuntimeException). Checked = o compilador exige catch ou throws (IOException, SQLException).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre exceções checked e unchecked em Java?",
+        "resposta": "Checked são as subclasses de Exception fora da hierarquia de RuntimeException, como IOException: o compilador exige capturá-las ou declará-las com throws. Unchecked são RuntimeException, Error e suas subclasses, como NullPointerException, e não exigem tratamento."
+      },
+      "conceitosChave": ["Java: exceções checked × unchecked"],
+      "fundamentacao": "The Java Language Specification (Java SE 25), cap. 11: §11.1.1 (tipos de exceção) e §11.2 (verificação de exceções em tempo de compilação); §14.20.2 (execução de try-finally)."
+    },
+    {
+      "id": "dev-sis-014",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JavaScript e Node.js",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Em JavaScript, variáveis declaradas com …… têm escopo de função e são içadas (hoisting) já inicializadas com undefined. As declaradas com let e const têm escopo de ……, e acessá-las antes da declaração lança ReferenceError, por estarem na chamada zona morta temporal. Além disso, const impede …… da variável, mas não impede a alteração das propriedades de um objeto a ela atribuído. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao revisar o código JavaScript de um painel de indicadores do Tribunal, um técnico explicou: declarações com …… têm escopo de função e são içadas inicializadas com undefined; let e const têm escopo de …… e geram ReferenceError se acessadas antes da declaração (zona morta temporal); e const impede …… da variável, embora as propriedades de um objeto atribuído a ela possam mudar. Preenchem, correta e respectivamente, as lacunas:",
+        "Sobre declarações de variáveis em JavaScript: com …… a variável tem escopo de função e é içada com valor undefined; com let ou const, o escopo é de ……, e o acesso antes da declaração lança ReferenceError; com const, fica vedada …… da variável, mas um objeto atribuído a ela pode ter suas propriedades alteradas. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "let − função − a mutação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. let tem escopo de bloco e não é inicializada no hoisting; quem tem escopo de função e é içada com undefined é var. E const não impede a mutação: o objeto referenciado continua alterável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "var − bloco − a mutação",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas const não impede a mutação: o próprio enunciado ressalva que as propriedades do objeto podem ser alteradas. O que const proíbe é atribuir novo valor à variável."
+        },
+        {
+          "id": "opt-3",
+          "texto": "var − bloco − a reatribuição",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. var tem escopo de função (ou global) e, no hoisting, é criada já com undefined. let e const têm escopo de bloco e ficam na zona morta temporal até a linha da declaração: acessá-las antes gera ReferenceError. const cria uma ligação que não pode ser reatribuída, mas, se o valor for um objeto ou array, seu conteúdo pode mudar (Object.freeze impede isso, de forma rasa).",
+          "versaoInvertidaFalsa": "var − função − a reatribuição"
+        },
+        {
+          "id": "opt-4",
+          "texto": "const − função − a reatribuição",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. const não tem escopo de função, mas de bloco, como let, e não é içada com undefined. A terceira lacuna está correta, mas as duas primeiras atribuem a const e a let o comportamento de var."
+        },
+        {
+          "id": "opt-5",
+          "texto": "let − global − a leitura",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. let não tem escopo global por natureza nem é inicializada com undefined no hoisting. E const não impede a leitura da variável, apenas sua reatribuição."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde não reatribuível com imutável. const impede nova atribuição à variável, mas não congela o objeto; e só var é içada já com undefined (let e const ficam na zona morta temporal).",
+      "resumoFlashcard": {
+        "pergunta": "Quais as diferenças entre var, let e const em JavaScript?",
+        "resposta": "var tem escopo de função e é içada com undefined. let e const têm escopo de bloco e ficam na zona morta temporal até a declaração. const impede reatribuir a variável, mas o conteúdo de um objeto ou array atribuído a ela pode ser alterado."
+      },
+      "conceitosChave": ["JavaScript: var, let e const"],
+      "fundamentacao": "ECMAScript Language Specification (ECMA-262), seções 'Let and Const Declarations' e 'Variable Statement'; MDN Web Docs, páginas var, let e const (zona morta temporal)."
+    },
+    {
+      "id": "dev-sis-015",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "APIs RESTful, GraphQL e WebSockets",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A API REST de protocolo do Tribunal recebe POST /processos para autuar um novo processo. Na autuação bem-sucedida, o recurso é criado e seu endereço deve ser informado ao cliente; quando já existe processo com o mesmo número de controle, a requisição conflita com o estado atual do recurso; e quando o token enviado é válido, mas o usuário não tem permissão para autuar, o acesso deve ser recusado. Os códigos de status mais adequados para essas situações são, respectivamente,",
+      "variantesEnunciado": [
+        "Na API REST de cadastro de jurisdicionados, POST /jurisdicionados cria um novo registro. No sucesso, o cliente deve receber a indicação de criação e o endereço do novo recurso; se o CNPJ já estiver cadastrado, a requisição conflita com o estado atual do recurso; e, se o token for válido, mas o perfil do usuário não permitir cadastrar, o acesso deve ser recusado. Os códigos de status mais adequados são, respectivamente,",
+        "Em uma API REST de diárias, POST /diarias registra uma solicitação. Há três situações: registro criado com sucesso, com o endereço do novo recurso informado; tentativa de registrar diária já existente para o mesmo período, em conflito com o estado atual; e usuário autenticado sem permissão para essa operação. Os códigos de status mais adequados são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "200 OK, com o recurso no corpo; 400 Bad Request; e 401 Unauthorized.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 200 OK indica sucesso genérico, mas, quando a requisição cria um recurso, o código específico é 201. 400 sinaliza requisição malformada, não conflito com o estado do recurso; e 401 indica ausência ou invalidade de credenciais, não falta de permissão de quem já se autenticou."
+        },
+        {
+          "id": "opt-2",
+          "texto": "201 Created; 409 Conflict; e 401 Unauthorized, por se tratar de falta de autorização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros códigos estão adequados, mas 401 Unauthorized, apesar do nome, significa que faltam credenciais válidas (e deve vir com o cabeçalho WWW-Authenticate). Com token válido e sem permissão, o código é 403."
+        },
+        {
+          "id": "opt-3",
+          "texto": "202 Accepted, para processamento posterior; 422 Unprocessable Content; e 403 Forbidden.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 202 Accepted indica que a requisição foi aceita para processamento posterior, sem garantia de conclusão; aqui o recurso foi criado. 422 se aplica a conteúdo sintaticamente correto, mas semanticamente inválido; a duplicidade com o estado atual é 409."
+        },
+        {
+          "id": "opt-4",
+          "texto": "201 Created, com o cabeçalho Location; 409 Conflict; e 403 Forbidden.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela RFC 9110, 201 Created indica que um ou mais recursos foram criados, e o cabeçalho Location identifica o novo recurso. 409 Conflict indica que a requisição conflita com o estado atual do recurso alvo (número já autuado). 403 Forbidden indica que o servidor entendeu a requisição, mas se recusa a atendê-la, típico de usuário autenticado sem autorização.",
+          "versaoInvertidaFalsa": "201 Created, 409 Conflict e 401 Unauthorized, pois 401 é o código próprio para usuário autenticado que não tem permissão sobre o recurso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "204 No Content, sem corpo na resposta; 409 Conflict; e 404 Not Found.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 204 No Content indica sucesso sem conteúdo a retornar e não informa a criação do recurso nem seu endereço. E 404 indica recurso inexistente; a RFC 9110 até admite usá-lo para ocultar um recurso proibido, mas não é a resposta mais adequada à recusa por falta de permissão."
+        }
+      ],
+      "pegadinhaFCC": "O nome 401 Unauthorized engana: ele trata de autenticação ausente ou inválida. Usuário autenticado sem permissão recebe 403. E criação bem-sucedida pede 201 com Location, não 200 genérico.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar 201, 401, 403 e 409 em uma API REST?",
+        "resposta": "201 Created quando a requisição cria um recurso, informado no cabeçalho Location. 401 quando faltam credenciais válidas; 403 quando o usuário autenticado não tem permissão; 409 quando a requisição conflita com o estado atual do recurso, como em duplicidade."
+      },
+      "conceitosChave": ["HTTP: códigos de status"],
+      "fundamentacao": "RFC 9110 (HTTP Semantics), seções 15.3.2 (201 Created), 15.5.2 (401 Unauthorized), 15.5.4 (403 Forbidden), 15.5.10 (409 Conflict) e 10.2.2 (Location)."
+    },
+    {
+      "id": "dev-sis-016",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JSON e XML",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal recebe dos jurisdicionados arquivos XML de prestação de contas, que devem obedecer a um esquema XSD publicado pela área técnica. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma unidade técnica do Tribunal definiu um XSD para o envio, em XML, de dados de contratos pelos órgãos jurisdicionados e pediu ao técnico um parecer sobre a validação desses arquivos. Considere as afirmativas abaixo.",
+        "Na integração com sistemas de órgãos estaduais, o Tribunal recebe documentos XML que usam namespaces e são validados por XML Schema (XSD). Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um documento pode ser bem formado e, ainda assim, inválido, quando respeita as regras sintáticas do XML, mas não atende às restrições do XSD, como a ordem ou a obrigatoriedade dos elementos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Bem formado é requisito sintático; válido exige também a conformidade com o esquema. Um XML bem formado com elementos fora de ordem ou sem um elemento obrigatório é inválido perante o XSD."
+        },
+        {
+          "texto": "O XSD é escrito em sintaxe própria, distinta do XML, e por isso não pode ser processado pelos mesmos analisadores usados para ler os documentos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O XSD (XML Schema) é escrito em XML, com elementos do namespace http://www.w3.org/2001/XMLSchema, o que permite processá-lo com as mesmas ferramentas. Quem tem sintaxe própria é o DTD."
+        },
+        {
+          "texto": "Os namespaces exigem que o URI declarado em xmlns aponte para um endereço acessível, do qual o analisador baixa as definições dos elementos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O URI de um namespace é só um identificador único; a recomendação Namespaces in XML não exige que ele aponte para recurso acessível, e o analisador não o baixa."
+        },
+        {
+          "texto": "O XSD permite declarar tipos de dados, como xs:date e xs:decimal, e limites de ocorrência dos elementos por meio dos atributos minOccurs e maxOccurs.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O XSD oferece tipos primitivos e derivados (xs:string, xs:date, xs:decimal), restrições (facets) e controle de ocorrência por minOccurs e maxOccurs."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I e IV são verdadeiras: bem formado diz respeito à sintaxe (elemento raiz único, tags fechadas e corretamente aninhadas, atributos entre aspas); válido exige, além disso, conformidade com um esquema (DTD ou XSD), que define tipos e ocorrências. II é falsa porque o XSD é ele próprio um documento XML; III é falsa porque o URI do namespace é só um identificador, sem obrigação de apontar para recurso acessível.",
+          "versaoInvertidaFalsa": "Todo documento XML bem formado é automaticamente válido, pois a validação em relação ao XSD verifica apenas se as tags estão corretamente abertas, fechadas e aninhadas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, falsa: o XSD é escrito em XML (elementos como xs:element e xs:complexType) e pode ser lido pelos mesmos analisadores. Essa é uma das vantagens do XSD sobre o DTD, que tem sintaxe própria."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III são justamente as falsas. O XSD é escrito em XML, e o URI do namespace serve apenas para dar nome único ao vocabulário, sem ser baixado pelo analisador."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa: o nome do namespace é um identificador (por convenção, muitas vezes um URL), e o analisador não precisa acessá-lo. O esquema, quando necessário, é localizado por outros meios, como xsi:schemaLocation ou configuração da aplicação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a I também: bem formado e válido são níveis distintos, e um documento sintaticamente correto pode violar o XSD. A resposta fica incompleta."
+        }
+      ],
+      "pegadinhaFCC": "A banca equipara bem formado a válido e trata o URI do namespace como endereço que o analisador precisa baixar. Bem formado é sintaxe; válido é sintaxe mais esquema. O namespace é só um identificador.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre XML bem formado e XML válido?",
+        "resposta": "Bem formado é o documento que segue as regras sintáticas do XML, como raiz única, tags fechadas e bem aninhadas e atributos entre aspas. Válido é o documento bem formado que também obedece a um esquema (DTD ou XSD)."
+      },
+      "conceitosChave": ["XML: bem formado × válido", "XML: namespaces"],
+      "fundamentacao": "W3C, Extensible Markup Language (XML) 1.0 (5ª ed.), seções 2.1 (documentos bem formados) e 2.8 (validade); W3C, Namespaces in XML 1.0 (3ª ed.), seção 2; W3C, XML Schema Definition Language (XSD) 1.1, Parts 1 e 2."
+    },
+    {
+      "id": "dev-sis-017",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "OAuth 2.0, OpenID Connect e JWT",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Um JSON Web Token (JWT) assinado, no formato compacto do JWS, é composto por três partes separadas por pontos. A respeito dessa estrutura, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao inspecionar o tráfego de uma API do Tribunal, um técnico encontrou um token no formato xxxxx.yyyyy.zzzzz enviado no cabeçalho Authorization. Tratando-se de um JWT assinado (JWS compacto), é correto afirmar que",
+        "Sobre a estrutura de um JSON Web Token assinado, representado no formato compacto com três segmentos separados por pontos, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o payload é cifrado com a chave indicada no cabeçalho, de modo que somente o destinatário legítimo do token consegue ler as claims nele contidas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em um JWT assinado (JWS), o payload não é cifrado. Sigilo do conteúdo exige um JWE (RFC 7516), cujo formato compacto tem cinco partes. A alternativa confunde assinatura com criptografia."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cabeçalho e payload são apenas codificados em Base64URL e podem ser lidos por qualquer um; a assinatura garante integridade, não sigilo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No formato compacto do JWS, o token é cabeçalho.payload.assinatura, com cada parte codificada em Base64URL. Codificar não é cifrar: qualquer um decodifica e lê as claims, por isso não se deve colocar segredos no payload. A assinatura (HMAC, como HS256, ou assimétrica, como RS256 e ES256) permite detectar adulteração e confirmar o emissor.",
+          "versaoInvertidaFalsa": "cabeçalho e payload são cifrados pela assinatura e só o destinatário consegue lê-los; por isso o payload é local seguro para senhas e dados sigilosos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as três partes são cabeçalho, payload e chave pública do emissor, que o destinatário usa diretamente para validar o token.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A terceira parte é a assinatura, não uma chave. A chave pública de verificação é obtida fora do token, por exemplo no endpoint JWKS do emissor; o cabeçalho pode trazer apenas o identificador da chave (kid)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a assinatura é um hash do payload calculado sem chave, por isso o cliente pode recalculá-la depois de alterar as claims.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A assinatura depende de uma chave: segredo compartilhado (HMAC) ou chave privada (RSA, ECDSA). Sem a chave, quem alterar as claims não consegue gerar assinatura válida, e o verificador rejeita o token."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as claims exp e iat são obrigatórias em todo JWT, conforme a RFC 7519, e o token sem elas é rejeitado pela especificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na RFC 7519, todas as claims registradas (iss, sub, aud, exp, nbf, iat e jti) são opcionais. Perfis específicos, como o ID Token do OpenID Connect, é que tornam algumas delas obrigatórias."
+        }
+      ],
+      "pegadinhaFCC": "A banca trata Base64URL como criptografia e o JWT assinado como sigiloso. Assinatura dá integridade e autenticidade; sigilo só com JWE. Nada de segredos no payload de um JWS.",
+      "resumoFlashcard": {
+        "pergunta": "Um JWT assinado protege o sigilo das claims?",
+        "resposta": "Não. No JWS compacto, cabeçalho e payload são apenas codificados em Base64URL e podem ser lidos por qualquer um. A assinatura garante integridade e autenticidade; para sigilo, usa-se JWE."
+      },
+      "conceitosChave": ["JWT: estrutura e claims", "JWT: JWS × JWE"],
+      "fundamentacao": "RFC 7519 (JSON Web Token), seções 3 e 4.1; RFC 7515 (JWS), seção 7.1 (serialização compacta); RFC 7516 (JWE), seção 7.1; RFC 8725 (JWT Best Current Practices)."
+    },
+    {
+      "id": "dev-sis-018",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "HTML5, CSS3 e TypeScript",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na folha de estilos do portal do Tribunal, um parágrafo está marcado como <p id=\"aviso\" class=\"alerta\">. Aplicam-se a ele as regras, nesta ordem: #aviso { color: blue; } p.alerta { color: green !important; } .alerta { color: red !important; } p { color: black; }. Não há estilos inline nem outras folhas. A cor aplicada ao texto do parágrafo e o motivo são",
+      "variantesEnunciado": [
+        "Um elemento <p id=\"aviso\" class=\"alerta\"> da página de consulta processual recebe, na ordem, as regras #aviso { color: blue; } p.alerta { color: green !important; } .alerta { color: red !important; } p { color: black; }. Sem estilos inline nem outras folhas, a cor final do texto e o motivo são",
+        "Considere o HTML <p id=\"aviso\" class=\"alerta\">Prazo encerrado</p> e uma folha de estilos única com as regras, nesta ordem: #aviso { color: blue; } p.alerta { color: green !important; } .alerta { color: red !important; } p { color: black; }. A cor exibida e a justificativa são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "azul, pois o seletor de id tem a maior especificidade entre as regras e prevalece sobre qualquer outra declaração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. #aviso tem de fato a maior especificidade (1,0,0), mas sua declaração é normal. Na cascata, declarações marcadas com !important de mesma origem prevalecem sobre as normais, independentemente da especificidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "vermelho, pois, entre as declarações com !important, prevalece a última declarada na folha de estilos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem de declaração é só o último critério de desempate. Entre as duas declarações !important, compara-se antes a especificidade: p.alerta (0,1,1) supera .alerta (0,1,0), mesmo vindo antes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "preto, pois a última regra declarada na folha sempre sobrescreve as anteriores que atingem o mesmo elemento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A regra p tem a menor especificidade (0,0,1) e é declaração normal. A posição na folha só decide entre declarações de mesma importância e mesma especificidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "verde, pois p.alerta tem especificidade maior que #aviso, já que combina um seletor de elemento e um de classe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cor está certa, mas o motivo não: p.alerta tem especificidade (0,1,1), menor que a de #aviso (1,0,0), pois um id pesa mais que qualquer quantidade de classes e elementos. O verde vence por causa do !important."
+        },
+        {
+          "id": "opt-5",
+          "texto": "verde, pois declarações !important vencem as normais e, entre elas, p.alerta é mais específico que .alerta.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A cascata considera primeiro origem e importância: as declarações !important do autor vencem as normais, o que elimina azul e preto. Entre as duas importantes, decide a especificidade: p.alerta (0,1,1) supera .alerta (0,1,0). A ordem de aparição só desempataria se as especificidades fossem iguais.",
+          "versaoInvertidaFalsa": "vermelho, pois, entre declarações !important, a ordem de aparição na folha prevalece sobre a especificidade dos seletores."
+        }
+      ],
+      "pegadinhaFCC": "Dois objetos: !important vence declarações normais, mesmo de seletor com id; e, entre declarações !important, decide a especificidade antes da ordem. Há ainda o distrator com a cor certa e o motivo errado.",
+      "resumoFlashcard": {
+        "pergunta": "Como o CSS decide entre declarações conflitantes para o mesmo elemento?",
+        "resposta": "Primeiro por origem e importância (!important vence declarações normais da mesma origem), depois pela especificidade (ids > classes, atributos e pseudoclasses > elementos) e, por fim, pela ordem de aparição. Estilos inline normais vencem seletores da folha, mas não declarações !important."
+      },
+      "conceitosChave": ["CSS: especificidade", "CSS: cascata e !important"],
+      "fundamentacao": "W3C, CSS Cascading and Inheritance Level 4, seção 6 (cascata: origem e importância, especificidade e ordem de aparição); W3C, Selectors Level 4, seção 17 (cálculo da especificidade)."
+    },
+    {
+      "id": "dev-sis-019",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Documentação de APIs (OpenAPI/Swagger)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico revisa a descrição OpenAPI da API de consulta de processos do Tribunal. O documento começa com openapi: 3.2.0 e info com title e version: 2.4.0, e define o caminho /processos/{numero} com o parâmetro numero declarado com in: path e required: false, para permitir consultas sem número. Sobre esse documento, é correto concluir que",
+      "variantesEnunciado": [
+        "Ao auditar a documentação da API de contratos de um órgão jurisdicionado, um técnico encontrou uma descrição com openapi: 3.2.0, info.version: 2.4.0 e o caminho /contratos/{numero}, cujo parâmetro numero está declarado com in: path e required: false. Sobre esse documento, é correto concluir que",
+        "Considere uma descrição OpenAPI cujo objeto raiz traz openapi: 3.2.0 e info com title e version: 2.4.0, e que define o caminho /processos/{numero} com o parâmetro numero em in: path e required: false. Sobre esse documento, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "há erro no campo openapi, que deveria repetir o valor 2.4.0, pois ambos os campos indicam a versão da API descrita.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os papéis: openapi indica a versão da especificação OpenAPI usada pelo documento (3.2.0), e info.version indica a versão do próprio documento, sem relação com a da especificação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o documento está correto, pois parâmetros de caminho são opcionais por padrão, e required: false apenas torna isso explícito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pela especificação, se o parâmetro está no caminho (in: path), o campo required é obrigatório e deve valer true. Para consultar sem número, define-se outro caminho, como /processos, com parâmetros de consulta (in: query)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "há erro no parâmetro, pois parâmetros com in: path devem ter required: true; openapi e info.version têm papéis distintos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O parâmetro de caminho integra a URL: /processos/{numero} não existe sem o valor. Por isso a especificação exige required: true para in: path. Os demais campos estão coerentes: openapi: 3.2.0 informa a versão da Especificação OpenAPI, e info.version: 2.4.0, a versão do documento que descreve a API, valor livre definido pela equipe.",
+          "versaoInvertidaFalsa": "o documento está correto, pois parâmetros com in: path podem ser opcionais, e o campo openapi deve repetir a versão informada em info.version."
+        },
+        {
+          "id": "opt-4",
+          "texto": "há erro na estrutura, pois toda descrição OpenAPI precisa conter, obrigatoriamente e ao mesmo tempo, paths, components e webhooks.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desde a versão 3.1, os campos obrigatórios do objeto raiz são openapi e info, e deve haver ao menos um entre paths, components e webhooks, não os três ao mesmo tempo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "há erro no campo openapi, pois a versão 3.2.0 não existe e a especificação só admite os valores 3.0 e 3.1.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A versão 3.2.0 da especificação foi publicada em setembro de 2025, com a revisão 3.2.1 em 2026. O campo openapi traz o número da versão da especificação usada, no formato major.minor.patch."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde openapi (versão da especificação) com info.version (versão do documento) e trata parâmetro de caminho como opcional. Em in: path, required: true é obrigatório.",
+      "resumoFlashcard": {
+        "pergunta": "Na Especificação OpenAPI, qual a diferença entre os campos openapi e info.version, e qual a regra para parâmetros de caminho?",
+        "resposta": "openapi informa a versão da especificação usada (por exemplo, 3.2.0); info.version é a versão do próprio documento da API. Parâmetros com in: path devem ter required: true."
+      },
+      "conceitosChave": ["OpenAPI: estrutura do documento", "OpenAPI: parâmetros"],
+      "fundamentacao": "OpenAPI Specification 3.2.0 (2025) e 3.2.1 (2026): OpenAPI Object (campos openapi e info; exigência de paths, components ou webhooks), Info Object (version) e Parameter Object (required)."
+    },
+    {
+      "id": "dev-sis-020",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Dependências, empacotamento e publicação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma biblioteca JavaScript mantida pela equipe de TI do Tribunal está na versão 1.4.2 e é declarada no package.json de outros sistemas como \"^1.4.2\". A equipe corrigirá um defeito, depois incluirá uma função nova compatível e, mais tarde, removerá uma função antiga usada por terceiros. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um pacote npm de utilitários mantido pelo Tribunal está na versão 1.4.2 e é referenciado como \"^1.4.2\" por diversos sistemas. Estão previstas uma correção de defeito, a inclusão de uma função nova compatível e, depois, a remoção de uma função antiga usada por outros sistemas. Considere as afirmativas abaixo.",
+        "A biblioteca interna de validação de documentos fiscais, na versão 1.4.2, é declarada como dependência \"^1.4.2\" em vários projetos JavaScript. A equipe planeja, nesta ordem, corrigir um defeito, acrescentar uma função compatível e remover uma função pública obsoleta. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Pelo versionamento semântico, as três entregas devem receber, respectivamente, as versões 1.4.3, 1.5.0 e 2.0.0.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. SemVer 2.0.0: PATCH para correções compatíveis, MINOR para funcionalidades compatíveis (zerando o patch) e MAJOR para mudanças incompatíveis na API pública (zerando minor e patch)."
+        },
+        {
+          "texto": "A faixa ^1.4.2 aceita as versões 1.4.3 e 1.5.0 e também a 2.0.0, pois o acento circunflexo admite qualquer versão posterior à indicada.",
+          "verdadeira": false,
+          "explicacao": "Falsa. No npm, ^1.4.2 significa >=1.4.2 <2.0.0: aceita minor e patch, mas não a próxima major, justamente porque ela pode quebrar a compatibilidade."
+        },
+        {
+          "texto": "Se a dependência fosse declarada como ~1.4.2, a versão 1.4.3 seria aceita, mas a 1.5.0 não.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. ~1.4.2 significa >=1.4.2 <1.5.0: aceita 1.4.3, 1.4.9 etc., mas não 1.5.0."
+        },
+        {
+          "texto": "Uma vez publicada a versão 1.5.0, a equipe pode substituir o conteúdo do pacote mantendo o mesmo número de versão, desde que a mudança seja compatível.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O item 3 do SemVer determina que o conteúdo de uma versão liberada não seja modificado; mudanças exigem nova versão. O registro npm também impede reutilizar um número de versão já publicado."
+        },
+        {
+          "texto": "Com o package-lock.json versionado, o comando npm ci instala exatamente as versões registradas no lockfile e falha se ele estiver dessincronizado do package.json.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O npm ci exige o package-lock.json, remove a node_modules existente, instala exatamente o que o lockfile registra, não grava em package.json nem no lockfile e encerra com erro se os dois não estiverem sincronizados."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, falsa: ^1.4.2 equivale a >=1.4.2 <2.0.0, de modo que aceita 1.4.3 e 1.5.0, mas não 2.0.0. E omite a V, verdadeira, sobre o npm ci."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e IV são falsas. O circunflexo não aceita nova versão major, e o conteúdo de uma versão publicada não pode ser alterado: qualquer mudança exige nova versão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e V estão corretas, mas a III também: ~1.4.2 equivale a >=1.4.2 <1.5.0, aceitando só atualizações de patch. A resposta fica incompleta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: correção compatível incrementa o patch (1.4.3), funcionalidade compatível incrementa o minor e zera o patch (1.5.0), e remoção de API pública incrementa o major (2.0.0). III: o til limita a faixa a atualizações de patch. V: o npm ci exige o lockfile, instala exatamente o que ele registra e aborta se houver divergência com o package.json. II e IV são falsas.",
+          "versaoInvertidaFalsa": "Pelo versionamento semântico, a remoção de uma função usada por terceiros pode gerar apenas a versão 1.6.0, pois o incremento de major é reservado a reescritas completas do código."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, falsa: pelo SemVer, o conteúdo de uma versão publicada não pode ser modificado, e o registro npm não aceita republicar um número de versão já usado. E omite a I, verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca estende o circunflexo à próxima major e sugere que dá para corrigir uma versão já publicada. O ^ trava a major; o ~ trava a minor; e versão publicada é imutável.",
+      "resumoFlashcard": {
+        "pergunta": "O que significam ^1.4.2 e ~1.4.2 no npm, e quando incrementar cada parte da versão semântica?",
+        "resposta": "^1.4.2 aceita de 1.4.2 até antes de 2.0.0; ~1.4.2 aceita de 1.4.2 até antes de 1.5.0. Pelo SemVer, correção compatível incrementa o patch, funcionalidade compatível incrementa o minor e mudança incompatível na API pública incrementa o major."
+      },
+      "conceitosChave": ["SemVer: versionamento semântico", "Lockfiles: npm ci"],
+      "fundamentacao": "Semantic Versioning 2.0.0 (semver.org), itens 3, 6, 7 e 8; documentação do npm: faixas de versão com ^ e ~ (node-semver), comando npm ci e política de npm unpublish (números de versão não reutilizáveis)."
+    }
+  ]
+}

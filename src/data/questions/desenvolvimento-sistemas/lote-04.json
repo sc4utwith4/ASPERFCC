@@ -1,0 +1,577 @@
+{
+  "materiaSlug": "desenvolvimento-sistemas",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "dev-sis-031",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Algoritmos, lógica e estruturas de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um serviço de validação do Tribunal precisa verificar, milhões de vezes por dia, se o CNPJ informado em cada nota fiscal pertence ao cadastro de cerca de 2 milhões de jurisdicionados, carregado em memória. As consultas são apenas por igualdade, sem necessidade de ordenação nem de busca por faixa. A estrutura mais adequada e o custo típico de cada consulta são",
+      "variantesEnunciado": [
+        "Um robô de conferência precisa checar, a cada pagamento processado, se o CPF do favorecido consta de uma lista de cerca de 2 milhões de impedidos, mantida em memória. Não há necessidade de manter ordem nem de buscar por intervalos, só de testar pertinência. A estrutura mais adequada e o custo típico de cada consulta são",
+        "Uma rotina verifica, para cada documento recebido, se o código do órgão emissor pertence a um conjunto de aproximadamente 2 milhões de códigos carregados em memória, com consultas exclusivamente por igualdade. A estrutura mais adequada e o custo típico de cada consulta são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "lista encadeada ordenada, com busca binária em tempo O(log n).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Busca binária exige acesso direto ao elemento do meio, o que um vetor ordenado oferece em O(1), mas uma lista encadeada não: chegar ao meio custa O(n). Em lista encadeada, a busca é sequencial, O(n)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "vetor não ordenado, com busca sequencial em tempo O(1), pois os dados estão em memória.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Estar em memória não muda a complexidade: busca sequencial em vetor não ordenado custa O(n), pois pode ser preciso examinar todos os elementos. Com milhões de consultas diárias, isso seria inviável."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pilha, com consulta em tempo O(1), pois o elemento procurado fica sempre no topo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pilha só dá acesso ao topo (LIFO); localizar um valor qualquer exige desempilhar elementos, em O(n). Não é estrutura de consulta por chave."
+        },
+        {
+          "id": "opt-4",
+          "texto": "árvore binária de busca balanceada, com busca em tempo O(1) no pior caso, graças às rotações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Árvores balanceadas (AVL, rubro-negra) garantem busca O(log n) no pior caso, não O(1). Seriam boa escolha se houvesse necessidade de ordenação ou de buscas por faixa, o que o cenário descarta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "tabela hash, com consulta em tempo O(1) no caso médio, podendo degradar para O(n) se houver muitas colisões.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A tabela hash calcula, a partir da chave, a posição do elemento, permitindo inserção e consulta por igualdade em O(1) no caso médio, desde que a função de hash distribua bem as chaves e o fator de carga seja controlado (redimensionamento). No pior caso, com muitas colisões, a consulta pode chegar a O(n). Em Java, corresponde a HashSet e HashMap; em Python, a set e dict.",
+          "versaoInvertidaFalsa": "tabela hash, com consulta em tempo O(log n) no caso médio, pois a estrutura mantém as chaves ordenadas para permitir buscas por faixa."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui O(1) a estruturas que não o oferecem (vetor não ordenado, pilha, árvore) e sugere busca binária em lista encadeada. Para pertinência por igualdade, tabela hash: O(1) no caso médio e O(n) no pior caso.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a complexidade de busca em uma tabela hash e do que ela depende?",
+        "resposta": "É O(1) no caso médio, desde que a função de hash distribua bem as chaves e o fator de carga seja controlado. No pior caso, com muitas colisões, a busca pode degradar para O(n)."
+      },
+      "conceitosChave": ["Tabela hash", "Complexidade: notação Big-O"],
+      "fundamentacao": "Cormen et al., Algoritmos: Teoria e Prática (3ª ed.), cap. 11 (Tabelas de espalhamento); Javadoc de java.util.HashMap (desempenho em tempo constante para get e put e fator de carga)."
+    },
+    {
+      "id": "dev-sis-032",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Programação orientada a objetos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na revisão do módulo de protocolo do Tribunal, um técnico analisa o código Java: class Documento { String tipo() { return \"DOC\"; } } class Oficio extends Documento { String tipo() { return \"OFI\"; } } class Protocolo { String registrar(Documento d) { return \"D-\" + d.tipo(); } String registrar(Oficio o) { return \"O-\" + o.tipo(); } } Ao executar Documento x = new Oficio(); System.out.println(new Protocolo().registrar(x)); será impresso",
+      "variantesEnunciado": [
+        "Em um teste unitário do sistema de protocolo, um técnico encontrou class Documento { String tipo() { return \"DOC\"; } } class Oficio extends Documento { String tipo() { return \"OFI\"; } } class Protocolo { String registrar(Documento d) { return \"D-\" + d.tipo(); } String registrar(Oficio o) { return \"O-\" + o.tipo(); } } e a execução de Documento x = new Oficio(); System.out.println(new Protocolo().registrar(x)); A saída obtida é",
+        "Em Java, a classe Documento tem o método tipo(), que retorna \"DOC\", e a subclasse Oficio sobrescreve tipo() para retornar \"OFI\"; a classe Protocolo tem os métodos registrar(Documento d), que retorna \"D-\" + d.tipo(), e registrar(Oficio o), que retorna \"O-\" + o.tipo(). Executando Documento x = new Oficio(); System.out.println(new Protocolo().registrar(x)); obtém-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "O-OFI, pois o método sobrecarregado é escolhido em tempo de execução pelo tipo real do objeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em Java, a escolha entre métodos sobrecarregados é feita em tempo de compilação, com base no tipo declarado do argumento (Documento). Só a seleção da implementação de um método sobrescrito ocorre em tempo de execução."
+        },
+        {
+          "id": "opt-2",
+          "texto": "D-OFI, pois a sobrecarga é resolvida pelo tipo declarado da variável, e a sobrescrita, pelo tipo real do objeto.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Como x é declarado como Documento, o compilador seleciona registrar(Documento): a sobrecarga é resolvida estaticamente, pelo tipo declarado. Dentro dele, d.tipo() é chamada de método sobrescrito, e a JVM despacha para a implementação do tipo real do objeto, Oficio, que devolve \"OFI\". Resultado: D-OFI.",
+          "versaoInvertidaFalsa": "O-OFI, pois a sobrecarga é resolvida pelo tipo real do objeto em tempo de execução, assim como a sobrescrita."
+        },
+        {
+          "id": "opt-3",
+          "texto": "D-DOC, pois tanto a escolha do método sobrecarregado quanto a da versão de tipo() seguem o tipo declarado da variável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O prefixo D- está certo, mas tipo() é sobrescrito em Oficio, e a chamada de método de instância usa despacho dinâmico, que segue o tipo real do objeto. Por isso o resultado é OFI, não DOC."
+        },
+        {
+          "id": "opt-4",
+          "texto": "O-DOC, pois o compilador converte x para Oficio, mas tipo() executa a versão definida na superclasse.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há conversão implícita de Documento para Oficio (exigiria cast explícito), e a versão de tipo() executada é a de Oficio, não a da superclasse. A alternativa inverte os dois mecanismos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nada, pois ocorre erro de compilação por ambiguidade entre os dois métodos registrar da classe Protocolo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há ambiguidade: com argumento do tipo declarado Documento, só registrar(Documento) é aplicável. Ambiguidade surgiria em outros casos, como passar null a dois métodos cujos parâmetros têm tipos não relacionados entre si."
+        }
+      ],
+      "pegadinhaFCC": "Dois mecanismos no mesmo código: a sobrecarga é decidida na compilação pelo tipo declarado (Documento, logo registrar(Documento)), e a sobrescrita, na execução pelo tipo real (Oficio, logo \"OFI\"). Quem aplica o despacho dinâmico às duas escolhe O-OFI.",
+      "resumoFlashcard": {
+        "pergunta": "Em Java, a escolha entre métodos sobrecarregados usa o tipo declarado ou o tipo real do argumento?",
+        "resposta": "Usa o tipo declarado (estático), em tempo de compilação. Já a implementação de um método sobrescrito é escolhida em tempo de execução, pelo tipo real do objeto receptor (despacho dinâmico)."
+      },
+      "conceitosChave": ["POO: sobrecarga × sobrescrita", "POO: polimorfismo"],
+      "fundamentacao": "The Java Language Specification (Java SE 25), §15.12.2 (escolha do método em tempo de compilação, inclusive entre sobrecargas), §15.12.4.4 (localização do método a invocar em tempo de execução) e §8.4.8.1 (sobrescrita por métodos de instância)."
+    },
+    {
+      "id": "dev-sis-033",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JavaScript e Node.js",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico migra um serviço Node.js do Tribunal, escrito com require e module.exports, para módulos ECMAScript (ES modules). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na modernização de uma API Node.js que usa require e module.exports, a equipe decidiu adotar ES modules, com import e export. Considere as afirmativas abaixo.",
+        "Ao revisar um pacote Node.js em transição de CommonJS para módulos ECMAScript, um técnico registrou observações sobre o funcionamento dos dois sistemas de módulos. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Em ES modules, as declarações import são resolvidas dinamicamente durante a execução, linha a linha, exatamente como as chamadas a require do CommonJS.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O import estático é processado na fase de ligação, antes da execução, e precisa estar no nível superior do módulo; require é uma função avaliada em tempo de execução, que pode até estar dentro de condicionais."
+        },
+        {
+          "texto": "Com \"type\": \"module\" no package.json, os arquivos .js do pacote passam a ser tratados como ES modules, enquanto arquivos com extensão .cjs continuam sendo interpretados como CommonJS.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Pela documentação do Node.js, \"type\": \"module\" define .js como ES module no escopo do pacote; as extensões .mjs e .cjs fixam explicitamente ESM e CommonJS, respectivamente."
+        },
+        {
+          "texto": "Em um ES module, as variáveis __dirname e __filename e a função require continuam disponíveis automaticamente, sem necessidade de nenhuma alteração no código.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Em ES modules não existem require, exports, module.exports, __filename e __dirname; a documentação indica import.meta.url, import.meta.filename e import.meta.dirname como equivalentes."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é falsa: declarações import são estáticas, analisadas e vinculadas antes de o módulo executar, o que permite, por exemplo, eliminar código não usado (tree shaking). Para carregamento sob demanda existe a expressão import(), que retorna uma promise."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, falsa. Diferentemente do require, que é uma chamada de função comum avaliada em tempo de execução, o import declarativo tem estrutura estática e é resolvido antes da execução do módulo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa: __dirname, __filename e require não existem em ES modules. Usam-se import.meta.url (ou import.meta.dirname e import.meta.filename nas versões recentes do Node.js) e, se necessário, module.createRequire."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Só a II é verdadeira. O campo \"type\": \"module\" faz o Node.js tratar os arquivos .js do pacote como ES modules; .mjs é sempre ESM e .cjs é sempre CommonJS. A I é falsa porque os imports são estáticos e resolvidos antes da execução; a III é falsa porque __dirname, __filename e require não são injetados em ES modules.",
+          "versaoInvertidaFalsa": "Com \"type\": \"module\" no package.json, os arquivos .js continuam sendo CommonJS, e somente os arquivos com extensão .cjs passam a ser tratados como ES modules."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e III.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III são falsas. A migração para ES modules exige trocar require por import, module.exports por export e substituir __dirname e __filename por alternativas baseadas em import.meta."
+        }
+      ],
+      "pegadinhaFCC": "A banca trata import como require com outra sintaxe. ES modules têm estrutura estática, não recebem __dirname, __filename nem require, e o tipo do arquivo depende do campo \"type\" e das extensões .mjs e .cjs.",
+      "resumoFlashcard": {
+        "pergunta": "Como o Node.js decide se um arquivo é ES module ou CommonJS?",
+        "resposta": "Arquivos .mjs são sempre ES modules, e .cjs, sempre CommonJS. Arquivos .js seguem o campo \"type\" do package.json mais próximo: com \"module\", são ES modules; com \"commonjs\", CommonJS."
+      },
+      "conceitosChave": ["Node.js: ES modules × CommonJS"],
+      "fundamentacao": "Documentação do Node.js: 'Modules: Packages' (campo \"type\" e extensões .mjs e .cjs) e 'Modules: ECMAScript modules' (diferenças entre ES modules e CommonJS; import.meta)."
+    },
+    {
+      "id": "dev-sis-034",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Python para automação e back-end",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "A equipe de TI do Tribunal avalia frameworks Python para um novo back-end de APIs. A respeito de FastAPI, Flask e Django, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para expor uma API de consulta a dados de fiscalização, um técnico compara FastAPI, Flask e Django. Sobre esses frameworks Python, é correto afirmar que",
+        "Acerca dos frameworks web em Python mais usados no desenvolvimento de back-ends, como FastAPI, Flask e Django, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o FastAPI usa as anotações de tipo, com o Pydantic, para validar os dados das requisições e gera automaticamente documentação OpenAPI, servida por padrão em /docs e /redoc.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O FastAPI se apoia no Starlette (camada web, ASGI) e no Pydantic (camada de dados): as anotações de tipo dos parâmetros e modelos definem validação, conversão e serialização. A partir delas, o framework gera o esquema OpenAPI e serve a documentação interativa em /docs (Swagger UI) e /redoc (ReDoc).",
+          "versaoInvertidaFalsa": "o FastAPI exige que a documentação OpenAPI seja escrita manualmente em YAML, pois as anotações de tipo do Python não têm nenhum efeito na validação das requisições."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Flask é um framework completo, que inclui ORM, painel administrativo e sistema de migrações nativos, dispensando extensões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Flask é um microframework: oferece o essencial (roteamento, tratamento de requisições, templates com Jinja2) e delega a extensões recursos como ORM e migrações. O framework com baterias incluídas, com ORM, admin e migrações, é o Django."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Django é um microframework assíncrono que não possui ORM próprio, delegando o acesso a dados exclusivamente ao SQLAlchemy.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Django tem ORM próprio, sistema de migrações e painel administrativo, e segue o padrão MTV (Model-Template-View). Não é microframework; embora aceite views assíncronas e ASGI em versões recentes, sua marca é ser completo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o FastAPI ignora as anotações de tipo em tempo de execução, servindo-se delas apenas para o autocompletar do editor de código.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Diferentemente do Python puro, em que type hints não têm efeito em tempo de execução, o FastAPI lê as anotações para validar e converter os dados de entrada, devolvendo erro 422 quando a validação falha."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os três frameworks seguem exclusivamente a interface WSGI, motivo pelo qual nenhum deles admite funções assíncronas declaradas com async def.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O FastAPI é ASGI e aceita funções async def nativamente; o Django também oferece suporte a ASGI e a views assíncronas. O Flask é tradicionalmente WSGI, e mesmo ele aceita views async def a partir da versão 2.0."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as características dos três: Django é o completo (ORM, admin, migrações), Flask é o micro, e o FastAPI usa type hints com Pydantic para validar dados e gerar OpenAPI automaticamente.",
+      "resumoFlashcard": {
+        "pergunta": "O que distingue FastAPI, Flask e Django?",
+        "resposta": "FastAPI é ASGI, usa type hints e Pydantic para validar dados e gera documentação OpenAPI automática (/docs e /redoc). Flask é um microframework minimalista, ampliado por extensões. Django é completo, com ORM, painel administrativo e migrações."
+      },
+      "conceitosChave": ["Python: frameworks web"],
+      "fundamentacao": "Documentação oficial do FastAPI (README e tutorial: Starlette, Pydantic, /docs e /redoc); documentação do Flask ('Foreword' e suporte a async a partir da 2.0); documentação do Django (visão geral: ORM, admin, migrações e suporte a ASGI)."
+    },
+    {
+      "id": "dev-sis-035",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "APIs RESTful, GraphQL e WebSockets",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O painel de acompanhamento das sessões plenárias do Tribunal precisa receber em tempo real os votos registrados e permitir que o operador envie comandos ao servidor pela mesma conexão, com baixa sobrecarga por mensagem. A equipe propõe usar WebSocket (RFC 6455). Sobre essa solução, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um sistema de atendimento ao jurisdicionado terá um chat em que atendentes e usuários trocam mensagens em tempo real, nos dois sentidos, com baixa latência. A equipe escolheu WebSocket (RFC 6455). Sobre essa tecnologia, é correto afirmar que",
+        "Um painel de monitoramento de serviços de TI do Tribunal recebe alertas instantâneos do servidor e envia confirmações de leitura pela mesma conexão, usando WebSocket (RFC 6455). Sobre esse protocolo, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o WebSocket é unidirecional, do servidor para o cliente, e por isso os comandos do operador exigiriam requisições HTTP separadas, como nos Server-Sent Events.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve os Server-Sent Events (SSE), canal unidirecional do servidor para o cliente sobre HTTP. O WebSocket é bidirecional: cliente e servidor enviam mensagens a qualquer momento pela mesma conexão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a conexão é estabelecida diretamente sobre UDP, sem handshake, o que dispensa portas TCP e criptografia com TLS.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O WebSocket da RFC 6455 funciona sobre TCP, e a conexão começa com um handshake compatível com HTTP, o que permite usar as portas 80 e 443 e atravessar a infraestrutura web existente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a conexão começa com um handshake HTTP em que o cliente pede Upgrade: websocket e o servidor responde 101 Switching Protocols; depois, a comunicação é full-duplex na mesma conexão TCP.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O cliente envia um GET HTTP/1.1 com os cabeçalhos Upgrade: websocket, Connection: Upgrade e Sec-WebSocket-Key; o servidor aceita com 101 Switching Protocols e Sec-WebSocket-Accept. A partir daí, a conexão TCP passa a transportar frames WebSocket nos dois sentidos simultaneamente (full-duplex), com cabeçalhos pequenos por mensagem.",
+          "versaoInvertidaFalsa": "a conexão começa com um handshake HTTP em que o servidor responde 200 OK e, a partir daí, apenas o servidor pode enviar mensagens ao cliente pela conexão aberta."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cada mensagem trafega em uma nova requisição HTTP completa, com todos os cabeçalhos, o que torna o WebSocket equivalente ao long polling.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Após o handshake, as mensagens trafegam em frames leves sobre a conexão já aberta, sem repetir cabeçalhos HTTP. O long polling é que abre requisições sucessivas, com mais sobrecarga e latência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o esquema wss:// indica apenas a versão do protocolo, pois o WebSocket não admite criptografia com TLS.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ws:// e wss:// são os esquemas do protocolo: wss:// indica WebSocket sobre TLS (porta padrão 443), recomendado para proteger o tráfego; ws:// é a versão sem criptografia (porta padrão 80)."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde WebSocket com SSE (unidirecional) e com long polling (requisições repetidas). O WebSocket nasce de um upgrade HTTP (101 Switching Protocols) e é full-duplex sobre TCP; wss:// usa TLS.",
+      "resumoFlashcard": {
+        "pergunta": "Como uma conexão WebSocket é estabelecida e qual é sua característica principal?",
+        "resposta": "Por um handshake HTTP/1.1: o cliente envia Upgrade: websocket e Sec-WebSocket-Key, e o servidor responde 101 Switching Protocols. Depois, a mesma conexão TCP fica aberta para comunicação full-duplex, com frames de baixa sobrecarga."
+      },
+      "conceitosChave": ["WebSocket: handshake e full-duplex"],
+      "fundamentacao": "RFC 6455 (The WebSocket Protocol), seções 1.2 (visão geral do protocolo), 1.3 (handshake de abertura), 3 (URIs ws e wss) e 4 (handshake); WHATWG HTML Living Standard, seção Server-sent events."
+    },
+    {
+      "id": "dev-sis-036",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "OAuth 2.0, OpenID Connect e JWT",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Um serviço de integração do Tribunal, executado em servidor e sem interação com usuário, precisa chamar periodicamente a API de outro órgão, que exige tokens OAuth 2.0. A respeito do fluxo adequado e dos papéis do OAuth 2.0 (RFC 6749), é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma rotina noturna do Tribunal, sem usuário envolvido, precisa consultar a API de um órgão estadual protegida por OAuth 2.0 para importar dados de contratos. Quanto ao fluxo adequado e aos papéis definidos na RFC 6749, é correto afirmar que",
+        "Considere a comunicação entre dois serviços de back-end, sem participação de usuário, em que um deles consome uma API protegida por tokens OAuth 2.0. Quanto ao fluxo adequado e aos papéis definidos na RFC 6749, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "deve-se usar o fluxo implícito, e o serviço de integração atua como proprietário do recurso (resource owner).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fluxo implícito foi concebido para clientes no navegador, com usuário presente, e hoje é desaconselhado (RFC 9700). Além disso, o serviço é o cliente, não o proprietário do recurso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "deve-se usar o fluxo de código de autorização com PKCE, pois todo token OAuth exige o consentimento de um usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nem todo fluxo envolve usuário: no client credentials, o cliente age em nome próprio. O código de autorização com PKCE é o fluxo para quando há um usuário que se autentica e consente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deve-se usar o fluxo de credenciais de senha, enviando o usuário e a senha de um servidor público ao servidor de autorização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fluxo de senha (ROPC) expõe credenciais de usuário ao cliente e não deve ser usado, segundo a RFC 9700. E usar a conta de um servidor público em integração automatizada mistura identidade humana com a do sistema."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o servidor de recursos emite o token após validar o client_secret, e o servidor de autorização apenas hospeda a API protegida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os papéis: quem autentica o cliente e emite tokens é o servidor de autorização; o servidor de recursos hospeda a API protegida e aceita requisições com tokens válidos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deve-se usar o fluxo client credentials, no qual o serviço, como cliente confidencial, obtém do servidor de autorização um token para acessar o servidor de recursos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O client credentials (RFC 6749, seção 4.4) serve a cenários máquina a máquina: o cliente confidencial se autentica no endpoint de token (por segredo, chave privada ou mTLS) e recebe um access token, sem usuário envolvido. Os quatro papéis são: proprietário do recurso, cliente, servidor de autorização (emite tokens) e servidor de recursos (hospeda a API).",
+          "versaoInvertidaFalsa": "deve-se usar o fluxo client credentials, no qual o servidor de recursos autentica o serviço e emite o token, dispensando o servidor de autorização."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que todo OAuth envolve usuário e consentimento e inverte os papéis dos servidores. Sem usuário, o fluxo é client credentials; o servidor de autorização emite o token, e o servidor de recursos o aceita.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar o fluxo client credentials do OAuth 2.0 e quais são os papéis do protocolo?",
+        "resposta": "Em comunicação máquina a máquina, sem usuário: o cliente confidencial se autentica no servidor de autorização e recebe um access token. Os papéis são proprietário do recurso, cliente, servidor de autorização e servidor de recursos."
+      },
+      "conceitosChave": ["OAuth 2.0: client credentials", "OAuth 2.0: papéis"],
+      "fundamentacao": "RFC 6749 (OAuth 2.0), seções 1.1 (papéis), 2.1 (tipos de cliente) e 4.4 (Client Credentials Grant); RFC 9700 (OAuth 2.0 Security BCP), seções 2.1.2 e 2.4."
+    },
+    {
+      "id": "dev-sis-037",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "HTML5, CSS3 e TypeScript",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na adoção de TypeScript no front-end do sistema de prestação de contas, com o modo strict habilitado, a equipe discutiu recursos de tipagem. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico prepara um guia de boas práticas para o uso de TypeScript, com strict habilitado, nos sistemas web do Tribunal. Considere as afirmativas abaixo.",
+        "Na migração de um módulo JavaScript para TypeScript, compilado com a opção strict, surgiram dúvidas sobre inferência e declaração de tipos. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "As anotações de tipo do TypeScript são preservadas no JavaScript gerado e verificadas pelo navegador em tempo de execução, que rejeita valores de tipo incorreto.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O compilador remove as anotações ao gerar JavaScript (apagamento de tipos); validações em tempo de execução exigem código explícito ou bibliotecas próprias."
+        },
+        {
+          "texto": "Na declaração let total = 0;, o compilador infere o tipo number, e uma atribuição posterior de uma string a total gera erro de compilação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sem anotação, o tipo é inferido do valor inicial: total é number, e atribuir uma string a ele gera erro de compilação."
+        },
+        {
+          "texto": "Um valor do tipo unknown pode ter seus métodos chamados livremente, sem nenhuma verificação prévia, assim como um valor do tipo any.",
+          "verdadeira": false,
+          "explicacao": "Falsa. unknown aceita qualquer valor, mas não permite operações sobre ele sem refinamento prévio do tipo (typeof, instanceof, type guards); any desliga a verificação."
+        },
+        {
+          "texto": "Interfaces de mesmo nome declaradas no mesmo escopo são mescladas (declaration merging), o que não ocorre com aliases criados com type, que, por outro lado, podem representar uniões como string | number.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Declarações repetidas de uma interface no mesmo escopo são combinadas (declaration merging). Um alias type não pode ser declarado duas vezes, mas pode nomear uniões, interseções, tuplas e tipos primitivos."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é falsa: os tipos do TypeScript são apagados na compilação e não existem no JavaScript executado. E a combinação omite a IV, verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. II: a inferência atribui number a total, e atribuir uma string depois é erro de compilação. IV: interfaces de mesmo nome se mesclam, enquanto um type não pode ser redeclarado, mas expressa uniões, tuplas e outros tipos compostos. I é falsa (os tipos são apagados no JavaScript gerado), e III também (unknown exige refinamento antes do uso).",
+          "versaoInvertidaFalsa": "Aliases criados com type de mesmo nome são mesclados automaticamente pelo compilador, ao passo que interfaces não podem ser estendidas nem redeclaradas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III são falsas. A verificação de tipos ocorre só na compilação, e unknown é a alternativa segura ao any justamente por obrigar a checagem antes de usar o valor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa: com unknown, o compilador exige refinar o tipo (typeof, instanceof, type guards) antes de chamar métodos ou acessar propriedades. E omite a II, verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e IV estão corretas, mas a III é falsa: tratar unknown como any anularia sua finalidade. Com any, a verificação é desligada; com unknown, ela é exigida."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao TypeScript verificação em tempo de execução e iguala unknown a any. Os tipos são apagados na compilação; unknown obriga a refinar o tipo; interface admite declaration merging, type não.",
+      "resumoFlashcard": {
+        "pergunta": "Quais as diferenças entre interface e type no TypeScript, e entre unknown e any?",
+        "resposta": "Interfaces de mesmo nome se mesclam (declaration merging) e são estendidas com extends; type não pode ser redeclarado, mas expressa uniões, tuplas e outros tipos compostos. unknown aceita qualquer valor, mas exige refinamento antes do uso; any desliga a verificação."
+      },
+      "conceitosChave": ["TypeScript: interface × type", "TypeScript: tipagem estática"],
+      "fundamentacao": "TypeScript Handbook (typescriptlang.org): 'Everyday Types' (inferência; diferenças entre type aliases e interfaces), 'Narrowing', 'Declaration Merging' e seção sobre o tipo unknown."
+    },
+    {
+      "id": "dev-sis-038",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Documentação de APIs (OpenAPI/Swagger)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito da Especificação OpenAPI (OAS) e de sua relação com o Swagger, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao padronizar a documentação das APIs internas do Tribunal, um técnico precisa explicar à equipe o que é a Especificação OpenAPI e qual sua relação com o Swagger. Sobre o tema, é correto afirmar que",
+        "Sobre a Especificação OpenAPI (OAS), hoje na série 3.x, e o termo Swagger, ainda muito usado no mercado, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "OpenAPI é o nome de uma ferramenta comercial de testes de carga, e Swagger é a especificação oficial mantida pelo W3C para descrever APIs.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os nomes. OpenAPI é a especificação, mantida pela OpenAPI Initiative (projeto da Linux Foundation), não pelo W3C. Swagger, nome original da especificação, hoje designa um conjunto de ferramentas, como Swagger UI, Swagger Editor e Swagger Codegen."
+        },
+        {
+          "id": "opt-2",
+          "texto": "uma descrição OpenAPI só pode ser escrita em XML, validada por um XSD publicado pela OpenAPI Initiative.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descrições OpenAPI são escritas em JSON ou YAML, formato que é superconjunto do JSON. Os Schema Objects usam o vocabulário do JSON Schema, não XSD."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a OpenAPI descreve apenas APIs GraphQL e gRPC, sendo inadequada para APIs HTTP no estilo REST.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A OpenAPI descreve APIs HTTP, como as APIs REST, com caminhos, operações, parâmetros, corpos de requisição e respostas. GraphQL e gRPC têm mecanismos próprios de definição (schema em SDL e Protocol Buffers)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a especificação, derivada do Swagger 2.0 doado à OpenAPI Initiative, descreve APIs HTTP independentemente de linguagem, em JSON ou YAML.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A OAS define uma interface padrão, independente de linguagem, para APIs HTTP, permitindo a humanos e máquinas entender o serviço sem acesso ao código-fonte. Ela deriva do Swagger 2.0, doado à OpenAPI Initiative em 2015; as descrições podem ser escritas em JSON ou YAML e alimentam ferramentas de documentação, geração de código e testes.",
+          "versaoInvertidaFalsa": "a especificação Swagger derivou da OpenAPI, e as descrições de API só podem ser escritas em XML validado por XSD."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a especificação exige que o código-fonte do servidor seja publicado junto com a descrição, para que os clientes entendam a API.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O propósito da especificação é justamente permitir entender e usar a API sem acesso ao código-fonte, a documentação adicional ou inspeção do tráfego de rede."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte especificação e ferramenta e atribui a OAS a outro organismo ou formato. OpenAPI é a especificação (OpenAPI Initiative), derivada do Swagger 2.0; Swagger hoje nomeia ferramentas; o formato é JSON ou YAML.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a relação entre OpenAPI e Swagger?",
+        "resposta": "A Especificação OpenAPI é o padrão, mantido pela OpenAPI Initiative, para descrever APIs HTTP em JSON ou YAML. Ela deriva do Swagger 2.0, doado à iniciativa em 2015; o nome Swagger permanece em ferramentas como Swagger UI e Swagger Editor."
+      },
+      "conceitosChave": ["OpenAPI: estrutura do documento", "OpenAPI × Swagger"],
+      "fundamentacao": "OpenAPI Specification 3.2.1 (2026), Introduction e Appendix A (Revision History: doação do Swagger 2.0 à OpenAPI Initiative em 2015); OpenAPI Initiative (openapis.org)."
+    },
+    {
+      "id": "dev-sis-039",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Dependências, empacotamento e publicação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A pipeline de implantação de um sistema do Tribunal constrói a imagem de container a partir de FROM python:3.14-slim. Em dois builds do mesmo commit, com semanas de intervalo, as imagens geradas tiveram bibliotecas de sistema diferentes, o que dificultou a auditoria do que foi implantado. Para garantir que todo build use exatamente a mesma imagem base, a medida adequada é",
+      "variantesEnunciado": [
+        "Duas compilações do mesmo commit de uma API do Tribunal, feitas em meses diferentes a partir de um Dockerfile com FROM python:3.14-slim, resultaram em imagens com pacotes de sistema distintos, o que prejudicou a rastreabilidade das implantações. Para garantir a mesma imagem base em todos os builds, a medida adequada é",
+        "A auditoria de TI do Tribunal constatou que imagens construídas a partir de FROM python:3.14-slim, para o mesmo código-fonte, variavam conforme a data do build. Para garantir que todo build use exatamente a mesma imagem base, a medida adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "referenciar a imagem base pelo digest (python:3.14-slim@sha256:…), que identifica o conteúdo e não muda, ao contrário da tag, que pode ser movida.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em registros de containers, a tag é um rótulo mutável: o mantenedor pode republicar python:3.14-slim com atualizações de segurança. O digest (hash sha256 do manifesto) identifica o conteúdo exato e não muda. Fixar a imagem pelo digest torna o build reprodutível e auditável; as atualizações passam a ser deliberadas, trocando o digest.",
+          "versaoInvertidaFalsa": "manter a referência pela tag, pois a tag identifica o conteúdo exato da imagem e nunca muda, ao contrário do digest, que é recalculado a cada download."
+        },
+        {
+          "id": "opt-2",
+          "texto": "trocar a referência para python:latest, tag que sempre aponta para a mesma imagem desde a sua publicação inicial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. latest é só uma tag convencional, também mutável, e costuma ser movida a cada nova versão. Usá-la aumenta a variação entre builds, em vez de eliminá-la."
+        },
+        {
+          "id": "opt-3",
+          "texto": "manter a tag atual, pois tags de imagens de container são imutáveis por definição da especificação OCI, e o registro rejeita republicações com a mesma tag.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tags não são imutáveis: podem ser reatribuídas a outro manifesto. Alguns registros oferecem imutabilidade de tags como configuração opcional, mas isso não é garantia geral; o que identifica o conteúdo de forma imutável é o digest."
+        },
+        {
+          "id": "opt-4",
+          "texto": "executar pip freeze dentro do container, o que fixa também as bibliotecas de sistema operacional da imagem base.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. pip freeze registra apenas as versões dos pacotes Python instalados; não controla as bibliotecas do sistema operacional que vêm na imagem base, as quais mudam quando a tag é atualizada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "usar a opção --no-cache no build, que obriga o registro a devolver sempre a primeira versão publicada da tag.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. --no-cache apenas desativa o reaproveitamento de camadas do cache local de build. Não fixa a versão da imagem base; combinada com a obtenção da tag mais recente, pode até trazer uma imagem mais nova."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta a tag, inclusive latest, como imutável. Tag é rótulo móvel; o digest sha256 identifica o conteúdo exato. Para builds reprodutíveis, fixe a imagem pelo digest.",
+      "resumoFlashcard": {
+        "pergunta": "Por que fixar imagens de container pelo digest em vez da tag?",
+        "resposta": "Porque a tag é um rótulo mutável, que o mantenedor pode apontar para nova imagem, enquanto o digest (hash sha256 do manifesto) identifica o conteúdo exato e não muda. Fixar pelo digest torna os builds reprodutíveis e auditáveis."
+      },
+      "conceitosChave": ["Publicação: imutabilidade de versões", "Imagens de container: tag × digest"],
+      "fundamentacao": "OCI Distribution Specification (referências a manifestos por tag e por digest); OCI Image Specification (descritores e digests); documentação do Docker, 'docker image pull' (pull por digest)."
+    },
+    {
+      "id": "dev-sis-040",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JSON e XML",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Em XML, o documento que segue as regras sintáticas da linguagem, como ter um único elemento raiz e todas as tags corretamente fechadas e aninhadas, é chamado ……. Para definir a estrutura e os tipos de dados permitidos em um documento, usa-se um ……, escrito ele próprio em XML. E, para evitar conflitos entre elementos de mesmo nome vindos de vocabulários diferentes, empregam-se …… declarados com o atributo xmlns. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na especificação técnica para o envio de dados de folha de pagamento ao Tribunal, registrou-se: o arquivo XML deve ser ……, isto é, ter raiz única e tags corretamente fechadas e aninhadas; deve obedecer ao ……, que define elementos e tipos e é escrito em XML; e deve usar …… declarados por xmlns para distinguir elementos homônimos de vocabulários diferentes. Preenchem, correta e respectivamente, as lacunas:",
+        "Sobre XML: chama-se …… o documento que cumpre as regras sintáticas, como raiz única e aninhamento correto das tags; o …… descreve a estrutura e os tipos de dados permitidos e é, ele mesmo, um documento XML; e os …… evitam ambiguidades entre elementos de mesmo nome provenientes de vocabulários distintos. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "válido − DTD − namespaces",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Válido é o documento bem formado que também obedece a um esquema; seguir apenas as regras sintáticas caracteriza o documento bem formado. E o DTD tem sintaxe própria, não é escrito em XML."
+        },
+        {
+          "id": "opt-2",
+          "texto": "válido − esquema XSD − prefixos de entidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna pede bem formado, não válido. E o recurso que evita conflito de nomes entre vocabulários é o namespace; referências a entidades (&lt;, &amp;) servem para representar caracteres especiais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "bem formado − esquema XSD − namespaces",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Documento bem formado é o que respeita a sintaxe XML: raiz única, tags fechadas e corretamente aninhadas, atributos entre aspas. O XSD (XML Schema) define elementos, atributos, tipos de dados e ocorrências e é escrito em XML. Namespaces, declarados com xmlns e associados a prefixos, qualificam os nomes e evitam colisões entre vocabulários.",
+          "versaoInvertidaFalsa": "válido − esquema XSD − namespaces"
+        },
+        {
+          "id": "opt-4",
+          "texto": "bem formado − DTD − atributos CDATA",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas o DTD não é escrito em XML, e seções CDATA servem para incluir texto que não deve ser interpretado como marcação, não para separar vocabulários."
+        },
+        {
+          "id": "opt-5",
+          "texto": "consistente − XSLT − namespaces",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Consistente não é termo da especificação XML, e XSLT é a linguagem de transformação de documentos XML, não de definição de estrutura e tipos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca bem formado por válido e XSD por DTD. Sintaxe correta = bem formado; esquema escrito em XML = XSD (o DTD tem sintaxe própria); colisão de nomes se resolve com namespaces.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a função do XSD e dos namespaces em XML?",
+        "resposta": "O XSD (XML Schema), escrito em XML, define estrutura, tipos de dados e ocorrências dos elementos, permitindo validar documentos. Os namespaces, declarados com xmlns, qualificam nomes para evitar conflitos entre vocabulários diferentes."
+      },
+      "conceitosChave": ["XML: bem formado × válido", "XML: namespaces"],
+      "fundamentacao": "W3C, XML 1.0 (5ª ed.), seção 2.1 (documentos bem formados); W3C, XML Schema Definition Language (XSD) 1.1 Part 1: Structures; W3C, Namespaces in XML 1.0 (3ª ed.)."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "nota-dev-sis-01",
+  "materiaSlug": "desenvolvimento-sistemas",
+  "titulo": "Autenticação e autorização em APIs: OAuth 2.0, OIDC e JWT",
+  "subtopico": "OAuth 2.0, OpenID Connect e JWT",
+  "pistas": [
+    {
+      "pergunta": "Qual a diferença entre autenticação e autorização no contexto de APIs?",
+      "resposta": "Autenticação verifica quem é o usuário ou o sistema; autorização decide o que ele pode fazer. O OAuth 2.0 é um framework de autorização delegada; o OpenID Connect acrescenta a camada de identidade (autenticação)."
+    },
+    {
+      "pergunta": "Quais são os quatro papéis do OAuth 2.0?",
+      "resposta": "Proprietário do recurso (em geral, o usuário), cliente (a aplicação), servidor de autorização (autentica e emite tokens) e servidor de recursos (hospeda a API protegida e valida os tokens)."
+    },
+    {
+      "pergunta": "Qual fluxo usar em uma SPA ou em um aplicativo móvel, e por quê?",
+      "resposta": "Código de autorização com PKCE (método S256). Esses clientes são públicos e não guardam segredo; o PKCE impede que um código interceptado seja trocado por token. A RFC 9700 exige PKCE para clientes públicos."
+    },
+    {
+      "pergunta": "Quando usar o fluxo client credentials?",
+      "resposta": "Na comunicação máquina a máquina, sem usuário: o cliente confidencial se autentica no servidor de autorização e recebe um access token em nome próprio."
+    },
+    {
+      "pergunta": "Quais fluxos a RFC 9700 desaconselha ou veda?",
+      "resposta": "O fluxo implícito não deve ser usado (SHOULD NOT), e o fluxo de senha do proprietário do recurso (ROPC) não pode ser usado (MUST NOT). O rascunho do OAuth 2.1, ainda Internet-Draft, omite os dois."
+    },
+    {
+      "pergunta": "O que é o ID Token e quais claims são obrigatórias nele?",
+      "resposta": "É o JWT emitido pelo provedor OpenID Connect que prova a autenticação para o cliente. São obrigatórias iss, sub, aud, exp e iat; o nonce é obrigatório quando tiver sido enviado na requisição."
+    },
+    {
+      "pergunta": "Um JWT assinado (JWS) protege o sigilo das claims?",
+      "resposta": "Não. Cabeçalho e payload são apenas codificados em Base64URL, e qualquer um pode lê-los. A assinatura garante integridade e autenticidade; sigilo exige JWE."
+    },
+    {
+      "pergunta": "O que uma API deve validar ao receber um JWT?",
+      "resposta": "A assinatura com o algoritmo esperado (nunca alg none), as claims exp e nbf, o emissor (iss) e a audiência (aud), que deve identificar a própria API. A chave pública costuma vir do JWKS do emissor."
+    }
+  ],
+  "conteudoMarkdown": "## Autenticação × autorização\n\nAutenticar é confirmar **quem** está do outro lado; autorizar é decidir **o que** essa identidade pode fazer. Em APIs modernas, as duas coisas aparecem juntas, mas são tratadas por especificações diferentes: o ==OAuth 2.0 (RFC 6749) é um framework de autorização delegada==, e o ==OpenID Connect 1.0 (OIDC) é a camada de identidade construída sobre ele==. O JSON Web Token (JWT, RFC 7519) é o formato de token mais comum nesse ecossistema.\n\n> O OAuth 2.0 sozinho não diz quem é o usuário: ele entrega ao cliente um token de acesso para chamar uma API. Quem informa a identidade é o ID Token do OpenID Connect.\n\n## Papéis do OAuth 2.0\n\n- **Proprietário do recurso**: em geral, o usuário que autoriza o acesso aos seus dados.\n- **Cliente**: a aplicação que quer acessar a API (SPA, aplicativo móvel, back-end).\n- **Servidor de autorização**: autentica o usuário e o cliente e ==emite os tokens==.\n- **Servidor de recursos**: hospeda a API protegida e ==valida os tokens== recebidos.\n\nOs clientes podem ser **confidenciais**, capazes de guardar um segredo (um back-end em servidor), ou **públicos**, que não conseguem fazê-lo (código executado no navegador ou em aplicativo instalado no dispositivo do usuário).\n\n## Fluxos (grants) e quando usar cada um\n\n- **Código de autorização com PKCE**: o usuário se autentica no servidor de autorização, que devolve um código de uso único; o cliente troca o código por tokens no endpoint de token. O PKCE (RFC 7636) acrescenta um code_verifier aleatório, cujo hash (code_challenge, método S256) vai na requisição inicial; sem o verificador, um código interceptado não serve para nada. É o fluxo indicado para SPAs e aplicativos móveis e também para aplicações web com back-end.\n- **Client credentials**: comunicação máquina a máquina, sem usuário. O cliente confidencial se autentica (por segredo, chave privada ou mTLS) e recebe um access token em nome próprio.\n- **Refresh token**: permite obter novos access tokens sem nova interação do usuário. Para clientes públicos, a RFC 9700 exige que ele seja vinculado ao remetente ou rotacionado a cada uso.\n- **Implícito** e **senha do proprietário do recurso (ROPC)**: legados. A RFC 9700 (BCP 240, de janeiro de 2025) determina que o implícito não deve ser usado e que o ROPC não pode ser usado; o rascunho do OAuth 2.1, ainda Internet-Draft em 2026, simplesmente os remove.\n\nOutras regras da RFC 9700 que costumam ser cobradas: comparação **exata** das redirect URIs, PKCE obrigatório para clientes públicos e recomendado para confidenciais, e tokens de acesso com **audiência restrita**.\n\n## OpenID Connect 1.0\n\nO OIDC reaproveita os fluxos do OAuth 2.0 e acrescenta identidade. Pontos essenciais:\n\n- A requisição de autenticação precisa conter o valor **openid** no parâmetro scope; outros escopos padronizados (profile, email, address e phone) pedem conjuntos de claims.\n- O provedor devolve, além do access token, um **ID Token**, que é um JWT assinado (JWS), podendo também ser cifrado. Claims obrigatórias: ==iss, sub, aud, exp e iat==; o **nonce** é obrigatório quando enviado na requisição e mitiga ataques de repetição.\n- O cliente deve validar o ID Token: assinatura, emissor (iss), se aud contém o seu client_id, expiração (exp) e nonce.\n- O **endpoint UserInfo** é um recurso protegido: recebe o **access token** (não o ID Token) e devolve claims do usuário em JSON.\n- O documento de descoberta (/.well-known/openid-configuration) informa os endpoints e o jwks_uri, onde ficam as chaves públicas do provedor.\n\n> Regra prática: o ID Token serve para o cliente saber quem fez login; o access token serve para a API decidir o que pode ser feito.\n\n## JWT: estrutura, claims e armadilhas\n\nUm JWT assinado usa a serialização compacta do JWS (RFC 7515): **cabeçalho.payload.assinatura**, com cada parte codificada em Base64URL. O cabeçalho traz o algoritmo (alg) e, muitas vezes, o identificador da chave (kid); o payload traz as claims. ==Base64URL não é criptografia==: qualquer pessoa lê o conteúdo, por isso não se colocam segredos no payload. Quando é preciso sigilo, usa-se JWE (RFC 7516), cuja forma compacta tem cinco partes.\n\nClaims registradas (todas opcionais na RFC 7519, tornadas obrigatórias por perfis como o OIDC):\n\n- **iss**: emissor do token;\n- **sub**: sujeito, isto é, o identificador do usuário ou do cliente;\n- **aud**: destinatário ou destinatários a que o token se destina;\n- **exp**: instante de expiração; **nbf**: instante antes do qual o token não vale; **iat**: instante de emissão (todos em segundos desde 1970, UTC);\n- **jti**: identificador único, útil contra reutilização.\n\nAlgoritmos: **HS256** usa HMAC com segredo compartilhado (quem verifica também poderia assinar); **RS256** e **ES256** são assimétricos, com a chave privada no emissor e a chave pública nos verificadores, normalmente publicada em um JWKS.\n\nArmadilhas apontadas pela RFC 8725 (boas práticas para JWT):\n\n- aceitar **alg: none** em contexto que exige assinatura;\n- **confusão de algoritmo**: aceitar HS256 usando a chave pública RSA como segredo HMAC; a API deve fixar os algoritmos aceitos;\n- não validar **iss** e **aud**, o que permite usar em uma API um token emitido para outra;\n- ignorar **exp** e **nbf** ou adotar tolerâncias de relógio exageradas.\n\n## Checklist do técnico\n\n- [ ] Cliente público? Código de autorização com PKCE (S256), sem segredo no código.\n- [ ] Sem usuário? Client credentials, com cliente confidencial.\n- [ ] API que recebe JWT: verificar a assinatura com algoritmo fixo, exp e nbf, iss e aud.\n- [ ] Nada de dados sigilosos no payload de um JWS.\n- [ ] UserInfo se consulta com o access token; o ID Token fica com o cliente.",
+  "sintese": "O OAuth 2.0 autoriza um cliente a acessar uma API em nome de alguém ou de si mesmo; o OpenID Connect acrescenta a identidade por meio do ID Token. Com usuário em SPA ou aplicativo, usa-se código de autorização com PKCE; entre sistemas, client credentials; implícito e ROPC ficaram para trás com a RFC 9700. O JWT assinado é legível por qualquer um: a assinatura garante integridade, não sigilo. Quem recebe o token precisa fixar o algoritmo e validar exp, nbf, iss e aud.",
+  "fontes": [
+    "RFC 6749 — The OAuth 2.0 Authorization Framework",
+    "RFC 7636 — Proof Key for Code Exchange (PKCE)",
+    "RFC 9700 — OAuth 2.0 Security Best Current Practice (BCP 240, janeiro de 2025)",
+    "draft-ietf-oauth-v2-1 — The OAuth 2.1 Authorization Framework (Internet-Draft, revisão 16, setembro de 2026)",
+    "OpenID Connect Core 1.0 (com a errata 2) e OpenID Connect Discovery 1.0",
+    "RFC 7519 — JSON Web Token (JWT)",
+    "RFC 7515 — JSON Web Signature (JWS) e RFC 7516 — JSON Web Encryption (JWE)",
+    "RFC 8725 — JSON Web Token Best Current Practices"
+  ]
+}

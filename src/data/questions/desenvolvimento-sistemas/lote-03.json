@@ -1,0 +1,577 @@
+{
+  "materiaSlug": "desenvolvimento-sistemas",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "dev-sis-021",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Algoritmos, lógica e estruturas de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Sobre algoritmos clássicos de ordenação baseados em comparação, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico avalia qual algoritmo de ordenação usar para classificar, pela data de autuação, grandes lotes de processos, preservando a ordem original dos processos com a mesma data. Sobre algoritmos clássicos de ordenação por comparação, é correto afirmar que",
+        "Acerca da complexidade de tempo, da estabilidade e do uso de memória dos algoritmos clássicos de ordenação por comparação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o quicksort tem complexidade O(n log n) em todos os casos, inclusive quando o pivô escolhido é sempre o maior elemento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O quicksort é O(n log n) no caso médio, mas degrada para O(n²) quando as partições ficam desbalanceadas, como ao escolher sempre o maior (ou o menor) elemento como pivô em vetor já ordenado. Pivô aleatório ou mediana de três reduzem esse risco."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o bubble sort é o mais indicado para grandes volumes, pois realiza O(n log n) comparações no pior caso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O bubble sort é O(n²) no pior caso e no caso médio; só com o teste de parada antecipada chega a O(n) em vetor já ordenado. É didático, mas inadequado para grandes volumes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o heapsort é estável e exige memória auxiliar proporcional a n, assim como o merge sort.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O heapsort é O(n log n) em todos os casos, ordena no próprio vetor (memória auxiliar O(1)) e não é estável. A alternativa atribui ao heapsort características do merge sort."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o merge sort tem complexidade O(n log n) no pior caso e é estável, mas a versão usual em vetores requer memória auxiliar O(n).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O merge sort divide o vetor ao meio recursivamente e intercala as metades ordenadas, com O(n log n) em qualquer caso. A intercalação preserva a ordem relativa de chaves iguais (estabilidade), mas a implementação usual em vetores precisa de um vetor auxiliar de tamanho n.",
+          "versaoInvertidaFalsa": "o merge sort tem complexidade O(n²) no pior caso e não é estável, embora ordene o vetor sem nenhuma memória auxiliar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o insertion sort tem complexidade O(n²) em todos os casos, inclusive quando o vetor de entrada já está ordenado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O insertion sort é O(n²) no pior caso (vetor em ordem inversa), mas O(n) no melhor caso: com o vetor já ordenado, cada elemento é comparado uma vez e não se desloca. Por isso é eficiente em vetores pequenos ou quase ordenados."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao quicksort O(n log n) garantido e ao insertion sort O(n²) em qualquer caso. O quicksort tem pior caso O(n²); o insertion sort tem melhor caso O(n); o merge sort é O(n log n) sempre e estável, à custa de memória O(n).",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as complexidades e a estabilidade de merge sort, quicksort, heapsort e insertion sort?",
+        "resposta": "Merge sort: O(n log n) em todos os casos, estável, memória O(n). Quicksort: O(n log n) no caso médio e O(n²) no pior, não estável. Heapsort: O(n log n) sempre, no próprio vetor, não estável. Insertion sort: O(n²) no pior caso e O(n) no melhor, estável."
+      },
+      "conceitosChave": ["Algoritmos de ordenação", "Complexidade: notação Big-O"],
+      "fundamentacao": "Cormen et al., Algoritmos: Teoria e Prática (3ª ed.), cap. 2 (insertion sort e merge sort), cap. 6 (heapsort) e cap. 7 (quicksort); Ziviani, Projeto de Algoritmos, cap. 4 (Ordenação)."
+    },
+    {
+      "id": "dev-sis-022",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Programação orientada a objetos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na modelagem, em Java, dos tipos de documento recebidos pelo protocolo do Tribunal, discute-se o uso de interfaces e de classes abstratas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao projetar, em Java, a hierarquia de classes de um sistema de fiscalização de obras públicas, a equipe avaliou quando usar interfaces e quando usar classes abstratas. Considere as afirmativas abaixo.",
+        "Em uma revisão de código Java de um módulo de prestação de contas, foram levantadas questões sobre interfaces e classes abstratas. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Uma classe abstrata não pode ter construtores nem atributos de instância, servindo apenas para declarar métodos abstratos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Uma classe abstrata pode declarar construtores, atributos de instância e métodos concretos; a restrição é não poder ser instanciada com new, podendo conter métodos abstratos."
+        },
+        {
+          "texto": "Uma classe pode implementar várias interfaces, mas pode estender diretamente apenas uma classe, seja ela abstrata ou concreta.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Em Java, a cláusula extends de uma classe admite uma única superclasse, enquanto a cláusula implements admite várias interfaces."
+        },
+        {
+          "texto": "Desde o Java 8, interfaces podem conter métodos default, com implementação, e métodos estáticos; os campos declarados em uma interface são implicitamente public, static e final.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Java 8 introduziu métodos default e static em interfaces; os campos de interface são implicitamente public static final, isto é, constantes."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é a única falsa: classes abstratas podem ter construtores (chamados pelas subclasses via super) e atributos de instância, além de métodos concretos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, falsa, e omite a III, verdadeira. A possibilidade de ter estado e construtores é justamente uma diferença da classe abstrata em relação à interface."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. II: Java admite herança simples de classes e implementação múltipla de interfaces. III: desde o Java 8, interfaces aceitam métodos default e static (e, desde o Java 9, métodos privados), e seus campos são constantes implícitas (public static final). A I é falsa: a classe abstrata pode ter construtores, atributos e métodos concretos; só não pode ser instanciada diretamente.",
+          "versaoInvertidaFalsa": "Uma classe Java pode estender várias classes abstratas, mas pode implementar apenas uma interface, pois interfaces não admitem métodos com implementação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a II também: a restrição de estender uma única classe, com a possibilidade de implementar várias interfaces, é regra da linguagem Java."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e III.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é falsa. Classe abstrata não é mera lista de assinaturas: pode ter construtor, estado e implementação parcial, cabendo às subclasses implementar os métodos abstratos."
+        }
+      ],
+      "pegadinhaFCC": "A banca reduz a classe abstrata a uma interface com outro nome. Classe abstrata pode ter estado, construtores e métodos concretos; interface admite implementação múltipla e, desde o Java 8, métodos default e static.",
+      "resumoFlashcard": {
+        "pergunta": "Quais as principais diferenças entre interface e classe abstrata em Java?",
+        "resposta": "Uma classe estende uma única classe (abstrata ou não), mas implementa várias interfaces. A classe abstrata pode ter construtores, atributos de instância e métodos concretos; a interface tem campos implicitamente public static final e, desde o Java 8, pode ter métodos default e static."
+      },
+      "conceitosChave": ["POO: interface × classe abstrata"],
+      "fundamentacao": "The Java Language Specification (Java SE 25), §8.1.1.1 (classes abstratas), §8.1.4 (superclasse), §8.1.5 (superinterfaces), §9.3 (campos de interface) e §9.4 (métodos de interface, inclusive default e static)."
+    },
+    {
+      "id": "dev-sis-023",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Programação funcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na revisão de um módulo JavaScript que calcula indicadores de auditoria, um técnico analisa duas funções: function maiores(lista) { return lista.sort((a, b) => b - a).slice(0, 3); } e function total(lista) { return lista.reduce((s, x) => s + x, 0); }. A equipe observou que, depois de chamar maiores(valores), a tabela que exibe valores aparece reordenada. Considerando os princípios da programação funcional, é correto concluir que",
+      "variantesEnunciado": [
+        "Um painel de fiscalização usa, em JavaScript, as funções function maiores(lista) { return lista.sort((a, b) => b - a).slice(0, 3); } e function total(lista) { return lista.reduce((s, x) => s + x, 0); }. Após a chamada maiores(valores), a tabela que exibe valores passou a aparecer em ordem decrescente. À luz da programação funcional, é correto concluir que",
+        "Considere, em JavaScript, function maiores(lista) { return lista.sort((a, b) => b - a).slice(0, 3); } e function total(lista) { return lista.reduce((s, x) => s + x, 0); }, e que, depois de maiores(valores), o array valores aparece reordenado onde é exibido. Segundo os princípios da programação funcional, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "maiores não é pura, pois sort altera o array recebido, um efeito colateral; total é pura, e convém ordenar uma cópia, como [...lista].sort(...) ou lista.toSorted(...).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Função pura depende só dos argumentos e não produz efeitos colaterais. Array.prototype.sort ordena o array no próprio lugar e devolve a mesma referência, então maiores altera o array do chamador: efeito colateral que quebra a pureza. total apenas lê os elementos e devolve a soma. Ordenar uma cópia (spread ou slice antes do sort) ou usar toSorted, do ES2023, preserva a imutabilidade.",
+          "versaoInvertidaFalsa": "maiores é pura, pois sort devolve uma cópia ordenada e preserva o array recebido; total não é pura, pois reduce acumula a soma alterando os elementos originais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ambas são puras, pois retornam valores calculados a partir dos argumentos; a reordenação decorre do uso de const na declaração de valores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Retornar um valor calculado não basta: a função também não pode alterar estado externo, e maiores altera o array recebido. Além disso, const impede reatribuir a variável, mas não impede que o array seja modificado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "total não é pura, pois reduce altera o array original ao acumular a soma; maiores é pura, pois slice devolve um novo array.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o diagnóstico. reduce não modifica o array original; apenas percorre os elementos acumulando um valor. O problema está em maiores: slice devolve novo array, mas é aplicado depois do sort, que já mutou o original."
+        },
+        {
+          "id": "opt-4",
+          "texto": "maiores não é pura apenas porque não é determinística, já que sort pode devolver ordens diferentes a cada chamada com a mesma entrada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com a mesma função de comparação e a mesma entrada, sort produz o mesmo resultado; o problema não é falta de determinismo, mas a mutação do argumento (efeito colateral)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma das duas é pura, pois toda função que recebe um array como argumento produz, necessariamente, efeito colateral sobre ele.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Receber um array não implica alterá-lo. total lê o array sem modificá-lo e é pura. O efeito colateral só existe quando a função muda o argumento ou outro estado externo, como em maiores."
+        }
+      ],
+      "pegadinhaFCC": "Dois objetos: identificar o efeito colateral escondido (sort muta o array, e o slice vem tarde demais) e não confundir const com imutabilidade. Função pura = mesmo resultado para a mesma entrada e nenhuma alteração de estado externo.",
+      "resumoFlashcard": {
+        "pergunta": "Por que uma função que chama sort() sobre o array recebido não é pura em JavaScript?",
+        "resposta": "Porque sort ordena o array no próprio lugar, alterando o objeto recebido do chamador, o que é um efeito colateral. Para manter a pureza, ordena-se uma cópia ([...arr].sort()) ou usa-se toSorted(), que devolve um novo array."
+      },
+      "conceitosChave": ["PF: funções puras", "PF: imutabilidade"],
+      "fundamentacao": "ECMAScript Language Specification (ECMA-262): Array.prototype.sort (ordenação no próprio array) e Array.prototype.toSorted (ES2023); MDN Web Docs, páginas desses métodos; conceito de função pura e transparência referencial."
+    },
+    {
+      "id": "dev-sis-024",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Java (conceitos básicos)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Em Java, int, double e boolean são tipos ……, que armazenam diretamente o valor e não podem receber null. Cada um deles tem uma classe ……, como Integer para int, e a conversão automática de int para Integer chama-se ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na revisão de uma classe Java do sistema de controle de multas, um técnico explicou: atributos int, double e boolean são de tipos ……, guardam o próprio valor e não admitem null; para cada um existe uma classe ……, como Integer para int; e a conversão automática de int para Integer denomina-se ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Em Java, tipos como int e boolean são chamados ……, pois armazenam diretamente valores e não aceitam null; as classes ……, como Integer e Boolean, os representam como objetos; e o compilador converte automaticamente int em Integer por meio do ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "por referência − abstrata − unboxing",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. int, double e boolean não são tipos por referência; armazenam o valor diretamente. Integer não é abstrata (é uma classe final e concreta), e unboxing é a conversão inversa, de Integer para int."
+        },
+        {
+          "id": "opt-2",
+          "texto": "primitivos − abstrata − casting",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas classes como Integer são wrappers (empacotadoras), não abstratas. Casting é a conversão explícita de tipo, como (int) 3.7, não a conversão automática entre primitivo e wrapper."
+        },
+        {
+          "id": "opt-3",
+          "texto": "genéricos − wrapper − autoboxing",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. int, double e boolean não são tipos genéricos; são primitivos. Aliás, genéricos em Java não aceitam primitivos como argumento de tipo (List<int> é inválido), daí a necessidade dos wrappers."
+        },
+        {
+          "id": "opt-4",
+          "texto": "primitivos − wrapper − unboxing",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Unboxing é o sentido inverso, de Integer para int. A conversão automática de int para Integer é o autoboxing, que ocorre, por exemplo, ao adicionar um int a uma List<Integer>."
+        },
+        {
+          "id": "opt-5",
+          "texto": "primitivos − wrapper − autoboxing",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Java tem oito tipos primitivos (byte, short, int, long, float, double, char e boolean), que guardam o valor diretamente e não aceitam null. Cada um tem uma classe wrapper (Byte, Short, Integer, Long, Float, Double, Character e Boolean). A conversão automática do primitivo para o wrapper é o autoboxing, e a inversa, o unboxing; fazer unboxing de null lança NullPointerException.",
+          "versaoInvertidaFalsa": "por referência − wrapper − autoboxing"
+        }
+      ],
+      "pegadinhaFCC": "A banca troca autoboxing por unboxing e chama os wrappers de classes abstratas. Autoboxing: do primitivo para o wrapper; unboxing: do wrapper para o primitivo, com risco de NullPointerException se o wrapper for null.",
+      "resumoFlashcard": {
+        "pergunta": "O que são autoboxing e unboxing em Java?",
+        "resposta": "Autoboxing é a conversão automática de um primitivo para sua classe wrapper (int para Integer); unboxing é o inverso (Integer para int). Fazer unboxing de uma referência null lança NullPointerException."
+      },
+      "conceitosChave": ["Java: primitivos e wrappers"],
+      "fundamentacao": "The Java Language Specification (Java SE 25), §4.2 (tipos e valores primitivos), §5.1.7 (conversão boxing) e §5.1.8 (conversão unboxing)."
+    },
+    {
+      "id": "dev-sis-025",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "React (front-end)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere o trecho de um componente React que recebe a prop processoId: const [dados, setDados] = useState(null); useEffect(() => { const c = new AbortController(); fetch('/api/processos/' + processoId, { signal: c.signal }).then(r => r.json()).then(setDados); return () => c.abort(); }, [processoId]); Sobre o comportamento desse useEffect, é correto afirmar que",
+      "variantesEnunciado": [
+        "No front-end React do sistema de acompanhamento processual, o componente Painel recebe a prop processoId e contém useEffect(() => { const c = new AbortController(); fetch('/api/processos/' + processoId, { signal: c.signal }).then(r => r.json()).then(setDados); return () => c.abort(); }, [processoId]); Sobre o comportamento desse efeito, é correto afirmar que",
+        "Analise o Hook usado em um componente React que recebe a prop processoId e guarda a resposta em um estado dados: useEffect(() => { const c = new AbortController(); fetch('/api/processos/' + processoId, { signal: c.signal }).then(r => r.json()).then(setDados); return () => c.abort(); }, [processoId]); Sobre esse efeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o efeito executa antes da primeira renderização, de forma síncrona, para que dados já esteja preenchido quando o JSX do componente for exibido na tela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os efeitos de useEffect rodam depois que o React confirma a renderização na tela, não antes. Por isso dados começa como null, e o componente deve tratar esse estado inicial (por exemplo, exibindo um aviso de carregamento)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o efeito executa após a renderização inicial e a cada mudança de processoId; antes de nova execução e na desmontagem, a função retornada cancela a requisição.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. useEffect executa a função de setup após a renderização e a reexecuta quando algum valor da lista de dependências muda, aqui processoId. Antes de reexecutar, e ao desmontar o componente, o React chama a função de limpeza retornada, que aborta a requisição anterior e evita que uma resposta atrasada sobrescreva os dados do processo atual (condição de corrida).",
+          "versaoInvertidaFalsa": "o efeito executa apenas uma vez, na montagem, mesmo que processoId mude; a função retornada só é chamada se a requisição falhar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "como a lista de dependências contém processoId, o efeito executa uma única vez, na montagem, e ignora as mudanças posteriores dessa prop.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Executar só na montagem é o comportamento da lista vazia []. Com [processoId], o efeito roda na montagem e novamente a cada mudança de processoId; sem a lista, rodaria após toda renderização."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a função retornada pelo efeito é executada logo após o disparo do fetch, cancelando sempre a requisição recém-criada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A limpeza não roda logo após o setup: é chamada antes da próxima execução do efeito (quando a dependência muda) e na desmontagem. No StrictMode, em desenvolvimento, o React faz um ciclo extra de setup e limpeza na montagem, justamente para revelar limpezas mal implementadas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "chamar setDados dentro do efeito é proibido pelas regras dos Hooks, que só admitem atualizar o estado em manipuladores de eventos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atualizar estado dentro de efeitos é permitido e comum, por exemplo ao receber dados da rede. As regras dos Hooks tratam de onde os Hooks são chamados (no nível superior de componentes ou de Hooks customizados, nunca em condições ou laços), não de onde o setter é usado."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde as três formas da lista de dependências e o momento da limpeza. [] = só na montagem; [dep] = montagem e mudanças de dep; sem lista = toda renderização; a limpeza roda antes da próxima execução e na desmontagem.",
+      "resumoFlashcard": {
+        "pergunta": "Quando o useEffect executa e quando roda sua função de limpeza?",
+        "resposta": "O setup roda após a renderização: só na montagem com [], a cada mudança das dependências com [dep] e após toda renderização sem lista. A limpeza retornada roda antes de cada nova execução e na desmontagem do componente."
+      },
+      "conceitosChave": ["React: useEffect"],
+      "fundamentacao": "Documentação oficial do React (react.dev): referência de useEffect (dependências e função de limpeza) e guias 'Synchronizing with Effects' e 'You Might Not Need an Effect'."
+    },
+    {
+      "id": "dev-sis-026",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Python para automação e back-end",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um script Python de automação lê os valores de empenhos de uma planilha e executa: valores = [1200, 350, 8000, 45, 990]; acima = [v * 2 for v in valores if v > 500]; print(acima, len(valores)). O resultado exibido é",
+      "variantesEnunciado": [
+        "Para gerar um relatório de despesas relevantes, um técnico escreveu em Python: valores = [1200, 350, 8000, 45, 990]; acima = [v * 2 for v in valores if v > 500]; print(acima, len(valores)). A saída do programa é",
+        "Considere o trecho Python usado em uma rotina de conferência de pagamentos: valores = [1200, 350, 8000, 45, 990]; acima = [v * 2 for v in valores if v > 500]; print(acima, len(valores)). Será exibido"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "[2400, 700, 16000, 90, 1980] 5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse seria o resultado sem a cláusula if v > 500. Na compreensão de lista, o if posicionado depois do for funciona como filtro, e 350 e 45 são descartados antes de aplicar a expressão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "[2400, 16000, 1980] 3, pois a compreensão remove de valores os itens filtrados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lista dobrada está certa, mas a compreensão cria uma lista nova e não altera valores, que continua com 5 elementos. Por isso len(valores) é 5."
+        },
+        {
+          "id": "opt-3",
+          "texto": "[1200, 8000, 990] 5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O filtro foi aplicado, mas faltou a expressão v * 2, que é avaliada para cada elemento que passa pela condição. O resultado traz os valores dobrados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "[2400, 16000, 1980] 5",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A compreensão percorre valores, mantém só os itens maiores que 500 (1200, 8000 e 990) e aplica v * 2 a cada um, gerando a nova lista [2400, 16000, 1980]. A lista original não é modificada, então len(valores) continua 5. É o equivalente conciso de um for com if e append.",
+          "versaoInvertidaFalsa": "[2400, 16000, 1980] 3, pois a compreensão de lista remove da lista original os elementos que não atendem à condição."
+        },
+        {
+          "id": "opt-5",
+          "texto": "um erro de sintaxe, pois a condição if deve preceder o for na compreensão de lista.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sintaxe [expressão for item in iterável if condição] é válida: o if de filtro vem depois do for. Antes do for só cabe uma expressão condicional completa (x if c else y), que transforma, mas não filtra, os itens."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a ordem dos elementos da compreensão (expressão, for, if de filtro) e a falsa ideia de que ela altera a lista original. O if depois do for filtra; a expressão é aplicada só aos itens que passam.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona [expr for x in lista if cond] em Python?",
+        "resposta": "Percorre a lista, mantém apenas os itens que satisfazem cond e aplica expr a cada um, produzindo uma nova lista. A lista original não é modificada."
+      },
+      "conceitosChave": ["Python: list comprehension"],
+      "fundamentacao": "Documentação do Python 3: Tutorial, seção 5.1.3 (List Comprehensions); Referência da Linguagem, seção 6.2.4 (Displays for lists, sets and dictionaries)."
+    },
+    {
+      "id": "dev-sis-027",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "APIs RESTful, GraphQL e WebSockets",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Uma API GraphQL foi adotada para alimentar o aplicativo móvel e o portal do Tribunal, que exibem conjuntos diferentes de campos dos mesmos processos. A respeito do GraphQL, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para atender ao portal web e a um aplicativo móvel que exibem quantidades diferentes de informações sobre os mesmos jurisdicionados, a equipe de TI avalia uma API GraphQL. A respeito do GraphQL, é correto afirmar que",
+        "Acerca do GraphQL, linguagem de consulta para APIs baseada em schema tipado e em operações de query, mutation e subscription, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cada tipo do schema ganha endpoint próprio, e o verbo HTTP usado define se a operação é query, mutation ou subscription.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O GraphQL costuma expor um único endpoint (por exemplo, /graphql), e o tipo de operação é declarado no próprio documento enviado (query, mutation ou subscription), não pelo verbo HTTP. Mapear verbos a recursos é característica do REST."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o servidor fixa o formato de cada resposta, e o cliente recebe sempre todos os campos do tipo consultado, o que elimina o over-fetching.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a proposta: no GraphQL, quem escolhe os campos da resposta é o cliente, por meio do conjunto de seleção. Receber sempre todos os campos é justamente o over-fetching que o GraphQL procura evitar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "subscriptions são consultas repetidas periodicamente pelo cliente (polling), dispensando qualquer conexão persistente com o servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Subscriptions são operações de longa duração em que o servidor envia resultados ao cliente quando ocorrem eventos; na prática, usam transporte persistente, como WebSocket. Polling é uma alternativa a elas, não sua definição."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o schema é opcional, já que os tipos são inferidos em tempo de execução a partir dos dados devolvidos pelos resolvers.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O schema, fortemente tipado, é a base do GraphQL: define tipos, campos e operações disponíveis, permite validar cada consulta antes da execução e oferece introspecção. Os resolvers implementam esse contrato; não o substituem."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o cliente seleciona na operação os campos que deseja, evitando over-fetching, e obtém dados relacionados numa só requisição, reduzindo o under-fetching.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No GraphQL, a resposta espelha a seleção de campos feita pelo cliente: o aplicativo móvel pede poucos campos, e o portal, mais, sem endpoints distintos. Isso evita o over-fetching (receber dados demais) e, por permitir navegar por relacionamentos na mesma operação, reduz o under-fetching (precisar de várias chamadas para montar uma tela).",
+          "versaoInvertidaFalsa": "o servidor determina quais campos cada resposta contém, e dados relacionados exigem uma requisição separada por recurso, como em endpoints REST tradicionais."
+        }
+      ],
+      "pegadinhaFCC": "A banca transporta conceitos de REST para o GraphQL (vários endpoints, verbo HTTP definindo a operação) e inverte quem escolhe os campos. No GraphQL, o cliente seleciona os campos, o schema é obrigatório e subscriptions são envios do servidor.",
+      "resumoFlashcard": {
+        "pergunta": "Como o GraphQL trata over-fetching e under-fetching?",
+        "resposta": "O cliente declara na operação exatamente os campos que quer, evitando receber dados demais (over-fetching), e pode buscar dados relacionados na mesma requisição, evitando várias chamadas (under-fetching). Tudo é validado contra um schema tipado."
+      },
+      "conceitosChave": ["GraphQL: operações", "GraphQL: over/under-fetching"],
+      "fundamentacao": "GraphQL Specification (spec.graphql.org): seções Overview, Language (Operations e Selection Sets) e Type System (Schema); graphql.org, guias 'Queries', 'Mutations' e 'Subscriptions'."
+    },
+    {
+      "id": "dev-sis-028",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "JSON e XML",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico recebeu de um órgão jurisdicionado o seguinte arquivo de configuração, que deveria ser JSON válido segundo a RFC 8259: { 'orgao': \"SEFAZ\", \"ativo\": true, \"limite\": 1500.50, \"tags\": [\"obras\", \"saude\",], } O arquivo é rejeitado pelo analisador porque",
+      "variantesEnunciado": [
+        "Na integração com um sistema municipal, chegou ao Tribunal o seguinte conteúdo, que deveria ser JSON conforme a RFC 8259: { 'orgao': \"SEFAZ\", \"ativo\": true, \"limite\": 1500.50, \"tags\": [\"obras\", \"saude\",], } O analisador JSON rejeita o conteúdo porque",
+        "O texto { 'orgao': \"SEFAZ\", \"ativo\": true, \"limite\": 1500.50, \"tags\": [\"obras\", \"saude\",], } foi enviado a uma API do Tribunal que exige JSON válido segundo a RFC 8259. Ele é rejeitado porque"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o valor true deveria estar entre aspas, já que JSON só admite strings e números como valores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. JSON tem os literais true, false e null, escritos sem aspas. Os tipos de valor são string, número, booleano, null, objeto e array."
+        },
+        {
+          "id": "opt-2",
+          "texto": "números decimais devem usar vírgula como separador, como em 1500,50.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Em JSON, o separador decimal é o ponto (1500.50). A vírgula separa membros de objetos e elementos de arrays, por isso não pode aparecer dentro de números."
+        },
+        {
+          "id": "opt-3",
+          "texto": "chaves e strings exigem aspas duplas, e não se admite vírgula após o último elemento de arrays e objetos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A RFC 8259 exige que nomes de membros e strings sejam delimitados por aspas duplas; 'orgao', com aspas simples, é inválido. A gramática também não admite vírgula final (trailing comma) depois do último elemento de um array ou do último membro de um objeto, como ocorre após \"saude\" e após o array.",
+          "versaoInvertidaFalsa": "chaves podem ser delimitadas por aspas simples ou duplas, e a vírgula após o último elemento de arrays e objetos é aceita pela RFC 8259."
+        },
+        {
+          "id": "opt-4",
+          "texto": "arrays não podem conter strings, apenas números, objetos ou valores booleanos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Arrays JSON aceitam qualquer valor JSON, inclusive strings, e podem até misturar tipos. O problema está nas aspas simples e nas vírgulas finais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "falta o comentário de cabeçalho que identifica a versão do formato JSON utilizada, exigido pela RFC 8259 na primeira linha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. JSON não tem comentários nem cabeçalho de versão: a gramática da RFC 8259 não prevê comentários, e incluir um tornaria o documento inválido."
+        }
+      ],
+      "pegadinhaFCC": "A banca aposta na familiaridade com objetos JavaScript, que aceitam aspas simples e vírgula final. JSON é mais restrito: só aspas duplas, sem vírgula final, sem comentários e com ponto como separador decimal.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as principais restrições sintáticas do JSON (RFC 8259)?",
+        "resposta": "Nomes e strings só com aspas duplas; sem vírgula após o último elemento; sem comentários; números com ponto decimal; valores limitados a string, número, true, false, null, objeto e array."
+      },
+      "conceitosChave": ["JSON: sintaxe (RFC 8259)"],
+      "fundamentacao": "RFC 8259 (The JavaScript Object Notation Data Interchange Format), seções 2 (gramática), 4 (objetos), 5 (arrays), 6 (números) e 7 (strings); ECMA-404."
+    },
+    {
+      "id": "dev-sis-029",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "OAuth 2.0, OpenID Connect e JWT",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal integrará seus sistemas internos a um provedor de identidade compatível com OpenID Connect 1.0, usando o fluxo de código de autorização. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico documenta a integração do portal do jurisdicionado com um provedor OpenID Connect 1.0, usando o fluxo de código de autorização. Considere as afirmativas abaixo.",
+        "Em um projeto de login único (SSO) para os sistemas do Tribunal, adotou-se o OpenID Connect 1.0 sobre o OAuth 2.0, com o fluxo de código de autorização. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A requisição de autenticação precisa conter o valor openid no parâmetro scope para ser uma requisição OpenID Connect.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Pela OIDC Core 1.0, requisições OpenID Connect devem conter o valor openid no parâmetro scope; sem ele, o comportamento não é especificado."
+        },
+        {
+          "texto": "O ID Token é um JWT que contém, entre outras, as claims iss, sub, aud, exp e iat, e o cliente deve verificar se aud contém o seu client_id.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O ID Token é um JWT com as claims obrigatórias iss, sub, aud, exp e iat; na validação, o cliente confere, entre outros pontos, o emissor, a assinatura, a expiração e se aud contém o seu client_id."
+        },
+        {
+          "texto": "O endpoint UserInfo é acessado com o ID Token e devolve as claims do usuário, obrigatoriamente, em um documento XML assinado.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O UserInfo é um recurso protegido acessado com o access token, enviado como bearer token. A resposta é JSON, podendo ser JWT assinado ou cifrado se o cliente assim tiver sido registrado; XML não é o formato previsto."
+        },
+        {
+          "texto": "O parâmetro nonce, quando enviado na requisição de autenticação, deve retornar no ID Token, e o cliente deve conferir se o valor coincide, o que ajuda a mitigar ataques de repetição (replay).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O nonce associa a sessão do cliente ao ID Token: se foi enviado, deve estar presente no token com o mesmo valor, o que mitiga ataques de repetição."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa: o UserInfo é acessado com o access token, não com o ID Token, e responde em JSON (ou em JWT assinado ou cifrado). E a combinação omite II e IV, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: o scope openid é o que caracteriza a requisição como OpenID Connect. II: o ID Token é sempre um JWT com iss, sub, aud, exp e iat obrigatórios, e o cliente deve conferir se aud contém o seu client_id. IV: o nonce enviado deve voltar no ID Token e ser comparado, mitigando replay. A III é falsa: o UserInfo recebe o access token como bearer e devolve JSON.",
+          "versaoInvertidaFalsa": "O ID Token é um token opaco, sem claims legíveis, que o cliente apenas repassa ao endpoint UserInfo para descobrir quem é o usuário, dispensando validar emissor e audiência."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa, e omite a I, verdadeira. Sem o scope openid, a requisição não é OpenID Connect, e o comportamento fica indefinido pela especificação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e IV estão corretas, mas a I também: o valor openid no scope é obrigatório nas requisições OpenID Connect. A resposta fica incompleta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa. O ID Token destina-se ao cliente, como prova da autenticação; o acesso ao endpoint UserInfo usa o access token, e a resposta padrão é um objeto JSON com as claims."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis dos tokens: o ID Token prova a autenticação para o cliente; o access token dá acesso a recursos, inclusive ao UserInfo. Atenção às claims obrigatórias do ID Token e à validação de aud e nonce.",
+      "resumoFlashcard": {
+        "pergunta": "Quais claims são obrigatórias no ID Token do OpenID Connect e o que o cliente deve validar?",
+        "resposta": "iss, sub, aud, exp e iat são obrigatórias, além do nonce, se enviado na requisição. O cliente valida a assinatura, o emissor (iss), se aud contém o seu client_id, a expiração (exp) e o nonce."
+      },
+      "conceitosChave": ["OIDC: ID token", "OIDC: UserInfo e scopes"],
+      "fundamentacao": "OpenID Connect Core 1.0 (com a errata 2): seções 2 (ID Token), 3.1.2.1 (requisição de autenticação, scope openid), 3.1.3.7 (validação do ID Token) e 5.3 (UserInfo Endpoint)."
+    },
+    {
+      "id": "dev-sis-030",
+      "materiaSlug": "desenvolvimento-sistemas",
+      "subtopico": "Git (controle de versão)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico está no meio de uma alteração ainda não commitada na branch feature/relatorios quando precisa corrigir, com urgência, um defeito na branch main. Ele quer guardar temporariamente as alterações, trocar de branch com a área de trabalho limpa e, depois da correção, recuperar o trabalho. A sequência de comandos adequada é",
+      "variantesEnunciado": [
+        "Durante a implementação, ainda não commitada, de um novo filtro na branch feature/relatorios, um desenvolvedor é acionado para corrigir uma falha crítica na main. Ele precisa guardar o trabalho em andamento sem commitá-lo, mudar de branch e retomá-lo após a correção. A sequência de comandos adequada é",
+        "Um técnico tem modificações locais não commitadas na branch feature/relatorios e precisa atender a uma correção urgente na main, retomando depois exatamente o ponto em que parou, sem criar commits provisórios. A sequência de comandos adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "git stash; git switch main; corrigir e commitar; git switch feature/relatorios; git stash pop.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. git stash guarda as alterações rastreadas ainda não commitadas (do índice e da área de trabalho) e deixa o diretório limpo, o que permite trocar de branch. Após a correção na main, de volta à feature/relatorios, git stash pop reaplica as alterações e remove a entrada da pilha (havendo conflito, a entrada é mantida). Arquivos não rastreados só entram com git stash -u.",
+          "versaoInvertidaFalsa": "git stash; git switch main; corrigir e commitar; git switch feature/relatorios; git stash drop, pois drop reaplica as alterações guardadas e mantém uma cópia na pilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "git reset --hard; git switch main; corrigir e commitar; git switch feature/relatorios; git reflog.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. git reset --hard descarta as alterações não commitadas do índice e da área de trabalho. O reflog registra movimentos de referências (commits), não alterações que nunca foram commitadas, de modo que o trabalho seria perdido."
+        },
+        {
+          "id": "opt-3",
+          "texto": "git stash; git switch main; corrigir e commitar; git switch feature/relatorios; git stash drop.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O início está correto, mas git stash drop apaga a entrada da pilha sem aplicá-la: o trabalho guardado seria descartado. Para recuperar, usa-se git stash pop ou git stash apply."
+        },
+        {
+          "id": "opt-4",
+          "texto": "git commit --amend; git switch main; corrigir e commitar; git switch feature/relatorios; git revert HEAD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. git commit --amend reescreve o último commit, misturando o trabalho incompleto a um commit existente, e git revert HEAD cria um novo commit que desfaz o último. A sequência não guarda temporariamente o trabalho e polui o histórico."
+        },
+        {
+          "id": "opt-5",
+          "texto": "git tag wip; git switch main; corrigir e commitar; git switch feature/relatorios; git tag -d wip.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tags apenas nomeiam commits existentes; não armazenam alterações não commitadas. Criar e remover a tag não preserva nada da área de trabalho."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca pop por drop e sugere reset --hard ou tag como forma de guardar trabalho. Só o stash guarda alterações não commitadas; pop reaplica e remove da pilha; apply reaplica e mantém; drop apenas descarta.",
+      "resumoFlashcard": {
+        "pergunta": "Para que serve o git stash e qual a diferença entre pop, apply e drop?",
+        "resposta": "git stash guarda temporariamente alterações não commitadas e limpa a área de trabalho. pop reaplica a última entrada e a remove da pilha; apply reaplica e a mantém; drop descarta a entrada sem aplicá-la."
+      },
+      "conceitosChave": ["Git: stash"],
+      "fundamentacao": "Documentação oficial do Git: git-stash (push, pop, apply, drop e opção -u) e git-switch; Pro Git (2ª ed.), seção 7.3 (Stashing e Cleaning)."
+    }
+  ]
+}

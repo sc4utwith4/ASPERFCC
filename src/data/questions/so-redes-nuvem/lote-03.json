@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "so-redes-nuvem",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "so-redes-021",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Windows e Linux: processos, memória e sistemas de arquivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico do Tribunal investiga dois incidentes. No primeiro, um servidor Linux com sistema de arquivos ext4 recusa a criação de novos arquivos com a mensagem 'No space left on device', embora o comando df -h mostre 40% dos blocos livres. No segundo, a cópia de uma imagem de disco de 6 GB para um pendrive não foi concluída. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma revisão de procedimentos de suporte, foram registrados dois problemas: um volume ext4 de servidor Linux acusa 'No space left on device' ao criar arquivos, apesar de df -h indicar 40% de espaço livre, e a cópia de um arquivo de 6 GB para um pendrive falhou. Considere as afirmativas abaixo.",
+        "Ao preparar a base de conhecimento da central de serviços do Tribunal, um analista descreveu dois chamados: falha de gravação com 'No space left on device' em um volume ext4 que ainda tinha 40% dos blocos livres e falha na cópia de uma imagem de 6 GB para um pendrive. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O inode armazena metadados do arquivo, como permissões, dono, tamanho, carimbos de tempo e ponteiros para os blocos de dados, mas não o nome, que fica na entrada de diretório.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O nome é apenas uma entrada de diretório que associa um texto a um número de inode; por isso um mesmo inode pode ter vários nomes (hard links). Os metadados e os ponteiros para os dados ficam no inode."
+        },
+        {
+          "texto": "O primeiro incidente é compatível com o esgotamento dos inodes do sistema de arquivos, situação que pode ser verificada com o comando df -i.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No ext4, a quantidade de inodes é definida na criação do sistema de arquivos. Muitos arquivos pequenos podem esgotá-los antes dos blocos, e o sistema passa a acusar falta de espaço; df -i mostra o uso de inodes."
+        },
+        {
+          "texto": "Um link físico (hard link) pode apontar para um arquivo localizado em outro sistema de arquivos, desde que ambos sejam do tipo ext4.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O hard link referencia um número de inode, que só tem sentido dentro do mesmo sistema de arquivos; por isso não atravessa partições, ainda que sejam do mesmo tipo. Para isso usa-se o link simbólico, que guarda um caminho."
+        },
+        {
+          "texto": "O segundo incidente é compatível com um pendrive formatado em FAT32, que limita cada arquivo a menos de 4 GiB; formatá-lo em exFAT resolveria o problema.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O FAT32 admite arquivos de até 4 GiB menos 1 byte, e 6 GB excedem esse limite. O exFAT, projetado para mídias removíveis, e o NTFS aceitam arquivos muito maiores."
+        },
+        {
+          "texto": "O journaling do ext4 e do NTFS registra as alterações de metadados para acelerar a recuperação da consistência após um desligamento abrupto e, por isso, dispensa cópias de segurança.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A primeira parte está correta, mas o journaling não substitui backup: não protege contra exclusão acidental, corrupção lógica, ransomware ou perda do dispositivo. Ele apenas evita verificações demoradas e inconsistências estruturais após falhas."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que é falsa: o journaling protege a consistência dos metadados após falhas, mas não substitui backup, pois não protege contra exclusão acidental, corrupção lógica ou perda do disco. E deixa de fora a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa: o hard link referencia um número de inode, que só vale dentro do mesmo sistema de arquivos, e por isso não atravessa partições, ainda que ambas sejam ext4. Também omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Está incompleta, pois omite a II, que é verdadeira. Com blocos livres e inodes esgotados, o sistema de arquivos não consegue criar novos arquivos e acusa falta de espaço, o que se confirma com df -i."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (o inode guarda metadados e ponteiros, mas não o nome), a II (o esgotamento de inodes produz 'No space left on device' com blocos livres, verificável com df -i) e a IV (o FAT32 limita arquivos a 4 GiB − 1 byte; exFAT ou NTFS aceitam arquivos maiores). A III é falsa porque hard links não cruzam sistemas de arquivos, e a V, porque journaling não substitui backup.",
+          "versaoInvertidaFalsa": "O inode armazena o nome do arquivo e seus metadados, enquanto a entrada de diretório guarda apenas os ponteiros para os blocos de dados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a I, a II e a IV, mas inclui a V. O journaling garante a recuperação rápida da consistência do sistema de arquivos, sem dispensar backups, que protegem contra perda de dados por exclusão, corrupção ou falha do dispositivo."
+        }
+      ],
+      "pegadinhaFCC": "Achar que falta de espaço só se refere a blocos (os inodes também se esgotam), que hard links cruzam sistemas de arquivos e que journaling substitui backup.",
+      "resumoFlashcard": {
+        "pergunta": "Por que um volume ext4 pode acusar 'No space left on device' com blocos livres?",
+        "resposta": "Porque cada arquivo consome um inode, e a quantidade de inodes do ext4 é definida na criação do sistema de arquivos. Muitos arquivos pequenos podem esgotá-los antes dos blocos; o diagnóstico é feito com df -i."
+      },
+      "conceitosChave": ["Sistemas de arquivos: inodes e journaling"],
+      "fundamentacao": "Documentação do kernel Linux, 'ext4 Data Structures and Algorithms' (inodes e journal); página de manual df(1), opção -i; página de manual link(2) (erro EXDEV entre sistemas de arquivos); Microsoft Learn, especificação do exFAT e limites do FAT32."
+    },
+    {
+      "id": "so-redes-022",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Shell Linux, PowerShell e automação por scripts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico do Tribunal começou a automatizar tarefas administrativas em servidores Windows com o PowerShell e reuniu algumas anotações sobre a linguagem. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar um roteiro de boas práticas para scripts de administração de servidores Windows, a equipe de TI de um órgão público reuniu afirmações sobre o PowerShell. Considere as afirmativas abaixo.",
+        "Durante a revisão de scripts PowerShell usados na central de serviços do Tribunal, um analista avaliou afirmações sobre a sintaxe e o funcionamento da linguagem. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O pipeline do PowerShell transmite apenas texto entre os comandos, razão pela qual a saída de Get-Process precisa ser tratada com expressões regulares para extrair a coluna de uso de CPU.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O pipeline do PowerShell transmite objetos .NET, com propriedades e métodos; para ordenar ou filtrar pela CPU, basta usar a propriedade correspondente, por exemplo com Sort-Object CPU. Tratar a saída como texto é característica dos shells Unix tradicionais."
+        },
+        {
+          "texto": "No comando Get-Service | Where-Object { $_.Status -eq 'Stopped' }, a variável $_ representa o objeto que está passando pelo pipeline naquele momento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. $_ (ou $PSItem) é a variável automática que contém o objeto atual do pipeline dentro de blocos de script como o do Where-Object. No exemplo, ela permite filtrar os serviços cuja propriedade Status é Stopped."
+        },
+        {
+          "texto": "Em PowerShell, a comparação 'maior que' é escrita com o operador >, como em if ($tentativas > 3), da mesma forma que em linguagens como C e Java.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Em PowerShell, > é o operador de redirecionamento: a expressão gravaria o valor em um arquivo chamado 3. Comparações usam operadores com hífen: -gt (maior que), -lt, -ge, -le, -eq e -ne."
+        },
+        {
+          "texto": "O parâmetro comum -WhatIf, aceito por cmdlets que alteram o sistema, como Remove-Item e Stop-Service, mostra o que seria feito sem executar a ação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. -WhatIf e -Confirm são parâmetros comuns dos cmdlets que dão suporte a ShouldProcess. O -WhatIf descreve o efeito do comando sem executá-lo, boa prática antes de exclusões ou paradas de serviço em massa."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a II (a variável $_ é o objeto atual do pipeline) e a IV (-WhatIf simula a ação sem executá-la). A I erra ao dizer que o pipeline transmite só texto, pois ele transmite objetos .NET, e a III erra ao usar > para comparação, já que esse símbolo redireciona a saída; o correto é -gt.",
+          "versaoInvertidaFalsa": "O parâmetro -WhatIf executa a ação imediatamente e, em seguida, exibe um relatório do que foi alterado, servindo como registro de auditoria."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: o pipeline do PowerShell transmite objetos, e não apenas texto (I), e a comparação 'maior que' usa -gt, pois > é redirecionamento (III)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a IV estão corretas, mas a I é falsa: a grande diferença do PowerShell em relação aos shells tradicionais é justamente o pipeline de objetos, que dispensa o tratamento da saída como texto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa: if ($tentativas > 3) não compara valores, e sim redireciona a saída para um arquivo chamado 3. Em PowerShell, usa-se o operador -gt."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III é falsa, e a alternativa deixa de fora a II, que descreve corretamente a variável automática $_ do pipeline."
+        }
+      ],
+      "pegadinhaFCC": "Transferir hábitos do Bash e de linguagens como C para o PowerShell: o pipeline é de objetos, e o símbolo > redireciona em vez de comparar (usa-se -gt).",
+      "resumoFlashcard": {
+        "pergunta": "Como se escreve 'maior que' em PowerShell e por que não usar >?",
+        "resposta": "Usa-se o operador -gt (e -lt, -ge, -le, -eq e -ne nas demais comparações). O símbolo > é redirecionamento: if ($x > 3) gravaria a saída em um arquivo chamado 3."
+      },
+      "conceitosChave": ["PowerShell: cmdlets e pipeline"],
+      "fundamentacao": "Microsoft Learn (PowerShell-Docs): about_Pipelines, about_Automatic_Variables ($_ e $PSItem), about_Comparison_Operators, about_Redirection e about_CommonParameters (-WhatIf e -Confirm)."
+    },
+    {
+      "id": "so-redes-023",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Active Directory e LDAP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No domínio do Tribunal, três GPOs configuram de forma conflitante o tempo de bloqueio de tela dos usuários: a GPO vinculada ao site da sede define 20 minutos; a vinculada ao domínio, 15 minutos; e a vinculada à OU Auditoria, onde estão as contas dos usuários, 10 minutos. Inicialmente não há links marcados como 'Impor' (Enforced) nem 'Bloquear herança'. Depois, o administrador marca a GPO do domínio como Impor e configura 'Bloquear herança' na OU Auditoria. Considerando o processamento padrão das políticas de grupo, o tempo efetivo para os usuários da OU Auditoria antes e depois dessas alterações é, respectivamente, de",
+      "variantesEnunciado": [
+        "Em um domínio Active Directory, três GPOs definem valores conflitantes para o bloqueio de tela dos usuários: a vinculada ao site, 20 minutos; a vinculada ao domínio, 15 minutos; e a vinculada à OU que contém as contas de uma unidade técnica, 10 minutos. Inicialmente não há 'Impor' nem 'Bloquear herança'. Depois, a GPO do domínio é marcada como Impor e a OU recebe 'Bloquear herança'. O tempo efetivo para esses usuários, antes e depois das alterações, é, respectivamente, de",
+        "Um técnico de controle externo audita as políticas de grupo de um órgão. Para os usuários da OU Fiscalização, há três GPOs conflitantes sobre o bloqueio de tela: a do site (20 minutos), a do domínio (15 minutos) e a da própria OU (10 minutos). Sem 'Impor' nem 'Bloquear herança', apura-se um valor; em seguida, a GPO do domínio é marcada como Impor e a OU recebe 'Bloquear herança'. O tempo efetivo, antes e depois dessas mudanças, é, respectivamente, de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "15 minutos e 10 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois momentos. Antes das alterações, a GPO da OU vence a do domínio por ser aplicada por último; depois, a marcação Impor faz a GPO do domínio prevalecer, mesmo com 'Bloquear herança' configurado na OU."
+        },
+        {
+          "id": "opt-2",
+          "texto": "20 minutos e 15 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A GPO do site não é a última a ser aplicada: a ordem é local, site, domínio e OU, e a OU, mais próxima do objeto, vence os conflitos. O segundo valor está correto, mas o primeiro não."
+        },
+        {
+          "id": "opt-3",
+          "texto": "10 minutos e 10 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Supõe que 'Bloquear herança' também barra as GPOs marcadas como Impor. Não barra: Impor (Enforced) tem precedência sobre o bloqueio de herança, e a configuração da GPO imposta vence a da OU."
+        },
+        {
+          "id": "opt-4",
+          "texto": "15 minutos e 15 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A GPO do domínio não prevalece desde o início: sem Impor, ela é sobrescrita pela GPO vinculada à OU, aplicada depois. Só após ser marcada como Impor ela passa a vencer o conflito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "10 minutos e 15 minutos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As GPOs são processadas na ordem LSDOU (local, site, domínio e OU), e, em conflito, prevalece a última aplicada, a mais próxima do objeto: inicialmente vale a da OU Auditoria (10 minutos). 'Bloquear herança' na OU barra as GPOs de níveis superiores (site e domínio), exceto as marcadas como Impor, que não podem ser bloqueadas e ainda prevalecem sobre as GPOs dos níveis inferiores. Depois das alterações vale a GPO do domínio (15 minutos), e a do site fica bloqueada.",
+          "versaoInvertidaFalsa": "10 minutos e 10 minutos, pois 'Bloquear herança' na OU impede a aplicação de todas as GPOs de níveis superiores, inclusive as marcadas como Impor."
+        }
+      ],
+      "pegadinhaFCC": "Supor que 'Bloquear herança' barra tudo o que vem de cima ou que a GPO do domínio vence por ser mais 'importante'. Pela ordem LSDOU vence a última aplicada (a da OU), mas a GPO marcada como Impor não pode ser bloqueada e prevalece sobre as inferiores.",
+      "resumoFlashcard": {
+        "pergunta": "Como interagem a ordem LSDOU, o 'Bloquear herança' e o 'Impor' nas GPOs?",
+        "resposta": "As GPOs são aplicadas na ordem local, site, domínio e OU, e a última vence os conflitos. 'Bloquear herança' em uma OU barra as GPOs superiores, exceto as marcadas como Impor, que não podem ser bloqueadas e prevalecem sobre as GPOs dos níveis inferiores."
+      },
+      "conceitosChave": ["AD: GPO e herança"],
+      "fundamentacao": "Microsoft Learn, documentação de Group Policy: ordem de processamento (local, site, domínio, unidade organizacional), herança, 'Block Inheritance' e 'Enforced' no Group Policy Management Console (GPMC)."
+    },
+    {
+      "id": "so-redes-024",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Virtualização e containers",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Em um host Linux que executa containers, os …… do kernel fazem com que cada container tenha sua própria visão de identificadores de processos, interfaces de rede e pontos de montagem, enquanto os …… limitam e contabilizam o uso de CPU, memória e E/S de cada grupo de processos. Como todos os containers compartilham o …… do hospedeiro, uma imagem construída para Linux não pode ser executada diretamente sobre um kernel …… sem uma camada de virtualização intermediária. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao documentar a plataforma de containers do Tribunal, um analista explicou que os …… isolam a visão que cada container tem de processos, rede e sistema de arquivos e que os …… impõem cotas de CPU e de memória. Explicou ainda que, por compartilharem o …… do hospedeiro, containers construídos para Linux não rodam nativamente sobre um kernel …… sem uma camada de virtualização. Preenchem, correta e respectivamente, as lacunas:",
+        "Containers Linux dependem de dois mecanismos do kernel: os ……, responsáveis pelo isolamento da visão de PIDs, interfaces de rede e montagens, e os ……, responsáveis por limitar CPU, memória e E/S. Por usarem o mesmo …… do sistema hospedeiro, imagens Linux exigem uma VM leve para rodar em hosts com kernel ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "cgroups − namespaces − kernel − Windows",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os papéis das duas primeiras lacunas estão trocados: são os namespaces que isolam a visão de processos, rede e montagens, e os cgroups que impõem limites de consumo de recursos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "namespaces − cgroups − hipervisor − Linux",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Containers não compartilham um hipervisor, e sim o kernel do sistema hospedeiro. E uma imagem Linux roda normalmente sobre kernel Linux; a restrição é executá-la diretamente sobre o kernel de outro sistema, como o Windows."
+        },
+        {
+          "id": "opt-3",
+          "texto": "namespaces − cgroups − kernel − Windows",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os namespaces isolam a visão de recursos (PID, rede, montagens, UTS, IPC, usuários), e os cgroups (control groups) limitam e contabilizam CPU, memória e E/S. Como o container usa o kernel do hospedeiro, uma imagem Linux precisa de um kernel Linux: no Windows, ela roda dentro de uma máquina virtual leve, como a usada pelo WSL 2 e pelo Docker Desktop.",
+          "versaoInvertidaFalsa": "Os cgroups dão a cada container sua própria visão de processos e de rede, enquanto os namespaces limitam o consumo de CPU e de memória."
+        },
+        {
+          "id": "opt-4",
+          "texto": "namespaces − SELinux − kernel − Windows",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SELinux é um mecanismo de controle de acesso obrigatório (MAC), útil para reforçar o isolamento de containers, mas não é ele que limita e contabiliza CPU, memória e E/S; essa função é dos cgroups."
+        },
+        {
+          "id": "opt-5",
+          "texto": "hipervisores − cgroups − firmware − Linux",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Containers não usam hipervisores para isolar processos nem compartilham o firmware: o isolamento vem dos namespaces do kernel, e o recurso compartilhado é o próprio kernel do hospedeiro."
+        }
+      ],
+      "pegadinhaFCC": "Trocar os papéis de namespaces (isolamento da visão) e cgroups (limites de recursos) e esquecer que o recurso compartilhado é o kernel, o que impede rodar imagem Linux nativamente sobre kernel Windows.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o papel dos namespaces e dos cgroups em containers Linux?",
+        "resposta": "Os namespaces isolam o que o processo enxerga (PIDs, rede, montagens, nome de host, usuários). Os cgroups limitam e contabilizam o uso de CPU, memória e E/S. Ambos são recursos do kernel compartilhado pelo hospedeiro."
+      },
+      "conceitosChave": ["Containers: namespaces e cgroups"],
+      "fundamentacao": "Páginas de manual namespaces(7) e cgroups(7) do Linux; documentação do WSL 2 e do Docker Desktop (execução de containers Linux no Windows por meio de VM leve)."
+    },
+    {
+      "id": "so-redes-025",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Arquitetura TCP/IP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Os servidores do Tribunal enviam seus registros de eventos a um coletor central de logs por syslog sobre UDP, na porta 514. Durante picos de carga, a equipe de segurança percebeu lacunas na sequência de eventos recebidos, embora os servidores de origem tenham registrado localmente todas as mensagens. A explicação técnica e uma medida adequada para reduzir o problema são, respectivamente,",
+      "variantesEnunciado": [
+        "Um órgão público centraliza os logs de firewalls e servidores em um coletor que recebe mensagens syslog por UDP, porta 514. Em horários de pico, a análise de incidentes revelou eventos ausentes no coletor, embora estivessem registrados nos equipamentos de origem. A explicação técnica e uma medida adequada são, respectivamente,",
+        "Na auditoria da trilha de registros de um sistema crítico, verificou-se que mensagens enviadas via syslog sobre UDP (porta 514) não chegavam ao coletor central em momentos de alto volume, embora os servidores as tivessem gerado. A explicação técnica para as perdas e uma medida adequada para mitigá-las são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o UDP retransmite as mensagens fora de ordem, e o coletor as descarta; deve-se aumentar a janela deslizante do UDP no coletor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O UDP não retransmite nem ordena mensagens e não possui janela deslizante: o controle de fluxo por janela é mecanismo do TCP. O problema é justamente a ausência dessas garantias."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o UDP não confirma a entrega nem retransmite datagramas perdidos; deve-se migrar o envio para syslog sobre TCP, de preferência com TLS.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O UDP é um transporte sem conexão: não há confirmação, retransmissão nem controle de fluxo, de modo que datagramas descartados em filas saturadas (na rede, no coletor ou nos buffers do sistema) simplesmente se perdem. O syslog sobre TCP oferece entrega confiável e ordenada, e o transporte sobre TLS (RFC 5425, porta 6514) acrescenta sigilo e autenticação, também desejáveis para registros de segurança.",
+          "versaoInvertidaFalsa": "o UDP garante a entrega por meio de confirmações e retransmissões, e as perdas indicam falha no coletor; deve-se manter o UDP e substituir o servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o TCP do coletor recusa conexões em excesso; deve-se trocar para UDP, que garante a entrega por meio do three-way handshake.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os protocolos: o three-way handshake e a entrega confiável são do TCP. O cenário já usa UDP, e a troca recomendada é no sentido contrário, para TCP."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a porta 514 é exclusiva do protocolo SNMP; deve-se mover o syslog para a porta 161, reservada aos registros de eventos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A porta UDP 514 é a tradicionalmente usada pelo syslog. O SNMP usa as portas 161 (consultas ao agente) e 162 (traps), e trocar de porta não acrescentaria confiabilidade ao transporte."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o UDP cifra as mensagens e o coletor não consegue decifrá-las nos picos; deve-se desabilitar a criptografia nativa do UDP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O UDP não oferece criptografia; ele apenas entrega datagramas, sem garantias. Para cifrar o syslog é preciso usar TLS (sobre TCP) ou DTLS, mecanismos externos ao UDP."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao UDP mecanismos do TCP (janela, retransmissão, handshake). O UDP não garante entrega; para logs de segurança, prefere-se TCP com TLS.",
+      "resumoFlashcard": {
+        "pergunta": "Por que mensagens syslog enviadas por UDP podem se perder e como mitigar o problema?",
+        "resposta": "Porque o UDP não confirma entrega, não retransmite e não controla fluxo; datagramas descartados em picos se perdem. A mitigação é usar syslog sobre TCP, de preferência com TLS (RFC 5425, porta 6514)."
+      },
+      "conceitosChave": ["TCP × UDP"],
+      "fundamentacao": "RFC 768 (UDP); RFC 9293 (TCP); RFC 5424 (protocolo syslog); RFC 5426 (syslog sobre UDP); RFC 6587 (syslog sobre TCP); RFC 5425 (syslog sobre TLS)."
+    },
+    {
+      "id": "so-redes-026",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Endereçamento IPv4 e IPv6",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere o endereço IPv6 2001:0db8:00a0:0000:0000:0000:0c00:0010, escrito por extenso. Uma representação abreviada válida desse mesmo endereço é",
+      "variantesEnunciado": [
+        "Ao documentar o plano de endereçamento IPv6 de um órgão público, um técnico precisa registrar de forma abreviada o endereço 2001:0db8:00a0:0000:0000:0000:0c00:0010. Uma representação abreviada válida desse endereço é",
+        "Em um laboratório de testes, a interface de um servidor recebeu o endereço 2001:0db8:00a0:0000:0000:0000:0c00:0010. Aplicando-se as regras de abreviação de endereços IPv6, uma forma válida de representá-lo é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "2001:db8:a0::c00:10",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Aplicam-se duas regras: omitir os zeros à esquerda de cada grupo (0db8 → db8, 00a0 → a0, 0c00 → c00, 0010 → 10) e substituir uma única sequência contínua de grupos nulos por '::' (os três grupos 0000). O resultado, 2001:db8:a0::c00:10, é também a forma recomendada pelo RFC 5952, com letras minúsculas e a maior sequência de zeros comprimida.",
+          "versaoInvertidaFalsa": "2001:db8:a::c:1, pois na abreviação IPv6 podem ser omitidos tanto os zeros à esquerda quanto os zeros à direita de cada grupo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "2001:db8:a::c:1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Foram removidos zeros à direita dos grupos (00a0 virou a, 0c00 virou c, 0010 virou 1). Só os zeros à esquerda podem ser omitidos; a forma apresentada corresponde a outro endereço, 2001:db8:a:0:0:0:c:1."
+        },
+        {
+          "id": "opt-3",
+          "texto": "2001:db8::a0:c00:10",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O '::' foi posicionado no lugar errado. Expandida, essa forma vira 2001:0db8:0000:0000:0000:00a0:0c00:0010, um endereço diferente, porque o grupo 00a0 passaria a ocupar a sexta posição."
+        },
+        {
+          "id": "opt-4",
+          "texto": "2001:db8:a00::c00:10",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ao abreviar 00a0, retiram-se os zeros à esquerda, o que resulta em a0. Escrever a00 representa o grupo 0a00, o que altera o endereço."
+        },
+        {
+          "id": "opt-5",
+          "texto": "2001:db8:a0::c00::10",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O '::' só pode aparecer uma vez no endereço; caso contrário, seria impossível saber quantos grupos nulos cada ocorrência representa. Além disso, não há zeros entre c00 e 10 que justificassem uma segunda compressão."
+        }
+      ],
+      "pegadinhaFCC": "Omitir zeros à direita, usar '::' mais de uma vez ou deslocá-lo para outra posição. Só os zeros à esquerda podem cair, e o '::' substitui uma única sequência de grupos nulos.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as regras de abreviação de endereços IPv6?",
+        "resposta": "Em cada grupo de 16 bits omitem-se os zeros à esquerda, e uma única sequência contínua de grupos nulos pode ser trocada por '::'. Pelo RFC 5952, comprime-se a maior sequência e usam-se letras minúsculas."
+      },
+      "conceitosChave": ["IPv6: notação e tipos de endereço"],
+      "fundamentacao": "RFC 4291 (IPv6 Addressing Architecture), seção 2.2; RFC 5952 (recomendação de representação textual de endereços IPv6); RFC 3849 (prefixo 2001:db8::/32 para documentação). Conferido com o módulo ipaddress do Python."
+    },
+    {
+      "id": "so-redes-027",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "HTTP/2, HTTP/3, HTTPS, SMTP, FTP e SSH",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Para administrar servidores Linux do Tribunal sem digitar senhas, um técnico gerou um par de chaves com o ssh-keygen. Na autenticação por chave pública do SSH, a chave …… deve permanecer somente no computador do técnico, enquanto a chave …… é copiada para o arquivo …… da conta de destino no servidor. Por padrão, o serviço SSH atende na porta TCP ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao configurar o acesso de um script de backup a um servidor remoto via SSH sem senha, o administrador gerou um par de chaves. A chave …… deve ficar apenas na máquina de origem; a chave …… é registrada no arquivo …… do usuário no servidor; e a conexão usa, por padrão, a porta TCP ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Na configuração da autenticação por chaves no SSH, mantém-se a chave …… em sigilo no cliente, instala-se a chave …… no arquivo …… da conta remota e conecta-se, por padrão, à porta TCP ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pública − privada − ~/.ssh/authorized_keys − 22",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão invertidas. Quem permanece secreta com o usuário é a chave privada; a pública pode ser distribuída e é ela que vai para o servidor. Copiar a chave privada para o servidor comprometeria o mecanismo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "privada − pública − ~/.ssh/known_hosts − 22",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O arquivo known_hosts, no cliente, guarda as chaves de host dos servidores já conectados, para detectar servidores falsos. As chaves públicas autorizadas a entrar em uma conta ficam em ~/.ssh/authorized_keys, no servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "privada − pública − ~/.ssh/authorized_keys − 23",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A porta 23 é a do Telnet, protocolo de acesso remoto sem criptografia que o SSH veio substituir. O SSH atende, por padrão, na porta TCP 22."
+        },
+        {
+          "id": "opt-4",
+          "texto": "privada − pública − ~/.ssh/authorized_keys − 22",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A chave privada fica com o usuário, de preferência protegida por senha, e nunca é copiada para o servidor; a pública é acrescentada a ~/.ssh/authorized_keys da conta de destino, por exemplo com ssh-copy-id. No logon, o cliente prova possuir a chave privada assinando dados da sessão, e o servidor confere a assinatura com a chave pública. O SSH usa a porta TCP 22 por padrão.",
+          "versaoInvertidaFalsa": "Na autenticação por chave pública do SSH, a chave pública permanece somente com o técnico, e a chave privada é copiada para o arquivo ~/.ssh/authorized_keys do servidor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "privada − pública − /etc/shadow − 21",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O /etc/shadow armazena os hashes de senha das contas locais e não guarda chaves SSH; a porta 21 é a de controle do FTP. A chave pública vai para ~/.ssh/authorized_keys, e o SSH usa a porta 22."
+        }
+      ],
+      "pegadinhaFCC": "Inverter as chaves privada e pública e confundir authorized_keys (no servidor, chaves autorizadas) com known_hosts (no cliente, chaves dos servidores conhecidos).",
+      "resumoFlashcard": {
+        "pergunta": "Onde ficam as chaves na autenticação por chave pública do SSH?",
+        "resposta": "A chave privada fica só no cliente, protegida por senha. A pública vai para ~/.ssh/authorized_keys da conta no servidor. O arquivo known_hosts, no cliente, guarda as chaves dos servidores para detectar falsificação."
+      },
+      "conceitosChave": ["SSH: autenticação por chaves"],
+      "fundamentacao": "RFC 4252 (SSH Authentication Protocol), seção 7, método 'publickey'; RFC 4253 (SSH Transport Layer Protocol); páginas de manual ssh-keygen(1) e sshd(8) do OpenSSH (formato do arquivo authorized_keys)."
+    },
+    {
+      "id": "so-redes-028",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "VPN, balanceamento de carga, proxies e firewalls",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Sobre os tipos de proxy usados em redes corporativas, é correto afirmar que",
+      "variantesEnunciado": [
+        "A equipe de infraestrutura de um órgão público pretende publicar o portal institucional por trás de um proxy e, separadamente, controlar a navegação dos servidores na internet. Sobre os tipos de proxy, é correto afirmar que",
+        "Ao revisar a arquitetura de acesso aos sistemas web do Tribunal, um técnico comparou o proxy direto (forward) e o proxy reverso. A esse respeito, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o proxy reverso atua em nome dos usuários internos, filtrando os sites que eles podem acessar na internet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem atua em nome dos usuários internos, controlando e registrando a navegação na internet, é o proxy direto (forward proxy). O proxy reverso representa os servidores perante os clientes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o proxy reverso fica à frente dos servidores e recebe as requisições dos clientes em nome deles, podendo terminar o TLS, fazer cache e balancear carga.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O proxy reverso é posicionado diante de um ou mais servidores e recebe as conexões dos clientes como se fosse o próprio serviço. Ele pode terminar o TLS, armazenar respostas em cache, comprimir conteúdo, distribuir a carga, aplicar regras de WAF e ocultar a topologia interna. O proxy direto, ao contrário, atua em nome dos clientes da rede interna.",
+          "versaoInvertidaFalsa": "o proxy reverso fica junto aos clientes da rede interna e encaminha suas requisições a sites externos, controlando e registrando a navegação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o proxy direto (forward) é instalado junto aos servidores web para ocultar sua topologia dos clientes externos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde ao proxy reverso. O proxy direto fica do lado dos clientes, que o utilizam, de forma explícita ou transparente, para alcançar destinos externos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o proxy direto e o proxy reverso diferem apenas no sistema operacional em que são instalados, e não na função.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A diferença é funcional: o direto representa os clientes perante destinos externos, e o reverso representa os servidores perante os clientes. Um mesmo software, como o Nginx ou o Squid, pode exercer uma ou outra função conforme a configuração."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o proxy reverso dispensa certificados digitais, pois o HTTPS é encerrado diretamente no navegador do cliente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quando o proxy reverso termina o TLS, é ele que apresenta o certificado do serviço ao navegador; por isso precisa do certificado e da chave privada correspondente. O tráfego até os servidores internos pode ser novamente cifrado."
+        }
+      ],
+      "pegadinhaFCC": "Inverter os papéis: o proxy direto representa os clientes (controle de navegação), e o reverso representa os servidores (TLS, cache, balanceamento, WAF).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre proxy direto e proxy reverso?",
+        "resposta": "O proxy direto atua em nome dos clientes internos ao acessar destinos externos (filtragem, cache, registro). O reverso fica à frente dos servidores e recebe as requisições em nome deles (terminação TLS, cache, balanceamento, WAF)."
+      },
+      "conceitosChave": ["Proxy direto × reverso"],
+      "fundamentacao": "RFC 9110 (HTTP Semantics), seção 3.7, 'Intermediaries' (proxy e gateway, também chamado de proxy reverso); documentação do Nginx (proxy reverso) e do Squid (proxy de cache)."
+    },
+    {
+      "id": "so-redes-029",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Nuvem: IaaS, PaaS, SaaS e serverless",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal contratou uma plataforma como serviço (PaaS) para hospedar um novo sistema de acompanhamento de deliberações, desenvolvido pela própria equipe de TI. Em reunião, discutiu-se a divisão de responsabilidades com o provedor. Segundo o modelo de responsabilidade compartilhada típico do PaaS, cabe ao Tribunal",
+      "variantesEnunciado": [
+        "Uma unidade técnica do Tribunal vai publicar um sistema próprio de consulta a processos em um serviço de nuvem do tipo PaaS. Segundo o modelo de responsabilidade compartilhada típico desse modelo de serviço, cabe ao Tribunal",
+        "Considere que um órgão público desenvolveu internamente uma aplicação web e a implantou em uma plataforma como serviço (PaaS) de um provedor de nuvem. Pelo modelo de responsabilidade compartilhada característico do PaaS, compete ao órgão"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplicar as atualizações de segurança do sistema operacional dos servidores que executam a plataforma.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No PaaS, o sistema operacional subjacente é gerenciado pelo provedor, inclusive a aplicação de patches. Atualizar o sistema operacional é responsabilidade do cliente no IaaS, em que ele administra as máquinas virtuais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "gerenciar o hipervisor e o hardware físico do datacenter, uma vez que a plataforma é dedicada ao contratante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Hardware físico e camada de virtualização são sempre responsabilidade do provedor, mesmo no IaaS. Ser cliente de uma plataforma não transfere ao contratante a gestão do datacenter."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apenas utilizar o sistema pronto, sem responsabilidade pelo código ou pelos dados, que passam ao provedor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Usar um sistema pronto, sem desenvolver código, caracteriza o SaaS. E nem no SaaS o cliente se livra da responsabilidade pelos dados e pelos acessos; no PaaS, além disso, o código é dele."
+        },
+        {
+          "id": "opt-4",
+          "texto": "instalar e manter o ambiente de execução e o middleware, como o servidor de aplicação e a versão da linguagem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ambiente de execução (runtime da linguagem, servidor de aplicação, middleware) é justamente o que a plataforma oferece como serviço, e sua manutenção cabe ao provedor. No IaaS, essas camadas ficariam com o cliente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "desenvolver e manter o código da aplicação, gerir os dados e controlar os acessos dos usuários ao sistema.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No PaaS, o provedor gerencia a infraestrutura física, a virtualização, o sistema operacional e o ambiente de execução (runtime e middleware), e o cliente cuida do que implanta: o código da aplicação, suas configurações, os dados e a gestão de identidades e acessos. A responsabilidade pelos dados e pelos acessos permanece com o cliente em qualquer modelo de serviço.",
+          "versaoInvertidaFalsa": "aplicar os patches do sistema operacional e manter o runtime da plataforma, enquanto os dados da aplicação e os acessos dos usuários passam a ser responsabilidade do provedor."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao cliente de PaaS tarefas do IaaS (patches do sistema operacional, runtime) ou supor que os dados passam a ser responsabilidade do provedor.",
+      "resumoFlashcard": {
+        "pergunta": "O que o cliente gerencia em IaaS, PaaS e SaaS?",
+        "resposta": "No IaaS, sistema operacional, middleware, runtime, aplicações e dados. No PaaS, a aplicação, suas configurações e os dados. No SaaS, os dados, os usuários e as configurações do serviço. Dados e acessos são sempre do cliente."
+      },
+      "conceitosChave": ["Nuvem: responsabilidade compartilhada"],
+      "fundamentacao": "NIST SP 800-145 (2011), seção 2, 'Service Models' (no PaaS, o consumidor controla as aplicações implantadas e, possivelmente, configurações do ambiente de hospedagem, mas não o sistema operacional nem a infraestrutura); modelos de responsabilidade compartilhada publicados pelos provedores de nuvem."
+    },
+    {
+      "id": "so-redes-030",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Escalabilidade, alta disponibilidade, nuvem híbrida e monitoramento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em computação em nuvem, a respeito de escalabilidade e elasticidade, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao planejar a migração do portal de serviços do Tribunal para a nuvem, a equipe discutiu como lidar com picos de acesso nos prazos de prestação de contas. Sobre escalabilidade e elasticidade, é correto afirmar que",
+        "Considere um sistema web hospedado em nuvem que recebe forte aumento de acessos em datas específicas e volta ao volume normal em seguida. Em relação às estratégias de escalabilidade e à elasticidade, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a escalabilidade vertical acrescenta novas instâncias atrás de um balanceador de carga, enquanto a horizontal amplia CPU e memória de uma mesma instância.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os conceitos estão invertidos: a vertical (scale up) amplia a capacidade de uma mesma máquina, com mais CPU ou memória, e a horizontal (scale out) acrescenta máquinas ou instâncias."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a elasticidade se refere apenas ao aumento de recursos nos picos, pois a redução após a queda da demanda é vedada pelo modelo de cobrança por uso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A elasticidade abrange a liberação de recursos quando a demanda cai, e é isso que permite pagar apenas pelo que se usa. Manter recursos ociosos após o pico contraria o modelo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a escalabilidade horizontal acrescenta instâncias e funciona melhor com aplicações sem estado, e a elasticidade ajusta recursos automaticamente para cima e para baixo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Escalar horizontalmente (scale out) é adicionar instâncias, com o tráfego distribuído por um balanceador; isso exige que a aplicação não guarde estado local de sessão, ou que o mantenha em serviço externo, como cache ou banco. A elasticidade, característica essencial no NIST SP 800-145, é a capacidade de provisionar e liberar recursos de forma rápida e, muitas vezes, automática, acompanhando a demanda nos dois sentidos.",
+          "versaoInvertidaFalsa": "a escalabilidade vertical acrescenta instâncias e funciona melhor com aplicações sem estado, e a elasticidade só permite ajustar os recursos para cima."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a escalabilidade horizontal não tem limite prático e, por isso, dispensa o uso de balanceadores de carga e de verificações periódicas de saúde das instâncias em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A escalabilidade horizontal depende justamente do balanceador para distribuir o tráfego e das verificações de saúde para retirar de rotação as instâncias com falha. Além disso, há limites práticos, como cotas e gargalos em componentes compartilhados, a exemplo do banco de dados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a escalabilidade vertical é a forma preferencial de alta disponibilidade, pois uma instância maior elimina o ponto único de falha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma instância maior continua sendo uma só: se falhar, o serviço cai. A escalabilidade vertical tem teto de hardware e costuma exigir reinicialização; alta disponibilidade pede redundância, em geral horizontal e distribuída entre zonas."
+        }
+      ],
+      "pegadinhaFCC": "Inverter vertical e horizontal e reduzir a elasticidade ao aumento de recursos. Escalar horizontalmente pede aplicações sem estado, e elasticidade é ajustar nos dois sentidos.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre escalabilidade vertical, escalabilidade horizontal e elasticidade?",
+        "resposta": "Vertical (scale up) é aumentar CPU e memória de uma instância; horizontal (scale out) é acrescentar instâncias atrás de um balanceador. Elasticidade é ajustar os recursos automaticamente para cima e para baixo, conforme a demanda."
+      },
+      "conceitosChave": ["Escalabilidade: vertical × horizontal"],
+      "fundamentacao": "NIST SP 800-145 (2011), seção 2, característica 'Rapid elasticity'; guias de arquitetura de provedores de nuvem (Well-Architected Framework) sobre escalabilidade horizontal e aplicações sem estado."
+    }
+  ]
+}

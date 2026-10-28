@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "so-redes-nuvem",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "so-redes-031",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Windows e Linux: processos, memória e sistemas de arquivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Em um servidor Linux, um processo de geração de relatórios deixou de responder. O comando …… lista os processos em execução com seus PIDs. Ao executar kill seguido apenas do PID, é enviado por padrão o sinal ……, que pede o encerramento e pode ser tratado pelo processo para finalizar de forma ordenada. Se o processo não terminar, o administrador pode enviar o sinal ……, de número 9, que não pode ser capturado nem ignorado. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na administração de um servidor Linux, para identificar o PID de um serviço travado, utiliza-se o comando ……. Em seguida, kill PID envia o sinal padrão ……, que solicita um encerramento ordenado e pode ser tratado pelo programa; persistindo o travamento, recorre-se ao sinal ……, de número 9, que o processo não consegue capturar nem ignorar. Preenchem, correta e respectivamente, as lacunas:",
+        "Um técnico do Tribunal precisa encerrar um processo que consome 100% de CPU em um servidor Linux. Ele localiza o PID com o comando ……, executa kill PID, que envia o sinal ……, e, como o processo não termina, usa kill -9, que envia o sinal ……, impossível de capturar ou ignorar. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ps aux − SIGKILL − SIGTERM",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os sinais estão invertidos: o padrão do kill é o SIGTERM (15), que pode ser tratado, e o SIGKILL é o sinal 9, que não pode ser capturado nem ignorado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ps aux − SIGHUP − SIGKILL",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SIGHUP (1) indica a desconexão do terminal e, por convenção, é usado por vários serviços para recarregar a configuração. O sinal enviado por padrão pelo kill é o SIGTERM."
+        },
+        {
+          "id": "opt-3",
+          "texto": "top − SIGINT − SIGSTOP",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O top de fato exibe os processos em tempo real, mas o SIGINT (2) é o sinal gerado pelo Ctrl+C, e não o padrão do kill. O SIGSTOP suspende o processo e também não pode ser capturado, mas não é o sinal 9 nem encerra o processo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "df -h − SIGTERM − SIGKILL",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O df -h mostra o espaço em disco dos sistemas de arquivos montados, e não os processos. Os sinais da alternativa estão corretos, mas a primeira lacuna, não."
+        },
+        {
+          "id": "opt-5",
+          "texto": "ps aux − SIGTERM − SIGKILL",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O ps aux lista todos os processos com PID, usuário e uso de CPU e memória. O kill sem opção envia o SIGTERM (15), que solicita o término e pode ser tratado pelo programa para liberar recursos e gravar dados pendentes. Se o processo não responder, usa-se o SIGKILL (9, kill -9), aplicado diretamente pelo kernel, sem chance de tratamento; por isso deve ser o último recurso.",
+          "versaoInvertidaFalsa": "O comando kill sem opção envia o sinal SIGKILL, que pode ser tratado pelo processo, enquanto o SIGTERM, de número 9, não pode ser capturado nem ignorado."
+        }
+      ],
+      "pegadinhaFCC": "Inverter o SIGTERM (15, padrão do kill, tratável) e o SIGKILL (9, não capturável) ou confundi-los com o SIGHUP e o SIGINT.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre SIGTERM e SIGKILL?",
+        "resposta": "O SIGTERM (15) é o padrão do kill: pede o encerramento e pode ser tratado pelo processo, que finaliza de forma ordenada. O SIGKILL (9) é aplicado pelo kernel, não pode ser capturado nem ignorado e deve ser o último recurso."
+      },
+      "conceitosChave": ["Linux: sinais e processos"],
+      "fundamentacao": "Páginas de manual signal(7), kill(1) e ps(1) do Linux; POSIX.1-2017 (IEEE Std 1003.1), definição dos sinais SIGTERM e SIGKILL."
+    },
+    {
+      "id": "so-redes-032",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Shell Linux, PowerShell e automação por scripts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um servidor Windows do Tribunal, a política de execução do PowerShell está definida como RemoteSigned. Um técnico escreveu localmente o script coleta.ps1, sem assinatura digital, e baixou da internet o script inventario.ps1, também sem assinatura e ainda não desbloqueado. Ao tentar executar os dois scripts, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um analista de infraestrutura configurou a política de execução RemoteSigned em um servidor Windows. Em seguida, testou dois scripts sem assinatura digital: um escrito por ele no próprio servidor (coleta.ps1) e outro baixado de um repositório na internet (inventario.ps1), ainda não desbloqueado. Sobre a execução desses scripts, é correto afirmar que",
+        "Considere um servidor Windows com a política de execução do PowerShell configurada como RemoteSigned, no qual existem dois scripts sem assinatura: coleta.ps1, criado localmente, e inventario.ps1, obtido por download da internet e mantido bloqueado. Ao executá-los, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ambos serão executados, pois a política RemoteSigned só exige assinatura de scripts executados por contas sem privilégio administrativo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A política RemoteSigned não distingue contas com ou sem privilégio administrativo: o critério é a origem do script (local ou baixado da internet) e a presença de assinatura confiável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "nenhum será executado, pois a política RemoteSigned exige assinatura de um editor confiável em todos os scripts, inclusive nos locais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exigir assinatura de todos os scripts, inclusive os locais, é a regra da política AllSigned. Na RemoteSigned, scripts escritos no próprio computador rodam sem assinatura."
+        },
+        {
+          "id": "opt-3",
+          "texto": "coleta.ps1 será executado, mas inventario.ps1 será bloqueado até ser assinado por editor confiável ou desbloqueado, por exemplo com Unblock-File.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na RemoteSigned, scripts criados no próprio computador rodam sem assinatura, mas scripts baixados da internet exigem assinatura de editor confiável, salvo se desbloqueados com Unblock-File depois de verificados. A documentação da Microsoft destaca que a política de execução não é fronteira de segurança, e sim uma camada de defesa em profundidade contra execuções acidentais.",
+          "versaoInvertidaFalsa": "inventario.ps1 será executado normalmente, pois a política RemoteSigned exige assinatura apenas dos scripts criados no próprio computador."
+        },
+        {
+          "id": "opt-4",
+          "texto": "inventario.ps1 será executado, mas coleta.ps1 será bloqueado, pois a política exige a assinatura dos scripts criados no próprio computador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a regra: na RemoteSigned, quem precisa de assinatura (ou de desbloqueio) é o script baixado da internet, e não o criado no próprio computador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "ambos serão bloqueados, já que a política de execução é a fronteira de segurança que impede qualquer forma de execução desse código.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Além de o script local poder ser executado, a Microsoft afirma que a política de execução não é fronteira de segurança: o conteúdo de um script pode, por exemplo, ser digitado diretamente no console. Ela evita execuções acidentais, mas não substitui controles de aplicativos, como o AppLocker."
+        }
+      ],
+      "pegadinhaFCC": "Confundir RemoteSigned com AllSigned e tratar a política de execução como fronteira de segurança. A RemoteSigned só exige assinatura (ou desbloqueio) de scripts vindos da internet.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona a política de execução RemoteSigned do PowerShell?",
+        "resposta": "Scripts criados no próprio computador rodam sem assinatura; scripts baixados da internet exigem assinatura de editor confiável ou desbloqueio (Unblock-File). A política evita execuções acidentais, mas não é fronteira de segurança."
+      },
+      "conceitosChave": ["PowerShell: política de execução"],
+      "fundamentacao": "Microsoft Learn (PowerShell-Docs), about_Execution_Policies: descrição das políticas AllSigned, Bypass, Default, RemoteSigned, Restricted, Undefined e Unrestricted e aviso de que a política não é fronteira de segurança; cmdlet Unblock-File."
+    },
+    {
+      "id": "so-redes-033",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Active Directory e LDAP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um sistema interno do Tribunal será integrado ao serviço de diretório por meio do protocolo LDAP para autenticar usuários. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao especificar a integração de uma aplicação web com o serviço de diretório de um órgão público via LDAP, a equipe de TI reuniu afirmações sobre o protocolo. Considere as afirmativas abaixo.",
+        "Em uma auditoria de sistemas, um técnico examinou a configuração LDAP usada por um sistema para autenticar usuários no diretório corporativo. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No nome distinto (DN) cn=Ana Souza,ou=Auditoria,dc=exemplo,dc=gov,dc=br, o componente mais à esquerda, cn=Ana Souza, é o nome distinto relativo (RDN) da entrada.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O DN identifica a entrada de forma única e é lido da esquerda (mais específico) para a direita (mais geral); o RDN é o primeiro componente, que distingue a entrada entre as irmãs do mesmo contêiner."
+        },
+        {
+          "texto": "A operação bind é usada para autenticar a sessão LDAP; no bind simples sem TLS, a senha trafega em claro, razão pela qual se recomenda o uso de LDAPS ou de StartTLS.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O bind autentica a conexão (bind simples com DN e senha, ou SASL). Sem TLS, o bind simples expõe a senha a quem capturar o tráfego, e por isso deve ser protegido com StartTLS ou LDAPS."
+        },
+        {
+          "texto": "Por padrão, o LDAP utiliza a porta 389, e o LDAP sobre TLS implícito (LDAPS), a porta 636.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A porta 389 é usada pelo LDAP em claro e também com StartTLS, que eleva a mesma conexão a TLS; a 636 é a convencionada para o LDAPS, em que o TLS começa antes de qualquer troca LDAP."
+        },
+        {
+          "texto": "O filtro de busca (|(ou=Auditoria)(ou=Fiscalizacao)) retorna somente as entradas que atendem simultaneamente às duas condições.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O operador | (barra vertical) representa o OU lógico: o filtro retorna entradas que atendam a qualquer uma das condições. A conjunção é expressa pelo operador &, e a negação, pelo !."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Está incompleta, pois omite a III, que é verdadeira. A porta 389 é a padrão do LDAP (inclusive com StartTLS), e a 636 é a usual do LDAPS."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a I (o RDN é o componente mais à esquerda do DN), a II (o bind autentica a sessão e, sem TLS, o bind simples expõe a senha) e a III (porta 389 para o LDAP e 636 para o LDAPS). A IV é falsa porque o operador | combina as condições por OU, e não por E.",
+          "versaoInvertidaFalsa": "Por padrão, o LDAP utiliza a porta 636, e o LDAP sobre TLS implícito (LDAPS), a porta 389."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: o operador | expressa disjunção (OU), e o filtro retorna entradas que atendam a qualquer das condições. Também omite a I, que é verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV é falsa, e a alternativa deixa de fora a I e a II, que descrevem corretamente o RDN e a operação bind."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que confunde o operador | (OU) com o & (E), e omite a II, que alerta corretamente para o risco do bind simples sem TLS."
+        }
+      ],
+      "pegadinhaFCC": "Trocar as portas 389 e 636 e ler o operador | como E. No LDAP, | é OU, & é E e ! é negação, e o RDN é o primeiro componente do DN.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as portas do LDAP e qual é a função do bind?",
+        "resposta": "O LDAP usa a porta 389 (em claro ou com StartTLS), e o LDAPS, a 636 (TLS implícito). O bind autentica a sessão; o bind simples sem TLS expõe a senha e, por isso, deve ser protegido."
+      },
+      "conceitosChave": ["LDAP: DN, bind e portas"],
+      "fundamentacao": "RFC 4511 (LDAP: The Protocol), seções 4.2 (Bind) e 4.14 (StartTLS); RFC 4513 (métodos de autenticação e mecanismos de segurança); RFC 4514 (representação textual de DN); RFC 4515 (filtros de busca)."
+    },
+    {
+      "id": "so-redes-034",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Virtualização e containers",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de infraestrutura do Tribunal revisa as práticas do ambiente virtualizado e da plataforma de containers. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma auditoria do ambiente de virtualização e de containers de um órgão público, um técnico de controle externo avaliou afirmações feitas pela equipe de infraestrutura. Considere as afirmativas abaixo.",
+        "Ao revisar o plano de continuidade dos servidores virtualizados e das aplicações em containers do Tribunal, um analista reuniu as seguintes afirmações. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O Microsoft Hyper-V é um hipervisor tipo 1: quando a função é habilitada, o hipervisor passa a executar diretamente sobre o hardware, e o Windows instalado opera em uma partição pai.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Ao habilitar o Hyper-V, o hipervisor é carregado diretamente sobre o hardware, e o próprio Windows passa a rodar na partição pai (raiz), com acesso privilegiado; as VMs ficam em partições filhas. Apesar da aparência de aplicativo, é um hipervisor tipo 1."
+        },
+        {
+          "texto": "Um snapshot de máquina virtual guardado no mesmo armazenamento da VM substitui a política de backup, pois permite reverter a máquina a um estado anterior.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O snapshot (ponto de verificação) registra o estado da VM, em geral como discos diferenciais dependentes do disco original e no mesmo armazenamento; se este falhar, perdem-se a VM e o snapshot. Backup é uma cópia independente, preferencialmente mantida fora do ambiente."
+        },
+        {
+          "texto": "Dados gravados na camada gravável de um container são perdidos quando o container é removido; para persistir dados, usam-se volumes ou armazenamento externo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A camada gravável do container é efêmera e vinculada ao seu ciclo de vida. Dados que precisam sobreviver à remoção ou à substituição do container devem ficar em volumes, montagens do host ou serviços externos."
+        },
+        {
+          "texto": "A migração ao vivo (live migration) transfere uma VM em execução entre hosts físicos com interrupção mínima, desde que os hosts acessem o mesmo armazenamento ou que este também seja migrado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Na migração ao vivo, a memória da VM é copiada de forma iterativa para o host de destino e a execução é transferida com pausa muito curta. Exige armazenamento compartilhado ou migração conjunta do armazenamento, além de processadores compatíveis."
+        },
+        {
+          "texto": "Como compartilham o kernel do hospedeiro, os containers oferecem isolamento mais forte do que o das máquinas virtuais, o que dispensa reforços como perfis de segurança.",
+          "verdadeira": false,
+          "explicacao": "Falsa. É o contrário: como o kernel é compartilhado, uma falha nele afeta todos os containers, e o isolamento é mais fraco que o de uma VM. Por isso se recomenda reforçá-lo com usuários não privilegiados, seccomp, AppArmor ou SELinux."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a I (o Hyper-V é tipo 1, com o Windows na partição pai), a III (a camada gravável do container é efêmera, e a persistência exige volumes) e a IV (a migração ao vivo move VMs em execução com interrupção mínima). A II é falsa porque snapshot não é backup, e a V, porque o kernel compartilhado torna o isolamento dos containers mais fraco que o das VMs.",
+          "versaoInvertidaFalsa": "O Microsoft Hyper-V é um hipervisor tipo 2, pois é executado como aplicativo sobre o Windows instalado, que mantém o controle direto do hardware."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: o snapshot depende do disco original e do mesmo armazenamento, por isso não substitui backup. Também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a V, que inverte a comparação de isolamento: o compartilhamento do kernel enfraquece o isolamento dos containers. E omite a I, que classifica corretamente o Hyper-V como tipo 1."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas (II e V) e omite a I e a III, que estão corretas. Snapshot não é backup, e containers não isolam melhor que máquinas virtuais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a I, a III e a IV, mas inclui a V. Containers compartilham o kernel do hospedeiro e, por isso, isolam menos que máquinas virtuais, o que exige reforços como seccomp, AppArmor ou SELinux."
+        }
+      ],
+      "pegadinhaFCC": "Tratar snapshot como backup, classificar o Hyper-V como tipo 2 por rodar 'dentro' do Windows e achar que containers isolam melhor que VMs.",
+      "resumoFlashcard": {
+        "pergunta": "Por que um snapshot de VM não substitui o backup?",
+        "resposta": "Porque o snapshot depende do disco original e costuma ficar no mesmo armazenamento: se este falhar ou for corrompido, perdem-se a VM e o snapshot. Backup é uma cópia independente, preferencialmente mantida fora do ambiente de produção."
+      },
+      "conceitosChave": ["Virtualização: hipervisores", "Virtualização: VM × container"],
+      "fundamentacao": "Microsoft Learn, 'Hyper-V Architecture' (hipervisor e partições pai e filhas); documentação do VMware vSphere sobre snapshots e vMotion; documentação do Docker, 'Volumes'; NIST SP 800-190 (Application Container Security Guide)."
+    },
+    {
+      "id": "so-redes-035",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Arquitetura TCP/IP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O portal do Tribunal ficou lento e passou a recusar novas conexões. No servidor web, o comando ss -tan mostrou milhares de conexões TCP no estado SYN-RECV, originadas de endereços IP variados e forjados, que nunca chegam ao estado ESTABLISHED; o consumo de banda está normal. O fenômeno observado e uma contramedida adequada no próprio servidor são, respectivamente,",
+      "variantesEnunciado": [
+        "Um servidor web de um órgão público passou a recusar novas conexões. A análise com ss -tan revelou milhares de conexões TCP em SYN-RECV, de origens diversas e forjadas, que não evoluem para ESTABLISHED, sem aumento relevante no consumo de banda. O fenômeno e uma contramedida adequada no servidor são, respectivamente,",
+        "Durante um incidente, a equipe de segurança do Tribunal identificou que a tabela de conexões do servidor do portal estava tomada por conexões semiabertas (estado SYN-RECV) iniciadas por endereços falsificados, enquanto o tráfego total permanecia baixo. O fenômeno observado e uma contramedida adequada no próprio servidor são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "esgotamento de portas efêmeras por excesso de conexões em TIME_WAIT; e reduzir o tempo de permanência nesse estado no servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O TIME_WAIT ocorre após o encerramento de conexões estabelecidas e afeta quem as encerra ativamente. O cenário mostra conexões que nunca se estabelecem, presas em SYN-RECV, o que caracteriza handshakes incompletos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ataque de amplificação DNS contra o servidor web; e bloquear a porta 53/UDP no firewall de borda do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A amplificação DNS inunda a vítima com respostas UDP volumosas e consome banda, o que o enunciado descarta. Além disso, não produziria conexões TCP em SYN-RECV no servidor web."
+        },
+        {
+          "id": "opt-3",
+          "texto": "fragmentação excessiva de pacotes por MTU incorreta; e reduzir a MTU da interface do servidor para 576 bytes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Problemas de MTU causam falhas na transferência de pacotes grandes, e não acúmulo de conexões semiabertas. Reduzir a MTU para 576 bytes prejudicaria o desempenho sem tratar a causa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "inundação de SYN (SYN flood), que esgota a fila de conexões semiabertas; e habilitar SYN cookies, além de limitar a taxa de novas conexões.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Cada SYN recebido faz o servidor responder com SYN-ACK e manter a conexão semiaberta (SYN-RECV) à espera do ACK final, que nunca chega porque as origens são forjadas. A fila de conexões pendentes se esgota e clientes legítimos são recusados. Os SYN cookies (no Linux, net.ipv4.tcp_syncookies) codificam o estado no número de sequência e dispensam reservar recursos antes do ACK; limitação de taxa e proteção anti-DDoS a montante complementam a defesa.",
+          "versaoInvertidaFalsa": "inundação de SYN (SYN flood), que esgota a fila de conexões já estabelecidas; e desabilitar os SYN cookies, que aumentam o consumo de memória do servidor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "falha no three-way handshake causada pelo próprio servidor, que deixa de enviar o SYN-ACK; e reinstalar a pilha TCP/IP do sistema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O estado SYN-RECV indica justamente que o servidor recebeu o SYN e já respondeu com SYN-ACK; quem deixa de completar o handshake é a origem, que não envia o ACK final. Reinstalar a pilha TCP/IP não resolveria."
+        }
+      ],
+      "pegadinhaFCC": "Confundir SYN-RECV (handshake incompleto) com TIME_WAIT (encerramento) e associar o sintoma a ataques volumétricos. A defesa clássica no host são os SYN cookies, com limitação de taxa.",
+      "resumoFlashcard": {
+        "pergunta": "Como reconhecer um SYN flood e qual é a contramedida clássica no servidor?",
+        "resposta": "Muitas conexões presas em SYN-RECV, de origens variadas ou forjadas, que nunca completam o three-way handshake e esgotam a fila de conexões semiabertas. A contramedida clássica são os SYN cookies, combinados com limitação de taxa e proteção anti-DDoS."
+      },
+      "conceitosChave": ["TCP: three-way handshake", "Negação de serviço: SYN flood"],
+      "fundamentacao": "RFC 4987 (TCP SYN Flooding Attacks and Common Mitigations), seções 2 e 3.6 (SYN cookies); RFC 9293 (TCP), seção 3.5; documentação do kernel Linux, parâmetro net.ipv4.tcp_syncookies."
+    },
+    {
+      "id": "so-redes-036",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Endereçamento IPv4 e IPv6",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de redes do Tribunal recebeu o bloco 192.168.50.0/24 para atender a quatro segmentos: Auditoria, com 100 hosts; Protocolo, com 50 hosts; Gabinete, com 28 hosts; e um enlace ponto a ponto entre dois roteadores, com 2 hosts. Usando VLSM, cada segmento recebe o menor bloco que comporte seus hosts, descontados os endereços de rede e de broadcast, e os blocos são alocados do maior para o menor, a partir do início do intervalo. As sub-redes do Gabinete e do enlace serão, respectivamente,",
+      "variantesEnunciado": [
+        "Um órgão público precisa dividir o bloco 192.168.50.0/24 entre quatro redes: Auditoria (100 hosts), Protocolo (50 hosts), Gabinete (28 hosts) e um enlace entre roteadores (2 hosts). Com VLSM, atribuindo a cada rede o menor bloco que comporte os hosts, descontados os endereços de rede e de broadcast, e alocando do maior para o menor a partir do início do bloco, as sub-redes do Gabinete e do enlace são, respectivamente,",
+        "Considere o planejamento do bloco 192.168.50.0/24 por VLSM para quatro segmentos, alocados do maior para o menor a partir do primeiro endereço: 100 hosts (Auditoria), 50 hosts (Protocolo), 28 hosts (Gabinete) e 2 hosts (enlace ponto a ponto). Se cada segmento recebe o menor bloco suficiente, descontados os endereços de rede e de broadcast, as sub-redes do Gabinete e do enlace serão, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "192.168.50.192/28 e 192.168.50.208/30",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um /28 oferece apenas 14 endereços utilizáveis (16 − 2), insuficientes para os 28 hosts do Gabinete. Em consequência, o enlace também ficou em posição diferente da correta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "192.168.50.192/27 e 192.168.50.224/30",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Do maior para o menor: a Auditoria (100 hosts) precisa de /25 (126 úteis) → 192.168.50.0/25 (.0 a .127); o Protocolo (50) precisa de /26 (62 úteis) → 192.168.50.128/26 (.128 a .191); o Gabinete (28) precisa de /27 (30 úteis) → 192.168.50.192/27 (.192 a .223); o enlace (2) precisa de /30 (2 úteis) → 192.168.50.224/30 (.224 a .227). Sobram os endereços de .228 a .255 para expansão.",
+          "versaoInvertidaFalsa": "192.168.50.192/28 e 192.168.50.208/30, pois um bloco /28 oferece 30 endereços utilizáveis, suficientes para os 28 hosts do Gabinete."
+        },
+        {
+          "id": "opt-3",
+          "texto": "192.168.50.160/27 e 192.168.50.192/30",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse resultado surge quando se atribui /27 ao Protocolo (30 hosts úteis), o que não comporta seus 50 hosts. O Protocolo precisa de /26 (.128 a .191), e o Gabinete começa em .192."
+        },
+        {
+          "id": "opt-4",
+          "texto": "192.168.50.192/27 e 192.168.50.226/30",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Gabinete está correto, mas 192.168.50.226 não é endereço de rede de um /30: blocos /30 começam em múltiplos de 4 (.224, .228…). O endereço .226 é um host do bloco 192.168.50.224/30."
+        },
+        {
+          "id": "opt-5",
+          "texto": "192.168.50.128/27 e 192.168.50.160/30",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse arranjo aloca o Gabinete logo após a Auditoria, desrespeitando a ordem do maior para o menor. Além disso, o Protocolo (/26) ficaria sem bloco alinhado disponível a partir de .160, já que blocos /26 começam em .0, .64, .128 ou .192."
+        }
+      ],
+      "pegadinhaFCC": "Esquecer de descontar rede e broadcast (um /28 tem 14 hosts úteis, não 16), subdimensionar segmentos anteriores ou propor endereço de rede desalinhado, como .226/30.",
+      "resumoFlashcard": {
+        "pergunta": "Como alocar sub-redes com VLSM?",
+        "resposta": "Ordenam-se os segmentos do maior para o menor, escolhe-se para cada um o menor prefixo com 2^(32−n) − 2 hosts suficientes e alocam-se os blocos em sequência, respeitando o alinhamento. No exemplo: /25, /26, /27 e /30 a partir de 192.168.50.0."
+      },
+      "conceitosChave": ["IPv4: cálculo de sub-redes (CIDR)"],
+      "fundamentacao": "RFC 4632 (CIDR); RFC 950 (sub-redes IPv4); RFC 1878 (Variable Length Subnet Table for IPv4). Alocação conferida por script em Python (módulo ipaddress)."
+    },
+    {
+      "id": "so-redes-037",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "DNS e DHCP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Para que a consulta pelo endereço IPv4 de um servidor de correio do Tribunal retorne o nome desse servidor, isto é, para que funcione a resolução reversa, deve ser configurado, na zona in-addr.arpa correspondente, um registro DNS do tipo",
+      "variantesEnunciado": [
+        "Um servidor de correio de um órgão público passou a ter mensagens recusadas por destinatários que verificam se o endereço IP do remetente resolve de volta para um nome. Para configurar essa resolução reversa na zona in-addr.arpa, deve-se criar um registro do tipo",
+        "Na zona reversa (in-addr.arpa) mantida pela equipe de redes do Tribunal, o tipo de registro que associa um endereço IPv4 ao nome do respectivo servidor é o"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "MX.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MX indica, para um domínio, quais servidores recebem suas mensagens de correio e em que ordem de preferência. Não faz a conversão de endereço para nome."
+        },
+        {
+          "id": "opt-2",
+          "texto": "CNAME.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CNAME cria um apelido, apontando um nome para outro nome canônico. Ele não associa endereços a nomes nem é o registro usado na resolução reversa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "AAAA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O AAAA associa um nome a um endereço IPv6, ou seja, faz resolução direta. A reversa, tanto em IPv4 quanto em IPv6, usa registros PTR."
+        },
+        {
+          "id": "opt-4",
+          "texto": "SOA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SOA (start of authority) existe em toda zona, inclusive nas reversas, e contém parâmetros como o servidor primário, o e-mail do responsável e o número de série. Ele não mapeia endereços para nomes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "PTR.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O registro PTR (pointer) faz a resolução reversa: associa um endereço a um nome. Em IPv4, os octetos são escritos em ordem inversa sob in-addr.arpa (o endereço 203.0.113.25, por exemplo, corresponde a 25.113.0.203.in-addr.arpa); em IPv6, usa-se ip6.arpa. Muitos servidores de correio verificam se o PTR do remetente é coerente com seu nome, o que ajuda no combate a spam.",
+          "versaoInvertidaFalsa": "A resolução reversa de um endereço IPv4 é feita por um registro MX configurado na zona in-addr.arpa correspondente."
+        }
+      ],
+      "pegadinhaFCC": "Associar o servidor de correio ao registro MX e esquecer que a resolução reversa (de endereço para nome) é feita pelo PTR, em in-addr.arpa ou ip6.arpa.",
+      "resumoFlashcard": {
+        "pergunta": "Qual registro DNS faz a resolução reversa e onde ele fica?",
+        "resposta": "O registro PTR, que associa um endereço a um nome. Para IPv4, fica sob in-addr.arpa, com os octetos invertidos; para IPv6, sob ip6.arpa."
+      },
+      "conceitosChave": ["DNS: tipos de registro"],
+      "fundamentacao": "RFC 1035, seções 3.3.12 (PTR RDATA) e 3.5 (domínio IN-ADDR.ARPA); RFC 3596 (registro AAAA e domínio ip6.arpa)."
+    },
+    {
+      "id": "so-redes-038",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "HTTP/2, HTTP/3, HTTPS, SMTP, FTP e SSH",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal vai receber dos jurisdicionados, por transferência de arquivos, documentos de prestação de contas. Os requisitos são: credenciais e conteúdo sempre cifrados; abertura, no firewall, de uma única porta TCP de entrada; e possibilidade de autenticação por chave pública. Hoje, o serviço usa FTP nas portas 20 e 21. A solução que atende a todos os requisitos e a justificativa correta são, respectivamente,",
+      "variantesEnunciado": [
+        "Um órgão de controle precisa substituir um servidor FTP (portas 20 e 21) usado para receber arquivos de jurisdicionados. A nova solução deve cifrar credenciais e dados, exigir a abertura de apenas uma porta TCP no firewall e permitir autenticação por chave pública. A solução adequada e sua justificativa são, respectivamente,",
+        "Para o envio periódico de arquivos de prestação de contas ao Tribunal, a equipe de segurança exige canal cifrado para credenciais e conteúdo, uma única porta TCP de entrada liberada no firewall e suporte a autenticação por chaves. Considerando que o serviço atual usa FTP nas portas 20 e 21, a solução adequada e sua justificativa são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "FTPS no modo explícito, pois, depois do comando AUTH TLS na porta 21, os dados também passam a trafegar por essa porta, sem conexões adicionais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No FTPS explícito, o AUTH TLS protege o canal de controle na porta 21, mas as transferências continuam usando conexões de dados separadas (porta 20 no modo ativo ou portas altas negociadas no passivo). Com o canal cifrado, o firewall nem consegue inspecionar as portas negociadas, o que complica a configuração."
+        },
+        {
+          "id": "opt-2",
+          "texto": "TFTP, pois opera em uma única porta e dispensa autenticação, o que simplifica o acesso dos jurisdicionados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O TFTP usa UDP (porta 69), não tem autenticação nem criptografia e serve a usos internos específicos, como a inicialização de equipamentos pela rede. Contraria todos os requisitos de segurança do cenário."
+        },
+        {
+          "id": "opt-3",
+          "texto": "SFTP, pois roda como subsistema do SSH, na porta 22, cifrando credenciais e dados em uma única conexão e aceitando autenticação por chaves.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O SFTP (SSH File Transfer Protocol) não é FTP: é um protocolo de transferência que roda dentro de uma sessão SSH, na porta TCP 22, de modo que autenticação, comandos e dados seguem cifrados na mesma conexão. Ele aceita senha ou chave pública e simplifica o firewall, que precisa liberar apenas a porta 22 do servidor.",
+          "versaoInvertidaFalsa": "SFTP, pois é o próprio FTP protegido por TLS, que mantém as portas 20 e 21 e não aceita autenticação por chave pública."
+        },
+        {
+          "id": "opt-4",
+          "texto": "FTP no modo passivo, pois o servidor informa uma porta alta para os dados, o que dispensa criptografia e mantém uma única porta aberta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O modo passivo apenas inverte quem abre a conexão de dados, e o servidor ainda precisa de uma faixa de portas altas além da 21. E o FTP transmite credenciais e conteúdo em claro, o que viola o primeiro requisito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "SFTP, pois é o FTP tradicional protegido por TLS, que usa a porta 990 para controle e dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A solução nomeada está certa, mas a justificativa descreve o FTPS implícito, que usa TLS a partir da porta 990. O SFTP é um subsistema do SSH, na porta 22, sem relação com o protocolo FTP."
+        }
+      ],
+      "pegadinhaFCC": "Confundir o SFTP (subsistema do SSH, porta 22) com o FTPS (FTP sobre TLS, portas 21 ou 990, com conexões de dados separadas) e achar que o modo passivo do FTP resolve a segurança.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre SFTP e FTPS?",
+        "resposta": "O SFTP é um protocolo de transferência que roda sobre o SSH, em uma única conexão na porta 22, e aceita autenticação por senha ou chave. O FTPS é o FTP protegido por TLS (explícito na 21, com AUTH TLS, ou implícito na 990) e mantém conexões de dados separadas."
+      },
+      "conceitosChave": ["Transferência de arquivos: FTP, FTPS e SFTP"],
+      "fundamentacao": "RFC 959 (FTP); RFC 4217 (Securing FTP with TLS); draft-ietf-secsh-filexfer (SSH File Transfer Protocol) e RFC 4254 (SSH Connection Protocol, subsistemas); RFC 1350 (TFTP)."
+    },
+    {
+      "id": "so-redes-039",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "VPN, balanceamento de carga, proxies e firewalls",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O Tribunal publicará, sob o mesmo nome e o mesmo endereço IP, o portal institucional e uma API de dados abertos. As requisições cujo caminho começa por /api devem ir para um grupo de servidores, e as demais, para outro. O certificado TLS deve ficar em um único ponto, e servidores com falha devem ser retirados automaticamente da distribuição. A solução de balanceamento adequada é",
+      "variantesEnunciado": [
+        "Um órgão público quer disponibilizar, no mesmo domínio e no mesmo IP, um sistema web e sua API, encaminhando o caminho /api para servidores dedicados e o restante para o grupo do portal. O certificado digital deve ficar centralizado, e servidores indisponíveis devem sair automaticamente da distribuição. A solução de balanceamento adequada é",
+        "Considere que a equipe de infraestrutura do Tribunal precisa separar o tráfego HTTPS de um mesmo endereço entre dois grupos de servidores conforme o caminho da URL (/api ou demais), centralizando o certificado TLS e excluindo automaticamente servidores com falha. A solução de balanceamento adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um balanceador de camada 7, que termina o TLS, inspeciona o caminho da URL para escolher o grupo de servidores e faz verificações de saúde.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Para rotear pelo caminho da URL, o balanceador precisa entender HTTP, o que caracteriza a camada 7. Como o tráfego é HTTPS, ele termina o TLS (certificado em um só lugar) e então aplica regras de roteamento por conteúdo, como /api para um grupo e o restante para outro. As verificações de saúde retiram da rotação os servidores com falha.",
+          "versaoInvertidaFalsa": "um balanceador de camada 4, que termina o TLS, inspeciona o caminho da URL para escolher o grupo de servidores e faz verificações de saúde."
+        },
+        {
+          "id": "opt-2",
+          "texto": "um balanceador de camada 4, que escolhe o grupo de servidores pelo caminho da URL a partir apenas dos endereços IP e das portas TCP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um balanceador de camada 4 decide com base em endereços IP e portas TCP/UDP e não enxerga o conteúdo HTTP, que, além disso, está cifrado. Com o mesmo IP e a mesma porta, ele não distingue /api das demais requisições."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a distribuição por round robin no DNS, que encaminha as requisições de /api a servidores específicos e detecta falhas automaticamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O DNS só resolve o nome para endereços IP e não conhece o caminho da URL. O round robin de DNS também não detecta falhas e é afetado pelo cache dos resolvedores, de modo que continua entregando endereços de servidores indisponíveis."
+        },
+        {
+          "id": "opt-4",
+          "texto": "um proxy direto (forward) na rede interna, que recebe as requisições vindas da internet e as distribui conforme o caminho da URL.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O proxy direto atua em nome dos clientes internos para acessar destinos externos. Para receber requisições da internet e distribuí-las entre servidores, usa-se um proxy reverso ou um balanceador de camada 7."
+        },
+        {
+          "id": "opt-5",
+          "texto": "um balanceador de camada 4 com algoritmo de menos conexões, que lê o cabeçalho HTTP Host para separar o tráfego destinado à API.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O algoritmo de menos conexões é válido, mas um balanceador de camada 4 não lê cabeçalhos HTTP como o Host. Além disso, a API e o portal usam o mesmo nome, e a distinção pedida é pelo caminho da URL."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao balanceador de camada 4 decisões baseadas em URL ou em cabeçalhos HTTP. O roteamento por conteúdo exige camada 7 e, com HTTPS, terminação do TLS no balanceador.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre balanceamento de carga em camada 4 e em camada 7?",
+        "resposta": "Na camada 4, a decisão usa endereços IP e portas TCP/UDP, sem ler o conteúdo. Na camada 7, o balanceador entende o protocolo de aplicação (HTTP), pode terminar o TLS e rotear por caminho, cabeçalho ou cookie."
+      },
+      "conceitosChave": ["Balanceamento de carga: L4 × L7"],
+      "fundamentacao": "Documentação do HAProxy e do Nginx (modos TCP/camada 4 e HTTP/camada 7, verificações de saúde); RFC 9110 (HTTP Semantics), seção 7, 'Routing HTTP Messages'."
+    },
+    {
+      "id": "so-redes-040",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Redes sem fio",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na modernização da rede sem fio do Tribunal, decidiu-se abandonar o WPA2-Personal, cuja chave pré-compartilhada permite que um atacante capture o handshake e tente descobrir a senha por ataque de dicionário ……. No WPA3-Personal, a troca baseada em senha usa o método ……, que resiste a esse tipo de ataque e oferece sigilo direto, e o uso de quadros de gerenciamento protegidos (……) passa a ser obrigatório. Para a rede corporativa, com credenciais individuais, será adotado o WPA3-Enterprise com autenticação ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao revisar a segurança da rede sem fio de um órgão público, um técnico explicou que, no WPA2-Personal, o handshake capturado permite ataques de dicionário ……; que o WPA3-Personal adota o método ……, resistente a esse ataque; que os quadros de gerenciamento protegidos (……) se tornaram obrigatórios; e que redes corporativas devem usar o WPA3-Enterprise com autenticação ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Na migração do WPA2 para o WPA3 na rede do Tribunal, foram destacados os seguintes pontos: o WPA2-Personal permite ataque de dicionário …… contra o handshake capturado; o WPA3-Personal usa o método ……; o recurso …… passa a ser obrigatório; e a rede corporativa usará o modo Enterprise com autenticação ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "online − TKIP − WPS − 802.1X",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ataque contra a chave capturada é offline, justamente por dispensar interação com a rede. O TKIP é a cifragem legada do WPA original, e o WPS é um recurso de configuração simplificada com vulnerabilidades conhecidas, não a proteção dos quadros de gerenciamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "offline − WEP − PMF − 802.11ax",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O WEP é o protocolo original, baseado em RC4 e há muito considerado inseguro; não é o método de autenticação do WPA3. E o 802.11ax é o padrão de camada física e MAC do Wi-Fi 6, não um método de autenticação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "offline − SAE − WPS − 802.1X",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o SAE e o 802.1X, mas a terceira lacuna pede os quadros de gerenciamento protegidos (PMF). O WPS (Wi-Fi Protected Setup) é um mecanismo de pareamento simplificado que convém desabilitar."
+        },
+        {
+          "id": "opt-4",
+          "texto": "offline − SAE − PMF − 802.1X",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No WPA2-Personal, quem captura o handshake de quatro vias pode testar senhas offline, sem interagir com a rede. O WPA3-Personal substitui a PSK pelo SAE (Simultaneous Authentication of Equals), em que cada tentativa exige interação com o ponto de acesso, o que inviabiliza o ataque de dicionário offline e oferece sigilo direto. O WPA3 torna obrigatório o PMF (Protected Management Frames, originado no IEEE 802.11w), e o modo Enterprise usa 802.1X/EAP com servidor RADIUS e credenciais individuais.",
+          "versaoInvertidaFalsa": "O WPA3-Personal mantém a chave pré-compartilhada do WPA2 e, por isso, continua exposto a ataques de dicionário offline contra o handshake capturado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "offline − PSK − PMF − 802.1X",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A chave pré-compartilhada (PSK) é exatamente o mecanismo do WPA2-Personal que o WPA3 substituiu pelo SAE. Manter a PSK conservaria a exposição a ataques de dicionário offline."
+        }
+      ],
+      "pegadinhaFCC": "Achar que o ataque à PSK é online, confundir PMF com WPS e manter a PSK no WPA3. O WPA3-Personal usa SAE e exige PMF; o Enterprise usa 802.1X.",
+      "resumoFlashcard": {
+        "pergunta": "O que o WPA3-Personal muda em relação ao WPA2-Personal?",
+        "resposta": "Substitui a chave pré-compartilhada (PSK) pelo SAE, que resiste a ataques de dicionário offline e oferece sigilo direto, e torna obrigatório o PMF (quadros de gerenciamento protegidos). O WPA3-Enterprise usa 802.1X/EAP com RADIUS."
+      },
+      "conceitosChave": ["Wi-Fi: WPA2 × WPA3"],
+      "fundamentacao": "Wi-Fi Alliance, especificação WPA3 (SAE, PMF obrigatório e modo Enterprise de 192 bits); IEEE Std 802.11-2020 (SAE e proteção de quadros de gerenciamento); IEEE Std 802.1X-2020; guias de implantação WPA3 de fabricantes (Cisco)."
+    }
+  ]
+}

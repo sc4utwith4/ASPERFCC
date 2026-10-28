@@ -1,0 +1,666 @@
+{
+  "materiaSlug": "so-redes-nuvem",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "so-redes-041",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Windows e Linux: processos, memória e sistemas de arquivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um servidor Linux do Tribunal que executa várias rotinas de análise de dados passou a responder de forma extremamente lenta depois que o número de rotinas simultâneas foi dobrado. O monitoramento mostra uso de CPU em torno de 10%, área de troca (swap) com leitura e escrita contínuas, alta taxa de faltas de página e quase nenhuma memória livre. O diagnóstico e a providência mais adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Após a inclusão de novos processos de importação de dados, um servidor de um órgão público ficou muito lento: a CPU está quase ociosa, a área de troca (swap) é lida e gravada sem parar, a taxa de faltas de página disparou e praticamente não há memória livre. O diagnóstico e a providência mais adequada são, respectivamente,",
+        "Considere um servidor que, ao ter dobrado o número de processos concorrentes, apresenta baixa utilização de CPU, disco de paginação saturado e elevado número de faltas de página por segundo, com a memória física totalmente ocupada. O diagnóstico e a providência mais adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "thrashing, em que o sistema gasta mais tempo trocando páginas do que executando; reduzir o número de rotinas simultâneas ou ampliar a memória física.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Com mais rotinas do que a memória comporta, os conjuntos de trabalho (working sets) não cabem na RAM: cada processo provoca faltas de página, retira páginas de outro e fica bloqueado à espera do disco. A CPU fica ociosa e o swap, saturado, o que caracteriza o thrashing. A solução é reduzir o grau de multiprogramação (menos rotinas simultâneas ou execução em lotes) ou ampliar a memória física, para que os conjuntos de trabalho caibam na RAM.",
+          "versaoInvertidaFalsa": "thrashing, em que a CPU fica sobrecarregada por excesso de processamento útil; aumentar o número de rotinas simultâneas para aproveitar a memória livre."
+        },
+        {
+          "id": "opt-2",
+          "texto": "deadlock entre as rotinas, evidenciado pela CPU ociosa; reiniciar periodicamente as rotinas para liberar os recursos retidos por elas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No deadlock, os processos ficam bloqueados à espera de recursos uns dos outros, sem atividade intensa de paginação. O cenário mostra troca contínua de páginas e alta taxa de faltas, sinais de falta de memória, e não de espera circular."
+        },
+        {
+          "id": "opt-3",
+          "texto": "gargalo de processamento, já que as faltas de página são tratadas pela CPU; aumentar o número de núcleos e o quantum do escalonador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A CPU em 10% indica que o processador está ocioso, à espera do disco. Acrescentar núcleos ou alterar o quantum não reduz as faltas de página, cuja demora decorre do acesso ao swap."
+        },
+        {
+          "id": "opt-4",
+          "texto": "fragmentação externa da memória, típica da paginação; desfragmentar a área de swap para acelerar o atendimento das faltas de página.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A paginação usa quadros de tamanho fixo e, por isso, não sofre fragmentação externa; a que pode ocorrer é a interna, na última página. Desfragmentar o swap não resolveria a falta de memória física."
+        },
+        {
+          "id": "opt-5",
+          "texto": "thrashing, causado por excesso de memória livre; aumentar o tamanho do swap para que mais processos possam ser admitidos ao mesmo tempo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O diagnóstico de thrashing está correto, mas a causa é a falta de memória livre, e não o excesso. Ampliar o swap permitiria admitir ainda mais processos e agravaria a disputa por quadros de memória."
+        }
+      ],
+      "pegadinhaFCC": "Ler a CPU ociosa como sinal de folga ou de deadlock. Com faltas de página em massa e swap saturado, o problema é thrashing, e a solução é reduzir a multiprogramação ou ampliar a RAM, não aumentar o swap.",
+      "resumoFlashcard": {
+        "pergunta": "O que é thrashing e como tratá-lo?",
+        "resposta": "É a situação em que o sistema passa mais tempo trocando páginas entre memória e disco do que executando processos, porque os conjuntos de trabalho não cabem na RAM. A CPU fica ociosa e o swap saturado; trata-se reduzindo o grau de multiprogramação ou ampliando a memória física."
+      },
+      "conceitosChave": ["Memória virtual: paginação e thrashing"],
+      "fundamentacao": "Silberschatz, Galvin e Gagne, Fundamentos de Sistemas Operacionais, capítulo 'Memória virtual' (thrashing e modelo do conjunto de trabalho); Denning, 'The Working Set Model for Program Behavior', Communications of the ACM (1968)."
+    },
+    {
+      "id": "so-redes-042",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Shell Linux, PowerShell e automação por scripts",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Em um script Bash agendado para rodar sem supervisão, um técnico quer gravar no arquivo /var/log/backup.log tanto a saída padrão quanto a saída de erro do comando /opt/scripts/backup.sh, acrescentando o conteúdo ao final do arquivo, sem apagar o histórico. A linha de comando que produz exatamente esse resultado é",
+      "variantesEnunciado": [
+        "Um administrador precisa que um script de manutenção, executado pelo cron, acrescente ao arquivo /var/log/backup.log tudo o que /opt/scripts/backup.sh escrever, tanto na saída padrão quanto na saída de erro, preservando o conteúdo anterior do log. Em Bash, a linha de comando correta é",
+        "Considere o comando /opt/scripts/backup.sh, que escreve mensagens informativas na saída padrão e mensagens de falha na saída de erro. Para acrescentar as duas ao final de /var/log/backup.log, sem sobrescrevê-lo, deve-se usar, em Bash,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "/opt/scripts/backup.sh 2>&1 >> /var/log/backup.log",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem importa: 2>&1 é avaliado primeiro, quando a saída padrão ainda aponta para o terminal (ou para o destino herdado do agendador), e a saída de erro fica ligada a esse destino. Só depois a saída padrão é redirecionada ao arquivo, e os erros não chegam ao log."
+        },
+        {
+          "id": "opt-2",
+          "texto": "/opt/scripts/backup.sh > /var/log/backup.log 2>&1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A combinação > arquivo 2>&1 grava as duas saídas no arquivo, mas o operador > trunca o arquivo a cada execução, apagando o histórico. Para acrescentar, usa-se >>."
+        },
+        {
+          "id": "opt-3",
+          "texto": "/opt/scripts/backup.sh | /var/log/backup.log 2>&1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pipe (|) envia a saída padrão de um comando para a entrada de outro comando, e não para um arquivo; o shell tentaria executar /var/log/backup.log como programa. Para gravar em arquivo, usa-se redirecionamento (> ou >>)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "/opt/scripts/backup.sh >> /var/log/backup.log 2>&1",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O shell processa os redirecionamentos da esquerda para a direita: >> /var/log/backup.log liga a saída padrão (descritor 1) ao arquivo em modo de acréscimo; em seguida, 2>&1 faz a saída de erro (descritor 2) apontar para o destino atual do descritor 1, que é o arquivo. Assim, as duas saídas são acrescentadas ao log e o histórico é preservado.",
+          "versaoInvertidaFalsa": "/opt/scripts/backup.sh 2>&1 >> /var/log/backup.log, pois a ordem dos redirecionamentos é indiferente para o shell."
+        },
+        {
+          "id": "opt-5",
+          "texto": "/opt/scripts/backup.sh 2>> /var/log/backup.log",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O 2>> acrescenta ao arquivo apenas a saída de erro (descritor 2). A saída padrão continuaria indo para o destino original e não seria registrada no log."
+        }
+      ],
+      "pegadinhaFCC": "Ignorar que a ordem dos redirecionamentos importa (2>&1 antes de >> não leva os erros ao arquivo) e confundir > (sobrescreve) com >> (acrescenta) ou com o pipe.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a forma correta de acrescentar a saída padrão e a saída de erro a um arquivo em Bash?",
+        "resposta": "comando >> arquivo 2>&1. Primeiro a saída padrão é ligada ao arquivo em modo de acréscimo, e depois a saída de erro é duplicada para o mesmo destino. Na ordem inversa (2>&1 >> arquivo), os erros continuam indo para o destino original."
+      },
+      "conceitosChave": ["Shell: redirecionamento e pipes"],
+      "fundamentacao": "Manual de referência do GNU Bash, seção 3.6, 'Redirections' (ordem de avaliação e duplicação de descritores); POSIX.1-2017, Shell Command Language, seção 2.7, 'Redirection'."
+    },
+    {
+      "id": "so-redes-043",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Endereçamento IPv4 e IPv6",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de redes do Tribunal prepara a implantação do IPv6 na rede interna e reuniu afirmações para o treinamento da equipe de suporte. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um projeto de adoção do IPv6 em um órgão público, um técnico reuniu afirmações sobre endereçamento e autoconfiguração para orientar a equipe. Considere as afirmativas abaixo.",
+        "Ao revisar a documentação de rede do Tribunal antes de habilitar o IPv6 nos segmentos internos, um analista avaliou as afirmações a seguir. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Assim como no IPv4, o IPv6 utiliza endereços de broadcast para alcançar todos os hosts de um enlace, como o endereço ff02::ffff.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O IPv6 não tem broadcast. As funções que o IPv4 cumpria com broadcast são feitas por multicast, como o grupo ff02::1 (todos os nós do enlace) e os grupos de nó solicitado usados na descoberta de vizinhos."
+        },
+        {
+          "texto": "Endereços do bloco fe80::/10 são de enlace local (link-local), configurados automaticamente em cada interface e não encaminhados por roteadores para outros enlaces.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Toda interface IPv6 configura automaticamente um endereço link-local em fe80::/10, usado, por exemplo, na descoberta de vizinhos e como próximo salto de rotas. Esses endereços não são encaminhados para outros enlaces."
+        },
+        {
+          "texto": "Com o SLAAC, um host pode formar seu endereço global combinando o prefixo anunciado pelo roteador em mensagens Router Advertisement com um identificador de interface.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Na autoconfiguração sem estado (SLAAC, RFC 4862), o roteador anuncia o prefixo, tipicamente /64, em mensagens Router Advertisement, e o host completa o endereço com um identificador de interface, gerado de forma aleatória ou estável, sem servidor DHCP."
+        },
+        {
+          "texto": "O endereço IPv6 tem 64 bits, divididos em quatro grupos de 16 bits escritos em notação hexadecimal.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O endereço IPv6 tem 128 bits, representados em oito grupos de 16 bits em hexadecimal, separados por dois-pontos. Os 64 bits correspondem, em geral, apenas ao prefixo de sub-rede ou ao identificador de interface."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: o IPv6 aboliu o broadcast e usa multicast, como o grupo ff02::1. Também omite a III, que descreve corretamente o SLAAC."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a III estão corretas, mas a I é falsa. Não existe broadcast no IPv6; o endereço ff02::1 é o grupo multicast de todos os nós do enlace."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a II (fe80::/10 é link-local, autoconfigurado e não roteado) e a III (no SLAAC, o host combina o prefixo do Router Advertisement com um identificador de interface). A I é falsa porque o IPv6 não tem broadcast e usa multicast, como ff02::1, e a IV, porque o endereço tem 128 bits, em oito grupos.",
+          "versaoInvertidaFalsa": "Endereços do bloco fe80::/10 são globais e roteáveis na internet, atribuídos exclusivamente por servidores DHCPv6."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a IV é falsa: o endereço IPv6 tem 128 bits, em oito grupos de 16 bits. A alternativa ainda omite a II, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que reduz o endereço IPv6 a 64 bits. O tamanho correto é 128 bits; 64 bits costumam corresponder ao prefixo de sub-rede ou ao identificador de interface."
+        }
+      ],
+      "pegadinhaFCC": "Transpor o broadcast do IPv4 para o IPv6 e reduzir o endereço a 64 bits. No IPv6 há unicast, multicast e anycast; o link-local fica em fe80::/10, e o SLAAC dispensa o DHCP.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os principais tipos de endereço IPv6 e o que substitui o broadcast?",
+        "resposta": "Unicast global (2000::/3), link-local (fe80::/10), local único (fc00::/7), multicast (ff00::/8) e anycast. Não há broadcast: usa-se multicast, como ff02::1, que alcança todos os nós do enlace."
+      },
+      "conceitosChave": ["IPv6: notação e tipos de endereço"],
+      "fundamentacao": "RFC 8200 (IPv6); RFC 4291 (arquitetura de endereçamento IPv6, seções 2 e 2.7); RFC 4861 (Neighbor Discovery); RFC 4862 (SLAAC)."
+    },
+    {
+      "id": "so-redes-044",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "DNS e DHCP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para atender a uma nova unidade técnica, a equipe de redes do Tribunal criou a VLAN 30 (sub-rede 10.30.0.0/24), roteada pelo switch de núcleo. O servidor DHCP, que fica na VLAN dos servidores, recebeu um escopo para 10.30.0.0/24, mas as estações Windows da nova VLAN passaram a exibir endereços 169.254.x.x. As estações das demais VLANs continuam recebendo endereços normalmente. A causa mais provável e a correção adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Após a criação de uma nova sub-rede (10.30.0.0/24) para o arquivo geral de um órgão público, as estações Windows desse segmento passaram a obter endereços 169.254.x.x, embora o servidor DHCP central, situado em outra sub-rede, já tenha um escopo configurado para 10.30.0.0/24 e atenda normalmente aos demais segmentos. A causa mais provável e a correção adequada são, respectivamente,",
+        "Considere que estações de uma VLAN recém-criada no Tribunal recebem endereços de enlace local 169.254.x.x, enquanto as de outras VLANs obtêm configuração do mesmo servidor DHCP, localizado na rede de servidores e com escopo já criado para a nova sub-rede 10.30.0.0/24. A causa mais provável e a correção adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "esgotamento do escopo 10.30.0.0/24; reduzir o tempo de concessão para uma hora, a fim de liberar endereços mais rapidamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O escopo acabou de ser criado e nenhuma estação da VLAN 30 recebeu endereço, o que afasta o esgotamento. O endereço 169.254.x.x indica que o cliente não recebeu resposta de nenhum servidor DHCP."
+        },
+        {
+          "id": "opt-2",
+          "texto": "conflito de endereços na VLAN 30; habilitar a detecção de conflitos no servidor e reservar os endereços por endereço MAC.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conflito de endereços pressupõe que endereços tenham sido atribuídos, o que não ocorreu. Os endereços APIPA aparecem justamente quando não há oferta de servidor DHCP."
+        },
+        {
+          "id": "opt-3",
+          "texto": "falha no DNS da nova VLAN; criar registros PTR para a sub-rede 10.30.0.0/24, exigidos pelo processo DORA.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O processo DORA (Discover, Offer, Request, Acknowledge) não depende de registros DNS. Registros PTR servem à resolução reversa e não interferem na obtenção de endereço."
+        },
+        {
+          "id": "opt-4",
+          "texto": "bloqueio da porta TCP 67 no switch de núcleo; liberar essa porta TCP entre a VLAN 30 e o servidor DHCP.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O DHCP usa UDP, e não TCP: porta 67 no servidor e 68 no cliente. Além disso, liberar portas não faz um broadcast atravessar o roteador; é preciso um agente de retransmissão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as mensagens DHCPDISCOVER, enviadas em broadcast, não atravessam o roteador; configurar na interface da VLAN 30 um agente de retransmissão DHCP (relay) apontando para o servidor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sem endereço, o cliente envia o DHCPDISCOVER em broadcast (origem 0.0.0.0, destino 255.255.255.255, UDP 67), e o roteador não encaminha broadcast para outras sub-redes. Sem resposta, o Windows se autoatribui um endereço APIPA (169.254.0.0/16). O agente de retransmissão (o 'ip helper-address' de muitos equipamentos) na interface da VLAN 30 recebe o broadcast, preenche o campo giaddr com o endereço da interface e o encaminha em unicast ao servidor, que escolhe o escopo 10.30.0.0/24 a partir desse campo.",
+          "versaoInvertidaFalsa": "as mensagens DHCPDISCOVER são enviadas em unicast e atravessam normalmente o roteador; o problema está no esgotamento do escopo, que deve ser ampliado."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir o 169.254.x.x a escopo esgotado ou a DNS. Ele indica ausência de resposta DHCP: o Discover é broadcast, não atravessa roteadores e precisa de relay (giaddr). E o DHCP usa UDP 67/68, não TCP.",
+      "resumoFlashcard": {
+        "pergunta": "Por que estações de uma nova sub-rede recebem 169.254.x.x quando o servidor DHCP está em outra sub-rede?",
+        "resposta": "Porque o DHCPDISCOVER é enviado em broadcast e não atravessa o roteador; sem resposta, o Windows usa APIPA (169.254.0.0/16). A solução é configurar um agente de retransmissão DHCP na interface da sub-rede, que encaminha a mensagem ao servidor com o campo giaddr preenchido."
+      },
+      "conceitosChave": ["DHCP: processo DORA"],
+      "fundamentacao": "RFC 2131 (DHCP), seções 4.1 e 4.4.1 (broadcast do cliente e campo giaddr); RFC 1542 (agentes de retransmissão BOOTP/DHCP); RFC 3927 (endereços de enlace local 169.254.0.0/16)."
+    },
+    {
+      "id": "so-redes-045",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "HTTP/2, HTTP/3, HTTPS, SMTP, FTP e SSH",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Ao revisar a configuração HTTPS do portal do Tribunal, um técnico decidiu priorizar o TLS 1.3, cuja especificação vigente é o RFC 9846, publicado em 2026 em substituição ao RFC 8446, mantida a versão 1.3 do protocolo. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma auditoria de segurança dos serviços web de um órgão público, verificou-se a adoção do TLS 1.3, hoje especificado pelo RFC 9846 (2026), que substituiu o RFC 8446 sem alterar o número da versão. Considere as afirmativas abaixo.",
+        "Para elaborar um parecer sobre a configuração criptográfica de um sistema exposto à internet, um técnico estudou o TLS 1.3, especificado atualmente pelo RFC 9846, que tornou obsoleto o RFC 8446. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No TLS 1.3, foram removidas as trocas de chaves por RSA estático e por Diffie-Hellman estático, e toda troca de chaves baseada em chave pública passou a oferecer sigilo direto (forward secrecy).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A especificação removeu as suítes com RSA estático e com Diffie-Hellman estático; a troca de chaves por chave pública usa (EC)DHE efêmero. Assim, o vazamento futuro da chave privada do certificado, que apenas assina o handshake, não permite decifrar sessões já gravadas."
+        },
+        {
+          "texto": "O TLS 1.3 mantém, para compatibilidade, as suítes com cifras em modo CBC e a troca de chaves por RSA estático, oferecidas quando o cliente não suporta cifras AEAD.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O TLS 1.3 aceita somente algoritmos AEAD (como AES-GCM, ChaCha20-Poly1305 e AES-CCM) e removeu as cifras em modo CBC, o RC4 e o RSA estático. Não há modo de compatibilidade dentro do TLS 1.3; clientes antigos negociam uma versão anterior, se o servidor ainda a aceitar."
+        },
+        {
+          "texto": "O handshake completo do TLS 1.3 exige duas viagens de ida e volta (2-RTT), e o modo 0-RTT, por eliminar o risco de repetição, pode ser habilitado para quaisquer requisições.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O handshake completo do TLS 1.3 leva uma viagem de ida e volta (1-RTT), contra duas do TLS 1.2. O modo 0-RTT permite enviar dados iniciais na retomada, mas esses dados podem ser repetidos (replay) por um atacante e só devem ser aceitos para requisições idempotentes."
+        },
+        {
+          "texto": "No TLS 1.3, o certificado do servidor é enviado já cifrado, após a troca de chaves, o que reduz a exposição de metadados do handshake a observadores passivos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Depois do ServerHello, as mensagens do handshake, inclusive o certificado do servidor, seguem cifradas com chaves derivadas da troca (EC)DHE. No TLS 1.2, o certificado trafegava em claro."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: o TLS 1.3 não mantém suítes CBC nem troca de chaves por RSA estático, nem mesmo para compatibilidade, e só admite algoritmos AEAD."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a I (removidos o RSA e o Diffie-Hellman estáticos, a troca de chaves por chave pública sempre oferece sigilo direto) e a IV (o certificado do servidor trafega cifrado). A II é falsa porque o TLS 1.3 só admite cifras AEAD, sem CBC nem RSA estático, e a III, porque o handshake completo é de 1-RTT e o 0-RTT está sujeito a repetição.",
+          "versaoInvertidaFalsa": "No TLS 1.3, a troca de chaves por RSA estático continua permitida, de modo que o vazamento futuro da chave privada do certificado permite decifrar sessões já gravadas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: o TLS 1.3 aboliu o CBC e o RSA estático (II), e seu handshake completo é de 1-RTT, com o 0-RTT sujeito a ataques de repetição (III)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV estão corretas, mas a III é falsa: o handshake completo do TLS 1.3 leva 1-RTT, e o 0-RTT não elimina o risco de repetição dos dados iniciais; ao contrário, está sujeito a ele."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está correta, mas a III é falsa, e a alternativa omite a I, que descreve corretamente o sigilo direto obrigatório na troca de chaves do TLS 1.3."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao TLS 1.3 características do 1.2 (CBC, RSA estático, handshake de 2-RTT) e tratar o 0-RTT como seguro para qualquer requisição, quando ele está sujeito a ataques de repetição.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as principais mudanças do TLS 1.3 em relação ao TLS 1.2?",
+        "resposta": "Handshake de 1-RTT (com 0-RTT opcional, sujeito a repetição), troca de chaves sempre com sigilo direto, sem RSA estático, apenas cifras AEAD e certificado do servidor cifrado. A especificação vigente é o RFC 9846 (2026), que substituiu o RFC 8446."
+      },
+      "conceitosChave": ["TLS 1.3"],
+      "fundamentacao": "RFC 9846 (The Transport Layer Security Protocol Version 1.3, 2026), que tornou obsoleto o RFC 8446; no RFC 8446, seções 1.2 (diferenças em relação ao TLS 1.2) e 8 (0-RTT e proteção contra repetição); RFC 9325 (recomendações para uso seguro do TLS)."
+    },
+    {
+      "id": "so-redes-046",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "VPN, balanceamento de carga, proxies e firewalls",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que o Tribunal pretenda interligar sua sede a um site de contingência por meio de uma VPN IPsec entre os gateways das duas localidades, com tráfego que atravessa a internet e passa por equipamentos que fazem NAT. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma VPN IPsec site a site interligará os gateways da sede de um órgão público e de um site de contingência, com tráfego que cruza a internet e atravessa equipamentos de NAT. Considere as afirmativas abaixo.",
+        "Em uma auditoria da interligação entre a rede do Tribunal e a de um provedor de nuvem, feita por VPN IPsec entre gateways, com tradução de endereços no caminho, um técnico avaliou as seguintes afirmações. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O protocolo AH oferece autenticação e integridade e também cifra a carga útil, razão pela qual é preferido ao ESP em VPNs que atravessam NAT.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O AH (Authentication Header, protocolo IP 51) garante integridade e autenticação da origem, mas não cifra a carga útil. Por proteger também campos do cabeçalho IP externo, como os endereços, ele é incompatível com o NAT, que altera esses campos."
+        },
+        {
+          "texto": "Em uma VPN site a site entre gateways, usa-se tipicamente o modo túnel, no qual todo o pacote IP original é encapsulado e recebe um novo cabeçalho IP com os endereços dos gateways.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No modo túnel, o pacote original inteiro, com seu cabeçalho, vira carga protegida, e um novo cabeçalho IP é acrescentado com os endereços dos gateways. É o modo típico de VPNs site a site; o modo transporte, que protege só a carga, é usado entre hosts."
+        },
+        {
+          "texto": "O ESP provê confidencialidade, além de integridade e autenticação da origem dos dados.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O ESP (Encapsulating Security Payload, protocolo IP 50) cifra a carga útil e, em geral, também fornece integridade e autenticação da origem; por isso é o protocolo usado na prática nas VPNs IPsec."
+        },
+        {
+          "texto": "O IKE negocia as associações de segurança usando a porta TCP 443, a mesma do HTTPS, para facilitar a passagem por firewalls.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O IKE (Internet Key Exchange) usa UDP na porta 500 e, com NAT-T, a porta UDP 4500. A porta TCP 443 é a do HTTPS, usada por VPNs baseadas em TLS, e não pelo IKE padrão."
+        },
+        {
+          "texto": "Quando há NAT no caminho, usa-se o NAT Traversal (NAT-T), que encapsula os pacotes ESP em UDP na porta 4500.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O NAT Traversal detecta a presença de NAT durante o IKE e passa a encapsular os pacotes ESP em UDP na porta 4500, o que permite que os equipamentos de NAT os traduzam e encaminhem."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: o AH não oferece confidencialidade e não funciona através de NAT. Também omite a V, que descreve corretamente o NAT Traversal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Está incompleta: omite a V, que é verdadeira e decisiva no cenário, já que o caminho passa por equipamentos de NAT e o NAT-T encapsula o ESP em UDP na porta 4500."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: o IKE usa UDP na porta 500 (e 4500 com NAT-T), e não a porta TCP 443. Também omite a II, que é verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Junta as afirmativas falsas I e IV com a V e omite a II e a III, que descrevem corretamente o modo túnel e o ESP."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a II (modo túnel com novo cabeçalho IP entre os gateways, típico do site a site), a III (o ESP cifra e autentica) e a V (o NAT-T encapsula o ESP em UDP 4500). A I é falsa porque o AH não cifra e é incompatível com NAT, e a IV, porque o IKE usa UDP 500 (e 4500 com NAT-T), não TCP 443.",
+          "versaoInvertidaFalsa": "O ESP apenas autentica os pacotes, sem cifrá-los, e por isso a confidencialidade de uma VPN IPsec depende do protocolo AH."
+        }
+      ],
+      "pegadinhaFCC": "Achar que o AH cifra e funciona com NAT e que o IKE usa TCP 443. Na prática, a VPN site a site usa ESP em modo túnel, IKE em UDP 500 e NAT-T em UDP 4500.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as diferenças entre AH e ESP e entre os modos túnel e transporte do IPsec?",
+        "resposta": "O AH autentica e garante integridade sem cifrar e não convive com NAT; o ESP cifra e autentica. O modo túnel encapsula o pacote inteiro com novo cabeçalho IP (site a site), e o modo transporte protege só a carga (host a host)."
+      },
+      "conceitosChave": ["VPN: IPsec"],
+      "fundamentacao": "RFC 4301 (Security Architecture for the Internet Protocol); RFC 4302 (AH); RFC 4303 (ESP); RFC 7296 (IKEv2); RFC 3948 (encapsulamento de pacotes ESP em UDP, NAT-T)."
+    },
+    {
+      "id": "so-redes-047",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Redes sem fio",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em redes sem fio corporativas, a autenticação baseada no padrão IEEE 802.1X, usada no modo Enterprise do WPA2 e do WPA3, caracteriza-se por",
+      "variantesEnunciado": [
+        "A área de segurança de um órgão público exige que a rede sem fio corporativa identifique individualmente cada usuário, com credenciais integradas ao diretório institucional, e permita revogar o acesso de uma pessoa sem afetar as demais. A autenticação IEEE 802.1X, usada no modo Enterprise do WPA2 e do WPA3, atende a esse requisito porque se caracteriza por",
+        "Na comparação entre os modos Personal e Enterprise do WPA3 para a rede sem fio do Tribunal, um técnico destacou que a autenticação IEEE 802.1X, própria do modo Enterprise, caracteriza-se por"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "autenticar cada usuário ou dispositivo com credenciais individuais, validadas por um servidor de autenticação, em geral RADIUS, integrado ao diretório.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No 802.1X há três papéis: o suplicante (dispositivo), o autenticador (ponto de acesso ou controladora) e o servidor de autenticação, em geral RADIUS, que valida as credenciais via EAP, muitas vezes consultando o diretório (AD/LDAP) ou usando certificados (EAP-TLS). Cada usuário tem credencial própria, o que permite revogar acessos individualmente e registrar quem se conectou.",
+          "versaoInvertidaFalsa": "autenticar todos os usuários com uma única chave pré-compartilhada, configurada no ponto de acesso, dispensando servidor de autenticação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "usar uma única senha compartilhada por todos os usuários, distribuída pelo ponto de acesso a cada novo dispositivo conectado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Senha única compartilhada é característica do modo Personal (PSK no WPA2, SAE no WPA3). Ela não identifica o usuário e, quando alguém é desligado, exige trocar a senha de todos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "liberar o acesso com base apenas no endereço MAC das estações cadastradas, dispensando senhas, certificados digitais e servidores de autenticação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O filtro por endereço MAC é facilmente burlado, pois o MAC trafega em claro e pode ser clonado. Não é autenticação forte nem integra o 802.1X."
+        },
+        {
+          "id": "opt-4",
+          "texto": "ocultar o SSID da rede, impedindo que dispositivos não autorizados detectem a existência do ponto de acesso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ocultar o SSID não impede a descoberta da rede: o nome aparece em quadros trocados por clientes legítimos e pode ser capturado. É medida de obscuridade, não de autenticação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cifrar o tráfego com WEP e autenticar os usuários por meio do botão de pareamento WPS presente no ponto de acesso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O WEP é inseguro e obsoleto, e o WPS é um recurso de configuração simplificada com vulnerabilidades conhecidas, que convém desabilitar. Nenhum dos dois caracteriza o 802.1X."
+        }
+      ],
+      "pegadinhaFCC": "Confundir o 802.1X (credenciais individuais e servidor RADIUS) com a senha compartilhada do modo Personal ou com medidas fracas, como filtro de MAC e SSID oculto.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona a autenticação 802.1X em redes sem fio corporativas?",
+        "resposta": "O dispositivo (suplicante) se autentica, via EAP, junto a um servidor de autenticação (em geral RADIUS), intermediado pelo ponto de acesso (autenticador). Cada usuário tem credencial própria, integrada ao diretório ou baseada em certificado, o que permite revogar acessos individualmente."
+      },
+      "conceitosChave": ["Wi-Fi: WPA2 × WPA3"],
+      "fundamentacao": "IEEE Std 802.1X-2020 (controle de acesso à rede baseado em porta); RFC 3748 (EAP); RFC 2865 (RADIUS); RFC 3580 (uso do RADIUS com IEEE 802.1X); Wi-Fi Alliance, especificação WPA3 (modo Enterprise)."
+    },
+    {
+      "id": "so-redes-048",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Nuvem: IaaS, PaaS, SaaS e serverless",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI do Tribunal vai implementar uma rotina que converte em PDF os documentos enviados pelos jurisdicionados. O volume é imprevisível: há dias sem nenhum envio e picos de milhares de arquivos no fim dos prazos. Cada conversão leva poucos segundos, e a equipe não quer administrar servidores. Ao avaliar uma solução de computação serverless baseada em funções (FaaS), é correto afirmar que",
+      "variantesEnunciado": [
+        "Um órgão público precisa gerar miniaturas das imagens anexadas a processos eletrônicos. Há períodos sem nenhum anexo e outros com milhares por hora, cada processamento dura poucos segundos e a equipe não quer gerenciar servidores. Ao avaliar uma solução serverless baseada em funções (FaaS), é correto afirmar que",
+        "Considere uma rotina do Tribunal que valida arquivos de prestação de contas no momento em que são enviados, com demanda intermitente e picos concentrados no fim dos prazos, execuções de poucos segundos e equipe sem interesse em administrar servidores. Sobre a adoção de funções serverless (FaaS) para essa rotina, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a função mantém em memória o estado de uma execução para a seguinte, o que dispensa armazenar fora dela os dados intermediários do processamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Funções serverless devem ser tratadas como sem estado: uma instância pode ser descartada a qualquer momento, e execuções seguintes podem ocorrer em instâncias diferentes. Dados intermediários devem ficar em serviços externos, como armazenamento de objetos, filas ou bancos de dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o modelo é inadequado, pois a cobrança é feita por servidor provisionado e por hora, mesmo nos dias sem envio de documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No FaaS não se paga por servidor provisionado: a cobrança é por execução (número de invocações, duração e memória alocada). Nos dias sem envio, o custo de processamento tende a zero, o que favorece o cenário."
+        },
+        {
+          "id": "opt-3",
+          "texto": "não existem servidores físicos no modelo, razão pela qual o Tribunal deixa de ter qualquer responsabilidade sobre o código e os dados processados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Serverless' significa que os servidores são abstraídos e gerenciados pelo provedor, e não que inexistam. O Tribunal continua responsável pelo código da função, pelas permissões e pela proteção dos dados processados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a função é acionada por eventos, como o envio de um arquivo, escala automaticamente e é cobrada por execução, mas pode sofrer latência de partida a frio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No FaaS, o código roda em resposta a eventos (upload em um repositório de objetos, mensagem em fila, requisição HTTP); o provedor provisiona e escala as instâncias automaticamente, inclusive até zero, e cobra pelas invocações e pelo tempo e pela memória consumidos. Quando não há instância pronta, a primeira execução sofre a partida a frio (cold start), mitigável com instâncias pré-aquecidas ou concorrência provisionada. O perfil intermitente e de curta duração do cenário é típico do modelo.",
+          "versaoInvertidaFalsa": "a função é acionada por eventos e escala automaticamente, mas é cobrada por servidor provisionado e por hora, e não sofre latência de partida a frio."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a escala horizontal precisa ser configurada manualmente pela equipe, que deve criar novas instâncias da função antes de cada pico de envios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A escala automática, conforme o volume de eventos, é característica central do FaaS: o provedor cria e remove instâncias sem intervenção da equipe, respeitando eventuais limites de concorrência configurados."
+        }
+      ],
+      "pegadinhaFCC": "Achar que serverless não tem servidores nem responsabilidades, que mantém estado entre execuções ou que cobra por servidor provisionado. O modelo é orientado a eventos, cobra por execução e sofre partida a frio.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as características da computação serverless baseada em funções (FaaS)?",
+        "resposta": "Funções acionadas por eventos, sem gestão de servidores pelo cliente, escala automática (inclusive até zero) e cobrança por execução. São sem estado entre execuções e podem sofrer latência de partida a frio (cold start)."
+      },
+      "conceitosChave": ["Serverless: FaaS e cold start"],
+      "fundamentacao": "CNCF Serverless Working Group, 'CNCF Serverless Whitepaper v1.0' (2018), seções sobre FaaS, modelo orientado a eventos e partida a frio; NIST SP 800-145 (modelos de serviço), como referência de contraste."
+    },
+    {
+      "id": "so-redes-049",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Nuvem: IaaS, PaaS, SaaS e serverless",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em um estudo técnico preliminar para a contratação de serviços de computação em nuvem pelo Tribunal, um analista reuniu afirmações sobre os modelos de serviço e de implantação, tomando como referência o NIST SP 800-145. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Para subsidiar a contratação de serviços de nuvem por um órgão público, a equipe de planejamento analisou afirmações sobre modelos de serviço e de implantação à luz do NIST SP 800-145. Considere as afirmativas abaixo.",
+        "Em uma auditoria sobre a adoção de computação em nuvem por um jurisdicionado, um técnico de controle externo examinou as seguintes afirmações, tendo como referência a definição do NIST SP 800-145. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "No IaaS, o cliente provisiona processamento, armazenamento e rede e controla o sistema operacional e as aplicações implantadas, sem gerenciar a infraestrutura física subjacente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Pelo NIST, no IaaS o consumidor provisiona recursos fundamentais de computação e pode implantar e executar qualquer software, inclusive sistemas operacionais; controla sistema operacional, armazenamento e aplicações implantadas, mas não a infraestrutura de nuvem subjacente."
+        },
+        {
+          "texto": "No SaaS, o provedor assume integralmente a responsabilidade pela classificação dos dados inseridos pelos usuários e pela gestão das contas de acesso do contratante.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Mesmo no SaaS, a responsabilidade pelos dados (o que é inserido, sua classificação e seu uso) e pela gestão de usuários e acessos do contratante permanece com o cliente. O provedor responde pela aplicação e pela infraestrutura, e o NIST admite que o consumidor controle configurações limitadas, específicas de usuário."
+        },
+        {
+          "texto": "A nuvem comunitária é aquela oferecida ao público em geral, de forma aberta, por um provedor que atende a qualquer interessado.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A descrição é a da nuvem pública. A comunitária é provisionada para uso exclusivo de uma comunidade de organizações com interesses comuns (missão, requisitos de segurança, conformidade), podendo ser gerida por elas ou por terceiros."
+        },
+        {
+          "texto": "A nuvem híbrida combina duas ou mais infraestruturas distintas, que permanecem entidades únicas, interligadas por tecnologia que permite a portabilidade de dados e de aplicações, como no balanceamento de carga entre nuvens em picos de demanda.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a definição do NIST: composição de duas ou mais infraestruturas distintas (privada, comunitária ou pública) que permanecem entidades únicas, unidas por tecnologia padronizada ou proprietária que permite a portabilidade de dados e aplicações, como o cloud bursting."
+        },
+        {
+          "texto": "O serviço medido, uma das características essenciais da nuvem, permite monitorar, controlar e reportar o uso de recursos, com transparência para o provedor e para o consumidor.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O serviço medido (measured service) é uma das cinco características essenciais: o uso de recursos é medido em um nível de abstração adequado ao serviço, o que dá transparência a provedor e consumidor e sustenta a cobrança por uso."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: no SaaS, a responsabilidade pelos dados inseridos e pela gestão de contas do contratante não passa ao provedor. Também omite a V, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas (II e III) e omite a I e a IV, que descrevem corretamente o IaaS e a nuvem híbrida."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, IV e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a I (no IaaS, o cliente controla sistema operacional e aplicações, mas não a infraestrutura física), a IV (definição de nuvem híbrida, com portabilidade e cloud bursting) e a V (serviço medido). A II é falsa porque dados e acessos continuam sob responsabilidade do cliente no SaaS, e a III descreve a nuvem pública, e não a comunitária.",
+          "versaoInvertidaFalsa": "A nuvem híbrida exige que todas as infraestruturas envolvidas sejam do mesmo provedor e se fundam em uma única entidade, sem portabilidade de dados entre elas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que confunde a nuvem comunitária com a pública, e omite a I, que descreve corretamente o controle do cliente no IaaS."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a I, a IV e a V, mas inclui a II. A transferência integral da responsabilidade pelos dados e pelos acessos ao provedor não ocorre em nenhum modelo de serviço."
+        }
+      ],
+      "pegadinhaFCC": "Supor que o SaaS transfere ao provedor a responsabilidade pelos dados e acessos e confundir nuvem comunitária com pública. A híbrida exige infraestruturas distintas interligadas, com portabilidade.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os quatro modelos de implantação de nuvem do NIST SP 800-145?",
+        "resposta": "Privada (uso exclusivo de uma organização), comunitária (uso exclusivo de uma comunidade com interesses comuns), pública (aberta ao público em geral) e híbrida (composição de duas ou mais infraestruturas distintas interligadas, com portabilidade de dados e aplicações)."
+      },
+      "conceitosChave": ["Nuvem: NIST SP 800-145", "Nuvem: responsabilidade compartilhada"],
+      "fundamentacao": "NIST SP 800-145, The NIST Definition of Cloud Computing (2011), seção 2: 'Essential Characteristics' (measured service), 'Service Models' (SaaS, PaaS e IaaS) e 'Deployment Models' (private, community, public e hybrid cloud)."
+    },
+    {
+      "id": "so-redes-050",
+      "materiaSlug": "so-redes-nuvem",
+      "subtopico": "Escalabilidade, alta disponibilidade, nuvem híbrida e monitoramento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "O Tribunal planeja manter parte dos sistemas em seu datacenter e migrar outros para um provedor de nuvem pública, com monitoramento unificado de todo o ambiente. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um órgão público pretende adotar uma arquitetura de nuvem híbrida, mantendo sistemas legados em seu datacenter e novos serviços em nuvem pública, com monitoramento centralizado. Considere as afirmativas abaixo.",
+        "Na elaboração do plano de infraestrutura do Tribunal, que combina datacenter próprio e nuvem pública com uma plataforma única de monitoramento, um analista reuniu as seguintes afirmações. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Segundo o NIST, na nuvem híbrida o datacenter local e a nuvem pública se fundem em uma única infraestrutura, gerida exclusivamente pelo provedor, o que dispensa interligação por VPN ou por enlace dedicado.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pelo NIST, a nuvem híbrida é a composição de infraestruturas distintas que permanecem entidades únicas, interligadas por tecnologia que permite a portabilidade de dados e aplicações. Na prática, a integração entre o datacenter local e a nuvem pública exige conectividade, como VPN IPsec site a site ou enlace dedicado com o provedor."
+        },
+        {
+          "texto": "Distribuir as instâncias de uma aplicação entre duas zonas de disponibilidade da mesma região protege o serviço contra a falha de um datacenter, mas não contra um desastre que afete a região inteira.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Zonas de disponibilidade são datacenters isolados (energia, refrigeração e rede independentes) dentro de uma região. Distribuir instâncias entre zonas protege contra a falha de uma delas; contra desastres regionais, é preciso replicar em outra região."
+        },
+        {
+          "texto": "No Prometheus, a coleta de métricas segue predominantemente o modelo pull: o servidor consulta periodicamente os endpoints HTTP expostos pelos alvos monitorados ou por seus exporters.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Prometheus funciona predominantemente por coleta ativa (scraping): o servidor busca periodicamente as métricas expostas via HTTP pelos alvos ou por exporters. Para tarefas de curta duração existe o Pushgateway, que é exceção ao modelo."
+        },
+        {
+          "texto": "No SNMP, as versões 1 e 2c autenticam por meio de community string transmitida em texto claro, enquanto a versão 3 acrescenta autenticação de usuários e criptografia das mensagens.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No SNMPv1 e no SNMPv2c, a community string funciona como senha e trafega em claro. O SNMPv3 introduziu o modelo de segurança baseado em usuários (USM), com autenticação e criptografia, e por isso é a versão recomendada."
+        },
+        {
+          "texto": "Os quatro sinais de ouro do monitoramento, propostos no livro de SRE do Google, são disponibilidade, confidencialidade, integridade e autenticidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os quatro sinais de ouro do livro de SRE do Google são latência, tráfego, erros e saturação. Disponibilidade, confidencialidade, integridade e autenticidade são propriedades de segurança da informação."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que é falsa: as infraestruturas da nuvem híbrida permanecem distintas e precisam de interligação, como VPN ou enlace dedicado. Também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Estão corretas a II (zonas de disponibilidade protegem contra falha de datacenter, não contra desastre regional), a III (o Prometheus coleta métricas no modelo pull) e a IV (o SNMPv3 acrescenta autenticação e criptografia). A I é falsa porque, na nuvem híbrida, as infraestruturas permanecem distintas e precisam de interligação, e a V troca os sinais de ouro (latência, tráfego, erros e saturação) por propriedades de segurança.",
+          "versaoInvertidaFalsa": "Distribuir as instâncias entre duas zonas de disponibilidade da mesma região protege o serviço inclusive contra um desastre que torne indisponível a região inteira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Junta as afirmativas falsas I e V com a IV e deixa de fora a II e a III, que estão corretas. A nuvem híbrida exige interligação entre infraestruturas distintas, e os sinais de ouro são latência, tráfego, erros e saturação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a II, a III e a IV, mas inclui a V. Os sinais de ouro do monitoramento são latência, tráfego, erros e saturação, e não propriedades de segurança da informação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está correta, mas a V é falsa, pois troca os sinais de ouro por propriedades de segurança. A alternativa também omite a II e a IV, que descrevem corretamente as zonas de disponibilidade e o SNMPv3."
+        }
+      ],
+      "pegadinhaFCC": "Tratar a nuvem híbrida como fusão de infraestruturas sem necessidade de conectividade, achar que zonas de disponibilidade protegem contra desastre regional e confundir os sinais de ouro com propriedades de segurança.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os quatro sinais de ouro do monitoramento?",
+        "resposta": "Latência, tráfego, erros e saturação, propostos no livro de SRE do Google. Eles orientam o monitoramento de serviços voltados ao usuário e são complementados por logs e rastros (traces)."
+      },
+      "conceitosChave": ["Nuvem híbrida", "Monitoramento de infraestrutura"],
+      "fundamentacao": "NIST SP 800-145 (2011), seção 2, 'Hybrid cloud'; Beyer et al., Site Reliability Engineering (O'Reilly, 2016), capítulo 'Monitoring Distributed Systems' (quatro sinais de ouro); documentação do Prometheus ('Overview' e Pushgateway); RFC 3411 e RFC 3414 (arquitetura SNMP e modelo USM do SNMPv3)."
+    }
+  ]
+}
