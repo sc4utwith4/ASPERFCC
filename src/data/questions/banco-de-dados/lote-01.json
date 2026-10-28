@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "banco-de-dados",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "bd-001",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Modelo entidade-relacionamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No modelo entidade-relacionamento, considere a entidade DEPENDENTE, cujos registros só fazem sentido vinculados a um SERVIDOR e que, entre os dependentes de um mesmo servidor, são distinguidos apenas pelo nome. DEPENDENTE é classificada como entidade fraca porque",
+      "variantesEnunciado": [
+        "No projeto conceitual do sistema de diárias, a entidade PARCELA só existe vinculada a uma SOLICITACAO e é distinguida apenas pelo número da parcela dentro da respectiva solicitação. No modelo entidade-relacionamento, PARCELA é classificada como entidade fraca porque",
+        "Na modelagem do cadastro de obras fiscalizadas, a entidade MEDICAO é identificada pelo número sequencial da medição dentro de cada CONTRATO, número que se repete entre contratos diferentes. No modelo entidade-relacionamento, MEDICAO é classificada como entidade fraca porque"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "participa de forma parcial do relacionamento com a entidade proprietária, podendo existir sem ela desde que tenha um identificador próprio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A entidade fraca tem participação total no relacionamento identificador: não existe sem a proprietária. Além disso, se tivesse identificador próprio suficiente, seria entidade forte. A alternativa inverte as duas características."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é representada por um losango duplo e tem como chave primária um atributo multivalorado herdado da proprietária.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na notação de Chen, o losango duplo representa o relacionamento identificador; a entidade fraca é desenhada como retângulo duplo. Atributo multivalorado não serve de chave e, no mapeamento, vira tabela própria."
+        },
+        {
+          "id": "opt-3",
+          "texto": "não tem atributos suficientes para formar chave própria e é identificada pela combinação de sua chave parcial com a chave da entidade proprietária.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Entidade fraca é a que não possui chave própria. Ela é identificada pela chave parcial (discriminador, como o nome do dependente) somada à chave da entidade proprietária (a matrícula do servidor), por meio de um relacionamento identificador, no qual sua participação é total.",
+          "versaoInvertidaFalsa": "tem atributos suficientes para formar chave própria e é identificada apenas por sua chave parcial, sem depender da chave da entidade proprietária."
+        },
+        {
+          "id": "opt-4",
+          "texto": "possui poucos atributos, de modo que pode ser convertida em atributo composto da proprietária sem qualquer perda semântica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 'Fraca' não se refere à quantidade de atributos, e sim à dependência de identificação. Uma entidade fraca pode ter muitos atributos e participar de outros relacionamentos, o que um atributo composto não comporta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "resulta da especialização da entidade proprietária, da qual herda todos os atributos e a chave primária, acrescentando apenas os seus atributos específicos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve uma subclasse de especialização (relação 'é um'). DEPENDENTE não é um tipo de SERVIDOR; é outra entidade, que depende da chave do servidor para ser identificada."
+        }
+      ],
+      "pegadinhaFCC": "A banca associa 'fraca' a 'poucos atributos' ou a 'subclasse'. O critério é de identificação: a entidade fraca depende da chave da proprietária e tem participação total no relacionamento identificador.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza uma entidade fraca no modelo ER?",
+        "resposta": "É a entidade sem chave própria, identificada pela combinação de sua chave parcial (discriminador) com a chave da entidade proprietária, por meio de um relacionamento identificador. Sua participação nesse relacionamento é total."
+      },
+      "conceitosChave": ["MER: entidade fraca"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Modelagem de dados usando o modelo Entidade-Relacionamento', seção sobre tipos de entidade fraca; Chen (1976), The Entity-Relationship Model."
+    },
+    {
+      "id": "bd-002",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Normalização e desnormalização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na análise do banco de um sistema de contratos, um técnico do Tribunal encontra a tabela ITEM_CONTRATO (num_contrato, num_item, descricao_item, quantidade, cnpj_fornecedor, razao_social_fornecedor), com chave primária composta (num_contrato, num_item). Cada contrato tem um único fornecedor, e cada CNPJ corresponde a uma única razão social. Considerando que todos os atributos são atômicos, a forma normal mais baixa que a tabela deixa de atender e o motivo são:",
+      "variantesEnunciado": [
+        "Durante uma auditoria de sistemas, a equipe examina a tabela ITEM_CONTRATO (num_contrato, num_item, descricao_item, quantidade, cnpj_fornecedor, razao_social_fornecedor), cuja chave primária é (num_contrato, num_item). Sabe-se que cada contrato possui um só fornecedor e que cada CNPJ tem uma só razão social. Sendo atômicos todos os atributos, a forma normal mais baixa não atendida e o motivo são:",
+        "Considere a tabela ITEM_CONTRATO (num_contrato, num_item, descricao_item, quantidade, cnpj_fornecedor, razao_social_fornecedor), com chave primária (num_contrato, num_item), em que cada contrato está ligado a um único fornecedor e cada CNPJ determina uma única razão social. Admitindo atributos atômicos, a forma normal mais baixa que a tabela não atende e o motivo são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "2FN, pois cnpj_fornecedor e razao_social_fornecedor dependem apenas de num_contrato, parte da chave primária composta.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A 2FN proíbe que atributo não chave dependa de parte de uma chave candidata. Como cada contrato tem um único fornecedor, num_contrato → cnpj_fornecedor e, por extensão, → razao_social_fornecedor: dependência parcial. A correção começa levando esses atributos para uma tabela CONTRATO; depois, a razão social vai para FORNECEDOR, resolvendo também a transitividade.",
+          "versaoInvertidaFalsa": "3FN, pois a tabela atende à 2FN, já que cnpj_fornecedor e razao_social_fornecedor dependem da chave primária composta inteira, e não de parte dela."
+        },
+        {
+          "id": "opt-2",
+          "texto": "3FN apenas, pois razao_social_fornecedor depende transitivamente da chave via cnpj_fornecedor, sem haver dependência parcial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A dependência transitiva cnpj_fornecedor → razao_social_fornecedor existe, mas não é a única violação: há dependência parcial de num_contrato, o que já reprova a 2FN. A pergunta pede a forma normal mais baixa não atendida."
+        },
+        {
+          "id": "opt-3",
+          "texto": "1FN, pois tabelas com chave primária composta violam a exigência de atomicidade dos atributos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 1FN exige atributos atômicos e ausência de grupos repetidos; chave composta não tem relação com atomicidade. O enunciado ainda afirma que todos os atributos são atômicos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "BCNF apenas, pois a tabela atende à 3FN e o único problema é cnpj_fornecedor ser determinante sem ser superchave.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A tabela não atende nem à 2FN nem à 3FN. A violação da BCNF existe, mas é consequência das anteriores; afirmar que a 3FN está atendida é o erro."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma até a 3FN, pois todos os atributos não chave dependem, direta ou indiretamente, da chave primária.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Depender 'de algum modo' da chave não basta. A 2FN exige dependência da chave inteira, e a 3FN proíbe dependências transitivas de atributos não primos. A alternativa confunde dependência com dependência total e direta."
+        }
+      ],
+      "pegadinhaFCC": "Há duas anomalias na tabela (parcial e transitiva), e a banca oferece a 3FN como distrator. Como a pergunta é pela forma normal MAIS BAIXA violada, a dependência parcial decide: 2FN.",
+      "resumoFlashcard": {
+        "pergunta": "Quando uma tabela em 1FN viola a 2FN?",
+        "resposta": "Quando algum atributo não primo depende de apenas parte de uma chave candidata composta (dependência parcial). Só tabelas com chave composta podem violar a 2FN."
+      },
+      "conceitosChave": ["Normalização: 2FN", "Dependência funcional"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Fundamentos de dependências funcionais e normalização', seções sobre 2FN e 3FN; Date, Introdução a Sistemas de Bancos de Dados, cap. sobre normalização."
+    },
+    {
+      "id": "bd-003",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico do Tribunal precisa listar todos os órgãos jurisdicionados com a quantidade de auditorias realizadas em 2025, inclusive os que não tiveram nenhuma. A tabela ORGAO contém os órgãos 1-Saúde, 2-Educação, 3-Obras e 4-Cultura, e a tabela AUDITORIA (id, orgao_id, ano) contém as linhas (10, 1, 2024), (11, 1, 2025), (12, 1, 2025), (13, 2, 2024) e (14, 3, 2025). Ele escreveu: SELECT o.nome, COUNT(a.id) FROM orgao o LEFT JOIN auditoria a ON a.orgao_id = o.id WHERE a.ano = 2025 GROUP BY o.nome; A quantidade de linhas retornadas e um ajuste que faz a consulta atingir o objetivo são, respectivamente,",
+      "variantesEnunciado": [
+        "Para um painel da unidade de fiscalização, deseja-se exibir cada órgão jurisdicionado com o número de auditorias de 2025, mostrando zero para os não auditados. As tabelas ORGAO (1-Saúde, 2-Educação, 3-Obras, 4-Cultura) e AUDITORIA (id, orgao_id, ano), com as linhas (10, 1, 2024), (11, 1, 2025), (12, 1, 2025), (13, 2, 2024) e (14, 3, 2025), foram consultadas com: SELECT o.nome, COUNT(a.id) FROM orgao o LEFT JOIN auditoria a ON a.orgao_id = o.id WHERE a.ano = 2025 GROUP BY o.nome; A quantidade de linhas retornadas e um ajuste que faz a consulta atingir o objetivo são, respectivamente,",
+        "Na revisão de código de um relatório gerencial, um analista encontra a consulta SELECT o.nome, COUNT(a.id) FROM orgao o LEFT JOIN auditoria a ON a.orgao_id = o.id WHERE a.ano = 2025 GROUP BY o.nome; cujo objetivo é mostrar todos os órgãos, inclusive os sem auditoria em 2025. ORGAO tem 1-Saúde, 2-Educação, 3-Obras e 4-Cultura; AUDITORIA (id, orgao_id, ano) tem (10, 1, 2024), (11, 1, 2025), (12, 1, 2025), (13, 2, 2024) e (14, 3, 2025). A quantidade de linhas retornadas e um ajuste que faz a consulta atingir o objetivo são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "4 linhas; nenhum ajuste, pois o LEFT JOIN preserva todos os órgãos mesmo com o filtro no WHERE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O LEFT JOIN preserva os órgãos sem correspondência preenchendo as colunas de AUDITORIA com NULL. Em seguida, o WHERE testa a.ano = 2025, que resulta em UNKNOWN para NULL e descarta essas linhas. Sobram Saúde e Obras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "2 linhas; trocar o LEFT JOIN por INNER JOIN, que preserva os órgãos sem auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A contagem de 2 linhas está certa, mas a correção está errada: o INNER JOIN devolve só os pares com correspondência e, portanto, também omite Educação e Cultura. A alternativa atribui ao INNER JOIN a característica do OUTER JOIN."
+        },
+        {
+          "id": "opt-3",
+          "texto": "2 linhas; mover a condição para a cláusula ON e trocar COUNT(a.id) por COUNT(*).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mover o filtro para o ON resolve a preservação dos órgãos, mas COUNT(*) conta a linha preenchida com NULL. Educação e Cultura apareceriam com 1 auditoria em vez de 0 (resultado conferido em execução). COUNT(a.id) ignora NULL e é o correto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "2 linhas; mover a condição a.ano = 2025 para a cláusula ON do LEFT JOIN, mantendo COUNT(a.id).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Com o filtro no WHERE, as linhas com NULL geradas pelo LEFT JOIN são descartadas e restam Saúde (2) e Obras (1). Colocando a.ano = 2025 no ON, a condição passa a restringir apenas quais auditorias se juntam, e todos os órgãos permanecem: Saúde 2, Obras 1, Educação 0 e Cultura 0, já que COUNT(a.id) não conta NULL.",
+          "versaoInvertidaFalsa": "4 linhas; manter a condição a.ano = 2025 no WHERE, pois ali ela restringe só as auditorias e preserva os órgãos sem correspondência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "3 linhas; trocar o LEFT JOIN por RIGHT JOIN, mantendo o filtro no WHERE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A consulta original retorna 2 linhas, não 3. O RIGHT JOIN preservaria as auditorias sem órgão, e não os órgãos sem auditoria; com o filtro no WHERE, continuariam só Saúde e Obras."
+        }
+      ],
+      "pegadinhaFCC": "Filtro sobre a tabela da direita colocado no WHERE anula o efeito do LEFT JOIN. A segunda armadilha é o COUNT(*), que conta a linha de NULLs e mostra 1 onde deveria haver 0.",
+      "resumoFlashcard": {
+        "pergunta": "Por que um filtro sobre a tabela da direita no WHERE anula um LEFT JOIN?",
+        "resposta": "Porque as linhas preservadas pelo LEFT JOIN têm NULL nas colunas da direita, e a condição no WHERE resulta em UNKNOWN e as descarta. Para preservá-las, o filtro vai para o ON, e a contagem usa COUNT(coluna_da_direita)."
+      },
+      "conceitosChave": ["SQL: OUTER JOIN", "SQL: NULL e lógica de três valores"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Joined Tables' (cláusula ON × WHERE) e 'Aggregate Functions' (COUNT); resultado conferido em sqlite3 3.45.1 com os dados do enunciado."
+    },
+    {
+      "id": "bd-004",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Álgebra relacional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na álgebra relacional, considerando a relação FORNECEDOR (cnpj, nome, uf), a expressão π nome (σ uf = 'GO' (FORNECEDOR)) produz",
+      "variantesEnunciado": [
+        "Considere a relação FORNECEDOR (cnpj, nome, uf), mantida no cadastro de licitantes. Na álgebra relacional, a expressão π nome (σ uf = 'GO' (FORNECEDOR)) produz",
+        "Ao estudar a base teórica das consultas usadas em auditorias, um técnico analisa, sobre a relação FORNECEDOR (cnpj, nome, uf), a expressão π nome (σ uf = 'GO' (FORNECEDOR)). Essa expressão produz"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "todos os atributos dos fornecedores de GO, pois a projeção filtra tuplas e a seleção escolhe os atributos exibidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os papéis dos operadores: a seleção (σ) filtra tuplas por uma condição, e a projeção (π) escolhe atributos. O resultado tem apenas o atributo nome."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os nomes, sem repetição, dos fornecedores de GO, pois a seleção filtra tuplas e a projeção escolhe atributos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A seleção σ uf = 'GO' mantém só as tuplas de fornecedores goianos; a projeção π nome mantém só o atributo nome. Como a álgebra relacional trabalha com conjuntos, a projeção elimina duplicatas, o que em SQL corresponde a SELECT DISTINCT nome FROM fornecedor WHERE uf = 'GO'.",
+          "versaoInvertidaFalsa": "os atributos cnpj e uf dos fornecedores de GO, pois a projeção π nome exclui do resultado o atributo indicado e mantém os demais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os nomes de todos os fornecedores, acrescidos de uma coluna que indica se a UF é GO.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A seleção não cria colunas indicadoras: ela descarta as tuplas que não satisfazem a condição. Fornecedores de outras UFs não aparecem no resultado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "os nomes dos fornecedores de GO com eventuais repetições, pois a projeção preserva duplicatas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No modelo relacional formal, relações são conjuntos, e a projeção elimina tuplas repetidas. Quem preserva duplicatas é o SELECT do SQL sem DISTINCT, que trabalha com multiconjuntos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o produto cartesiano entre os nomes e as UFs dos fornecedores, restrito às combinações com GO.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há produto cartesiano (×) na expressão. Ela aplica uma seleção e, sobre o resultado, uma projeção, ambas operações unárias sobre a mesma relação."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os papéis de σ (linhas) e π (colunas) e explora a diferença entre a projeção da álgebra, que elimina duplicatas, e o SELECT do SQL, que as mantém sem DISTINCT.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre seleção (σ) e projeção (π) na álgebra relacional?",
+        "resposta": "A seleção filtra tuplas que satisfazem uma condição (equivale ao WHERE). A projeção escolhe atributos e, por operar sobre conjuntos, elimina duplicatas (equivale a SELECT DISTINCT colunas)."
+      },
+      "conceitosChave": ["Álgebra relacional: seleção e projeção"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Álgebra e cálculo relacional', operações SELEÇÃO e PROJEÇÃO; Codd (1970), A Relational Model of Data for Large Shared Data Banks."
+    },
+    {
+      "id": "bd-005",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Transações e propriedades ACID",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na homologação do módulo de execução orçamentária, uma transação transfere saldo entre duas dotações: debita a dotação de origem e credita a de destino. A equipe de TI analisa as propriedades ACID envolvidas. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um teste de recuperação após falha, a equipe de TI executa uma transação que transfere saldo entre duas dotações orçamentárias, com débito na origem e crédito no destino, e avalia as propriedades ACID. Considere as afirmativas abaixo.",
+        "Considere uma transação do sistema de execução orçamentária que debita a dotação de origem e credita a de destino em uma mesma unidade de trabalho. Sobre as propriedades ACID dessa transferência, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Se o servidor cair depois do débito e antes do crédito, a atomicidade exige que, na recuperação, o débito isolado seja desfeito.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Atomicidade é o 'tudo ou nada': uma transação não confirmada tem seus efeitos parciais desfeitos (undo) na recuperação."
+        },
+        {
+          "texto": "A durabilidade é a propriedade que impede outra transação concorrente de enxergar o saldo da origem já debitado e ainda não confirmado.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Ocultar resultados intermediários de transações concorrentes é papel do isolamento. A durabilidade trata da permanência do que já foi confirmado."
+        },
+        {
+          "texto": "A consistência exige que a transação leve o banco de um estado válido a outro, respeitando as restrições declaradas, como chaves e cláusulas CHECK.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A consistência preserva as regras de integridade: ao fim da transação, as restrições e invariantes do banco continuam válidas."
+        },
+        {
+          "texto": "O isolamento assegura que, depois do COMMIT, a transferência sobreviva a uma falha posterior do servidor, pois os dados ficam registrados no log.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Sobreviver a falhas após o COMMIT é a durabilidade, apoiada no log de transações (WAL, redo). O isolamento trata da interferência entre transações concorrentes."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é verdadeira, mas a II atribui à durabilidade a função do isolamento. Quem impede a leitura de dados não confirmados é o isolamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas escolhidas são justamente as falsas: II e IV trocam entre si as definições de isolamento e durabilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão certas, mas a IV descreve a durabilidade e a atribui ao isolamento. A permanência após o COMMIT, mesmo diante de falhas, é a durabilidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III está certa, mas a I também está: desfazer o débito isolado de uma transação interrompida é exatamente a exigência da atomicidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I descreve a atomicidade (tudo ou nada) e III, a consistência (de um estado válido a outro). II e IV trocam isolamento e durabilidade: o isolamento oculta resultados não confirmados de transações concorrentes, e a durabilidade mantém o que foi confirmado mesmo após falhas.",
+          "versaoInvertidaFalsa": "Se o servidor cair depois do débito e antes do crédito, a atomicidade exige que, na recuperação, o débito seja mantido e o crédito seja concluído automaticamente."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as definições de isolamento e durabilidade, as duas propriedades mais confundidas. O que se vê durante a transação é isolamento; o que permanece depois do COMMIT é durabilidade.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre isolamento e durabilidade nas propriedades ACID?",
+        "resposta": "Isolamento: transações concorrentes não interferem umas nas outras nem enxergam resultados intermediários não confirmados. Durabilidade: o que foi confirmado (COMMIT) permanece mesmo após falhas, graças ao log."
+      },
+      "conceitosChave": ["ACID: atomicidade", "ACID: isolamento", "ACID: durabilidade"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Introdução aos conceitos e teoria do processamento de transações', propriedades desejáveis das transações; Silberschatz, Korth & Sudarshan, Sistema de Banco de Dados, cap. 'Transações'."
+    },
+    {
+      "id": "bd-006",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Índices e otimização de consultas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No banco do sistema de empenhos, a tabela EMPENHO tem o índice B-tree composto idx_emp (orgao_id, exercicio), nessa ordem. Três consultas frequentes usam os filtros: Q1 – WHERE orgao_id = 52 AND exercicio = 2025; Q2 – WHERE orgao_id = 52; Q3 – WHERE exercicio = 2025. À luz da regra do prefixo à esquerda, é correto concluir que",
+      "variantesEnunciado": [
+        "Em uma avaliação de desempenho do banco do sistema de empenhos, um técnico verifica que a tabela EMPENHO possui o índice B-tree composto idx_emp (orgao_id, exercicio), nessa ordem, e que as consultas mais comuns filtram por: Q1 – WHERE orgao_id = 52 AND exercicio = 2025; Q2 – WHERE orgao_id = 52; Q3 – WHERE exercicio = 2025. Aplicando a regra do prefixo à esquerda, é correto concluir que",
+        "Considere a tabela EMPENHO, indexada por idx_emp (orgao_id, exercicio) em B-tree, e as condições de busca Q1 – WHERE orgao_id = 52 AND exercicio = 2025; Q2 – WHERE orgao_id = 52; Q3 – WHERE exercicio = 2025. Segundo a regra do prefixo à esquerda, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "somente Q1 aproveita o índice, pois um índice composto só é utilizado quando todas as suas colunas aparecem no WHERE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um índice composto pode ser usado com qualquer prefixo de suas colunas. Q2, que filtra só pela coluna líder, também delimita a faixa do índice. A exigência de todas as colunas é uma generalização indevida."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Q3 é a mais favorecida, pois o otimizador percorre as colunas de um índice composto da direita para a esquerda.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As entradas de um B-tree composto são ordenadas primeiro pela primeira coluna, depois pela segunda. Por isso as condições sobre as colunas iniciais (à esquerda) é que delimitam a varredura."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Q1 e Q2 restringem a coluna líder e podem delimitar a faixa do índice a percorrer; Q3 é a menos favorecida, e um índice iniciado por exercicio a atenderia melhor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O B-tree composto ordena por orgao_id e, dentro de cada valor, por exercicio. Condições de igualdade nas colunas iniciais delimitam a parte do índice lida: Q1 usa as duas colunas e Q2 a coluna líder. Q3 não restringe a coluna líder e, em regra, é a menos atendida; recursos como o skip scan (PostgreSQL 18, Oracle) atenuam isso, mas um índice iniciado por exercicio continua sendo a solução mais direta.",
+          "versaoInvertidaFalsa": "Q3 é a mais favorecida e Q2 a menos favorecida, pois o índice composto é ordenado primeiro por exercicio, a última coluna declarada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as três consultas são igualmente favorecidas, pois a ordem das colunas em um índice composto é irrelevante para o otimizador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem das colunas é decisiva em um índice composto: ela define a ordenação das entradas e, por consequência, quais condições delimitam a varredura. Por isso se recomenda iniciar o índice pelas colunas mais usadas em igualdade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Q2 não pode usar o índice, porque, declarado com duas colunas, ele exige igualdade sobre exercicio; seria indispensável um índice só em orgao_id.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Q2 filtra pela coluna líder e é atendida pelo próprio idx_emp. Um índice separado só em orgao_id seria redundante, com custo extra em INSERT, UPDATE e DELETE."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte a regra (direita para a esquerda) ou a exagera ('só com todas as colunas'). O índice composto atende melhor às condições sobre o prefixo à esquerda; o skip scan é exceção pontual, não a regra.",
+      "resumoFlashcard": {
+        "pergunta": "O que diz a regra do prefixo à esquerda em índices compostos?",
+        "resposta": "Um índice B-tree (a, b, c) é mais eficiente para condições sobre a, sobre a e b, ou sobre a, b e c. Condições só sobre b ou c não delimitam a faixa lida da mesma forma; técnicas como o skip scan apenas atenuam essa limitação."
+      },
+      "conceitosChave": ["Índice composto: prefixo à esquerda"],
+      "fundamentacao": "Documentação do PostgreSQL 18, seção 'Multicolumn Indexes' (eficiência com restrições nas colunas iniciais e skip scan); notas de versão do PostgreSQL 18 ('Allow skip scans of btree indexes')."
+    },
+    {
+      "id": "bd-007",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Procedures, triggers e views",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "No banco do sistema de diárias, um desenvolvedor precisa: (1) corrigir ou descartar cada linha com valor negativo antes que ela seja gravada; (2) registrar uma única entrada de auditoria por comando de carga, qualquer que seja o número de linhas afetadas; (3) recalcular um saldo para cada linha alterada. Para isso, usará, respectivamente, um trigger ……, um trigger declarado …… e um trigger declarado ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Para o módulo de ressarcimentos, a equipe de banco de dados define três automatismos: (1) ajustar ou descartar cada linha com valor inválido antes que ela seja gravada; (2) gravar um único registro de log por comando de importação, independentemente do número de linhas; (3) atualizar um totalizador para cada linha modificada. Serão usados, respectivamente, um trigger ……, um trigger declarado …… e um trigger declarado ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Em um sistema de controle de suprimentos, é preciso: (1) normalizar ou rejeitar cada linha com quantidade negativa antes de sua gravação; (2) registrar um único evento por comando de atualização em massa, ainda que nenhuma linha seja afetada; (3) atualizar o estoque para cada linha alterada. Para isso, usam-se, respectivamente, um trigger ……, um trigger declarado …… e um trigger declarado ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "BEFORE − FOR EACH STATEMENT − FOR EACH ROW",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Só o trigger BEFORE de linha pode alterar a linha (NEW) ou descartá-la antes da gravação (no PostgreSQL, retornando NULL). O trigger FOR EACH STATEMENT dispara uma vez por comando, mesmo que nenhuma linha seja afetada, o que serve para o registro único. O FOR EACH ROW dispara uma vez por linha alterada.",
+          "versaoInvertidaFalsa": "AFTER − FOR EACH ROW − FOR EACH STATEMENT"
+        },
+        {
+          "id": "opt-2",
+          "texto": "AFTER − FOR EACH ROW − FOR EACH STATEMENT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O trigger AFTER dispara depois da operação e não consegue corrigir a linha antes da gravação. Além disso, as duas últimas lacunas estão trocadas: o registro único por comando exige FOR EACH STATEMENT."
+        },
+        {
+          "id": "opt-3",
+          "texto": "BEFORE − FOR EACH ROW − FOR EACH STATEMENT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas as outras estão invertidas. FOR EACH ROW dispararia uma vez por linha, gerando várias entradas de auditoria em vez de uma por comando."
+        },
+        {
+          "id": "opt-4",
+          "texto": "INSTEAD OF − FOR EACH STATEMENT − FOR EACH ROW",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Triggers INSTEAD OF substituem a operação e, no PostgreSQL, só podem ser definidos em views e por linha. Para validar linhas de uma tabela antes da gravação, usa-se BEFORE."
+        },
+        {
+          "id": "opt-5",
+          "texto": "AFTER − FOR EACH STATEMENT − FOR EACH ROW",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas últimas lacunas estão certas, mas o AFTER executa depois da gravação: não pode mais alterar NEW nem descartar a linha. Ele poderia, no máximo, gerar erro e desfazer o comando inteiro."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca FOR EACH ROW e FOR EACH STATEMENT e oferece AFTER ou INSTEAD OF para a validação prévia. Quem altera ou descarta a linha antes de gravá-la é o BEFORE de linha.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre triggers FOR EACH ROW e FOR EACH STATEMENT?",
+        "resposta": "FOR EACH ROW dispara uma vez para cada linha afetada. FOR EACH STATEMENT dispara uma vez por comando, mesmo que nenhuma linha seja afetada. Só o BEFORE de linha pode alterar ou descartar a linha antes da gravação."
+      },
+      "conceitosChave": ["Trigger: BEFORE × AFTER", "Trigger: por linha × por instrução"],
+      "fundamentacao": "Documentação do PostgreSQL 18, CREATE TRIGGER (FOR EACH ROW × FOR EACH STATEMENT; INSTEAD OF apenas em views) e 'Overview of Trigger Behavior' (retorno NULL em trigger BEFORE de linha)."
+    },
+    {
+      "id": "bd-008",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "PostgreSQL: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A tabela TRAMITACAO do sistema de processos eletrônicos, hospedada em PostgreSQL, recebe milhares de UPDATE por hora. Após a exclusão de registros antigos, o espaço ocupado em disco não diminuiu, e o DBA cogita executar VACUUM FULL em horário comercial. Sobre a situação, é correto afirmar que",
+      "variantesEnunciado": [
+        "No PostgreSQL que hospeda o sistema de protocolo, a tabela MOVIMENTACAO sofre atualizações contínuas. Mesmo depois de excluídos os registros de exercícios encerrados, o tamanho da tabela em disco não caiu, e cogita-se rodar VACUUM FULL durante o expediente. Sobre a situação, é correto afirmar que",
+        "Um técnico observa que uma tabela de logs de acesso, em PostgreSQL, continua ocupando o mesmo espaço em disco depois de uma limpeza com DELETE, apesar das atualizações frequentes. A equipe propõe executar VACUUM FULL no meio do dia. Sobre a situação, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o DELETE remove fisicamente as linhas no COMMIT, de modo que o espaço retido decorre só dos índices, recuperável com o comando ANALYZE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No MVCC do PostgreSQL, DELETE e UPDATE deixam versões mortas das linhas, que só são tratadas pelo VACUUM. O ANALYZE apenas coleta estatísticas para o planejador e não libera espaço."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o VACUUM FULL usa o mesmo bloqueio do VACUUM comum e pode rodar junto com INSERT, UPDATE e DELETE, sendo a opção preferencial na rotina diária.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O VACUUM FULL reescreve a tabela e exige bloqueio ACCESS EXCLUSIVE, que impede até leituras. A documentação recomenda usar o VACUUM comum na rotina e evitar o VACUUM FULL."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o autovacuum, quando habilitado, executa VACUUM FULL periodicamente, e o espaço será devolvido ao sistema operacional sem intervenção do administrador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O autovacuum executa VACUUM comum e ANALYZE, nunca VACUUM FULL. Ele torna o espaço reutilizável pela própria tabela, mas, em regra, não o devolve ao sistema operacional."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o VACUUM comum torna reutilizável o espaço das versões mortas sem, em regra, devolvê-lo ao sistema operacional e roda com a operação normal; o VACUUM FULL devolve o espaço, mas exige bloqueio exclusivo da tabela.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O VACUUM comum marca o espaço das versões mortas para reutilização e convive com SELECT, INSERT, UPDATE e DELETE; só devolve espaço ao sistema operacional quando páginas do fim da tabela ficam vazias. O VACUUM FULL reescreve a tabela de forma compacta, mas exige ACCESS EXCLUSIVE e bloqueia o uso da tabela, por isso não convém em horário comercial.",
+          "versaoInvertidaFalsa": "o VACUUM comum devolve sempre ao sistema operacional o espaço das versões mortas e bloqueia a tabela; o VACUUM FULL apenas marca o espaço para reutilização e roda com a operação normal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as versões antigas das linhas ficam em um tablespace de undo separado, como no Oracle, e basta ampliá-lo para a tabela parar de crescer.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O PostgreSQL não usa segmentos de undo: as versões antigas ficam na própria tabela, e é por isso que ela incha com UPDATE e DELETE. A alternativa transplanta para o PostgreSQL a arquitetura do Oracle."
+        }
+      ],
+      "pegadinhaFCC": "A banca supõe que o DELETE libera espaço na hora, que o autovacuum faz VACUUM FULL ou que o PostgreSQL tem undo como o Oracle. O ponto decisivo é o bloqueio exclusivo do VACUUM FULL.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre VACUUM e VACUUM FULL no PostgreSQL?",
+        "resposta": "O VACUUM comum torna reutilizável o espaço das versões mortas, convive com a operação normal e, em regra, não devolve espaço ao sistema operacional. O VACUUM FULL reescreve a tabela e devolve o espaço, mas exige bloqueio ACCESS EXCLUSIVE."
+      },
+      "conceitosChave": ["PostgreSQL: VACUUM e autovacuum", "MVCC"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Routine Vacuuming' (seções 'Vacuuming Basics' e 'Recovering Disk Space'), que descreve o bloqueio ACCESS EXCLUSIVE do VACUUM FULL."
+    },
+    {
+      "id": "bd-009",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Oracle Database: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na arquitetura de memória do Oracle Database, a SGA (System Global Area) e a PGA (Program Global Area) distinguem-se porque",
+      "variantesEnunciado": [
+        "Um técnico que acompanha a sustentação de um banco Oracle precisa distinguir as áreas de memória da instância. A SGA (System Global Area) e a PGA (Program Global Area) diferenciam-se porque",
+        "Ao analisar um relatório de uso de memória de uma instância Oracle Database, um analista compara a SGA (System Global Area) com a PGA (Program Global Area). Essas áreas diferenciam-se porque"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a PGA é compartilhada por todas as sessões e contém o database buffer cache, enquanto a SGA é privativa de cada processo servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte as duas áreas. O database buffer cache, que guarda blocos lidos dos arquivos de dados, fica na SGA, compartilhada; a PGA é que é privativa de cada processo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a SGA é compartilhada pelos processos da instância e abriga o buffer cache e o shared pool, enquanto a PGA é privativa de cada processo servidor.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A SGA é a memória compartilhada da instância. Entre seus componentes estão o database buffer cache (blocos de dados), o shared pool (SQL e PL/SQL analisados e dicionário em cache) e o redo log buffer. A PGA pertence a um único processo servidor ou de segundo plano e guarda, por exemplo, áreas de ordenação e de hash.",
+          "versaoInvertidaFalsa": "a PGA é compartilhada pelos processos da instância e contém o buffer cache, o shared pool e o redo log buffer, e a SGA é privativa de cada processo servidor."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a SGA corresponde aos arquivos de dados e de controle mantidos em disco, enquanto a PGA corresponde à memória usada pelos processos de segundo plano.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. SGA e PGA são áreas de memória, não arquivos. Data files, control files e redo log files compõem o banco em disco; a instância é formada pela memória (SGA) e pelos processos de segundo plano."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a PGA abriga o redo log buffer gravado pelo LGWR, enquanto a SGA guarda somente o dicionário de dados da sessão corrente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O redo log buffer fica na SGA, de onde o LGWR o grava nos arquivos de redo log online. A SGA não se restringe ao dicionário de dados nem pertence a uma sessão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a SGA é alocada no início de cada sessão e liberada ao seu término, enquanto a PGA é criada uma só vez na inicialização da instância.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: a SGA é alocada quando a instância é iniciada e liberada quando ela é encerrada; a PGA é criada para cada processo e liberada com ele."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca SGA e PGA. Memorize: S de shared (compartilhada, da instância); P de private/process (privativa de cada processo).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre SGA e PGA no Oracle Database?",
+        "resposta": "A SGA é memória compartilhada da instância (buffer cache, shared pool, redo log buffer, large pool). A PGA é memória privativa de cada processo servidor, usada em áreas de ordenação, hash e dados da sessão."
+      },
+      "conceitosChave": ["Oracle: SGA × PGA"],
+      "fundamentacao": "Oracle Database Concepts (26ai), cap. 'Memory Architecture', seções 'Overview of the System Global Area (SGA)' e 'Overview of the Program Global Area (PGA)'."
+    },
+    {
+      "id": "bd-010",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "NoSQL: documentos, chave-valor, wide-column e grafos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O portal de serviços do Tribunal precisa armazenar sessões de usuários e manter em cache os resultados de consultas frequentes, com leitura e escrita de baixa latência por chave e descarte automático de cada item após um prazo definido. A opção tecnicamente mais adequada é um banco",
+      "variantesEnunciado": [
+        "Para acelerar o sistema de consulta processual, a equipe de TI quer guardar em cache respostas de consultas repetidas e tokens de sessão, com acesso em memória por chave e remoção automática de cada item após um prazo definido. A opção tecnicamente mais adequada é um banco",
+        "Um serviço interno de autenticação precisa armazenar códigos temporários de verificação, consultados por chave, com baixíssima latência e expiração automática após poucos minutos. A opção tecnicamente mais adequada é um banco"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "orientado a grafos, como o Neo4j, pois as sessões são relacionamentos entre usuários e páginas que exigem travessias em profundidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bancos de grafos se destacam em consultas que percorrem relacionamentos (redes de vínculos, recomendações). Sessões e cache são acessados por chave, sem travessias, e não aproveitam esse modelo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "orientado a documentos, como o MongoDB, pois somente esse modelo admite a expiração automática de registros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MongoDB tem índices TTL, mas não é o único a oferecer expiração: o Redis a oferece por chave, e o Cassandra, por coluna. O 'somente' torna a alternativa falsa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "de famílias de colunas, como o Cassandra, pois o modelo chave-valor não oferece leitura por chave com baixa latência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Leitura por chave em baixa latência é justamente o ponto forte do modelo chave-valor em memória. O Cassandra é indicado para grandes volumes de escrita distribuída, como séries temporais e logs."
+        },
+        {
+          "id": "opt-4",
+          "texto": "relacional com views materializadas, pois os bancos chave-valor não oferecem nenhuma forma de persistência em disco.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Redis oferece persistência por snapshots (RDB) e por log de operações (AOF). Além disso, views materializadas não expiram itens automaticamente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "chave-valor, como o Redis, que mantém os dados em memória e permite associar a cada chave um tempo de expiração (TTL).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Redis é um banco chave-valor em memória, com estruturas como strings, hashes, listas, conjuntos e conjuntos ordenados. Comandos como EXPIRE, ou a opção EX do SET, definem um TTL, e a chave é removida automaticamente ao fim do prazo. É o uso típico para sessões e cache.",
+          "versaoInvertidaFalsa": "chave-valor, como o Redis, que grava os dados apenas em disco e não permite associar às chaves qualquer tempo de expiração."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa 'somente' e 'nenhuma' para criar distratores e confunde casos de uso: grafos para relacionamentos, wide-column para escrita massiva, chave-valor em memória para cache e sessão com TTL.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o Redis é usado para cache e sessões?",
+        "resposta": "Porque é um banco chave-valor em memória, com acesso por chave em baixa latência, e permite definir um TTL (EXPIRE ou SET ... EX) para remover cada chave automaticamente. Pode persistir em disco por RDB ou AOF."
+      },
+      "conceitosChave": ["NoSQL: chave-valor (Redis)", "NoSQL: casos de uso"],
+      "fundamentacao": "Documentação do Redis, comandos EXPIRE e SET (opção EX) e página 'Redis persistence' (RDB e AOF); arquivo redis.conf do repositório oficial redis/redis."
+    }
+  ]
+}

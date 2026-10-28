@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "banco-de-dados",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "bd-021",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "NoSQL: documentos, chave-valor, wide-column e grafos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com o teorema CAP, aplicado a sistemas de banco de dados distribuídos, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao avaliar bancos NoSQL distribuídos para um sistema de alta disponibilidade, um técnico recorre ao teorema CAP. Segundo esse teorema, é correto afirmar que",
+        "Na escolha entre bancos de dados distribuídos para um novo serviço do Tribunal, a equipe de arquitetura discute o teorema CAP. A respeito desse teorema, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um sistema distribuído pode garantir ao mesmo tempo consistência, disponibilidade e tolerância a partições em qualquer cenário, desde que use replicação síncrona entre os nós.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O teorema afirma justamente o contrário: havendo partição de rede, não é possível manter as três garantias. Replicação síncrona privilegia a consistência e, durante uma partição, sacrifica a disponibilidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a letra P refere-se à persistência em disco, que bancos NoSQL em memória precisam sacrificar para obter consistência e disponibilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No CAP, P é tolerância a partições (partition tolerance): continuar operando mesmo com perda de comunicação entre nós. Persistência em disco não faz parte do teorema."
+        },
+        {
+          "id": "opt-3",
+          "texto": "diante de uma partição de rede, o sistema precisa optar entre consistência, recusando operações, e disponibilidade, respondendo com dados possivelmente desatualizados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Formulado por Brewer e demonstrado por Gilbert e Lynch (2002), o teorema diz que, durante uma partição, um sistema distribuído não garante ao mesmo tempo consistência (toda leitura vê a escrita mais recente) e disponibilidade (toda requisição recebe resposta). Sistemas CP recusam ou atrasam operações; sistemas AP respondem, aceitando divergência temporária (consistência eventual).",
+          "versaoInvertidaFalsa": "diante de uma partição de rede, o sistema consegue manter ao mesmo tempo consistência e disponibilidade, respondendo sempre com os dados mais recentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "consistência eventual significa que as réplicas nunca divergem, pois toda escrita só é confirmada depois de aplicada a todos os nós do cluster.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na consistência eventual, as réplicas podem divergir por um tempo e convergem se não houver novas escritas. Confirmar só após aplicar em todos os nós descreve replicação síncrona com consistência forte."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o teorema se aplica somente a bancos relacionais centralizados, nos quais a disponibilidade depende do número de índices criados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CAP trata de sistemas distribuídos, com dados replicados em nós que se comunicam por rede. Um banco centralizado, em um único nó, não está sujeito a partições entre réplicas."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o P de partição por persistência e sugere que replicação síncrona entrega as três garantias. O teorema só obriga a escolha entre C e A quando há partição.",
+      "resumoFlashcard": {
+        "pergunta": "O que afirma o teorema CAP?",
+        "resposta": "Que um sistema distribuído, diante de uma partição de rede, não consegue garantir ao mesmo tempo consistência e disponibilidade: precisa escolher entre recusar operações (CP) ou responder com dados possivelmente desatualizados (AP)."
+      },
+      "conceitosChave": ["Teorema CAP", "Consistência eventual"],
+      "fundamentacao": "Gilbert & Lynch (2002), 'Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services', ACM SIGACT News; Sadalage & Fowler, NoSQL Essencial, cap. sobre consistência."
+    },
+    {
+      "id": "bd-022",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Bancos vetoriais e embeddings",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para uma busca semântica em acórdãos, a equipe de TI armazenou embeddings de 1.024 dimensões na coluna embedding (tipo vector) de uma tabela PostgreSQL com a extensão pgvector e criou o índice CREATE INDEX ON acordao USING hnsw (embedding vector_l2_ops);. A consulta da aplicação usa ORDER BY embedding <=> :consulta LIMIT 10, mas o plano mostra que o índice não é usado. A causa e a correção adequadas são:",
+      "variantesEnunciado": [
+        "Um assistente de pesquisa de jurisprudência grava embeddings de 1.024 dimensões na coluna embedding (tipo vector, extensão pgvector) da tabela acordao, indexada com CREATE INDEX ON acordao USING hnsw (embedding vector_l2_ops);. A aplicação consulta com ORDER BY embedding <=> :consulta LIMIT 10, e o EXPLAIN revela que o índice é ignorado. A causa e a correção adequadas são:",
+        "Em um projeto de geração aumentada por recuperação (RAG) sobre acórdãos, a tabela acordao guarda embeddings de 1.024 dimensões em uma coluna vector do pgvector, com o índice CREATE INDEX ON acordao USING hnsw (embedding vector_l2_ops);. As buscas usam ORDER BY embedding <=> :consulta LIMIT 10, e o planejador faz varredura sequencial. A causa e a correção adequadas são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o operador <=> calcula a distância de cosseno, e o índice HNSW só atende ao operador de sua classe; deve-se criá-lo com vector_cosine_ops, sabendo que a busca será aproximada.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No pgvector, <-> é a distância L2, <#> o produto interno negativo e <=> a distância de cosseno. Cada índice serve à função de distância de sua classe de operadores (vector_l2_ops, vector_ip_ops, vector_cosine_ops), por isso é preciso um índice com vector_cosine_ops. HNSW faz busca aproximada (ANN): troca algum recall por velocidade, ajustável por hnsw.ef_search (padrão 40).",
+          "versaoInvertidaFalsa": "o operador <=> calcula a distância L2, e o índice HNSW atende a qualquer operador de distância; basta executar ANALYZE para que o índice com vector_l2_ops passe a ser usado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o operador <=> calcula a similaridade de cosseno, e a ordem crescente devolve os acórdãos menos parecidos; basta trocar para ORDER BY ... DESC, que passa a ativar o índice HNSW.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. <=> devolve distância, e não similaridade: a ordem crescente traz os mais parecidos. A similaridade é obtida com 1 − (embedding <=> consulta). Inverter a ordem não ativa índice e traria os menos parecidos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "índices HNSW exigem uma etapa de treinamento e só funcionam se criados após a carga dos dados; basta recriar o mesmo índice com a tabela já populada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem depende de dados prévios é o IVFFlat, que agrupa os vetores em listas. O HNSW não tem etapa de treinamento e pode ser criado com a tabela vazia. Recriar o índice com vector_l2_ops manteria o problema."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o tipo vector aceita no máximo 512 dimensões em índices; é preciso reduzir os embeddings para que o planejador use o HNSW.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Segundo a documentação do pgvector, o tipo vector pode ser indexado com até 2.000 dimensões (halfvec, até 4.000). Embeddings de 1.024 dimensões são indexáveis."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o pgvector só usa índice quando ivfflat.probes é maior que 1; basta aumentar esse parâmetro, que também controla o HNSW.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ivfflat.probes (padrão 1) define quantas listas o IVFFlat examina e não afeta o HNSW, que usa hnsw.ef_search. Nenhum desses parâmetros corrige a incompatibilidade entre operador e classe de operadores."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde <=> (distância de cosseno) com similaridade e atribui ao HNSW a etapa de treino do IVFFlat. O ponto decisivo é a correspondência entre operador da consulta e classe de operadores do índice.",
+      "resumoFlashcard": {
+        "pergunta": "Por que um índice HNSW do pgvector criado com vector_l2_ops não atende a ORDER BY embedding <=> x?",
+        "resposta": "Porque <=> é a distância de cosseno e o índice só serve ao operador de sua classe (vector_l2_ops serve a <->). É preciso criar o índice com vector_cosine_ops; a busca resultante é aproximada."
+      },
+      "conceitosChave": ["pgvector: operadores e índices", "ANN: HNSW × IVFFlat"],
+      "fundamentacao": "README do pgvector (repositório oficial pgvector/pgvector, versão 0.8), seções 'Querying' (operadores <->, <#>, <=>, <+>), 'HNSW' (classes de operadores, hnsw.ef_search padrão 40, tipos suportados) e 'IVFFlat'."
+    },
+    {
+      "id": "bd-023",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Replicação, backup, recuperação e alta disponibilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de banco de dados revisa a estratégia de cópias de segurança de um cluster PostgreSQL que hospeda vários bancos de sistemas internos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar a política de backup de um cluster PostgreSQL com vários bancos de dados, um técnico do Tribunal compara cópias lógicas e físicas. Considere as afirmativas abaixo.",
+        "Sobre a estratégia de backup e recuperação de um cluster PostgreSQL que reúne os bancos de diversos sistemas internos, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O pg_dump gera uma cópia lógica consistente de um banco sem bloquear leitores nem escritores, e o arquivo pode ser usado para migrar os dados para uma versão mais nova do PostgreSQL.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação do pg_dump afirma que ele produz cópias consistentes mesmo com o banco em uso, sem bloquear outros usuários, e que sua saída serve para carga em versões mais novas."
+        },
+        {
+          "texto": "Um dump lógico não permite recuperar o banco em um instante arbitrário entre dois dumps, pois não incorpora as alterações registradas no WAL após sua execução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O dump é uma fotografia lógica de um momento. A reaplicação de WAL (PITR) exige backup físico do cluster como ponto de partida."
+        },
+        {
+          "texto": "Para a recuperação até um ponto no tempo (PITR), basta ativar o arquivamento de WAL depois da falha, dispensando um backup-base anterior.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O PITR exige um backup-base feito antes e a sequência contínua de segmentos de WAL arquivados desde ele. Ativar o arquivamento depois da falha não recupera nada."
+        },
+        {
+          "texto": "O backup físico obtido com pg_basebackup copia os arquivos do cluster inteiro, e não de um banco específico.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O backup físico trabalha no nível dos arquivos do cluster (todos os bancos da instância); para um único banco, usa-se o backup lógico."
+        },
+        {
+          "texto": "Um backup físico pode ser restaurado diretamente em servidor de outra versão principal (major) do PostgreSQL, desde que na mesma arquitetura de hardware.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O formato físico dos arquivos muda entre versões principais. Para trocar de versão principal, usam-se pg_dump/pg_restore, pg_upgrade ou replicação lógica."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I, II e IV estão certas, mas a V está errada: backups físicos não são portáveis entre versões principais do PostgreSQL, porque o formato interno dos arquivos muda."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa, pois o PITR depende de backup-base anterior e de WAL arquivado continuamente desde ele. Ficam de fora a I e a IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só a I está certa nesse grupo. A III dispensa indevidamente o backup-base, e a V supõe portabilidade do backup físico entre versões principais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O pg_dump faz cópia lógica consistente de um banco, sem bloquear usuários, e serve para migrar de versão (I), mas não permite PITR (II). O pg_basebackup copia o cluster inteiro (IV). O PITR exige backup-base anterior mais WAL arquivado (III é falsa), e o backup físico não é portável entre versões principais (V é falsa).",
+          "versaoInvertidaFalsa": "O pg_dump gera uma cópia física do cluster inteiro e, combinado com o WAL arquivado, permite recuperar o banco em qualquer instante entre dois dumps."
+        },
+        {
+          "id": "opt-5",
+          "texto": "IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está certa, mas a V não: restaurar backup físico em outra versão principal não funciona. Ficam de fora a I e a II, ambas verdadeiras."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura as propriedades do backup lógico (portável entre versões, por banco, sem PITR) e do físico (cluster inteiro, base do PITR, não portável entre versões principais).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre backup lógico (pg_dump) e físico (pg_basebackup) no PostgreSQL?",
+        "resposta": "O lógico exporta um banco como comandos ou arquivo de dados, é consistente, portável entre versões e não permite PITR. O físico copia os arquivos do cluster inteiro e, com o WAL arquivado, permite PITR, mas exige a mesma versão principal."
+      },
+      "conceitosChave": ["Backup lógico × físico", "PITR com WAL"],
+      "fundamentacao": "Documentação do PostgreSQL 18, capítulo 'Backup and Restore' (SQL Dump; Continuous Archiving and Point-in-Time Recovery), página do pg_dump e página do pg_basebackup."
+    },
+    {
+      "id": "bd-024",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Segurança e governança de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No PostgreSQL, a tabela processo é compartilhada por várias unidades técnicas, e cada analista deve ver apenas os processos de sua unidade. O DBA executou ALTER TABLE processo ENABLE ROW LEVEL SECURITY; e criou CREATE POLICY p_unid ON processo FOR SELECT USING (unidade = current_setting('app.unidade'));. Nos testes, um analista conectado com seu próprio papel viu só os processos de sua unidade, mas a aplicação, que se conecta com o papel dono da tabela, continuou vendo todas as linhas. O comportamento da aplicação e uma medida adequada são:",
+      "variantesEnunciado": [
+        "Para segregar o acesso por unidade técnica, o DBA habilitou ALTER TABLE processo ENABLE ROW LEVEL SECURITY; e criou CREATE POLICY p_unid ON processo FOR SELECT USING (unidade = current_setting('app.unidade'));, em PostgreSQL. Um analista com papel próprio passou a ver só os processos de sua unidade, mas a aplicação, conectada com o papel dono da tabela, continuou enxergando todas as linhas. O comportamento da aplicação e uma medida adequada são:",
+        "Em uma auditoria de controles de acesso, verificou-se que a tabela processo, em PostgreSQL, tem RLS habilitado (ALTER TABLE processo ENABLE ROW LEVEL SECURITY;) e a política CREATE POLICY p_unid ON processo FOR SELECT USING (unidade = current_setting('app.unidade'));. Usuários com papel próprio veem só sua unidade, mas a aplicação, conectada com o papel dono da tabela, vê todas as linhas. O comportamento da aplicação e uma medida adequada são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "um defeito da política, pois a cláusula USING vale só para INSERT; para filtrar consultas, a política deveria usar WITH CHECK.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o inverso: USING filtra as linhas existentes, visíveis a SELECT, UPDATE e DELETE, e WITH CHECK valida as linhas novas ou alteradas por INSERT e UPDATE. Tanto que o analista com papel próprio foi filtrado corretamente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "esperado, pois o dono da tabela, em regra, não se submete às políticas de RLS; deve-se conectar a aplicação com papel que não seja o dono, ou usar ALTER TABLE ... FORCE ROW LEVEL SECURITY.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No PostgreSQL, superusuários e papéis com BYPASSRLS sempre ignoram a segurança em nível de linha, e o dono da tabela normalmente também a ignora. Para sujeitar o dono, usa-se ALTER TABLE ... FORCE ROW LEVEL SECURITY. A prática mais segura, alinhada ao menor privilégio, é a aplicação conectar com um papel sem a propriedade da tabela.",
+          "versaoInvertidaFalsa": "um defeito, pois o dono da tabela sempre se submete às políticas de RLS, inclusive sem FORCE ROW LEVEL SECURITY; a política precisa ser recriada com WITH CHECK."
+        },
+        {
+          "id": "opt-3",
+          "texto": "esperado, pois o GRANT SELECT tem precedência sobre as políticas de RLS; basta executar REVOKE SELECT ON processo FROM PUBLIC.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Privilégios e políticas atuam em conjunto: o GRANT permite acessar a tabela, e a política filtra quais linhas aparecem. O que deixa a aplicação de fora é a condição de dona, não o GRANT."
+        },
+        {
+          "id": "opt-4",
+          "texto": "um defeito da política, pois o RLS só funciona em views; deve-se criar uma view com cláusula WHERE e conceder acesso apenas a ela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. RLS é configurado na própria tabela com ALTER TABLE ... ENABLE ROW LEVEL SECURITY e CREATE POLICY. Views filtradas são uma alternativa antiga, não um requisito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "esperado, pois, com RLS habilitado, a ausência de política para um comando libera o acesso a todos; basta criar políticas para INSERT e UPDATE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com RLS habilitado e sem política aplicável, vale a negação por padrão (default deny): nenhuma linha é visível ou modificável. Além disso, a política de SELECT existe e funcionou para os analistas."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte USING e WITH CHECK e afirma que a falta de política libera o acesso. O detalhe decisivo é o papel dono da tabela, que ignora o RLS salvo com FORCE ROW LEVEL SECURITY.",
+      "resumoFlashcard": {
+        "pergunta": "Quem ignora as políticas de RLS no PostgreSQL?",
+        "resposta": "Superusuários e papéis com BYPASSRLS, sempre; o dono da tabela, normalmente, salvo se a tabela tiver FORCE ROW LEVEL SECURITY. Com RLS habilitado e sem política aplicável, vale a negação por padrão."
+      },
+      "conceitosChave": ["RLS: segurança em nível de linha", "Menor privilégio"],
+      "fundamentacao": "Documentação do PostgreSQL 18, seção 'Row Security Policies' (default deny, BYPASSRLS, dono da tabela e FORCE ROW LEVEL SECURITY) e comando CREATE POLICY (USING × WITH CHECK)."
+    },
+    {
+      "id": "bd-025",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na linguagem SQL, são exemplos de comandos de definição de dados (DDL), de manipulação de dados (DML) e de controle de acesso (DCL), respectivamente:",
+      "variantesEnunciado": [
+        "Ao classificar os scripts de um projeto de banco de dados por categoria de comando SQL, um técnico precisa de um exemplo de DDL, outro de DML e outro de DCL, nessa ordem. Atende a essa classificação a sequência:",
+        "Considerando as sublinguagens do SQL — definição de dados (DDL), manipulação de dados (DML) e controle de acesso (DCL) —, são exemplos de cada uma, respectivamente:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ALTER TABLE, GRANT e DELETE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ALTER TABLE é DDL, mas GRANT concede privilégios (DCL) e DELETE remove linhas (DML). As duas últimas posições estão trocadas em relação à ordem pedida."
+        },
+        {
+          "id": "opt-2",
+          "texto": "INSERT, DROP TABLE e REVOKE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. INSERT inclui linhas (DML) e DROP TABLE remove a estrutura da tabela (DDL); apenas REVOKE está na posição certa, como comando de controle de acesso (DCL)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "CREATE SEQUENCE, GRANT e UPDATE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CREATE SEQUENCE é DDL, mas GRANT é DCL e UPDATE é DML. A sequência pedida é DDL, DML e DCL, e as duas últimas estão invertidas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "GRANT, INSERT e ALTER TABLE.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. GRANT é DCL e ALTER TABLE é DDL; só INSERT, de DML, está na posição certa. A alternativa troca o primeiro e o último comandos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "CREATE TABLE, UPDATE e REVOKE.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. CREATE TABLE define estrutura (DDL, ao lado de ALTER e DROP); UPDATE altera dados (DML, ao lado de INSERT, DELETE e, em muitas classificações, SELECT); REVOKE retira privilégios (DCL, ao lado de GRANT). COMMIT, ROLLBACK e SAVEPOINT costumam formar um grupo à parte, de controle de transação.",
+          "versaoInvertidaFalsa": "REVOKE, UPDATE e CREATE TABLE, pois REVOKE define estruturas, UPDATE manipula dados e CREATE TABLE controla privilégios de acesso."
+        }
+      ],
+      "pegadinhaFCC": "A banca mantém os comandos corretos, mas embaralha a ordem pedida. Confira cada posição: definição (CREATE, ALTER, DROP), manipulação (INSERT, UPDATE, DELETE) e controle de acesso (GRANT, REVOKE).",
+      "resumoFlashcard": {
+        "pergunta": "Quais comandos pertencem a DDL, DML e DCL?",
+        "resposta": "DDL: CREATE, ALTER, DROP (estrutura). DML: INSERT, UPDATE, DELETE e, em muitas classificações, SELECT (dados). DCL: GRANT e REVOKE (privilégios). COMMIT, ROLLBACK e SAVEPOINT são controle de transação."
+      },
+      "conceitosChave": ["SQL: DDL, DML e DCL"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'SQL básica' (definição de dados, consultas e atualizações); documentação do PostgreSQL 18, 'SQL Commands'."
+    },
+    {
+      "id": "bd-026",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Álgebra relacional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No sistema de gestão de equipes, a relação PARTICIPA (matricula, auditoria) registra as auditorias de que cada servidor participou, e a relação AUD2025 (auditoria) lista as auditorias de 2025: A1, A2 e A3. PARTICIPA contém (101, A1), (101, A2), (101, A3), (102, A1), (102, A3), (103, A1), (103, A2), (103, A3), (103, A4) e (104, A2). Para obter os servidores que participaram de todas as auditorias de 2025, a operação da álgebra relacional adequada e o resultado são, respectivamente,",
+      "variantesEnunciado": [
+        "Considere as relações PARTICIPA (matricula, auditoria), com as tuplas (101, A1), (101, A2), (101, A3), (102, A1), (102, A3), (103, A1), (103, A2), (103, A3), (103, A4) e (104, A2), e AUD2025 (auditoria), com A1, A2 e A3. Deseja-se obter as matrículas dos servidores que participaram de todas as auditorias de 2025. A operação da álgebra relacional adequada e o resultado são, respectivamente,",
+        "Para um relatório de capacitação, um técnico precisa identificar os servidores que estiveram em todas as auditorias de 2025, registradas na relação AUD2025 (auditoria) como A1, A2 e A3. A relação PARTICIPA (matricula, auditoria) contém (101, A1), (101, A2), (101, A3), (102, A1), (102, A3), (103, A1), (103, A2), (103, A3), (103, A4) e (104, A2). A operação da álgebra relacional adequada e o resultado são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "produto cartesiano (PARTICIPA × AUD2025), com resultado {101, 102, 103, 104}.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O produto cartesiano combina cada tupla de PARTICIPA com cada auditoria de AUD2025 (30 tuplas) e não expressa a ideia de 'todas'. O conjunto indicado reúne todos os servidores, sem filtro algum."
+        },
+        {
+          "id": "opt-2",
+          "texto": "divisão (PARTICIPA ÷ AUD2025), com resultado {101}, pois 103 participou também de uma auditoria fora de 2025.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A operação está certa, mas o resultado não. A divisão exige que o servidor esteja associado a todas as tuplas do divisor; participar também de A4 não o exclui. 103 tem A1, A2 e A3 e entra no resultado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "junção natural (PARTICIPA ⋈ AUD2025), com resultado {101, 102, 103, 104}.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A junção natural, projetada em matricula, devolve quem participou de pelo menos uma auditoria de 2025, o que inclui 102 e 104. Ela expressa 'alguma', e não 'todas'."
+        },
+        {
+          "id": "opt-4",
+          "texto": "divisão (PARTICIPA ÷ AUD2025), com resultado {101, 103}.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A divisão R ÷ S devolve os valores de R associados a todas as tuplas de S, e é a operação típica de consultas com 'todos'. 101 e 103 têm A1, A2 e A3; 102 não tem A2, e 104 só tem A2. Em SQL, equivale a um NOT EXISTS duplo, que devolveu 101 e 103 em execução com estes dados.",
+          "versaoInvertidaFalsa": "junção natural (PARTICIPA ⋈ AUD2025), com resultado {101, 103}."
+        },
+        {
+          "id": "opt-5",
+          "texto": "diferença (PARTICIPA − AUD2025), com resultado {102, 104}.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A diferença exige relações compatíveis em união (mesmo grau e domínios compatíveis), e PARTICIPA tem dois atributos enquanto AUD2025 tem um. Além disso, {102, 104} são justamente os que não satisfazem a condição."
+        }
+      ],
+      "pegadinhaFCC": "Consultas com 'todos' pedem divisão; a junção expressa 'pelo menos um'. A segunda armadilha é excluir quem tem tuplas além do divisor, o que a divisão não faz.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar a divisão na álgebra relacional?",
+        "resposta": "Em consultas do tipo 'quem se relaciona com todos', como servidores que participaram de todas as auditorias de um conjunto. R ÷ S devolve os valores de R associados a cada tupla de S; em SQL, equivale a NOT EXISTS duplo."
+      },
+      "conceitosChave": ["Álgebra relacional: divisão"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Álgebra e cálculo relacional', operação DIVISÃO e compatibilidade de união; resultado conferido em sqlite3 3.45.1 com NOT EXISTS duplo."
+    },
+    {
+      "id": "bd-027",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Modelo entidade-relacionamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "No modelo entidade-relacionamento estendido do sistema de controle externo, a entidade PROCESSO foi especializada em PRESTACAO_CONTAS, DENUNCIA e AUDITORIA, cada uma com atributos próprios. Todo processo pertence a exatamente uma dessas categorias. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na modelagem conceitual de um sistema de controle externo, PROCESSO é superclasse de PRESTACAO_CONTAS, DENUNCIA e AUDITORIA, cada qual com atributos específicos, e todo processo se enquadra em uma, e somente uma, dessas categorias. Considere as afirmativas abaixo.",
+        "Em um modelo ER estendido, a entidade PROCESSO se divide nas subclasses PRESTACAO_CONTAS, DENUNCIA e AUDITORIA, com atributos próprios em cada uma, e todo processo pertence a exatamente uma delas. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Trata-se de especialização total e disjunta.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Total, porque todo processo pertence a alguma subclasse; disjunta, porque não pode pertencer a mais de uma."
+        },
+        {
+          "texto": "Por ser disjunta, a especialização exige que todas as subclasses tenham os mesmos atributos específicos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Disjunção diz respeito à pertinência das instâncias (no máximo uma subclasse), não aos atributos. Cada subclasse tem seus próprios atributos, como diz o enunciado."
+        },
+        {
+          "texto": "No mapeamento relacional, a única opção válida é uma tabela única com todos os atributos e um discriminador, pois a especialização total impede tabelas separadas para as subclasses.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Há várias opções válidas: tabela para a superclasse e para cada subclasse; só tabelas das subclasses (possível justamente por ser total); ou tabela única com discriminador. A escolha pondera nulos, junções e restrições."
+        },
+        {
+          "texto": "Se cada subclasse ganhar tabela própria, além da tabela da superclasse, a chave primária de cada subclasse pode ser também chave estrangeira que referencia PROCESSO.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Nessa opção de mapeamento, a tabela de cada subclasse herda a chave de PROCESSO, que é ao mesmo tempo sua chave primária e chave estrangeira para a superclasse."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A especialização é total (todo processo está em uma subclasse) e disjunta (em uma só), como diz I. No mapeamento com tabelas para superclasse e subclasses, a chave da subclasse é PK e FK para PROCESSO (IV). II confunde disjunção com igualdade de atributos, e III ignora as demais opções de mapeamento.",
+          "versaoInvertidaFalsa": "Trata-se de especialização parcial e sobreposta, pois cada subclasse tem atributos próprios e um processo pode pertencer a mais de uma categoria."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e IV estão certas, mas a II não: disjunção trata da pertinência de cada instância a no máximo uma subclasse, e não da igualdade de atributos entre subclasses."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas afirmativas escolhidas são as falsas: a II confunde disjunção com atributos idênticos, e a III restringe indevidamente o mapeamento a uma única tabela."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I está certa, mas a IV também: no mapeamento com tabela por subclasse, a chave herdada da superclasse é ao mesmo tempo chave primária e chave estrangeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV está certa, mas a III não: a especialização total permite, entre outras opções, criar apenas tabelas para as subclasses. Também falta a I, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde a restrição de disjunção (pertinência das instâncias) com os atributos das subclasses e apresenta uma única forma de mapeamento como obrigatória.",
+      "resumoFlashcard": {
+        "pergunta": "O que significam especialização total e disjunta, e como mapeá-la para tabelas?",
+        "resposta": "Total: toda instância da superclasse pertence a alguma subclasse. Disjunta: pertence a no máximo uma. Mapeia-se com tabela por superclasse e subclasses (PK da subclasse = FK), só subclasses (se total) ou tabela única com discriminador."
+      },
+      "conceitosChave": ["MER: especialização e generalização", "MER: mapeamento para o modelo relacional"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, caps. 'Modelo EER' (restrições de disjunção e completude) e 'Mapeamento EER para relacional' (opções 8A a 8D)."
+    },
+    {
+      "id": "bd-028",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Procedures, triggers e views",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O painel de indicadores de fiscalização, em PostgreSQL, executa uma agregação pesada sobre milhões de despesas, cujos dados mudam apenas na carga noturna. A equipe criou CREATE MATERIALIZED VIEW mv_despesas AS SELECT ...; e precisa atualizá-la diariamente sem impedir que os usuários consultem o painel durante a atualização. Sobre a solução, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para acelerar um relatório gerencial em PostgreSQL que agrega milhões de lançamentos, atualizados só uma vez por noite, a equipe criou CREATE MATERIALIZED VIEW mv_despesas AS SELECT ...; e quer renová-la todo dia sem bloquear as consultas dos usuários durante a atualização. Sobre a solução, é correto afirmar que",
+        "Um técnico avalia trocar uma view comum por CREATE MATERIALIZED VIEW mv_despesas AS SELECT ...; no PostgreSQL, para um painel que agrega milhões de despesas carregadas apenas à noite, com a exigência de atualizar o painel diariamente sem impedir leituras simultâneas. Sobre a solução, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a view materializada se atualiza a cada COMMIT nas tabelas de origem, como uma view comum, e o REFRESH só é necessário quando sua definição muda.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No PostgreSQL, a view materializada guarda o resultado do momento da criação ou do último REFRESH e não acompanha automaticamente as tabelas de origem. A view comum é que reflete sempre os dados atuais, por reexecutar a consulta."
+        },
+        {
+          "id": "opt-2",
+          "texto": "uma view comum guarda o resultado em disco e seria mais rápida; a materializada reexecuta a consulta de origem a cada acesso ao painel.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os conceitos. A view comum é uma consulta armazenada, executada a cada uso; a materializada persiste o resultado como uma tabela, o que acelera leituras repetidas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a view materializada guarda o resultado e não reflete sozinha as mudanças da origem; REFRESH MATERIALIZED VIEW CONCURRENTLY atualiza sem bloquear leituras, mas exige índice único sobre colunas da view.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A view materializada armazena fisicamente o resultado e precisa de REFRESH para refletir a carga noturna. A opção CONCURRENTLY atualiza sem impedir SELECT simultâneos, desde que a view já esteja populada e tenha ao menos um índice UNIQUE só com nomes de colunas, sem expressão nem WHERE. Sem essa opção, o REFRESH pode bloquear quem lê a view.",
+          "versaoInvertidaFalsa": "a view materializada reflete sozinha as mudanças da origem; REFRESH MATERIALIZED VIEW CONCURRENTLY bloqueia as leituras durante a atualização e dispensa qualquer índice sobre a view."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o REFRESH MATERIALIZED VIEW CONCURRENTLY dispensa índice e é sempre mais rápido que o REFRESH comum, qualquer que seja o volume de linhas alteradas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CONCURRENTLY exige índice único e, segundo a documentação, quando muitas linhas mudam, o REFRESH comum tende a ser mais rápido e a consumir menos recursos. O CONCURRENTLY compensa quando poucas linhas mudam."
+        },
+        {
+          "id": "opt-5",
+          "texto": "views materializadas não admitem índices, e por isso as consultas do painel continuarão lentas mesmo após a atualização diária.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Views materializadas admitem índices como tabelas comuns, e um índice único é até requisito do REFRESH ... CONCURRENTLY."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o comportamento da view comum (reexecuta sempre) pelo da materializada (guarda o resultado) e omite o requisito do índice único para o REFRESH CONCURRENTLY.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre view e view materializada, e o que exige o REFRESH CONCURRENTLY no PostgreSQL?",
+        "resposta": "A view reexecuta sua consulta a cada uso; a materializada guarda o resultado e só se atualiza com REFRESH. O REFRESH ... CONCURRENTLY não bloqueia leituras, mas exige a view já populada e um índice UNIQUE só com colunas, sem WHERE."
+      },
+      "conceitosChave": ["Views × views materializadas"],
+      "fundamentacao": "Documentação do PostgreSQL 18, comandos CREATE MATERIALIZED VIEW e REFRESH MATERIALIZED VIEW (parâmetro CONCURRENTLY e seus requisitos)."
+    },
+    {
+      "id": "bd-029",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Transações e propriedades ACID",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Em uma transação SQL, o comando …… torna permanentes as alterações realizadas; o comando …… desfaz as alterações ainda não confirmadas; e o comando …… cria um ponto intermediário de salvamento, permitindo desfazer apenas parte da transação. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "No script de fechamento mensal do sistema de folha, o desenvolvedor usa …… para confirmar definitivamente as alterações, …… para descartar o que ainda não foi confirmado e …… para marcar um ponto ao qual a transação pode retornar sem ser desfeita por inteiro. Preenchem, correta e respectivamente, as lacunas:",
+        "No controle de transações, …… encerra a transação efetivando suas alterações, …… encerra-a desfazendo-as e …… define um marco interno que permite desfazer parcialmente o trabalho realizado. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ROLLBACK − COMMIT − SAVEPOINT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois primeiros comandos: ROLLBACK desfaz, e COMMIT confirma. Apenas o SAVEPOINT está na posição certa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "COMMIT − ROLLBACK − SAVEPOINT",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. COMMIT encerra a transação e torna suas alterações permanentes (durabilidade). ROLLBACK encerra a transação desfazendo o que não foi confirmado (atomicidade). SAVEPOINT nome cria um marco; ROLLBACK TO SAVEPOINT nome desfaz só o trabalho feito depois dele, e a transação continua aberta.",
+          "versaoInvertidaFalsa": "SAVEPOINT − COMMIT − ROLLBACK"
+        },
+        {
+          "id": "opt-3",
+          "texto": "COMMIT − SAVEPOINT − ROLLBACK",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. SAVEPOINT não desfaz nada: apenas marca um ponto. Quem desfaz alterações é o ROLLBACK, total ou até um savepoint (ROLLBACK TO SAVEPOINT)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "SAVEPOINT − ROLLBACK − COMMIT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. SAVEPOINT não torna nada permanente; a confirmação definitiva é o COMMIT. E COMMIT não cria pontos intermediários: ele encerra a transação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "COMMIT − ROLLBACK − CHECKPOINT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CHECKPOINT é uma operação do SGBD que grava em disco as páginas alteradas e marca um ponto de partida para a recuperação após falha; não permite desfazer parte de uma transação. Isso é papel do SAVEPOINT."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca SAVEPOINT por CHECKPOINT, termos parecidos com funções diferentes: o savepoint é um marco dentro da transação; o checkpoint é uma operação interna do SGBD ligada à recuperação após falha.",
+      "resumoFlashcard": {
+        "pergunta": "O que fazem COMMIT, ROLLBACK e SAVEPOINT?",
+        "resposta": "COMMIT confirma e torna permanentes as alterações da transação. ROLLBACK as desfaz. SAVEPOINT cria um marco intermediário, e ROLLBACK TO SAVEPOINT desfaz só o que veio depois dele, mantendo a transação aberta."
+      },
+      "conceitosChave": ["Transações: COMMIT, ROLLBACK e SAVEPOINT"],
+      "fundamentacao": "Documentação do PostgreSQL 18, comandos COMMIT, ROLLBACK, SAVEPOINT, ROLLBACK TO SAVEPOINT e CHECKPOINT; padrão SQL (instruções de controle de transação)."
+    },
+    {
+      "id": "bd-030",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Oracle Database: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um relatório de fiscalização que leva cerca de três horas consulta a tabela de pagamentos de um banco Oracle enquanto rotinas em lote atualizam e confirmam alterações nessa tabela. Após duas horas, o relatório falha com o erro ORA-01555 (snapshot too old). A causa provável e uma medida adequada são:",
+      "variantesEnunciado": [
+        "Em um banco Oracle, uma consulta analítica de longa duração sobre a tabela de empenhos falha com ORA-01555 (snapshot too old), enquanto processos em lote atualizam e confirmam alterações nessa mesma tabela. A causa provável e uma medida adequada são:",
+        "Durante uma auditoria de dados, a extração de três horas de uma tabela de contratos em Oracle é interrompida pelo erro ORA-01555 (snapshot too old); no mesmo período, cargas em lote alteram e confirmam registros da tabela. A causa provável e uma medida adequada são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o redo log buffer encheu durante a consulta; ampliar a SGA resolve, pois o Oracle reconstrói as versões antigas dos blocos lidos a partir do redo log online.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A leitura consistente do Oracle reconstrói versões anteriores dos blocos com dados de undo, não de redo. O redo serve à recuperação após falhas, reaplicando alterações."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a consulta leu dados ainda não confirmados pelo lote; mudar o nível de isolamento da sessão para READ COMMITTED evita o erro.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Oracle não permite leitura suja, e READ COMMITTED já é seu nível padrão. O erro decorre justamente da tentativa de reconstruir a versão consistente dos dados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "houve deadlock entre o relatório e o lote, e o Oracle escolheu a consulta como vítima; basta reexecutá-la no mesmo horário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Consultas no Oracle não bloqueiam escritores nem são bloqueadas por eles, graças à leitura consistente. Deadlock gera outro erro (ORA-00060), e reexecutar no mesmo horário tende a repetir a falha."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o tablespace TEMP ficou cheio, pois o undo das transações é gravado nele; aumentar o TEMP resolve o problema.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O tablespace temporário guarda dados de ordenação e de hash grandes; o undo fica no tablespace de undo. Falta de espaço em TEMP gera outros erros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a leitura consistente precisou de undo já sobrescrito; ajustar UNDO_RETENTION à duração da consulta e dimensionar o tablespace de undo reduz a ocorrência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A consulta precisa enxergar os dados como estavam no seu início, e o Oracle reconstrói essas versões com o undo. Se as transações do lote já confirmaram e o undo antigo foi reutilizado, a reconstrução falha com ORA-01555. Retenção compatível com a consulta mais longa, tablespace de undo bem dimensionado e, se preciso, RETENTION GUARANTEE previnem o erro.",
+          "versaoInvertidaFalsa": "a leitura consistente precisou de dados de redo já sobrescritos; ampliar o redo log buffer e reduzir UNDO_RETENTION evita a ocorrência."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca undo por redo e por TEMP. No Oracle, o undo serve a rollback, leitura consistente e flashback; o ORA-01555 aparece quando o undo necessário foi sobrescrito.",
+      "resumoFlashcard": {
+        "pergunta": "O que causa o erro ORA-01555 (snapshot too old) no Oracle?",
+        "resposta": "Uma consulta longa precisa de dados de undo para reconstruir a versão consistente dos blocos, mas esse undo já foi sobrescrito. Mitiga-se com UNDO_RETENTION adequado, tablespace de undo suficiente e, se preciso, RETENTION GUARANTEE."
+      },
+      "conceitosChave": ["Oracle: undo e leitura consistente"],
+      "fundamentacao": "Oracle Database Administrator's Guide (26ai), cap. 'Managing Undo' (período de retenção, UNDO_RETENTION e RETENTION GUARANTEE); Oracle Database Concepts, 'Read Consistency and Undo Segments'."
+    }
+  ]
+}

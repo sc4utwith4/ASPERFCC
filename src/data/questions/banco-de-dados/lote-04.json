@@ -1,0 +1,587 @@
+{
+  "materiaSlug": "banco-de-dados",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "bd-031",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere a tabela SERVIDOR (id, nome, lotacao), com sete linhas cujos valores de lotacao são 'GAB', 'GAB', 'DTI', NULL, 'SEPLAN', NULL e 'DTI'. Os resultados das consultas SELECT COUNT(*) FROM servidor WHERE lotacao <> 'GAB'; e SELECT COUNT(lotacao) FROM servidor; são, respectivamente,",
+      "variantesEnunciado": [
+        "Na tabela SERVIDOR (id, nome, lotacao) do cadastro funcional, há sete linhas, com lotacao igual a 'GAB', 'GAB', 'DTI', NULL, 'SEPLAN', NULL e 'DTI'. Executadas as consultas SELECT COUNT(*) FROM servidor WHERE lotacao <> 'GAB'; e SELECT COUNT(lotacao) FROM servidor;, os resultados são, respectivamente,",
+        "Um técnico conferiu a qualidade do cadastro de lotações executando SELECT COUNT(*) FROM servidor WHERE lotacao <> 'GAB'; e SELECT COUNT(lotacao) FROM servidor; sobre a tabela SERVIDOR (id, nome, lotacao), que tem sete linhas com lotacao 'GAB', 'GAB', 'DTI', NULL, 'SEPLAN', NULL e 'DTI'. Os resultados são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "3 e 5.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na lógica de três valores do SQL, NULL <> 'GAB' resulta em UNKNOWN, e o WHERE mantém só as linhas TRUE: DTI, SEPLAN e DTI, ou seja, 3. COUNT(lotacao) ignora os NULL e conta 5 valores, repetidos ou não. Resultados conferidos em execução com os mesmos dados.",
+          "versaoInvertidaFalsa": "5 e 7, pois NULL <> 'GAB' é verdadeiro e COUNT(lotacao) conta também as linhas com NULL."
+        },
+        {
+          "id": "opt-2",
+          "texto": "5 e 7.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Supõe que NULL é diferente de 'GAB' (5 linhas) e que COUNT(coluna) conta os NULL (7). As duas suposições estão erradas: a comparação com NULL é UNKNOWN, e COUNT(coluna) ignora NULL."
+        },
+        {
+          "id": "opt-3",
+          "texto": "3 e 7.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro valor está certo, mas 7 seria o resultado de COUNT(*), que conta todas as linhas. COUNT(lotacao) ignora as duas linhas em que lotacao é NULL."
+        },
+        {
+          "id": "opt-4",
+          "texto": "5 e 5.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O segundo valor está certo, mas o primeiro supõe que as linhas com NULL satisfazem lotacao <> 'GAB'. Para incluí-las, seria preciso escrever lotacao <> 'GAB' OR lotacao IS NULL."
+        },
+        {
+          "id": "opt-5",
+          "texto": "3 e 3.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro valor está certo, mas COUNT(lotacao) não elimina repetições. O valor 3 corresponderia a COUNT(DISTINCT lotacao), que conta GAB, DTI e SEPLAN."
+        }
+      ],
+      "pegadinhaFCC": "NULL não é igual nem diferente de nada: a comparação dá UNKNOWN e a linha sai do WHERE. A segunda armadilha é confundir COUNT(*), COUNT(coluna) e COUNT(DISTINCT coluna).",
+      "resumoFlashcard": {
+        "pergunta": "Como o SQL trata NULL em comparações e no COUNT?",
+        "resposta": "Comparar com NULL (=, <>, <, >) resulta em UNKNOWN, e o WHERE descarta a linha; para testar, usa-se IS NULL ou IS NOT NULL. COUNT(*) conta todas as linhas, COUNT(coluna) ignora NULL, e COUNT(DISTINCT coluna) conta os valores distintos não nulos."
+      },
+      "conceitosChave": ["SQL: NULL e lógica de três valores"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Comparison Functions and Operators' (comparações com NULL) e 'Aggregate Functions' (count(*) × count(expressão)); resultado conferido em sqlite3 3.45.1."
+    },
+    {
+      "id": "bd-032",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Normalização e desnormalização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O painel gerencial de contratações do Tribunal executa consultas que juntam seis tabelas normalizadas do sistema transacional e está lento. A equipe propõe criar uma tabela desnormalizada, com dados de contrato, fornecedor, órgão e itens já combinados, recarregada toda noite a partir da base transacional e usada só para leitura pelo painel. Sobre a proposta, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um relatório de acompanhamento de convênios combina, a cada execução, seis tabelas normalizadas do banco transacional e demora vários minutos. Propõe-se criar uma tabela desnormalizada com os dados já combinados, recarregada toda madrugada e usada somente para leitura. Sobre a proposta, é correto afirmar que",
+        "Para acelerar um painel de indicadores que hoje junta seis tabelas normalizadas, a equipe de dados sugere uma tabela única e desnormalizada, alimentada por carga noturna a partir do sistema transacional e consultada apenas para leitura. Sobre a proposta, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a desnormalização é vedada em bancos relacionais, pois toda tabela precisa atender ao menos à 3FN para ser criada pelo SGBD.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SGBD não verifica formas normais: elas são diretrizes de projeto. A desnormalização é decisão consciente e comum em relatórios, data warehouses e caches de leitura."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a desnormalização elimina anomalias de atualização e, por isso, deveria ser aplicada também à base transacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a normalização que reduz anomalias de inserção, atualização e exclusão. A redundância da desnormalização as reintroduz, e por isso ela não convém à base transacional, sujeita a escritas frequentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a desnormalização reduz o espaço ocupado em disco, pois elimina os dados repetidos que as junções produziriam.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ao combinar dados de várias tabelas em uma, repetem-se atributos (o fornecedor aparece em cada item, por exemplo), e o espaço tende a crescer. O ganho é de tempo de leitura, não de armazenamento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "basta criar índices em todas as colunas das seis tabelas, pois índices produzem o mesmo efeito da desnormalização sem custo algum nas escritas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Índices aceleram buscas, mas não eliminam o custo de juntar seis tabelas. E cada índice tem custo: ocupa espaço e precisa ser mantido em todo INSERT, UPDATE e DELETE."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a desnormalização é aceitável nesse uso de leitura intensiva, desde que se assumam a redundância controlada e o custo de sincronizar a tabela, mantendo normalizada a base transacional.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Desnormalizar é introduzir redundância controlada para reduzir junções em cargas de leitura intensiva, como painéis e data warehouses. O preço é mais espaço, risco de defasagem até a próxima carga e o processo de sincronização. A base transacional continua normalizada, preservando a integridade nas escritas.",
+          "versaoInvertidaFalsa": "a desnormalização é aceitável apenas na base transacional, onde as escritas são frequentes, e deve ser evitada em tabelas usadas só para leitura, como as de painéis gerenciais."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à desnormalização vantagens da normalização (menos anomalias, menos espaço). Desnormalizar troca integridade e espaço por velocidade de leitura e só se justifica em contexto de leitura intensiva.",
+      "resumoFlashcard": {
+        "pergunta": "Quando a desnormalização é justificável?",
+        "resposta": "Em cargas de leitura intensiva, como relatórios, painéis e data warehouses, para reduzir junções. Ela introduz redundância controlada, custa espaço e sincronização e, em regra, não se aplica à base transacional."
+      },
+      "conceitosChave": ["Desnormalização"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. sobre projeto físico e ajuste de banco de dados (desnormalização); Kimball & Ross, The Data Warehouse Toolkit, cap. 'Dimensional Modeling Primer'."
+    },
+    {
+      "id": "bd-033",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Índices e otimização de consultas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Em comparação com o índice B-tree, o índice do tipo hash, disponível em SGBDs como o PostgreSQL,",
+      "variantesEnunciado": [
+        "Ao escolher o método de acesso para uma coluna de códigos de protocolo no PostgreSQL, um técnico compara o índice hash com o B-tree. Em relação ao B-tree, o índice hash",
+        "Sobre os tipos de índice de um SGBD relacional como o PostgreSQL, é correto afirmar que, comparado ao B-tree, o índice hash"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é o tipo criado por padrão pelo comando CREATE INDEX quando nenhum método é informado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No PostgreSQL, o método padrão do CREATE INDEX é o B-tree. O hash precisa ser pedido explicitamente, com USING hash."
+        },
+        {
+          "id": "opt-2",
+          "texto": "atende apenas a comparações de igualdade, não servindo a buscas por faixa de valores nem à ordenação do resultado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O índice hash guarda um código de 32 bits calculado a partir do valor e localiza as entradas pela função de hash. Como o hash não preserva a ordem dos valores, ele só atende ao operador de igualdade; consultas com <, >, BETWEEN ou ORDER BY ficam com o B-tree.",
+          "versaoInvertidaFalsa": "atende a comparações de igualdade e também a buscas por faixa de valores e à ordenação do resultado, pois preserva a ordem das chaves."
+        },
+        {
+          "id": "opt-3",
+          "texto": "mantém as chaves ordenadas e, por isso, é o mais indicado para consultas com ORDER BY e BETWEEN.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem mantém as chaves ordenadas é o B-tree, o que lhe permite atender a faixas e ordenação. O hash espalha os valores pelas posições de acordo com a função de hash, sem ordem."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é o único tipo que pode ser declarado UNIQUE, garantindo a unicidade dos valores da coluna.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No PostgreSQL, ocorre o contrário: segundo a documentação, apenas índices B-tree podem ser declarados únicos. Restrições UNIQUE e PRIMARY KEY são implementadas com B-tree."
+        },
+        {
+          "id": "opt-5",
+          "texto": "acelera buscas por prefixo, como LIKE 'TCE%', melhor que o B-tree, por distribuir as chaves de modo uniforme entre os buckets.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Busca por prefixo é uma busca por faixa (valores entre 'TCE' e o próximo prefixo) e depende de ordenação, que o hash não tem. O B-tree, com a classe de operadores adequada, é que pode atendê-la."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao hash propriedades do B-tree: ser o padrão, ordenar, atender a faixas e garantir unicidade. Hash serve só para igualdade.",
+      "resumoFlashcard": {
+        "pergunta": "Em que situação o índice hash é útil e qual sua limitação?",
+        "resposta": "É útil em buscas por igualdade exata. Como não preserva a ordem dos valores, não atende a faixas (<, >, BETWEEN), buscas por prefixo nem ORDER BY, que ficam com o B-tree, o tipo padrão."
+      },
+      "conceitosChave": ["Índices: B-tree × hash"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Index Types' (B-tree e Hash) e 'Unique Indexes' (apenas B-tree pode ser declarado único)."
+    },
+    {
+      "id": "bd-034",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "NoSQL: documentos, chave-valor, wide-column e grafos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para registrar eventos de acesso aos sistemas do Tribunal, com altíssimo volume de escrita, a equipe adotou o Apache Cassandra com a tabela eventos, cuja chave é PRIMARY KEY ((sistema, dia), instante), com CLUSTERING ORDER BY (instante DESC). As consultas sempre informam sistema e dia e pedem os eventos mais recentes. O keyspace usa fator de replicação 3, e leituras e escritas usam o nível QUORUM. Sobre esse projeto, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um serviço de trilhas de auditoria grava milhões de eventos por dia no Apache Cassandra, na tabela eventos, com PRIMARY KEY ((sistema, dia), instante) e CLUSTERING ORDER BY (instante DESC); as consultas informam sempre sistema e dia e buscam os eventos mais recentes. O fator de replicação é 3, e leituras e escritas usam QUORUM. Sobre esse projeto, é correto afirmar que",
+        "Considere, no Apache Cassandra, a tabela eventos com PRIMARY KEY ((sistema, dia), instante) e CLUSTERING ORDER BY (instante DESC), usada para registrar acessos com grande volume de escrita e consultada sempre por sistema e dia, em keyspace com fator de replicação 3 e nível QUORUM para leituras e escritas. Sobre esse projeto, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "instante, por ser a última coluna da chave, define o nó que armazena cada linha, enquanto (sistema, dia) apenas ordena os eventos dentro da partição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os papéis. A chave de partição, entre os parênteses internos, é que define o nó (pelo hash do token); as colunas de agrupamento, como instante, ordenam as linhas dentro da partição."
+        },
+        {
+          "id": "opt-2",
+          "texto": "com fator de replicação 3, o nível QUORUM exige a confirmação das 3 réplicas, o que o torna equivalente ao nível ALL.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. QUORUM é a maioria das réplicas: (3 ÷ 2) + 1 = 2, com arredondamento para baixo da divisão. ALL exigiria as 3 e deixaria a operação indisponível se qualquer réplica falhasse."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Cassandra garante consistência forte em qualquer nível, pois um nó mestre ordena todas as escritas do cluster antes de replicá-las.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Cassandra não tem nó mestre: todos os nós são pares (arquitetura masterless), e a consistência é ajustável por operação. Níveis como ONE podem devolver dados desatualizados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "(sistema, dia) é a chave de partição, que distribui os dados entre os nós, e instante ordena as linhas na partição; com fator 3, QUORUM usa 2 réplicas, e 2 + 2 > 3 garante ler a escrita mais recente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No CQL, os parênteses internos delimitam a chave de partição: (sistema, dia) distribui os dados pelo cluster e mantém juntos os eventos consultados em conjunto. instante é coluna de agrupamento (clustering) e ordena as linhas, aqui em ordem decrescente. Com R = W = 2 e N = 3, R + W > N: toda leitura em QUORUM alcança ao menos uma réplica que recebeu a última escrita confirmada.",
+          "versaoInvertidaFalsa": "instante é a chave de partição, que distribui os dados entre os nós, e (sistema, dia) ordena as linhas; com fator 3, QUORUM exige as 3 réplicas, como o nível ALL."
+        },
+        {
+          "id": "opt-5",
+          "texto": "consultas que filtram só por instante, sem informar sistema e dia, são eficientes por padrão, pois as colunas de agrupamento são indexadas globalmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No Cassandra, a modelagem parte das consultas: sem a chave de partição, seria preciso varrer o cluster, o que o CQL recusa sem ALLOW FILTERING. Colunas de agrupamento são ordenadas dentro de cada partição, não indexadas globalmente."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte chave de partição e coluna de agrupamento e trata QUORUM como ALL. Partição distribui; clustering ordena; QUORUM é maioria, e R + W > N dá leitura consistente.",
+      "resumoFlashcard": {
+        "pergunta": "No Cassandra, qual o papel da chave de partição, das colunas de agrupamento e do nível QUORUM?",
+        "resposta": "A chave de partição define em que nós a linha fica e agrupa os dados consultados juntos. As colunas de agrupamento ordenam as linhas na partição. QUORUM é a maioria das réplicas; com leituras e escritas em QUORUM, R + W > N garante ler a escrita mais recente."
+      },
+      "conceitosChave": ["NoSQL: wide-column (Cassandra)", "Consistência ajustável"],
+      "fundamentacao": "Documentação do Apache Cassandra, seções 'Data Modeling' (partition key e clustering columns) e 'Consistency Levels' (QUORUM); Sadalage & Fowler, NoSQL Essencial, cap. sobre quóruns."
+    },
+    {
+      "id": "bd-035",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "PostgreSQL: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Um técnico estuda o controle de concorrência multiversão (MVCC) e as rotinas de manutenção do PostgreSQL que hospeda o sistema de processos eletrônicos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na sustentação do PostgreSQL de um sistema com grande volume de atualizações, a equipe revisa o funcionamento do MVCC, do VACUUM e do ANALYZE. Considere as afirmativas abaixo.",
+        "Sobre o controle de concorrência multiversão (MVCC) do PostgreSQL e as rotinas de VACUUM, autovacuum e ANALYZE, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um UPDATE cria uma nova versão da linha e mantém a anterior enquanto alguma transação puder precisar dela, o que permite que leitores não bloqueiem escritores, e vice-versa.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a essência do MVCC: cada transação enxerga um snapshot, e as versões antigas atendem às leituras em andamento sem bloquear quem grava."
+        },
+        {
+          "texto": "Além de tornar reutilizável o espaço de versões mortas, o VACUUM atualiza o mapa de visibilidade, o que favorece varreduras somente no índice (index-only scans).",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A documentação lista entre as funções do VACUUM recuperar espaço, atualizar estatísticas, atualizar o mapa de visibilidade e prevenir o wraparound de identificadores de transação."
+        },
+        {
+          "texto": "Com o autovacuum ativo, torna-se desnecessário prevenir o esgotamento (wraparound) dos identificadores de transação, pois os identificadores gravados nas linhas têm 64 bits e nunca se esgotam.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Os identificadores de transação gravados nas linhas têm 32 bits e dão a volta. O VACUUM, manual ou via autovacuum, congela linhas antigas para evitar a perda de dados por wraparound; essa prevenção continua indispensável."
+        },
+        {
+          "texto": "O comando ANALYZE coleta estatísticas sobre a distribuição dos valores das colunas, usadas pelo planejador para estimar a seletividade das condições.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. As estatísticas (valores mais comuns, histogramas, fração de nulos) ficam no catálogo pg_statistic e orientam a escolha do plano."
+        },
+        {
+          "texto": "O autovacuum também executa ANALYZE automaticamente nas tabelas que sofreram quantidade significativa de alterações.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O autovacuum automatiza VACUUM e ANALYZE, disparando cada um quando as alterações em uma tabela ultrapassam limites configuráveis."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão certas, mas a III é falsa: os identificadores de transação nas linhas têm 32 bits, e a prevenção do wraparound é tarefa permanente do VACUUM. Ficam de fora a IV e a V, verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Falta a I, que descreve corretamente o MVCC: novas versões a cada UPDATE, com leitores e escritores sem bloqueio mútuo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I resume o MVCC; II lista funções do VACUUM; IV descreve o ANALYZE; V lembra que o autovacuum também analisa tabelas. A III é falsa: os identificadores de transação das linhas têm 32 bits, e o VACUUM precisa congelar linhas antigas para evitar o wraparound, o que o autovacuum faz, mas não torna desnecessário.",
+          "versaoInvertidaFalsa": "Um UPDATE sobrescreve a linha no mesmo lugar e bloqueia os leitores até o COMMIT, razão pela qual o PostgreSQL dispensa o VACUUM para recuperar espaço."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa, e exclui a II, que é verdadeira: atualizar o mapa de visibilidade é uma das funções do VACUUM."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A V está certa, mas a III não, e ficam de fora I, II e IV, que descrevem corretamente o MVCC, o VACUUM e o ANALYZE."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que o autovacuum torna o wraparound um não problema. O VACUUM cumpre quatro funções (espaço, estatísticas, mapa de visibilidade e congelamento), e o autovacuum também roda ANALYZE.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as funções do VACUUM no PostgreSQL?",
+        "resposta": "Tornar reutilizável o espaço de versões mortas, atualizar estatísticas do planejador, atualizar o mapa de visibilidade (index-only scans) e prevenir o wraparound dos identificadores de transação. O autovacuum automatiza VACUUM e ANALYZE."
+      },
+      "conceitosChave": ["MVCC", "PostgreSQL: VACUUM e autovacuum", "Seletividade e estatísticas"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Routine Vacuuming' (seções sobre recuperação de espaço, estatísticas, mapa de visibilidade e 'Preventing Transaction ID Wraparound Failures'; 'The Autovacuum Daemon') e 'Concurrency Control' (MVCC)."
+    },
+    {
+      "id": "bd-036",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Replicação, backup, recuperação e alta disponibilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na replicação de bancos de dados, a diferença entre os modos síncrono e assíncrono é que, no modo síncrono,",
+      "variantesEnunciado": [
+        "Ao planejar a alta disponibilidade do banco do sistema de processos, a equipe compara replicação síncrona e assíncrona. Em relação à assíncrona, na replicação síncrona",
+        "A respeito dos modos de replicação de bancos de dados, distingue-se a replicação síncrona da assíncrona porque, na síncrona,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o commit só é confirmado ao cliente depois que a réplica acusa o recebimento das alterações, o que reduz o risco de perda em failover, com maior latência.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na replicação síncrona, o primário só confirma o commit depois que a réplica confirma o recebimento (ou a gravação, ou a aplicação, conforme a configuração). Se o primário falhar, a réplica já tem as transações confirmadas. O custo é a latência de ida e volta a cada commit. No PostgreSQL, a streaming replication é assíncrona por padrão.",
+          "versaoInvertidaFalsa": "a confirmação do commit ao cliente não aguarda a réplica, o que elimina a latência de rede, ao custo de possível perda de transações em um failover."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a réplica recebe as alterações em lotes periódicos, de modo que o primário confirma o commit ao cliente sem esperar resposta alguma da réplica, o que reduz a latência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Confirmar sem esperar a réplica é a característica do modo assíncrono, em que transações recentes podem se perder em um failover."
+        },
+        {
+          "id": "opt-3",
+          "texto": "não há perda de dados nem mesmo diante de erros lógicos, como um DELETE indevido, o que dispensa a manutenção de backups.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A réplica reproduz fielmente o que o primário faz, inclusive o DELETE indevido. Replicação protege contra falhas de hardware e de site, não contra erros lógicos; backups e PITR continuam necessários."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o primário confirma o commit imediatamente e envia as alterações depois, o que elimina o impacto da latência de rede no desempenho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descreve o modo assíncrono. No síncrono, a latência até a réplica entra no tempo de cada commit, e por isso réplicas síncronas costumam ficar em locais próximos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a réplica só pode ser usada após o primário falhar, ao passo que, no modo assíncrono, ela aceita consultas de leitura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O uso da réplica para leitura independe do modo de replicação. No PostgreSQL, um standby em hot standby aceita consultas somente leitura, seja síncrono ou assíncrono."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as definições dos modos e sugere que replicação substitui backup. Síncrona espera a réplica e protege contra falha física; nenhuma protege contra erro lógico.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre replicação síncrona e assíncrona?",
+        "resposta": "Na síncrona, o commit só é confirmado depois que a réplica acusa o recebimento: menor risco de perda, maior latência. Na assíncrona, o commit não espera a réplica: menor latência, possível perda das últimas transações em um failover."
+      },
+      "conceitosChave": ["Replicação síncrona × assíncrona"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'High Availability, Load Balancing, and Replication', seções 'Streaming Replication' (assíncrona por padrão), 'Synchronous Replication' e 'Hot Standby'."
+    },
+    {
+      "id": "bd-037",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Segurança e governança de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), a diferença entre dado anonimizado e dado pseudonimizado é que",
+      "variantesEnunciado": [
+        "Em um projeto de compartilhamento de dados de servidores para estudos estatísticos, a equipe de governança precisa distinguir, à luz da Lei nº 13.709/2018 (LGPD), anonimização de pseudonimização. A diferença entre dado anonimizado e dado pseudonimizado é que",
+        "Ao classificar bases de dados para fins da Lei nº 13.709/2018 (LGPD), um analista de governança de dados deve considerar que a diferença entre dado anonimizado e dado pseudonimizado é que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o anonimizado continua sendo dado pessoal, pois pode ser revertido pelo controlador com uma chave mantida em ambiente seguro, ao passo que o pseudonimizado deixa de ser dado pessoal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte os conceitos. A reassociação por informação adicional mantida em separado pelo controlador define a pseudonimização (art. 13, § 4º). O anonimizado, em regra, não é dado pessoal (art. 12)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ambos deixam de ser dados pessoais assim que a técnica é aplicada, independentemente da possibilidade de reversão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pseudonimizado continua sendo dado pessoal. E mesmo o anonimizado volta a sê-lo se o processo for revertido com meios próprios ou puder ser revertido com esforço razoável (art. 12)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a anonimização equivale à criptografia reversível dos dados, e a pseudonimização equivale à sua eliminação definitiva da base.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Criptografia reversível mantém o dado pessoal, e quem tem a chave o recupera. Eliminação é outra hipótese de tratamento (art. 16). Nenhuma das equivalências procede."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o pseudonimizado continua sendo dado pessoal, reassociável ao titular por informação mantida em separado pelo controlador; o anonimizado, salvo reversão com esforço razoável, não é.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela LGPD, pseudonimização é o tratamento em que o dado perde a associação ao titular, senão pelo uso de informação adicional mantida separadamente pelo controlador (art. 13, § 4º), e por isso o dado segue pessoal. Já o anonimizado não é considerado dado pessoal, salvo se a anonimização for revertida ou puder sê-lo com esforço razoável (arts. 5º, III, e 12).",
+          "versaoInvertidaFalsa": "o anonimizado continua sendo dado pessoal, reassociável ao titular por informação mantida em separado pelo controlador; o pseudonimizado, salvo reversão com esforço razoável, não é."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o mascaramento dos dados na tela do usuário basta para que o dado armazenado na base seja considerado anonimizado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mascaramento na exibição é um controle de acesso: o dado original continua íntegro na base e identificável. Anonimização exige que o dado armazenado perca a associação com o titular."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte anonimização e pseudonimização. O pseudonimizado é reversível com a informação adicional guardada pelo controlador e continua dado pessoal; o anonimizado, em regra, sai do alcance da LGPD.",
+      "resumoFlashcard": {
+        "pergunta": "Pela LGPD, dado pseudonimizado é dado pessoal? E o anonimizado?",
+        "resposta": "O pseudonimizado é, pois pode ser reassociado ao titular com informação adicional mantida separadamente pelo controlador (art. 13, § 4º). O anonimizado não é, salvo se a anonimização for revertida ou reversível com esforço razoável (art. 12)."
+      },
+      "conceitosChave": ["LGPD: anonimização × pseudonimização"],
+      "fundamentacao": "Lei nº 13.709/2018 (LGPD), art. 5º, III e XI; art. 12, caput e § 1º; art. 13, § 4º."
+    },
+    {
+      "id": "bd-038",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Bancos vetoriais e embeddings",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Uma equipe avalia o uso de índices de busca aproximada de vizinhos mais próximos (ANN) em um banco vetorial que armazena embeddings de documentos do Tribunal. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "No projeto de um mecanismo de busca semântica sobre normas e acórdãos, a equipe compara a busca vetorial exata com índices aproximados (ANN), como HNSW e IVFFlat. Considere as afirmativas abaixo.",
+        "Sobre a busca de vizinhos mais próximos em bancos vetoriais, exata ou aproximada (ANN), e sobre os índices HNSW e IVFFlat, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Sem índice, a busca vetorial exata compara a consulta com uma pequena amostra dos vetores, motivo pelo qual seu recall é inferior ao dos índices aproximados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A busca exata compara a consulta com todos os vetores e tem recall perfeito; seu problema é o custo, que cresce com o volume. A documentação do pgvector descreve assim o comportamento padrão sem índice."
+        },
+        {
+          "texto": "Índices ANN, como HNSW e IVFFlat, trocam parte do recall por velocidade e podem deixar de retornar alguns dos vizinhos realmente mais próximos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Por isso, ao criar um índice aproximado, os resultados podem mudar em relação à busca exata; o recall se ajusta por parâmetros de consulta."
+        },
+        {
+          "texto": "No IVFFlat, os vetores são distribuídos em listas, e aumentar o número de listas examinadas por consulta (probes) tende a elevar o recall e o tempo de resposta.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O IVFFlat examina só as listas mais próximas da consulta. Mais probes significa mais listas examinadas: melhor recall, consulta mais lenta."
+        },
+        {
+          "texto": "O HNSW organiza os vetores em uma árvore B ordenada pelo módulo de cada vetor, o que permite usar o mesmo índice para qualquer função de distância.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O HNSW é um grafo de múltiplas camadas (Hierarchical Navigable Small World), não uma árvore B. E, no pgvector, cada índice serve a uma função de distância, definida pela classe de operadores."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II está certa, mas a I inverte a relação: a busca exata tem recall perfeito, e o que se perde com índices aproximados é justamente recall. Falta a III, verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III está certa, mas a IV descreve o HNSW como árvore B, quando ele é um grafo navegável em camadas, sem ordenação por módulo. Falta a II, verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão certas, mas a I é falsa: a busca exata percorre todos os vetores e não perde recall, apenas é mais custosa em grandes volumes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão certas, mas a IV é falsa: o HNSW é um grafo em camadas e, no pgvector, cada índice atende a uma única função de distância."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Índices ANN aceleram a busca à custa de algum recall (II), e no IVFFlat o parâmetro probes regula esse equilíbrio (III). A busca exata compara com todos os vetores e tem recall perfeito (I é falsa), e o HNSW é um grafo de camadas, com um índice por função de distância (IV é falsa).",
+          "versaoInvertidaFalsa": "Índices ANN, como HNSW e IVFFlat, sempre retornam exatamente os mesmos vizinhos da busca exata, apenas em menos tempo, sem qualquer perda de recall."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à busca exata a perda de recall que é própria dos índices aproximados e descreve o HNSW como árvore B. ANN troca recall por velocidade; HNSW é grafo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre busca vetorial exata e aproximada (ANN)?",
+        "resposta": "A exata compara a consulta com todos os vetores e tem recall perfeito, mas custa caro em grandes volumes. A aproximada (HNSW, IVFFlat) é muito mais rápida e pode perder alguns vizinhos; parâmetros como hnsw.ef_search e ivfflat.probes regulam o equilíbrio."
+      },
+      "conceitosChave": ["ANN: HNSW × IVFFlat", "Recall × velocidade"],
+      "fundamentacao": "README do pgvector (repositório oficial pgvector/pgvector), seções 'Indexing', 'HNSW' e 'IVFFlat' (probes); Malkov & Yashunin (2018), 'Efficient and robust approximate nearest neighbor search using HNSW graphs'."
+    },
+    {
+      "id": "bd-039",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Álgebra relacional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Na álgebra relacional, a operação de …… só pode ser aplicada a relações compatíveis em união, isto é, de mesmo grau e com domínios correspondentes; a operação de …… combina cada tupla de uma relação com todas as tuplas de outra; e a operação de …… equivale a esse produto seguido de uma seleção pela igualdade dos atributos de mesmo nome e de uma projeção que elimina as colunas repetidas. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Considere três operações da álgebra relacional: a de …… exige relações compatíveis em união (mesmo grau e domínios correspondentes); a de …… combina cada tupla de uma relação com todas as tuplas de outra; e a de …… corresponde a esse produto seguido de seleção pela igualdade dos atributos homônimos e de projeção que elimina as colunas repetidas. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao revisar a base teórica das consultas SQL, um técnico anotou: a operação de …… requer relações de mesmo grau e domínios compatíveis; a operação de …… gera todas as combinações de tuplas entre duas relações; e a operação de …… é um produto seguido de seleção pela igualdade dos atributos de mesmo nome, com projeção que remove as colunas duplicadas. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "junção natural − produto cartesiano − divisão",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A junção natural não exige compatibilidade de união: ela combina relações de esquemas diferentes. E a divisão responde a consultas do tipo 'todos', sem relação com a descrição da terceira lacuna."
+        },
+        {
+          "id": "opt-2",
+          "texto": "diferença − junção natural − produto cartesiano",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas as outras estão trocadas: combinar cada tupla com todas as outras é o produto cartesiano, e o produto seguido de seleção por igualdade e projeção é a junção natural."
+        },
+        {
+          "id": "opt-3",
+          "texto": "diferença − produto cartesiano − junção natural",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. União, interseção e diferença exigem relações compatíveis em união. O produto cartesiano (×) gera todas as combinações de tuplas. A junção natural (⋈) equivale a um produto cartesiano seguido de seleção pela igualdade dos atributos homônimos e de projeção que elimina as colunas repetidas.",
+          "versaoInvertidaFalsa": "produto cartesiano − diferença − junção natural"
+        },
+        {
+          "id": "opt-4",
+          "texto": "projeção − divisão − junção natural",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A projeção é unária e escolhe atributos de uma única relação, sem exigência de compatibilidade de união. A divisão não combina cada tupla com todas as outras: ela devolve os valores associados a todas as tuplas do divisor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "seleção − produto cartesiano − interseção",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A seleção é unária e filtra tuplas por uma condição. A interseção, embora exija compatibilidade de união, não corresponde a um produto seguido de seleção e projeção."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca produto cartesiano e junção natural e oferece operações unárias (seleção, projeção) para a exigência de compatibilidade de união, que vale para união, interseção e diferença.",
+      "resumoFlashcard": {
+        "pergunta": "Quais operações da álgebra relacional exigem compatibilidade de união e como se define a junção natural?",
+        "resposta": "União, interseção e diferença exigem relações de mesmo grau e domínios compatíveis. A junção natural é o produto cartesiano seguido de seleção pela igualdade dos atributos homônimos e de projeção que elimina as colunas repetidas."
+      },
+      "conceitosChave": ["Álgebra relacional: junção e produto cartesiano", "Compatibilidade de união"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Álgebra e cálculo relacional' (operações de conjunto e compatibilidade de tipo, PRODUTO CARTESIANO, JUNÇÃO e JUNÇÃO NATURAL)."
+    },
+    {
+      "id": "bd-040",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Modelo entidade-relacionamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em um diagrama entidade-relacionamento, cada SERVIDOR está lotado em exatamente uma UNIDADE_TECNICA, e cada unidade pode ter nenhum, um ou vários servidores lotados. Esse relacionamento e seu mapeamento para o modelo relacional são corretamente descritos como",
+      "variantesEnunciado": [
+        "No cadastro de pessoal, cada SERVIDOR deve estar lotado em uma, e somente uma, UNIDADE_TECNICA, ao passo que uma unidade pode existir sem servidores ou reunir vários deles. Esse relacionamento e seu mapeamento para o modelo relacional são corretamente descritos como",
+        "Considere o relacionamento LOTACAO entre SERVIDOR e UNIDADE_TECNICA: todo servidor tem exatamente uma unidade de lotação, e uma unidade pode ter zero ou muitos servidores. Esse relacionamento e seu mapeamento para o modelo relacional são corretamente descritos como"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "N:N, o que exige uma tabela associativa com as chaves das duas entidades, pois uma unidade tem vários servidores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Para ser N:N, um servidor também precisaria poder estar em várias unidades. Como cada servidor tem uma única lotação, o relacionamento é 1:N, resolvido com chave estrangeira, sem tabela associativa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "1:N, com participação total de SERVIDOR e parcial de UNIDADE_TECNICA; SERVIDOR recebe chave estrangeira para UNIDADE_TECNICA, declarada NOT NULL.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Uma unidade se relaciona com vários servidores e cada servidor com uma unidade: 1:N. Todo servidor precisa de lotação (participação total, mínimo 1), enquanto a unidade pode não ter servidores (parcial, mínimo 0). No mapeamento, a chave estrangeira vai para o lado N (SERVIDOR), e a participação total se traduz em NOT NULL.",
+          "versaoInvertidaFalsa": "1:N, com participação parcial de SERVIDOR e total de UNIDADE_TECNICA; UNIDADE_TECNICA recebe chave estrangeira para SERVIDOR, que pode ser nula."
+        },
+        {
+          "id": "opt-3",
+          "texto": "1:N, com participação total de UNIDADE_TECNICA e parcial de SERVIDOR; UNIDADE_TECNICA recebe chave estrangeira para SERVIDOR, declarada NOT NULL.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as participações e o lado da chave estrangeira. Em UNIDADE_TECNICA, uma única chave estrangeira comportaria só um servidor por unidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "1:1, pois cada servidor se liga a uma única unidade; qualquer das tabelas pode receber a chave estrangeira da outra.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cardinalidade considera os dois lados: cada servidor tem uma unidade, mas cada unidade pode ter vários servidores. Por isso o relacionamento é 1:N, e não 1:1."
+        },
+        {
+          "id": "opt-5",
+          "texto": "1:N, com participação parcial das duas entidades; SERVIDOR recebe chave estrangeira para UNIDADE_TECNICA, que pode ser nula.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A cardinalidade e o lado da chave estão certos, mas a participação de SERVIDOR é total ('exatamente uma' unidade). Permitir nulo admitiria servidor sem lotação."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde cardinalidade (máximos: 1:N) com participação (mínimos: total ou parcial) e inverte o lado da chave estrangeira. Participação total do lado N vira NOT NULL na chave estrangeira.",
+      "resumoFlashcard": {
+        "pergunta": "Como mapear um relacionamento 1:N com participação total do lado N?",
+        "resposta": "A chave estrangeira vai para a tabela do lado N, referenciando o lado 1, e é declarada NOT NULL, pois cada instância do lado N precisa estar associada a uma instância do lado 1."
+      },
+      "conceitosChave": ["MER: cardinalidade e participação", "MER: mapeamento para o modelo relacional"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Modelagem usando o modelo ER' (razão de cardinalidade e restrição de participação) e cap. de mapeamento ER para relacional (relacionamentos 1:N)."
+    }
+  ]
+}

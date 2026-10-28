@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "banco-de-dados",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "bd-011",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Bancos vetoriais e embeddings",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Em aplicações de inteligência artificial que usam bancos de dados vetoriais, os embeddings e a similaridade de cosseno são, respectivamente,",
+      "variantesEnunciado": [
+        "Um técnico estuda a adoção de busca semântica sobre a jurisprudência do Tribunal com um banco vetorial. Nesse contexto, os embeddings e a similaridade de cosseno são, respectivamente,",
+        "No desenho de um assistente de pesquisa que recupera trechos de normas pelo significado, e não por palavras exatas, são usados embeddings e similaridade de cosseno. Esses dois elementos são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "códigos de hash criptográfico gerados a partir dos textos e a contagem de bits coincidentes entre dois códigos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Hashes criptográficos são projetados para que entradas parecidas gerem saídas completamente diferentes, o oposto do que se quer em busca semântica. Embeddings preservam a proximidade de significado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "índices B-tree construídos sobre colunas de texto e a distância lexicográfica entre duas cadeias de caracteres.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. B-tree ordena valores e atende a igualdade e faixas, sem captar significado. A ordem alfabética entre cadeias nada diz sobre semelhança semântica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "vetores esparsos de palavras-chave com pesos fixos e uma medida aplicável só a vetores binários, que vale 0 para vetores idênticos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Embeddings de modelos de linguagem costumam ser vetores densos aprendidos. A similaridade de cosseno vale para quaisquer vetores numéricos e é máxima (1) para vetores de mesma direção; quem vale 0 nesse caso é a distância de cosseno."
+        },
+        {
+          "id": "opt-4",
+          "texto": "vetores numéricos que representam o significado de textos ou imagens, e uma medida do ângulo entre dois vetores, que vale 1 quando apontam no mesmo sentido.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Embeddings são vetores numéricos (em geral densos, com centenas ou milhares de dimensões) gerados por modelos de IA, de modo que itens de significado parecido fiquem próximos no espaço vetorial. A similaridade de cosseno é o cosseno do ângulo entre dois vetores: 1 para mesma direção, 0 para ortogonais, −1 para opostos. Ela ignora o módulo.",
+          "versaoInvertidaFalsa": "vetores numéricos que representam o significado de textos ou imagens, e uma medida do ângulo entre dois vetores, que vale 0 quando apontam no mesmo sentido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "vetores numéricos que representam o significado de textos ou imagens, e uma medida da diferença entre os módulos de dois vetores, qualquer que seja a direção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas a similaridade de cosseno depende justamente da direção e ignora o módulo (comprimento) dos vetores. É uma meia-verdade típica: começo correto e final errado."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca similaridade por distância de cosseno (1 × 0 para vetores de mesma direção) e sugere que o cosseno mede o comprimento dos vetores, quando mede o ângulo entre eles.",
+      "resumoFlashcard": {
+        "pergunta": "O que são embeddings e o que mede a similaridade de cosseno?",
+        "resposta": "Embeddings são vetores numéricos que representam o significado de textos, imagens ou outros objetos, aproximando itens semelhantes. A similaridade de cosseno mede o ângulo entre dois vetores: vale 1 para mesma direção, e a distância de cosseno é 1 menos a similaridade."
+      },
+      "conceitosChave": ["Embeddings", "Similaridade de cosseno"],
+      "fundamentacao": "README do pgvector (repositório oficial pgvector/pgvector), seções 'Querying' e 'Distances' (distância de cosseno e similaridade = 1 − distância); Manning, Raghavan & Schütze, Introduction to Information Retrieval, cap. 6 (similaridade de cosseno)."
+    },
+    {
+      "id": "bd-012",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Replicação, backup, recuperação e alta disponibilidade",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O plano de continuidade do sistema de processos eletrônicos estabelece que, em caso de desastre, poderão ser perdidas no máximo as transações dos últimos 15 minutos e que o sistema deverá voltar a operar em até 4 horas. Hoje, a única proteção é um backup completo diário, feito às 23h. Os dois requisitos e a avaliação da proteção atual são, respectivamente,",
+      "variantesEnunciado": [
+        "A análise de impacto no negócio do sistema de prestação de contas fixou que a perda máxima admitida é de 15 minutos de transações e que o serviço deve ser restabelecido em até 4 horas após um desastre. Atualmente, há apenas um backup completo diário, às 23h. Os dois requisitos e a avaliação da proteção atual são, respectivamente,",
+        "Na revisão do plano de recuperação de desastres de um sistema crítico, consta que a organização tolera perder no máximo 15 minutos de dados e que o sistema deve voltar a operar em até 4 horas. A proteção vigente é só um backup completo diário às 23h. Os dois requisitos e a avaliação da proteção atual são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "RTO de 15 minutos e RPO de 4 horas; o backup diário atende a ambos, pois a restauração completa leva menos de 4 horas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os conceitos estão trocados: a perda máxima tolerada de dados é o RPO, e o tempo máximo para restabelecer o serviço é o RTO. E o backup diário não atende à perda máxima de 15 minutos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "RPO de 15 minutos e RTO de 4 horas; só o backup diário não atende ao RPO, pois uma falha à tarde perderia horas de transações.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O RPO (Recovery Point Objective) é a quantidade máxima de dados, medida em tempo, que se aceita perder; o RTO (Recovery Time Objective) é o prazo máximo para restabelecer o serviço. Com um único backup às 23h, uma falha às 18h perderia cerca de 19 horas de transações. Para RPO de 15 minutos, é preciso arquivar o log (WAL ou redo) em intervalos menores ou replicar os dados.",
+          "versaoInvertidaFalsa": "RTO de 15 minutos e RPO de 4 horas; o backup diário isolado não atende ao RTO, pois uma falha no fim da tarde perderia quase um dia de transações."
+        },
+        {
+          "id": "opt-3",
+          "texto": "RPO de 15 minutos e RTO de 4 horas; o backup diário atende ao RPO, porque o RPO mede o tempo gasto na restauração do backup mais recente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A identificação dos requisitos está certa, mas a justificativa redefine o RPO como tempo de restauração, que é o RTO. O RPO mede a perda de dados, e o backup diário admite perdas de até 24 horas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "MTBF de 15 minutos e MTTR de 4 horas; a adequação do backup depende apenas da frequência de falhas do servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. MTBF (tempo médio entre falhas) e MTTR (tempo médio de reparo) são métricas de confiabilidade observadas, não objetivos de recuperação definidos no plano de continuidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "RTO de 15 minutos e RPO de 4 horas; o backup diário não atende ao RTO, que exige replicação síncrona com perda zero.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca RPO e RTO e associa ao RTO a ideia de perda zero, que se refere a dados (RPO igual a zero). Replicação síncrona não é a única forma de atender a um RPO de 15 minutos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca RPO e RTO. RPO aponta para trás (até que ponto do passado recupero os dados); RTO aponta para frente (em quanto tempo volto a operar).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre RPO e RTO?",
+        "resposta": "O RPO é a perda máxima de dados aceitável, medida em tempo, e orienta a frequência de backups e de cópias de log. O RTO é o tempo máximo para restabelecer o serviço e orienta a estratégia de restauração e de alta disponibilidade."
+      },
+      "conceitosChave": ["Continuidade: RPO e RTO"],
+      "fundamentacao": "ABNT NBR ISO 22301:2020 (gestão de continuidade de negócios: objetivo de tempo de recuperação e ponto de recuperação); documentação do PostgreSQL 18, 'Continuous Archiving and Point-in-Time Recovery'."
+    },
+    {
+      "id": "bd-013",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Segurança e governança de dados",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No banco do sistema de contratos, o DBA executou GRANT SELECT ON contratos TO joao WITH GRANT OPTION; e, em seguida, João executou GRANT SELECT ON contratos TO ana;. Meses depois, por mudança de lotação de João, o DBA executou REVOKE SELECT ON contratos FROM joao CASCADE;. Em um SGBD que segue o padrão SQL, como o PostgreSQL, o efeito desse comando e a boa prática de menor privilégio são:",
+      "variantesEnunciado": [
+        "No banco do sistema de convênios, um administrador executou GRANT SELECT ON contratos TO joao WITH GRANT OPTION;, e João repassou o acesso com GRANT SELECT ON contratos TO ana;. Com a saída de João da equipe, o administrador executou REVOKE SELECT ON contratos FROM joao CASCADE;. Em um SGBD aderente ao padrão SQL, como o PostgreSQL, o efeito desse comando e a boa prática de menor privilégio são:",
+        "Durante uma auditoria de acessos, constatou-se a sequência GRANT SELECT ON contratos TO joao WITH GRANT OPTION; (pelo DBA), GRANT SELECT ON contratos TO ana; (por João) e, depois, REVOKE SELECT ON contratos FROM joao CASCADE; (pelo DBA). Em um SGBD que segue o padrão SQL, como o PostgreSQL, o efeito do último comando e a boa prática de menor privilégio são:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "João e Ana perdem o privilégio, pois o CASCADE revoga também o que dependia da opção de concessão; o ideal é conceder SELECT a um papel (role), sem WITH GRANT OPTION.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O privilégio de Ana depende da opção de concessão de João. Com CASCADE, o REVOKE remove o privilégio de João e os que dele dependem; sem CASCADE, o comando falharia por haver privilégios dependentes. Para o menor privilégio, concede-se o acesso a um papel (role) e atribui-se o papel às pessoas, sem permitir que repassem o acesso.",
+          "versaoInvertidaFalsa": "Apenas João perde o privilégio, pois o CASCADE não alcança o que dependia da opção de concessão; o ideal é conceder SELECT a um papel (role), sem WITH GRANT OPTION."
+        },
+        {
+          "id": "opt-2",
+          "texto": "apenas João perde o privilégio, pois o de Ana foi concedido por outro usuário; o ideal é conceder ALL PRIVILEGES a um papel, para evitar novas concessões individuais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O privilégio de Ana foi concedido por João com base na opção de concessão e cai em cascata. Além disso, ALL PRIVILEGES contraria o menor privilégio, pois dá INSERT, UPDATE, DELETE e outros a quem só precisa ler."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o comando falha, pois REVOKE não aceita CASCADE; o ideal é excluir e recriar o usuário João para remover suas concessões.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O padrão SQL e o PostgreSQL aceitam REVOKE ... CASCADE (e RESTRICT, o comportamento padrão). Excluir e recriar o usuário é desnecessário e nem sequer é permitido enquanto houver objetos ou privilégios dependentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "João perde o SELECT, mas mantém a opção de concessão, e Ana conserva o privilégio; o ideal é usar WITH GRANT OPTION em todas as concessões a auditores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A opção de concessão não sobrevive sem o privilégio a que se refere; quem quer retirar só a opção usa REVOKE GRANT OPTION FOR. E generalizar WITH GRANT OPTION amplia a redistribuição descontrolada de acessos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Ana perde o privilégio e João o mantém, pois o CASCADE atinge só quem recebeu o privilégio de terceiros; o ideal é conceder SELECT diretamente a cada usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O REVOKE é dirigido a João, que necessariamente perde o privilégio; o CASCADE estende a revogação aos dependentes. Conceder diretamente a cada usuário dificulta a gestão; o recomendado é usar papéis."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que o privilégio repassado sobrevive à revogação de quem o repassou. Com CASCADE, a revogação se propaga aos privilégios dependentes; sem ele, o padrão é RESTRICT, e o comando falha.",
+      "resumoFlashcard": {
+        "pergunta": "O que faz REVOKE ... CASCADE quando o usuário repassou o privilégio com WITH GRANT OPTION?",
+        "resposta": "Revoga o privilégio do usuário e, em cascata, os privilégios que outros receberam dele. Sem CASCADE (RESTRICT, padrão), o comando falha se houver privilégios dependentes."
+      },
+      "conceitosChave": ["SQL: GRANT e REVOKE", "Menor privilégio"],
+      "fundamentacao": "Documentação do PostgreSQL 18, comandos GRANT e REVOKE (WITH GRANT OPTION, CASCADE e RESTRICT); ABNT NBR ISO/IEC 27002:2022, controle 8.2 (direitos de acesso privilegiados)."
+    },
+    {
+      "id": "bd-014",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "SQL (DDL, DML e consultas)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A tabela EMPENHO (id, orgao, valor, situacao) contém as linhas (1, 'SEDUC', 100, 'LIQUIDADO'), (2, 'SEDUC', 250, 'CANCELADO'), (3, 'SEDUC', 300, 'LIQUIDADO'), (4, 'SES', 500, 'LIQUIDADO'), (5, 'SES', NULL, 'LIQUIDADO'), (6, 'SEINFRA', 800, 'LIQUIDADO'), (7, 'SEINFRA', 200, 'CANCELADO') e (8, 'SEINFRA', 150, 'CANCELADO'). Para uma auditoria, executou-se: SELECT orgao, SUM(valor) FROM empenho WHERE situacao = 'LIQUIDADO' GROUP BY orgao HAVING COUNT(*) >= 2 ORDER BY 2 DESC; O resultado obtido é:",
+      "variantesEnunciado": [
+        "Em uma fiscalização da execução orçamentária, um técnico consultou a tabela EMPENHO (id, orgao, valor, situacao), com as linhas (1, 'SEDUC', 100, 'LIQUIDADO'), (2, 'SEDUC', 250, 'CANCELADO'), (3, 'SEDUC', 300, 'LIQUIDADO'), (4, 'SES', 500, 'LIQUIDADO'), (5, 'SES', NULL, 'LIQUIDADO'), (6, 'SEINFRA', 800, 'LIQUIDADO'), (7, 'SEINFRA', 200, 'CANCELADO') e (8, 'SEINFRA', 150, 'CANCELADO'), com a instrução SELECT orgao, SUM(valor) FROM empenho WHERE situacao = 'LIQUIDADO' GROUP BY orgao HAVING COUNT(*) >= 2 ORDER BY 2 DESC; O resultado obtido é:",
+        "Considere a consulta SELECT orgao, SUM(valor) FROM empenho WHERE situacao = 'LIQUIDADO' GROUP BY orgao HAVING COUNT(*) >= 2 ORDER BY 2 DESC; executada sobre a tabela EMPENHO (id, orgao, valor, situacao), cujas linhas são (1, 'SEDUC', 100, 'LIQUIDADO'), (2, 'SEDUC', 250, 'CANCELADO'), (3, 'SEDUC', 300, 'LIQUIDADO'), (4, 'SES', 500, 'LIQUIDADO'), (5, 'SES', NULL, 'LIQUIDADO'), (6, 'SEINFRA', 800, 'LIQUIDADO'), (7, 'SEINFRA', 200, 'CANCELADO') e (8, 'SEINFRA', 150, 'CANCELADO'). O resultado obtido é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "SEINFRA com 1150, SEDUC com 650 e SES com 500, nessa ordem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse seria o resultado sem a cláusula WHERE, somando também os empenhos cancelados. O WHERE filtra as linhas antes do agrupamento, e só os liquidados entram nas somas e nas contagens."
+        },
+        {
+          "id": "opt-2",
+          "texto": "SEDUC com 400, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse resultado supõe que COUNT(*) ignora a linha de valor NULL, deixando a SES com 1 empenho. Quem ignora NULL é COUNT(valor); COUNT(*) conta todas as linhas do grupo, e a SES tem 2."
+        },
+        {
+          "id": "opt-3",
+          "texto": "SES com 500 e SEDUC com 400, nessa ordem.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O WHERE deixa só os liquidados: SEDUC (100 e 300), SES (500 e NULL) e SEINFRA (800). O HAVING COUNT(*) >= 2 elimina a SEINFRA, que ficou com 1 linha. SUM ignora NULL, de modo que SES soma 500 e SEDUC 400; ORDER BY 2 DESC põe SES primeiro. Resultado conferido em execução real.",
+          "versaoInvertidaFalsa": "SEDUC com 400 e SES com 500, nessa ordem."
+        },
+        {
+          "id": "opt-4",
+          "texto": "SEDUC com 400 e SES com NULL, nessa ordem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Supõe que um NULL torna a soma inteira NULL. Funções de agregação como SUM ignoram valores NULL; a soma da SES é 500. Apenas expressões aritméticas comuns, como 500 + NULL, resultam em NULL."
+        },
+        {
+          "id": "opt-5",
+          "texto": "SEINFRA com 800, SES com 500 e SEDUC com 400, nessa ordem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Supõe que o HAVING conta as linhas antes do WHERE (a SEINFRA tem 3 linhas na tabela). A ordem lógica é FROM, WHERE, GROUP BY e HAVING: depois do filtro, a SEINFRA tem só 1 linha e é eliminada."
+        }
+      ],
+      "pegadinhaFCC": "Três armadilhas em uma consulta: a ordem WHERE → GROUP BY → HAVING, COUNT(*) contando a linha com NULL e SUM ignorando o NULL.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre WHERE e HAVING, e como COUNT e SUM tratam NULL?",
+        "resposta": "WHERE filtra linhas antes do agrupamento; HAVING filtra grupos depois. COUNT(*) conta todas as linhas, inclusive com NULL; COUNT(coluna) e SUM(coluna) ignoram os NULL."
+      },
+      "conceitosChave": ["SQL: GROUP BY e HAVING", "SQL: NULL e lógica de três valores"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'The GROUP BY and HAVING Clauses' e 'Aggregate Functions' (agregados ignoram NULL, exceto count(*)); resultado conferido em sqlite3 3.45.1 com os dados do enunciado."
+    },
+    {
+      "id": "bd-015",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Modelo entidade-relacionamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No modelo conceitual do sistema de gestão de processos, SERVIDOR e PROCESSO participam do relacionamento ATUA_EM, de cardinalidade N:N, com os atributos papel e data_inicio. Cada servidor atua no máximo uma vez em cada processo. No mapeamento para o modelo relacional, a solução adequada é",
+      "variantesEnunciado": [
+        "Ao revisar o projeto lógico do sistema de gestão de processos, um analista encontra o relacionamento ATUA_EM entre SERVIDOR e PROCESSO, de cardinalidade N:N, com os atributos papel e data_inicio; cada servidor atua no máximo uma vez em cada processo. No mapeamento para o modelo relacional, a solução adequada é",
+        "Considere o relacionamento N:N ATUA_EM entre as entidades SERVIDOR e PROCESSO, que possui os atributos papel e data_inicio e no qual cada servidor atua, no máximo, uma vez por processo. No mapeamento para o modelo relacional, a solução adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "incluir em PROCESSO uma chave estrangeira para SERVIDOR, com papel e data_inicio, pois toda associação se resolve com chave estrangeira no lado N.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A chave estrangeira no lado N resolve relacionamentos 1:N. Em um N:N, uma única chave estrangeira em PROCESSO só permitiria um servidor por processo, o que contraria a cardinalidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "incluir em SERVIDOR uma coluna multivalorada com os números dos processos, mantendo papel e data_inicio como atributos de SERVIDOR.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Coluna multivalorada viola a 1FN. Além disso, papel e data_inicio caracterizam o par servidor–processo, não o servidor isoladamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "fundir SERVIDOR e PROCESSO em uma única tabela, com chave primária composta pela matrícula e pelo número do processo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A fusão repetiria os dados do servidor em cada processo e os do processo em cada servidor, gerando redundância e anomalias de atualização, inserção e exclusão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "criar a tabela ATUA_EM só com as chaves estrangeiras, levando papel e data_inicio para PROCESSO, pois relacionamentos não podem ter atributos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Relacionamentos podem ter atributos próprios, e em um N:N eles ficam na tabela do relacionamento. Em PROCESSO, papel e data_inicio não identificariam a qual servidor se referem."
+        },
+        {
+          "id": "opt-5",
+          "texto": "criar a tabela ATUA_EM com as chaves estrangeiras de SERVIDOR e de PROCESSO, que juntas formam sua chave primária, e com papel e data_inicio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Relacionamento N:N é mapeado para uma tabela própria (associativa), com as chaves estrangeiras das entidades participantes. Como cada servidor atua no máximo uma vez em cada processo, o par de chaves estrangeiras forma a chave primária. Os atributos do relacionamento ficam nessa tabela.",
+          "versaoInvertidaFalsa": "criar a tabela ATUA_EM só com as chaves estrangeiras de SERVIDOR e de PROCESSO, deixando papel e data_inicio em SERVIDOR, pois relacionamentos N:N não admitem atributos."
+        }
+      ],
+      "pegadinhaFCC": "A banca aplica ao N:N a regra do 1:N (chave estrangeira no lado N) e nega que relacionamentos tenham atributos. N:N sempre gera tabela associativa, onde ficam os atributos do relacionamento.",
+      "resumoFlashcard": {
+        "pergunta": "Como mapear um relacionamento N:N com atributos para o modelo relacional?",
+        "resposta": "Cria-se uma tabela associativa com as chaves estrangeiras das entidades participantes, que em geral formam juntas a chave primária, e com os atributos do relacionamento."
+      },
+      "conceitosChave": ["MER: mapeamento para o modelo relacional"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, cap. 'Projeto de banco de dados relacional por mapeamento ER para relacional', passo de mapeamento de relacionamentos binários M:N."
+    },
+    {
+      "id": "bd-016",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Normalização e desnormalização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "No sistema de distribuição de processos, a relação SUPERVISAO (processo, area_tecnica, supervisor) obedece às regras: cada supervisor atua em uma única área técnica (supervisor → area_tecnica) e, para cada processo, cada área técnica tem um único supervisor ({processo, area_tecnica} → supervisor). As chaves candidatas são {processo, area_tecnica} e {processo, supervisor}. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Considere a relação SUPERVISAO (processo, area_tecnica, supervisor), usada na distribuição de processos, com as dependências funcionais supervisor → area_tecnica e {processo, area_tecnica} → supervisor, e as chaves candidatas {processo, area_tecnica} e {processo, supervisor}. Considere as afirmativas abaixo.",
+        "Ao normalizar o banco do sistema de distribuição de processos, um analista identifica, na relação SUPERVISAO (processo, area_tecnica, supervisor), que cada supervisor pertence a uma só área técnica e que cada par processo–área tem um só supervisor; as chaves candidatas são {processo, area_tecnica} e {processo, supervisor}. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A relação atende à 3FN, pois o atributo determinado em supervisor → area_tecnica é primo, isto é, integra uma chave candidata.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Todos os atributos da relação são primos, de modo que não há dependência parcial nem transitiva de atributo não primo: 2FN e 3FN estão atendidas."
+        },
+        {
+          "texto": "A relação não está na BCNF, pois supervisor é determinante sem ser superchave.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A BCNF exige que todo determinante de dependência não trivial seja superchave, sem a exceção do atributo primo. supervisor sozinho não determina processo, logo não é superchave."
+        },
+        {
+          "texto": "A decomposição em (supervisor, area_tecnica) e (processo, supervisor) é sem perda de junção, mas não preserva a dependência {processo, area_tecnica} → supervisor.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O atributo comum, supervisor, é chave da primeira relação, o que garante junção sem perda. Mas processo e area_tecnica ficam em relações diferentes, e a dependência que os liga não pode ser verificada em nenhuma delas isoladamente."
+        },
+        {
+          "texto": "A relação viola a 3FN, pois area_tecnica é determinada por supervisor, que não é superchave.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A 3FN admite X → A com X não superchave quando A é atributo primo. area_tecnica integra a chave candidata {processo, area_tecnica}, logo a dependência não viola a 3FN."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV ignora a exceção do atributo primo, que distingue a 3FN da BCNF. A relação está na 3FN; o que ela viola é só a BCNF. Ficam de fora, ainda, as afirmativas I e III, que são verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É o caso clássico de relação na 3FN que não está na BCNF: há duas chaves candidatas sobrepostas, e supervisor determina um atributo primo sem ser superchave. A decomposição em BCNF é sem perda, mas não preserva {processo, area_tecnica} → supervisor, que é o custo típico de levar uma relação à BCNF.",
+          "versaoInvertidaFalsa": "A relação está na BCNF, pois todo determinante de dependência não trivial que nela ocorre é superchave."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão certas, mas a IV está errada: area_tecnica é primo, e a 3FN tolera determinante não superchave quando o atributo determinado é primo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão certas, mas a II também está: a dependência supervisor → area_tecnica, com supervisor não superchave, viola a BCNF."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II e III estão certas, mas falta a I. A relação atende à 3FN, porque o lado direito da dependência problemática é atributo primo."
+        }
+      ],
+      "pegadinhaFCC": "A diferença entre 3FN e BCNF está na exceção do atributo primo: a 3FN tolera determinante não superchave se o atributo determinado for primo; a BCNF não tolera. E a BCNF pode custar a preservação de dependências.",
+      "resumoFlashcard": {
+        "pergunta": "Quando uma relação está na 3FN, mas não na BCNF?",
+        "resposta": "Quando existe dependência X → A em que X não é superchave, mas A é atributo primo. Ocorre tipicamente com chaves candidatas compostas e sobrepostas. A decomposição em BCNF é sem perda, mas pode não preservar dependências."
+      },
+      "conceitosChave": ["Normalização: 3FN × BCNF", "Dependência funcional"],
+      "fundamentacao": "Elmasri & Navathe, Sistemas de Banco de Dados, caps. sobre dependências funcionais e normalização (definição geral da 3FN, BCNF e propriedades de junção sem perda e preservação de dependência)."
+    },
+    {
+      "id": "bd-017",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Transações e propriedades ACID",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No PostgreSQL que hospeda o sistema de fiscalização, a transação T1 executa duas vezes SELECT COUNT(*) FROM processo WHERE situacao = 'PENDENTE'. Entre as duas execuções, a transação T2 insere um novo processo pendente e faz COMMIT. O fenômeno que T1 observaria no nível READ COMMITTED e o comportamento de T1 caso usasse REPEATABLE READ no PostgreSQL são, respectivamente,",
+      "variantesEnunciado": [
+        "Em um teste de concorrência no PostgreSQL, a transação T1 conta duas vezes os processos pendentes com SELECT COUNT(*) FROM processo WHERE situacao = 'PENDENTE'; entre as duas contagens, a transação T2 insere um processo pendente e confirma com COMMIT. O fenômeno que T1 observaria em READ COMMITTED e o comportamento de T1 caso usasse REPEATABLE READ no PostgreSQL são, respectivamente,",
+        "Durante a homologação de um relatório em PostgreSQL, a transação T1 repete a consulta SELECT COUNT(*) FROM processo WHERE situacao = 'PENDENTE', e, entre as duas execuções, outra transação, T2, inclui um processo pendente e o confirma. O fenômeno que T1 observaria em READ COMMITTED e o comportamento de T1 caso usasse REPEATABLE READ no PostgreSQL são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "leitura suja; a segunda contagem repete a primeira, pois o READ COMMITTED do PostgreSQL permite ler dados não confirmados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. T2 confirmou a inserção antes da segunda leitura, então não há leitura suja. E o PostgreSQL nunca permite leitura suja: até o READ UNCOMMITTED se comporta como READ COMMITTED."
+        },
+        {
+          "id": "opt-2",
+          "texto": "leitura não repetível; a segunda contagem incluirá o novo processo, pois esse nível só protege as linhas já lidas por T1.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Leitura não repetível é a mudança de valor de uma linha já lida; o surgimento de nova linha que satisfaz o predicado é leitura fantasma. E, no PostgreSQL, o REPEATABLE READ também impede fantasmas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "leitura fantasma; T2 ficará bloqueada até o término de T1, pois o PostgreSQL aplica bloqueios de leitura sobre o predicado consultado nesse nível.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fenômeno está certo, mas o mecanismo não: o PostgreSQL usa MVCC, e leitores não bloqueiam escritores. T2 insere e confirma normalmente; T1 apenas não enxerga a nova versão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "leitura fantasma; a segunda contagem repete a primeira, pois T1 enxerga um snapshot fixo, embora o padrão SQL admita fantasmas nesse nível.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Uma nova linha que passa a satisfazer o predicado entre duas leituras caracteriza a leitura fantasma, possível no READ COMMITTED. No REPEATABLE READ do PostgreSQL, a transação usa um snapshot tirado na primeira instrução e não vê o que foi confirmado depois. O padrão SQL tolera fantasmas nesse nível, mas permite garantias maiores, e o PostgreSQL as oferece.",
+          "versaoInvertidaFalsa": "leitura fantasma; a segunda contagem incluirá o novo processo, pois o REPEATABLE READ do PostgreSQL, como o padrão SQL, admite fantasmas nesse nível."
+        },
+        {
+          "id": "opt-5",
+          "texto": "atualização perdida; T1 receberá erro de serialização na segunda contagem, que precisará ser refeita.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atualização perdida exige duas transações gravando sobre o mesmo dado; aqui T1 só lê. No REPEATABLE READ do PostgreSQL, erros de serialização surgem quando a transação tenta alterar linha modificada por outra, não em leituras."
+        }
+      ],
+      "pegadinhaFCC": "A banca aplica ao PostgreSQL a tabela do padrão SQL, em que o REPEATABLE READ admite fantasmas. No PostgreSQL, o snapshot fixo impede o fantasma, e a anomalia descrita (nova linha no predicado) é fantasma, não leitura não repetível.",
+      "resumoFlashcard": {
+        "pergunta": "O REPEATABLE READ do PostgreSQL permite leitura fantasma?",
+        "resposta": "Não. A transação usa um snapshot tirado na primeira instrução e não enxerga linhas inseridas e confirmadas depois. O padrão SQL admitiria fantasmas nesse nível, mas o PostgreSQL oferece garantia maior."
+      },
+      "conceitosChave": ["Anomalias de concorrência", "Níveis de isolamento", "MVCC"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Transaction Isolation' (tabela de níveis e fenômenos; nota de que o Repeatable Read do PostgreSQL não permite leitura fantasma) e seção 'Repeatable Read Isolation Level'."
+    },
+    {
+      "id": "bd-018",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Índices e otimização de consultas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do uso de EXPLAIN e EXPLAIN ANALYZE na otimização de consultas no PostgreSQL, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um técnico investiga a lentidão de uma consulta do sistema de prestação de contas, em PostgreSQL, com os comandos EXPLAIN e EXPLAIN ANALYZE. Sobre essas ferramentas, é correto afirmar que",
+        "Na análise de planos de execução do PostgreSQL com os comandos EXPLAIN e EXPLAIN ANALYZE, durante uma revisão de desempenho do banco de dados, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o EXPLAIN ANALYZE executa de fato a instrução e mostra tempos e linhas reais ao lado das estimativas; para analisar um UPDATE, convém usar transação desfeita com ROLLBACK.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O EXPLAIN mostra o plano escolhido e as estimativas de custo e de linhas, sem executar. Com ANALYZE, a instrução é realmente executada, e o plano traz tempos e linhas reais de cada nó (no PostgreSQL 18, também os dados de BUFFERS). Como um UPDATE ou DELETE seria efetivado, recomenda-se BEGIN; EXPLAIN ANALYZE ...; ROLLBACK.",
+          "versaoInvertidaFalsa": "o EXPLAIN ANALYZE apenas simula a instrução, sem executá-la, de modo que um UPDATE analisado nunca altera dados, dispensando transação com ROLLBACK."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o EXPLAIN sem ANALYZE executa a consulta e descarta o resultado, exibindo os tempos reais de cada nó do plano de execução.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O EXPLAIN simples não executa a instrução: mostra só o plano e as estimativas do planejador. Tempos reais exigem a opção ANALYZE."
+        },
+        {
+          "id": "opt-3",
+          "texto": "um Seq Scan no plano indica sempre ausência de índice aplicável, pois o planejador usa índice sempre que há um sobre a coluna filtrada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O planejador escolhe pelo custo estimado. Se a condição retorna grande parte da tabela (baixa seletividade) ou a tabela é pequena, a varredura sequencial pode ser mais barata que o acesso por índice."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o EXPLAIN ANALYZE apenas atualiza as estatísticas da tabela, como o comando ANALYZE, sem executar a instrução analisada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa confunde a opção ANALYZE do EXPLAIN com o comando ANALYZE, que coleta estatísticas de distribuição dos dados. O EXPLAIN ANALYZE executa a instrução e não atualiza estatísticas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "grandes divergências entre linhas estimadas e reais indicam índice corrompido, a recriar com REINDEX, pois estatísticas não influem nas estimativas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As estimativas de linhas vêm justamente das estatísticas. Divergências grandes costumam indicar estatísticas desatualizadas ou correlação entre colunas, e o remédio típico é rodar ANALYZE ou ajustar as estatísticas."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde a opção ANALYZE do EXPLAIN com o comando ANALYZE e omite que o EXPLAIN ANALYZE executa de verdade a instrução, inclusive DML.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre EXPLAIN e EXPLAIN ANALYZE no PostgreSQL?",
+        "resposta": "EXPLAIN mostra o plano e as estimativas sem executar. EXPLAIN ANALYZE executa a instrução e acrescenta tempos e linhas reais; para DML, use-o dentro de transação desfeita com ROLLBACK."
+      },
+      "conceitosChave": ["Plano de execução: EXPLAIN", "Seletividade e estatísticas"],
+      "fundamentacao": "Documentação do PostgreSQL 18, comando EXPLAIN (aviso de que a instrução é executada com ANALYZE) e 'Using EXPLAIN'; notas de versão do PostgreSQL 18 (BUFFERS incluído automaticamente no EXPLAIN ANALYZE)."
+    },
+    {
+      "id": "bd-019",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "PostgreSQL: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "No PostgreSQL, para acelerar buscas por chaves e valores em uma coluna jsonb ou buscas textuais em tsvector, o tipo de índice mais indicado é o ……; para dados geométricos ou intervalos (ranges), com operadores de sobreposição e proximidade, usa-se o ……; e o …… é o tipo criado por padrão pelo CREATE INDEX, adequado a igualdade, faixas de valores e ordenação. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao planejar a indexação de um banco PostgreSQL, a equipe registrou: buscas de conteúdo em documentos jsonb e pesquisa textual com tsvector pedem índice ……; consultas de sobreposição entre intervalos de datas (ranges) e dados geométricos pedem índice ……; e as buscas por igualdade, faixa e ordenação ficam com o ……, tipo padrão do CREATE INDEX. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere os tipos de índice do PostgreSQL. O …… é um índice invertido, indicado para jsonb, arrays e busca textual; o …… é uma infraestrutura que suporta dados geométricos e intervalos (ranges), com operadores de sobreposição; e o …… é o tipo padrão do CREATE INDEX, que atende a igualdade, faixas e ordenação. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "GiST − GIN − hash",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte GIN e GiST: o índice invertido, próprio de jsonb e arrays, é o GIN, e o de dados geométricos e ranges é o GiST. O hash atende só a igualdade e não é o padrão do CREATE INDEX."
+        },
+        {
+          "id": "opt-2",
+          "texto": "B-tree − GIN − BRIN",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O B-tree não indexa o conteúdo interno de jsonb, e o GIN não é a escolha para geometria. O BRIN guarda resumos por faixa de blocos, útil em tabelas enormes com ordem física natural, mas não é o padrão."
+        },
+        {
+          "id": "opt-3",
+          "texto": "GIN − GiST − B-tree",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O GIN é um índice invertido, que mapeia cada elemento (chave de jsonb, item de array, lexema de tsvector) às linhas que o contêm. O GiST é uma infraestrutura de árvore balanceada que suporta tipos geométricos e ranges, com operadores como && (sobreposição). O B-tree é o padrão do CREATE INDEX e atende a =, <, >, BETWEEN e ORDER BY.",
+          "versaoInvertidaFalsa": "GiST para jsonb e tsvector − GIN para geometria e ranges − B-tree como padrão"
+        },
+        {
+          "id": "opt-4",
+          "texto": "hash − GiST − B-tree",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas últimas lacunas estão certas, mas o hash só atende a igualdade sobre o valor inteiro da coluna e não indexa chaves internas de jsonb nem lexemas de tsvector."
+        },
+        {
+          "id": "opt-5",
+          "texto": "GIN − BRIN − hash",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas o BRIN não oferece operadores de sobreposição geométrica, e o hash não é o padrão do CREATE INDEX nem atende a faixas e ordenação."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca GIN e GiST, que têm nomes parecidos. GIN = índice invertido (jsonb, arrays, full text); GiST = árvore generalizada (geometria, ranges). Padrão é B-tree.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar GIN, GiST, BRIN e hash no PostgreSQL?",
+        "resposta": "GIN: índice invertido para jsonb, arrays e busca textual. GiST: geometria, ranges e proximidade. BRIN: tabelas muito grandes com ordem física natural, como datas de log. Hash: só igualdade. O padrão é B-tree."
+      },
+      "conceitosChave": ["PostgreSQL: tipos de índice"],
+      "fundamentacao": "Documentação do PostgreSQL 18, 'Index Types' (B-tree, Hash, GiST, SP-GiST, GIN e BRIN) e comando CREATE INDEX (método padrão btree)."
+    },
+    {
+      "id": "bd-020",
+      "materiaSlug": "banco-de-dados",
+      "subtopico": "Oracle Database: administração e otimização",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um banco Oracle que atende ao sistema de folha opera em modo NOARCHIVELOG, com backups feitos apenas com o banco fechado. A nova política exige backups com o banco aberto e recuperação até instantes antes de uma falha de mídia. Para viabilizar a política, o DBA deve",
+      "variantesEnunciado": [
+        "O banco Oracle do sistema de contratos funciona em NOARCHIVELOG, e os backups só são feitos com o banco fechado. A área de infraestrutura passou a exigir backups com o banco aberto e recuperação até momentos antes de uma falha de disco. Para viabilizar a exigência, o DBA deve",
+        "Em uma auditoria de continuidade, constatou-se que um banco Oracle crítico opera em NOARCHIVELOG e só é copiado com o banco fechado, o que impede a recuperação até o instante anterior a uma falha de mídia. Para permitir backups com o banco aberto e esse tipo de recuperação, o DBA deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ampliar o tablespace de undo, pois é nele que o Oracle registra as alterações usadas na recuperação de mídia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O undo guarda imagens anteriores dos dados para rollback e leitura consistente. A recuperação de mídia reaplica o redo (online e arquivado) sobre os arquivos restaurados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "multiplexar os control files, providência que, por si só, permite recuperar o banco até o instante da falha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Multiplexar control files protege contra a perda desse arquivo, mas não guarda o histórico de alterações. Sem os archived redo logs, não há como reaplicar as transações desde o backup."
+        },
+        {
+          "id": "opt-3",
+          "texto": "manter o NOARCHIVELOG e criar mais grupos de redo log online, que passam a guardar todo o histórico desde o último backup.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os grupos de redo online são usados de forma circular e sobrescritos a cada ciclo; em NOARCHIVELOG, o conteúdo antigo se perde. Mais grupos só adiam a reutilização."
+        },
+        {
+          "id": "opt-4",
+          "texto": "configurar o Data Guard em Maximum Performance, que replica os data files sem depender de redo nem de archived logs.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Data Guard mantém o standby justamente com o envio e a aplicação de redo. Ele também não substitui o backup, pois um erro lógico, como um DELETE indevido, é replicado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "colocar o banco em modo ARCHIVELOG, para que os grupos de redo online preenchidos sejam arquivados antes de reutilizados, viabilizando backup aberto e recuperação até um ponto no tempo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em ARCHIVELOG, cada grupo de redo log online preenchido é copiado (pelo processo ARCn) como archived redo log antes de ser reutilizado. Com a sequência completa de redo, o RMAN pode fazer backups com o banco aberto e recuperar até o instante anterior à falha ou até um ponto no tempo escolhido.",
+          "versaoInvertidaFalsa": "manter o banco em NOARCHIVELOG, pois nesse modo os grupos de redo online preenchidos são arquivados automaticamente, viabilizando backup aberto e recuperação até um ponto no tempo."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca o papel do redo pelo do undo e sugere que os grupos de redo online guardam todo o histórico. Só o modo ARCHIVELOG preserva a sequência de redo exigida para backup aberto e recuperação até um ponto no tempo.",
+      "resumoFlashcard": {
+        "pergunta": "Por que o modo ARCHIVELOG é necessário para backup com o banco aberto no Oracle?",
+        "resposta": "Porque os grupos de redo online são reutilizados em ciclo. Em ARCHIVELOG, cada grupo preenchido é arquivado antes de ser reutilizado, e essa sequência de redo permite tornar consistente um backup aberto e recuperar até um ponto no tempo."
+      },
+      "conceitosChave": ["Oracle: redo log e ARCHIVELOG"],
+      "fundamentacao": "Oracle Database Administrator's Guide (26ai), caps. 'Managing the Redo Log' e 'Managing Archived Redo Log Files' (modos ARCHIVELOG e NOARCHIVELOG); Oracle Database Backup and Recovery User's Guide."
+    }
+  ]
+}
