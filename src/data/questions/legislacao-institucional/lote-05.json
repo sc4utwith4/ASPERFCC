@@ -1,0 +1,586 @@
+{
+  "materiaSlug": "legislacao-institucional",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "leg-inst-041",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que um servidor estável de órgão estadual teve sua demissão invalidada por sentença judicial e que, nesse intervalo, outro servidor estável passou a ocupar a vaga. Sobre a estabilidade e seus efeitos, segundo o art. 41 da Constituição Federal, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em parecer sobre a situação de uma servidora estável cuja demissão foi anulada judicialmente, quando seu cargo já estava ocupado por outro servidor estável, a assessoria jurídica revisa as regras do art. 41 da Constituição Federal. Considere as afirmativas abaixo.",
+        "Uma unidade de gestão de pessoas precisa cumprir decisão judicial que invalidou a demissão de servidor estável, cuja vaga fora ocupada por outro servidor também estável, e aproveita para revisar o art. 41 da Constituição Federal. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O servidor demitido será reintegrado, e o ocupante da vaga, por ser estável, será reconduzido ao cargo de origem, com direito a indenização.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 41, § 2º, prevê a recondução do ocupante estável ao cargo de origem sem direito a indenização, ou seu aproveitamento em outro cargo, ou a disponibilidade com remuneração proporcional."
+        },
+        {
+          "texto": "O servidor estável pode perder o cargo mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a hipótese do art. 41, § 1º, III, incluída pela EC 19/1998."
+        },
+        {
+          "texto": "Extinto o cargo ou declarada sua desnecessidade, o servidor estável ficará em disponibilidade, com remuneração proporcional ao tempo de serviço, até seu adequado aproveitamento em outro cargo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a literalidade do art. 41, § 3º."
+        },
+        {
+          "texto": "O servidor estável só perde o cargo em virtude de sentença judicial transitada em julgado, não sendo admitida a perda por processo administrativo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 41, § 1º, admite também a perda mediante processo administrativo com ampla defesa e mediante avaliação periódica de desempenho. A garantia de perda só por sentença é própria dos vitalícios."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa porque a recondução do ocupante estável se dá sem direito a indenização. E a III, omitida, é literalidade do art. 41, § 3º."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O servidor estável perde o cargo por sentença transitada em julgado, por processo administrativo com ampla defesa ou por avaliação periódica de desempenho na forma de lei complementar (art. 41, § 1º). Extinto o cargo, fica em disponibilidade remunerada proporcionalmente (§ 3º). Invalidada a demissão, há reintegração, e o ocupante estável é reconduzido sem indenização (§ 2º).",
+          "versaoInvertidaFalsa": "Invalidada judicialmente a demissão do servidor estável, ele será reintegrado, e o eventual ocupante estável da vaga será reconduzido ao cargo de origem com direito a indenização."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui duas afirmativas falsas: a I (indenização na recondução) e a IV (perda do cargo apenas por sentença judicial, regra que vale para os vitalícios)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV contradiz a II: se a avaliação periódica de desempenho pode levar à perda do cargo, não é verdade que só a sentença judicial o faça."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aceita a IV, que confunde estabilidade com vitaliciedade, e rejeita a II, hipótese expressa do art. 41, § 1º, III."
+        }
+      ],
+      "pegadinhaFCC": "Confundir estabilidade com vitaliciedade (perda só por sentença) e acrescentar indenização à recondução do ocupante da vaga, que a Constituição expressamente nega.",
+      "resumoFlashcard": {
+        "pergunta": "Em que hipóteses o servidor estável perde o cargo e o que ocorre se a demissão for invalidada?",
+        "resposta": "Perde por sentença transitada em julgado, por processo administrativo com ampla defesa ou por avaliação periódica de desempenho (art. 41, § 1º). Invalidada a demissão, é reintegrado, e o ocupante estável da vaga é reconduzido sem indenização, aproveitado ou posto em disponibilidade (§ 2º)."
+      },
+      "conceitosChave": ["CF/88: estabilidade"],
+      "fundamentacao": "CF/88, art. 41, § 1º, I a III, § 2º e § 3º."
+    },
+    {
+      "id": "leg-inst-042",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "enunciadoBase": "Nos termos do art. 72 da Constituição Federal, a comissão mista permanente de Senadores e Deputados, diante de indícios de despesas não autorizadas, poderá solicitar à autoridade governamental responsável que, no prazo de ……, preste os esclarecimentos necessários. Não prestados ou considerados insuficientes os esclarecimentos, a comissão solicitará ao Tribunal pronunciamento conclusivo, no prazo de ……; entendendo o Tribunal irregular a despesa, a comissão, se julgar que o gasto possa causar dano irreparável ou grave lesão à economia pública, proporá ao …… sua sustação. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "O art. 72 da Constituição Federal disciplina a atuação da comissão mista permanente diante de indícios de despesas não autorizadas, ainda que sob a forma de investimentos não programados: a autoridade responsável tem …… para esclarecer; persistindo a dúvida, o Tribunal se pronuncia conclusivamente em ……; e, sendo irregular a despesa com risco de dano irreparável, a comissão propõe ao …… sua sustação. Preenchem, correta e respectivamente, as lacunas:",
+        "Em aula sobre o art. 72 da Constituição Federal, o professor resume o rito: a comissão mista permanente pode pedir esclarecimentos à autoridade governamental em ……; se insuficientes, solicita ao Tribunal de Contas pronunciamento conclusivo em ……; se a despesa for irregular e puder causar grave lesão à economia pública, a comissão proporá ao …… a sustação. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "dez dias − trinta dias − Congresso Nacional",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O prazo para a autoridade governamental prestar esclarecimentos é de cinco dias (art. 72, caput). A alternativa acerta os outros dois termos, o que a torna atraente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cinco dias − sessenta dias − Tribunal de Contas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O pronunciamento conclusivo do Tribunal tem prazo de trinta dias (§ 1º), e a proposta de sustação é dirigida ao Congresso Nacional (§ 2º). Sessenta dias é o prazo do parecer prévio (art. 71, I)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cinco dias − trinta dias − Presidente da República",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A sustação da despesa, nesse rito, é proposta ao Congresso Nacional, titular do controle externo, e não ao Chefe do Executivo, que é o fiscalizado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cinco dias − trinta dias − Congresso Nacional",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 72 prevê: esclarecimentos da autoridade em cinco dias (caput); pronunciamento conclusivo do Tribunal em trinta dias (§ 1º); e, entendida irregular a despesa e havendo risco de dano irreparável ou grave lesão à economia pública, proposta de sustação ao Congresso Nacional (§ 2º). Nos Estados, o rito se reproduz com a comissão permanente da Assembleia e o TCE.",
+          "versaoInvertidaFalsa": "dez dias − sessenta dias − Tribunal de Contas, prazos e destinatário da proposta de sustação previstos no art. 72 da Constituição Federal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "quinze dias − noventa dias − Congresso Nacional",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois prazos estão errados. Noventa dias é o prazo do art. 71, § 2º (omissão do Legislativo e do Executivo na sustação de contrato), e não o do pronunciamento do Tribunal no art. 72."
+        }
+      ],
+      "pegadinhaFCC": "Misturar os prazos do art. 72 (5 e 30 dias) com os do art. 71 (60 dias do parecer prévio e 90 dias da sustação de contrato) e trocar o destinatário da proposta de sustação.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os prazos e o destinatário da proposta de sustação no art. 72 da CF/88?",
+        "resposta": "A autoridade presta esclarecimentos em 5 dias; o Tribunal emite pronunciamento conclusivo em 30 dias; se a despesa for irregular e puder causar dano irreparável ou grave lesão à economia pública, a comissão mista propõe a sustação ao Congresso Nacional."
+      },
+      "conceitosChave": ["Controle externo: sustação", "CF/88: art. 72 (comissão mista)"],
+      "fundamentacao": "CF/88, art. 72, caput e §§ 1º e 2º; art. 71, I e § 2º, para os prazos usados como distratores."
+    },
+    {
+      "id": "leg-inst-043",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o art. 74, § 2º, da Constituição Federal, aplicável por simetria aos Tribunais de Contas dos Estados, é parte legítima para, na forma da lei, denunciar irregularidades ou ilegalidades perante o Tribunal de Contas",
+      "variantesEnunciado": [
+        "De acordo com a Constituição Federal (art. 74, § 2º), cujo modelo se aplica ao TCE-GO, tem legitimidade para denunciar irregularidades ou ilegalidades perante o Tribunal de Contas, na forma da lei,",
+        "Um morador procura a ouvidoria de um Tribunal de Contas estadual para denunciar irregularidades em contratação de software. Segundo o art. 74, § 2º, da Constituição Federal, aplicável aos Estados, tem legitimidade para denunciar perante o Tribunal de Contas, na forma da lei,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apenas o Ministério Público e os responsáveis pelo controle interno, pois a denúncia exige conhecimento técnico das contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição democratiza o controle e não restringe a denúncia a órgãos técnicos. Os responsáveis pelo controle interno têm, na verdade, dever de dar ciência ao Tribunal (art. 74, § 1º), que é outra figura."
+        },
+        {
+          "id": "opt-2",
+          "texto": "qualquer cidadão, desde que comprove a condição de eleitor e o prejuízo pessoal decorrente da irregularidade denunciada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A denúncia não exige prejuízo pessoal: o interesse protegido é o da coletividade na correta aplicação dos recursos públicos. A exigência adicional é invenção do distrator."
+        },
+        {
+          "id": "opt-3",
+          "texto": "qualquer cidadão, partido político, associação ou sindicato.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 74, § 2º, da CF/88 confere legitimidade a qualquer cidadão, partido político, associação ou sindicato para denunciar irregularidades ou ilegalidades perante o Tribunal de Contas, na forma da lei. É o controle social, que complementa o controle interno e o externo.",
+          "versaoInvertidaFalsa": "apenas partidos políticos e sindicatos, pois o cidadão isolado não tem legitimidade para denunciar irregularidades perante o Tribunal de Contas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "somente partido político com representação na Assembleia Legislativa, por simetria com a legitimidade para propor ação direta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mistura regras do controle concentrado de constitucionalidade (art. 103, VIII) com o controle externo. Para denunciar ao Tribunal de Contas, não se exige representação parlamentar."
+        },
+        {
+          "id": "opt-5",
+          "texto": "qualquer pessoa jurídica de direito público, vedada a denúncia apresentada por pessoa física ou por entidade privada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o sentido da norma, que legitima justamente pessoas físicas (cidadãos) e entidades privadas (partidos, associações e sindicatos)."
+        }
+      ],
+      "pegadinhaFCC": "Restringir a legitimidade para denunciar (exigir prejuízo pessoal ou representação parlamentar) ou confundi-la com o dever de ciência dos responsáveis pelo controle interno (art. 74, § 1º).",
+      "resumoFlashcard": {
+        "pergunta": "Quem pode denunciar irregularidades ao Tribunal de Contas segundo a CF/88?",
+        "resposta": "Qualquer cidadão, partido político, associação ou sindicato, na forma da lei (art. 74, § 2º). É expressão do controle social sobre a gestão pública."
+      },
+      "conceitosChave": ["Controle social: denúncia ao TC", "Controle interno: responsabilidade solidária"],
+      "fundamentacao": "CF/88, art. 74, §§ 1º e 2º, c/c art. 75; art. 103, VIII (distrator)."
+    },
+    {
+      "id": "leg-inst-044",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Constituição do Estado de Goiás: Tribunal de Contas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A Constituição do Estado de Goiás trata das competências do Tribunal de Contas do Estado em seus arts. 25 e 26, reproduzindo, por força do art. 75 da Constituição Federal, o modelo do art. 71 da Carta da República. Considerando esse modelo, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Por simetria com o art. 71 da Constituição Federal, a Constituição do Estado de Goiás atribui ao TCE-GO, em seus arts. 25 e 26, um conjunto de competências de controle externo. A respeito dessas competências, considere as afirmativas abaixo.",
+        "Em estudo comparado entre a Constituição Federal (arts. 71 e 75) e a Constituição do Estado de Goiás (arts. 25 e 26), um servidor relaciona competências do Tribunal de Contas do Estado. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Compete ao TCE-GO julgar as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos da administração direta e indireta estadual.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A competência do art. 71, II, da CF/88 é reproduzida no art. 26 da Constituição goiana, conforme decisões do próprio TCE-GO, e consta do art. 1º, II, da Lei 16.168/2007."
+        },
+        {
+          "texto": "As decisões do TCE-GO de que resulte imputação de débito ou multa têm eficácia de título executivo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 71, § 3º, da CF/88, aplicável aos Tribunais de Contas dos Estados por força do art. 75."
+        },
+        {
+          "texto": "Compete ao TCE-GO aplicar aos responsáveis, em caso de ilegalidade de despesa ou irregularidade de contas, as sanções previstas em lei, entre elas multa proporcional ao dano causado ao erário.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Reproduz o art. 71, VIII, da CF/88; no TCE-GO, as multas têm disciplina e teto atualizado na Lei Orgânica."
+        },
+        {
+          "texto": "Compete ao TCE-GO realizar, por iniciativa própria ou da Assembleia Legislativa, inspeções e auditorias nas unidades administrativas dos três Poderes do Estado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a simetria do art. 71, IV, que alcança as unidades administrativas do Legislativo, do Executivo e do Judiciário."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa IV, que também é verdadeira: o Tribunal realiza inspeções e auditorias por iniciativa própria ou do Legislativo nos três Poderes (simetria com o art. 71, IV)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descarta a III e a IV, que reproduzem os incisos VIII e IV do art. 71 da CF/88, de observância obrigatória pelo modelo estadual."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa I. Julgar as contas dos administradores é competência central do TCE-GO, reproduzida no art. 26 da Constituição goiana."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa II. A eficácia de título executivo das decisões que imputam débito ou multa decorre do art. 71, § 3º, aplicável aos Estados pelo art. 75."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Todas as afirmativas reproduzem, no plano estadual, competências e efeitos do art. 71 da CF/88 (incisos II, IV e VIII e § 3º), que a Constituição goiana adota em seus arts. 25 e 26 por força do art. 75. A questão exige reconhecer que a simetria alcança o núcleo de competências do controle externo.",
+          "versaoInvertidaFalsa": "As decisões do TCE-GO que imputam débito ou aplicam multa não têm eficácia de título executivo, dependendo de homologação judicial para serem cobradas."
+        }
+      ],
+      "pegadinhaFCC": "Desconfiar de afirmativas verdadeiras por parecerem “amplas demais”. A simetria do art. 75 leva para o TCE-GO o núcleo das competências do art. 71.",
+      "resumoFlashcard": {
+        "pergunta": "Quais competências do art. 71 da CF/88 a Constituição de Goiás reproduz para o TCE-GO?",
+        "resposta": "Entre outras: julgar contas dos administradores, realizar inspeções e auditorias por iniciativa própria ou do Legislativo, aplicar sanções previstas em lei e atribuir eficácia de título executivo às decisões que imputam débito ou multa (CE-GO, arts. 25 e 26, por força do art. 75 da CF/88)."
+      },
+      "conceitosChave": ["Simetria (art. 75)", "Controle externo: competências do TC"],
+      "fundamentacao": "Constituição do Estado de Goiás, arts. 25 e 26 (conforme decisão do TCE-GO de 2022 e materiais de estudo; texto não conferido); CF/88, art. 71, II, IV, VIII e § 3º, c/c art. 75; Lei estadual nº 16.168/2007, art. 1º, II.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-045",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Lei Orgânica do TCE-GO (Lei 16.168/2007)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o TCE-GO prepara a relação de responsáveis com contas julgadas irregulares que deve encaminhar ao Ministério Público Eleitoral, prevista no art. 84 de sua Lei Orgânica. Entre os casos, há o de um ex-gestor cujas contas foram julgadas irregulares sem imputação de débito, com aplicação exclusiva de multa. Considerando a redação dada pela Lei estadual nº 23.413/2025, esse ex-gestor",
+      "variantesEnunciado": [
+        "Na véspera do período eleitoral, a unidade competente do TCE-GO revisa a lista do art. 84 da Lei estadual nº 16.168/2007, destinada ao Ministério Público Eleitoral, e encontra o caso de uma ex-dirigente com contas irregulares, sem débito, punida apenas com multa. Considerando a alteração feita pela Lei estadual nº 23.413/2025, essa ex-dirigente",
+        "Um ex-diretor de autarquia estadual teve contas julgadas irregulares pelo TCE-GO, sem imputação de débito, e recebeu somente multa. Ao montar a relação destinada ao Ministério Público Eleitoral (art. 84 da Lei estadual nº 16.168/2007, com a redação da Lei estadual nº 23.413/2025), o Tribunal deve considerar que esse responsável"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "não deve integrar a relação, pois a lei passou a excluir dela os responsáveis com contas irregulares sem imputação de débito e sancionados exclusivamente com multa.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 23.413/2025 alterou o art. 84 da Lei 16.168/2007 para determinar que não integrem a relação enviada ao Ministério Público Eleitoral os responsáveis com contas julgadas irregulares sem imputação de débito e sancionados exclusivamente com multa. A eventual inelegibilidade é sempre aferida pela Justiça Eleitoral (LC 64/1990, art. 1º, I, g).",
+          "versaoInvertidaFalsa": "Deve integrar a relação, pois a Lei estadual nº 23.413/2025 passou a incluir nela todos os responsáveis com contas irregulares, inclusive os sancionados apenas com multa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "deve integrar a relação, pois qualquer julgamento pela irregularidade das contas implica, automaticamente, a inelegibilidade do responsável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A inelegibilidade não é automática: a LC 64/1990 exige rejeição das contas por irregularidade insanável que configure ato doloso de improbidade, em decisão irrecorrível, e cabe à Justiça Eleitoral aferi-la. E a lei estadual excluiu esse caso da relação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deve integrar a relação apenas se a multa superar o valor de alçada fixado pelo Tribunal, critério introduzido pela alteração legislativa de 2025.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor de alçada (art. 63 da Lei 16.168/2007) é critério processual de outra natureza. A alteração de 2025 não criou piso de valor: excluiu da relação, em qualquer valor, quem foi sancionado só com multa e sem débito."
+        },
+        {
+          "id": "opt-4",
+          "texto": "não deve integrar a relação, porque a lista enviada ao Ministério Público Eleitoral só inclui responsáveis cujas contas tenham sido rejeitadas pela Assembleia Legislativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A conclusão está certa, mas o fundamento está errado. A relação reúne contas julgadas irregulares pelo próprio Tribunal, e não apenas contas rejeitadas pelo Legislativo, e a exclusão decorre da regra específica da Lei 23.413/2025."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deve integrar a relação, cabendo ao próprio TCE-GO declarar sua inelegibilidade no acórdão que julgou as contas irregulares.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Tribunal de Contas não declara inelegibilidade; ele julga contas e informa a Justiça Eleitoral, a quem cabe decidir sobre registro de candidaturas."
+        }
+      ],
+      "pegadinhaFCC": "A alternativa com conclusão certa e fundamento errado (contas rejeitadas pela Assembleia). O critério da Lei 23.413/2025 é objetivo: irregularidade sem débito e sanção exclusivamente de multa.",
+      "resumoFlashcard": {
+        "pergunta": "Quem a Lei estadual nº 23.413/2025 excluiu da relação que o TCE-GO envia ao Ministério Público Eleitoral?",
+        "resposta": "Os responsáveis com contas julgadas irregulares sem imputação de débito e sancionados exclusivamente com multa (art. 84 da Lei 16.168/2007). A inelegibilidade é aferida pela Justiça Eleitoral, não pelo Tribunal de Contas."
+      },
+      "conceitosChave": ["TCE-GO: julgamento de contas", "TCE-GO: Lei Orgânica"],
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 84, com a redação da Lei estadual nº 23.413/2025 (conforme busca no texto da Casa Civil-GO); art. 63 (valor de alçada); LC 64/1990, art. 1º, I, g.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-046",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regimento Interno do TCE-GO (Resolução 22/2008)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "No modelo constitucional, aplicável ao TCE-GO por simetria, o Auditor, quando em substituição a Conselheiro, terá as mesmas garantias e …… do titular. No TCE-GO, conforme o Regimento Interno (Resolução nº 22/2008), os Auditores são nomeados pelo …… entre aprovados em concurso realizado pelo Tribunal e substituem os Conselheiros em sistema de ……, vedada a vinculação permanente. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Segundo a Constituição Federal (art. 73, § 4º, c/c art. 75), o Auditor que substitui Conselheiro tem as mesmas garantias e …… do titular. O Regimento Interno do TCE-GO (Resolução nº 22/2008) acrescenta que os Auditores são nomeados pelo …… entre aprovados em concurso do Tribunal e que a substituição se faz em sistema de ……, sem vinculação permanente. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao estudar a carreira de Auditor do TCE-GO, um candidato anota: em substituição, o Auditor tem as garantias e os …… do Conselheiro titular (simetria com a Constituição Federal); a nomeação cabe ao …… entre aprovados em concurso do Tribunal; e a substituição segue sistema de ……, vedada a vinculação permanente (Regimento Interno, Resolução nº 22/2008). Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "impedimentos − Presidente do Tribunal − rodízio",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os Auditores do TCE-GO são nomeados pelo Governador, e não pelo Presidente do Tribunal, embora o concurso seja realizado pelo próprio Tribunal. Os demais termos estão corretos, o que torna o distrator perigoso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "impedimentos − Governador − rodízio",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 73, § 4º, da CF/88, aplicável por simetria, dá ao Auditor em substituição as mesmas garantias e impedimentos do titular. O Regimento do TCE-GO prevê sete Auditores nomeados pelo Governador entre aprovados em concurso do Tribunal, com os requisitos de Conselheiro, que substituem os Conselheiros em rodízio, vedada a vinculação permanente.",
+          "versaoInvertidaFalsa": "vantagens − Presidente do Tribunal − antiguidade, termos que completam as regras constitucionais e regimentais sobre os Auditores do TCE-GO."
+        },
+        {
+          "id": "opt-3",
+          "texto": "impedimentos − Governador − antiguidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Regimento do TCE-GO adota o rodízio entre os Auditores para as substituições, justamente para evitar vinculação permanente; não há substituição por ordem fixa de antiguidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "atribuições − Assembleia Legislativa − rodízio",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto constitucional fala em garantias e impedimentos, e a nomeação dos Auditores cabe ao Governador, não à Assembleia Legislativa, que escolhe quatro dos sete Conselheiros."
+        },
+        {
+          "id": "opt-5",
+          "texto": "impedimentos − Assembleia Legislativa − sorteio",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Erra o órgão nomeante, que é o Governador, e o sistema de substituição, que é o rodízio previsto no Regimento. A alternativa troca dois dos três termos."
+        }
+      ],
+      "pegadinhaFCC": "Confundir quem realiza o concurso (o Tribunal) com quem nomeia (o Governador) e trocar o rodízio por critérios aparentemente neutros, como antiguidade ou sorteio.",
+      "resumoFlashcard": {
+        "pergunta": "Que garantias tem o Auditor em substituição e como são nomeados e escalados os Auditores do TCE-GO?",
+        "resposta": "Em substituição, tem as mesmas garantias e impedimentos do titular (CF/88, art. 73, § 4º, c/c art. 75). No TCE-GO, são nomeados pelo Governador entre aprovados em concurso do Tribunal e substituem os Conselheiros em rodízio, vedada a vinculação permanente."
+      },
+      "conceitosChave": ["TCE-GO: Auditores", "TCE-GO: Regimento Interno"],
+      "fundamentacao": "CF/88, art. 73, § 4º, c/c art. 75; Resolução TCE-GO nº 22/2008 (Regimento Interno), disposições sobre os Auditores; docs/pesquisa/_normativos-tce-go.md."
+    },
+    {
+      "id": "leg-inst-047",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "PCCR dos servidores do TCE-GO (Lei 15.122/2005)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Suponha que o TCE-GO pretenda reestruturar as tabelas de vencimento dos cargos efetivos previstos em seu PCCR (Lei estadual nº 15.122/2005) e alterar a denominação de um desses cargos. Considerando a Constituição Federal e a autonomia do Tribunal, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em estudo sobre a modernização do PCCR do TCE-GO (Lei estadual nº 15.122/2005), cogita-se rever os padrões de vencimento e mudar o nome de um cargo da carreira. Considerando a Constituição Federal e a autonomia do Tribunal, é correto afirmar que",
+        "A Presidência do TCE-GO pretende propor nova tabela remuneratória para os cargos efetivos do quadro e a renomeação de um cargo previsto na Lei estadual nº 15.122/2005. Considerando a Constituição Federal e a autonomia do Tribunal, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a reestruturação das tabelas pode ser feita por resolução do Plenário, mas a mudança de denominação do cargo exige lei, por alterar a estrutura da carreira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: a mudança de denominação exige lei, mas a remuneração também, porque só pode ser fixada ou alterada por lei específica (CF/88, art. 37, X)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ambas podem ser feitas por resolução do Plenário, pois a autonomia administrativa do Tribunal dispensa lei para disciplinar a carreira de seus servidores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autonomia dá ao Tribunal a iniciativa do projeto de lei, não o poder de dispensar a lei. Cargos e remuneração são matérias reservadas à lei."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ambas dependem de lei de iniciativa do Governador, a quem cabe privativamente propor leis sobre remuneração de servidores estaduais de qualquer Poder ou órgão do Estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A iniciativa do Chefe do Executivo alcança os servidores do Executivo. Para os serviços auxiliares do Tribunal de Contas, a iniciativa é do próprio Tribunal (CF/88, art. 73 c/c art. 96, II, b, aplicáveis por simetria)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a mudança de denominação pode ser feita por portaria do Presidente, e a reestruturação das tabelas depende apenas de decreto do Governador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nem portaria nem decreto podem criar, renomear cargos ou fixar remuneração. As duas medidas exigem lei em sentido formal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "ambas dependem de lei específica, cuja iniciativa cabe ao próprio Tribunal, em razão de sua autonomia e da regra constitucional de fixação da remuneração por lei.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Remuneração só se fixa ou altera por lei específica, observada a iniciativa privativa (art. 37, X), e cargos são criados e modificados por lei. Para seus serviços auxiliares, a iniciativa é do Tribunal de Contas (art. 73 c/c art. 96, II, b, por simetria). O PCCR do TCE-GO foi alterado sucessivamente por leis estaduais, inclusive para mudar a denominação de cargo.",
+          "versaoInvertidaFalsa": "Ambas podem ser feitas por resolução do Plenário, pois a autonomia administrativa do Tribunal dispensa lei para fixar remuneração e renomear cargos."
+        }
+      ],
+      "pegadinhaFCC": "Confundir autonomia com dispensa de lei e atribuir ao Governador a iniciativa de leis sobre o quadro do Tribunal. Remuneração e cargos exigem lei; a iniciativa é do próprio Tribunal.",
+      "resumoFlashcard": {
+        "pergunta": "Como se altera a remuneração ou a denominação de cargos do quadro do TCE-GO?",
+        "resposta": "Por lei específica (CF/88, art. 37, X), de iniciativa do próprio Tribunal (art. 73 c/c art. 96, II, b, por simetria). Resolução, portaria ou decreto não bastam."
+      },
+      "conceitosChave": ["TCE-GO: PCCR", "CF/88: remuneração por lei específica"],
+      "fundamentacao": "CF/88, art. 37, X; art. 73 c/c art. 96, II, b; art. 75; Lei estadual nº 15.122/2005 e alterações (por exemplo, Lei 22.973/2024, que alterou a denominação do cargo de nível superior, conforme nota no texto da Casa Civil-GO).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-048",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o presidente de uma autarquia estadual nomeia, para cargo em comissão de assessor, o irmão de um diretor da mesma autarquia, e que esse diretor, em contrapartida, designa para função gratificada em seu setor a sobrinha do presidente. À luz da Súmula Vinculante 13 do STF e dos princípios do art. 37 da Constituição Federal, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em uma fundação estadual, a diretora-geral nomeia para cargo em comissão o irmão do chefe de gabinete, e este, por sua vez, designa para função de confiança a sobrinha da diretora-geral. À luz da Súmula Vinculante 13 do STF e dos princípios do art. 37 da Constituição Federal, é correto afirmar que",
+        "Auditores identificam que, em secretaria estadual, o secretário-adjunto nomeou para cargo em comissão o irmão de um coordenador do mesmo órgão, enquanto o coordenador designou para função gratificada a sobrinha do secretário-adjunto. À luz da Súmula Vinculante 13 do STF e dos princípios do art. 37 da Constituição Federal, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "as nomeações são regulares, pois a vedação ao nepotismo só alcança cônjuges e parentes em linha reta da autoridade que pratica o ato de nomeação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A SV 13 alcança cônjuge, companheiro e parentes em linha reta, colateral ou por afinidade até o terceiro grau, inclusive. Irmão (colateral de 2º grau) e sobrinha (colateral de 3º grau) estão abrangidos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "apenas a nomeação do irmão é irregular, porque a sobrinha é parente de quarto grau e está fora do alcance da súmula.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sobrinho é parente colateral de terceiro grau (sobe-se ao ascendente comum e desce-se ao parente: pai, irmão, sobrinho), e a súmula alcança até o terceiro grau, inclusive."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apenas a designação da sobrinha é irregular, pois a súmula não se aplica a cargos em comissão de assessoramento, mas só a funções gratificadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A súmula menciona expressamente o cargo em comissão ou de confiança e a função gratificada. Não há exceção para o assessoramento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "as duas nomeações violam a Constituição, pois a súmula alcança parentes até o terceiro grau da autoridade nomeante ou de servidor investido em cargo de direção na mesma pessoa jurídica, inclusive o ajuste mediante designações recíprocas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A SV 13 veda nomear cônjuge, companheiro ou parente até o terceiro grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para cargo em comissão, de confiança ou função gratificada, compreendido o ajuste mediante designações recíprocas (nepotismo cruzado). A vedação decorre diretamente dos princípios do art. 37.",
+          "versaoInvertidaFalsa": "As nomeações são regulares, pois a Súmula Vinculante 13 não alcança designações recíprocas entre autoridades diferentes nem parentes colaterais de terceiro grau."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as nomeações só seriam irregulares se houvesse lei estadual específica proibindo o nepotismo, pois a súmula depende de regulamentação para produzir efeitos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O STF entende que a vedação ao nepotismo decorre diretamente dos princípios da moralidade e da impessoalidade (art. 37, caput) e dispensa lei formal; a SV 13 tem efeito vinculante para toda a Administração."
+        }
+      ],
+      "pegadinhaFCC": "Contar errado o grau de parentesco (sobrinho é 3º grau) e ignorar o nepotismo cruzado, expressamente alcançado pela súmula (“designações recíprocas”).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o alcance da Súmula Vinculante 13 (nepotismo)?",
+        "resposta": "Veda nomear cônjuge, companheiro ou parente até o 3º grau da autoridade nomeante ou de servidor da mesma pessoa jurídica com cargo de direção, chefia ou assessoramento, para cargo em comissão, de confiança ou função gratificada, inclusive por designações recíprocas."
+      },
+      "conceitosChave": ["Nepotismo (SV 13)", "CF/88: princípios da Administração"],
+      "fundamentacao": "Súmula Vinculante 13 do STF; CF/88, art. 37, caput (moralidade e impessoalidade)."
+    },
+    {
+      "id": "leg-inst-049",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das inspeções e auditorias realizadas pelos Tribunais de Contas no exercício do controle externo, nos termos do art. 71, IV, da Constituição Federal, aplicável por simetria, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre o alcance das inspeções e auditorias do controle externo previstas no art. 71, IV, da Constituição Federal, de observância obrigatória pelos Tribunais de Contas dos Estados, é correto afirmar que",
+        "Uma equipe do TCE-GO planeja auditoria de desempenho em sistemas de informação de órgãos estaduais. Quanto às inspeções e auditorias previstas no art. 71, IV, da Constituição Federal, aplicável por simetria, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "podem decorrer de iniciativa própria do Tribunal ou do Legislativo e abranger aspectos contábeis, financeiros, orçamentários, operacionais e patrimoniais das unidades dos três Poderes.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 71, IV, autoriza o Tribunal a realizar, por iniciativa própria ou do Legislativo (Casas e comissões técnicas ou de inquérito), inspeções e auditorias de natureza contábil, financeira, orçamentária, operacional e patrimonial nas unidades administrativas dos três Poderes. A auditoria operacional avalia desempenho, inclusive de sistemas de informação.",
+          "versaoInvertidaFalsa": "Dependem de autorização prévia do Legislativo e limitam-se ao exame da legalidade das despesas do Poder Executivo, vedada a avaliação operacional de programas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "dependem de autorização prévia da Casa legislativa, uma vez que o Tribunal, como órgão auxiliar do Parlamento, não pode agir por iniciativa própria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 71, IV, prevê expressamente a iniciativa própria do Tribunal. “Auxílio” ao Legislativo não significa dependência de autorização para fiscalizar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "alcançam apenas os órgãos do Poder Executivo, pois o Legislativo e o Judiciário se submetem exclusivamente aos respectivos sistemas de controle interno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O dispositivo menciona as unidades administrativas dos Poderes Legislativo, Executivo e Judiciário. Todos têm controle interno (art. 74) e se sujeitam ao controle externo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "limitam-se ao exame da legalidade das despesas, sendo vedado ao Tribunal avaliar desempenho, eficiência e resultados de programas, por se tratar de mérito administrativo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição inclui a dimensão operacional e, no art. 70, a legitimidade e a economicidade. Avaliar desempenho e resultados é próprio das auditorias operacionais, sem que o Tribunal substitua o gestor nas escolhas discricionárias."
+        },
+        {
+          "id": "opt-5",
+          "texto": "devem ser comunicadas ao órgão fiscalizado com antecedência mínima de trinta dias, sob pena de nulidade dos achados e de responsabilização da equipe de auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição não impõe aviso prévio mínimo, e inspeções podem ser realizadas sem comunicação antecipada quando o objetivo exigir. O prazo e a sanção de nulidade foram inventados pelo distrator."
+        }
+      ],
+      "pegadinhaFCC": "Reduzir o controle externo a exame de legalidade do Executivo, mediante autorização do Legislativo. A Constituição prevê iniciativa própria, cinco dimensões de fiscalização e alcance sobre os três Poderes.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o alcance das inspeções e auditorias do Tribunal de Contas (art. 71, IV)?",
+        "resposta": "Podem ser feitas por iniciativa própria ou do Legislativo, ter natureza contábil, financeira, orçamentária, operacional e patrimonial e alcançar as unidades administrativas dos três Poderes e as demais entidades sob jurisdição do Tribunal."
+      },
+      "conceitosChave": ["Controle externo: competências do TC", "Controle externo: auditoria operacional"],
+      "fundamentacao": "CF/88, art. 70, caput; art. 71, IV; art. 74; art. 75."
+    },
+    {
+      "id": "leg-inst-050",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regime Jurídico dos Servidores de Goiás (Lei 20.756/2020)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um servidor estadual goiano em estágio probatório responde a processo administrativo disciplinar por falta grave e, ao mesmo tempo, recebe avaliações insatisfatórias de assiduidade e eficiência. A Administração pretende exonerá-lo de imediato por inaptidão no estágio, apenas com base nas avaliações e sem ouvi-lo. Considerando a Constituição Federal, a Súmula 21 do STF e a orientação da Procuradoria-Geral do Estado sobre a Lei estadual nº 20.756/2020, é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma servidora em estágio probatório no Estado de Goiás responde a processo disciplinar por suposta falta grave e, paralelamente, obtém notas baixas em pontualidade e comprometimento. A chefia propõe exonerá-la sumariamente com base apenas nessas notas. Considerando a Constituição Federal, a Súmula 21 do STF e a orientação da Procuradoria-Geral do Estado sobre a Lei estadual nº 20.756/2020, é correto afirmar que",
+        "Durante o estágio probatório, um servidor estadual goiano passa a responder a processo disciplinar e acumula avaliações negativas de eficiência. O gestor quer exonerá-lo imediatamente, sem procedimento próprio nem manifestação do interessado. Considerando a Constituição Federal, a Súmula 21 do STF e a orientação da Procuradoria-Geral do Estado sobre a Lei estadual nº 20.756/2020, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o servidor em estágio probatório não tem garantia de defesa, pois a exoneração por inaptidão é ato discricionário que dispensa motivação e contraditório.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Súmula 21 do STF exige apuração formal da capacidade do servidor em estágio, e a orientação da PGE-GO impõe processo específico com contraditório e ampla defesa. A exoneração é motivada e vinculada aos requisitos do estágio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o processo disciplinar deve ser arquivado, porque o servidor em estágio probatório não se submete ao regime disciplinar até adquirir estabilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O servidor em estágio probatório já é ocupante de cargo efetivo e se sujeita ao regime disciplinar; pode, inclusive, ser demitido em processo disciplinar regular."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a exoneração por inaptidão exige procedimento específico, com contraditório e ampla defesa, distinto do processo disciplinar, que segue seu curso próprio e pode levar à demissão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Avaliação de estágio e processo disciplinar têm naturezas distintas, e a apuração dos requisitos do estágio exige processo próprio, com contraditório e ampla defesa (Despacho PGE-GO 830/2024). A Súmula 21 do STF veda exonerar ou demitir servidor em estágio sem as formalidades legais de apuração de sua capacidade, e o art. 41, § 4º, da CF/88 exige avaliação por comissão.",
+          "versaoInvertidaFalsa": "A exoneração por inaptidão no estágio probatório dispensa procedimento próprio e contraditório quando já existe processo disciplinar em curso contra o servidor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a reprovação no estágio probatório configura penalidade de demissão, devendo ser aplicada no próprio processo disciplinar em curso contra o servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A inabilitação no estágio leva à exoneração, que não é penalidade. Demissão é sanção disciplinar, aplicada em processo disciplinar por infração funcional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a exoneração pode ser feita de imediato, pois a existência de processo disciplinar em curso supre a necessidade de procedimento próprio de avaliação do estágio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um procedimento não supre o outro: o processo disciplinar apura infração, e a avaliação do estágio apura aptidão. A orientação da PGE-GO exige processo específico para os requisitos do estágio."
+        }
+      ],
+      "pegadinhaFCC": "Fundir avaliação de estágio e processo disciplinar ou tratar a exoneração como ato livre. São procedimentos distintos, e a exoneração por inaptidão exige apuração formal com contraditório (Súmula 21 do STF).",
+      "resumoFlashcard": {
+        "pergunta": "Como se exonera por inaptidão um servidor goiano em estágio probatório?",
+        "resposta": "Por procedimento específico de apuração dos requisitos do estágio, com contraditório e ampla defesa, distinto do processo disciplinar (Despacho PGE-GO 830/2024; Súmula 21 do STF). Exoneração não é penalidade; demissão é."
+      },
+      "conceitosChave": ["Estatuto GO: estágio probatório", "CF/88: estabilidade"],
+      "fundamentacao": "CF/88, art. 41, § 4º; Súmula 21 do STF; Despacho PGE-GO nº 830/2024 (goias.gov.br/procuradoria); Lei estadual nº 20.756/2020 (estágio probatório; texto não conferido).",
+      "revisarFonteOficial": true
+    }
+  ]
+}

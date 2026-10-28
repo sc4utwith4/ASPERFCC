@@ -1,0 +1,563 @@
+{
+  "materiaSlug": "legislacao-institucional",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "leg-inst-001",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a assessoria de comunicação de um órgão estadual prepara uma campanha nas redes sociais para divulgar o novo sistema eletrônico de protocolo. A peça proposta traz, ao lado das instruções de uso, a fotografia e o nome do dirigente máximo do órgão, com o slogan “uma conquista da gestão Fulano”. À luz do art. 37, § 1º, da Constituição Federal, a campanha",
+      "variantesEnunciado": [
+        "Uma secretaria de Estado pretende lançar vídeo institucional sobre o aplicativo de agendamento de serviços. O roteiro aprovado pela chefia mostra o Secretário apresentando o aplicativo e termina com a frase “mais uma entrega do Secretário Fulano”. À luz do art. 37, § 1º, da Constituição Federal, o vídeo",
+        "Em autarquia estadual, o cartaz de divulgação do novo portal de transparência exibe, em destaque, a imagem e o nome do presidente da entidade, acompanhados da expressão “compromisso pessoal do presidente com você”. À luz do art. 37, § 1º, da Constituição Federal, o cartaz"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é regular, pois o princípio da publicidade autoriza a divulgação das realizações da gestão com a identificação de seu responsável, desde que custeada com recursos do próprio órgão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A publicidade é princípio da Administração, mas o próprio art. 37, § 1º, da CF/88 limita a publicidade oficial: ela não pode conter nomes, símbolos ou imagens que caracterizem promoção pessoal. A origem dos recursos não afasta a vedação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é regular se a imagem do dirigente ocupar espaço menor que o das instruções de uso, porque o caráter informativo prevalece sobre o elemento pessoal da peça.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição não autoriza promoção pessoal “em menor proporção”. Basta a presença de nome, símbolo ou imagem que caracterize promoção pessoal para que a peça viole o § 1º do art. 37. O critério de espaço é invenção do distrator."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deve ser ajustada, pois a publicidade oficial terá caráter educativo, informativo ou de orientação social, sem nomes, símbolos ou imagens de promoção pessoal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 37, § 1º, da CF/88 determina que a publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos tenha caráter educativo, informativo ou de orientação social, e proíbe nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores. A regra concretiza a impessoalidade: a realização é do órgão, não do agente.",
+          "versaoInvertidaFalsa": "Pode ser mantida, pois a publicidade oficial, desde que tenha caráter informativo, admite nome e imagem do dirigente como forma de prestação de contas da gestão."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deve ser ajustada apenas quanto ao slogan, pois a vedação constitucional alcança expressões de propaganda, mas não a fotografia do dirigente, que é autoridade pública identificável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: o slogan de fato é irregular, mas a vedação abrange expressamente “imagens” que caracterizem promoção pessoal. A fotografia do dirigente associada à “conquista da gestão” também precisa sair."
+        },
+        {
+          "id": "opt-5",
+          "texto": "viola o princípio da eficiência, e não o da impessoalidade, porque o gasto com a imagem do dirigente não contribui para o resultado esperado da campanha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A promoção pessoal em publicidade oficial é a hipótese clássica de ofensa à impessoalidade (e à moralidade), porque atribui ao agente o que é ato do órgão. A troca de princípio é a pegadinha da alternativa."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece soluções intermediárias (manter a foto, reduzir o espaço, trocar só o slogan). A vedação do art. 37, § 1º, é ampla: nomes, símbolos OU imagens que caracterizem promoção pessoal.",
+      "resumoFlashcard": {
+        "pergunta": "O que o art. 37, § 1º, da CF/88 exige e proíbe na publicidade oficial?",
+        "resposta": "Exige caráter educativo, informativo ou de orientação social. Proíbe nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores, em respeito à impessoalidade."
+      },
+      "conceitosChave": ["CF/88: princípios da Administração", "Publicidade oficial sem promoção pessoal"],
+      "fundamentacao": "CF/88, art. 37, caput (impessoalidade e publicidade) e § 1º."
+    },
+    {
+      "id": "leg-inst-002",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Segundo o art. 70 da Constituição Federal, a fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta, quanto à legalidade, à …… e à economicidade, à aplicação das subvenções e à …… de receitas, será exercida pelo Congresso Nacional, mediante controle ……, e pelo sistema de controle interno de cada Poder. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "O art. 70 da Constituição Federal, aplicável aos Estados por simetria, prevê que a fiscalização da União e das entidades da administração direta e indireta seja feita quanto à legalidade, à …… e à economicidade, à aplicação das subvenções e à …… de receitas, cabendo ao Congresso Nacional exercê-la mediante controle ……, ao lado do sistema de controle interno de cada Poder. Preenchem, correta e respectivamente, as lacunas:",
+        "Em aula sobre o modelo constitucional de fiscalização, o instrutor lê o art. 70 da Constituição: a fiscalização se dá quanto à legalidade, à …… e à economicidade, à aplicação das subvenções e à …… de receitas, e é exercida pelo Congresso Nacional, mediante controle ……, e pelo sistema de controle interno de cada Poder. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "eficiência − renúncia − externo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Eficiência é princípio do art. 37, caput, e critério do controle interno (art. 74, II), mas o art. 70 menciona legalidade, legitimidade e economicidade. A troca entre princípios vizinhos é a armadilha."
+        },
+        {
+          "id": "opt-2",
+          "texto": "legitimidade − renúncia − externo",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 70 fixa os parâmetros da fiscalização (legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas) e os dois sistemas que a exercem: o controle externo, titularizado pelo Legislativo, e o controle interno de cada Poder. A renúncia de receitas aparece porque abrir mão de tributo também afeta o erário.",
+          "versaoInvertidaFalsa": "eficiência − arrecadação − externo, pois o art. 70 fiscaliza a eficiência da gestão e a arrecadação de receitas, mediante controle externo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "legitimidade − arrecadação − interno",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto constitucional fala em renúncia de receitas, não em arrecadação. Além disso, o Congresso exerce o controle externo; o controle interno é mantido por cada Poder sobre si mesmo, e as duas esferas aparecem separadas no artigo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "moralidade − renúncia − político",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Moralidade é princípio do art. 37, não parâmetro listado no art. 70. E a Constituição qualifica a fiscalização do Congresso como controle externo, não como “controle político”, ainda que o Legislativo também exerça controle político."
+        },
+        {
+          "id": "opt-5",
+          "texto": "eficácia − previsão − externo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Eficácia e eficiência aparecem no art. 74, II, como critérios do controle interno, e “previsão de receitas” não integra o art. 70. A alternativa mistura vocabulário de outros dispositivos para soar técnica."
+        }
+      ],
+      "pegadinhaFCC": "Trocar legitimidade por eficiência ou moralidade e renúncia por arrecadação. O trio do art. 70 é legalidade, legitimidade e economicidade, mais subvenções e renúncia de receitas.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os parâmetros e as modalidades de fiscalização previstos no art. 70 da CF/88?",
+        "resposta": "Modalidades: contábil, financeira, orçamentária, operacional e patrimonial. Parâmetros: legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas, pelo controle externo do Legislativo e pelo controle interno de cada Poder."
+      },
+      "conceitosChave": ["CF/88: art. 70 (fiscalização)", "Controle externo: titularidade"],
+      "fundamentacao": "CF/88, art. 70, caput."
+    },
+    {
+      "id": "leg-inst-003",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Em treinamento de ambientação, um técnico recém-empossado precisa identificar as finalidades que o art. 74 da Constituição Federal atribui ao sistema de controle interno mantido, de forma integrada, pelos Poderes Legislativo, Executivo e Judiciário. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar material de estudo sobre a relação entre controle interno e controle externo, uma servidora relaciona as finalidades do sistema de controle interno previstas no art. 74 da Constituição Federal. Considere as afirmativas abaixo.",
+        "Durante auditoria em secretaria estadual, a equipe precisa distinguir o que cabe ao sistema de controle interno, segundo o art. 74 da Constituição Federal, do que é competência do Tribunal de Contas. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Avaliar o cumprimento das metas previstas no plano plurianual, a execução dos programas de governo e dos orçamentos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a finalidade do art. 74, I: o controle interno acompanha o planejamento (PPA) e a execução orçamentária."
+        },
+        {
+          "texto": "Julgar as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Julgar contas é competência do Tribunal de Contas no exercício do controle externo (art. 71, II). O controle interno avalia e comprova, mas não julga."
+        },
+        {
+          "texto": "Exercer o controle das operações de crédito, avais e garantias, bem como dos direitos e haveres do ente.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Corresponde ao art. 74, III, que no texto federal menciona os direitos e haveres da União e se aplica aos demais entes por simetria."
+        },
+        {
+          "texto": "Apoiar o controle externo no exercício de sua missão institucional.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 74, IV, estabelece expressamente o apoio ao controle externo, o que se reforça pelo dever de ciência ao Tribunal de Contas (art. 74, § 1º)."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que atribui ao controle interno o julgamento de contas, competência exclusiva do Tribunal de Contas (art. 71, II), e omite a IV, finalidade expressa do art. 74."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aceita a afirmativa II, que é falsa, e descarta a I e a III, que reproduzem os incisos I e III do art. 74. É a combinação de quem confunde controle interno com controle externo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III também é verdadeira: o controle das operações de crédito, avais e garantias está no art. 74, III. Quem a descarta costuma achar que esse controle é exclusivo do Legislativo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 74 atribui ao controle interno avaliar metas do PPA e a execução de programas e orçamentos (I), comprovar a legalidade e avaliar resultados da gestão (II do artigo), controlar operações de crédito, avais, garantias, direitos e haveres (III) e apoiar o controle externo (IV). Julgar contas é tarefa do Tribunal de Contas (art. 71, II).",
+          "versaoInvertidaFalsa": "Cabe ao sistema de controle interno julgar as contas dos administradores e demais responsáveis por bens e valores públicos, apoiando o controle externo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: o controle interno não julga contas. Ele produz informações e relatórios que subsidiam o julgamento feito pelo Tribunal de Contas."
+        }
+      ],
+      "pegadinhaFCC": "Colocar entre as finalidades do controle interno uma competência típica do Tribunal de Contas (julgar contas). O controle interno avalia, comprova, controla e apoia; quem julga é o controle externo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as finalidades do sistema de controle interno no art. 74 da CF/88?",
+        "resposta": "Avaliar metas do PPA e a execução de programas e orçamentos; comprovar a legalidade e avaliar resultados da gestão; controlar operações de crédito, avais, garantias, direitos e haveres; e apoiar o controle externo."
+      },
+      "conceitosChave": ["Controle interno: finalidades", "Controle externo: competências do TC"],
+      "fundamentacao": "CF/88, art. 74, incisos I a IV; art. 71, II."
+    },
+    {
+      "id": "leg-inst-004",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Constituição do Estado de Goiás: Tribunal de Contas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considerando o modelo federal de controle externo, de observância obrigatória pelos Estados (CF/88, art. 75), e as disposições da Constituição do Estado de Goiás sobre o Tribunal de Contas do Estado, é correto afirmar que, no âmbito estadual,",
+      "variantesEnunciado": [
+        "Sobre a disciplina do Tribunal de Contas do Estado na Constituição do Estado de Goiás, que reproduz o modelo federal por força do art. 75 da Constituição Federal, é correto afirmar que",
+        "A respeito do controle externo das contas do Poder Executivo goiano, conforme a Constituição do Estado de Goiás e o modelo de simetria do art. 75 da Constituição Federal, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Tribunal de Contas do Estado julga as contas anuais do Governador, e a Assembleia Legislativa apenas homologa a decisão para fins de publicidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os papéis. Sobre as contas do Chefe do Executivo, o Tribunal emite parecer prévio (CF/88, art. 71, I) e o julgamento cabe ao Legislativo (no plano federal, art. 49, IX). O Tribunal julga as contas dos administradores (art. 71, II)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o controle externo é titularizado pelo Tribunal de Contas do Estado, órgão subordinado administrativamente à Assembleia Legislativa e por ela supervisionado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O titular do controle externo é o Legislativo; o Tribunal o auxilia. E o Tribunal tem autonomia funcional, administrativa e financeira (Lei 16.168/2007, art. 7º), sem subordinação hierárquica à Assembleia."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o parecer prévio sobre as contas do Governador é emitido pela Controladoria-Geral do Estado, órgão central do controle interno, e encaminhado ao Tribunal de Contas para julgamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O órgão central do controle interno elabora relatório que integra as contas do Governador, mas o parecer prévio é do Tribunal de Contas, e o julgamento, da Assembleia Legislativa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Tribunal de Contas aprecia as contas do Governador por parecer prévio que só deixa de prevalecer por decisão de dois terços dos membros da Assembleia Legislativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O quórum de dois terços para afastar o parecer prévio está no art. 31, § 2º, da CF/88 e vale para as contas do Prefeito, julgadas pela Câmara Municipal. A alternativa transplanta para o Governador uma regra municipal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o controle externo cabe à Assembleia Legislativa, com o auxílio do Tribunal de Contas, que emite parecer prévio sobre as contas anuais do Governador, julgadas pelo Legislativo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Por simetria (CF/88, art. 75), a Constituição goiana atribui o controle externo à Assembleia Legislativa, exercido com o auxílio do Tribunal de Contas do Estado. O Tribunal aprecia as contas anuais do Governador mediante parecer prévio (no TCE-GO, em 60 dias do recebimento, segundo a Lei 16.168/2007, art. 1º, I), e o julgamento político dessas contas é do Legislativo.",
+          "versaoInvertidaFalsa": "O controle externo cabe ao Tribunal de Contas do Estado, que julga as contas anuais do Governador, cabendo à Assembleia Legislativa apenas emitir parecer prévio."
+        }
+      ],
+      "pegadinhaFCC": "Confundir “apreciar mediante parecer prévio” (contas do Governador) com “julgar” (contas dos administradores) e importar para o Estado o quórum de 2/3 que a CF/88 só prevê para as contas do Prefeito.",
+      "resumoFlashcard": {
+        "pergunta": "No Estado de Goiás, quem emite o parecer prévio e quem julga as contas anuais do Governador?",
+        "resposta": "O TCE-GO emite parecer prévio (em 60 dias do recebimento, segundo a Lei 16.168/2007), e a Assembleia Legislativa julga as contas, pois é a titular do controle externo."
+      },
+      "conceitosChave": ["Controle externo: parecer prévio", "Simetria (art. 75)"],
+      "fundamentacao": "CF/88, arts. 31, § 2º, 49, IX, 71, I, e 75; Constituição do Estado de Goiás, arts. 25 e 26 (competências do TCE-GO, conforme fontes secundárias); Lei estadual nº 16.168/2007, art. 1º, I.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-005",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Lei Orgânica do TCE-GO (Lei 16.168/2007)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com a Lei Orgânica do Tribunal de Contas do Estado de Goiás (Lei estadual nº 16.168/2007), em sua redação atual, são órgãos do Tribunal",
+      "variantesEnunciado": [
+        "Ao relacionar a estrutura de órgãos prevista na Lei estadual nº 16.168/2007 (Lei Orgânica do TCE-GO), com as alterações posteriores, um servidor deve indicar corretamente que são órgãos do Tribunal",
+        "Conforme a redação vigente da Lei Orgânica do Tribunal de Contas do Estado de Goiás, integram a relação de órgãos do Tribunal"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Plenário, as Câmaras, a Presidência, os Conselheiros, os Auditores e o Ministério Público junto ao Tribunal de Contas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 8º da Lei 16.168/2007, na redação atual, relaciona como órgãos do Tribunal o Plenário, as Câmaras, a Presidência, os Conselheiros, os Auditores e o Ministério Público junto ao Tribunal de Contas. As “Auditorias” da redação original foram revogadas pela Lei 17.260/2011.",
+          "versaoInvertidaFalsa": "São órgãos do Tribunal apenas o Plenário, as Câmaras e a Presidência, pois o Ministério Público junto ao Tribunal não integra sua estrutura de órgãos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Plenário, as Câmaras, a Presidência, os Conselheiros, os Auditores e as Auditorias, unidades técnicas permanentes previstas na redação original da lei.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As “Auditorias” constavam da redação original, mas foram revogadas pela Lei 17.260/2011. A alternativa explora quem estudou por texto desatualizado da lei."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Plenário, a Presidência, a Controladoria-Geral do Estado e a Procuradoria-Geral do Estado, esta incumbida da guarda da lei perante o Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Controladoria-Geral e Procuradoria-Geral do Estado são órgãos do Poder Executivo. Quem atua como fiscal da lei perante o Tribunal é o Ministério Público junto ao Tribunal de Contas, chefiado pelo Procurador-Geral de Contas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Plenário, as Câmaras e a Presidência, apenas, uma vez que Conselheiros, Auditores e membros do Ministério Público de Contas são agentes, e não órgãos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A distinção doutrinária entre órgão e agente não foi adotada pela lei: o art. 8º inclui expressamente Conselheiros, Auditores e o Ministério Público junto ao Tribunal entre os órgãos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a Assembleia Legislativa, o Plenário, as Câmaras e a Presidência, porque o Tribunal integra a estrutura do Poder Legislativo como órgão subordinado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Tribunal auxilia a Assembleia no controle externo, mas tem autonomia funcional, administrativa e financeira (art. 7º da Lei 16.168/2007). A Assembleia não é órgão do Tribunal."
+        }
+      ],
+      "pegadinhaFCC": "Incluir as “Auditorias”, revogadas em 2011, ou trocar o Ministério Público de Contas por órgãos do Executivo (PGE, CGE).",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os órgãos do TCE-GO segundo o art. 8º da Lei 16.168/2007, na redação atual?",
+        "resposta": "Plenário, Câmaras, Presidência, Conselheiros, Auditores e Ministério Público junto ao Tribunal de Contas. As Auditorias da redação original foram revogadas pela Lei 17.260/2011."
+      },
+      "conceitosChave": ["TCE-GO: Lei Orgânica", "TCE-GO: órgãos"],
+      "fundamentacao": "Lei estadual nº 16.168/2007, arts. 7º e 8º (redação dada após a Lei estadual nº 17.260/2011); docs/pesquisa/_normativos-tce-go.md."
+    },
+    {
+      "id": "leg-inst-006",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regimento Interno do TCE-GO (Resolução 22/2008)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, diante do afastamento simultâneo de dois Conselheiros do Tribunal de Contas do Estado de Goiás, a Presidência precisa organizar as substituições. Um servidor sugere que cada Conselheiro passe a ser substituído sempre pelo mesmo Auditor, para “dar continuidade aos gabinetes”. À luz do Regimento Interno do TCE-GO (Resolução nº 22/2008), a sugestão",
+      "variantesEnunciado": [
+        "Para simplificar a gestão de gabinetes, um grupo de trabalho propõe ao TCE-GO fixar, em caráter definitivo, um Auditor substituto para cada Conselheiro. Considerando o Regimento Interno do Tribunal (Resolução nº 22/2008), a proposta",
+        "Em reunião sobre o fluxo de distribuição de processos, um assessor defende que cada Auditor do TCE-GO fique permanentemente atrelado a um Conselheiro para fins de substituição. Segundo o Regimento Interno (Resolução nº 22/2008), essa proposta"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pode ser acolhida, pois o Regimento determina que cada um dos sete Auditores fique vinculado a um gabinete de Conselheiro para fins de substituição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Há sete Auditores, número igual ao de Conselheiros, o que torna a vinculação intuitiva. Mas o Regimento prevê justamente o contrário: substituição em rodízio, vedada a vinculação permanente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pode ser acolhida se os Auditores substitutos forem escolhidos pela Assembleia Legislativa, a quem cabe nomear os Auditores entre servidores efetivos do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os Auditores são nomeados pelo Governador entre aprovados em concurso realizado pelo Tribunal, com os mesmos requisitos exigidos para Conselheiro. Não são escolhidos pela Assembleia nem entre servidores efetivos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "não pode ser acolhida, porque a substituição de Conselheiros cabe a servidores ocupantes de cargo efetivo de nível superior, designados livremente pelo Presidente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A substituição de Conselheiros é atribuição dos Auditores, cargo próprio com requisitos de Conselheiro. Servidores do quadro técnico não substituem membros do Tribunal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "não pode ser acolhida, porque os Auditores só substituem Conselheiros em caso de vacância definitiva, e não durante afastamentos temporários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida: a substituição pelos Auditores alcança as ausências e afastamentos dos Conselheiros, e não apenas a vacância. O vício da proposta está na vinculação permanente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "não pode ser acolhida, porque os Auditores substituem os Conselheiros em rodízio, sendo vedada a vinculação permanente entre Auditor e Conselheiro.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Regimento Interno do TCE-GO prevê sete Auditores, nomeados pelo Governador entre aprovados em concurso do Tribunal, que substituem os Conselheiros em sistema de rodízio, vedada a vinculação permanente. O rodízio preserva a impessoalidade e evita que um substituto se torne extensão de determinado gabinete.",
+          "versaoInvertidaFalsa": "Pode ser acolhida, porque o Regimento Interno do TCE-GO vincula permanentemente cada Auditor a um Conselheiro, a quem ele substitui em todas as ausências."
+        }
+      ],
+      "pegadinhaFCC": "O número igual de Auditores e Conselheiros (sete) sugere um pareamento fixo. O Regimento adota o rodízio e veda a vinculação permanente.",
+      "resumoFlashcard": {
+        "pergunta": "Como os Auditores do TCE-GO substituem os Conselheiros, segundo o Regimento Interno?",
+        "resposta": "Em sistema de rodízio, vedada a vinculação permanente entre Auditor e Conselheiro. São sete Auditores, nomeados pelo Governador entre aprovados em concurso do Tribunal, com os requisitos de Conselheiro."
+      },
+      "conceitosChave": ["TCE-GO: Auditores", "TCE-GO: Regimento Interno"],
+      "fundamentacao": "Resolução TCE-GO nº 22/2008 (Regimento Interno), disposições sobre os Auditores; CF/88, art. 73, § 4º, c/c art. 75; docs/pesquisa/_normativos-tce-go.md."
+    },
+    {
+      "id": "leg-inst-007",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "PCCR dos servidores do TCE-GO (Lei 15.122/2005)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A Lei estadual nº 15.122/2005, que trata do Plano de Cargos, Carreiras e Remuneração dos servidores do Tribunal de Contas do Estado de Goiás, com as alterações posteriores,",
+      "variantesEnunciado": [
+        "Acerca do conteúdo da Lei estadual nº 15.122/2005 (PCCR do TCE-GO), considerada a redação dada por leis posteriores, é correto afirmar que ela",
+        "Um candidato ao cargo de Técnico de Controle Externo estuda a Lei estadual nº 15.122/2005, com suas alterações. Sobre essa lei, é correto afirmar que ela"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "regula o regime disciplinar dos servidores do Tribunal, afastando, em relação a eles, a aplicação do estatuto dos servidores públicos civis do Estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Plano de cargos e regime disciplinar são matérias distintas. A lei de carreira organiza cargos, carreiras e remuneração; deveres, penalidades e processo disciplinar ficam no estatuto dos servidores civis de Goiás (Lei 20.756/2020)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "exige diploma de nível superior para o cargo de Técnico de Controle Externo, vedando que o edital do concurso estabeleça qualificações específicas por especialidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Para Técnico de Controle Externo a lei exige certificado de conclusão do ensino médio, admitindo qualificação específica definida no edital quando necessária. Nível superior é requisito do cargo de nível superior da carreira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "dispõe sobre o plano de carreira, o quadro permanente, os cargos em comissão e as funções de confiança do Tribunal, exigindo ensino médio para Técnico de Controle Externo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 15.122/2005 institui o plano de carreira, o quadro permanente, os cargos em comissão e as funções de confiança do TCE-GO. Com as alterações posteriores, o cargo de Técnico de Controle Externo exige ensino médio, e o cargo de nível superior da carreira exige graduação, com pré-requisitos por especialidade.",
+          "versaoInvertidaFalsa": "A Lei estadual nº 15.122/2005 trata apenas dos cargos em comissão do Tribunal e exige diploma de nível superior para o cargo de Técnico de Controle Externo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "permite que a remuneração dos cargos efetivos seja fixada e reajustada por resolução do Plenário do Tribunal, dispensada a edição de lei específica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A remuneração dos servidores só pode ser fixada ou alterada por lei específica, observada a iniciativa privativa (CF/88, art. 37, X). O Tribunal tem iniciativa do projeto, mas não fixa remuneração por resolução."
+        },
+        {
+          "id": "opt-5",
+          "texto": "trata exclusivamente dos cargos em comissão, pois os cargos efetivos do Tribunal são criados e disciplinados pela Lei Orgânica (Lei estadual nº 16.168/2007).",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o PCCR que estrutura o quadro permanente e as carreiras efetivas. A Lei Orgânica trata de competência, jurisdição, organização e processo do Tribunal, não da carreira dos servidores."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao PCCR matérias de outras leis (regime disciplinar, organização do Tribunal) ou trocar o requisito de escolaridade do cargo de Técnico (ensino médio).",
+      "resumoFlashcard": {
+        "pergunta": "O que a Lei estadual nº 15.122/2005 disciplina e qual a escolaridade exigida para Técnico de Controle Externo?",
+        "resposta": "Ela institui o plano de carreira, o quadro permanente, os cargos em comissão e as funções de confiança do TCE-GO. O cargo de Técnico de Controle Externo exige ensino médio, com qualificação específica fixada em edital quando necessária."
+      },
+      "conceitosChave": ["TCE-GO: PCCR"],
+      "fundamentacao": "Lei estadual nº 15.122/2005 e alterações (texto da Casa Civil-GO, via busca: legisla.casacivil.go.gov.br, legislações 80023 e 87153); CF/88, art. 37, X.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-008",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regime Jurídico dos Servidores de Goiás (Lei 20.756/2020)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um servidor nomeado para cargo efetivo do Estado de Goiás, após aprovação em concurso, pergunta à unidade de gestão de pessoas como será verificada sua aptidão para adquirir estabilidade. De acordo com a Constituição Federal e com a disciplina do estágio probatório no regime jurídico dos servidores civis de Goiás (Lei estadual nº 20.756/2020), a resposta correta é que",
+      "variantesEnunciado": [
+        "Uma servidora recém-empossada em cargo efetivo do quadro estadual goiano quer saber o que precisa ocorrer para que se torne estável. Considerando a Constituição Federal e o estágio probatório na Lei estadual nº 20.756/2020, deve-se informar que",
+        "Em palestra de ambientação para novos servidores efetivos do Estado de Goiás, o instrutor explica o estágio probatório previsto na Lei estadual nº 20.756/2020, em harmonia com a Constituição Federal. Ele afirma corretamente que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a estabilidade depende de três anos de efetivo exercício e de avaliação especial de desempenho por comissão, que apura requisitos como assiduidade, pontualidade, iniciativa, eficiência e comprometimento com o trabalho.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A CF/88 (art. 41, caput e § 4º) exige três anos de efetivo exercício e avaliação especial de desempenho por comissão instituída para essa finalidade. O estágio probatório goiano apura requisitos como iniciativa, assiduidade e pontualidade, relacionamento interpessoal, eficiência e comprometimento com o trabalho, em processo próprio com contraditório e ampla defesa.",
+          "versaoInvertidaFalsa": "A estabilidade é adquirida pelo simples decurso de três anos de efetivo exercício, sendo dispensável a avaliação especial de desempenho por comissão quando o servidor não sofreu penalidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a estabilidade é adquirida automaticamente após dois anos de efetivo exercício, salvo se houver processo disciplinar em curso contra o servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Dois anos era o prazo anterior à EC 19/1998. Hoje a CF/88 exige três anos de efetivo exercício, e a aquisição da estabilidade não é automática: depende de avaliação especial de desempenho."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a avaliação especial de desempenho é facultativa e pode ser substituída pelo decurso do prazo de três anos sem aplicação de penalidade disciplinar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 41, § 4º, da CF/88 diz que a avaliação especial de desempenho é condição obrigatória para a aquisição da estabilidade. A ausência de punição não supre a avaliação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o estágio probatório dura três anos, mas a avaliação é feita uma única vez, pela chefia imediata, ao final do período, sem participação de comissão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: o prazo de três anos está certo, mas a Constituição exige avaliação por comissão instituída para essa finalidade. A chefia imediata participa da apuração, mas não substitui a comissão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "basta ao servidor obter nota mínima em curso de formação oferecido pela escola de governo, que substitui a avaliação especial de desempenho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A participação em cursos de escolas de governo pode ser requisito para promoção (CF/88, art. 39, § 2º), mas não substitui a avaliação especial de desempenho exigida para a estabilidade."
+        }
+      ],
+      "pegadinhaFCC": "Usar o prazo antigo de dois anos ou tratar a avaliação especial de desempenho como dispensável. A estabilidade exige os dois elementos: três anos de efetivo exercício e avaliação por comissão.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os requisitos para o servidor efetivo de Goiás adquirir estabilidade?",
+        "resposta": "Três anos de efetivo exercício em cargo efetivo provido por concurso e aprovação em avaliação especial de desempenho feita por comissão instituída para esse fim (CF/88, art. 41). O estágio goiano apura iniciativa, assiduidade e pontualidade, relacionamento interpessoal, eficiência e comprometimento."
+      },
+      "conceitosChave": ["CF/88: estabilidade", "Estatuto GO: estágio probatório"],
+      "fundamentacao": "CF/88, art. 41, caput e § 4º; Lei estadual nº 20.756/2020 (estágio probatório), conforme goias.gov.br/administracao/estagio-probatorio; Despacho PGE-GO nº 830/2024.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-009",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Código de Ética dos Servidores do TCE-GO",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um técnico de TI do Tribunal, com perfil de administrador do sistema de processos eletrônicos, acessa por curiosidade os autos de um processo sigiloso que envolve um conhecido seu e comenta o conteúdo com colegas, sem que isso seja necessário ao exercício de suas atribuições. Considerando os deveres éticos dos servidores do TCE-GO e os princípios constitucionais da Administração, a conduta",
+      "variantesEnunciado": [
+        "Um servidor da área de suporte, que tem acesso privilegiado ao banco de dados de processos do Tribunal, consulta informações protegidas por sigilo sobre um vizinho e relata o que viu a outros servidores, sem qualquer demanda de serviço. Considerando os deveres éticos dos servidores do TCE-GO e os princípios constitucionais da Administração, a conduta",
+        "Durante uma manutenção noturna, um analista com credencial de administrador abre, sem necessidade técnica, documentos sigilosos de auditoria e depois comenta seu conteúdo na copa do setor. Considerando os deveres éticos dos servidores do TCE-GO e os princípios constitucionais da Administração, a conduta"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é eticamente aceitável, porque o perfil de administrador concede acesso integral aos dados, e a permissão técnica equivale a autorização funcional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Permissão técnica não é autorização funcional. O acesso privilegiado existe para administrar o sistema, e usá-lo para satisfazer curiosidade viola o dever de sigilo e o princípio da necessidade no tratamento de dados (LGPD, art. 6º, III)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "só seria antiética se o conteúdo fosse divulgado fora do Tribunal, pois o compartilhamento entre colegas da mesma instituição não quebra o sigilo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sigilo protege a informação contra qualquer pessoa sem necessidade de conhecê-la, inclusive colegas. A conduta já é irregular no acesso indevido e se agrava com o comentário interno."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é irrelevante para a ética funcional, pois configura apenas falha de segurança da informação, a ser tratada exclusivamente pela unidade de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O mesmo fato pode ser incidente de segurança da informação e infração ética e disciplinar. As esferas são independentes, e a PSI do Tribunal (RA 17/2024) também protege a confidencialidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é antiética e pode gerar responsabilização, pois o privilégio de acesso não autoriza usar informações fora da necessidade do serviço, e o servidor deve guardar sigilo sobre o que conhece em razão do cargo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O dever de guardar sigilo sobre assuntos conhecidos em razão do cargo é núcleo dos códigos de ética do serviço público e decorre da moralidade e da impessoalidade (CF/88, art. 37). O privilégio de administrador serve ao serviço, não ao interesse pessoal, e o uso indevido pode gerar responsabilização ética, disciplinar e por violação à confidencialidade.",
+          "versaoInvertidaFalsa": "É eticamente neutra, pois quem tem perfil de administrador está autorizado a consultar qualquer processo, desde que não divulgue o conteúdo fora do Tribunal."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deixa de ser antiética se o acesso ficar registrado em log, já que a rastreabilidade supre a ausência de necessidade de serviço para a consulta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O log é controle de detecção: permite apurar quem acessou, mas não torna legítimo um acesso sem finalidade funcional. Rastreabilidade e autorização são coisas diferentes."
+        }
+      ],
+      "pegadinhaFCC": "Confundir permissão técnica com autorização funcional e achar que comentar só “dentro de casa” preserva o sigilo.",
+      "resumoFlashcard": {
+        "pergunta": "Servidor com acesso privilegiado pode consultar processo sigiloso sem necessidade de serviço?",
+        "resposta": "Não. O acesso privilegiado serve ao serviço; usá-lo por curiosidade viola o dever de sigilo, a moralidade e a impessoalidade, e pode gerar responsabilização ética e disciplinar, além de configurar incidente de segurança."
+      },
+      "conceitosChave": ["Ética no serviço público: sigilo", "TCE-GO: PSI"],
+      "fundamentacao": "Código de Ética dos Servidores do TCE-GO (dever de sigilo; texto não conferido); CF/88, art. 37, caput; Lei 13.709/2018, art. 6º, III; RA TCE-GO nº 17/2024 (confidencialidade).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-010",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: segurança da informação, dados pessoais e IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A Resolução Administrativa nº 17/2024 do Tribunal de Contas do Estado de Goiás, que dispõe sobre a Política de Segurança da Informação (PSI),",
+      "variantesEnunciado": [
+        "Sobre a Política de Segurança da Informação do TCE-GO, instituída pela Resolução Administrativa nº 17/2024, é correto afirmar que ela",
+        "Um técnico prepara um resumo da Resolução Administrativa nº 17/2024 do TCE-GO para a intranet. Ele registra corretamente que a norma"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "aplica-se exclusivamente à unidade de tecnologia da informação, à qual cabe zelar pela confidencialidade dos sistemas, ficando as demais unidades dispensadas de suas diretrizes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A PSI do TCE-GO aplica-se a todas as unidades do Tribunal. Segurança da informação é responsabilidade institucional, não só da área de TI, que é a ideia que a alternativa explora."
+        },
+        {
+          "id": "opt-2",
+          "texto": "estabelece diretrizes, objetivos e responsabilidades para assegurar a disponibilidade, a integridade, a confidencialidade e a autenticidade das informações em todas as unidades.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 2º da RA 17/2024 fixa diretrizes, objetivos e responsabilidades para garantir disponibilidade, integridade, confidencialidade e autenticidade das informações, e a política vale para todas as unidades do Tribunal. A norma foi aprovada em sessão plenária de 19/09/2024 e revogou a política anterior, de 2022.",
+          "versaoInvertidaFalsa": "Estabelece diretrizes para assegurar apenas a confidencialidade das informações, e sua aplicação se restringe à unidade de tecnologia da informação do Tribunal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tem a confidencialidade como único objetivo, deixando a disponibilidade e a integridade para o Manual de Segurança da Informação, de natureza meramente orientativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A própria resolução elenca disponibilidade, integridade, confidencialidade e autenticidade. O Manual de Segurança da Informação detalha normas específicas em consonância com a PSI; não recebe parte dos objetivos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "foi editada por ato isolado do Presidente, sem deliberação plenária, e convive com a política anterior, de 2022, que continua em vigor de forma complementar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A RA 17/2024 foi aprovada em sessão plenária (19/09/2024) e revogou a política de 2022. Os dois detalhes falsos tornam a alternativa incompatível com o histórico da norma."
+        },
+        {
+          "id": "opt-5",
+          "texto": "substitui a Lei Geral de Proteção de Dados no âmbito do Tribunal, que passa a tratar dados pessoais exclusivamente segundo regras da política interna.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Norma interna não afasta lei federal. O tratamento de dados pessoais no TCE-GO segue a LGPD, regulamentada internamente pela RN 5/2024; a PSI complementa, sem substituir, o regime legal."
+        }
+      ],
+      "pegadinhaFCC": "Restringir a PSI à área de TI ou a um único atributo (confidencialidade). A RA 17/2024 vale para todas as unidades e protege quatro atributos: disponibilidade, integridade, confidencialidade e autenticidade.",
+      "resumoFlashcard": {
+        "pergunta": "Quais atributos da informação a PSI do TCE-GO (RA 17/2024) protege e a quem se aplica?",
+        "resposta": "Disponibilidade, integridade, confidencialidade e autenticidade. A política aplica-se a todas as unidades do Tribunal e foi aprovada em plenário em 19/09/2024, revogando a de 2022."
+      },
+      "conceitosChave": ["TCE-GO: PSI"],
+      "fundamentacao": "Resolução Administrativa TCE-GO nº 17/2024, art. 2º; docs/pesquisa/_normativos-tce-go.md (portal.tce.go.gov.br; GNOI ato 22924)."
+    }
+  ]
+}

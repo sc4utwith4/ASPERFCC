@@ -1,0 +1,613 @@
+{
+  "materiaSlug": "legislacao-institucional",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "leg-inst-031",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um servidor do Tribunal, dirigindo veículo oficial a serviço, colide por imprudência com o carro de um particular, causando-lhe danos materiais. Segundo o art. 37, § 6º, da Constituição Federal e a jurisprudência do STF, é correto afirmar que",
+      "variantesEnunciado": [
+        "Durante uma vistoria técnica, um servidor estadual, conduzindo carro da repartição em alta velocidade, atinge a motocicleta de um entregador. Segundo o art. 37, § 6º, da Constituição Federal e a jurisprudência do STF, é correto afirmar que",
+        "Ao transportar equipamentos de TI entre prédios do órgão, um motorista do quadro efetivo estadual avança o sinal vermelho e danifica o veículo de uma cidadã. Segundo o art. 37, § 6º, da Constituição Federal e a jurisprudência do STF, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o particular deve acionar diretamente o servidor, pois a responsabilidade do Estado só surge se o agente não tiver patrimônio suficiente para reparar o dano.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O STF fixou, no Tema 940, que a ação por danos causados por agente público deve ser ajuizada contra o Estado, sendo o agente parte ilegítima. Não há responsabilidade estatal subsidiária ao patrimônio do servidor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Estado responde objetivamente pelos danos causados ao particular, assegurado o direito de regresso contra o servidor, cuja responsabilidade depende de dolo ou culpa.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo art. 37, § 6º, as pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros, independentemente de culpa (responsabilidade objetiva). O regresso contra o agente exige dolo ou culpa, e a imprudência é modalidade de culpa. O STF (Tema 940) exige que a vítima acione o Estado, não o agente.",
+          "versaoInvertidaFalsa": "O Estado responde pelos danos apenas se a vítima provar culpa do servidor, e o regresso contra o agente independe de dolo ou culpa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Estado responde apenas se o particular comprovar culpa do serviço, pois a responsabilidade objetiva se limita às empresas privadas prestadoras de serviços públicos concedidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A responsabilidade objetiva alcança as pessoas jurídicas de direito público e as de direito privado prestadoras de serviço público. A alternativa exclui justamente o Estado, que é o destinatário principal da regra."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Estado e o servidor respondem objetivamente e de forma solidária, cabendo ao particular escolher contra quem ajuizará a ação de indenização.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A responsabilidade do agente é subjetiva (depende de dolo ou culpa) e se apura em regresso. Não há solidariedade objetiva nem opção da vítima, segundo a tese do Tema 940 do STF."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o Estado responde objetivamente, mas não pode exercer regresso contra o servidor, porque a culpa no exercício da função é absorvida pelo risco administrativo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: a responsabilidade do Estado é objetiva, mas a Constituição assegura expressamente o direito de regresso nos casos de dolo ou culpa. A imprudência do servidor autoriza o regresso."
+        }
+      ],
+      "pegadinhaFCC": "Misturar a responsabilidade objetiva do Estado com a subjetiva do agente. A vítima aciona o Estado sem provar culpa; o Estado cobra do servidor em regresso, provando dolo ou culpa.",
+      "resumoFlashcard": {
+        "pergunta": "Como funciona a responsabilidade civil por dano causado por servidor no exercício da função?",
+        "resposta": "O Estado responde objetivamente perante a vítima (art. 37, § 6º), que deve acioná-lo, e não o agente (Tema 940 do STF). O Estado tem direito de regresso contra o servidor que agiu com dolo ou culpa."
+      },
+      "conceitosChave": ["CF/88: responsabilidade civil do Estado"],
+      "fundamentacao": "CF/88, art. 37, § 6º; STF, RE 1.027.633 (Tema 940 da repercussão geral)."
+    },
+    {
+      "id": "leg-inst-032",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Acerca das decisões dos Tribunais de Contas que imputam débito ou aplicam multa, considerando o art. 71, § 3º, da Constituição Federal e a jurisprudência do STF, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre a força executiva e a legitimidade para cobrança das decisões condenatórias dos Tribunais de Contas, à luz do art. 71, § 3º, da Constituição Federal e da jurisprudência do STF, é correto afirmar que",
+        "Um Tribunal de Contas estadual aplicou multa a ex-gestor municipal por dano ao erário do Município. Considerando o art. 71, § 3º, da Constituição Federal e a jurisprudência do STF, é correto afirmar, em termos gerais, que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "essas decisões dependem de homologação pelo Poder Judiciário para adquirir força executiva, por se tratar de atos de natureza administrativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 71, § 3º, atribui diretamente eficácia de título executivo a essas decisões. Não há homologação judicial prévia; o Judiciário atua na execução e em eventual controle de legalidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "essas decisões têm eficácia de título executivo e são executadas pelo Ministério Público junto ao Tribunal de Contas, que tem legitimidade para a cobrança judicial.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O STF já afirmou que o Ministério Público junto ao Tribunal de Contas não tem legitimidade para executar as decisões da Corte (RE 223.037). Sua atuação se dá perante o próprio Tribunal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apenas as decisões que imputam débito têm eficácia de título executivo; as que aplicam multa dependem de inscrição prévia em dívida ativa por ato do Legislativo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O § 3º abrange expressamente as decisões “de que resulte imputação de débito ou multa”. Não há distinção nem participação do Legislativo na formação do título."
+        },
+        {
+          "id": "opt-4",
+          "texto": "essas decisões têm eficácia de título executivo, cabendo ao próprio Tribunal de Contas, por meio de sua assessoria jurídica, ajuizar a execução em nome próprio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Tribunal forma o título, mas não o executa. A legitimidade é do ente público credor, representado por sua procuradoria, conforme a jurisprudência do STF."
+        },
+        {
+          "id": "opt-5",
+          "texto": "essas decisões têm eficácia de título executivo, mas a execução cabe ao ente beneficiário, como o Município prejudicado no caso de multa aplicada por TCE a agente municipal.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 71, § 3º, dá eficácia de título executivo às decisões que imputam débito ou multa. O STF entende que o Tribunal de Contas e o Ministério Público de Contas não executam essas decisões; no Tema 642, fixou que o Município prejudicado é o legitimado para executar multa aplicada por TCE a agente municipal por dano ao erário municipal.",
+          "versaoInvertidaFalsa": "Essas decisões têm eficácia de título executivo e são executadas pelo próprio Tribunal de Contas, que tem legitimidade para cobrar judicialmente débitos e multas que impõe."
+        }
+      ],
+      "pegadinhaFCC": "Supor que quem forma o título (o Tribunal) ou quem atua perante ele (o MP de Contas) também o executa. A execução cabe ao ente público credor.",
+      "resumoFlashcard": {
+        "pergunta": "Quem executa as decisões de Tribunal de Contas que imputam débito ou multa?",
+        "resposta": "O ente público beneficiário, por sua procuradoria. As decisões têm eficácia de título executivo (art. 71, § 3º), mas nem o Tribunal nem o MP de Contas as executam; no caso de multa a agente municipal por dano ao Município, o legitimado é o Município (Tema 642 do STF)."
+      },
+      "conceitosChave": ["Controle externo: título executivo", "Controle externo: competências do TC"],
+      "fundamentacao": "CF/88, art. 71, § 3º; STF, ARE 823.347 (Tema 642 da repercussão geral); STF, RE 223.037."
+    },
+    {
+      "id": "leg-inst-033",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, na unidade de TI do Tribunal, um mesmo servidor desenvolve alterações no sistema de folha de pagamento, aprova as próprias mudanças e as implanta diretamente em produção, sem revisão de terceiros. Em uma avaliação de controles internos, essa situação revela principalmente fragilidade quanto",
+      "variantesEnunciado": [
+        "Em auditoria interna sobre o sistema de diárias, verifica-se que o mesmo analista cria perfis de acesso, concede as permissões e revisa os registros de auditoria das próprias concessões. Em uma avaliação de controles internos, essa situação revela principalmente fragilidade quanto",
+        "No sistema de controle de processos do Tribunal, o mesmo desenvolvedor escreve o código de uma nova funcionalidade, revisa o próprio código e publica a versão em produção sem aprovação de outra pessoa. Em uma avaliação de controles internos, essa situação revela principalmente fragilidade quanto"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "à segregação de funções, pois atividades incompatíveis concentradas em uma só pessoa aumentam o risco de erros e fraudes não detectados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A segregação de funções é atividade de controle clássica: separa etapas incompatíveis (executar, aprovar, registrar, revisar) entre pessoas diferentes, para que um erro ou fraude de uma seja detectado por outra. O COSO (2013) a inclui entre as atividades de controle, e a ISO/IEC 27002:2022 a prevê no controle 5.3.",
+          "versaoInvertidaFalsa": "À economicidade, pois concentrar etapas incompatíveis em uma só pessoa é recomendável como controle interno, já que reduz custos sem aumentar riscos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ao princípio da publicidade, pois toda alteração em sistemas internos deveria ser publicada no Diário Eletrônico antes de entrar em produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Publicidade diz respeito à transparência dos atos administrativos perante a sociedade, e não exige publicar em diário cada mudança técnica de sistema. O problema descrito é de concentração de funções."
+        },
+        {
+          "id": "opt-3",
+          "texto": "à reserva de competência do Plenário, a quem caberia aprovar previamente cada alteração nos sistemas administrativos do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Plenário é órgão deliberativo do controle externo e da administração superior; não aprova cada mudança técnica. A solução é distribuir as etapas entre pessoas diferentes, com aprovação e revisão independentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "à economicidade, pois a concentração de tarefas em um único servidor gera custo maior do que a divisão do trabalho entre equipes distintas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A concentração costuma até reduzir custos imediatos. O problema é de controle: a ausência de revisão independente impede a detecção de erros e fraudes, e não o custo da operação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "à disponibilidade, pois a implantação direta em produção é sempre vedada, independentemente da existência de revisão e aprovação por terceiros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida. O risco não está em implantar, mas em fazê-lo sem aprovação e revisão independentes. A disponibilidade pode ser afetada, mas a fragilidade central é a ausência de segregação."
+        }
+      ],
+      "pegadinhaFCC": "Desviar a atenção para princípios ou atributos vizinhos (publicidade, economicidade, disponibilidade). O sinal típico de falta de segregação é a mesma pessoa executar, aprovar e revisar.",
+      "resumoFlashcard": {
+        "pergunta": "O que é segregação de funções no controle interno?",
+        "resposta": "É separar entre pessoas diferentes etapas incompatíveis de um processo (executar, aprovar, registrar, revisar), para que erros ou fraudes de uma sejam detectados por outra. É atividade de controle prevista no COSO e no controle 5.3 da ISO/IEC 27002:2022."
+      },
+      "conceitosChave": ["Controle interno: segregação de funções"],
+      "fundamentacao": "COSO, Internal Control — Integrated Framework (2013), componente Atividades de Controle (princípio 10); ABNT NBR ISO/IEC 27002:2022, controle 5.3; CF/88, art. 74."
+    },
+    {
+      "id": "leg-inst-034",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Lei Orgânica do TCE-GO (Lei 16.168/2007)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A respeito da Lei Orgânica do Tribunal de Contas do Estado de Goiás (Lei estadual nº 16.168/2007), quanto à autonomia do Tribunal, ao Ministério Público junto a ele e às garantias dos Conselheiros, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em grupo de estudos para o concurso do TCE-GO, os participantes discutem a Lei estadual nº 16.168/2007 no que se refere à autonomia do Tribunal, ao Ministério Público de Contas e à perda do cargo de Conselheiro. Considere as afirmativas abaixo.",
+        "Sobre a organização institucional do TCE-GO na Lei estadual nº 16.168/2007, em especial a autonomia, o Ministério Público junto ao Tribunal e as garantias de seus membros, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O Tribunal tem autonomia funcional, administrativa e financeira.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a previsão do art. 7º da Lei 16.168/2007, em harmonia com o art. 73 c/c art. 96 da CF/88."
+        },
+        {
+          "texto": "O Ministério Público junto ao Tribunal é chefiado pelo Procurador-Geral de Justiça e integra a estrutura do Ministério Público estadual comum.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O Ministério Público de Contas é chefiado pelo Procurador-Geral de Contas e, segundo o STF, não integra o Ministério Público comum, compondo a estrutura do Tribunal de Contas."
+        },
+        {
+          "texto": "Os membros do Ministério Público junto ao Tribunal têm independência funcional e atuam na guarda da lei e na fiscalização de sua execução.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A Lei Orgânica assegura independência funcional ao Ministério Público de Contas e lhe atribui a guarda da lei e a fiscalização de sua execução."
+        },
+        {
+          "texto": "O Conselheiro pode perder o cargo por decisão administrativa do Plenário, tomada por maioria absoluta em processo disciplinar.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Conselheiro só perde o cargo por sentença judicial transitada em julgado, garantia equivalente à vitaliciedade da magistratura."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que coloca o Ministério Público de Contas sob a chefia do Procurador-Geral de Justiça. Ele é chefiado pelo Procurador-Geral de Contas e não integra o MP comum."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a confusão entre MP de Contas e MP comum e a perda do cargo de Conselheiro por decisão administrativa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa, porque a perda do cargo exige sentença judicial transitada em julgado, e a I, omitida, é verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 16.168/2007 assegura ao Tribunal autonomia funcional, administrativa e financeira (art. 7º) e ao Ministério Público de Contas independência funcional, com a guarda da lei e a fiscalização de sua execução. O MP de Contas é chefiado pelo Procurador-Geral de Contas, e o Conselheiro só perde o cargo por sentença judicial transitada em julgado.",
+          "versaoInvertidaFalsa": "O Conselheiro do TCE-GO pode perder o cargo por decisão administrativa do Plenário, independentemente de sentença judicial transitada em julgado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: a garantia do Conselheiro impede a perda do cargo por decisão administrativa, exigindo sentença judicial transitada em julgado."
+        }
+      ],
+      "pegadinhaFCC": "Confundir o MP de Contas com o MP estadual comum (chefia pelo Procurador-Geral de Justiça) e reduzir a garantia do Conselheiro, que só perde o cargo por sentença judicial transitada em julgado.",
+      "resumoFlashcard": {
+        "pergunta": "Quem chefia o Ministério Público junto ao TCE-GO e como o Conselheiro pode perder o cargo?",
+        "resposta": "O MP de Contas é chefiado pelo Procurador-Geral de Contas, tem independência funcional e não integra o MP comum. O Conselheiro só perde o cargo por sentença judicial transitada em julgado."
+      },
+      "conceitosChave": ["TCE-GO: Ministério Público de Contas", "TCE-GO: Lei Orgânica"],
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 7º e dispositivos sobre o Ministério Público de Contas e os Conselheiros (docs/pesquisa/_normativos-tce-go.md); CF/88, arts. 73, § 3º, 75 e 130; STF, ADI 789."
+    },
+    {
+      "id": "leg-inst-035",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regime Jurídico dos Servidores de Goiás (Lei 20.756/2020)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Considerando a alteração promovida pela Lei estadual nº 22.079/2023 no regime jurídico dos servidores públicos civis de Goiás (Lei estadual nº 20.756/2020), em relação ao servidor em estágio probatório, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um órgão estadual goiano recebe pedido de cessão de servidor que ainda cumpre estágio probatório. Considerando a Lei estadual nº 20.756/2020, com a alteração da Lei estadual nº 22.079/2023, é correto afirmar que",
+        "Sobre a movimentação do servidor em estágio probatório no regime jurídico dos servidores civis de Goiás (Lei estadual nº 20.756/2020), após a alteração feita pela Lei estadual nº 22.079/2023, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "sua cessão é livre, desde que o órgão cessionário assuma a avaliação especial de desempenho e o ônus da remuneração do servidor durante o período.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Após a Lei 22.079/2023, o estatuto passou a vedar expressamente a cessão do servidor em estágio probatório. Transferir a avaliação ao cessionário seria justamente o que a regra quis evitar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "sua cessão é permitida para o exercício de cargo em comissão, hipótese em que o estágio probatório se considera automaticamente concluído.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ainda que se discutam hipóteses de exercício de cargo em comissão, nenhuma regra conclui automaticamente o estágio: a estabilidade exige avaliação especial de desempenho por comissão (CF/88, art. 41, § 4º)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a lei passou a vedar expressamente a sua cessão, por meio de parágrafo único acrescido ao art. 40 do estatuto estadual.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A Lei 22.079/2023 acrescentou parágrafo único ao art. 40 da Lei 20.756/2020 para vedar a cessão de servidor em estágio probatório, conforme registrado em manifestação da Procuradoria-Geral do Estado. A regra protege a avaliação do estágio, que pressupõe acompanhamento do servidor no órgão de origem.",
+          "versaoInvertidaFalsa": "A Lei estadual nº 22.079/2023 passou a permitir expressamente a cessão de servidor em estágio probatório, desde que o cessionário assuma a avaliação de desempenho."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a cessão passou a ser obrigatória quando requisitada pelo Tribunal de Contas do Estado, para fins de apoio às atividades de controle externo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há cessão obrigatória por requisição do Tribunal de Contas no estatuto, e a alteração de 2023 foi no sentido oposto: proibir a cessão durante o estágio probatório."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a cessão apenas suspende o estágio probatório, que é retomado no retorno do servidor, sem outra restrição legal à cessão nesse período.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa nega a existência de restrição legal, quando a Lei 22.079/2023 criou justamente uma vedação expressa à cessão do servidor em estágio probatório."
+        }
+      ],
+      "pegadinhaFCC": "Supor que a cessão apenas suspende o estágio ou que basta o cessionário assumir a avaliação. Desde 2023, o estatuto goiano veda expressamente a cessão de servidor em estágio probatório.",
+      "resumoFlashcard": {
+        "pergunta": "O servidor goiano em estágio probatório pode ser cedido?",
+        "resposta": "Não. A Lei estadual nº 22.079/2023 acrescentou parágrafo único ao art. 40 da Lei 20.756/2020 vedando a cessão de servidor em estágio probatório, o que preserva a avaliação especial de desempenho no órgão de origem."
+      },
+      "conceitosChave": ["Estatuto GO: estágio probatório"],
+      "fundamentacao": "Lei estadual nº 20.756/2020, art. 40, parágrafo único, acrescido pela Lei estadual nº 22.079/2023 (conforme Despacho PGE-GO nº 830/2024); CF/88, art. 41, § 4º.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-036",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Código de Ética dos Servidores do TCE-GO",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere as seguintes condutas de servidores do TCE-GO, analisadas à luz dos deveres éticos funcionais e dos princípios constitucionais da Administração Pública. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em oficina de integridade do Tribunal de Contas do Estado de Goiás, o facilitador apresenta quatro situações hipotéticas e pede aos servidores que as avaliem segundo os deveres éticos funcionais e os princípios da Administração. Considere as afirmativas abaixo.",
+        "A comissão responsável por orientar servidores do TCE-GO sobre conduta ética prepara um teste com casos práticos, a serem avaliados conforme os deveres funcionais e os princípios constitucionais da Administração. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Servidor que utiliza o e-mail institucional e a infraestrutura do Tribunal para divulgar serviços de sua empresa particular age de forma compatível com a ética funcional, desde que o faça fora do expediente.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Recursos públicos não podem ser usados para fins particulares, em qualquer horário. A conduta fere a moralidade e a impessoalidade e pode configurar improbidade."
+        },
+        {
+          "texto": "Servidor designado para instruir processo de contas de órgão dirigido por seu cônjuge que comunica o impedimento à chefia e se abstém de atuar age de forma compatível com a ética funcional.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Atuar em processo de interesse do cônjuge compromete a imparcialidade; a regra geral de processo administrativo (Lei 9.784/1999, art. 18, como modelo) impõe comunicar o impedimento e abster-se."
+        },
+        {
+          "texto": "Servidor que presta, nas horas vagas, consultoria remunerada a jurisdicionado sobre como responder a auditoria do próprio Tribunal age de forma compatível com a ética funcional, por se tratar de atividade privada.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Assessorar jurisdicionado em processo do próprio órgão é conflito de interesses evidente, ainda que fora do expediente, e compromete a imparcialidade do controle."
+        },
+        {
+          "texto": "Servidor que, em rede social, antecipa o teor de voto ainda não proferido em processo do Tribunal viola os deveres de discrição e de sigilo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Informações conhecidas em razão do cargo e ainda não públicas não podem ser divulgadas; a antecipação prejudica o processo e a imagem institucional."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa: o uso de recursos institucionais para fins particulares é vedado em qualquer horário. E a IV, omitida, é verdadeira."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Comunicar o impedimento e abster-se (II) e não antecipar voto não proferido (IV) são condutas compatíveis com a imparcialidade, a discrição e o sigilo, núcleos dos códigos de ética do serviço público, como o do TCE-GO. Usar recursos do Tribunal para negócio próprio (I) e assessorar jurisdicionado contra o próprio órgão (III) configuram desvio ético e conflito de interesses.",
+          "versaoInvertidaFalsa": "Servidor pode prestar consultoria remunerada a jurisdicionado sobre auditoria do próprio Tribunal, desde que o faça fora do expediente, por se tratar de atividade privada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que admite o uso de recursos públicos para negócio particular fora do expediente. O horário não legitima o desvio de finalidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa, por caracterizar conflito de interesses, e a II, omitida, descreve a conduta ética esperada diante de impedimento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III. Atividade privada fora do expediente não autoriza o servidor a atuar a favor de jurisdicionado em processo do próprio Tribunal."
+        }
+      ],
+      "pegadinhaFCC": "O argumento “fora do expediente” aparece em duas afirmativas para legitimar condutas antiéticas. O horário não afasta o desvio de finalidade nem o conflito de interesses.",
+      "resumoFlashcard": {
+        "pergunta": "Que condutas éticas se esperam do servidor do TCE-GO diante de impedimento e de informações ainda não públicas?",
+        "resposta": "Diante de impedimento (por exemplo, cônjuge interessado), comunicar e abster-se. Quanto a informações conhecidas em razão do cargo, guardar discrição e sigilo, sem antecipar votos ou decisões. Recursos públicos e atividades privadas não podem se misturar."
+      },
+      "conceitosChave": ["Ética no serviço público: conflito de interesses", "Ética no serviço público: sigilo"],
+      "fundamentacao": "Código de Ética dos Servidores do TCE-GO (texto não conferido); CF/88, art. 37, caput; Lei 8.429/1992, arts. 9º e 11; Lei 9.784/1999, art. 18 (modelo de impedimento).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-037",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: segurança da informação, dados pessoais e IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que um servidor do TCE-GO perdeu, em transporte público, um notebook institucional sem criptografia que continha planilhas com dados pessoais de servidores. Com base na LGPD, na Resolução Normativa nº 5/2024 e na Política de Segurança da Informação do Tribunal (RA nº 17/2024), considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um pen drive do Tribunal, sem proteção por senha e com cadastro de servidores (nomes, CPF e dados bancários), foi esquecido em um evento externo. Com base na LGPD, na Resolução Normativa nº 5/2024 e na Política de Segurança da Informação do TCE-GO (RA nº 17/2024), considere as afirmativas abaixo.",
+        "Um técnico do TCE-GO teve furtada a mochila com o notebook funcional, não criptografado, em que havia relatórios com dados pessoais de jurisdicionados. Com base na LGPD, na Resolução Normativa nº 5/2024 e na Política de Segurança da Informação do Tribunal (RA nº 17/2024), considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Como o equipamento pertence ao Tribunal, e não ao servidor, o episódio deve ser tratado apenas como perda patrimonial, sem repercussão na proteção de dados.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Além da perda patrimonial, a exposição potencial de dados pessoais configura incidente de segurança, que afeta a confidencialidade e exige tratamento segundo a LGPD e a PSI."
+        },
+        {
+          "texto": "Por se tratar de órgão público, o Tribunal está dispensado de comunicar incidentes à Autoridade Nacional de Proteção de Dados e aos titulares.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O dever de comunicação do art. 48 da LGPD recai sobre o controlador, inclusive o poder público, que se submete às regras de tratamento da lei (arts. 23 e seguintes)."
+        },
+        {
+          "texto": "O controlador deve comunicar à autoridade nacional e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 48 da LGPD, aplicável ao TCE-GO como controlador."
+        },
+        {
+          "texto": "Segundo a PSI, a responsabilidade pela segurança da informação restringe-se à unidade de TI, de modo que o servidor que transportava o equipamento não tinha deveres específicos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A PSI do TCE-GO aplica-se a todas as unidades e usuários; quem guarda equipamento com informação institucional tem deveres de cuidado."
+        },
+        {
+          "texto": "A criptografia de disco é medida técnica apta a proteger dados pessoais de acessos não autorizados, em linha com o dever de segurança previsto na LGPD.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 46 da LGPD exige medidas de segurança, técnicas e administrativas, aptas a proteger os dados de acessos não autorizados; a criptografia é exemplo típico."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que reduz o episódio a perda patrimonial. A exposição potencial de dados pessoais configura incidente de segurança que afeta a confidencialidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne duas afirmativas falsas: a suposta dispensa de comunicação para órgãos públicos e a restrição da responsabilidade à área de TI."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ambas são falsas. Tratar o caso só como perda de bem e dispensar o poder público da comunicação contrariam a LGPD e a PSI do Tribunal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa IV. A PSI do TCE-GO vale para todas as unidades, e o usuário que transporta equipamento institucional tem deveres de cuidado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O controlador, inclusive órgão público, deve comunicar à ANPD e ao titular incidente que possa acarretar risco ou dano relevante (LGPD, art. 48), e a criptografia é medida técnica de segurança exigida pelo art. 46. As afirmativas I, II e IV são falsas porque reduzem o caso a perda patrimonial, dispensam indevidamente o poder público e restringem a PSI à área de TI.",
+          "versaoInvertidaFalsa": "Órgão público, como o TCE-GO, está dispensado de comunicar à ANPD e aos titulares incidente de segurança com dados pessoais, ainda que haja risco relevante aos titulares."
+        }
+      ],
+      "pegadinhaFCC": "Supor que órgão público está fora do dever de comunicar incidentes ou que segurança da informação é assunto só da TI. A LGPD alcança o poder público, e a PSI vale para todos.",
+      "resumoFlashcard": {
+        "pergunta": "O que o TCE-GO deve fazer diante de incidente com dados pessoais que possa gerar risco relevante aos titulares?",
+        "resposta": "Comunicar a ANPD e os titulares (LGPD, art. 48), tratando o caso como incidente de segurança segundo a PSI (RA 17/2024). Medidas como criptografia de disco concretizam o dever de segurança do art. 46 da LGPD."
+      },
+      "conceitosChave": ["TCE-GO: LGPD", "TCE-GO: PSI"],
+      "fundamentacao": "Lei 13.709/2018, arts. 23, 46 e 48; Resolução Normativa TCE-GO nº 5/2024; Resolução Administrativa TCE-GO nº 17/2024, art. 2º."
+    },
+    {
+      "id": "leg-inst-038",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que três servidores efetivos de um órgão estadual foram eleitos: Ana, para deputada estadual; Bruno, para prefeito; e Carla, para vereadora, havendo compatibilidade entre o horário das sessões da Câmara e o de seu cargo. Segundo o art. 38 da Constituição Federal, considerando-os na ordem apresentada, é correto afirmar que",
+      "variantesEnunciado": [
+        "Nas últimas eleições, três servidores efetivos do Estado foram eleitos: Daniela, deputada federal; Eduardo, prefeito de seu município; e Fabiana, vereadora, cujas sessões ocorrem à noite, sem conflito com o expediente. Segundo o art. 38 da Constituição Federal, considerando-os na ordem apresentada, é correto afirmar que",
+        "Uma unidade de gestão de pessoas precisa enquadrar três servidores efetivos eleitos — uma senadora, um prefeito e uma vereadora com horários compatíveis entre a Câmara e o cargo. Segundo o art. 38 da Constituição Federal, considerando-os na ordem apresentada, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a primeira e o segundo poderão optar entre a remuneração do cargo efetivo e a do mandato, e a terceira deverá afastar-se do cargo, sendo-lhe facultado optar pela remuneração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O mandato federal, estadual ou distrital implica afastamento sem opção de remuneração (art. 38, I). E a vereadora com horários compatíveis não se afasta: acumula cargo e mandato (inciso III)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "os três serão afastados de seus cargos, mas apenas a terceira poderá optar pela remuneração, por se tratar de mandato municipal de menor complexidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A opção de remuneração é do Prefeito (inciso II) e do Vereador sem compatibilidade de horários. Havendo compatibilidade, o Vereador acumula as remunerações sem se afastar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a primeira será afastada do cargo; o segundo será afastado, podendo optar pela remuneração do cargo efetivo; e a terceira perceberá as vantagens do cargo sem prejuízo da remuneração do cargo eletivo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 38 determina: mandato federal, estadual ou distrital, afastamento (I); Prefeito, afastamento com faculdade de optar pela remuneração (II); Vereador, havendo compatibilidade de horários, percebe as vantagens do cargo sem prejuízo da remuneração do mandato e, não havendo, aplica-se a regra do Prefeito (III). O tempo de afastamento conta para todos os efeitos, exceto promoção por merecimento (IV).",
+          "versaoInvertidaFalsa": "A primeira poderá optar pela remuneração do cargo efetivo; o segundo acumulará cargo e mandato se houver compatibilidade de horários; e a terceira será afastada do cargo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a primeira será afastada, com direito de optar pela remuneração; o segundo acumulará cargo e mandato se houver compatibilidade de horários; e a terceira será afastada do cargo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca as regras entre os mandatos: a opção de remuneração é do Prefeito, não do parlamentar estadual, e a acumulação por compatibilidade de horários é do Vereador, não do Prefeito."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os três terão o tempo de afastamento contado para todos os efeitos legais, inclusive para promoção por merecimento, e manterão as vantagens do cargo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 38, IV, conta o tempo de serviço para todos os efeitos legais, exceto para promoção por merecimento. Além disso, a terceira, com horários compatíveis, nem chega a se afastar."
+        }
+      ],
+      "pegadinhaFCC": "Embaralhar as três regras do art. 38: afastamento simples (parlamentar estadual/federal), afastamento com opção de remuneração (Prefeito) e acumulação condicionada à compatibilidade de horários (Vereador).",
+      "resumoFlashcard": {
+        "pergunta": "Como fica o servidor efetivo eleito, segundo o art. 38 da CF/88?",
+        "resposta": "Mandato federal, estadual ou distrital: afastamento. Prefeito: afastamento com opção pela remuneração. Vereador: acumula se houver compatibilidade de horários; senão, segue a regra do Prefeito. O tempo conta para tudo, exceto promoção por merecimento."
+      },
+      "conceitosChave": ["CF/88: servidor e mandato eletivo"],
+      "fundamentacao": "CF/88, art. 38, I a IV."
+    },
+    {
+      "id": "leg-inst-039",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o parágrafo único do art. 70 da Constituição Federal, que se aplica aos Estados por simetria, está obrigado a prestar contas",
+      "variantesEnunciado": [
+        "Quanto ao dever de prestar contas definido no parágrafo único do art. 70 da Constituição Federal, aplicável aos Estados por simetria, é correto afirmar que ele alcança",
+        "Ao delimitar quem se sujeita ao dever de prestar contas perante o controle externo, nos termos do parágrafo único do art. 70 da Constituição Federal, aplicável aos Estados, deve-se incluir"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apenas o agente público ocupante de cargo, emprego ou função na administração direta e indireta que ordene despesas ou arrecade receitas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O critério constitucional é objetivo: lidar com recursos públicos. Por isso alcança também particulares, e não só agentes públicos ordenadores de despesa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a pessoa jurídica de direito público, não se estendendo o dever às entidades privadas que recebam recursos por convênio, que prestam contas apenas ao concedente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Entidades privadas que recebem recursos públicos por convênio ou instrumento congênere utilizam e gerenciam dinheiro público e, por isso, prestam contas, inclusive sujeitando-se ao controle externo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a pessoa física ou jurídica privada somente quando houver indício de dano ao erário apurado em tomada de contas especial instaurada pelo controle interno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O dever de prestar contas é ordinário e decorre da gestão de recursos públicos, independentemente de dano. A tomada de contas especial é instrumento excepcional de apuração."
+        },
+        {
+          "id": "opt-4",
+          "texto": "qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos ou pelos quais o ente responda.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O parágrafo único do art. 70 (redação da EC 19/1998) estende o dever de prestar contas a qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos ou pelos quais a União responda, ou que, em nome desta, assuma obrigações de natureza pecuniária. O critério é a natureza pública dos recursos.",
+          "versaoInvertidaFalsa": "Somente as pessoas jurídicas de direito público estão obrigadas a prestar contas, ainda que pessoas privadas utilizem ou administrem dinheiros, bens e valores públicos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "toda pessoa jurídica de direito privado que contrate com a Administração Pública, ainda que não utilize, gerencie nem administre recursos ou bens públicos de qualquer natureza.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Contratar com a Administração não basta: o dever surge para quem utiliza, arrecada, guarda, gerencia ou administra recursos públicos. O contratado pode responder perante o Tribunal por dano que causar, mas isso é outra questão."
+        }
+      ],
+      "pegadinhaFCC": "Restringir o dever de prestar contas a agentes ou pessoas de direito público. O critério do art. 70, parágrafo único, é objetivo: quem lida com recursos públicos, seja pessoa pública ou privada.",
+      "resumoFlashcard": {
+        "pergunta": "Quem deve prestar contas segundo o art. 70, parágrafo único, da CF/88?",
+        "resposta": "Qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos ou pelos quais o ente responda, ou que assuma obrigações pecuniárias em seu nome."
+      },
+      "conceitosChave": ["CF/88: dever de prestar contas", "CF/88: art. 70 (fiscalização)"],
+      "fundamentacao": "CF/88, art. 70, parágrafo único (redação da EC 19/1998), c/c art. 75."
+    },
+    {
+      "id": "leg-inst-040",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: estrutura, pessoas, comunicação e planejamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Políticas de gestão de pessoas no setor público, como a Política de Gestão de Pessoas do TCE-GO (Resolução Administrativa nº 5/2024), costumam adotar o modelo de gestão por ……, que orienta capacitação, avaliação e movimentação dos servidores com base nos conhecimentos, habilidades e atitudes necessários ao alcance dos objetivos ……. Em sintonia com essa lógica, a Constituição Federal determina que a União, os Estados e o Distrito Federal mantenham escolas de governo, constituindo a participação nos cursos um dos requisitos para a ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em seminário sobre a Política de Gestão de Pessoas do TCE-GO (Resolução Administrativa nº 5/2024), explica-se que o modelo de gestão por …… relaciona conhecimentos, habilidades e atitudes dos servidores aos objetivos ……, orientando capacitação e avaliação. Lembra-se ainda que, pela Constituição Federal, a União, os Estados e o Distrito Federal manterão escolas de governo, e a participação nos cursos é um dos requisitos para a ……. Preenchem, correta e respectivamente, as lacunas:",
+        "A modernização da gestão de pessoas em tribunais de contas, a exemplo da Política instituída pelo TCE-GO na Resolução Administrativa nº 5/2024, apoia-se na gestão por ……, alinhando o desenvolvimento dos servidores aos objetivos ……. A Constituição Federal reforça essa diretriz ao prever escolas de governo mantidas pela União, pelos Estados e pelo Distrito Federal, sendo a participação nos cursos um dos requisitos para a ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "competências − institucionais − promoção na carreira",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A gestão por competências alinha conhecimentos, habilidades e atitudes dos servidores aos objetivos institucionais e orienta capacitação, avaliação e movimentação. O art. 39, § 2º, da CF/88 determina que a União, os Estados e o DF mantenham escolas de governo, sendo a participação nos cursos um dos requisitos para a promoção na carreira.",
+          "versaoInvertidaFalsa": "competências − individuais − aquisição da estabilidade, pois a Constituição condiciona a estabilidade à participação em cursos de escolas de governo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "resultados − individuais − estabilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A estabilidade depende de três anos de efetivo exercício e de avaliação especial de desempenho (art. 41), e não da participação em cursos. E o modelo descrito, centrado em conhecimentos, habilidades e atitudes, é o de competências."
+        },
+        {
+          "id": "opt-3",
+          "texto": "competências − individuais − aposentadoria",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os cursos de escolas de governo são requisito para promoção, não para aposentadoria. E a gestão por competências mira objetivos institucionais, não metas individuais desconectadas da organização."
+        },
+        {
+          "id": "opt-4",
+          "texto": "processos − institucionais − estabilidade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Gestão por processos é abordagem de organização do trabalho, não de desenvolvimento de pessoas. E a participação em cursos não é requisito constitucional para a estabilidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "competências − institucionais − investidura no cargo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: os dois primeiros termos estão certos, mas a investidura depende de concurso público (art. 37, II). O art. 39, § 2º, vincula os cursos à promoção na carreira."
+        }
+      ],
+      "pegadinhaFCC": "Trocar “promoção na carreira” por estabilidade ou investidura. O art. 39, § 2º, liga as escolas de governo à promoção; a estabilidade depende de avaliação especial de desempenho (art. 41).",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a relação entre escolas de governo e carreira na CF/88?",
+        "resposta": "A União, os Estados e o DF mantêm escolas de governo para formação e aperfeiçoamento dos servidores, e a participação nos cursos é um dos requisitos para a promoção na carreira (art. 39, § 2º). Políticas de gestão por competências organizam essa capacitação."
+      },
+      "conceitosChave": ["Gestão de pessoas por competências", "CF/88: escolas de governo"],
+      "fundamentacao": "CF/88, art. 39, § 2º; art. 41; Resolução Administrativa TCE-GO nº 5/2024 (texto não conferido; questão construída sobre o princípio de gestão por competências).",
+      "revisarFonteOficial": true
+    }
+  ]
+}

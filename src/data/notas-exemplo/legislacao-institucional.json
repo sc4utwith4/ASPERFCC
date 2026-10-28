@@ -1,0 +1,49 @@
+{
+  "id": "nota-leg-inst-01",
+  "materiaSlug": "legislacao-institucional",
+  "titulo": "Controle externo na CF/88 (arts. 70 a 75) e o TCE-GO",
+  "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+  "pistas": [
+    {
+      "pergunta": "Quem é o titular do controle externo e qual é o papel do Tribunal de Contas?",
+      "resposta": "O titular é o Poder Legislativo (Congresso Nacional; nos Estados, a Assembleia Legislativa). O Tribunal de Contas auxilia, mas exerce competências próprias fixadas no art. 71 e não é subordinado ao Parlamento (STF, ADI 4.190)."
+    },
+    {
+      "pergunta": "Quais são as cinco modalidades e os parâmetros da fiscalização do art. 70?",
+      "resposta": "Modalidades: contábil, financeira, orçamentária, operacional e patrimonial. Parâmetros: legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas."
+    },
+    {
+      "pergunta": "Qual é a diferença entre os incisos I e II do art. 71?",
+      "resposta": "No I, o Tribunal aprecia as contas anuais do Chefe do Executivo e emite parecer prévio em 60 dias; quem julga é o Legislativo. No II, o próprio Tribunal julga as contas dos administradores e demais responsáveis."
+    },
+    {
+      "pergunta": "Como se sustam atos e contratos ilegais?",
+      "resposta": "Ato: o Tribunal assina prazo e, não atendido, susta e comunica ao Legislativo (art. 71, IX e X). Contrato: a sustação é do Legislativo (§ 1º); se em 90 dias nada for feito, o Tribunal decide (§ 2º)."
+    },
+    {
+      "pergunta": "Que eficácia têm as decisões que imputam débito ou multa e quem as executa?",
+      "resposta": "Eficácia de título executivo (art. 71, § 3º). A execução cabe ao ente credor, não ao Tribunal nem ao MP de Contas; multa de TCE a agente municipal por dano ao Município é executada pelo Município (Tema 642 do STF)."
+    },
+    {
+      "pergunta": "Quais são as finalidades do controle interno no art. 74?",
+      "resposta": "Avaliar metas do PPA e a execução de programas e orçamentos; comprovar a legalidade e avaliar resultados da gestão; controlar operações de crédito, avais, garantias, direitos e haveres; apoiar o controle externo."
+    },
+    {
+      "pergunta": "O que acontece se o responsável pelo controle interno omitir irregularidade ao Tribunal?",
+      "resposta": "Responde solidariamente (art. 74, § 1º). E qualquer cidadão, partido político, associação ou sindicato pode denunciar irregularidades ao Tribunal (§ 2º)."
+    },
+    {
+      "pergunta": "Como a simetria do art. 75 se aplica ao TCE-GO?",
+      "resposta": "As regras da seção valem, no que couber, para os TCEs; o TCE-GO tem sete Conselheiros: quatro escolhidos pela Assembleia e três pelo Governador (um dentre Auditores, um dentre membros do MP de Contas e um de livre escolha — Súmula 653 do STF)."
+    }
+  ],
+  "conteudoMarkdown": "## 1. Quem controla quem\n\nA Constituição organiza a fiscalização da gestão pública em **dois sistemas complementares**. O art. 70 diz que a fiscalização contábil, financeira, orçamentária, operacional e patrimonial é exercida pelo **Congresso Nacional, mediante controle externo**, e pelo **sistema de controle interno de cada Poder**. Nos Estados, por simetria (art. 75), o titular do controle externo é a **Assembleia Legislativa**, que o exerce com o auxílio do **Tribunal de Contas do Estado**.\n\n> ==Titular do controle externo é o Legislativo; o Tribunal de Contas auxilia, mas não é subordinado.==\n\nO STF já afirmou que as Cortes de Contas não são órgãos delegatários nem de mero assessoramento do Parlamento (ADI 4.190). Elas exercem **competências próprias**, fixadas diretamente no art. 71, e têm autonomia. No TCE-GO, a Lei Orgânica (Lei 16.168/2007, art. 7º) assegura autonomia funcional, administrativa e financeira.\n\n## 2. O que se fiscaliza (art. 70)\n\n- **Modalidades:** contábil, financeira, orçamentária, operacional e patrimonial.\n- **Parâmetros:** legalidade, **legitimidade**, **economicidade**, aplicação das subvenções e **renúncia de receitas**.\n- **Quem presta contas (parágrafo único):** qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos. O critério é a natureza pública do recurso, não a natureza da pessoa.\n\nA FCC costuma trocar legitimidade por eficiência ou moralidade (princípios do art. 37) e renúncia por arrecadação.\n\n## 3. As competências do art. 71\n\nAs mais cobradas, com a armadilha de cada uma:\n\n- **I — apreciar** as contas anuais do Chefe do Executivo, mediante **parecer prévio em 60 dias** do recebimento. Quem **julga** é o Legislativo (art. 49, IX). No TCE-GO, a Lei Orgânica repete os 60 dias (art. 1º, I) e as contas do Governador incluem os balanços gerais e o relatório do órgão central do controle interno.\n- **II — julgar** as contas dos administradores e demais responsáveis, e de quem der causa a perda, extravio ou irregularidade com prejuízo ao erário. Aqui não há parecer prévio: o próprio Tribunal julga.\n- **III — registro** de admissões a qualquer título (**exceto cargo em comissão**) e de aposentadorias, reformas e pensões. A apreciação inicial dispensa contraditório prévio (**Súmula Vinculante 3**) e deve ocorrer em **cinco anos** da chegada do processo (Tema 445 do STF).\n- **IV — inspeções e auditorias** por iniciativa própria ou do Legislativo, nas cinco modalidades, nos **três Poderes**.\n- **VIII — sanções** previstas em lei, inclusive multa proporcional ao dano.\n- **IX e X — assinar prazo** e, se não atendido, **sustar o ato**, comunicando ao Legislativo.\n- **§ 1º e § 2º — contrato:** a sustação é do Legislativo; se em **90 dias** nada for feito, o Tribunal decide.\n- **§ 3º — título executivo:** decisões que imputam débito ou multa. Quem executa é o **ente credor**, e não o Tribunal nem o MP de Contas.\n- **§ 4º — relatório** trimestral e anual ao Legislativo.\n\n> Dica de prova: ==60 dias== (parecer prévio), ==90 dias== (omissão na sustação de contrato), ==5 e 30 dias== (art. 72: esclarecimentos da autoridade e pronunciamento conclusivo do Tribunal).\n\n## 4. O art. 72 em uma linha\n\nDiante de indícios de despesa não autorizada, a comissão mista pede esclarecimentos à autoridade em **5 dias**; se insuficientes, pede ao Tribunal **pronunciamento conclusivo em 30 dias**; se a despesa for irregular e puder causar dano irreparável ou grave lesão à economia pública, a comissão **propõe ao Congresso** a sustação.\n\n## 5. Controle interno (art. 74)\n\nCada Poder mantém, **de forma integrada**, sistema de controle interno com quatro finalidades:\n\n- avaliar metas do PPA e a execução de programas e orçamentos;\n- comprovar a legalidade e avaliar os resultados (eficácia e eficiência) da gestão orçamentária, financeira e patrimonial, inclusive da aplicação de recursos por entidades privadas;\n- controlar operações de crédito, avais, garantias, direitos e haveres;\n- **apoiar o controle externo**.\n\nDois parágrafos completam o quadro. Pelo **§ 1º**, o responsável pelo controle interno que souber de irregularidade e não der ciência ao Tribunal responde **solidariamente**. Pelo **§ 2º**, qualquer **cidadão, partido político, associação ou sindicato** pode denunciar irregularidades ao Tribunal. Controle interno **não julga contas**: avalia, comprova, controla e apoia.\n\nNa prática de TI, um bom exemplo de atividade de controle interno é a **segregação de funções**: quem desenvolve uma mudança não deve, sozinho, aprová-la e implantá-la em produção.\n\n## 6. Simetria e TCE-GO (art. 75)\n\nAs normas da seção aplicam-se, **no que couber**, à organização, composição e fiscalização dos Tribunais de Contas dos Estados. O parágrafo único fixa **sete Conselheiros** para os TCEs (o TCU tem nove Ministros). A **Súmula 653 do STF** define a divisão: **quatro** pela Assembleia Legislativa e **três** pelo Governador, sendo um dentre Auditores, um dentre membros do Ministério Público de Contas e um de livre escolha.\n\nNo TCE-GO:\n\n- a Constituição estadual trata das competências do Tribunal nos arts. 25 e 26, reproduzindo o modelo do art. 71;\n- a Lei Orgânica (Lei 16.168/2007) relaciona como órgãos o Plenário, as Câmaras, a Presidência, os Conselheiros, os Auditores e o Ministério Público junto ao Tribunal;\n- o Regimento Interno (Res. 22/2008) prevê sete Auditores, nomeados pelo Governador entre aprovados em concurso, que substituem os Conselheiros em **rodízio**, vedada a vinculação permanente;\n- o Conselheiro só perde o cargo por sentença judicial transitada em julgado.\n\n> ==Regra de ouro:== na dúvida sobre o TCE-GO, aplique o modelo federal do art. 71 com as adaptações do art. 75: Assembleia no lugar do Congresso, Governador no lugar do Presidente, sete Conselheiros no lugar de nove Ministros.",
+  "sintese": "O controle externo pertence ao Legislativo e é exercido com o auxílio do Tribunal de Contas, que tem competências próprias e não é subordinado. O Tribunal aprecia as contas do Chefe do Executivo por parecer prévio (60 dias) e julga as contas dos administradores; susta atos, mas não contratos, salvo omissão de 90 dias. O controle interno de cada Poder avalia, comprova e apoia o externo, sob pena de responsabilidade solidária. Pela simetria do art. 75, o TCE-GO reproduz esse modelo com sete Conselheiros (quatro da Assembleia, três do Governador).",
+  "fontes": [
+    "Constituição Federal de 1988, arts. 31, 49, IX, e 70 a 75",
+    "STF: ADI 4.190 MC-REF; Súmula 653; Súmula Vinculante 3; Tema 445 (RE 636.553); Tema 642 (ARE 823.347)",
+    "Lei estadual nº 16.168/2007 (Lei Orgânica do TCE-GO), arts. 1º, I, 7º e 8º",
+    "Resolução TCE-GO nº 22/2008 (Regimento Interno), disposições sobre os Auditores",
+    "docs/pesquisa/_normativos-tce-go.md e docs/pesquisa/legislacao-institucional.md"
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "materiaSlug": "legislacao-institucional",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "leg-inst-011",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um concurso estadual teve o resultado homologado em março de 2025, com prazo de validade de dois anos fixado no edital. Em fevereiro de 2027, ainda há aprovados não nomeados, e a Administração pretende abrir novo concurso para o mesmo cargo. Segundo o art. 37 da Constituição Federal, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um órgão estadual homologou concurso para analista com validade de dois anos. Faltando um mês para o fim desse prazo, restam candidatos aprovados aguardando nomeação, e a área de pessoal estuda lançar novo edital para o mesmo cargo. Segundo o art. 37 da Constituição Federal, é correto afirmar que",
+        "A gestão de pessoas de uma autarquia goiana consulta a assessoria jurídica: o concurso vigente, com validade de dois anos, está perto do fim, há aprovados ainda não convocados e cogita-se novo certame para o mesmo cargo. Segundo o art. 37 da Constituição Federal, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a validade pode ser prorrogada sucessivas vezes enquanto houver aprovados aguardando nomeação, desde que cada prorrogação não ultrapasse dois anos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 37, III, admite uma única prorrogação, por igual período. Prorrogações sucessivas contrariam a literalidade do dispositivo, e o ato seria nulo (art. 37, § 2º)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a abertura de novo concurso é vedada enquanto houver aprovados no certame anterior, ainda que já expirado o prazo de validade deste.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição não proíbe novo concurso; ela garante prioridade aos aprovados no certame anterior durante o prazo improrrogável do edital (art. 37, IV). Expirada a validade, não há prioridade a resguardar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a prorrogação depende de lei específica, pois o prazo de validade do concurso, uma vez fixado no edital e homologado o resultado, não pode ser alterado por simples ato administrativo do órgão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A prorrogação é ato administrativo discricionário, praticado dentro do prazo de validade inicial. A Constituição exige lei específica para outras matérias (por exemplo, remuneração, art. 37, X), não para prorrogar concurso."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a validade pode ser prorrogada uma vez, por igual período, e, durante o prazo improrrogável do edital, os aprovados no concurso anterior têm prioridade sobre os novos concursados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 37, III, fixa validade de até dois anos, prorrogável uma vez por igual período, e o inciso IV assegura que, durante o prazo improrrogável do edital, o aprovado seja convocado com prioridade sobre novos concursados. Como o prazo inicial ainda não expirou em fevereiro de 2027, a prorrogação é possível.",
+          "versaoInvertidaFalsa": "A validade do concurso pode ser prorrogada mais de uma vez, e os aprovados em novo concurso podem ser convocados antes dos remanescentes do certame anterior ainda válido."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os novos aprovados podem ser nomeados antes dos anteriores, desde que tenham obtido nota superior, em atenção ao princípio da eficiência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A prioridade do art. 37, IV, não depende de comparação de notas entre certames diferentes. Invocar a eficiência para afastar regra expressa é a armadilha: princípio não derroga norma constitucional específica."
+        }
+      ],
+      "pegadinhaFCC": "Trocar “uma vez, por igual período” por prorrogações sucessivas e confundir prioridade de convocação com proibição de novo concurso.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as regras constitucionais de validade e prorrogação do concurso público?",
+        "resposta": "Validade de até dois anos, prorrogável uma única vez por igual período (art. 37, III). Durante o prazo improrrogável do edital, o aprovado tem prioridade sobre novos concursados (art. 37, IV)."
+      },
+      "conceitosChave": ["CF/88: concurso público"],
+      "fundamentacao": "CF/88, art. 37, II, III e IV e § 2º."
+    },
+    {
+      "id": "leg-inst-012",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Nos termos do art. 71 da Constituição Federal, compete ao Tribunal de Contas da União, entre outras atribuições,",
+      "variantesEnunciado": [
+        "Segundo o art. 71 da Constituição Federal, que serve de modelo aos Tribunais de Contas dos Estados, inclui-se entre as competências do Tribunal de Contas da União",
+        "Ao estudar as atribuições do Tribunal de Contas da União descritas no art. 71 da Constituição Federal, um candidato identifica corretamente a de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apreciar as contas prestadas anualmente pelo Presidente da República, mediante parecer prévio a ser elaborado em sessenta dias a contar de seu recebimento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a literalidade do art. 71, I. O Tribunal aprecia as contas do Chefe do Executivo e emite parecer prévio em sessenta dias; o julgamento é do Congresso Nacional (art. 49, IX). Nos Estados, o modelo se repete: o TCE emite o parecer, e a Assembleia julga.",
+          "versaoInvertidaFalsa": "Julgar as contas prestadas anualmente pelo Presidente da República, em sessenta dias a contar de seu recebimento, cabendo ao Congresso apenas homologar o julgamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "julgar as contas prestadas anualmente pelo Presidente da República, em sessenta dias contados do recebimento, com efeito vinculante para o Congresso Nacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca “apreciar mediante parecer prévio” por “julgar”. Quem julga as contas do Presidente é o Congresso Nacional (art. 49, IX), e o parecer prévio não o vincula."
+        },
+        {
+          "id": "opt-3",
+          "texto": "apreciar, mediante parecer prévio, as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos da administração indireta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As contas dos administradores e demais responsáveis são julgadas pelo próprio Tribunal (art. 71, II), sem parecer prévio. A alternativa aplica a eles o regime das contas do Chefe do Executivo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "apreciar, para fins de registro, a legalidade das nomeações para cargo de provimento em comissão na administração direta e indireta.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 71, III, submete a registro as admissões de pessoal a qualquer título, mas exclui expressamente as nomeações para cargo de provimento em comissão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "sustar diretamente a execução de contratos considerados ilegais, comunicando em seguida a decisão ao Presidente da República.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No caso de contrato, a sustação é adotada diretamente pelo Congresso Nacional (art. 71, § 1º). O Tribunal só decide se o Congresso ou o Executivo não agirem em noventa dias (§ 2º)."
+        }
+      ],
+      "pegadinhaFCC": "A troca entre “apreciar mediante parecer prévio” (contas do Chefe do Executivo) e “julgar” (contas dos administradores) é a pegadinha mais frequente sobre o art. 71.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre os incisos I e II do art. 71 da CF/88?",
+        "resposta": "No inciso I, o Tribunal aprecia as contas anuais do Chefe do Executivo e emite parecer prévio em 60 dias; o julgamento é do Legislativo. No inciso II, o próprio Tribunal julga as contas dos administradores e demais responsáveis."
+      },
+      "conceitosChave": ["Controle externo: parecer prévio", "Controle externo: competências do TC"],
+      "fundamentacao": "CF/88, art. 71, I, II e III e §§ 1º e 2º; art. 49, IX."
+    },
+    {
+      "id": "leg-inst-013",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o chefe da unidade de controle interno de uma secretaria estadual identifica, em verificação de rotina, pagamentos em duplicidade a uma empresa de manutenção de sistemas, mas decide tratar o caso apenas internamente, sem comunicá-lo ao Tribunal de Contas, para “não expor a gestão”. Considerando o art. 74 da Constituição Federal, aplicável por simetria, a decisão",
+      "variantesEnunciado": [
+        "Ao revisar contratos de TIC de uma fundação estadual, a auditora responsável pelo controle interno descobre pagamento por serviços não prestados e opta por apenas recomendar ajustes ao gestor, sem informar o Tribunal de Contas. Considerando o art. 74 da Constituição Federal, aplicável por simetria, essa opção",
+        "O coordenador de controle interno de uma autarquia goiana constata ilegalidade em um aditivo contratual de licenciamento de software e resolve aguardar a próxima gestão para tratar do assunto, sem dar ciência ao Tribunal de Contas. Considerando o art. 74 da Constituição Federal, aplicável por simetria, a conduta"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é regular, pois o controle interno pode sanear irregularidades internamente, e a comunicação ao Tribunal só é obrigatória quando o dano superar o valor de alçada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O dever de ciência do art. 74, § 1º, não tem piso de valor. O valor de alçada é critério processual para instauração ou encaminhamento de tomada de contas especial, não condição para o dever de comunicar."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é irregular, pois os responsáveis pelo controle interno, ao tomarem conhecimento de irregularidade ou ilegalidade, devem dar ciência ao Tribunal de Contas, sob pena de responsabilidade solidária.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 74, § 1º, da CF/88 impõe aos responsáveis pelo controle interno o dever de dar ciência ao Tribunal de Contas de qualquer irregularidade ou ilegalidade de que tomem conhecimento, sob pena de responsabilidade solidária. O dispositivo concretiza a finalidade de apoio ao controle externo (art. 74, IV).",
+          "versaoInvertidaFalsa": "É regular, pois os responsáveis pelo controle interno podem optar por sanear internamente as irregularidades, sendo facultativa a ciência ao Tribunal de Contas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é irregular, pois cabia ao chefe do controle interno sustar os pagamentos e julgar as contas da empresa contratada, comunicando a decisão à Assembleia Legislativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Sustar atos e julgar contas são competências do controle externo (art. 71, II e X), não do controle interno. A alternativa acerta a irregularidade, mas com fundamento errado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é regular, desde que o fato conste do relatório anual de gestão, já que a ciência ao Tribunal de Contas só é exigida por ocasião da prestação de contas do exercício.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O § 1º do art. 74 vincula o dever ao momento em que o responsável toma conhecimento da irregularidade, e não ao calendário da prestação de contas anual."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é irregular, mas a omissão gera apenas responsabilidade subsidiária do chefe do controle interno, condicionada à prévia cobrança dos gestores que deram causa ao dano e ao esgotamento de seus bens.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição fala em responsabilidade solidária, que permite cobrar o débito de qualquer dos responsáveis, e não subsidiária. A troca de um termo-chave é a pegadinha."
+        }
+      ],
+      "pegadinhaFCC": "Trocar responsabilidade solidária por subsidiária, criar piso de valor ou prazo anual para o dever de ciência e atribuir ao controle interno competências de julgamento.",
+      "resumoFlashcard": {
+        "pergunta": "O que ocorre se o responsável pelo controle interno não comunicar ao Tribunal de Contas irregularidade de que tomou conhecimento?",
+        "resposta": "Ele responde solidariamente (CF/88, art. 74, § 1º). O dever de ciência é imediato, não depende de valor mínimo e concretiza o apoio do controle interno ao controle externo."
+      },
+      "conceitosChave": ["Controle interno: responsabilidade solidária", "Controle interno: finalidades"],
+      "fundamentacao": "CF/88, art. 74, IV e § 1º; art. 71, II e X; art. 75."
+    },
+    {
+      "id": "leg-inst-014",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Lei Orgânica do TCE-GO (Lei 16.168/2007)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que, ao julgar a prestação de contas anual de um órgão estadual, o TCE-GO constata falhas formais na instrução de processos de pagamento, como documentos sem data e atestos incompletos, sem que tenha havido dano ao erário. Segundo a Lei Orgânica do TCE-GO (Lei estadual nº 16.168/2007), essas contas devem ser julgadas",
+      "variantesEnunciado": [
+        "No exame das contas anuais de uma autarquia goiana, a unidade técnica do TCE-GO aponta impropriedades de natureza formal nos registros de bens patrimoniais, sem prejuízo financeiro ao Estado. Segundo a Lei Orgânica do TCE-GO (Lei estadual nº 16.168/2007), as contas devem ser julgadas",
+        "A instrução de um processo de contas no TCE-GO conclui que houve falhas formais na publicação de extratos de contratos, sem desvio nem dano ao erário. Segundo a Lei Orgânica do TCE-GO (Lei estadual nº 16.168/2007), o julgamento adequado das contas é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "regulares, com quitação plena, pois a lei só admite ressalva quando houver dano ao erário de pequeno valor, inferior ao valor de alçada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lógica é inversa: a ressalva serve justamente para falhas formais sem dano. Havendo dano, o caminho é o julgamento pela irregularidade, com imputação de débito. A quitação plena pressupõe contas sem falhas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "irregulares, com imputação de débito ao responsável, pois qualquer impropriedade formal faz presumir prejuízo ao erário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há presunção de dano a partir de falha formal. O débito exige prejuízo efetivo e quantificado; sem ele, não há o que imputar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "regulares com ressalva, com quitação ao responsável, devendo o acórdão indicar os motivos que justificam a ressalva.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o art. 73 da Lei 16.168/2007, como aplicado nos acórdãos do TCE-GO, as contas são regulares com ressalva quando evidenciam impropriedade ou outra falta de natureza formal de que não resulte dano ao erário. O Tribunal dá quitação ao responsável, e o acórdão indica os motivos da ressalva (§ 1º), para orientar a correção das falhas.",
+          "versaoInvertidaFalsa": "Falhas formais sem dano ao erário levam ao julgamento das contas como irregulares, sem quitação, ainda que não haja débito a imputar ao responsável."
+        },
+        {
+          "id": "opt-4",
+          "texto": "iliquidáveis, com arquivamento do processo, já que falhas formais impedem o exame de mérito das contas pelo Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Contas iliquidáveis são aquelas cujo julgamento de mérito se torna materialmente impossível, por caso fortuito ou força maior (modelo da Lei 8.443/1992, art. 20). Falhas formais não impedem o julgamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "regulares com ressalva, sem quitação, ficando o responsável impedido de exercer cargo em comissão até sanar as falhas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade: a classificação está certa, mas a ressalva vem com quitação ao responsável. O impedimento para cargo em comissão é sanção inventada pela alternativa."
+        }
+      ],
+      "pegadinhaFCC": "A alternativa que acerta “regulares com ressalva” mas nega a quitação. A ressalva convive com a quitação: a falha é formal e não houve dano.",
+      "resumoFlashcard": {
+        "pergunta": "Quando as contas são julgadas regulares com ressalva no TCE-GO e qual o efeito?",
+        "resposta": "Quando há impropriedade ou falta de natureza formal sem dano ao erário (Lei 16.168/2007, art. 73). O Tribunal dá quitação ao responsável e indica no acórdão os motivos da ressalva."
+      },
+      "conceitosChave": ["TCE-GO: julgamento de contas", "TCE-GO: Lei Orgânica"],
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 73 e § 1º (conforme acórdãos do TCE-GO publicados em goias.gov.br); Lei 8.443/1992, art. 20, como referência do modelo federal.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-015",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: estrutura, pessoas, comunicação e planejamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Segundo a Resolução Normativa nº 13/2016 do TCE-GO, o Comitê Estratégico de Tecnologia da Informação (CETI) é",
+      "variantesEnunciado": [
+        "Na estrutura de governança de TI do Tribunal de Contas do Estado de Goiás, a Resolução Normativa nº 13/2016 define o Comitê Estratégico de Tecnologia da Informação (CETI) como",
+        "Ao mapear as instâncias que participam do planejamento de TI do TCE-GO, um técnico consulta a Resolução Normativa nº 13/2016, segundo a qual o CETI é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "unidade executiva subordinada à área de TI, responsável por operar a infraestrutura do Tribunal e atender aos chamados da central de serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI é instância de governança, não de operação. Operar infraestrutura e atender chamados são atividades de gestão de serviços de TI, executadas pela unidade técnica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "colegiado temporário, instituído a cada biênio apenas para elaborar o PDTI, que se extingue com a aprovação do plano pelo Plenário do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O CETI tem caráter permanente. Além disso, o PDTI do Tribunal é aprovado por Ordem de Serviço do próprio CETI (por exemplo, OS 001/2025-CETI para o PDTI 2025–2026), e não pelo Plenário."
+        },
+        {
+          "id": "opt-3",
+          "texto": "órgão deliberativo externo, formado por representantes dos jurisdicionados, que fiscaliza a execução dos contratos de tecnologia do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O comitê é interno, composto por representantes de unidades do próprio Tribunal (Secretaria-Geral, Secretaria de Controle Externo, planejamento e gestão de TI). Fiscalizar contratos cabe aos fiscais designados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "instância consultiva que aprova o PDTI por resolução plenária, sem competência para analisar indicadores de desempenho ou acompanhar projetos de TI.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Entre as competências do CETI estão analisar planos e indicadores de desempenho de TI e acompanhar projetos e conflitos de recursos. E o PDTI é aprovado por Ordem de Serviço do comitê."
+        },
+        {
+          "id": "opt-5",
+          "texto": "órgão colegiado consultivo e permanente, ao qual compete, entre outras atribuições, validar o orçamento destinado à TI e priorizar ações e investimentos da área.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 1º da RN 13/2016 define o CETI como órgão colegiado de natureza consultiva e caráter permanente, com responsabilidades estratégicas. O art. 2º lhe atribui coordenar estratégias e políticas de TI, analisar planos e indicadores, validar o orçamento de TI, priorizar ações e investimentos e acompanhar projetos.",
+          "versaoInvertidaFalsa": "O CETI é colegiado temporário e executivo, criado apenas para elaborar o PDTI, sem competência para validar o orçamento de TI ou priorizar investimentos."
+        }
+      ],
+      "pegadinhaFCC": "Confundir a instância de governança (CETI, consultiva e permanente) com a unidade que executa a TI, e atribuir ao Plenário a aprovação do PDTI, que se dá por Ordem de Serviço do CETI.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a natureza do CETI do TCE-GO e quais são suas principais competências?",
+        "resposta": "É colegiado consultivo e permanente (RN 13/2016, art. 1º). Coordena estratégias e políticas de TI, analisa planos e indicadores, valida o orçamento de TI, prioriza investimentos e acompanha projetos; o PDTI é aprovado por Ordem de Serviço do CETI."
+      },
+      "conceitosChave": ["TCE-GO: governança e planejamento de TI"],
+      "fundamentacao": "Resolução Normativa TCE-GO nº 13/2016, arts. 1º e 2º; OS 001/2025-CETI (PDTI 2025–2026); docs/pesquisa/_normativos-tce-go.md."
+    },
+    {
+      "id": "leg-inst-016",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "De acordo com o art. 37, XVI e XVII, da Constituição Federal, a acumulação remunerada de cargos públicos",
+      "variantesEnunciado": [
+        "Sobre a disciplina constitucional da acumulação remunerada de cargos, empregos e funções públicas (art. 37, XVI e XVII, da Constituição Federal), é correto afirmar que ela",
+        "Consultada sobre a possibilidade de servidores acumularem cargos, a unidade de pessoal de um tribunal estadual responde, com base no art. 37, XVI e XVII, da Constituição Federal, que a acumulação remunerada"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é admitida entre quaisquer cargos de nível médio, desde que a soma das jornadas semanais não ultrapasse sessenta horas e haja compatibilidade de horários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição não autoriza acumulação genérica por nível de escolaridade. As hipóteses são taxativas (professor, técnico ou científico com professor, saúde), e a compatibilidade de horários é requisito adicional, não suficiente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é admitida, com compatibilidade de horários e respeito ao teto, para dois cargos de professor, um de professor com outro técnico ou científico, ou dois privativos de saúde com profissão regulamentada.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 37, XVI, veda a acumulação remunerada, exceto quando houver compatibilidade de horários e observado o teto do inciso XI, nas três hipóteses: dois cargos de professor; um de professor com outro técnico ou científico; dois cargos ou empregos privativos de profissionais de saúde com profissões regulamentadas. O inciso XVII estende a proibição a empregos e funções na administração indireta.",
+          "versaoInvertidaFalsa": "É admitida para dois cargos de professor independentemente de compatibilidade de horários, bastando que os cargos pertençam a entes federativos diferentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é vedada apenas na administração direta, de modo que o servidor efetivo pode acumular livremente o cargo com emprego em empresa pública, sociedade de economia mista ou subsidiária controlada pelo Estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O art. 37, XVII, estende a proibição a empregos e funções e abrange autarquias, fundações, empresas públicas, sociedades de economia mista, suas subsidiárias e sociedades controladas pelo poder público."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é admitida para dois cargos de professor independentemente de compatibilidade de horários, desde que os cargos pertençam a entes federativos diferentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A compatibilidade de horários é exigida em todas as hipóteses do inciso XVI, e o fato de os cargos serem de entes diferentes não afasta a regra."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é vedada em qualquer hipótese para servidores de Tribunal de Contas, em razão do dever de imparcialidade inerente às atividades de controle externo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida. A Constituição não cria vedação absoluta para servidores de Tribunal de Contas; aplicam-se a eles as exceções do art. 37, XVI, observados eventuais impedimentos legais específicos."
+        }
+      ],
+      "pegadinhaFCC": "Esquecer que a vedação se estende à administração indireta (inciso XVII) ou que a compatibilidade de horários vale para todas as exceções.",
+      "resumoFlashcard": {
+        "pergunta": "Quais acumulações remuneradas de cargos a CF/88 permite?",
+        "resposta": "Com compatibilidade de horários e respeito ao teto: dois cargos de professor; um de professor com outro técnico ou científico; dois privativos de profissionais de saúde com profissões regulamentadas. A vedação alcança empregos e funções da administração indireta."
+      },
+      "conceitosChave": ["CF/88: acumulação de cargos"],
+      "fundamentacao": "CF/88, art. 37, XI, XVI e XVII."
+    },
+    {
+      "id": "leg-inst-017",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que, em fiscalização de atos de pessoal de um órgão estadual, o Tribunal de Contas examina admissões e concessões de aposentadoria. Com base no art. 71, III, da Constituição Federal, aplicável por simetria, e na jurisprudência do Supremo Tribunal Federal, considere as afirmativas a seguir.",
+      "variantesEnunciado": [
+        "A unidade de atos de pessoal de um Tribunal de Contas estadual revisa seu fluxo de registro de admissões e aposentadorias. Com base no art. 71, III, da Constituição Federal, aplicável por simetria, e na jurisprudência do Supremo Tribunal Federal, considere as afirmativas a seguir.",
+        "Em curso sobre registro de atos de pessoal, o instrutor discute o alcance do art. 71, III, da Constituição Federal, aplicável aos Tribunais de Contas dos Estados, e a jurisprudência do Supremo Tribunal Federal. Considere as afirmativas a seguir."
+      ],
+      "assertivas": [
+        {
+          "texto": "As nomeações para cargo de provimento em comissão não estão sujeitas à apreciação para fins de registro.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 71, III, ressalva expressamente as nomeações para cargo de provimento em comissão da apreciação para fins de registro."
+        },
+        {
+          "texto": "Na apreciação da legalidade da concessão inicial de aposentadoria, o Tribunal deve assegurar contraditório e ampla defesa prévios ao interessado, sob pena de nulidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A Súmula Vinculante 3 assegura contraditório e ampla defesa nos processos que possam anular ou revogar ato benéfico, mas excetua a apreciação da legalidade do ato de concessão inicial de aposentadoria, reforma e pensão."
+        },
+        {
+          "texto": "As contratações por tempo determinado para atender a necessidade temporária de excepcional interesse público estão excluídas do registro, assim como as nomeações para cargo em comissão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 71, III, alcança as admissões de pessoal “a qualquer título”, e a única exceção expressa é a nomeação para cargo em comissão."
+        },
+        {
+          "texto": "Decorridos cinco anos da chegada do processo ao Tribunal de Contas sem julgamento, o ato de concessão inicial de aposentadoria considera-se definitivamente registrado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. No Tema 445 (RE 636.553), o STF fixou o prazo de cinco anos, contado da chegada do processo à Corte de Contas, para o julgamento da legalidade da concessão inicial; após esse prazo, o ato considera-se definitivamente registrado."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que ignora a exceção da Súmula Vinculante 3: na apreciação inicial da aposentadoria, ato complexo, não há contraditório prévio obrigatório."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas: a II contraria a ressalva da Súmula Vinculante 3, e a III cria exceção ao registro que o art. 71, III, não prevê."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I reproduz a ressalva do art. 71, III (cargo em comissão), e a IV, a tese do Tema 445 do STF (cinco anos para julgar a concessão inicial, contados da chegada do processo). A II é falsa pela ressalva da Súmula Vinculante 3, e a III, porque as admissões “a qualquer título”, inclusive temporárias, sujeitam-se a registro.",
+          "versaoInvertidaFalsa": "Na apreciação da legalidade da concessão inicial de aposentadoria, o Tribunal de Contas deve sempre assegurar contraditório e ampla defesa prévios ao interessado, sob pena de nulidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: a Constituição submete a registro as admissões a qualquer título, e as contratações temporárias não estão entre as exceções."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descarta a afirmativa I, literalidade do art. 71, III, e aceita a III, que amplia indevidamente as exceções ao registro."
+        }
+      ],
+      "pegadinhaFCC": "Aplicar a regra geral do contraditório (SV 3) à concessão inicial de aposentadoria, que é a exceção expressa, e ampliar a ressalva do registro além dos cargos em comissão.",
+      "resumoFlashcard": {
+        "pergunta": "O que o Tribunal de Contas registra (art. 71, III) e quais são as exceções e limites temporais?",
+        "resposta": "Registra admissões a qualquer título, exceto cargos em comissão, e concessões de aposentadorias, reformas e pensões. A apreciação inicial dispensa contraditório prévio (SV 3) e deve ocorrer em cinco anos da chegada do processo (Tema 445 do STF)."
+      },
+      "conceitosChave": ["Controle externo: registro de atos de pessoal", "Controle externo: competências do TC"],
+      "fundamentacao": "CF/88, art. 71, III, c/c art. 75; Súmula Vinculante 3; STF, RE 636.553 (Tema 445 da repercussão geral)."
+    },
+    {
+      "id": "leg-inst-018",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regime Jurídico dos Servidores de Goiás (Lei 20.756/2020)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere que a comissão de um processo administrativo disciplinar instaurado contra servidor efetivo do Estado de Goiás prepara seu relatório e precisa conferir as sanções previstas no regime jurídico dos servidores públicos civis do Estado (Lei estadual nº 20.756/2020). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em capacitação sobre direito disciplinar, servidores do Estado de Goiás estudam o rol de penalidades do regime jurídico dos servidores públicos civis estaduais (Lei estadual nº 20.756/2020). Considere as afirmativas abaixo.",
+        "A corregedoria de um órgão estadual goiano revisa um modelo de relatório final de processo disciplinar para adequá-lo às penalidades da Lei estadual nº 20.756/2020. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Advertência e suspensão figuram entre as penalidades disciplinares previstas para os servidores civis do Estado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O rol da Lei 20.756/2020 inclui advertência e suspensão, ao lado de multa, demissão, cassações e destituição de cargo em comissão."
+        },
+        {
+          "texto": "A exoneração de ofício é penalidade aplicável às infrações graves, ao lado da demissão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Exoneração não é penalidade: é forma de desligamento sem caráter punitivo (a pedido ou de ofício, por exemplo, na inabilitação em estágio probatório). A pena expulsiva do servidor efetivo é a demissão."
+        },
+        {
+          "texto": "Cassação de aposentadoria e cassação de disponibilidade integram o rol de penalidades.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Ambas constam do rol e atingem, respectivamente, o inativo e o servidor em disponibilidade que tenham praticado infração punível com demissão."
+        },
+        {
+          "texto": "A suspensão pode ser aplicada por até cento e oitenta dias nas infrações de natureza média.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Segundo as fontes oficiais consultadas, a suspensão está limitada a noventa dias. O dobro do prazo é a armadilha numérica."
+        },
+        {
+          "texto": "A destituição de cargo em comissão é penalidade prevista no regime jurídico estadual.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A destituição de cargo em comissão aplica-se ao ocupante de cargo em comissão que comete infração sujeita a penalidade mais grave."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo as fontes oficiais consultadas (TJGO e Controladoria-Geral do Estado), a Lei 20.756/2020 prevê advertência, suspensão (até 90 dias), multa, demissão, cassação de aposentadoria, cassação de disponibilidade e destituição de cargo em comissão. Exoneração não é penalidade, e a suspensão não chega a 180 dias.",
+          "versaoInvertidaFalsa": "A exoneração de ofício é penalidade disciplinar prevista na Lei estadual nº 20.756/2020, aplicável ao servidor efetivo que pratica infração grave."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que trata a exoneração como penalidade, e omite a V, pois a destituição de cargo em comissão integra o rol."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aceita as duas afirmativas falsas (exoneração como pena e suspensão de 180 dias) e rejeita a I e a III, que reproduzem o rol legal."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa III: cassação de aposentadoria e cassação de disponibilidade são penalidades previstas no regime jurídico estadual."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: segundo as fontes oficiais consultadas, o limite da suspensão é de noventa dias, e não de cento e oitenta. As demais afirmativas estão corretas, mas a inclusão da IV invalida a combinação."
+        }
+      ],
+      "pegadinhaFCC": "Incluir a exoneração entre as penalidades e dobrar o prazo máximo da suspensão. Exoneração é desligamento sem caráter punitivo; a pena expulsiva é a demissão.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as penalidades disciplinares do regime jurídico dos servidores civis de Goiás (Lei 20.756/2020)?",
+        "resposta": "Advertência, suspensão (até 90 dias), multa, demissão, cassação de aposentadoria, cassação de disponibilidade e destituição de cargo em comissão. Exoneração não é penalidade."
+      },
+      "conceitosChave": ["Estatuto GO: penalidades"],
+      "fundamentacao": "Lei estadual nº 20.756/2020, capítulo das penalidades (rol confirmado em docs.tjgo.jus.br, PENALIDADES.pdf, e goias.gov.br/controladoria/penalidades-disciplinares; numeração dos artigos não conferida).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-019",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: segurança da informação, dados pessoais e IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um cidadão deseja confirmar, perante o TCE-GO, se seus dados pessoais são tratados em um sistema do Tribunal e procura saber a quem dirigir o pedido. De acordo com a Resolução Normativa nº 5/2024 do TCE-GO e com a Lei Geral de Proteção de Dados, é correto afirmar que",
+      "variantesEnunciado": [
+        "Uma servidora aposentada quer saber quais dados pessoais seus o TCE-GO mantém em sistemas de gestão de pessoas e como solicitar a correção de um endereço desatualizado. De acordo com a Resolução Normativa nº 5/2024 do TCE-GO e com a Lei Geral de Proteção de Dados, é correto afirmar que",
+        "Um advogado, em nome próprio, pretende exercer junto ao Tribunal de Contas do Estado de Goiás os direitos de titular de dados previstos na LGPD. De acordo com a Resolução Normativa nº 5/2024 do TCE-GO e com a Lei Geral de Proteção de Dados, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o pedido deve ser dirigido à Autoridade Nacional de Proteção de Dados, pois órgãos públicos não designam encarregado e respondem diretamente à autoridade nacional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A LGPD exige que os órgãos públicos indiquem encarregado (art. 23, III), e é ele o canal de comunicação com os titulares. A ANPD fiscaliza, mas não substitui o canal do controlador."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o encarregado é eleito pelo Plenário entre os Conselheiros, cabendo-lhe também relatar os processos de contas que envolvam dados pessoais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No TCE-GO, o encarregado é indicado pelo Presidente, e a função não se confunde com a de relator de processos de controle externo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o pedido deve ser dirigido ao gestor de TI responsável pelo sistema, que atua como controlador dos dados e dispensa a figura do encarregado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O controlador é o próprio Tribunal (pessoa ou órgão a quem competem as decisões), e não o gestor de TI. A existência de equipe técnica não dispensa o encarregado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o titular só pode exercer esse direito por meio de ação judicial, pois a Lei de Acesso à Informação afasta a aplicação da LGPD aos tribunais de contas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. LAI e LGPD convivem: a RN 5/2024 se fundamenta em ambas. O direito de confirmação da existência de tratamento (LGPD, art. 18, I) é exercido administrativamente perante o controlador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o pedido deve ser dirigido ao encarregado pelo tratamento de dados pessoais, indicado pelo Presidente do Tribunal, função atribuída ao titular da Secretaria-Geral.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A RN 5/2024, fundada na LGPD (arts. 7º, 11, 23 e 41), prevê que o Presidente do TCE-GO indique o encarregado, e o portal LGPD do Tribunal informa que a função cabe ao titular da Secretaria-Geral. O encarregado recebe reclamações e comunicações dos titulares, presta esclarecimentos e adota providências (LGPD, art. 41, § 2º).",
+          "versaoInvertidaFalsa": "O pedido deve ser dirigido diretamente à ANPD, pois o TCE-GO, como órgão público, está dispensado de indicar encarregado pelo tratamento de dados pessoais."
+        }
+      ],
+      "pegadinhaFCC": "Achar que órgão público dispensa encarregado ou que o gestor de TI é o controlador. No TCE-GO, o Presidente indica o encarregado, e o titular da Secretaria-Geral exerce a função.",
+      "resumoFlashcard": {
+        "pergunta": "Quem indica e quem exerce a função de encarregado de dados pessoais no TCE-GO?",
+        "resposta": "O Presidente do Tribunal indica o encarregado (RN 5/2024, com base no art. 41 da LGPD), e o portal LGPD do TCE-GO informa que a função cabe ao titular da Secretaria-Geral. É o canal entre o Tribunal, os titulares e a ANPD."
+      },
+      "conceitosChave": ["TCE-GO: LGPD", "LGPD: encarregado"],
+      "fundamentacao": "Resolução Normativa TCE-GO nº 5/2024; Lei 13.709/2018, arts. 18, I, 23, III, e 41, § 2º; portal.tce.go.gov.br/lgpd; docs/pesquisa/_normativos-tce-go.md."
+    },
+    {
+      "id": "leg-inst-020",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Código de Ética dos Servidores do TCE-GO",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A respeito do conflito de interesses e do recebimento de presentes, à luz dos deveres éticos dos servidores do TCE-GO e dos princípios constitucionais da Administração, é correto afirmar que",
+      "variantesEnunciado": [
+        "Sobre a postura esperada de servidor do Tribunal de Contas do Estado de Goiás diante de vantagens oferecidas por particulares, considerados os deveres éticos funcionais e os princípios constitucionais da Administração, é correto afirmar que",
+        "Em material de integridade preparado para servidores do TCE-GO que atuam no apoio às contratações de TI, afirma-se corretamente, quanto a presentes e conflito de interesses, que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o recebimento de presentes de fornecedores é lícito sempre que o servidor comunique o fato à chefia imediata e o registre no processo, independentemente do valor ou do interesse do ofertante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Comunicar não legitima vantagem oferecida por quem tem interesse na atuação do servidor. A Lei 8.429/1992, art. 9º, I, trata como enriquecimento ilícito receber presente de quem tenha interesse que possa ser atingido pelas atribuições do agente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o conflito de interesses só se configura após a assinatura do contrato, de modo que vantagens recebidas na fase de planejamento da contratação são irrelevantes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O conflito de interesses existe sempre que interesse privado possa influenciar a atuação pública, inclusive no planejamento (estudo técnico preliminar, especificações, pesquisa de preços), fase em que o servidor de TI costuma atuar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o dever de imparcialidade alcança apenas Conselheiros e Auditores, que julgam processos, e não os servidores que atuam no apoio às contratações do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Impessoalidade e moralidade (CF/88, art. 37, caput) vinculam todo agente público. Conselheiros e Auditores têm código próprio, mas os servidores também se sujeitam a deveres de imparcialidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o servidor deve recusar vantagens oferecidas por quem tenha interesse em decisão que dependa de sua atuação, pois a aceitação compromete a imparcialidade e a moralidade administrativa.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Aceitar vantagem de quem tem interesse em ato que depende da atuação do servidor fere a moralidade e a impessoalidade (CF/88, art. 37) e pode configurar improbidade (Lei 8.429/1992, art. 9º, I). Os códigos de ética do serviço público, como o do TCE-GO, orientam a recusa e a prevenção de conflitos de interesses.",
+          "versaoInvertidaFalsa": "O servidor pode aceitar vantagens de quem tenha interesse em decisão que dependa de sua atuação, desde que comunique o recebimento à chefia imediata."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a aceitação de vantagens é permitida quando o servidor não é o ordenador de despesa, porque somente este pratica atos capazes de beneficiar o ofertante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem elabora especificações, analisa propostas ou emite pareceres técnicos influencia o resultado da contratação. Restringir o risco ao ordenador de despesa ignora as etapas em que o servidor técnico atua."
+        }
+      ],
+      "pegadinhaFCC": "Supor que comunicar o presente o torna lícito ou que só quem assina o contrato está sujeito a conflito de interesses. O critério é o interesse do ofertante na atuação do servidor.",
+      "resumoFlashcard": {
+        "pergunta": "Servidor pode aceitar presente de empresa interessada em contratação na qual atua?",
+        "resposta": "Não. A vantagem oferecida por quem tem interesse em ato que depende do servidor compromete a imparcialidade e a moralidade, pode configurar improbidade (Lei 8.429/1992, art. 9º, I) e deve ser recusada, segundo os deveres éticos do serviço público."
+      },
+      "conceitosChave": ["Ética no serviço público: conflito de interesses", "CF/88: princípios da Administração"],
+      "fundamentacao": "Código de Ética dos Servidores do TCE-GO (texto não conferido); CF/88, art. 37, caput; Lei 8.429/1992, art. 9º, I.",
+      "revisarFonteOficial": true
+    }
+  ]
+}

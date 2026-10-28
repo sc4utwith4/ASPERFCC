@@ -1,0 +1,585 @@
+{
+  "materiaSlug": "legislacao-institucional",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "leg-inst-021",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: Administração Pública (arts. 37 a 41)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "De acordo com o art. 37, § 4º, da Constituição Federal, os atos de improbidade administrativa importarão a suspensão dos ……, a perda da ……, a indisponibilidade dos bens e o …… ao erário, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em parecer sobre as consequências constitucionais da improbidade, a assessoria jurídica transcreve o art. 37, § 4º, da Constituição Federal: tais atos importarão a suspensão dos ……, a perda da ……, a indisponibilidade dos bens e o …… ao erário, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível. Preenchem, correta e respectivamente, as lacunas:",
+        "Segundo a Constituição Federal (art. 37, § 4º), além da indisponibilidade dos bens, os atos de improbidade administrativa importarão a suspensão dos ……, a perda da …… e o …… ao erário, conforme a forma e a gradação previstas em lei e sem prejuízo da ação penal cabível. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "direitos civis − função pública − ressarcimento",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Constituição fala em suspensão dos direitos políticos, hipótese também prevista no art. 15, V. Não há “suspensão de direitos civis” como consequência da improbidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "direitos políticos − nacionalidade brasileira − ressarcimento",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A perda da nacionalidade tem hipóteses próprias e restritas no art. 12, § 4º, da CF/88. A improbidade acarreta perda da função pública, não da nacionalidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "direitos políticos − função pública − confisco",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto constitucional prevê ressarcimento ao erário, ou seja, recomposição do dano. “Confisco” não é o termo da Constituição e sugere sanção de outra natureza."
+        },
+        {
+          "id": "opt-4",
+          "texto": "mandatos eletivos − função pública − ressarcimento",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A consequência constitucional é a suspensão dos direitos políticos, que é mais ampla e atinge a capacidade eleitoral. “Suspensão de mandatos” não é a expressão do § 4º."
+        },
+        {
+          "id": "opt-5",
+          "texto": "direitos políticos − função pública − ressarcimento",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 37, § 4º, prevê quatro consequências da improbidade: suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário, na forma e gradação da lei (hoje, Lei 8.429/1992, com a redação da Lei 14.230/2021), sem prejuízo da ação penal. Note que é suspensão, e não cassação, de direitos políticos (art. 15).",
+          "versaoInvertidaFalsa": "direitos civis − função pública − confisco, consequências que o art. 37, § 4º, impõe aos atos de improbidade, ao lado da indisponibilidade dos bens."
+        }
+      ],
+      "pegadinhaFCC": "Trocar “direitos políticos” por direitos civis ou mandatos e “ressarcimento” por confisco. As quatro consequências são suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as consequências constitucionais dos atos de improbidade (art. 37, § 4º)?",
+        "resposta": "Suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário, na forma e gradação da lei, sem prejuízo da ação penal cabível."
+      },
+      "conceitosChave": ["CF/88: improbidade administrativa"],
+      "fundamentacao": "CF/88, art. 37, § 4º; art. 15, V; Lei 8.429/1992."
+    },
+    {
+      "id": "leg-inst-022",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o Tribunal de Contas do Estado, ao fiscalizar um órgão estadual, verifica ilegalidade em uma portaria que concede gratificação sem amparo legal e em um contrato de serviços de TI firmado com sobrepreço. Em ambos os casos, assina prazo para que o órgão adote as providências necessárias ao exato cumprimento da lei, mas não é atendido. Considerando o art. 71 da Constituição Federal, aplicável por simetria, é correto afirmar que",
+      "variantesEnunciado": [
+        "Em auditoria numa fundação estadual, o Tribunal de Contas do Estado identifica uma portaria ilegal de concessão de vantagem a servidores e um contrato ilegal de licenciamento de software. Assinado prazo para correção, a entidade nada faz. Considerando o art. 71 da Constituição Federal, aplicável por simetria, é correto afirmar que",
+        "Após fixar prazo para que uma secretaria estadual corrija uma portaria interna ilegal e um contrato de manutenção de rede celebrado em desacordo com a lei, o Tribunal de Contas do Estado constata que nenhuma providência foi tomada. Considerando o art. 71 da Constituição Federal, aplicável por simetria, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Tribunal pode sustar a execução da portaria, comunicando a decisão à Assembleia Legislativa; quanto ao contrato, a sustação cabe à Assembleia, e o Tribunal só decidirá se, em noventa dias, nem o Legislativo nem o Executivo efetivarem as medidas cabíveis.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Para atos, o Tribunal assina prazo (art. 71, IX) e, não atendido, susta a execução, comunicando a decisão ao Legislativo (X). Para contratos, a sustação é adotada diretamente pelo Legislativo, que solicita ao Executivo as medidas cabíveis (§ 1º); se, em noventa dias, nada for efetivado, o Tribunal decide a respeito (§ 2º).",
+          "versaoInvertidaFalsa": "O Tribunal de Contas pode sustar diretamente tanto atos quanto contratos ilegais não corrigidos no prazo assinado, bastando comunicar a decisão ao Poder Legislativo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Tribunal pode sustar diretamente tanto a portaria quanto o contrato, comunicando as decisões ao Governador, que poderá revogá-las por razões de interesse público.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ignora a regra própria do contrato (§ 1º), cuja sustação cabe ao Legislativo. Além disso, a comunicação da sustação de ato é feita ao Legislativo, e o Chefe do Executivo não revoga decisão do Tribunal."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a sustação da portaria e a do contrato competem exclusivamente à Assembleia Legislativa, cabendo ao Tribunal apenas representar ao Poder competente sobre as irregularidades apuradas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Subestima o Tribunal. A sustação de ato é competência própria dele (art. 71, X), e mesmo no contrato o Tribunal decide se houver omissão por noventa dias (§ 2º). Representar (XI) é competência adicional, não a única."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o Tribunal pode sustar a portaria, mas, quanto ao contrato, deve aguardar sessenta dias da comunicação à Assembleia antes de decidir a respeito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Meia-verdade com prazo alterado: o § 2º do art. 71 fixa noventa dias. Sessenta dias é o prazo do parecer prévio sobre as contas do Chefe do Executivo (inciso I), e a troca é intencional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o Tribunal pode sustar o contrato de imediato, por envolver despesa, mas a portaria só pode ser sustada pela Assembleia, por se tratar de ato de pessoal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as regras: é o contrato que tem sustação a cargo do Legislativo, e o ato, inclusive de pessoal, pode ser sustado pelo próprio Tribunal após o prazo não atendido."
+        }
+      ],
+      "pegadinhaFCC": "Tratar ato e contrato da mesma forma ou trocar o prazo de 90 dias (§ 2º) pelos 60 dias do parecer prévio. Ato: o Tribunal susta. Contrato: o Legislativo susta; o Tribunal decide após 90 dias de omissão.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre a sustação de ato e a de contrato no art. 71 da CF/88?",
+        "resposta": "Ato ilegal não corrigido no prazo: o Tribunal susta e comunica ao Legislativo (incisos IX e X). Contrato: a sustação é do Legislativo (§ 1º); se em 90 dias Legislativo ou Executivo não agirem, o Tribunal decide (§ 2º)."
+      },
+      "conceitosChave": ["Controle externo: sustação", "Controle externo: competências do TC"],
+      "fundamentacao": "CF/88, art. 71, IX, X e XI e §§ 1º e 2º, c/c art. 75."
+    },
+    {
+      "id": "leg-inst-023",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Controle interno e controle externo",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Quanto à posição institucional dos Tribunais de Contas no modelo constitucional de controle externo, é correto afirmar que",
+      "variantesEnunciado": [
+        "Acerca da relação entre o Poder Legislativo e o Tribunal de Contas no exercício do controle externo, segundo a Constituição Federal e a jurisprudência do STF, é correto afirmar que",
+        "Um servidor recém-empossado no TCE-GO questiona se o Tribunal “pertence” à Assembleia Legislativa. Segundo a Constituição Federal e a jurisprudência do STF sobre a posição institucional das Cortes de Contas, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o Tribunal de Contas é órgão do Poder Legislativo hierarquicamente subordinado à Mesa da Casa legislativa, que pode rever suas decisões em grau de recurso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O STF afirma que os Tribunais de Contas não se subordinam ao Legislativo por vínculo hierárquico (ADI 4.190). Suas decisões não são revistas pela Mesa em grau de recurso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Tribunal de Contas é o titular do controle externo, cabendo ao Poder Legislativo apenas auxiliá-lo na apreciação das contas do Chefe do Executivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a titularidade. O controle externo está “a cargo do Congresso Nacional” e é exercido “com o auxílio” do Tribunal (art. 71, caput), modelo reproduzido nos Estados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o Tribunal de Contas integra o Poder Judiciário, razão pela qual suas decisões que julgam contas fazem coisa julgada e não podem ser revistas judicialmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Tribunal de Contas não integra o Judiciário (art. 92 da CF/88), e suas decisões, de natureza administrativa, podem ser submetidas ao controle judicial (art. 5º, XXXV), em regra quanto à legalidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o controle externo é titularizado pelo Poder Legislativo, mas o Tribunal de Contas exerce competências próprias, fixadas diretamente pela Constituição, sem subordinação ao Parlamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Legislativo é o titular do controle externo, mas o art. 71 confere ao Tribunal competências próprias e indelegáveis, como julgar contas e aplicar sanções. O STF (ADI 4.190) assentou que as Cortes de Contas não são subordinadas ao Legislativo, nem órgãos delegatários ou de mero assessoramento; o art. 73 lhes estende, no que couber, as prerrogativas do art. 96.",
+          "versaoInvertidaFalsa": "O controle externo é titularizado pelo Tribunal de Contas, que atua de forma independente, cabendo ao Poder Legislativo apenas auxiliá-lo na fiscalização."
+        },
+        {
+          "id": "opt-5",
+          "texto": "as competências do Tribunal de Contas dependem de delegação do Legislativo, que pode ampliá-las ou restringi-las por simples resolução, sem necessidade de qualquer alteração do texto constitucional.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As competências do Tribunal decorrem diretamente da Constituição (art. 71) e não podem ser suprimidas por ato do Legislativo. Nos Estados, a simetria do art. 75 impede que a Constituição estadual ou a Assembleia esvaziem esse núcleo."
+        }
+      ],
+      "pegadinhaFCC": "Confundir “auxílio” com subordinação. O Legislativo é o titular do controle externo, mas o Tribunal tem competências próprias fixadas na Constituição e não é órgão subordinado.",
+      "resumoFlashcard": {
+        "pergunta": "O Tribunal de Contas é subordinado ao Poder Legislativo?",
+        "resposta": "Não. O Legislativo titulariza o controle externo, mas o Tribunal exerce competências próprias fixadas no art. 71 da CF/88 e não tem vínculo hierárquico com o Parlamento (STF, ADI 4.190). Suas decisões são administrativas e sujeitas a controle judicial."
+      },
+      "conceitosChave": ["Controle externo: titularidade", "Tribunal de Contas: autonomia"],
+      "fundamentacao": "CF/88, arts. 5º, XXXV, 71, caput, 73, caput, 75 e 92; STF, ADI 4.190 MC-REF."
+    },
+    {
+      "id": "leg-inst-024",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Constituição do Estado de Goiás: Tribunal de Contas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Considerando o art. 75 da Constituição Federal, a jurisprudência sumulada do STF e as normas estaduais que tratam do Tribunal de Contas do Estado de Goiás, a composição do Tribunal observa a seguinte regra:",
+      "variantesEnunciado": [
+        "Sobre a composição do Tribunal de Contas do Estado de Goiás, conforme a Constituição Federal (art. 75), a Súmula 653 do STF e as normas estaduais que disciplinam o Tribunal, é correto afirmar que ele é integrado por",
+        "Ao explicar como se forma o colegiado do TCE-GO, considerando a simetria com o modelo federal, a Súmula 653 do STF e a legislação goiana, um instrutor afirma corretamente que o Tribunal tem"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "nove Conselheiros, por simetria com o Tribunal de Contas da União, sendo um terço escolhido pelo Governador e dois terços pela Assembleia Legislativa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A simetria do art. 75 não alcança o número de membros: o parágrafo único fixa sete Conselheiros para os Tribunais de Contas estaduais. Nove é o número de Ministros do TCU (art. 73)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "sete Conselheiros: quatro escolhidos pela Assembleia Legislativa e três pelo Governador, sendo um dentre Auditores, um dentre membros do Ministério Público de Contas e um de livre escolha.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O art. 75, parágrafo único, da CF/88 fixa sete Conselheiros. A Súmula 653 do STF resolve a divisão: quatro pela Assembleia Legislativa e três pelo Governador, cabendo a este indicar um dentre Auditores, outro dentre membros do Ministério Público junto ao Tribunal e um terceiro de livre escolha. É a composição adotada para o TCE-GO.",
+          "versaoInvertidaFalsa": "Sete Conselheiros: três escolhidos pela Assembleia Legislativa e quatro pelo Governador, todos de livre escolha, sem vagas reservadas a Auditores ou ao Ministério Público de Contas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "sete Conselheiros: três escolhidos pela Assembleia Legislativa e quatro pelo Governador, todos de livre escolha entre brasileiros com notórios conhecimentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a proporção e elimina as vagas técnicas. São quatro da Assembleia e três do Governador, dois deles vinculados às carreiras de Auditor e de membro do Ministério Público de Contas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "sete Conselheiros, todos nomeados pelo Governador entre Auditores e membros do Ministério Público de Contas, mediante lista tríplice elaborada pelo Tribunal segundo critérios de antiguidade e merecimento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A lista tríplice e a origem técnica valem apenas para duas das três vagas do Governador. A maioria das vagas (quatro) é de escolha da Assembleia Legislativa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "sete Conselheiros, escolhidos pela Assembleia Legislativa entre servidores efetivos do Tribunal aprovados em concurso público de provas e títulos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conselheiro não é cargo provido por concurso. Concurso é a forma de ingresso dos Auditores e dos membros do Ministério Público de Contas, que podem depois ser indicados para as vagas reservadas."
+        }
+      ],
+      "pegadinhaFCC": "Transpor para o TCE o número de Ministros do TCU (nove) ou inverter a proporção 4 (Assembleia) × 3 (Governador).",
+      "resumoFlashcard": {
+        "pergunta": "Como é composto o Tribunal de Contas do Estado de Goiás?",
+        "resposta": "Por sete Conselheiros (CF/88, art. 75, parágrafo único): quatro escolhidos pela Assembleia Legislativa e três pelo Governador, sendo um dentre Auditores, um dentre membros do Ministério Público de Contas e um de livre escolha (Súmula 653 do STF)."
+      },
+      "conceitosChave": ["TCE-GO: composição", "Simetria (art. 75)"],
+      "fundamentacao": "CF/88, arts. 73, § 2º, e 75, parágrafo único; Súmula 653 do STF; Lei estadual nº 16.168/2007 (composição do TCE-GO, conforme docs/pesquisa/_normativos-tce-go.md)."
+    },
+    {
+      "id": "leg-inst-025",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Lei Orgânica do TCE-GO (Lei 16.168/2007)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Considere a disciplina das contas anuais do Governador do Estado na Lei Orgânica do TCE-GO (Lei estadual nº 16.168/2007), interpretada em conjunto com o modelo constitucional de controle externo. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma equipe do TCE-GO organiza o cronograma de análise das contas anuais do Governador. Com base na Lei Orgânica do Tribunal (Lei estadual nº 16.168/2007) e no modelo constitucional de controle externo, considere as afirmativas abaixo.",
+        "Em estudo sobre o ciclo de prestação das contas anuais do Chefe do Poder Executivo goiano, à luz da Lei estadual nº 16.168/2007 e do modelo constitucional de controle externo, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O Tribunal aprecia as contas mediante parecer prévio, que deve ser elaborado no prazo de sessenta dias a contar de seu recebimento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a regra do art. 1º, I, da Lei 16.168/2007, que reproduz o art. 71, I, da CF/88 no plano estadual."
+        },
+        {
+          "texto": "Integram as contas, entre outros elementos, os balanços gerais do Estado e o relatório do órgão central do sistema de controle interno do Poder Executivo.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A Lei Orgânica relaciona esses elementos na composição das contas anuais do Governador, ponto já cobrado em prova da FCC para o TCE-GO."
+        },
+        {
+          "texto": "O parecer prévio favorável encerra a análise das contas, dispensando o julgamento pela Assembleia Legislativa.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O parecer é opinativo; o julgamento das contas do Governador cabe à Assembleia Legislativa, titular do controle externo, seja o parecer favorável ou não."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: o parecer prévio, favorável ou não, não substitui o julgamento político das contas pela Assembleia Legislativa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Descarta a afirmativa I, que traz o prazo legal de sessenta dias, e aceita a III, que transforma o parecer em decisão final."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O TCE-GO aprecia as contas do Governador mediante parecer prévio em sessenta dias do recebimento (Lei 16.168/2007, art. 1º, I), e as contas incluem os balanços gerais do Estado e o relatório do órgão central do controle interno. O julgamento é da Assembleia Legislativa, por isso a III é falsa.",
+          "versaoInvertidaFalsa": "O parecer prévio do TCE-GO sobre as contas do Governador, quando favorável, dispensa o julgamento das contas pela Assembleia Legislativa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II também é verdadeira: o relatório do órgão central do controle interno e os balanços gerais integram as contas anuais do Governador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Única afirmativa falsa do conjunto. Escolhe quem confunde parecer prévio com julgamento das contas do Chefe do Executivo."
+        }
+      ],
+      "pegadinhaFCC": "Atribuir ao parecer prévio favorável o efeito de julgamento. O parecer é peça técnica; quem julga as contas do Governador é a Assembleia Legislativa.",
+      "resumoFlashcard": {
+        "pergunta": "Como o TCE-GO trata as contas anuais do Governador?",
+        "resposta": "Aprecia-as mediante parecer prévio em 60 dias do recebimento (Lei 16.168/2007, art. 1º, I). As contas incluem os balanços gerais do Estado e o relatório do órgão central do controle interno; o julgamento cabe à Assembleia Legislativa."
+      },
+      "conceitosChave": ["Controle externo: parecer prévio", "TCE-GO: Lei Orgânica"],
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 1º, I, e dispositivos sobre a composição das contas do Governador (conforme busca no texto da Casa Civil-GO e docs/pesquisa/_normativos-tce-go.md); CF/88, arts. 49, IX, 71, I, e 75.",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-026",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Regimento Interno do TCE-GO (Resolução 22/2008)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Segundo o Regimento Interno do Tribunal de Contas do Estado de Goiás (Resolução nº 22/2008), no exercício de seu poder regulamentar, o Tribunal",
+      "variantesEnunciado": [
+        "Acerca do poder regulamentar do TCE-GO, tal como disciplinado em seu Regimento Interno (Resolução nº 22/2008), é correto afirmar que o Tribunal",
+        "Um jurisdicionado questiona se deve cumprir uma instrução normativa do TCE-GO sobre envio eletrônico de documentos. Segundo o Regimento Interno do Tribunal (Resolução nº 22/2008), no exercício do poder regulamentar, o Tribunal"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pode expedir atos normativos sobre matéria de suas atribuições e sobre a organização dos processos que lhe devam ser submetidos, obrigando ao seu cumprimento os jurisdicionados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Regimento do TCE-GO reconhece o poder regulamentar do Tribunal para expedir atos e instruções normativas sobre suas atribuições e sobre a organização dos processos, com força obrigatória para os jurisdicionados. O modelo segue o art. 3º da Lei 8.443/1992 (Lei Orgânica do TCU), e o ponto já foi cobrado pela FCC no TCE-GO.",
+          "versaoInvertidaFalsa": "Pode expedir atos normativos sobre a organização de seus processos, mas esses atos têm efeito apenas interno e não obrigam os jurisdicionados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pode editar atos normativos apenas de efeito interno, sem força obrigatória para os jurisdicionados, que só se vinculam a leis em sentido formal editadas pela Assembleia Legislativa do Estado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os atos normativos expedidos no exercício do poder regulamentar obrigam os jurisdicionados, nos limites da competência do Tribunal. Negar esse efeito esvazia o próprio poder regulamentar."
+        },
+        {
+          "id": "opt-3",
+          "texto": "depende de prévia aprovação da Assembleia Legislativa para que seus atos normativos sobre organização processual produzam efeitos em relação aos jurisdicionados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O poder regulamentar decorre da autonomia do Tribunal e não depende de aprovação da Assembleia. Exigir chancela legislativa contraria a autonomia prevista no art. 7º da Lei 16.168/2007."
+        },
+        {
+          "id": "opt-4",
+          "texto": "pode criar, por resolução, sanções pecuniárias não previstas na Lei Orgânica, desde que proporcionais ao dano causado ao erário e aplicadas após contraditório.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As sanções aplicáveis pelo Tribunal são as previstas em lei (CF/88, art. 71, VIII). O poder regulamentar permite disciplinar procedimentos, não criar penalidades."
+        },
+        {
+          "id": "opt-5",
+          "texto": "pode expedir atos normativos somente sobre matéria administrativa interna, como gestão de pessoas e contratações, vedada a disciplina de processos de controle externo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O poder regulamentar alcança justamente a organização dos processos de controle externo, como a forma de envio de prestações de contas pelos jurisdicionados."
+        }
+      ],
+      "pegadinhaFCC": "Restringir o poder regulamentar a efeitos internos ou ampliá-lo para criar sanções. Ele alcança atribuições e organização processual, obriga os jurisdicionados e não cria penalidades.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o alcance do poder regulamentar do TCE-GO?",
+        "resposta": "O Tribunal pode expedir atos e instruções normativas sobre suas atribuições e a organização dos processos que lhe são submetidos, obrigando os jurisdicionados. Não pode criar sanções que a lei não prevê."
+      },
+      "conceitosChave": ["TCE-GO: Regimento Interno", "TCE-GO: poder regulamentar"],
+      "fundamentacao": "Resolução TCE-GO nº 22/2008 (Regimento Interno), disposições sobre o poder regulamentar (cobrado na prova FCC TCE-GO 2022, q. 64); Lei 8.443/1992, art. 3º, como modelo; CF/88, art. 71, VIII."
+    },
+    {
+      "id": "leg-inst-027",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "PCCR dos servidores do TCE-GO (Lei 15.122/2005)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que o Tribunal precisa definir quem chefiará uma seção de suporte técnico. A gestão de pessoas avalia duas opções: designar para função de confiança um Técnico de Controle Externo do quadro efetivo ou nomear para cargo em comissão pessoa sem vínculo com a Administração. Considerando a Constituição Federal e o PCCR do TCE-GO (Lei estadual nº 15.122/2005), que dispõe sobre cargos em comissão e funções de confiança, é correto afirmar que",
+      "variantesEnunciado": [
+        "Para ocupar a coordenação de uma equipe de infraestrutura, o Tribunal cogita designar servidor efetivo para função de confiança ou nomear profissional do mercado para cargo em comissão. Considerando a Constituição Federal e o PCCR do TCE-GO (Lei estadual nº 15.122/2005), que dispõe sobre cargos em comissão e funções de confiança, é correto afirmar que",
+        "Em consulta à assessoria jurídica, a Presidência do Tribunal pergunta quem pode ocupar a chefia de um núcleo de sistemas: servidor efetivo designado para função de confiança ou pessoa externa nomeada para cargo em comissão. Considerando a Constituição Federal e o PCCR do TCE-GO (Lei estadual nº 15.122/2005), é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "tanto a função de confiança quanto o cargo em comissão podem ser providos por pessoa sem vínculo, desde que aprovada em processo seletivo simplificado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A função de confiança é exclusiva de ocupantes de cargo efetivo (CF/88, art. 37, V). Processo seletivo simplificado é próprio da contratação temporária (art. 37, IX), não do provimento de chefias."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o cargo em comissão é exclusivo de servidores efetivos, e a função de confiança pode ser exercida por pessoa sem vínculo, por ser de livre designação da autoridade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a regra constitucional: a exclusividade de efetivos é da função de confiança. O cargo em comissão admite pessoa sem vínculo, respeitado o percentual mínimo reservado a servidores de carreira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a chefia de unidade técnica de TI não pode ser atribuída a cargo em comissão nem a função de confiança, pois se trata de atividade técnica, e não de direção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Chefiar uma unidade é atribuição de chefia, expressamente admitida no art. 37, V. O que a Constituição veda é usar cargo em comissão ou função de confiança para atribuições meramente técnicas ou operacionais, sem chefia."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a nomeação para cargo em comissão depende de aprovação em concurso de provas e títulos, ao passo que a função de confiança dispensa qualquer vínculo com a Administração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cargo em comissão é de livre nomeação e exoneração, ressalvado do concurso pelo art. 37, II. E a função de confiança exige vínculo efetivo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a função de confiança só pode ser exercida por ocupante de cargo efetivo, enquanto o cargo em comissão admite pessoa sem vínculo, observado o percentual mínimo de servidores de carreira, ambos restritos a direção, chefia e assessoramento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo art. 37, V, da CF/88, as funções de confiança são exercidas exclusivamente por ocupantes de cargo efetivo, e os cargos em comissão são preenchidos por servidores de carreira nos casos, condições e percentuais mínimos da lei, admitindo-se pessoas sem vínculo no restante. Ambos se destinam apenas a direção, chefia e assessoramento. O PCCR do TCE-GO disciplina essas figuras no âmbito do Tribunal.",
+          "versaoInvertidaFalsa": "O cargo em comissão só pode ser ocupado por servidor efetivo, enquanto a função de confiança admite pessoa sem vínculo, ambos destinados a quaisquer atribuições técnicas."
+        }
+      ],
+      "pegadinhaFCC": "Inverter as figuras: a exclusividade de servidores efetivos é da FUNÇÃO de confiança; o CARGO em comissão admite pessoa sem vínculo, respeitado o percentual mínimo de servidores de carreira.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre função de confiança e cargo em comissão na CF/88?",
+        "resposta": "Função de confiança: exclusiva de ocupante de cargo efetivo. Cargo em comissão: livre nomeação, com percentual mínimo reservado a servidores de carreira. Ambos só para direção, chefia e assessoramento (art. 37, V)."
+      },
+      "conceitosChave": ["CF/88: cargos em comissão e funções de confiança", "TCE-GO: PCCR"],
+      "fundamentacao": "CF/88, art. 37, II, V e IX; Lei estadual nº 15.122/2005 (cargos em comissão e funções de confiança do TCE-GO; detalhes não conferidos no texto oficial).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-028",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: segurança da informação, dados pessoais e IA",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que um servidor do TCE-GO pretende usar uma ferramenta de IA generativa para resumir documentos de um processo de auditoria e redigir a minuta de um relatório. Considerando a Resolução Administrativa nº 24/2024 do Tribunal, que dispõe sobre o uso de ferramentas de inteligência artificial, a conduta mais adequada é",
+      "variantesEnunciado": [
+        "Uma analista do TCE-GO quer usar um assistente de IA generativa para organizar achados de fiscalização e sugerir a redação de uma nota técnica. Considerando a Resolução Administrativa nº 24/2024 do Tribunal, sobre o uso de ferramentas de inteligência artificial, a conduta mais adequada é",
+        "A equipe de uma unidade técnica do TCE-GO testa um chatbot de IA generativa para preparar sínteses de pareceres e respostas a demandas internas. Considerando a Resolução Administrativa nº 24/2024 do Tribunal, sobre o uso de ferramentas de inteligência artificial, a conduta mais adequada é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "inserir os documentos integrais na ferramenta, inclusive dados pessoais sensíveis dos jurisdicionados, pois a política prioriza a eficiência e dispensa cautelas adicionais quando o uso é apenas interno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A eficiência é objetivo da política, mas não às custas da proteção de dados pessoais e sensíveis, que é objetivo expresso da RA 24/2024. Uso interno não afasta a LGPD."
+        },
+        {
+          "id": "opt-2",
+          "texto": "adotar a minuta gerada sem revisão, pois a política reconhece a IA generativa como fonte autônoma de conteúdo oficial do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A política exige precisão e veracidade das informações e trata a IA generativa como ferramenta de apoio. Publicar sem revisão ignora o risco de alucinações e transfere indevidamente a responsabilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "usar a ferramenta como apoio, conferindo a precisão e a veracidade do conteúdo gerado e protegendo dados pessoais e sensíveis, mantendo-se o servidor responsável pelo texto final.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A RA 24/2024 busca precisão e veracidade das informações geradas por IA, proteção de dados pessoais e sensíveis, eficiência dos serviços e adoção responsável. O Tribunal admite a IA generativa como ferramenta de apoio, e não como autora: o servidor revisa o conteúdo e responde pelo resultado.",
+          "versaoInvertidaFalsa": "Usar a ferramenta como fonte autônoma, adotando o conteúdo gerado sem revisão, pois a política do Tribunal presume a veracidade das informações produzidas por IA."
+        },
+        {
+          "id": "opt-4",
+          "texto": "abster-se de qualquer uso, pois a política proíbe ferramentas de IA generativa nas atividades do Tribunal, admitindo-as apenas em projetos de pesquisa acadêmica.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A política regulamenta o uso, não o proíbe. Ato do Tribunal admite a IA generativa como ferramenta de apoio à pesquisa e à produção de conteúdo, observada a política de uso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "usar a ferramenta apenas se o fornecedor assumir, por contrato, a responsabilidade integral pelo conteúdo gerado, afastando a responsabilidade do servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A responsabilidade pelo conteúdo que o servidor adota em documento oficial não se transfere ao fornecedor da ferramenta. A adoção responsável pressupõe revisão humana."
+        }
+      ],
+      "pegadinhaFCC": "Os extremos atraem: proibir tudo ou confiar cegamente. A RA 24/2024 regula o uso responsável, com precisão e veracidade, proteção de dados e a IA como apoio.",
+      "resumoFlashcard": {
+        "pergunta": "Quais objetivos orientam a política de uso de IA do TCE-GO (RA 24/2024)?",
+        "resposta": "Precisão e veracidade das informações geradas, proteção de dados pessoais e sensíveis, eficiência dos serviços e adoção responsável. A IA generativa é ferramenta de apoio, e o servidor responde pelo resultado."
+      },
+      "conceitosChave": ["TCE-GO: uso de IA"],
+      "fundamentacao": "Resolução Administrativa TCE-GO nº 24/2024 (objetivos divulgados no portal do Tribunal); docs/pesquisa/_normativos-tce-go.md; Lei 13.709/2018, art. 6º."
+    },
+    {
+      "id": "leg-inst-029",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "Políticas institucionais: estrutura, pessoas, comunicação e planejamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a unidade de comunicação do Tribunal pretende divulgar, no portal e nas redes sociais, o resultado de uma auditoria sobre contratações de TI do Estado. Considerando os princípios constitucionais que orientam a comunicação institucional e a Política de Comunicação do TCE-GO (Resolução Administrativa nº 19/2024), a divulgação deve",
+      "variantesEnunciado": [
+        "O TCE-GO concluiu fiscalização sobre a qualidade dos portais de transparência de órgãos estaduais e quer comunicar o resultado à sociedade. Considerando os princípios constitucionais da comunicação institucional e a Política de Comunicação do Tribunal (Resolução Administrativa nº 19/2024), a divulgação deve",
+        "Ao planejar campanha sobre o julgamento de contas de um fundo estadual, a assessoria de imprensa do TCE-GO consulta as diretrizes aplicáveis. Considerando os princípios constitucionais da comunicação institucional e a Política de Comunicação do Tribunal (Resolução Administrativa nº 19/2024), a divulgação deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "destacar o nome e a imagem do Conselheiro relator, para dar visibilidade pessoal ao responsável pelo trabalho e reforçar a confiança e a credibilidade da instituição perante a sociedade goiana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A publicidade institucional não pode conter nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades (CF/88, art. 37, § 1º). Informar a autoria do voto difere de promover o agente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ter caráter informativo e de orientação social, em linguagem acessível, sem promoção pessoal de autoridades e respeitando o sigilo e a proteção de dados pessoais previstos em lei.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A comunicação institucional concretiza a publicidade e a transparência, mas deve ter caráter educativo, informativo ou de orientação social, sem promoção pessoal (CF/88, art. 37, § 1º), e respeitar as restrições de sigilo e de dados pessoais (LAI, art. 31; LGPD). Políticas de comunicação de tribunais de contas, como a RA 19/2024 do TCE-GO, organizam essas diretrizes.",
+          "versaoInvertidaFalsa": "Pode destacar nome e imagem das autoridades do Tribunal e divulgar integralmente os autos, inclusive dados pessoais, porque a publicidade institucional não admite restrições."
+        },
+        {
+          "id": "opt-3",
+          "texto": "aguardar o trânsito em julgado na esfera judicial, pois decisões de tribunais de contas só podem ser divulgadas depois de confirmadas pelo Poder Judiciário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As decisões do Tribunal de Contas são públicas e produzem efeitos próprios; não dependem de confirmação judicial para serem divulgadas, embora possam ser questionadas em juízo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "divulgar integralmente os autos, inclusive dados pessoais de servidores do órgão auditado, porque o princípio da publicidade não admite restrições.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A publicidade é a regra, mas a própria Constituição ressalva o sigilo imprescindível (art. 5º, XXXIII) e a proteção da intimidade (art. 5º, X). Informações pessoais têm tratamento restrito (LAI, art. 31)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "restringir-se ao Diário Eletrônico de Contas, pois a publicidade oficial veda o uso de redes sociais por órgãos de controle externo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há vedação constitucional ao uso de redes sociais. A publicação oficial em diário não impede a comunicação ativa em outros canais, que amplia a transparência."
+        }
+      ],
+      "pegadinhaFCC": "Tratar a publicidade como absoluta (divulgar tudo, inclusive dados pessoais) ou como promoção institucional personalizada. O caminho é informar e orientar, sem promoção pessoal e com respeito aos dados protegidos.",
+      "resumoFlashcard": {
+        "pergunta": "Quais limites constitucionais orientam a comunicação institucional de um tribunal de contas?",
+        "resposta": "Caráter educativo, informativo ou de orientação social, sem promoção pessoal (CF/88, art. 37, § 1º), com respeito ao sigilo legal e à proteção de dados pessoais (art. 5º, X e XXXIII; LAI, art. 31; LGPD)."
+      },
+      "conceitosChave": ["Publicidade oficial sem promoção pessoal", "TCE-GO: comunicação institucional"],
+      "fundamentacao": "CF/88, art. 5º, X e XXXIII, e art. 37, caput e § 1º; Lei 12.527/2011, art. 31; Lei 13.709/2018; Resolução Administrativa TCE-GO nº 19/2024 (texto não conferido).",
+      "revisarFonteOficial": true
+    },
+    {
+      "id": "leg-inst-030",
+      "materiaSlug": "legislacao-institucional",
+      "subtopico": "CF/88: fiscalização contábil, financeira e orçamentária (arts. 70 a 75)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Sobre a organização e a composição dos Tribunais de Contas segundo a Constituição Federal, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em revisão para a prova, um candidato compara o Tribunal de Contas da União com os Tribunais de Contas dos Estados, conforme os arts. 73 e 75 da Constituição Federal. Considere as afirmativas abaixo.",
+        "A respeito das regras constitucionais de composição, requisitos e relatórios dos Tribunais de Contas (arts. 71, 73 e 75 da Constituição Federal), considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O Tribunal de Contas da União é integrado por nove Ministros, tem sede no Distrito Federal e jurisdição em todo o território nacional.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a literalidade do art. 73, caput, que também atribui ao TCU quadro próprio de pessoal e, no que couber, as atribuições do art. 96."
+        },
+        {
+          "texto": "Os Ministros do TCU devem ter mais de trinta e cinco e menos de setenta anos de idade e mais de dez anos de exercício de função ou atividade profissional que exija notórios conhecimentos jurídicos, contábeis, econômicos e financeiros ou de administração pública.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O art. 73, § 1º, com a redação da EC 122/2022, fixa a idade entre 35 e 70 anos; antes, o limite superior era 65."
+        },
+        {
+          "texto": "Dois terços dos Ministros do TCU são escolhidos pelo Presidente da República, com aprovação do Senado Federal.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O Presidente escolhe um terço, com aprovação do Senado; os outros dois terços são escolhidos pelo Congresso Nacional (art. 73, § 2º)."
+        },
+        {
+          "texto": "As Constituições estaduais disporão sobre os Tribunais de Contas respectivos, que serão integrados por sete Conselheiros.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o parágrafo único do art. 75, base da composição do TCE-GO."
+        },
+        {
+          "texto": "O Tribunal de Contas da União encaminhará ao Congresso Nacional, semestralmente, relatório de suas atividades.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O art. 71, § 4º, determina o envio de relatório trimestral e anualmente."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que inverte a proporção de escolha dos Ministros (o Presidente indica um terço), e omite a II, que reproduz o art. 73, § 1º."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Combina a afirmativa II, verdadeira, com as duas falsas (III e V) e descarta a I e a IV, que são literalidade constitucional."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a afirmativa II, verdadeira. Costuma ser escolhida por quem memorizou o limite de 65 anos, anterior à EC 122/2022."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (art. 73, caput), a II (art. 73, § 1º, com idade entre 35 e 70 anos desde a EC 122/2022) e a IV (art. 75, parágrafo único). A III é falsa porque o Presidente escolhe um terço dos Ministros, e a V, porque o relatório é trimestral e anual (art. 71, § 4º).",
+          "versaoInvertidaFalsa": "Dois terços dos Ministros do TCU são escolhidos pelo Presidente da República, com aprovação do Senado Federal, e um terço pelo Congresso Nacional."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa V é falsa: a periodicidade do relatório do art. 71, § 4º, é trimestral e anual, e não semestral. As afirmativas I, II e IV estão corretas, mas a inclusão da V invalida a combinação."
+        }
+      ],
+      "pegadinhaFCC": "Inverter as frações de escolha dos Ministros (1/3 Presidente, 2/3 Congresso), usar o limite de idade antigo (65) e trocar a periodicidade do relatório (trimestral e anual).",
+      "resumoFlashcard": {
+        "pergunta": "Como se compõem o TCU e os TCEs segundo a CF/88?",
+        "resposta": "TCU: nove Ministros, 1/3 escolhidos pelo Presidente com aprovação do Senado (dois dentre auditores e MP de Contas) e 2/3 pelo Congresso, com idade entre 35 e 70 anos. TCEs: sete Conselheiros (art. 75, parágrafo único)."
+      },
+      "conceitosChave": ["Simetria (art. 75)", "TCU: composição e requisitos"],
+      "fundamentacao": "CF/88, art. 71, § 4º; art. 73, caput e §§ 1º e 2º (redação da EC 122/2022); art. 75, parágrafo único."
+    }
+  ]
+}
