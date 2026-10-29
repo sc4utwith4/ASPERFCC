@@ -1,0 +1,638 @@
+{
+  "materiaSlug": "engenharia-software",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "eng-sw-041",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Abordagens preditiva, iterativa, incremental e adaptativa",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "O Agile Practice Guide (PMI e Agile Alliance, 2017) compara os ciclos de vida pela forma de tratar requisitos, atividades e entregas e pelo objetivo predominante. No ciclo de vida ……, as atividades se repetem até que a solução esteja correta, mas há uma única entrega, e o objetivo é a correção da solução. No ciclo de vida ……, as atividades são executadas uma vez para cada incremento, com entregas menores e frequentes, e o objetivo é a velocidade. No ciclo de vida ……, as atividades se repetem e as entregas são pequenas e frequentes, com o objetivo de gerar valor para o cliente por meio de entregas e feedback frequentes. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao preparar um treinamento sobre abordagens de desenvolvimento para a equipe de TI de um Tribunal de Contas, um técnico resumiu as características dos ciclos de vida descritas no Agile Practice Guide (2017). Ciclo ……: atividades repetidas até que a solução esteja correta, entrega única, foco na correção da solução. Ciclo ……: atividades executadas uma vez por incremento, entregas menores e frequentes, foco em velocidade. Ciclo ……: atividades repetidas e entregas pequenas e frequentes, foco no valor para o cliente obtido com entregas e feedback frequentes. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere a caracterização dos ciclos de vida proposta no Agile Practice Guide, do PMI e da Agile Alliance. O ciclo …… busca a correção da solução: repete as atividades até acertar, mas entrega o produto uma única vez. O ciclo …… busca velocidade: executa as atividades uma vez para cada incremento e faz entregas menores e frequentes. O ciclo …… busca valor para o cliente: repete as atividades e faz entregas pequenas e frequentes, colhendo feedback a cada uma. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "incremental − iterativo − ágil",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois primeiros ciclos. É o iterativo que repete as atividades até a solução ficar correta e faz uma única entrega; o incremental executa as atividades uma vez por incremento e entrega partes menores com frequência, buscando velocidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "iterativo − ágil − incremental",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Troca as duas últimas lacunas. A segunda descreve atividades executadas uma única vez para cada incremento, marca do ciclo incremental. O ágil é o que combina a repetição das atividades com entregas pequenas e frequentes, com foco no valor para o cliente, como descreve a terceira lacuna."
+        },
+        {
+          "id": "opt-3",
+          "texto": "iterativo − incremental − ágil",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na Tabela 3-1 do Agile Practice Guide, o ciclo iterativo tem requisitos dinâmicos, repete as atividades até que a solução esteja correta e faz uma única entrega, buscando a correção da solução. O incremental executa as atividades uma vez para cada incremento e faz entregas menores e frequentes, buscando velocidade. O ágil combina os dois (repete e incrementa), com entregas pequenas e frequentes e foco no valor para o cliente. O preditivo, ausente das lacunas, tem requisitos fixos, entrega única e foco em gerenciar o custo.",
+          "versaoInvertidaFalsa": "incremental − iterativo − ágil, pois é o ciclo incremental que repete as atividades até a solução estar correta e faz uma única entrega ao final."
+        },
+        {
+          "id": "opt-4",
+          "texto": "preditivo − incremental − ágil",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No ciclo preditivo, os requisitos são fixos, as atividades são executadas uma única vez para todo o projeto e o objetivo é gerenciar o custo. Ele não repete atividades até acertar a solução; a entrega única, comum ao preditivo e ao iterativo, é a isca da alternativa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "iterativo − incremental − preditivo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O preditivo faz uma única entrega e tem foco em custo, sem entregas pequenas e frequentes nem feedback a cada entrega. A terceira lacuna descreve o ciclo ágil, que o PMBOK 7 chama de abordagem adaptativa."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve os ciclos pelo objetivo e pela frequência de entrega, sem nomeá-los. A armadilha é trocar iterativo e incremental: o iterativo repete as atividades, mas entrega uma única vez; o incremental entrega partes com frequência, executando as atividades uma vez por incremento; o ágil reúne as duas coisas.",
+      "resumoFlashcard": {
+        "pergunta": "Segundo o Agile Practice Guide, qual é o objetivo predominante de cada ciclo de vida?",
+        "resposta": "Preditivo: gerenciar o custo, com requisitos fixos e entrega única. Iterativo: a correção da solução, repetindo atividades com entrega única. Incremental: velocidade, com entregas menores e frequentes. Ágil: valor para o cliente, com entregas frequentes e feedback."
+      },
+      "conceitosChave": ["Ciclos de vida: iterativo × incremental", "Abordagem adaptativa (ágil)"],
+      "fundamentacao": "PMI & Agile Alliance, Agile Practice Guide (2017), cap. 3, Tabela 3-1 (características das quatro categorias de ciclo de vida: preditivo, iterativo, incremental e ágil); PMI, Guia PMBOK, 7ª ed. (2021), domínio de desempenho 'Abordagem de desenvolvimento e ciclo de vida'."
+    },
+    {
+      "id": "eng-sw-042",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Revisão de código, refatoração e dívida técnica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Durante a revisão de um pull request no sistema de cálculo de débitos de um Tribunal de Contas, o revisor registrou duas observações. Na primeira, o método calcularEncargos(), da classe Notificacao, lê seis atributos da classe Debito e quase nenhum dado da própria classe. Na segunda, cada ajuste na regra de arredondamento de valores tem exigido pequenas alterações em sete classes espalhadas por pacotes diferentes. Segundo o catálogo de Martin Fowler (Refactoring, 2ª ed.), os maus cheiros descritos e o tratamento indicado para cada um são, respectivamente,",
+      "variantesEnunciado": [
+        "Em uma sessão de revisão de código do sistema de prestação de contas de um órgão de controle externo, foram apontados dois problemas. O método totalizarRepasses(), da classe Relatorio, acessa repetidamente dados e métodos da classe Convenio e quase nenhum dado da própria classe. Além disso, sempre que muda a regra de formatação do número do processo, a equipe precisa fazer pequenas edições em várias classes de módulos distintos. Segundo o catálogo de Martin Fowler (Refactoring, 2ª ed.), os maus cheiros descritos e o tratamento indicado para cada um são, respectivamente,",
+        "Ao analisar a dívida técnica do sistema de protocolo de um Tribunal de Contas, um técnico constatou que a função validarPrazo(), da classe Tramitacao, trabalha quase só com dados da classe Prazo, e que qualquer alteração na política de contagem de feriados obriga a mexer, a cada vez, em vários arquivos de camadas diferentes. Segundo o catálogo de Martin Fowler (Refactoring, 2ª ed.), os maus cheiros descritos e o tratamento indicado para cada um são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "inveja de recursos (feature envy), resolvida movendo a função para a classe cujos dados ela usa; e alteração divergente (divergent change), resolvida dividindo o módulo em partes com responsabilidades distintas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está certa, mas a segunda descreve a alteração divergente (divergent change), que é o cheiro inverso: um mesmo módulo é alterado por vários motivos diferentes e deve ser dividido. No caso, uma única mudança se espalha por várias classes, o que caracteriza a cirurgia com espingarda."
+        },
+        {
+          "id": "opt-2",
+          "texto": "inveja de recursos (feature envy), resolvida movendo a função para a classe cujos dados ela usa; e cirurgia com espingarda (shotgun surgery), resolvida reunindo em um só módulo o comportamento disperso.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Quando uma função se interessa mais pelos dados de outra classe do que pelos da própria, há inveja de recursos (feature envy), e Fowler indica Mover Função (Move Function), às vezes precedida de Extrair Função, para levá-la aonde estão os dados. Quando uma única mudança obriga a pequenas edições em muitas classes, há cirurgia com espingarda (shotgun surgery), tratada com Mover Função e Mover Campo, ou Combinar Funções em Classe, para concentrar o comportamento em um só módulo. Como mudam só a estrutura, essas refatorações devem preservar o comportamento observável, conferido pelos testes.",
+          "versaoInvertidaFalsa": "Quando uma única mudança obriga a pequenas edições em muitas classes, há alteração divergente (divergent change), tratada dividindo cada classe afetada em classes menores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "alteração divergente (divergent change), resolvida movendo a função para a classe cujos dados ela usa; e inveja de recursos (feature envy), resolvida reunindo em um só módulo o comportamento disperso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os nomes estão trocados. A alteração divergente é um módulo alterado por motivos variados, e não uma função interessada nos dados de outra classe; a inveja de recursos, por sua vez, não descreve uma mudança espalhada por várias classes. Os tratamentos combinam com os sintomas, mas os cheiros não."
+        },
+        {
+          "id": "opt-4",
+          "texto": "classe grande (large class), resolvida extraindo uma superclasse comum às duas classes; e código duplicado (duplicated code), resolvido extraindo uma função em cada uma das classes afetadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nada indica classe grande: o problema é a função usar mais dados alheios do que próprios, e extrair uma superclasse não a aproxima desses dados. A segunda parte também falha, pois extrair uma função em cada classe mantém a regra espalhada e a mudança continua exigindo edições em todas elas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "generalidade especulativa (speculative generality), resolvida eliminando parâmetros e ganchos sem uso; e cirurgia com espingarda (shotgun surgery), resolvida criando subclasses em cada pacote afetado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalidade especulativa é código criado para necessidades futuras que não se concretizaram (ganchos, parâmetros, classes abstratas sem uso), o que não corresponde à primeira observação. A segunda parte acerta o cheiro, mas erra o tratamento: criar subclasses em cada pacote aumenta a dispersão, em vez de reunir o comportamento."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a cirurgia com espingarda pela alteração divergente, que é o seu espelho: na primeira, uma mudança se espalha por muitas classes; na segunda, uma classe muda por muitos motivos. A alternativa-isca acerta a primeira metade para atrair quem lê só o começo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre cirurgia com espingarda (shotgun surgery) e alteração divergente (divergent change)?",
+        "resposta": "Na cirurgia com espingarda, uma única mudança exige pequenas edições em muitas classes, e o tratamento é reunir o comportamento em um módulo. Na alteração divergente, um mesmo módulo é alterado por vários motivos diferentes, e o tratamento é dividi-lo por responsabilidade."
+      },
+      "conceitosChave": ["Refatoração: maus cheiros", "Revisão de código"],
+      "fundamentacao": "Fowler, Refactoring: Improving the Design of Existing Code, 2ª ed. (2018), cap. 3, 'Bad Smells in Code' (Feature Envy, Shotgun Surgery, Divergent Change, Speculative Generality, Large Class, Duplicated Code), e catálogo de refatorações (Move Function, Move Field, Combine Functions into Class, Extract Function)."
+    },
+    {
+      "id": "eng-sw-043",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Kanban, Lean Software Development e XP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas decidiu adotar práticas da Programação Extrema (XP), de Kent Beck, no desenvolvimento do sistema de gestão de convênios. Antes de começar, o coordenador listou entendimentos sobre o método. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em uma oficina sobre métodos ágeis para servidores da área de sistemas de um órgão de controle externo, o instrutor apresentou algumas afirmações sobre a Programação Extrema (XP). Considere as afirmativas abaixo.",
+        "Considere que a unidade de desenvolvimento de um Tribunal de Contas avalia incorporar práticas do XP (Extreme Programming) ao seu processo de trabalho e reuniu entendimentos para discussão. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Na programação em par, dois desenvolvedores trabalham juntos no mesmo código, alternando os papéis de quem digita e de quem acompanha, o que funciona como uma revisão contínua do código.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A programação em par é prática do XP: um desenvolvedor codifica enquanto o outro revisa e pensa na estratégia, com troca frequente de papéis, o que equivale a uma revisão de código em tempo real."
+        },
+        {
+          "texto": "A integração contínua prevista no XP consiste em reunir o código de todos os pares uma única vez, ao final de cada iteração, quando todas as histórias planejadas estiverem concluídas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. No XP, a integração contínua ocorre várias vezes ao dia: cada par integra e testa suas mudanças assim que conclui uma tarefa, evitando a integração tardia e dolorosa."
+        },
+        {
+          "texto": "O design simples recomenda projetar desde o início as funcionalidades que provavelmente serão necessárias no futuro, para evitar retrabalho quando elas forem solicitadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O design simples atende apenas aos requisitos atuais, com o menor número de elementos possível. Construir por antecipação contraria o princípio YAGNI ('você não vai precisar disso'), que nasceu no XP."
+        },
+        {
+          "texto": "Pela propriedade coletiva do código, qualquer par pode alterar qualquer parte do sistema quando necessário, apoiado pelos testes automatizados e pelos padrões de codificação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Na propriedade coletiva, o código pertence à equipe: qualquer pessoa pode melhorá-lo em qualquer ponto, o que é viável graças aos testes automatizados, à integração contínua e aos padrões de codificação."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que é falsa: no XP, a integração é feita várias vezes ao dia, e não uma única vez ao final da iteração. As afirmativas I e IV estão corretas, mas a inclusão da II invalida a alternativa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa, pois o design simples não antecipa funcionalidades futuras, conforme o princípio YAGNI. Além disso, a alternativa omite a IV, que descreve corretamente a propriedade coletiva do código."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas: a II adia a integração para o fim da iteração, quando o XP integra várias vezes ao dia, e a III defende projetar por antecipação, o oposto do design simples."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I, pois a programação em par mantém dois desenvolvedores sobre o mesmo código, com troca de papéis, e funciona como revisão contínua; e a IV, pois a propriedade coletiva permite que qualquer par altere qualquer parte do código, com a segurança dada pelos testes e pelos padrões de codificação. A II é falsa porque o XP integra o código várias vezes ao dia, e a III é falsa porque o design simples atende só ao que é necessário agora (YAGNI).",
+          "versaoInvertidaFalsa": "Pela propriedade coletiva do código, cada módulo do sistema tem um único par responsável, o único autorizado a alterá-lo, o que preserva a qualidade do design."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV estão corretas, mas a III não: projetar desde já o que provavelmente será necessário é o que o YAGNI combate. No XP, o design é mantido simples e evolui por meio da refatoração."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve as práticas com o sentido invertido: integração adiada para o fim da iteração (no XP, ela ocorre várias vezes ao dia) e design antecipado (o XP prega design simples e YAGNI). Quem associa qualidade a planejar tudo antes cai na III.",
+      "resumoFlashcard": {
+        "pergunta": "Quais práticas do XP sustentam a qualidade do código sem depender de uma fase separada de revisão?",
+        "resposta": "Programação em par, que funciona como revisão contínua; TDD e testes automatizados; refatoração; integração contínua várias vezes ao dia; padrões de codificação e propriedade coletiva, que permite a qualquer par melhorar qualquer parte do código."
+      },
+      "conceitosChave": ["XP: práticas", "DRY, KISS e YAGNI"],
+      "fundamentacao": "Beck, Extreme Programming Explained: Embrace Change, 1ª ed. (1999), descrição das práticas (design simples, testes, refatoração, programação em par, propriedade coletiva, integração contínua e padrões de codificação); 2ª ed. (2004, com Cynthia Andres)."
+    },
+    {
+      "id": "eng-sw-044",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Engenharia de requisitos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Na etapa de validação dos requisitos de um sistema hipotético de gestão de diárias e passagens de um Tribunal de Contas, a equipe reuniu entendimentos sobre verificação, validação e qualidade dos requisitos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Antes de aprovar a baseline de requisitos de um sistema de acompanhamento de deliberações, um técnico de controle externo revisou conceitos de verificação e de validação de requisitos. Considere as afirmativas abaixo.",
+        "Considere que a equipe responsável pela especificação de um novo portal de serviços de um órgão de controle externo preparou um material de apoio sobre validação de requisitos para os analistas. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O requisito 'o sistema deve responder rapidamente e ser fácil de usar' está adequado para a validação como requisito não funcional, pois expressa com clareza as qualidades esperadas pelos usuários.",
+          "verdadeira": false,
+          "explicacao": "Falsa. 'Rapidamente' e 'fácil de usar' não são verificáveis. Um requisito não funcional precisa de métrica, como tempo de resposta máximo em determinado percentual das requisições ou tempo de treinamento para uso."
+        },
+        {
+          "texto": "A verificação procura responder se o produto está sendo construído corretamente, isto é, conforme a especificação, ao passo que a validação procura responder se está sendo construído o produto certo, que atende às reais necessidades dos usuários.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a distinção clássica de Boehm: verificação confere a conformidade com a especificação; validação confere se o sistema atende ao que o cliente realmente precisa."
+        },
+        {
+          "texto": "A verificação de realismo avalia se os requisitos podem ser implementados com a tecnologia, o orçamento e o prazo disponíveis para o desenvolvimento.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Entre as verificações da validação de requisitos, o realismo confere a viabilidade técnica, orçamentária e de prazo do que foi especificado."
+        },
+        {
+          "texto": "A verificação de consistência examina se o documento de requisitos contém todas as funções e restrições pretendidas pelos usuários do sistema.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O texto descreve a verificação de completude. A de consistência busca requisitos conflitantes ou contraditórios entre si."
+        },
+        {
+          "texto": "A geração de casos de teste é técnica de validação de requisitos, pois a dificuldade em elaborar testes para um requisito costuma revelar que ele é ambíguo ou de difícil implementação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sommerville aponta a geração de casos de teste, ao lado das revisões e da prototipação, como técnica de validação: se é difícil projetar o teste, o requisito provavelmente precisa ser reconsiderado."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "II, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a II (distinção de Boehm entre verificação, conformidade com a especificação, e validação, atendimento às necessidades reais), a III (realismo: viabilidade técnica, orçamentária e de prazo) e a V (a geração de casos de teste revela requisitos ambíguos ou inviáveis). A I é falsa porque 'rapidamente' e 'fácil de usar' não são verificáveis sem métrica, e a IV é falsa porque descreve a verificação de completude; a de consistência procura conflitos entre requisitos.",
+          "versaoInvertidaFalsa": "A verificação procura responder se está sendo construído o produto certo, que atende às necessidades dos usuários, ao passo que a validação confere se o produto está conforme a especificação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I é falsa: um requisito não funcional sem métrica não pode ser verificado e, portanto, não está pronto para validação. A alternativa também omite a V, que descreve corretamente a geração de casos de teste como técnica de validação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa, pois troca consistência por completude: verificar se estão presentes todas as funções e restrições pretendidas é a completude, enquanto a consistência procura conflitos. A alternativa ainda omite a III, verdadeira."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III e a V são verdadeiras, mas a II também é: verificação responde se o produto está sendo construído corretamente, e validação, se é o produto certo. A omissão da II torna a alternativa incompleta."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as duas falsas: a I aceita um requisito não funcional vago, sem métrica, e a IV atribui à verificação de consistência o papel da verificação de completude. Além disso, omite a III, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a definição de consistência (ausência de conflitos) pela de completude (todas as funções e restrições pretendidas) e apresenta um requisito vago como se estivesse pronto. Requisito não funcional precisa de métrica para ser verificável.",
+      "resumoFlashcard": {
+        "pergunta": "Quais verificações Sommerville aplica na validação de requisitos?",
+        "resposta": "Validade (atende às necessidades reais), consistência (sem conflitos entre requisitos), completude (todas as funções e restrições pretendidas), realismo (implementável com a tecnologia, o orçamento e o prazo disponíveis) e verificabilidade (é possível testá-lo). Técnicas: revisões, prototipação e geração de casos de teste."
+      },
+      "conceitosChave": ["Validação de requisitos", "Verificação × validação", "Requisitos: funcionais × não funcionais"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., cap. 4, seções sobre requisitos não funcionais (métricas para especificá-los) e validação de requisitos (verificações de validade, consistência, completude, realismo e verificabilidade; revisões, prototipação e geração de casos de teste); Boehm, Software Engineering Economics (1981), verificação × validação."
+    },
+    {
+      "id": "eng-sw-045",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Histórias de usuário, casos de uso e critérios de aceite",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No desenvolvimento orientado a comportamento (BDD), os critérios de aceite das histórias de usuário são frequentemente escritos como cenários na sintaxe Gherkin, com as palavras-chave Dado, Quando e Então. Essas cláusulas descrevem, respectivamente,",
+      "variantesEnunciado": [
+        "A equipe de TI de um Tribunal de Contas passou a escrever os critérios de aceite das histórias do sistema de protocolo como cenários na sintaxe Gherkin, para automatizá-los com uma ferramenta de BDD. Nesses cenários, as cláusulas Dado, Quando e Então descrevem, respectivamente,",
+        "Considere um critério de aceite redigido no formato Dado/Quando/Então (Given/When/Then), comum no BDD e na linguagem Gherkin. Nesse formato, as cláusulas Dado, Quando e Então descrevem, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o papel do usuário, o objetivo que ele deseja alcançar e o benefício esperado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Papel, objetivo e benefício são os elementos do modelo de redação da história de usuário ('Como <papel>, quero <objetivo>, para <benefício>'), e não das cláusulas de um cenário Gherkin. História e critério de aceite se complementam, mas têm estruturas diferentes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a ação executada pelo usuário, o contexto em que ela ocorre e a mensagem de erro esperada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ação é descrita pelo 'Quando', e não pelo 'Dado', que fixa o contexto. Além disso, o 'Então' descreve qualquer resultado esperado, e não necessariamente uma mensagem de erro."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os dados de entrada, o processamento interno e os registros gravados no banco.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Gherkin descreve comportamento em linguagem de negócio, e não o processamento interno. O 'Então' deve expressar um resultado observável fora do sistema (tela, relatório, mensagem); conferir diretamente registros no banco é detalhe de implementação, desaconselhado na escrita de cenários."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o contexto ou estado inicial, o resultado esperado e a ação que o usuário executa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas últimas cláusulas: o 'Quando' traz a ação ou o evento, e o 'Então', o resultado esperado. A ordem Dado, Quando, Então reflete contexto, gatilho e consequência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o contexto ou estado inicial, a ação ou evento que ocorre e o resultado esperado observável.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No Gherkin, 'Dado' (Given) estabelece o contexto ou estado inicial, 'Quando' (When) descreve a ação ou o evento que dispara o comportamento e 'Então' (Then) define o resultado esperado, que deve ser observável pelo usuário ou por outro sistema. Cada cenário vira um critério de aceite verificável e, com ferramentas de BDD, um teste automatizado; 'E' e 'Mas' apenas encadeiam passos da mesma cláusula.",
+          "versaoInvertidaFalsa": "Na sintaxe Gherkin, a cláusula 'Dado' descreve a ação executada pelo usuário, e a cláusula 'Quando' estabelece o contexto ou estado inicial do cenário."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde a estrutura do cenário Gherkin (contexto, ação, resultado) com a do modelo de redação da história de usuário (papel, objetivo, benefício) e troca a ordem entre ação e resultado.",
+      "resumoFlashcard": {
+        "pergunta": "O que descrevem as cláusulas Dado, Quando e Então de um cenário Gherkin?",
+        "resposta": "Dado: o contexto ou estado inicial. Quando: a ação ou o evento que dispara o comportamento. Então: o resultado esperado, observável fora do sistema. Cada cenário é um critério de aceite que pode ser automatizado."
+      },
+      "conceitosChave": ["Critérios de aceite: Gherkin/BDD", "TDD × BDD"],
+      "fundamentacao": "Cucumber, Gherkin Reference (palavras-chave Given, When, Then, And e But; o resultado deve estar em saída observável); North, 'Introducing BDD' (2006); Cohn, User Stories Applied (2004), sobre a confirmação das histórias por critérios de aceite."
+    },
+    {
+      "id": "eng-sw-046",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Arquitetura: camadas, SOA, microsserviços e eventos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas vai reestruturar o sistema de cadastro de jurisdicionados segundo o estilo arquitetural em camadas, com apresentação, negócio e persistência. Sobre esse estilo, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Na revisão da arquitetura de um sistema hipotético de gestão de auditorias, organizado nas camadas de apresentação, regras de negócio e acesso a dados, um técnico reuniu alguns entendimentos. Considere as afirmativas abaixo.",
+        "Um órgão de controle externo pretende padronizar seus sistemas internos no estilo arquitetural em camadas (apresentação, negócio e persistência) e discute as consequências dessa escolha. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Em uma arquitetura de camadas fechadas, a camada de apresentação pode acessar diretamente a camada de persistência sempre que a regra de negócio for trivial, sem passar pela camada intermediária.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Em camadas fechadas (estritas), cada camada só pode usar a camada imediatamente inferior. Saltar a camada de negócio é característica de camadas abertas, que trocam isolamento por simplicidade ou desempenho."
+        },
+        {
+          "texto": "Camada lógica (layer) e camada física (tier) são conceitos distintos: um sistema organizado em três camadas lógicas pode ser implantado inteiramente em um único servidor.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Layer é a organização lógica do código por responsabilidade; tier é a distribuição física em nós de execução. Um sistema de três camadas lógicas pode ter um, dois ou três tiers."
+        },
+        {
+          "texto": "Com camadas fechadas, uma mudança na tecnologia de persistência fica isolada da camada de apresentação, que não acessa a persistência diretamente; no máximo, a camada de negócio, que usa os serviços da persistência, pode ser afetada.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o isolamento proporcionado pelas camadas fechadas: como a apresentação não conhece a persistência, mudanças nesta ficam contidas nela ou, no máximo, chegam à camada de negócio."
+        },
+        {
+          "texto": "No estilo em camadas, recomenda-se que a camada de persistência chame diretamente classes da camada de apresentação para atualizar as telas, pois isso reduz o acoplamento entre as camadas.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Cada camada usa serviços da inferior e oferece serviços à superior; as camadas inferiores não dependem das superiores. Notificações para cima, quando necessárias, usam abstrações como callbacks ou eventos."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a I, que descreve camadas abertas, e não fechadas: em camadas fechadas, a apresentação não pode saltar a camada de negócio, ainda que a regra seja trivial. As afirmativas II e III estão corretas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II é verdadeira: layer é divisão lógica de responsabilidades, e tier é divisão física de implantação, de modo que três camadas lógicas podem rodar em um único servidor. A III também: com camadas fechadas, cada camada só usa a imediatamente inferior, e a apresentação fica isolada de mudanças na persistência. A I é falsa porque contornar a camada intermediária é próprio de camadas abertas, e a IV é falsa porque a dependência segue de cima para baixo; uma camada inferior que chama a superior cria acoplamento nos dois sentidos.",
+          "versaoInvertidaFalsa": "Camada lógica (layer) e camada física (tier) são sinônimos: um sistema organizado em três camadas lógicas precisa ser implantado em três servidores distintos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas: a I confunde camadas fechadas com abertas, e a IV inverte o sentido das dependências, que devem ir das camadas superiores para as inferiores."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a III estão corretas, mas a IV não: a camada de persistência chamar diretamente a apresentação cria dependência de baixo para cima e aumenta o acoplamento, em vez de reduzi-lo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II é verdadeira, mas a III também é: o isolamento entre a apresentação e a persistência é justamente o principal benefício das camadas fechadas."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui às camadas fechadas a possibilidade de saltar camadas, que é própria das abertas, e mistura camada lógica (layer) com camada física (tier).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre camadas fechadas e abertas e entre layer e tier?",
+        "resposta": "Em camadas fechadas, cada camada só usa a imediatamente inferior, o que isola mudanças; em uma camada aberta, a camada de cima pode contorná-la e acessar as de baixo. Layer é divisão lógica de responsabilidades; tier é divisão física de implantação."
+      },
+      "conceitosChave": ["Arquitetura em camadas", "Layer × tier"],
+      "fundamentacao": "Richards, Software Architecture Patterns (O'Reilly, 2015), cap. 1, 'Layered Architecture' (camadas fechadas e abertas, camadas de isolamento); Buschmann et al., Pattern-Oriented Software Architecture, v. 1 (1996), padrão Layers; Fowler, Patterns of Enterprise Application Architecture (2002), cap. 1 (layers × tiers)."
+    },
+    {
+      "id": "eng-sw-047",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Modelagem com UML e BPMN",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No mapeamento em BPMN 2.0 de um processo de prestação de contas, um analista representou o Tribunal de Contas e o órgão jurisdicionado em pools distintas e, dentro da pool do Tribunal, criou lanes para o protocolo, a unidade técnica e o gabinete do relator. Quanto aos conectores desse diagrama, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao modelar em BPMN 2.0 o processo de fiscalização de um contrato, uma analista representou o Tribunal de Contas e a secretaria estadual jurisdicionada responsável pelo contrato em pools distintas e dividiu a pool do Tribunal em lanes para a coordenação, a equipe de auditoria e a supervisão. Quanto aos conectores desse diagrama, é correto afirmar que",
+        "Considere um diagrama BPMN 2.0 em que o Tribunal de Contas e um município fiscalizado aparecem como participantes em pools separadas, e a pool do Tribunal está dividida em lanes correspondentes a três unidades internas. Quanto aos conectores desse diagrama, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a passagem do trabalho entre lanes da pool do Tribunal exige fluxo de mensagem, pois cada lane é um participante independente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Lanes são subdivisões de uma pool, usadas para organizar responsabilidades dentro do mesmo participante, e não participantes independentes. Entre lanes da mesma pool, a passagem do trabalho usa fluxo de sequência, e o fluxo de mensagem não pode ligar dois elementos da mesma pool."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o fluxo de sequência pode ligar uma atividade do Tribunal a uma atividade do jurisdicionado, desde que passe por um gateway exclusivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fluxo de sequência não pode cruzar a fronteira de uma pool, com ou sem gateway. Gateways controlam a divergência e a convergência dentro de um processo; a interação entre participantes usa fluxo de mensagem."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a associação é o conector que indica a ordem de execução entre atividades situadas em lanes diferentes da pool do Tribunal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A associação liga artefatos, como anotações de texto, a elementos do diagrama, e a associação de dados liga objetos de dados a atividades e eventos; nenhuma delas indica ordem de execução. A ordem entre atividades, mesmo em lanes diferentes, é dada pelo fluxo de sequência."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o fluxo de sequência pode cruzar as lanes dentro da pool do Tribunal, e a troca de documentos com o jurisdicionado deve usar fluxo de mensagem.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na BPMN 2.0, o fluxo de sequência ordena os elementos de um mesmo processo e pode atravessar lanes da mesma pool, mas não pode cruzar a fronteira de uma pool. A comunicação entre participantes, representados por pools distintas, usa fluxo de mensagem, que pode ligar a fronteira da pool ou elementos dentro dela, mas nunca dois elementos da mesma pool.",
+          "versaoInvertidaFalsa": "o fluxo de mensagem pode cruzar as lanes dentro da pool do Tribunal, e a troca de documentos com o jurisdicionado deve usar fluxo de sequência."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o fluxo de mensagem só pode ligar os eventos de início e de fim das pools, e não as atividades que estão dentro delas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O fluxo de mensagem pode ligar a fronteira de uma pool ou atividades e eventos situados dentro de pools distintas; a restrição é não ligar dois elementos da mesma pool. Não há limitação a eventos de início e de fim."
+        }
+      ],
+      "pegadinhaFCC": "A banca trata lanes como se fossem participantes, para induzir o uso de fluxo de mensagem dentro da mesma pool, e sugere que um gateway permitiria ao fluxo de sequência atravessar pools. A regra: sequência dentro da pool (pode cruzar lanes); mensagem entre pools.",
+      "resumoFlashcard": {
+        "pergunta": "Na BPMN 2.0, quando usar fluxo de sequência e quando usar fluxo de mensagem?",
+        "resposta": "O fluxo de sequência ordena os elementos dentro de uma mesma pool e pode cruzar lanes, mas não a fronteira da pool. O fluxo de mensagem representa a comunicação entre participantes, ligando pools distintas, e nunca dois elementos da mesma pool."
+      },
+      "conceitosChave": ["BPMN: pools, lanes e fluxos"],
+      "fundamentacao": "OMG, Business Process Model and Notation (BPMN) 2.0.2 (2013), seções sobre Sequence Flow, Message Flow, Pools e Lanes e Associations (regras de conexão); ISO/IEC 19510:2013."
+    },
+    {
+      "id": "eng-sw-048",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Padrões de projeto (criacionais, estruturais e comportamentais)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na evolução do sistema de fiscalização de um Tribunal de Contas, a equipe precisa resolver duas situações. Na primeira, o auditor escolhe, ao gerar a amostra de processos a fiscalizar, um entre vários critérios de seleção (aleatório simples, estratificado ou por materialidade); cada critério deve ficar encapsulado em uma classe própria, intercambiável com as demais, e a classe GeradorAmostra apenas delega o cálculo ao critério recebido. Na segunda, a classe Processo deve reagir de forma diferente às operações instruir(), julgar() e arquivar() conforme a fase em que se encontra, e cada classe que representa uma fase decide para qual fase o processo passa após a operação, eliminando extensos blocos condicionais. Os padrões de projeto do catálogo GoF que atendem, respectivamente, à primeira e à segunda situação são",
+      "variantesEnunciado": [
+        "No sistema de gestão de débitos de um órgão de controle externo, há duas demandas. Na primeira, o usuário escolhe, no momento do cálculo, uma entre várias formas de atualização monetária, cada uma encapsulada em uma classe própria e intercambiável, e a classe Debito apenas delega o cálculo à forma escolhida. Na segunda, um objeto Recurso se comporta de modo diferente diante das operações admitir(), distribuir() e decidir() conforme sua situação atual, e cada classe que representa uma situação define a situação seguinte, substituindo longos blocos switch. Os padrões de projeto do catálogo GoF que atendem, respectivamente, à primeira e à segunda demanda são",
+        "Considere duas necessidades de um sistema de controle de contratos de um Tribunal de Contas. Primeira: o relatório de riscos deve poder usar, conforme a opção do auditor em tempo de execução, diferentes algoritmos de pontuação, cada um em sua própria classe, intercambiáveis entre si e cujos detalhes a classe que os utiliza desconhece. Segunda: o objeto Contrato deve alterar o comportamento de suspender(), aditar() e encerrar() conforme a fase em que está, cabendo às classes de cada fase decidir a transição para a fase seguinte. Os padrões de projeto do catálogo GoF que atendem, respectivamente, à primeira e à segunda necessidade são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Strategy e State.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Strategy define uma família de algoritmos, encapsula cada um e os torna intercambiáveis; o cliente escolhe a estratégia, e o contexto apenas delega a ela, como na seleção do critério de amostragem. O State permite que um objeto altere seu comportamento quando seu estado interno muda, como se mudasse de classe; cada estado é uma classe, e as próprias classes de estado podem definir a transição, como nas fases do processo. Os dois têm estrutura parecida e se distinguem pela intenção: no Strategy, a troca vem de fora; no State, decorre do ciclo de vida do próprio objeto.",
+          "versaoInvertidaFalsa": "State e Strategy, pois o State encapsula algoritmos intercambiáveis escolhidos pelo cliente, e o Strategy faz o objeto mudar de comportamento conforme seu estado interno."
+        },
+        {
+          "id": "opt-2",
+          "texto": "State e Strategy.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os padrões. A escolha de um algoritmo entre vários intercambiáveis, feita pelo cliente, é a intenção do Strategy; a mudança de comportamento conforme a fase interna, com transições definidas pelas classes de estado, é a do State."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Template Method e State.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Template Method fixa o esqueleto de um algoritmo em uma superclasse e deixa passos para as subclasses, isto é, varia por herança. A primeira situação pede composição: o algoritmo inteiro é escolhido em tempo de execução e delegado a um objeto, o que caracteriza o Strategy."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Strategy e Chain of Responsibility.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira parte está correta, mas o Chain of Responsibility encadeia receptores e passa a solicitação adiante até que um deles a trate, desacoplando o remetente do receptor. Ele não modela fases de um objeto nem transições entre elas, que são a intenção do State."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Factory Method e Memento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Factory Method delega a subclasses a decisão de qual objeto criar e não encapsula algoritmos intercambiáveis. O Memento captura e restaura um estado anterior do objeto, como em um 'desfazer', sem alterar o comportamento das operações conforme a fase."
+        }
+      ],
+      "pegadinhaFCC": "Strategy e State têm diagramas de classes quase idênticos, e a banca explora isso invertendo os nomes. O critério é a intenção: algoritmo escolhido de fora e intercambiável é Strategy; comportamento que muda com a fase interna, com transições entre estados, é State.",
+      "resumoFlashcard": {
+        "pergunta": "Como diferenciar os padrões Strategy e State?",
+        "resposta": "Ambos delegam a um objeto de uma hierarquia, mas o Strategy encapsula algoritmos intercambiáveis, normalmente escolhidos pelo cliente, que não se conhecem entre si. No State, o comportamento muda conforme o estado interno do objeto, e as próprias classes de estado costumam definir a transição para o estado seguinte."
+      },
+      "conceitosChave": ["GoF: Strategy × State", "GoF: padrões comportamentais"],
+      "fundamentacao": "Gamma, Helm, Johnson e Vlissides, Padrões de Projeto (1994), cap. 5, padrões comportamentais Strategy e State (intenção, aplicabilidade e implementação, incluindo quem define as transições de estado), Template Method, Chain of Responsibility e Memento; cap. 3, Factory Method."
+    },
+    {
+      "id": "eng-sw-049",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Testes de software e automação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Um campo do sistema de prestação de contas de um Tribunal de Contas deve aceitar apenas o mês de referência, um número inteiro de 1 a 12. Considere somente entradas inteiras e as três partições de equivalência definidas pela regra: valores menores que 1, valores de 1 a 12 e valores maiores que 12. Segundo o syllabus CTFL 4.0 do ISTQB, o menor número de casos de teste, com um valor por caso, capaz de atingir 100% de cobertura das partições de equivalência e 100% de cobertura da análise de valor-limite de dois valores é",
+      "variantesEnunciado": [
+        "Na tela de envio de balancetes de um sistema hipotético de controle externo, o campo 'mês de competência' aceita somente inteiros de 1 a 12. Considerando apenas entradas inteiras e as partições 'menor que 1', 'de 1 a 12' e 'maior que 12', o menor número de casos de teste, com um valor por caso, que atinge 100% de cobertura das partições de equivalência e 100% de cobertura da análise de valor-limite de dois valores, segundo o syllabus CTFL 4.0 do ISTQB, é",
+        "Uma analista de testes precisa projetar casos para um campo que recebe o número do mês (inteiro de 1 a 12) em um relatório gerencial de um Tribunal de Contas. Tomando apenas entradas inteiras, com as partições abaixo de 1, de 1 a 12 e acima de 12, e um valor por caso de teste, o menor número de casos que garante 100% de cobertura das partições de equivalência e 100% de cobertura da análise de valor-limite de dois valores (ISTQB CTFL 4.0) é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "sete, pois aos três valores representativos das partições somam-se os quatro valores-limite.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Somar as técnicas ignora que um mesmo caso de teste pode cobrir vários itens de cobertura. Os valores 0, 1, 12 e 13 já pertencem às três partições, de modo que valores representativos adicionais são redundantes para as coberturas pedidas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "três, com um valor representativo de cada partição, como 0, 6 e 13.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Três casos atingem 100% das partições, mas não da análise de valor-limite: dos quatro valores-limite (0, 1, 12 e 13), o conjunto sugerido cobre só 0 e 13, deixando de fora 1 e 12."
+        },
+        {
+          "id": "opt-3",
+          "texto": "quatro, com os valores 0, 1, 12 e 13, que também cobrem as três partições.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo CTFL 4.0, os valores-limite são o mínimo e o máximo de cada partição ordenada: 0 (máximo da partição inferior), 1 e 12 (limites da faixa válida) e 13 (mínimo da partição superior). Na análise de dois valores, cada valor-limite é coberto junto com seu vizinho mais próximo na partição adjacente, o que resulta no conjunto {0, 1, 12, 13}. Como 0 está na partição inferior, 1 e 12 na válida e 13 na superior, esses quatro casos atingem também 100% das partições, pois um caso de teste pode cobrir mais de um item de cobertura.",
+          "versaoInvertidaFalsa": "sete, pois os casos de teste da partição de equivalência não podem ser reaproveitados para cobrir os valores-limite, e as duas técnicas devem ser somadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "seis, com os valores 0, 1, 2, 11, 12 e 13.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acrescentar os vizinhos internos 2 e 11 não é exigido pela análise de dois valores, na qual cada valor-limite é coberto junto com o vizinho mais próximo da partição adjacente. Seis casos atingem as coberturas pedidas, mas não são o menor número."
+        },
+        {
+          "id": "opt-5",
+          "texto": "dois, com os valores 1 e 12, pois apenas os limites da faixa válida são valores-limite.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os valores 1 e 12 são limites da partição válida, mas as partições inválidas também têm limites (0 e 13), que a análise de dois valores exige. Além disso, dois casos dentro da faixa válida não cobrem as partições inválidas."
+        }
+      ],
+      "pegadinhaFCC": "A banca induz a somar os casos das duas técnicas (3 + 4 = 7) ou a considerar só os limites da faixa válida. Como cada caso pode cobrir vários itens, o conjunto {0, 1, 12, 13} atende às duas coberturas ao mesmo tempo.",
+      "resumoFlashcard": {
+        "pergunta": "Na análise de valor-limite de dois valores (ISTQB CTFL 4.0), quais valores testar para uma faixa válida de 1 a 12?",
+        "resposta": "Os valores-limite são o mínimo e o máximo de cada partição: 0, 1, 12 e 13. Na técnica de dois valores, cada limite é testado com o vizinho mais próximo da partição adjacente, o que dá quatro casos, que também cobrem as três partições."
+      },
+      "conceitosChave": ["Testes: partição de equivalência e valor-limite", "Testes: caixa-branca × caixa-preta"],
+      "fundamentacao": "ISTQB, Syllabus CTFL 4.0 (2023), seções 4.2.1 (particionamento de equivalência e cobertura de partições) e 4.2.2 (análise de valor-limite de dois e de três valores e respectiva cobertura)."
+    },
+    {
+      "id": "eng-sw-050",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Atributos de qualidade de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "O serviço on-line de emissão de certidões de um Tribunal de Contas passou a receber muito mais acessos, e a equipe de TI discute como medir o desempenho e ampliar a escalabilidade da aplicação web. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Com o crescimento do número de usuários do portal de transparência de um órgão de controle externo, a equipe de arquitetura discute indicadores de desempenho e estratégias de escalabilidade. Considere as afirmativas abaixo.",
+        "Em um estudo sobre a capacidade de uma API hipotética de consulta a dados de jurisdicionados, um técnico reuniu conceitos sobre desempenho e escalabilidade de aplicações. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A escalabilidade vertical (scale up) amplia os recursos de uma mesma máquina, como processadores e memória, enquanto a horizontal (scale out) distribui a carga por mais máquinas ou instâncias.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Escalar verticalmente é usar uma máquina mais potente; escalar horizontalmente é distribuir a carga entre várias máquinas, como na arquitetura sem compartilhamento (shared-nothing)."
+        },
+        {
+          "texto": "Para escalar horizontalmente uma aplicação web atrás de um balanceador de carga, convém que as instâncias não guardem localmente o estado da sessão do usuário, mantendo-o em um repositório compartilhado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Instâncias sem estado local (stateless) são intercambiáveis: o balanceador pode enviar cada requisição a qualquer uma, e é simples acrescentar ou retirar instâncias. O estado da sessão vai para um repositório compartilhado, como um cache distribuído ou um banco de dados."
+        },
+        {
+          "texto": "Tempo de resposta e vazão (throughput) são medidas equivalentes, de modo que reduzir à metade o tempo de resposta de cada requisição sempre dobra o número de requisições atendidas por segundo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Tempo de resposta mede quanto o cliente espera por uma requisição; vazão mede quantas requisições são atendidas por unidade de tempo. Elas se relacionam, mas a vazão depende também do paralelismo e dos recursos, e a melhora de uma não se traduz proporcionalmente na outra."
+        },
+        {
+          "texto": "Para descrever o tempo de resposta, percentis como o p95 e o p99 são mais informativos do que a média, que pode esconder as requisições mais lentas, sentidas por parte dos usuários.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A média não mostra quantos usuários sofreram atrasos; percentis altos (p95, p99, a chamada latência de cauda) indicam o tempo abaixo do qual ficam 95% ou 99% das requisições e revelam os casos lentos."
+        },
+        {
+          "texto": "A escalabilidade vertical dispensa limites práticos de custo e de capacidade, por isso é a estratégia preferida quando se busca eliminar pontos únicos de falha.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A escalabilidade vertical tem teto (a maior máquina disponível) e custo que cresce mais que linearmente, e a máquina única continua sendo ponto único de falha; a redundância vem da escala horizontal."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que é falsa: tempo de resposta e vazão são métricas diferentes, e reduzir o tempo de cada requisição não dobra automaticamente a vazão, que depende também da concorrência e dos recursos disponíveis."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III e a V são falsas: vazão e tempo de resposta não são equivalentes, e a escalabilidade vertical tem limites e preserva o ponto único de falha. A alternativa ainda omite a I e a IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A I e a IV são verdadeiras, mas falta a II: manter as instâncias sem estado local de sessão é o que permite ao balanceador distribuir as requisições livremente e acrescentar ou remover instâncias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A V é falsa: crescer verticalmente esbarra no limite da maior máquina disponível e em custos crescentes, e a máquina única continua sendo ponto único de falha. Além disso, a alternativa omite a II, verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (a vertical amplia a máquina; a horizontal acrescenta máquinas ou instâncias), a II (instâncias sem estado local de sessão podem ser somadas ou retiradas e receber qualquer requisição do balanceador) e a IV (percentis altos revelam a latência de cauda que a média esconde). A III é falsa porque vazão e tempo de resposta são métricas distintas, e a V é falsa porque a escalabilidade vertical esbarra em limites de hardware e de custo e mantém a máquina única como ponto de falha.",
+          "versaoInvertidaFalsa": "Para escalar horizontalmente uma aplicação web atrás de um balanceador de carga, convém que cada instância guarde localmente o estado da sessão do usuário, dispensando um repositório compartilhado."
+        }
+      ],
+      "pegadinhaFCC": "A banca trata tempo de resposta e vazão como a mesma medida e atribui à escalabilidade vertical virtudes da horizontal, como a ausência de limites e a eliminação do ponto único de falha.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre escalabilidade vertical e horizontal?",
+        "resposta": "A vertical (scale up) amplia os recursos de uma mesma máquina e esbarra em limites de hardware e de custo, mantendo um ponto único de falha. A horizontal (scale out) acrescenta máquinas ou instâncias e funciona melhor com serviços sem estado local, atrás de um balanceador de carga."
+      },
+      "conceitosChave": ["Escalabilidade: vertical × horizontal", "Desempenho: tempo de resposta × vazão"],
+      "fundamentacao": "Kleppmann, Designing Data-Intensive Applications (O'Reilly, 2017), cap. 1, seção 'Scalability' (descrição da carga e do desempenho, percentis e latência de cauda, scaling up × scaling out); ISO/IEC 25010:2023, característica eficiência de desempenho (comportamento temporal, utilização de recursos e capacidade)."
+    }
+  ]
+}

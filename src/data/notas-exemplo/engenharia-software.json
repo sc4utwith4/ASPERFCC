@@ -1,0 +1,47 @@
+{
+  "id": "nota-eng-sw-01",
+  "materiaSlug": "engenharia-software",
+  "titulo": "Scrum segundo o Guia 2020: responsabilidades, eventos, artefatos e compromissos",
+  "subtopico": "Scrum",
+  "pistas": [
+    {
+      "pergunta": "Quais são as três responsabilidades do Time Scrum no Guia de 2020?",
+      "resposta": "Product Owner, Scrum Master e Developers. O Guia de 2020 fala em responsabilidades (accountabilities), e não em papéis, e o Time Scrum não tem subtimes nem hierarquia; costuma ter 10 pessoas ou menos."
+    },
+    {
+      "pergunta": "Pelo que o Product Owner responde e o que ele pode delegar?",
+      "resposta": "Responde pela maximização do valor do produto e pelo gerenciamento eficaz do Product Backlog (Meta do Produto, criação, ordenação e transparência dos itens). Pode delegar o trabalho, mas continua responsável. É uma pessoa, não um comitê."
+    },
+    {
+      "pergunta": "Qual é a responsabilidade central do Scrum Master?",
+      "resposta": "Estabelecer o Scrum como definido no Guia e responder pela eficácia do Time Scrum, atuando como líder que serve ao time, ao Product Owner e à organização."
+    },
+    {
+      "pergunta": "Quem pode cancelar uma Sprint e em que hipótese?",
+      "resposta": "Somente o Product Owner, quando a Meta da Sprint se torna obsoleta."
+    },
+    {
+      "pergunta": "Quais são os timeboxes dos eventos para uma Sprint de um mês?",
+      "resposta": "Sprint: até um mês. Sprint Planning: até 8 horas. Daily Scrum: 15 minutos. Sprint Review: até 4 horas. Sprint Retrospective: até 3 horas. Em Sprints mais curtas, os eventos costumam ser mais curtos."
+    },
+    {
+      "pergunta": "Qual compromisso corresponde a cada artefato?",
+      "resposta": "Product Backlog: Meta do Produto. Sprint Backlog: Meta da Sprint. Incremento: Definição de Pronto. Os compromissos reforçam a transparência e dão o foco contra o qual o progresso é medido."
+    },
+    {
+      "pergunta": "O que acontece com um item que não atende à Definição de Pronto ao fim da Sprint?",
+      "resposta": "Não pode ser liberado nem apresentado na Sprint Review e volta ao Product Backlog para consideração futura."
+    },
+    {
+      "pergunta": "O refinamento do Product Backlog é um evento do Scrum?",
+      "resposta": "Não. É uma atividade contínua de decompor e detalhar itens, sem timebox próprio. Os eventos são cinco: Sprint, Sprint Planning, Daily Scrum, Sprint Review e Sprint Retrospective."
+    }
+  ],
+  "conteudoMarkdown": "## Por que esta nota\n\nA FCC cobra o Guia do Scrum de 2020 quase ao pé da letra: quem responde pelo quê, quanto dura cada evento e qual compromisso acompanha cada artefato. As pegadinhas trocam responsabilidades entre Product Owner e Scrum Master, alteram timeboxes ou trazem termos de versões antigas.\n\n## Fundamentos em uma linha cada\n\n- **Empirismo**: decidir com base no que se observa. Pilares: ==transparência, inspeção e adaptação==.\n- **Pensamento lean**: reduzir o desperdício e focar no essencial.\n- **Valores**: compromisso, foco, abertura, respeito e coragem.\n- **Abordagem**: iterativa e incremental, para otimizar a previsibilidade e controlar o risco.\n\n## Responsabilidades do Time Scrum\n\nO Time Scrum não tem ==subtimes nem hierarquia==; é multifuncional, autogerenciável e costuma ter 10 pessoas ou menos. O Guia de 2020 fala em **responsabilidades** (accountabilities), e não em papéis.\n\n- **Product Owner**: responde pela ==maximização do valor do produto== e pelo gerenciamento eficaz do Product Backlog: comunicar a Meta do Produto, criar e ordenar os itens e garantir que o backlog seja transparente e compreendido. Pode delegar esse trabalho, mas continua responsável. É uma pessoa, não um comitê, e é o único que pode cancelar a Sprint, quando a Meta da Sprint fica obsoleta.\n- **Scrum Master**: responde por estabelecer o Scrum como descrito no Guia e pela ==eficácia do Time Scrum==. É um líder que serve: orienta o time em autogerenciamento, provoca a remoção de impedimentos e garante que os eventos aconteçam, sejam produtivos e respeitem o timebox. Também apoia o Product Owner e a organização.\n- **Developers**: criam, a cada Sprint, os elementos de um Incremento utilizável. Respondem por criar o plano da Sprint (o Sprint Backlog), instilar qualidade aderindo à Definição de Pronto, adaptar o plano todos os dias rumo à Meta da Sprint e responsabilizar-se mutuamente como profissionais.\n\n> Dica de prova: o Product Owner ordena o Product Backlog; os Developers decidem quanto trabalho cabe na Sprint e como fazê-lo; o Scrum Master zela pela eficácia do time. A Daily Scrum pertence aos Developers.\n\n## Os cinco eventos\n\nA Sprint é o contêiner dos demais eventos, e cada um é uma oportunidade formal de inspeção e adaptação.\n\n- **Sprint**: duração fixa de ==até um mês==; a seguinte começa logo após o término da anterior. Durante ela, não se fazem mudanças que ameacem a Meta da Sprint, a qualidade não diminui e o escopo pode ser renegociado com o Product Owner.\n- **Sprint Planning** (até 8 horas para Sprint de um mês): três tópicos: **por que** a Sprint é valiosa (o Time Scrum define a Meta da Sprint), **o que** pode ficar pronto (os Developers selecionam itens em conversa com o Product Owner) e **como** o trabalho será feito (os Developers planejam).\n- **Daily Scrum** (15 minutos): evento ==dos Developers==, no mesmo horário e local, para inspecionar o progresso rumo à Meta da Sprint e adaptar o Sprint Backlog. O Guia de 2020 não impõe as três perguntas clássicas. Se o Product Owner ou o Scrum Master estiverem trabalhando em itens do Sprint Backlog, participam como Developers.\n- **Sprint Review** (até 4 horas): o Time Scrum mostra os resultados aos stakeholders, e todos discutem os próximos passos. É sessão de trabalho, não apresentação formal, e não é portão de liberação: Incrementos podem ser entregues antes dela.\n- **Sprint Retrospective** (até 3 horas): o time inspeciona indivíduos, interações, processos, ferramentas e a própria Definição de Pronto, e planeja melhorias de qualidade e eficácia. ==Encerra a Sprint==.\n\nO **refinamento** do Product Backlog é atividade contínua, e não evento. Em Sprints mais curtas, os eventos costumam ser mais curtos.\n\n## Artefatos e compromissos\n\nCada artefato traz um compromisso que dá o foco contra o qual se mede o progresso.\n\n- **Product Backlog e Meta do Produto**: lista emergente e ordenada do que é preciso para melhorar o produto, única fonte do trabalho do time. A Meta do Produto é o objetivo de longo prazo; o time cumpre ou abandona uma meta antes de assumir outra.\n- **Sprint Backlog e Meta da Sprint**: o Sprint Backlog reúne a Meta da Sprint (por quê), os itens selecionados (o quê) e o plano de entrega (como). É feito pelos Developers e para eles. Se o trabalho se revelar diferente do previsto, os Developers renegociam o escopo com o Product Owner sem alterar a Meta da Sprint.\n- **Incremento e Definição de Pronto**: cada Incremento é um degrau rumo à Meta do Produto, somado aos anteriores e utilizável; vários podem surgir na mesma Sprint. A ==Definição de Pronto== descreve o estado do Incremento quando ele atende às medidas de qualidade exigidas. O item que não a atende ==não pode ser liberado nem apresentado na Sprint Review== e volta ao Product Backlog. Se a organização tem uma Definição de Pronto, ela vale como mínimo para todos os times, e vários Times Scrum no mesmo produto compartilham a mesma definição.\n\n## O que mudou em 2020 e vira pegadinha\n\n- **Developers** substituiu o antigo Time de Desenvolvimento.\n- **Responsabilidades** substituiu papéis, e **autogerenciável** substituiu auto-organizável.\n- Entrou a **Meta do Produto**, compromisso do Product Backlog.\n- A Sprint Planning ganhou o tópico **por quê**.\n- A Definição de Preparado (Definition of Ready) não existe no Guia; alternativa que a trate como obrigatória está errada.\n\n## Revisão rápida\n\n- [ ] Sei as três responsabilidades e não confundo valor do produto (Product Owner) com eficácia do time (Scrum Master).\n- [ ] Sei os cinco eventos, os timeboxes (um mês, 8 h, 15 min, 4 h e 3 h) e que a Retrospectiva encerra a Sprint.\n- [ ] Associo cada artefato ao seu compromisso: Meta do Produto, Meta da Sprint e Definição de Pronto.\n- [ ] Lembro que só o Product Owner cancela a Sprint e que refinamento não é evento.\n- [ ] Reconheço termos de versões anteriores do Guia quando aparecem nas alternativas.",
+  "sintese": "O Scrum de 2020 cabe em três responsabilidades, cinco eventos e três artefatos com seus compromissos. O Product Owner responde pelo valor e pelo Product Backlog, o Scrum Master pela eficácia do time e os Developers pelo plano da Sprint e pela qualidade. Os eventos têm timebox fixo (Sprint de até um mês, Planning de 8 h, Daily de 15 min, Review de 4 h e Retrospectiva de 3 h), e cada artefato aponta para um compromisso: Meta do Produto, Meta da Sprint e Definição de Pronto. Só o Product Owner cancela a Sprint, refinamento não é evento, e item fora da Definição de Pronto não é liberado nem apresentado: volta ao backlog.",
+  "fontes": [
+    "Schwaber, K.; Sutherland, J. Guia do Scrum (novembro de 2020), tradução oficial para o português do Brasil, scrumguides.org: seções 'Time Scrum', 'Eventos Scrum' e 'Artefatos Scrum'.",
+    "Schwaber, K.; Sutherland, J. The Scrum Guide (November 2020), versão original em inglês, scrumguides.org.",
+    "docs/pesquisa/engenharia-software.md (pesquisa e pontos de cautela desta matéria)."
+  ]
+}
