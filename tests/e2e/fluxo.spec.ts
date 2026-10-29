@@ -1,4 +1,6 @@
 /// <reference lib="dom" />
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 
 /** Coleta erros de página e de console para a asserção final de cada teste. */
@@ -193,4 +195,32 @@ test("mobile 390 px: sem rolagem horizontal nas telas principais", async ({ page
     const excesso = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(excesso, `rolagem horizontal em ${rota}`).toBeLessThanOrEqual(0);
   }
+});
+
+const CASO_01 = join(__dirname, "../../src/data/casos/caso-01.json");
+
+test("laboratório discursivo: linhas FCC, excedente desconsiderado e espelho com nota", async ({ page }) => {
+  test.skip(!existsSync(CASO_01), "casos discursivos ainda não gerados");
+  const caso = JSON.parse(readFileSync(CASO_01, "utf8")) as { titulo: string; limiteLinhas: number; respostaPadrao: string[] };
+  const erros = coletarErros(page);
+  await abrir(page, "/discursiva/caso-01");
+  await expect(page.getByRole("heading", { name: caso.titulo })).toBeVisible();
+
+  const folha = page.locator("#texto-discursiva");
+  await folha.fill(caso.respostaPadrao.join("\n"));
+  await expect(page.getByText(new RegExp(`Linhas: \\d+/${caso.limiteLinhas}`))).toBeVisible();
+  await expect(page.getByText(/seriam desconsideradas/)).toHaveCount(0);
+
+  // Texto acima do limite: o excedente é sinalizado como desconsiderado.
+  await folha.fill(`${caso.respostaPadrao.join("\n")}\n${"Parágrafo adicional para estourar o limite de linhas da folha. ".repeat(40)}`);
+  await expect(page.getByText(/linha\(s\) seriam desconsideradas/)).toBeVisible();
+
+  // Volta à resposta-padrão, corrige pelo espelho e aplica as sugestões da detecção.
+  await folha.fill(caso.respostaPadrao.join("\n"));
+  await page.getByRole("button", { name: /Finalizar e corrigir pelo espelho/ }).click();
+  await page.getByRole("button", { name: "Aplicar sugestões da detecção" }).click();
+  const nota = page.locator("p.dado").filter({ hasText: /^\d+([.,]\d)?$/ }).first();
+  await expect(nota).toBeVisible();
+  expect(Number((await nota.textContent())!.replace(",", "."))).toBeGreaterThanOrEqual(35);
+  expect(erros).toEqual([]);
 });
