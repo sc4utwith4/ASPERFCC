@@ -54,8 +54,28 @@
 - Institui o **Sandbox Estadual Permanente de IA** (capítulo VIII, art. 32 e seguintes): ambiente regulatório experimental para desenvolver, testar e implementar soluções; peso adicional a propostas com **software aberto/modelos open source/licenças permissivas**; ambiente específico para agentes autônomos de IA. O NEI-IA regulamenta, coordena e supervisiona o sandbox.
 - Fonte: goias.gov.br (PDF oficial da LC 205/2025; página do Sandbox); análises Machado Meyer e Walmar Andrade.
 
+## Verificação de 29/10/2026 (WebSearch; GNOI e Casa Civil-GO seguem fora da rede do ambiente)
+Confirmado em fonte oficial ou documento público, o que tirou o selo de 17 questões:
+- **Lei 16.168/2007 (Lei Orgânica):**
+  - art. 1º, I: parecer prévio em 60 dias do recebimento;
+  - arts. 55-A e 56: as contas do Governador reúnem os Balanços Gerais do Estado e o relatório do órgão central do controle interno (ofício da Secretaria-Geral de Governo, abr/2025);
+  - art. 73 e § 1º: regulares com ressalva, com quitação e com os motivos indicados no acórdão (acórdãos do TCE-GO em goias.gov.br);
+  - art. 84 com a redação da **Lei 23.413, de 15/5/2025**: exclui da relação ao MP Eleitoral quem teve contas irregulares sem débito e só multa (§ 1º), salvo recurso com efeito suspensivo admitido (§ 2º).
+- **Constituição do Estado de Goiás:** o art. 25 trata do controle externo e o art. 26, das competências do TCE-GO. O inciso I (parecer prévio) e o inciso II (julgamento das contas dos administradores) aparecem citados no Parecer Prévio das Contas de Governo de 2021.
+- **Lei 20.756/2020 (Estatuto):**
+  - rol de penalidades: advertência, suspensão até 90 dias, multa, demissão, cassação de aposentadoria ou disponibilidade e destituição de cargo em comissão. A CGE-GO situa o rol no art. 193 e outra compilação, no art. 192;
+  - art. 40, parágrafo único, incluído pela **Lei 22.079, de 28/6/2023**: veda a cessão de servidor em estágio probatório (Despacho PGE-GO nº 1.059/2024);
+  - avaliação especial de desempenho pela CAED (Decreto 8.940/2017), com os critérios iniciativa, assiduidade e pontualidade, relacionamento interpessoal, eficiência e comprometimento.
+- **Lei 15.122/2005 (PCCR):** a **Lei 22.973/2024** (DOE-GO de 5/9/2024) renomeou o cargo de Analista para **Auditor de Controle Externo**. O cargo de Técnico de Controle Externo é de nível médio (Edital 01/2026, Anexo I).
+- **LC 205/2025:**
+  - texto literal: "Fica assegurada a possibilidade de revisão humana para decisões automatizadas da administração pública que afetem direitos significativos";
+  - NEI-IA consultivo e vinculado à Secretaria-Geral de Governo (art. 27); Sandbox (art. 32).
+  - **Atenção:** uma notícia da Alego fala de uma lei posterior (citada como LC 215/2026) que altera a política e cria uma premiação. O número e o conteúdo não foram confirmados, e o edital cita a LC 205 "de 19 de maio de 2025".
+- **Lei federal 15.352, de 25/2/2026:** converteu a MP 1.317/2025 e transformou a ANPD em Agência Nacional de Proteção de Dados (planalto.gov.br).
+
 ## Não verificado (usar só com selo, ou cobrar o princípio geral)
-- Texto integral e numeração de artigos de: RA 14/2025 (estrutura e competências, inclusive da Diretoria de TI), RA 14/2024 (Governança Organizacional), RA 15/2024 (Sistema de Planejamento e Gestão), RA 5/2024 (Gestão de Pessoas), RA 19/2024 (Comunicação), Código de Ética, PDTI 2025–2026, Lei 15.122/2005 (PCCR) e Lei 20.756/2020 (Estatuto).
+- Texto integral de: RA 14/2025 (estrutura e competências, inclusive da Diretoria de TI), RA 14/2024 (Governança Organizacional), RA 15/2024 (Sistema de Planejamento e Gestão), RA 5/2024 (Gestão de Pessoas), RA 19/2024 (Comunicação), Código de Ética e PDTI 2025–2026. Nenhuma busca de 29/10 encontrou esses textos. As 9 questões que ainda têm selo dependem deles.
+- Numeração exata dos artigos da Lei 20.756/2020 (fontes divergem) e o texto integral da Lei 15.122/2005.
 - Classificação de risco de sistemas de IA na LC 205/2025: **não encontrada** nas fontes consultadas.
 
 ## Federal (texto conhecido e estável; citar artigo)

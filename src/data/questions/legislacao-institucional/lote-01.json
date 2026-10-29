@@ -235,8 +235,7 @@
         "resposta": "O TCE-GO emite parecer prévio (em 60 dias do recebimento, segundo a Lei 16.168/2007), e a Assembleia Legislativa julga as contas, pois é a titular do controle externo."
       },
       "conceitosChave": ["Controle externo: parecer prévio", "Simetria (art. 75)"],
-      "fundamentacao": "CF/88, arts. 31, § 2º, 49, IX, 71, I, e 75; Constituição do Estado de Goiás, arts. 25 e 26 (competências do TCE-GO, conforme fontes secundárias); Lei estadual nº 16.168/2007, art. 1º, I.",
-      "revisarFonteOficial": true
+      "fundamentacao": "CF/88, arts. 31, § 2º, 49, IX, 71, I, e 75; Constituição do Estado de Goiás, art. 25 (controle externo pela Assembleia Legislativa) e art. 26, I (parecer prévio sobre as contas do Governador), conforme o Parecer Prévio do TCE-GO sobre as Contas de Governo de 2021; Lei estadual nº 16.168/2007, art. 1º, I."
     },
     {
       "id": "leg-inst-005",
@@ -395,8 +394,7 @@
         "resposta": "Ela institui o plano de carreira, o quadro permanente, os cargos em comissão e as funções de confiança do TCE-GO. O cargo de Técnico de Controle Externo exige ensino médio, com qualificação específica fixada em edital quando necessária."
       },
       "conceitosChave": ["TCE-GO: PCCR"],
-      "fundamentacao": "Lei estadual nº 15.122/2005 e alterações (texto da Casa Civil-GO, via busca: legisla.casacivil.go.gov.br, legislações 80023 e 87153); CF/88, art. 37, X.",
-      "revisarFonteOficial": true
+      "fundamentacao": "Lei estadual nº 15.122/2005 e alterações (texto da Casa Civil-GO, legislações 80023 e 87153, consultado via busca); Edital TCE-GO nº 01/2026, Anexo I (Técnico de Controle Externo, nível médio); CF/88, art. 37, X."
     },
     {
       "id": "leg-inst-008",
@@ -449,8 +447,7 @@
         "resposta": "Três anos de efetivo exercício em cargo efetivo provido por concurso e aprovação em avaliação especial de desempenho feita por comissão instituída para esse fim (CF/88, art. 41). O estágio goiano apura iniciativa, assiduidade e pontualidade, relacionamento interpessoal, eficiência e comprometimento."
       },
       "conceitosChave": ["CF/88: estabilidade", "Estatuto GO: estágio probatório"],
-      "fundamentacao": "CF/88, art. 41, caput e § 4º; Lei estadual nº 20.756/2020 (estágio probatório), conforme goias.gov.br/administracao/estagio-probatorio; Despacho PGE-GO nº 830/2024.",
-      "revisarFonteOficial": true
+      "fundamentacao": "CF/88, art. 41, caput e § 4º; Lei estadual nº 20.756/2020 (estágio probatório) e Decreto estadual nº 8.940/2017 (avaliação especial de desempenho pela Comissão de Avaliação Especial de Desempenho, com os critérios iniciativa, assiduidade e pontualidade, relacionamento interpessoal, eficiência e comprometimento com o trabalho), conforme goias.gov.br/administracao/estagio-probatorio; Despacho PGE-GO nº 830/2024."
     },
     {
       "id": "leg-inst-009",

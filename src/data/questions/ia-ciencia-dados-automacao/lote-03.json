@@ -576,8 +576,7 @@
         "resposta": "A EBIA é a estratégia federal (Portaria MCTI nº 4.617/2021), com eixos transversais e verticais, entre eles a aplicação no poder público. A LC nº 205/2025 institui a política estadual de fomento à inovação em IA, cria o NEI-IA e o sandbox estadual e assegura revisão humana de decisões automatizadas que afetem direitos significativos na administração estadual."
       },
       "conceitosChave": ["EBIA: eixos transversais e verticais", "LC-GO nº 205/2025: política estadual de IA"],
-      "fundamentacao": "Portaria MCTI nº 4.617/2021 (EBIA), alterada pela Portaria MCTI nº 4.979/2021; Lei Complementar do Estado de Goiás nº 205, de 19/5/2025 (política estadual de fomento à inovação em IA, revisão humana na administração estadual, NEI-IA e sandbox), conforme levantamento em fontes oficiais do Governo de Goiás.",
-      "revisarFonteOficial": true
+      "fundamentacao": "Portaria MCTI nº 4.617/2021 (EBIA), alterada pela Portaria MCTI nº 4.979/2021; Lei Complementar do Estado de Goiás nº 205, de 19/5/2025 (política estadual de fomento à inovação em IA, revisão humana na administração estadual, NEI-IA e sandbox), conforme levantamento em fontes oficiais do Governo de Goiás. LC 205/2025: \"Fica assegurada a possibilidade de revisão humana para decisões automatizadas da administração pública que afetem direitos significativos\" (texto publicado no DOE-GO de 19/5/2025)."
     }
   ]
 }

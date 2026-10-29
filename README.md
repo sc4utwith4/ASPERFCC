@@ -78,7 +78,7 @@ Os atalhos ficam desligados enquanto você digita.
 - 12 estudos de caso com espelho;
 - 14 notas Cornell de exemplo, que geram flashcards;
 - 20 textos-base originais: 10 em português e 10 em inglês técnico;
-- 26 questões com o selo "conferir no texto oficial", 17 delas em Legislação Institucional.
+- 9 questões com o selo "conferir no texto oficial" (5 em Legislação Institucional, 4 em Legislação de TI). Eram 26: as outras 17 foram conferidas em 29/10/2026 (ver [`docs/pesquisa/_normativos-tce-go.md`](docs/pesquisa/_normativos-tce-go.md)).
 
 - Arquivos: `src/data/questions/<materia>/lote-NN.json`, com 10 questões por lote, ids `prefixo-001…` e faixa fixa por lote.
 - Textos de apoio de Português e Inglês: `src/data/textos/<materia>.json`.

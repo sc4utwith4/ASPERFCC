@@ -258,8 +258,7 @@
         "resposta": "Entre outras: julgar contas dos administradores, realizar inspeções e auditorias por iniciativa própria ou do Legislativo, aplicar sanções previstas em lei e atribuir eficácia de título executivo às decisões que imputam débito ou multa (CE-GO, arts. 25 e 26, por força do art. 75 da CF/88)."
       },
       "conceitosChave": ["Simetria (art. 75)", "Controle externo: competências do TC"],
-      "fundamentacao": "Constituição do Estado de Goiás, arts. 25 e 26 (conforme decisão do TCE-GO de 2022 e materiais de estudo; texto não conferido); CF/88, art. 71, II, IV, VIII e § 3º, c/c art. 75; Lei estadual nº 16.168/2007, art. 1º, II.",
-      "revisarFonteOficial": true
+      "fundamentacao": "Constituição do Estado de Goiás, art. 25 (controle externo) e art. 26 (competências do TCE-GO; os incisos I e II são citados no Parecer Prévio das Contas de Governo de 2021); CF/88, art. 71, II, IV, VIII e § 3º, c/c art. 75 (simetria obrigatória: as quatro afirmativas reproduzem o modelo federal); Lei estadual nº 16.168/2007, art. 1º, II."
     },
     {
       "id": "leg-inst-045",
@@ -312,8 +311,7 @@
         "resposta": "Os responsáveis com contas julgadas irregulares sem imputação de débito e sancionados exclusivamente com multa (art. 84 da Lei 16.168/2007). A inelegibilidade é aferida pela Justiça Eleitoral, não pelo Tribunal de Contas."
       },
       "conceitosChave": ["TCE-GO: julgamento de contas", "TCE-GO: Lei Orgânica"],
-      "fundamentacao": "Lei estadual nº 16.168/2007, art. 84, com a redação da Lei estadual nº 23.413/2025 (conforme busca no texto da Casa Civil-GO); art. 63 (valor de alçada); LC 64/1990, art. 1º, I, g.",
-      "revisarFonteOficial": true
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 84, caput e § 1º, com a redação da Lei estadual nº 23.413, de 15/5/2025 (ficam fora da relação os responsáveis com contas irregulares sem imputação de débito e sancionados só com multa, em linha com o art. 1º, § 4º-A, da LC 64/1990, incluído pela LC 184/2021; o § 2º ressalva o recurso com efeito suspensivo admitido); art. 63 (valor de alçada); LC 64/1990, art. 1º, I, g."
     },
     {
       "id": "leg-inst-046",
@@ -419,8 +417,7 @@
         "resposta": "Por lei específica (CF/88, art. 37, X), de iniciativa do próprio Tribunal (art. 73 c/c art. 96, II, b, por simetria). Resolução, portaria ou decreto não bastam."
       },
       "conceitosChave": ["TCE-GO: PCCR", "CF/88: remuneração por lei específica"],
-      "fundamentacao": "CF/88, art. 37, X; art. 73 c/c art. 96, II, b; art. 75; Lei estadual nº 15.122/2005 e alterações (por exemplo, Lei 22.973/2024, que alterou a denominação do cargo de nível superior, conforme nota no texto da Casa Civil-GO).",
-      "revisarFonteOficial": true
+      "fundamentacao": "CF/88, art. 37, X; art. 73 c/c art. 96, II, b; art. 75; Lei estadual nº 15.122/2005 e alterações (por exemplo, a Lei estadual nº 22.973/2024, publicada no DOE-GO de 5/9/2024, que renomeou o cargo de Analista para Auditor de Controle Externo)."
     },
     {
       "id": "leg-inst-048",
@@ -579,8 +576,7 @@
         "resposta": "Por procedimento específico de apuração dos requisitos do estágio, com contraditório e ampla defesa, distinto do processo disciplinar (Despacho PGE-GO 830/2024; Súmula 21 do STF). Exoneração não é penalidade; demissão é."
       },
       "conceitosChave": ["Estatuto GO: estágio probatório", "CF/88: estabilidade"],
-      "fundamentacao": "CF/88, art. 41, § 4º; Súmula 21 do STF; Despacho PGE-GO nº 830/2024 (goias.gov.br/procuradoria); Lei estadual nº 20.756/2020 (estágio probatório; texto não conferido).",
-      "revisarFonteOficial": true
+      "fundamentacao": "CF/88, art. 41, § 4º; Súmula 21 do STF (o gabarito decorre da Constituição e da súmula); Despacho PGE-GO nº 830/2024 (goias.gov.br/procuradoria); Lei estadual nº 20.756/2020 (estágio probatório)."
     }
   ]
 }

@@ -452,8 +452,7 @@
         "resposta": "Pessoa humana como diretriz central; liberdade do setor privado com intervenção estatal excepcional e subsidiária; auditoria algorítmica só quando absolutamente necessária e tecnicamente viável; NEI-IA consultivo e multissetorial (na SGG); Sandbox Estadual Permanente de IA; possibilidade de revisão humana na administração pública."
       },
       "conceitosChave": ["LC-GO 205/2025", "NEI-IA", "Sandbox de IA"],
-      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025, arts. 2º, 6º, 7º, 27 e 32 (fatos de docs/pesquisa/_normativos-tce-go.md e de docs/pesquisa/legislacao-aplicada-ti.md; os arts. 2º, 7º e 27 vieram de resumos de busca e devem ser conferidos no texto oficial).",
-      "revisarFonteOficial": true
+      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025: a pessoa humana como foco central e a livre iniciativa do setor privado para desenvolver e operar IA para fins lícitos, com intervenção estatal excepcional e subsidiária (resumos de escritórios sobre o texto publicado no DOE-GO de 19/5/2025); NEI-IA de caráter consultivo, vinculado à Secretaria-Geral de Governo (art. 27), e Sandbox Estadual Permanente de IA (art. 32), conforme goias.gov.br/governo/go-ia."
     },
     {
       "id": "leg-ti-049",

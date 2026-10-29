@@ -212,8 +212,7 @@
         "resposta": "Quando há impropriedade ou falta de natureza formal sem dano ao erário (Lei 16.168/2007, art. 73). O Tribunal dá quitação ao responsável e indica no acórdão os motivos da ressalva."
       },
       "conceitosChave": ["TCE-GO: julgamento de contas", "TCE-GO: Lei Orgânica"],
-      "fundamentacao": "Lei estadual nº 16.168/2007, art. 73 e § 1º (conforme acórdãos do TCE-GO publicados em goias.gov.br); Lei 8.443/1992, art. 20, como referência do modelo federal.",
-      "revisarFonteOficial": true
+      "fundamentacao": "Lei estadual nº 16.168/2007, art. 73 e § 1º (contas regulares com ressalva, com quitação, quando há impropriedade ou falha formal sem dano ao erário; o acórdão indica os motivos da ressalva), como aplicado em acórdãos de prestação de contas anual do TCE-GO publicados em goias.gov.br (por exemplo, Casa Civil, exercício 2023, e Emater, exercício 2024); Lei 8.443/1992, art. 20, como referência do modelo federal."
     },
     {
       "id": "leg-inst-015",
@@ -476,8 +475,7 @@
         "resposta": "Advertência, suspensão (até 90 dias), multa, demissão, cassação de aposentadoria, cassação de disponibilidade e destituição de cargo em comissão. Exoneração não é penalidade."
       },
       "conceitosChave": ["Estatuto GO: penalidades"],
-      "fundamentacao": "Lei estadual nº 20.756/2020, capítulo das penalidades (rol confirmado em docs.tjgo.jus.br, PENALIDADES.pdf, e goias.gov.br/controladoria/penalidades-disciplinares; numeração dos artigos não conferida).",
-      "revisarFonteOficial": true
+      "fundamentacao": "Lei estadual nº 20.756/2020, capítulo das penalidades: advertência, suspensão (até 90 dias), multa, demissão, cassação de aposentadoria ou de disponibilidade e destituição de cargo em comissão (rol em docs.tjgo.jus.br, PENALIDADES.pdf, e goias.gov.br/controladoria/penalidades-disciplinares, que o situa no art. 193; outra compilação aponta o art. 192, por isso a questão não cita o número do artigo)."
     },
     {
       "id": "leg-inst-019",

@@ -362,8 +362,7 @@
         "Antigravity: Agent Manager e artefatos",
         "Agentes de codificação"
       ],
-      "fundamentacao": "Google Developers Blog, “Build with Google Antigravity, our new agentic development platform” (nov/2025); documentação antigravity.google (“Plan”, “Walkthrough”); Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026).",
-      "revisarFonteOficial": true
+      "fundamentacao": "Google Developers Blog, “Build with Google Antigravity, our new agentic development platform” (nov/2025); documentação antigravity.google (“Plan”, “Walkthrough”); Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026)."
     },
     {
       "id": "eng-ia-017",
@@ -443,8 +442,7 @@
         "Claude Code: modo não interativo (-p)",
         "Claude Code: permissões"
       ],
-      "fundamentacao": "Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026); Claude Code, “Run Claude Code programmatically” (-p), “Connect Claude Code to tools via MCP” (escopo de projeto) e “Permission modes” (bypassPermissions).",
-      "revisarFonteOficial": true
+      "fundamentacao": "Google Cloud Blog, “Choosing your surface: Antigravity 2.0, Antigravity CLI, Antigravity IDE, or Antigravity SDK” (10/06/2026); Claude Code, “Run Claude Code programmatically” (-p), “Connect Claude Code to tools via MCP” (escopo de projeto) e “Permission modes” (bypassPermissions)."
     },
     {
       "id": "eng-ia-018",
