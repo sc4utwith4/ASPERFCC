@@ -1,0 +1,48 @@
+{
+  "id": "nota-mat-01",
+  "materiaSlug": "matematica-raciocinio-logico",
+  "titulo": "Negação e equivalências lógicas no estilo FCC",
+  "subtopico": "Lógica dedutiva e argumentação",
+  "pistas": [
+    {
+      "pergunta": "Qual é a negação de “Todo A é B”?",
+      "resposta": "“Algum A não é B” (ou “Pelo menos um A não é B”). “Nenhum A é B” é a contrária, e não a negação."
+    },
+    {
+      "pergunta": "Qual é a negação de “Nenhum A é B”?",
+      "resposta": "“Algum A é B”, isto é, pelo menos um A é B. Basta um exemplo para derrubar o “nenhum”."
+    },
+    {
+      "pergunta": "Como negar “p e q” e “p ou q” pelas leis de De Morgan?",
+      "resposta": "¬(p ∧ q) ≡ ¬p ∨ ¬q e ¬(p ∨ q) ≡ ¬p ∧ ¬q: nega-se cada parte e troca-se o conectivo."
+    },
+    {
+      "pergunta": "Em que único caso a condicional p → q é falsa?",
+      "resposta": "Quando o antecedente p é verdadeiro e o consequente q é falso. Com p falso, a condicional é sempre verdadeira."
+    },
+    {
+      "pergunta": "Qual é a contrapositiva de p → q, e ela é equivalente à original?",
+      "resposta": "É ¬q → ¬p (“se não q, então não p”) e é sempre equivalente à condicional original."
+    },
+    {
+      "pergunta": "A condicional p → q equivale a qual disjunção?",
+      "resposta": "A ¬p ∨ q: “não p ou q”. Exemplo: “Se homologou, arquivou” equivale a “Não homologou ou arquivou”."
+    },
+    {
+      "pergunta": "Qual é a negação de “Se p, então q”?",
+      "resposta": "“p e não q” (p ∧ ¬q). A negação de uma condicional é uma conjunção e não mantém o “se... então”."
+    },
+    {
+      "pergunta": "Como traduzir “p somente se q” para a forma condicional?",
+      "resposta": "Como p → q: q é condição necessária para p. A recíproca q → p não é equivalente."
+    }
+  ],
+  "conteudoMarkdown": "## Por que esse tema cai sempre\n\nNas provas da FCC, negação e equivalência aparecem quase toda vez que o edital traz lógica. O enunciado costuma partir de uma frase do cotidiano administrativo, como “Todos os processos foram julgados” ou “Se o relatório foi homologado, então o processo foi arquivado”, e pede a negação ou uma frase equivalente. Os distratores são previsíveis: a contrária no lugar da contraditória, a recíproca no lugar da contrapositiva e a condicional “negada” pela metade. Quem domina esses moldes resolve a questão em menos de um minuto.\n\n> Negar uma proposição é escrever outra que seja verdadeira exatamente quando a original é falsa, e falsa quando a original é verdadeira.\n\n## Negação de todo, algum e nenhum\n\nA negação não é o “oposto extremo”. ==Negar “todo” não é dizer “nenhum”==: basta um contraexemplo para derrubar uma afirmação universal.\n\n- “Todo A é B” → negação: “Algum A não é B” (ou “Pelo menos um A não é B”, “Existe A que não é B”).\n- “Algum A é B” → negação: “Nenhum A é B”.\n- “Nenhum A é B” → negação: “Algum A é B”.\n- “Algum A não é B” → negação: “Todo A é B”.\n\nExemplo: a negação de “Todos os auditores entregaram o relatório” é “Pelo menos um auditor não entregou o relatório”. A frase “Nenhum auditor entregou o relatório” é a **contrária**: as duas podem ser falsas ao mesmo tempo (basta que alguns tenham entregado e outros não), por isso ela não serve como negação.\n\n## Leis de De Morgan\n\nPara negar conjunções e disjunções, nega-se cada parte e troca-se o conectivo:\n\n- ¬(p ∧ q) ≡ ¬p ∨ ¬q: a negação de “O sistema está atualizado **e** o backup foi feito” é “O sistema não está atualizado **ou** o backup não foi feito”.\n- ¬(p ∨ q) ≡ ¬p ∧ ¬q: a negação de “O servidor viajou **ou** tirou férias” é “O servidor não viajou **e** não tirou férias”.\n\n> Na negação, “e” vira “ou” e “ou” vira “e”. Esquecer a troca do conectivo é o erro mais explorado pela banca.\n\n## A condicional e quando ela é falsa\n\nA condicional p → q (“Se p, então q”) só é falsa em um caso: ==antecedente verdadeiro e consequente falso==. Se o antecedente for falso, a condicional é verdadeira, qualquer que seja o consequente. Por isso, p é **condição suficiente** para q, e q é **condição necessária** para p.\n\nFormas de leitura que significam p → q:\n\n- “Se p, então q”; “Quando p, q”; “p implica q”;\n- “p é suficiente para q”; “q é necessário para p”;\n- “p somente se q” (o termo que vem depois de “somente se” vai para o consequente).\n\n## As equivalências da condicional\n\nDuas transformações produzem frases equivalentes a p → q, o que se confirma pela tabela-verdade:\n\n- **Contrapositiva**: ¬q → ¬p. “Se o relatório foi homologado, então o processo foi arquivado” equivale a “Se o processo não foi arquivado, então o relatório não foi homologado”.\n- **Disjunção**: ¬p ∨ q. A mesma frase equivale a “O relatório não foi homologado ou o processo foi arquivado”.\n\nJá as transformações abaixo **não** são equivalentes à original:\n\n- **Recíproca**: q → p (“Se o processo foi arquivado, então o relatório foi homologado”).\n- **Inversa**: ¬p → ¬q (“Se o relatório não foi homologado, então o processo não foi arquivado”).\n\nRecíproca e inversa equivalem entre si, porque uma é a contrapositiva da outra, mas nenhuma delas equivale à condicional original. Na linha em que p é falso e q é verdadeiro, a original é verdadeira e a recíproca é falsa.\n\n## Negação da condicional\n\nComo a condicional só é falsa com p verdadeiro e q falso, sua negação é uma conjunção:\n\n> ¬(p → q) ≡ p ∧ ¬q\n\nA negação de “Se chover, a sessão será adiada” é “Chove e a sessão não é adiada”. Alternativas que mantêm o “se... então”, como “Se chover, a sessão não será adiada” ou “Se não chover, a sessão será adiada”, estão sempre erradas como negação. ==Negação de condicional não tem “se”==.\n\n## Bicondicional e disjunção exclusiva\n\n“p se e somente se q” (p ↔ q) é verdadeira quando p e q têm o mesmo valor lógico. Sua negação é a disjunção exclusiva “ou p, ou q, mas não ambos”, que também pode ser escrita como p ↔ ¬q.\n\n## Roteiro rápido para a prova\n\n- [ ] Identifique a estrutura: quantificador, conjunção, disjunção ou condicional.\n- [ ] Para “todo”, procure “algum... não” ou “pelo menos um... não” e descarte “nenhum”.\n- [ ] Para “e” e “ou”, negue as partes e troque o conectivo.\n- [ ] Para “se p, então q”, a negação é “p e não q”; as equivalentes são “se não q, então não p” e “não p ou q”.\n- [ ] Em “somente se”, coloque no consequente o que vem depois da expressão.\n- [ ] Na dúvida, monte a tabela-verdade de quatro linhas e compare as colunas.",
+  "sintese": "Negar não é dizer o oposto extremo: negar “todo” é apontar um contraexemplo (“algum... não”), e negar “algum” é dizer “nenhum”. Em conjunções e disjunções, nego cada parte e troco “e” por “ou”. A condicional só falha com antecedente verdadeiro e consequente falso; por isso equivale à contrapositiva e a “não p ou q”, e sua negação é “p e não q”. Recíproca e inversa são as armadilhas preferidas da FCC.",
+  "fontes": [
+    "Edgard de Alencar Filho, Iniciação à Lógica Matemática, capítulos sobre conectivos, tabelas-verdade, equivalências e negação",
+    "Irving M. Copi, Introdução à Lógica, capítulos sobre proposições categóricas, quadrado de oposição e silogismos",
+    "Kenneth H. Rosen, Matemática Discreta e suas Aplicações, capítulo 1 (lógica proposicional, quantificadores e equivalências)",
+    "Edital TCE-GO 2026, Anexo II, Matemática e Raciocínio Lógico: lógica dedutiva e argumentação"
+  ]
+}

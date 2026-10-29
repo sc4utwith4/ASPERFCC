@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "matematica-raciocinio-logico",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "mat-041",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Números inteiros e racionais, operações e expressões",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na avaliação de conformidade de um sistema de informação, uma lista de verificação tem 40 itens. Cada item atendido soma 3 pontos, cada item não atendido desconta 2 pontos, e os itens considerados não aplicáveis valem zero. Em certa avaliação, 5 itens foram considerados não aplicáveis, e a pontuação final foi de 65 pontos. O número de itens não atendidos nessa avaliação foi",
+      "variantesEnunciado": [
+        "Um questionário de controles internos tem 40 itens: cada item atendido vale +3 pontos, cada item não atendido vale −2 pontos, e itens não aplicáveis não pontuam. Uma unidade teve 5 itens não aplicáveis e totalizou 65 pontos. A quantidade de itens não atendidos pela unidade foi",
+        "Em uma auditoria de acessibilidade de um portal, aplicou-se um roteiro de 40 itens, com a seguinte pontuação: 3 pontos para cada item atendido, menos 2 pontos para cada item não atendido e zero para cada item não aplicável. Se 5 itens não se aplicavam e o portal obteve 65 pontos, o número de itens não atendidos foi"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "8",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Itens avaliados: 40 − 5 = 35. Se todos fossem atendidos, a pontuação seria 35 × 3 = 105. Cada item não atendido, em vez de somar 3, desconta 2, o que representa uma perda de 5 pontos por item. A perda total foi 105 − 65 = 40, logo houve 40 ÷ 5 = 8 itens não atendidos. Conferência: 27 × 3 − 8 × 2 = 81 − 16 = 65.",
+          "versaoInvertidaFalsa": "Em uma lista de 40 itens com 5 não aplicáveis, se cada item atendido soma 3 pontos, cada não atendido desconta 2 e a pontuação final foi 65, então houve 11 itens não atendidos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "11",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando se esquecem os 5 itens não aplicáveis e se supõe que os 40 itens foram avaliados: 40 × 3 = 120, perda de 120 − 65 = 55 e 55 ÷ 5 = 11. Os itens não aplicáveis valem zero e precisam ser retirados antes do cálculo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "13",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de subtrair os 27 itens atendidos do total de itens da lista (40 − 27 = 13), sem descontar os 5 não aplicáveis. Na verdade, os não atendidos são 35 − 27 = 8."
+        },
+        {
+          "id": "opt-4",
+          "texto": "20",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Divide a perda de 40 pontos apenas pelos 2 pontos descontados (40 ÷ 2 = 20), esquecendo que o item não atendido também deixa de somar os 3 pontos. A perda por item não atendido é 3 + 2 = 5."
+        },
+        {
+          "id": "opt-5",
+          "texto": "27",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 27 é o número de itens atendidos, e não o de não atendidos. Quem resolve o sistema a + b = 35 e 3a − 2b = 65 e marca o valor de a responde a outra pergunta."
+        }
+      ],
+      "pegadinhaFCC": "Os itens não aplicáveis devem sair da conta antes de tudo, e cada item não atendido custa 5 pontos (deixa de ganhar 3 e perde 2). A FCC explora quem divide só por 2 ou usa os 40 itens.",
+      "resumoFlashcard": {
+        "pergunta": "Em problemas de 'ganha x por acerto e perde y por erro', qual é a perda causada por cada erro?",
+        "resposta": "x + y, porque o item deixa de ganhar x e ainda perde y. Calcule a pontuação máxima, subtraia a obtida e divida a diferença por x + y para achar o número de erros."
+      },
+      "conceitosChave": ["Operações com inteiros", "Problemas de pontuação"],
+      "fundamentacao": "Aritmética dos inteiros (adição e subtração com números negativos) e resolução pela hipótese de pontuação máxima, equivalente a um sistema linear com duas incógnitas; Anexo II do edital, Números inteiros e racionais."
+    },
+    {
+      "id": "mat-042",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio verbal, formação de conceitos e discriminação de elementos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Considere as palavras CASTOR, CORTAS, COSTAS, TROCAS e CASTRO. Quatro delas são formadas exatamente pelas mesmas letras, apenas dispostas em outra ordem. A palavra que destoa das demais, segundo esse critério, é",
+      "variantesEnunciado": [
+        "Um técnico criou um exercício de anagramas com as palavras CASTOR, CORTAS, COSTAS, TROCAS e CASTRO, das quais quatro usam exatamente as mesmas letras, em ordens diferentes. A palavra que não se enquadra nesse grupo é",
+        "Em um teste de discriminação de elementos, foram apresentadas as palavras CASTOR, CORTAS, COSTAS, TROCAS e CASTRO. Quatro delas são anagramas umas das outras. A palavra intrusa é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "CASTOR.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CASTOR tem as letras A, C, O, R, S e T, exatamente as mesmas de CASTRO, CORTAS e TROCAS. Quem a escolhe usa um critério de significado (é o único nome de animal), mas o enunciado fixa o critério das letras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "CASTRO.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CASTRO é formada por A, C, O, R, S e T, o mesmo conjunto de CASTOR, CORTAS e TROCAS; difere de CASTOR apenas pela troca de posição entre O e R. A semelhança visual com CASTOR não a torna intrusa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "CORTAS.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CORTAS usa as letras C, O, R, T, A e S, as mesmas de CASTOR. A mudança de ordem é exatamente o que o critério permite. Quem a marca pode ter conferido só a letra final ou a inicial."
+        },
+        {
+          "id": "opt-4",
+          "texto": "COSTAS.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. CASTOR, CASTRO, CORTAS e TROCAS são anagramas: cada uma tem uma única ocorrência das letras A, C, O, R, S e T. COSTAS tem as letras A, C, O, S, S e T, isto é, não tem R e repete o S. Por isso, é a única que não pode ser obtida pela reordenação das letras das demais.",
+          "versaoInvertidaFalsa": "Entre CASTOR, CORTAS, COSTAS, TROCAS e CASTRO, a palavra COSTAS é anagrama de CASTOR, pois ambas têm seis letras e começam com C."
+        },
+        {
+          "id": "opt-5",
+          "texto": "TROCAS.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. TROCAS tem T, R, O, C, A e S, o mesmo conjunto das demais. É a única que começa por T, mas a letra inicial não é o critério dado: importa a composição de letras, e não a posição delas."
+        }
+      ],
+      "pegadinhaFCC": "Todas as palavras têm seis letras e começam com sílabas parecidas, o que induz a uma conferência apressada. A FCC espera que o candidato confira letra por letra, inclusive as repetições.",
+      "resumoFlashcard": {
+        "pergunta": "Como verificar rapidamente se duas palavras são anagramas?",
+        "resposta": "Compare o conjunto de letras com suas repetições, por exemplo, ordenando-as alfabeticamente: CASTOR e TROCAS dão ACORST; COSTAS dá ACOSST, sem R e com dois S."
+      },
+      "conceitosChave": ["Discriminação de elementos", "Anagramas"],
+      "fundamentacao": "Raciocínio verbal: discriminação de elementos por critério explícito (composição de letras, anagramas); Anexo II do edital, Raciocínio verbal."
+    },
+    {
+      "id": "mat-043",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio verbal, formação de conceitos e discriminação de elementos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em um código, a palavra CERTO é escrita como DDSSP, e a palavra FATO é escrita como GZUN, considerando-se o alfabeto de 26 letras. Mantido o mesmo critério de codificação, a palavra NOTA será escrita como",
+      "variantesEnunciado": [
+        "Um sistema de senhas temporárias transforma CERTO em DDSSP e FATO em GZUN, com base no alfabeto de 26 letras. Aplicando-se a mesma regra à palavra NOTA, obtém-se",
+        "Em um exercício de formação de conceitos, informou-se que, por certa regra aplicada letra a letra no alfabeto de 26 letras, CERTO corresponde a DDSSP e FATO corresponde a GZUN. Pela mesma regra, NOTA corresponde a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "MNSZ.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o que se obtém recuando todas as letras uma posição (N→M, O→N, T→S, A→Z). Mas o exemplo CERTO → DDSSP mostra que a 1ª letra avança (C→D), enquanto a 2ª recua (E→D): o deslocamento não é uniforme."
+        },
+        {
+          "id": "opt-2",
+          "texto": "MPSB.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a alternância: recua as letras de posição ímpar e avança as de posição par (N→M, O→P, T→S, A→B). Nos exemplos, a 1ª letra sempre avança: C→D em CERTO e F→G em FATO."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ONUB.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aplica corretamente a regra às três primeiras letras (N→O, O→N, T→U), mas avança o A final para B, para evitar 'voltar' ao Z. O exemplo FATO → GZUN mostra que o A em posição par se torna Z."
+        },
+        {
+          "id": "opt-4",
+          "texto": "ONUZ.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Comparando CERTO com DDSSP: C→D (+1), E→D (−1), R→S (+1), T→S (−1), O→P (+1). As letras de posição ímpar avançam uma posição, e as de posição par recuam uma. FATO → GZUN confirma a regra e mostra que, antes do A, vem o Z. Logo, NOTA: N→O, O→N, T→U, A→Z, o que dá ONUZ.",
+          "versaoInvertidaFalsa": "Se CERTO é codificada como DDSSP e FATO como GZUN, então a regra avança todas as letras uma posição no alfabeto, e NOTA é codificada como OPUB."
+        },
+        {
+          "id": "opt-5",
+          "texto": "OPUB.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Avança todas as letras uma posição (N→O, O→P, T→U, A→B), como em um código de deslocamento fixo. A regra só seria essa se CERTO virasse DFSUP, mas virou DDSSP, o que revela a alternância entre avançar e recuar."
+        }
+      ],
+      "pegadinhaFCC": "A regra alterna avanço e recuo conforme a posição da letra, e a FCC oferece o deslocamento uniforme (+1 ou −1) como isca. Outra armadilha é a volta circular do alfabeto: antes do A vem o Z.",
+      "resumoFlashcard": {
+        "pergunta": "Como descobrir a regra de um código letra a letra a partir de exemplos?",
+        "resposta": "Compare cada letra com sua codificada e anote o deslocamento no alfabeto (+1, −1…), posição por posição. Confirme a regra no segundo exemplo e lembre que o alfabeto é circular: antes do A vem o Z."
+      },
+      "conceitosChave": ["Formação de conceitos", "Codificação de palavras"],
+      "fundamentacao": "Raciocínio verbal: formação de conceitos a partir de exemplos (lei de codificação por deslocamento de posições no alfabeto, com volta circular); Anexo II do edital, Raciocínio verbal e formação de conceitos."
+    },
+    {
+      "id": "mat-044",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Regra de três simples e composta",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma equipe de 8 auditores, trabalhando 6 horas por dia, analisa 60 processos de prestação de contas em 6 dias. Mantida a mesma produtividade por auditor, o número de auditores necessários para analisar 180 processos em 12 dias, trabalhando 8 horas por dia, é",
+      "variantesEnunciado": [
+        "Em uma força-tarefa, 8 servidores, com jornada de 6 horas diárias, conferem 60 processos em 6 dias. Para conferir 180 processos em 12 dias, com jornada de 8 horas diárias e a mesma produtividade individual, o número de servidores necessário é",
+        "Considere que 8 analistas, cumprindo 6 horas de trabalho por dia, revisam 60 relatórios em 6 dias. Se o objetivo passar a ser revisar 180 relatórios em 12 dias, com 8 horas de trabalho por dia, e cada analista mantiver o mesmo ritmo, o número de analistas necessário será"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "9",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Compara-se cada grandeza com o número de auditores: processos (mais processos, mais auditores: direta), dias (mais dias, menos auditores: inversa) e horas por dia (mais horas, menos auditores: inversa). Assim: x = 8 × (180/60) × (6/12) × (6/8) = 8 × 3 × 1/2 × 3/4 = 9. Conferência em horas-auditor: 8 × 6 × 6 = 288 h para 60 processos (4,8 h por processo); 180 × 4,8 = 864 h = 9 × 12 × 8.",
+          "versaoInvertidaFalsa": "Se 8 auditores, trabalhando 6 horas por dia, analisam 60 processos em 6 dias, então, para analisar 180 processos em 12 dias com jornada de 8 horas, são necessários 16 auditores."
+        },
+        {
+          "id": "opt-2",
+          "texto": "12",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera o triplo de processos e o dobro de dias, mas ignora a mudança da jornada de 6 para 8 horas: 8 × 3 × 1/2 = 12. Com mais horas por dia, cada auditor produz mais, e a equipe necessária diminui."
+        },
+        {
+          "id": "opt-3",
+          "texto": "16",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Trata a jornada como grandeza diretamente proporcional ao número de auditores: 8 × 3 × 1/2 × 8/6 = 16. Mais horas diárias significam menos auditores, logo a razão a usar é 6/8, e não 8/6."
+        },
+        {
+          "id": "opt-4",
+          "texto": "18",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ignora o aumento do prazo de 6 para 12 dias: 8 × 3 × 6/8 = 18. Com o dobro de dias para trabalhar, basta metade dos auditores, mantidas as demais condições."
+        },
+        {
+          "id": "opt-5",
+          "texto": "36",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Trata o prazo como diretamente proporcional ao número de auditores: 8 × 3 × 12/6 × 6/8 = 36. Prazo maior exige menos gente, e não mais: a razão correta é 6/12."
+        }
+      ],
+      "pegadinhaFCC": "Na regra de três composta, a FCC testa a classificação de cada grandeza. Prazo e jornada são inversamente proporcionais ao número de auditores, e trocar o sentido de qualquer uma delas leva a um distrator.",
+      "resumoFlashcard": {
+        "pergunta": "Como montar uma regra de três composta em que a incógnita é o número de pessoas?",
+        "resposta": "Compare cada grandeza isoladamente com a incógnita: quantidade de trabalho é direta; prazo e horas por dia são inversas. Multiplique o valor conhecido pelas razões, invertendo as das grandezas inversas."
+      },
+      "conceitosChave": ["Regra de três composta"],
+      "fundamentacao": "Regra de três composta: análise isolada de cada grandeza em relação à incógnita (direta ou inversa) e produto das razões; Anexo II do edital, Regra de três composta."
+    },
+    {
+      "id": "mat-045",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Razões, proporções e divisão proporcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um prêmio de R$ 6.650,00 será dividido entre três servidores, Ana, Beto e Caio, em partes diretamente proporcionais ao tempo de serviço na unidade (2, 3 e 5 anos, respectivamente) e inversamente proporcionais ao número de faltas no ano (1, 2 e 4, respectivamente). A parte que caberá a Caio é de",
+      "variantesEnunciado": [
+        "Uma gratificação de R$ 6.650,00 será repartida entre Ana, Beto e Caio de forma diretamente proporcional aos anos de exercício na unidade, que são 2, 3 e 5, respectivamente, e inversamente proporcional às faltas registradas no ano, que são 1, 2 e 4, respectivamente. Caio receberá",
+        "Considere a divisão de R$ 6.650,00 entre três servidores, em partes diretamente proporcionais a 2, 3 e 5 (anos de serviço de Ana, Beto e Caio, nessa ordem) e, ao mesmo tempo, inversamente proporcionais a 1, 2 e 4 (faltas de Ana, Beto e Caio, nessa ordem). O valor recebido por Caio é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 950,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera apenas a proporção inversa às faltas: 1/1, 1/2 e 1/4, ou 4 : 2 : 1, de modo que Caio receberia 6.650 × 1/7 = 950. A divisão composta exige combinar as duas condições, multiplicando os anos pelo inverso das faltas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 1.400,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o valor da constante de proporcionalidade: 6.650 ÷ (2 + 3/2 + 5/4) = 6.650 ÷ 4,75 = 1.400. Faltou multiplicar pelo coeficiente de Caio, 5/4, para obter 1.400 × 5/4 = 1.750."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 1.750,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na divisão composta, cada parte é proporcional ao produto (anos) × (1/faltas): Ana 2 × 1 = 2; Beto 3 × 1/2 = 3/2; Caio 5 × 1/4 = 5/4. Multiplicando por 4: 8 : 6 : 5, com soma 19. A constante é 6.650 ÷ 19 = 350, logo Caio recebe 5 × 350 = R$ 1.750,00 (Ana recebe R$ 2.800,00 e Beto, R$ 2.100,00; soma de R$ 6.650,00).",
+          "versaoInvertidaFalsa": "Dividindo-se R$ 6.650,00 entre três servidores, em partes diretamente proporcionais a 2, 3 e 5 anos de serviço e inversamente proporcionais a 1, 2 e 4 faltas, o servidor com 5 anos e 4 faltas recebe R$ 4.750,00."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 3.325,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera apenas o tempo de serviço: 2 : 3 : 5, soma 10, e Caio receberia 6.650 × 5/10 = 3.325. Ignorar as faltas favorece justamente Caio, o servidor com mais faltas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 4.750,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Multiplica os anos pelas faltas em vez de dividir: 2 × 1, 3 × 2 e 5 × 4, ou 2 : 6 : 20, soma 28, e Caio receberia 6.650 × 20/28 = 4.750. 'Inversamente proporcional' significa proporcional ao inverso, isto é, dividir pelas faltas."
+        }
+      ],
+      "pegadinhaFCC": "Na divisão proporcional composta, o coeficiente de cada pessoa é o produto da grandeza direta pelo inverso da grandeza inversa. A FCC oferece como distratores as divisões que usam só uma das grandezas ou que multiplicam pelas faltas.",
+      "resumoFlashcard": {
+        "pergunta": "Como dividir um valor em partes diretamente proporcionais a uma grandeza e inversamente proporcionais a outra?",
+        "resposta": "Calcule para cada pessoa o coeficiente (grandeza direta) ÷ (grandeza inversa), simplifique para inteiros e divida o total pela soma desses coeficientes. Cada parte é a constante vezes o coeficiente."
+      },
+      "conceitosChave": ["Divisão proporcional", "Divisão proporcional composta"],
+      "fundamentacao": "Divisão em partes proporcionais composta: coeficientes obtidos pelo produto da grandeza diretamente proporcional pelo inverso da inversamente proporcional; Anexo II do edital, Divisão em partes proporcionais."
+    },
+    {
+      "id": "mat-046",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Estruturas lógicas e associação de informações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Em um armário há 10 pastas azuis, 8 pastas verdes e 6 pastas vermelhas, todas de mesmo formato. Sem enxergar as cores, um servidor vai retirar pastas uma a uma. Para ter certeza de que retirou pelo menos 3 pastas de uma mesma cor, o número mínimo de pastas que ele deve retirar é",
+      "variantesEnunciado": [
+        "Uma caixa contém 10 crachás azuis, 8 verdes e 6 vermelhos, indistinguíveis ao tato. Retirando-se crachás ao acaso, sem olhar, o menor número de retiradas que garante pelo menos 3 crachás da mesma cor é",
+        "Em um almoxarifado, uma gaveta escura guarda 10 pendrives azuis, 8 verdes e 6 vermelhos, de mesmo modelo. Para garantir que terá em mãos pelo menos 3 pendrives de uma mesma cor, o número mínimo de pendrives que um técnico deve retirar da gaveta é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "3",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Três retiradas bastam apenas no melhor caso, se a sorte ajudar. O problema pede certeza, e por isso deve-se considerar o pior caso: com 3 retiradas, é possível ter uma pasta de cada cor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "4",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 4 é o mínimo para garantir 2 pastas da mesma cor (3 cores + 1). Para garantir 3 da mesma cor, o pior caso permite tirar 2 de cada cor (6 pastas) antes de completar o trio."
+        },
+        {
+          "id": "opt-3",
+          "texto": "7",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo princípio da casa dos pombos, no pior caso o servidor retira 2 pastas de cada cor, 2 × 3 = 6, sem formar nenhum trio. A 7ª pasta, qualquer que seja a cor, completa 3 de uma mesma cor. Como as quantidades disponíveis (10, 8 e 6) permitem esse pior caso, o mínimo é 7.",
+          "versaoInvertidaFalsa": "Com 10 pastas azuis, 8 verdes e 6 vermelhas, retirar 4 pastas ao acaso já garante pelo menos 3 pastas da mesma cor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "9",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Multiplica o número de cores pelo número de pastas desejadas (3 × 3 = 9). Esse cálculo superestima o pior caso: basta que cada cor chegue a 2 pastas para que a próxima retirada force o trio."
+        },
+        {
+          "id": "opt-5",
+          "texto": "21",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 21 garante 3 pastas de uma cor específica, a vermelha: no pior caso, saem todas as 10 azuis e as 8 verdes antes (10 + 8 + 3 = 21). O enunciado pede 3 de uma mesma cor qualquer, o que exige muito menos."
+        }
+      ],
+      "pegadinhaFCC": "A FCC confunde 'garantir 3 de uma mesma cor' com 'garantir 3 de uma cor específica' e com o melhor caso. A certeza sempre vem do pior caso.",
+      "resumoFlashcard": {
+        "pergunta": "Quantas retiradas garantem k objetos da mesma cor quando há n cores disponíveis em quantidade suficiente?",
+        "resposta": "n × (k − 1) + 1. No pior caso, saem k − 1 objetos de cada cor sem formar o grupo, e a retirada seguinte o completa. Para 3 cores e k = 3: 3 × 2 + 1 = 7."
+      },
+      "conceitosChave": ["Princípio da casa dos pombos"],
+      "fundamentacao": "Princípio da casa dos pombos (princípio de Dirichlet) e raciocínio de pior caso; Anexo II do edital, Estruturas lógicas."
+    },
+    {
+      "id": "mat-047",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Porcentagem, acréscimos e descontos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um processo seletivo interno de um Tribunal, 40% dos inscritos eram servidores da área técnica e os demais, da área administrativa. Foram aprovados 30% dos inscritos da área técnica e 20% dos inscritos da área administrativa. Em relação ao total de inscritos, o percentual de aprovados foi de",
+      "variantesEnunciado": [
+        "Dos participantes de um curso de capacitação, 40% eram analistas e 60% eram técnicos. Concluíram o curso 30% dos analistas e 20% dos técnicos. O percentual de concluintes em relação ao total de participantes foi de",
+        "Em uma amostra de processos auditados, 40% eram de municípios do interior e os demais, da capital. Foram encontradas falhas em 30% dos processos do interior e em 20% dos processos da capital. Considerando toda a amostra, o percentual de processos com falhas foi de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "12%",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 12% é a contribuição de apenas um dos grupos: 30% de 40% = 12% (área técnica) ou 20% de 60% = 12% (área administrativa). Os dois grupos contribuem, coincidentemente, com 12% cada, e o total é a soma: 24%."
+        },
+        {
+          "id": "opt-2",
+          "texto": "24%",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É uma média ponderada: aprovados da área técnica = 30% × 40% = 12% do total; aprovados da área administrativa = 20% × 60% = 12% do total; somando, 24%. Com 100 inscritos: 40 da área técnica (12 aprovados) e 60 da administrativa (12 aprovados), total de 24 aprovados em 100.",
+          "versaoInvertidaFalsa": "Se 40% dos inscritos são da área técnica, com 30% de aprovação, e 60% são da área administrativa, com 20% de aprovação, o percentual de aprovados no total é de 25%, a média das duas taxas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "25%",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a média simples de 30% e 20%, que só valeria se os dois grupos tivessem o mesmo tamanho. Como há mais inscritos da área administrativa (60%), justamente o grupo de taxa menor, a média ponderada fica abaixo de 25%."
+        },
+        {
+          "id": "opt-4",
+          "texto": "26%",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os pesos: aplica 30% aos 60% e 20% aos 40% (18% + 8% = 26%). A taxa de 30% é a da área técnica, que reúne apenas 40% dos inscritos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "50%",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Soma as taxas de aprovação dos dois grupos (30% + 20%), como se incidissem sobre a mesma base. Percentuais de bases diferentes não se somam diretamente: é preciso convertê-los para a base comum, o total de inscritos."
+        }
+      ],
+      "pegadinhaFCC": "A FCC oferece a média simples (25%) e a soma das taxas (50%). Percentuais de grupos de tamanhos diferentes se combinam por média ponderada pelos tamanhos dos grupos.",
+      "resumoFlashcard": {
+        "pergunta": "Como combinar taxas percentuais de grupos de tamanhos diferentes?",
+        "resposta": "Faça a média ponderada: multiplique cada taxa pela participação do grupo no total e some. Com 40% do total a 30% e 60% a 20%: 0,4 × 30% + 0,6 × 20% = 24%."
+      },
+      "conceitosChave": ["Média ponderada de porcentagens"],
+      "fundamentacao": "Porcentagem de porcentagem e média ponderada (taxa global = soma das taxas de cada grupo multiplicadas pela participação do grupo no total); Anexo II do edital, Porcentagem."
+    },
+    {
+      "id": "mat-048",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Regra de três simples e composta",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em uma força-tarefa de digitalização de um Tribunal, verificou-se que 2 técnicos produzem, juntos, o mesmo que 3 estagiários, no mesmo intervalo de tempo. Uma equipe de 2 técnicos e 7 estagiários concluiria a digitalização de um acervo em 12 dias. Mantido o ritmo de trabalho de cada um, uma equipe de 3 técnicos e 3 estagiários concluiria a digitalização do mesmo acervo em",
+      "variantesEnunciado": [
+        "Em um mutirão de conferência documental, a produção de 2 técnicos equivale à de 3 estagiários. Com 2 técnicos e 7 estagiários, a conferência de um acervo levaria 12 dias. Se a equipe fosse de 3 técnicos e 3 estagiários, com o mesmo ritmo individual, a conferência do mesmo acervo levaria",
+        "Considere que, em determinada tarefa, 2 técnicos rendem tanto quanto 3 estagiários. Uma equipe com 2 técnicos e 7 estagiários conclui a tarefa em 12 dias. Uma equipe com 3 técnicos e 3 estagiários, trabalhando no mesmo ritmo individual, concluiria a mesma tarefa em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "8 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera apenas os técnicos, como se os estagiários não produzissem: 12 × 2/3 = 8. Os estagiários também trabalham, e a primeira equipe tem 7 deles, o que pesa bastante na produção diária."
+        },
+        {
+          "id": "opt-2",
+          "texto": "9 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Faz a conversão certa (10 e 7,5 estagiários equivalentes), mas aplica a regra de três direta: 12 × 7,5/10 = 9. Uma equipe que produz menos por dia leva mais tempo, e não menos: a relação é inversa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "16 dias.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Convertendo tudo em estagiários equivalentes: 1 técnico = 3/2 estagiário. Equipe 1: 2 × 3/2 + 7 = 10; equipe 2: 3 × 3/2 + 3 = 7,5. O trabalho total é 10 × 12 = 120 estagiário-dias. Com 7,5 equivalentes, são 120 ÷ 7,5 = 16 dias. Pela regra de três inversa: 12 × 10/7,5 = 16.",
+          "versaoInvertidaFalsa": "Se 2 técnicos produzem o mesmo que 3 estagiários e uma equipe de 2 técnicos e 7 estagiários conclui uma tarefa em 12 dias, então uma equipe de 3 técnicos e 3 estagiários conclui a mesma tarefa em 18 dias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "18 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conta pessoas sem considerar a diferença de produtividade: 9 pessoas contra 6, e 12 × 9/6 = 18. O enunciado diz que técnico e estagiário rendem diferente, por isso é preciso converter todos para a mesma unidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "20 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a equivalência, tratando o técnico como 2/3 de estagiário: equipe 1 = 4/3 + 7 = 25/3 e equipe 2 = 2 + 3 = 5, e 12 × (25/3) ÷ 5 = 20. Como 2 técnicos valem 3 estagiários, cada técnico vale mais que um estagiário: 3/2."
+        }
+      ],
+      "pegadinhaFCC": "A troca de técnicos por estagiários parece equilibrada, mas a FCC exige converter todos para a mesma unidade de produtividade antes da regra de três inversa. Contar cabeças ou inverter a equivalência leva aos distratores.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver regra de três com trabalhadores de produtividades diferentes?",
+        "resposta": "Converta todos para uma unidade comum (por exemplo, 1 técnico = 3/2 estagiário), calcule a produção diária de cada equipe e aplique a proporção inversa entre produção diária e prazo."
+      },
+      "conceitosChave": ["Regra de três inversa", "Produtividade equivalente"],
+      "fundamentacao": "Grandezas inversamente proporcionais (capacidade de produção diária × prazo) com conversão para unidade comum de produtividade; Anexo II do edital, Regra de três."
+    },
+    {
+      "id": "mat-049",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Em um treinamento de lógica para auditores, foi apresentada a proposição P: “O contrato é prorrogado somente se o fiscal emite parecer favorável.” Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma cláusula de um termo de referência foi formalizada logicamente como P: “O contrato é prorrogado somente se o fiscal emite parecer favorável.” A respeito de P, considere as afirmativas abaixo.",
+        "Ao analisar a redação de uma norma interna hipotética, um técnico destacou a proposição P: “O contrato é prorrogado somente se o fiscal emite parecer favorável.” Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "P é equivalente a “Se o contrato é prorrogado, então o fiscal emite parecer favorável.”",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. 'A somente se B' traduz-se por A → B: B é condição necessária para A. Logo, a prorrogação implica o parecer favorável."
+        },
+        {
+          "texto": "P é equivalente a “O contrato não é prorrogado ou o fiscal emite parecer favorável.”",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A condicional A → B equivale a ¬A ∨ B. Como P é 'prorrogado → parecer favorável', equivale a 'não é prorrogado ou emite parecer favorável'."
+        },
+        {
+          "texto": "P é equivalente a “Se o fiscal emite parecer favorável, então o contrato é prorrogado.”",
+          "verdadeira": false,
+          "explicacao": "Falsa. Essa é a recíproca (B → A), que não equivale à condicional original. O parecer favorável é necessário, mas não suficiente: pode haver parecer favorável sem prorrogação."
+        },
+        {
+          "texto": "A negação de P é “Se o contrato é prorrogado, então o fiscal não emite parecer favorável.”",
+          "verdadeira": false,
+          "explicacao": "Falsa. A negação de A → B é A ∧ ¬B: 'O contrato é prorrogado e o fiscal não emite parecer favorável'. Negar apenas o consequente e manter a condicional é erro clássico."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui III, que é a recíproca de P. Em 'A somente se B', B é condição necessária, e não suficiente; por isso 'se há parecer favorável, há prorrogação' não equivale a P."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sendo p = 'o contrato é prorrogado' e q = 'o fiscal emite parecer favorável', P é p → q (I) e, portanto, equivale a ¬p ∨ q (II), além da contrapositiva ¬q → ¬p. III é a recíproca (q → p), que não equivale a p → q: na linha p falso e q verdadeiro, P é verdadeira e a recíproca é falsa. IV erra a negação: ¬(p → q) ≡ p ∧ ¬q, uma conjunção, e não outra condicional.",
+          "versaoInvertidaFalsa": "A proposição “O contrato é prorrogado somente se o fiscal emite parecer favorável” equivale a “Se o fiscal emite parecer favorável, então o contrato é prorrogado.”"
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui III (recíproca) e omite II, que é verdadeira pela equivalência p → q ≡ ¬p ∨ q. É a combinação de quem lê 'somente se' como se fosse um bicondicional."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui IV, que nega a condicional trocando só o consequente. A negação de p → q é p ∧ ¬q: 'o contrato é prorrogado e o fiscal não emite parecer favorável'."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui III e IV, ambas falsas, e exclui I, que é a tradução direta de 'somente se' para a forma condicional (p → q)."
+        }
+      ],
+      "pegadinhaFCC": "'Somente se' introduz a condição necessária, que vai para o consequente: 'A somente se B' é A → B, e não B → A. A FCC ainda testa a negação da condicional, que é uma conjunção (A e não B).",
+      "resumoFlashcard": {
+        "pergunta": "Como traduzir 'A somente se B' para a forma condicional?",
+        "resposta": "Como A → B: B é condição necessária para A. Equivale a ¬B → ¬A e a ¬A ∨ B, e sua negação é A ∧ ¬B. Já 'A se B' é B → A."
+      },
+      "conceitosChave": ["Equivalências lógicas", "Condicional: somente se", "Negação da condicional"],
+      "fundamentacao": "Lógica proposicional: condicional (condição suficiente e condição necessária), equivalências p → q ≡ ¬q → ¬p ≡ ¬p ∨ q, recíproca não equivalente e negação ¬(p → q) ≡ p ∧ ¬q, verificadas por tabela-verdade; Anexo II do edital, Lógica dedutiva."
+    },
+    {
+      "id": "mat-050",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio sequencial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Os números naturais, a partir do 1, são dispostos em linhas da seguinte forma: a 1ª linha contém apenas o número 1; a 2ª linha, os números 2 e 3; a 3ª linha, os números 4, 5 e 6; e assim por diante, de modo que cada linha tem um número a mais que a anterior e continua a contagem de onde a anterior parou. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um painel, os números naturais são escritos em linhas: o número 1 na 1ª linha; 2 e 3 na 2ª linha; 4, 5 e 6 na 3ª linha; e assim sucessivamente, cada linha com um número a mais que a anterior, em sequência contínua. Considere as afirmativas abaixo.",
+        "Um técnico organizou os números de protocolo 1, 2, 3, … em linhas de uma planilha, colocando 1 número na 1ª linha, 2 números na 2ª linha, 3 números na 3ª linha, e assim por diante, sempre em ordem crescente e sem pular números. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O primeiro número da 20ª linha é 191.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Até a 19ª linha são escritos 1 + 2 + … + 19 = 19 × 20/2 = 190 números. Logo, a 20ª linha começa no 191."
+        },
+        {
+          "texto": "O número 100 está na 13ª linha.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A 13ª linha termina em 13 × 14/2 = 91, e a 14ª linha vai de 92 a 14 × 15/2 = 105. Logo, o 100 está na 14ª linha."
+        },
+        {
+          "texto": "A soma dos números da 10ª linha é 505.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A 9ª linha termina em 9 × 10/2 = 45, então a 10ª linha vai de 46 a 55. A soma desses 10 números consecutivos é 10 × (46 + 55)/2 = 10 × 50,5 = 505."
+        },
+        {
+          "texto": "O último número da 15ª linha é 120.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O último número da linha n é a soma 1 + 2 + … + n = n(n + 1)/2. Para n = 15: 15 × 16/2 = 120."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão certas, mas IV também: o último número da 15ª linha é 15 × 16/2 = 120. Quem confunde o último número da linha n com n(n − 1)/2, que dá 105, descarta IV indevidamente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui II, que é falsa. A 13ª linha termina em 91, e o número 100 fica na 14ª linha, que vai de 92 a 105. O erro típico é supor que, como 91 está perto de 100, o 100 ainda estaria na 13ª linha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O último número da linha n é o número triangular n(n + 1)/2, e o primeiro é n(n − 1)/2 + 1. I: 19 × 20/2 + 1 = 191. III: a 10ª linha vai de 46 a 55, e a soma é 10 × (46 + 55)/2 = 505. IV: 15 × 16/2 = 120. II é falsa: a 13ª linha termina em 91, e o 100 está na 14ª linha (de 92 a 105).",
+          "versaoInvertidaFalsa": "Na disposição dos números naturais em linhas com 1, 2, 3, … números, o primeiro número da 20ª linha é 190, pois até a 19ª linha são escritos 190 números."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aceita II, que é falsa, e rejeita I e III, verdadeiras. Quem calcula o primeiro número da 20ª linha como 20 × 21/2 = 210 (que é o último dessa linha) e não confere o 100 chega a essa combinação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Deixa de fora I, que é verdadeira. Até a 19ª linha há 190 números, e a 20ª linha começa no 191. Quem toma 190 como o primeiro número da 20ª linha, esquecendo o +1, descarta I."
+        }
+      ],
+      "pegadinhaFCC": "A FCC explora a diferença de uma unidade entre o último número da linha anterior e o primeiro da linha pedida, e a localização de um número 'perto' do fim de uma linha. Os números triangulares n(n + 1)/2 resolvem tudo.",
+      "resumoFlashcard": {
+        "pergunta": "Na disposição 1 | 2 3 | 4 5 6 | …, quais são o primeiro e o último número da linha n?",
+        "resposta": "O último é o número triangular n(n + 1)/2, e o primeiro é n(n − 1)/2 + 1. Na 20ª linha, por exemplo, o primeiro é 191 e o último é 210."
+      },
+      "conceitosChave": ["Sequências numéricas", "Números triangulares"],
+      "fundamentacao": "Raciocínio sequencial: números triangulares (soma 1 + 2 + … + n = n(n + 1)/2) e soma de termos consecutivos de uma progressão aritmética; Anexo II do edital, Raciocínio sequencial."
+    }
+  ]
+}

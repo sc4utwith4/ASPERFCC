@@ -1,0 +1,577 @@
+{
+  "materiaSlug": "matematica-raciocinio-logico",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "mat-031",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Números inteiros e racionais, operações e expressões",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Efetuando-se as operações indicadas em 0,4 × (−15) + 3/4 ÷ 0,25 − (−2)², obtém-se",
+      "variantesEnunciado": [
+        "Um técnico conferiu, sem calculadora, a célula de controle de uma planilha, que contém a expressão 0,4 × (−15) + 3/4 ÷ 0,25 − (−2)². O resultado correto dessa célula é",
+        "Respeitada a ordem convencional das operações, o valor numérico de 0,4 × (−15) + 3/4 ÷ 0,25 − (−2)² é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "−61",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de errar a vírgula no produto, fazendo 0,4 × (−15) = −60 em vez de −6. Com isso, −60 + 3 − 4 = −61. Lembre que 0,4 = 2/5, e 2/5 de 15 é 6."
+        },
+        {
+          "id": "opt-2",
+          "texto": "−25",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem ignora a prioridade da divisão e opera da esquerda para a direita faz (−6 + 0,75) ÷ 0,25 = −21 e depois −21 − 4 = −25. Multiplicações e divisões vêm antes das somas, então 3/4 ÷ 0,25 deve ser calculado isoladamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "−7",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela ordem das operações, calcula-se primeiro a potência e, depois, multiplicações e divisões: (−2)² = 4; 0,4 × (−15) = −6; 3/4 ÷ 0,25 = 3/4 ÷ 1/4 = 3. Então: −6 + 3 − 4 = −7. O sinal de menos que antecede (−2)² apenas subtrai o quadrado, que é positivo.",
+          "versaoInvertidaFalsa": "O valor de 0,4 × (−15) + 3/4 ÷ 0,25 − (−2)² é 1, porque o sinal de menos antes de (−2)² transforma o quadrado em +4."
+        },
+        {
+          "id": "opt-4",
+          "texto": "1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o erro de tratar − (−2)² como +4, como se o sinal de menos da expressão se combinasse com o sinal da base. Primeiro se calcula (−2)² = +4, e o menos que vem antes subtrai esse valor: −6 + 3 − 4 = −7, e não −6 + 3 + 4 = 1."
+        },
+        {
+          "id": "opt-5",
+          "texto": "5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando se erra a regra de sinais no produto, tomando 0,4 × (−15) como +6. Ficaria 6 + 3 − 4 = 5. Positivo vezes negativo dá negativo, logo o primeiro termo vale −6."
+        }
+      ],
+      "pegadinhaFCC": "A FCC combina decimal, fração e potência de base negativa: o candidato erra o sinal de − (−2)² ou opera da esquerda para a direita, sem respeitar a prioridade da divisão.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular − (−2)² dentro de uma expressão numérica?",
+        "resposta": "Primeiro calcula-se a potência: (−2)² = 4, positivo porque o expoente é par. O sinal de menos que antecede o termo apenas subtrai esse resultado, de modo que − (−2)² = −4."
+      },
+      "conceitosChave": ["Ordem das operações", "Potenciação com base negativa", "Operações com decimais"],
+      "fundamentacao": "Aritmética elementar: prioridade das operações (potências, depois multiplicações e divisões, depois adições e subtrações), regra de sinais e conversão de decimais em frações; Anexo II do edital, Números inteiros e racionais."
+    },
+    {
+      "id": "mat-032",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Regra de três simples e composta",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A cópia de segurança de um banco de dados é transferida para um servidor remoto em 18 minutos quando a taxa de transmissão é de 60 MB/s. Mantido o mesmo volume de dados, se a taxa de transmissão cair para 40 MB/s, a transferência levará",
+      "variantesEnunciado": [
+        "Um arquivo de backup leva 18 minutos para ser enviado a um datacenter externo a uma taxa constante de 60 MB/s. Com a taxa reduzida para 40 MB/s e o mesmo arquivo, o envio levará",
+        "Em um teste de replicação, um volume fixo de dados foi copiado em 18 minutos a 60 MB/s. Se a mesma cópia for feita a 40 MB/s, o tempo necessário será de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "12 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o resultado da regra de três direta (18 × 40 ÷ 60 = 12), como se uma taxa menor encurtasse o tempo. Taxa e tempo são inversamente proporcionais: com menos MB por segundo, o mesmo volume demora mais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "24 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Vem do raciocínio percentual equivocado: a taxa caiu 1/3 (de 60 para 40), e o candidato aumenta o tempo também em 1/3 (18 + 6 = 24). Na proporção inversa, se a taxa passa a 2/3 do valor, o tempo passa a 3/2, isto é, aumenta 50%."
+        },
+        {
+          "id": "opt-3",
+          "texto": "27 minutos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O volume transferido é constante: taxa × tempo = 60 × 18 = 1.080 (MB/s × min). Com 40 MB/s, o tempo é 1.080 ÷ 40 = 27 minutos. Pela regra de três inversa: t = 18 × 60/40 = 18 × 3/2 = 27. A taxa ficou 2/3 da original, então o tempo fica 3/2 do original.",
+          "versaoInvertidaFalsa": "Mantido o volume de dados, reduzir a taxa de transmissão de 60 MB/s para 40 MB/s reduz o tempo de transferência de 18 para 12 minutos, pois taxa e tempo são diretamente proporcionais."
+        },
+        {
+          "id": "opt-4",
+          "texto": "30 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de usar a razão 2/3 como acréscimo de tempo: 18 + (2/3) × 18 = 30. A razão entre as taxas indica que o tempo deve ser multiplicado pelo inverso, 3/2, e não acrescido de 2/3 de si mesmo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "38 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Soma ao tempo a diferença entre as taxas (18 + 20 = 38), misturando grandezas diferentes (minutos e MB/s). Em problemas de proporção, compara-se a razão entre as grandezas, e não a diferença."
+        }
+      ],
+      "pegadinhaFCC": "A banca espera que o candidato monte a regra de três direta. Taxa e tempo, com volume fixo, são inversamente proporcionais: menos velocidade, mais tempo.",
+      "resumoFlashcard": {
+        "pergunta": "Com volume de dados fixo, como se relacionam taxa de transmissão e tempo de transferência?",
+        "resposta": "São inversamente proporcionais: o produto taxa × tempo é constante. Se a taxa passa a 2/3 do valor original, o tempo passa a 3/2, isto é, aumenta 50%."
+      },
+      "conceitosChave": ["Regra de três inversa"],
+      "fundamentacao": "Grandezas inversamente proporcionais (produto constante) e regra de três simples inversa; Anexo II do edital, Regra de três simples."
+    },
+    {
+      "id": "mat-033",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Frações e operações com frações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Ao final de um semestre, cinco unidades de um Tribunal haviam cumprido as seguintes frações de suas metas de instrução de processos: Auditoria, 5/8; Contabilidade, 2/3; Informática, 13/20; Jurídico, 7/12; e Protocolo, 3/5. A unidade que cumpriu a maior fração de sua meta foi",
+      "variantesEnunciado": [
+        "Em um relatório de desempenho, as frações das metas atingidas por cinco unidades foram: Auditoria, 5/8; Contabilidade, 2/3; Informática, 13/20; Jurídico, 7/12; Protocolo, 3/5. A maior fração de meta cumprida pertence à unidade",
+        "Comparando as frações 5/8 (Auditoria), 2/3 (Contabilidade), 13/20 (Informática), 7/12 (Jurídico) e 3/5 (Protocolo), que indicam a parte da meta semestral cumprida por cada unidade, conclui-se que o melhor desempenho relativo foi o da unidade"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 5/8 = 0,625 = 75/120, apenas a terceira maior. Fica atrás de 2/3 (80/120) e de 13/20 (78/120). Quem a escolhe costuma achar que '5 de 8' está perto do todo, sem reduzir as frações ao mesmo denominador."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Contabilidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Reduzindo ao denominador comum 120 (MMC de 8, 3, 20, 12 e 5): 5/8 = 75/120; 2/3 = 80/120; 13/20 = 78/120; 7/12 = 70/120; 3/5 = 72/120. A maior é 80/120 = 2/3, da Contabilidade. Em decimais: 0,666... > 0,65 > 0,625 > 0,6 > 0,583...",
+          "versaoInvertidaFalsa": "Entre as frações 5/8, 2/3, 13/20, 7/12 e 3/5, a maior é 13/20, que corresponde a 78/120, enquanto 2/3 corresponde a apenas 75/120."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Informática.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 13/20 = 0,65 = 78/120 é a segunda maior, mas fica abaixo de 2/3 = 0,666... = 80/120. A armadilha é escolher a fração de maior numerador e denominador, como se números maiores indicassem fração maior."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Jurídico.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 7/12 ≈ 0,583 = 70/120 é, na verdade, a menor fração da lista. Quem a escolhe se deixa levar pelo numerador 7, maior que o de 5/8, 2/3 e 3/5, sem considerar que o denominador 12 divide o todo em partes menores."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Protocolo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 3/5 = 0,6 = 72/120 é só a quarta maior. Quem a escolhe confunde 'denominador pequeno' com 'fração grande' e compara 3/5 apenas com 7/12, esquecendo-se de 2/3, que tem denominador ainda menor e é maior."
+        }
+      ],
+      "pegadinhaFCC": "As frações 2/3 e 13/20 são muito próximas (0,666... e 0,65), e a FCC aposta que o candidato escolherá a de maior numerador. Só a redução ao mesmo denominador, ou a conversão em decimal, decide com segurança.",
+      "resumoFlashcard": {
+        "pergunta": "Como comparar com segurança frações de denominadores diferentes, como 2/3 e 13/20?",
+        "resposta": "Reduza-as ao mesmo denominador (MMC) ou converta-as em decimais: 2/3 = 40/60 e 13/20 = 39/60, logo 2/3 é maior. Numerador e denominador maiores não indicam, por si, fração maior."
+      },
+      "conceitosChave": ["Comparação de frações", "Operações com frações"],
+      "fundamentacao": "Comparação de números racionais por redução ao mesmo denominador (MMC) ou por conversão em decimal; Anexo II do edital, Frações e operações com frações."
+    },
+    {
+      "id": "mat-034",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Razões, proporções e divisão proporcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em uma unidade técnica de um Tribunal, a razão entre o número de analistas e o número de técnicos é de 3 para 5. Se 6 técnicos forem transferidos para outra unidade, sem nenhuma outra alteração no quadro, essa razão passará a ser de 3 para 4. Antes da transferência, o número total de servidores da unidade, entre analistas e técnicos, era",
+      "variantesEnunciado": [
+        "Na equipe de fiscalização de obras de um Tribunal, analistas e técnicos estão na razão de 3 para 5. Com a saída de 6 técnicos, e mantido o número de analistas, a razão entre analistas e técnicos passa a 3 para 4. O total de membros da equipe antes da saída dos técnicos era",
+        "Considere que, em um setor, para cada 3 analistas há 5 técnicos. Após a remoção de 6 técnicos, permanecendo inalterado o número de analistas, passa a haver 3 analistas para cada 4 técnicos. O número de servidores do setor antes da remoção era"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "18",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 18 é o número de analistas, encontrado no meio do caminho (3k, com k = 6). O comando pede o total de servidores antes da transferência, que soma analistas e técnicos: 18 + 30 = 48."
+        },
+        {
+          "id": "opt-2",
+          "texto": "24",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 24 é o número de técnicos depois da transferência (30 − 6). Quem para nesse valor responde a uma pergunta diferente da formulada, que pede o total anterior, com analistas e técnicos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "30",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 30 é o número de técnicos antes da transferência (5k, com k = 6). Falta somar os 18 analistas para obter o total de 48 servidores pedido no comando."
+        },
+        {
+          "id": "opt-4",
+          "texto": "42",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 42 é o total depois da transferência (18 + 24). O enunciado pede o quadro anterior, quando ainda estavam na unidade os 6 técnicos transferidos: 42 + 6 = 48."
+        },
+        {
+          "id": "opt-5",
+          "texto": "48",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sejam 3k analistas e 5k técnicos. Após a saída de 6 técnicos: 3k/(5k − 6) = 3/4, então 12k = 15k − 18, logo k = 6. Havia 18 analistas e 30 técnicos, total de 48. Conferência: depois da transferência, 18/24 = 3/4.",
+          "versaoInvertidaFalsa": "Se analistas e técnicos estão na razão de 3 para 5 e a saída de 6 técnicos leva essa razão a 3 para 4, então a unidade tinha 42 servidores antes da transferência."
+        }
+      ],
+      "pegadinhaFCC": "Todos os distratores são valores intermediários corretos (analistas, técnicos antes e depois, total depois). A FCC testa se o candidato lê o comando até o fim: o pedido é o total ANTES da transferência.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver um problema em que a razão entre dois grupos muda após a saída de parte de um deles?",
+        "resposta": "Escreva os grupos como múltiplos da razão inicial (3k e 5k), aplique a mudança (5k − 6) e iguale à nova razão (3/4). Resolva em k e confira qual grandeza o comando pede."
+      },
+      "conceitosChave": ["Razão e proporção"],
+      "fundamentacao": "Razões e proporções: representação por constante de proporcionalidade e propriedade fundamental das proporções (produto dos meios igual ao produto dos extremos); Anexo II do edital, Razões e proporções."
+    },
+    {
+      "id": "mat-035",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Múltiplos e divisores (MMC e MDC)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico vai organizar em pacotes os processos de um lote. Se formar pacotes de 6 processos, sobrarão 4 processos; se formar pacotes de 8, também sobrarão 4; e se formar pacotes de 10, novamente sobrarão 4. Sabendo que o lote tem mais de 200 e menos de 300 processos, o número de processos do lote é",
+      "variantesEnunciado": [
+        "Ao distribuir os documentos de uma caixa em grupos de 6, sobram 4 documentos; em grupos de 8, sobram 4; e em grupos de 10, sobram 4. Se a caixa contém mais de 200 e menos de 300 documentos, o total de documentos é",
+        "Um servidor percebeu que, ao separar as notificações de um dia em maços de 6, de 8 ou de 10 unidades, sempre sobravam 4 notificações. Sabendo que foram emitidas mais de 200 e menos de 300 notificações nesse dia, o número de notificações emitidas foi"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "204",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Surge quando o MMC é calculado de forma incompleta, como 40 (8 × 5), esquecendo o fator 3 do 6: 40 × 5 + 4 = 204. Mas 204 é divisível por 6 (204 = 6 × 34), de modo que não sobrariam 4 processos nos pacotes de 6."
+        },
+        {
+          "id": "opt-2",
+          "texto": "236",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de subtrair o resto em vez de somá-lo: 240 − 4 = 236. Na divisão por 6, 236 deixa resto 2; por 10, resto 6. O número procurado excede um múltiplo comum em 4 unidades, e não fica 4 abaixo dele."
+        },
+        {
+          "id": "opt-3",
+          "texto": "240",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 240 é múltiplo de 6, 8 e 10 (2 × MMC) e, por isso mesmo, não deixa resto algum nessas divisões. Quem marca 240 encontrou o múltiplo comum e esqueceu de acrescentar as 4 sobras."
+        },
+        {
+          "id": "opt-4",
+          "texto": "244",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Se sobram 4 em todas as divisões, N − 4 é múltiplo comum de 6, 8 e 10. MMC(6, 8, 10) = 2³ × 3 × 5 = 120, então N − 4 vale 120, 240, 360... e N vale 124, 244, 364... O único valor entre 200 e 300 é 244. Conferência: 244 = 6 × 40 + 4 = 8 × 30 + 4 = 10 × 24 + 4.",
+          "versaoInvertidaFalsa": "Se um número deixa resto 4 nas divisões por 6, por 8 e por 10 e está entre 200 e 300, então esse número é 240, que é múltiplo comum de 6, 8 e 10."
+        },
+        {
+          "id": "opt-5",
+          "texto": "252",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 252 deixa resto 4 apenas na divisão por 8 (8 × 31 + 4). Por 6 o resto é 0, e por 10 é 2. É o valor de quem testa só uma das condições, em vez de exigir as três ao mesmo tempo."
+        }
+      ],
+      "pegadinhaFCC": "A FCC oferece o múltiplo comum (240) e erros de MMC como iscas. O pulo do gato é perceber que o número menos o resto (N − 4) é que é múltiplo comum dos divisores.",
+      "resumoFlashcard": {
+        "pergunta": "Como achar um número que deixa o mesmo resto r na divisão por vários números?",
+        "resposta": "Subtraia o resto: N − r é múltiplo comum dos divisores. Calcule o MMC, liste seus múltiplos, some r e escolha o valor que atende à faixa dada no enunciado."
+      },
+      "conceitosChave": ["MMC: problemas com resto"],
+      "fundamentacao": "Teoria elementar dos números: MMC por fatoração em primos e algoritmo da divisão (dividendo = divisor × quociente + resto); Anexo II do edital, Múltiplos e divisores."
+    },
+    {
+      "id": "mat-036",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere verdadeiras as seguintes afirmações: Todo processo de auditoria é sigiloso. Nenhum documento sigiloso é divulgado na internet. Alguns relatórios são processos de auditoria. A partir dessas afirmações, é necessariamente verdadeiro que",
+      "variantesEnunciado": [
+        "Admita como verdadeiras três afirmações: todo processo de auditoria é sigiloso; nenhum documento sigiloso é divulgado na internet; e alguns relatórios são processos de auditoria. Com base apenas nessas afirmações, conclui-se necessariamente que",
+        "Em uma norma interna hipotética, constam as seguintes regras, todas verdadeiras: todo processo de auditoria é sigiloso, nenhum documento sigiloso é divulgado na internet e alguns relatórios são processos de auditoria. Dessas regras decorre, necessariamente, que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "nenhum relatório é divulgado na internet.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida. Só se sabe que os relatórios que são processos de auditoria não são divulgados. Pode haver relatórios que não são processos de auditoria, e sobre eles as premissas nada dizem: eles podem, sim, estar na internet."
+        },
+        {
+          "id": "opt-2",
+          "texto": "todo documento sigiloso é processo de auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a recíproca da primeira premissa. 'Todo processo de auditoria é sigiloso' não autoriza concluir que todo documento sigiloso é processo de auditoria: pode haver outros documentos sigilosos, como pareceres ou fichas funcionais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pelo menos um relatório não é divulgado na internet.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Encadeando as premissas: todo processo de auditoria é sigiloso e nenhum sigiloso é divulgado, logo nenhum processo de auditoria é divulgado na internet. Como alguns relatórios são processos de auditoria, esses relatórios não são divulgados. Portanto, pelo menos um relatório (algum relatório) não é divulgado na internet.",
+          "versaoInvertidaFalsa": "Das premissas 'todo processo de auditoria é sigiloso', 'nenhum documento sigiloso é divulgado na internet' e 'alguns relatórios são processos de auditoria' decorre necessariamente que nenhum relatório é divulgado na internet."
+        },
+        {
+          "id": "opt-4",
+          "texto": "algum relatório divulgado na internet é sigiloso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmação é impossível diante das premissas, pois nenhum documento sigiloso é divulgado na internet. Logo, não pode existir relatório que seja, ao mesmo tempo, divulgado na internet e sigiloso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "todo relatório é sigiloso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só os relatórios que são processos de auditoria são, com certeza, sigilosos. A premissa 'alguns relatórios são processos de auditoria' não garante que todos o sejam, de modo que outros relatórios podem não ser sigilosos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca 'algum' por 'nenhum' ou 'todo' na conclusão e oferece a recíproca de uma premissa. De uma premissa particular ('alguns relatórios') só se extrai conclusão particular.",
+      "resumoFlashcard": {
+        "pergunta": "De 'Todo A é B', 'Nenhum B é C' e 'Algum D é A', o que se conclui necessariamente?",
+        "resposta": "Que nenhum A é C e, portanto, algum D não é C. Não se pode concluir que nenhum D é C nem que todo D é B, porque a premissa sobre D é particular."
+      },
+      "conceitosChave": ["Silogismos categóricos", "Validade de argumentos"],
+      "fundamentacao": "Lógica clássica: silogismos categóricos e diagramas de Venn (premissa particular gera conclusão particular; a recíproca de uma universal afirmativa não é válida); Anexo II do edital, Lógica dedutiva e argumentação."
+    },
+    {
+      "id": "mat-037",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio sequencial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O sistema de protocolo de um Tribunal gera, a cada dia, códigos numéricos de controle segundo um padrão fixo. Em determinado dia, os seis primeiros códigos emitidos foram, nessa ordem, 3, 5, 10, 12, 24 e 26. Mantido o padrão, o 10º código emitido nesse dia será",
+      "variantesEnunciado": [
+        "Uma rotina de auditoria contínua numera seus alertas segundo uma regra fixa. Os seis primeiros números atribuídos foram 3, 5, 10, 12, 24 e 26. Seguindo a mesma regra, o número do 10º alerta será",
+        "Os termos iniciais de uma sequência usada para gerar senhas temporárias são 3, 5, 10, 12, 24 e 26, nessa ordem, e os demais seguem o mesmo padrão. O 10º termo dessa sequência é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "108",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 108 é o 9º termo. A sequência alterna '+2' e '×2': 3, 5, 10, 12, 24, 26, 52, 54, 108, 110. Quem para em 108 errou a contagem das posições, um descuido comum quando se listam muitos termos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "110",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O padrão alterna as operações '+2' e '×2': 3 (+2) 5 (×2) 10 (+2) 12 (×2) 24 (+2) 26 (×2) 52 (+2) 54 (×2) 108 (+2) 110. Cada termo de posição par é obtido somando 2 ao anterior, e o 10º termo é 108 + 2 = 110.",
+          "versaoInvertidaFalsa": "Na sequência 3, 5, 10, 12, 24, 26, …, que alterna as operações '+2' e '×2', o 10º termo é 216, obtido ao dobrar o 9º termo, 108."
+        },
+        {
+          "id": "opt-3",
+          "texto": "212",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de desalinhar a alternância depois do 7º termo: dobrar 52 duas vezes seguidas (8º termo 104) e só então retomar o padrão (9º termo 106 e 10º termo 212). A regra exige alternância estrita entre +2 e ×2."
+        },
+        {
+          "id": "opt-4",
+          "texto": "216",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aplica '×2' na 10ª posição (108 × 2 = 216), quando as posições pares recebem '+2'. Quem não verifica qual operação cabe a cada posição troca a ordem da alternância no último passo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "220",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 220 é o 11º termo (110 × 2). Quem chega a esse valor contou uma posição a mais, por exemplo começando a contagem do zero ou contando a partir do segundo termo."
+        }
+      ],
+      "pegadinhaFCC": "Na sequência de duas operações alternadas, o erro está em perder a posição: a FCC oferece o 9º e o 11º termos e a troca da operação na posição pedida.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar e estender uma sequência como 3, 5, 10, 12, 24, 26, …?",
+        "resposta": "Observe as operações entre termos consecutivos: +2, ×2, +2, ×2, +2. A regra alterna duas operações, e cada posição par vem de '+2'. Liste os termos numerando as posições para não perder a contagem."
+      },
+      "conceitosChave": ["Sequências numéricas"],
+      "fundamentacao": "Raciocínio sequencial: identificação de lei de formação recursiva com operações alternadas; Anexo II do edital, Raciocínio sequencial."
+    },
+    {
+      "id": "mat-038",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Porcentagem, acréscimos e descontos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na preparação de um material de capacitação sobre acréscimos e descontos, um técnico redigiu algumas afirmações, sempre envolvendo valores positivos. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Durante a revisão de uma planilha de reajustes contratuais, um auditor anotou algumas conclusões sobre variações percentuais sucessivas aplicadas a valores positivos. Considere as afirmativas abaixo.",
+        "Um grupo de estudos para concurso elaborou afirmações sobre porcentagens, acréscimos e descontos sucessivos, sempre aplicados a quantidades positivas. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Um aumento de 25% seguido de um desconto de 20% faz um valor voltar exatamente ao inicial.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os fatores se multiplicam: 1,25 × 0,80 = 1,00. Por exemplo, R$ 100,00 vira R$ 125,00, e 20% de 125 é 25, o que traz o valor de volta a R$ 100,00."
+        },
+        {
+          "texto": "Dois aumentos sucessivos de 10% equivalem a um único aumento de 21%.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. 1,10 × 1,10 = 1,21, ou seja, aumento total de 21%. O segundo aumento incide sobre o valor já aumentado, por isso o total supera 20%."
+        },
+        {
+          "texto": "Para recuperar uma queda de 20%, basta um aumento de 20% sobre o valor reduzido.",
+          "verdadeira": false,
+          "explicacao": "Falsa. 0,80 × 1,20 = 0,96: ainda faltariam 4% do valor original. Para voltar ao inicial, o aumento precisa ser de 25%, pois 0,80 × 1,25 = 1."
+        },
+        {
+          "texto": "Se o número de processos de uma unidade aumentar 20% e o número de servidores aumentar 50%, o número de processos por servidor diminuirá 20%.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A razão processos/servidor fica multiplicada por 1,20 ÷ 1,50 = 0,80, o que corresponde a uma redução de 20%. Subtrair os percentuais (20% − 50% = −30%) seria um erro."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que é falsa: um aumento de 20% sobre o valor reduzido leva a 0,80 × 1,20 = 0,96 do original, e não a 100%. A recuperação de uma queda de 20% exige aumento de 25%."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão certas, mas a alternativa omite IV, também verdadeira: 1,20 ÷ 1,50 = 0,80, redução de 20% nos processos por servidor. Quem subtrai os percentuais acha −30% e descarta IV por engano."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I: 1,25 × 0,80 = 1 (volta ao inicial). II: 1,10 × 1,10 = 1,21 (aumento de 21%). IV: 1,20 ÷ 1,50 = 0,80 (redução de 20% na razão). III é falsa, porque 0,80 × 1,20 = 0,96; a recuperação de uma queda de 20% exige aumento de 25%. Em porcentagens sucessivas, multiplicam-se os fatores; nunca se somam ou subtraem as taxas.",
+          "versaoInvertidaFalsa": "Se o número de processos de uma unidade aumentar 20% e o número de servidores aumentar 50%, o número de processos por servidor diminuirá 30%."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reconhece II, mas inclui III, falsa (0,80 × 1,20 = 0,96), e exclui I e IV, verdadeiras. É a combinação de quem acredita que aumento e desconto de mesma taxa se anulam."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui III, que é a pegadinha clássica (desconto e aumento de 20% não se anulam), e deixa de fora I e II, ambas verdadeiras pelo produto dos fatores (1,25 × 0,80 = 1 e 1,10 × 1,10 = 1,21)."
+        }
+      ],
+      "pegadinhaFCC": "A FCC aposta que o candidato soma ou subtrai taxas percentuais. Variações sucessivas e razões entre grandezas se resolvem multiplicando ou dividindo os fatores (1 + taxa).",
+      "resumoFlashcard": {
+        "pergunta": "Que aumento recupera uma queda de 20%?",
+        "resposta": "Um aumento de 25%, porque 0,80 × 1,25 = 1. Em geral, para desfazer um fator f, aplica-se o fator 1/f; um aumento de 20% sobre o valor reduzido só leva a 96% do original."
+      },
+      "conceitosChave": ["Porcentagens sucessivas", "Variação percentual de razões"],
+      "fundamentacao": "Matemática comercial: fator de multiplicação (1 ± taxa), composição de variações sucessivas e variação percentual de uma razão; Anexo II do edital, Porcentagem, acréscimos e descontos."
+    },
+    {
+      "id": "mat-039",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Estruturas lógicas e associação de informações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Diana, Eduardo, Flávia e Gustavo, auditores de um Tribunal, auditaram, cada um, um jurisdicionado diferente (Prefeitura, Câmara, Autarquia e Fundação) e concluíram seus trabalhos em meses diferentes, de março a junho de um mesmo ano. Sabe-se que: a auditoria da Fundação foi concluída em março; quem auditou a Câmara concluiu seu trabalho exatamente um mês depois de Diana; Eduardo concluiu antes de Flávia, e Flávia concluiu antes de Diana; nem Eduardo nem Flávia auditaram a Autarquia. Com base nessas informações, é correto concluir que",
+      "variantesEnunciado": [
+        "Quatro auditores, Diana, Eduardo, Flávia e Gustavo, foram designados para fiscalizar, cada um, um jurisdicionado distinto: Prefeitura, Câmara, Autarquia e Fundação. Cada auditoria terminou em um mês diferente, entre março e junho. Sabe-se que a fiscalização da Fundação terminou em março; que o auditor da Câmara terminou um mês após Diana; que Eduardo terminou antes de Flávia, e esta, antes de Diana; e que a Autarquia não foi auditada por Eduardo nem por Flávia. Conclui-se corretamente que",
+        "Em um plano anual de fiscalização, Diana, Eduardo, Flávia e Gustavo ficaram responsáveis, cada um, por um jurisdicionado diferente (Prefeitura, Câmara, Autarquia ou Fundação), e cada auditoria foi concluída em um mês distinto, de março a junho. Considere que: a Fundação teve sua auditoria concluída em março; a auditoria da Câmara terminou no mês seguinte ao da auditoria de Diana; Eduardo terminou antes de Flávia, que terminou antes de Diana; a Autarquia não coube a Eduardo nem a Flávia. É correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Gustavo auditou a Autarquia e concluiu sua auditoria em maio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Gustavo concluiu em junho e auditou a Câmara. A Autarquia coube a Diana, que concluiu em maio. A alternativa troca os jurisdicionados de Diana e Gustavo e ainda atribui a Gustavo o mês de Diana."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Flávia auditou a Prefeitura e concluiu sua auditoria em abril.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Como Eduardo < Flávia < Diana, Diana concluiu em maio ou junho; mas o auditor da Câmara terminou um mês depois dela, então Diana concluiu em maio e a Câmara, em junho. Quem terminou em junho não é Eduardo, Flávia nem Diana: é Gustavo, com a Câmara. Assim, Eduardo concluiu em março e Flávia, em abril. A Fundação terminou em março, logo é de Eduardo. A Autarquia não é de Flávia, então é de Diana, e Flávia auditou a Prefeitura, em abril.",
+          "versaoInvertidaFalsa": "Com as informações dadas, conclui-se que Flávia auditou a Fundação e concluiu sua auditoria em março, antes de Eduardo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Diana auditou a Câmara e concluiu sua auditoria em maio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Diana não pode ter auditado a Câmara, pois o auditor da Câmara concluiu um mês depois dela: seria a mesma pessoa terminando em dois meses diferentes. Diana auditou a Autarquia, em maio."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Eduardo auditou a Câmara e concluiu sua auditoria em março.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Eduardo de fato concluiu em março, mas a auditoria concluída em março foi a da Fundação, e não a da Câmara. A Câmara foi auditada por Gustavo, que concluiu em junho."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Flávia auditou a Fundação e concluiu sua auditoria em abril.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A auditoria da Fundação foi concluída em março, e Flávia concluiu em abril; a Fundação ficou com Eduardo. A alternativa combina o mês certo de Flávia com o jurisdicionado errado, uma meia-verdade."
+        }
+      ],
+      "pegadinhaFCC": "A chave é a pista relativa 'um mês depois de Diana' combinada com a ordem Eduardo < Flávia < Diana, que fixa Diana em maio. Os distratores misturam um dado certo com outro errado para pegar quem não fecha a tabela inteira.",
+      "resumoFlashcard": {
+        "pergunta": "Em problemas de associação com meses ou dias, por onde começar?",
+        "resposta": "Pelas pistas de ordem e de distância ('antes de', 'um mês depois de'), que limitam as posições possíveis. Fixada uma posição, as pistas de exclusão ('não auditou') completam a tabela por eliminação."
+      },
+      "conceitosChave": ["Associação lógica"],
+      "fundamentacao": "Raciocínio lógico: problemas de associação resolvidos por tabela de dupla entrada, com pistas de ordem, de distância e de exclusão; Anexo II do edital, Estruturas lógicas e associação de informações."
+    },
+    {
+      "id": "mat-040",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Orientação espacial e temporal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "O planejamento de um Tribunal para 2028 parte da informação de que o dia 1º de janeiro de 2028 cairá em um sábado. Com base nessa informação e no calendário gregoriano, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao montar o calendário de sessões de 2028, uma secretaria verificou que o dia 1º de janeiro desse ano será um sábado. Tendo em vista o calendário gregoriano, considere as afirmativas abaixo.",
+        "Sabe-se que o ano de 2028 começará em um sábado. Um técnico responsável pela escala de plantões fez algumas afirmações sobre datas desse ano e do início do ano seguinte. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O dia 1º de janeiro de 2029 cairá em um domingo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. 2028 é bissexto (divisível por 4 e não é ano secular), logo tem 366 dias = 52 semanas + 2 dias. O dia da semana avança 2 posições: de sábado para segunda-feira. O domingo só seria correto em um ano de 365 dias."
+        },
+        {
+          "texto": "O ano de 2028 terá 53 sábados.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Em 366 dias há 52 semanas completas e mais 2 dias, que correspondem aos dias da semana de 1º e 2 de janeiro: sábado e domingo. Assim, 2028 terá 53 sábados e 53 domingos."
+        },
+        {
+          "texto": "O último dia de fevereiro de 2028 cairá em uma terça-feira.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Em 2028, fevereiro termina no dia 29. Do dia 1º de janeiro ao dia 29 de fevereiro passam 31 + 28 = 59 dias; como 59 = 8 × 7 + 3, o dia da semana avança 3 posições: de sábado para terça-feira."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que ignora o dia extra do ano bissexto. Com 366 dias, o 1º de janeiro de 2029 avança dois dias da semana em relação ao de 2028 e cai em uma segunda-feira, não em um domingo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. II está certa, mas III também está: em 2028, o último dia de fevereiro é o dia 29, que cai 59 dias depois de 1º de janeiro (59 = 8 × 7 + 3), isto é, em uma terça-feira. Quem usa 28 de fevereiro chega à segunda-feira e descarta III."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera I verdadeira, mas um ano bissexto desloca o dia da semana em 2 posições, e não em 1. Além disso, exclui II, que é verdadeira: os dois dias que sobram das 52 semanas são sábado e domingo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. 2028 é bissexto: 366 dias = 52 semanas + 2 dias. II: os dois dias excedentes são sábado (1º/1) e domingo (2/1), logo há 53 sábados. III: fevereiro de 2028 tem 29 dias; de 1º/1 a 29/2 passam 59 dias, e 59 = 8 × 7 + 3 leva o sábado à terça-feira. I é falsa: 1º/1/2029 fica 366 dias depois, e 366 = 52 × 7 + 2, então cai em uma segunda-feira.",
+          "versaoInvertidaFalsa": "Se 1º de janeiro de 2028 cai em um sábado, o último dia de fevereiro de 2028 cairá em uma segunda-feira, pois fevereiro desse ano termina no dia 28."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Marca justamente a única afirmativa falsa. O erro é tratar 2028 como ano de 365 dias, avançando um só dia da semana; com o dia 29 de fevereiro, o avanço é de dois dias, de sábado para segunda-feira."
+        }
+      ],
+      "pegadinhaFCC": "O ano bissexto é a armadilha: com 366 dias, o calendário avança dois dias da semana, e fevereiro termina no dia 29. Quem usa 365 dias marca I e erra III.",
+      "resumoFlashcard": {
+        "pergunta": "Quantos dias da semana o calendário avança de um ano para o seguinte?",
+        "resposta": "Um ano comum (365 = 52 × 7 + 1) avança 1 dia; um ano bissexto (366 = 52 × 7 + 2) avança 2. Assim, se 1º/1/2028 é sábado, 1º/1/2029 é segunda-feira, e 2028 tem 53 sábados e 53 domingos."
+      },
+      "conceitosChave": ["Calendário e ano bissexto", "Contagem de dias da semana"],
+      "fundamentacao": "Calendário gregoriano: ano bissexto (divisível por 4, exceto anos seculares não divisíveis por 400) e contagem de dias da semana pelo resto da divisão por 7; Anexo II do edital, Orientação temporal."
+    }
+  ]
+}
