@@ -1,0 +1,114 @@
+{
+  "id": "caso-02",
+  "titulo": "Ransomware no servidor de arquivos: resposta, backup e comunicação",
+  "materiasRelacionadas": ["seguranca-informacao", "legislacao-aplicada-ti", "so-redes-nuvem"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. Numa segunda-feira, às 7h40, a central de atendimento do Tribunal recebeu chamados de auditores que não conseguiam abrir papéis de trabalho. O Núcleo de Infraestrutura e Operações (NIO) constatou que 1,8 TB do servidor de arquivos departamental, usado por 14 unidades, estava cifrado, com a extensão “.lock” e uma nota em cada pasta exigindo pagamento em criptomoeda em 72 horas, sob ameaça de publicar planilhas copiadas. A análise preliminar indica acesso pela VPN com a credencial de um colaborador terceirizado, protegida apenas por senha.",
+    "O backup do servidor é diário, às 23h, gravado em um storage instalado na mesma sala e montado como unidade de rede no próprio servidor; parte dessas cópias também foi cifrada. Existe ainda uma cópia semanal em fita, feita aos sábados e guardada em outro prédio. Entre os arquivos atingidos estão planilhas de folha de pagamento enviadas por jurisdicionados, com nome, CPF e dados bancários de cerca de 9 mil servidores municipais.",
+    "A unidade de controle externo informa que o servidor sustenta relatórios de auditoria com prazo regimental de cinco dias, que ela não tolera perder mais de quatro horas de trabalho e que não pode ficar mais de 24 horas sem acesso aos arquivos."
+  ],
+  "comando": "Na condição de integrante da equipe de tratamento de incidentes do Tribunal, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Descreva as ações de resposta ao incidente, da contenção à recuperação, e opine sobre o pagamento do resgate.",
+    "b) Avalie a estratégia de backup existente à luz da regra 3-2-1 e dos objetivos de RPO e RTO informados pela unidade.",
+    "c) Indique as providências de comunicação exigidas pela LGPD e o papel da Política de Segurança da Informação do Tribunal (RA 17/2024).",
+    "d) Proponha medidas para evitar a recorrência e o encaminhamento pós-incidente."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Estrutura a resposta pelo ciclo de tratamento de incidentes (NIST SP 800-61): detecção e análise, contenção, erradicação, recuperação e pós-incidente, isolando os sistemas sem desligá-los, para preservar evidências.",
+            "pontos": 10,
+            "palavrasChave": ["contenção|conter", "erradicação|erradicar", "recuperação|restauração|restaurar", "isolar|isolamento|desconectar", "evidências|forense|preservar"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Domina os conceitos de backup e continuidade: regra 3-2-1 (três cópias, duas mídias, uma fora do local), cópia imutável ou offline, RPO como perda máxima de dados e RTO como prazo de retomada.",
+            "pontos": 10,
+            "palavrasChave": ["3-2-1|três cópias", "imutável|offline|imutabilidade|air gap", "RPO", "RTO", "fora do local|outro local|off-site|externa"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Fundamenta a comunicação no art. 48 da LGPD (controlador comunica ANPD e titulares quando há risco ou dano relevante) e no prazo de três dias úteis da Resolução CD/ANPD 15/2024, contado do conhecimento de que o incidente afetou dados pessoais, com atuação do encarregado.",
+            "pontos": 8,
+            "palavrasChave": ["art. 48|artigo 48", "ANPD|autoridade nacional", "titulares", "três dias úteis|3 dias úteis", "encarregado"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Aplica a resposta ao caso: isolar servidor e storage, revogar a credencial de VPN do terceirizado, redefinir contas privilegiadas, verificar movimentação lateral e desaconselhar o pagamento do resgate (não garante a chave nem a não publicação e financia o crime).",
+            "pontos": 10,
+            "palavrasChave": ["VPN", "credencial|credenciais|conta", "revogar|bloquear|desativar|suspender", "resgate", "não deve ser pago|não pagar|desaconselhado|não é recomendável"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Avalia o backup do caso: storage montado como unidade de rede ficou ao alcance do malware; a cópia a cada 24 horas não atende ao RPO de quatro horas; a fita semanal implica grande perda e restauração lenta, ameaçando o RTO de 24 horas.",
+            "pontos": 10,
+            "palavrasChave": ["unidade de rede|montado|mapeado", "quatro horas|4 horas|4h", "24 horas|24h|diária|diário", "fita|semanal", "não atende|incompatível|insuficiente"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Reconhece dados financeiros em larga escala (CPF e dados bancários de 9 mil pessoas) como risco relevante e relaciona a PSI (RA 17/2024), que protege disponibilidade, integridade, confidencialidade e autenticidade, ao acompanhamento pelo Comitê de Segurança da Informação.",
+            "pontos": 8,
+            "palavrasChave": ["dados bancários|dados financeiros|financeiros", "17/2024|PSI|política de segurança", "comitê de segurança", "disponibilidade|integridade|confidencialidade"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Propõe medidas contra a recorrência: MFA na VPN, sobretudo para terceiros, menor privilégio, segmentação da rede, backup imutável e offline com testes de restauração e monitoramento dos servidores.",
+            "pontos": 8,
+            "palavrasChave": ["MFA|múltiplos fatores|segundo fator|duplo fator", "segmentação|segmentar", "testes de restauração|testar|teste", "menor privilégio|privilégio mínimo", "imutável|offline"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Encaminha o relatório pós-incidente com lições aprendidas, a atualização do plano de continuidade e o registro do incidente.",
+            "pontos": 6,
+            "palavrasChave": ["lições aprendidas|pós-incidente|postmortem", "continuidade", "registro|registrar|relatório"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "A resposta segue o ciclo do NIST SP 800-61: detecção e análise, contenção, erradicação, recuperação e pós-incidente. De imediato, cabe isolar servidor e storage da rede, sem desligá-los, para preservar evidências; revogar a credencial de VPN do terceirizado; redefinir as contas privilegiadas; e verificar movimentação lateral. O resgate não deve ser pago: não garante a chave, não impede a publicação e financia o crime.",
+    "O backup viola a regra 3-2-1 (três cópias, duas mídias, uma fora do local, de preferência imutável ou offline). O storage montado como unidade de rede ficou ao alcance do malware. A cópia a cada 24 horas não atende ao RPO de quatro horas, e a fita semanal implica perder dias de trabalho e restaurar devagar, o que ameaça o RTO de 24 horas. A restauração deve partir da cópia íntegra mais recente, após a erradicação.",
+    "As planilhas têm CPF e dados bancários de 9 mil pessoas: dados financeiros em larga escala, com risco relevante. Pelo art. 48 da LGPD, o Tribunal, como controlador, deve comunicar a ANPD e os titulares, por meio do encarregado, em três dias úteis do conhecimento de que o incidente afetou dados pessoais (Res. CD/ANPD 15/2024). A PSI (RA 17/2024) orienta a resposta ao tutelar disponibilidade, integridade e confidencialidade, e o Comitê de Segurança da Informação deve acompanhar o caso.",
+    "Para evitar recorrência: MFA na VPN, inclusive para terceiros; menor privilégio e segmentação da rede; backup imutável e offline, com testes de restauração periódicos; e monitoramento de comportamento nos servidores.",
+    "Por fim, o relatório pós-incidente, com lições aprendidas, deve atualizar o plano de continuidade e o registro do incidente."
+  ],
+  "errosComuns": [
+    "Recomendar desligar imediatamente todos os servidores, o que destrói evidências em memória, em vez de isolá-los da rede.",
+    "Tratar o pagamento do resgate como solução aceitável para recuperar os dados.",
+    "Afirmar que o backup diário atende ao caso sem confrontá-lo com o RPO de quatro horas e com o storage alcançável pela rede.",
+    "Dizer que não há dever de comunicação porque o Tribunal foi vítima ou porque os dados pertencem a servidores municipais, ignorando o art. 48 da LGPD.",
+    "Listar controles genéricos de segurança sem relacioná-los à credencial de VPN sem segundo fator, que foi a porta de entrada."
+  ],
+  "fundamentacao": [
+    "NIST SP 800-61 (fases de tratamento de incidentes; a Rev. 3, de 2025, reorganiza o tema sob o CSF 2.0)",
+    "Regra 3-2-1 de backup e guia #StopRansomware (CISA)",
+    "Lei 13.709/2018 (LGPD), arts. 46 e 48",
+    "Resolução CD/ANPD nº 15/2024 (Regulamento de Comunicação de Incidente de Segurança), art. 6º: três dias úteis",
+    "Resolução Administrativa TCE-GO nº 17/2024 (Política de Segurança da Informação), art. 2º; Portaria TCE-GO nº 56/2025 (Comitê de Segurança da Informação)"
+  ],
+  "revisarFonteOficial": false
+}

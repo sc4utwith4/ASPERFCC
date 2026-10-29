@@ -1,0 +1,113 @@
+{
+  "id": "caso-05",
+  "titulo": "Modelo de aprendizado de máquina para triagem de denúncias da Ouvidoria",
+  "materiasRelacionadas": ["ia-ciencia-dados-automacao", "legislacao-aplicada-ti"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. A Ouvidoria do Tribunal recebe cerca de 9 mil manifestações por ano. Aproximadamente 6% delas são denúncias com indícios graves, como fraude em licitação ou desvio de recursos, e devem chegar à unidade técnica em até 5 dias. A Coordenação de Ciência de Dados treinou um classificador supervisionado com 30 mil manifestações históricas rotuladas, para separar as “prioritárias” das “comuns”; as comuns seguirão para uma fila com prazo de 60 dias.",
+    "No conjunto de teste, o modelo obteve acurácia de 95%, precisão de 80% e revocação de 45% para a classe prioritária. A análise exploratória mostrou que manifestações de municípios do interior, redigidas com erros de ortografia ou enviadas por aplicativo de mensagens recebem escores menores, porque, no histórico, eram arquivadas com mais frequência. A empresa que apoiou o projeto recomenda arquivar automaticamente, sem leitura, as manifestações com escore inferior a 0,1, que correspondem a 40% do volume.",
+    "A Presidência solicitou manifestação técnica antes de autorizar a implantação."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Avalie as métricas apresentadas, explicando por que a acurácia é enganosa neste caso e qual métrica deve ser priorizada diante do custo de cada tipo de erro.",
+    "b) Identifique o viés presente no modelo, sua origem e formas de mitigá-lo.",
+    "c) Discuta a explicabilidade e a revisão de decisões automatizadas à luz da LGPD e da Lei Complementar estadual nº 205/2025, avaliando a proposta de arquivamento automático.",
+    "d) Conclua com recomendação sobre a implantação e o monitoramento do modelo."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Explica que, com classes desbalanceadas, a acurácia engana; define precisão e revocação; identifica o falso negativo como o erro mais caro e conclui pela priorização da revocação, com ajuste do limiar de decisão.",
+            "pontos": 10,
+            "palavrasChave": ["desbalanceadas|desbalanceamento|desbalanceada", "acurácia", "revocação|recall|sensibilidade", "falso negativo|falsos negativos", "limiar|threshold|ponto de corte"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Caracteriza o viés histórico: o modelo aprende com rótulos que refletem decisões passadas e usa atributos que funcionam como proxies, gerando discriminação indireta; mitigação por revisão de rótulos, neutralização de atributos e métricas por subgrupo.",
+            "pontos": 10,
+            "palavrasChave": ["viés|enviesado", "histórico|históricos", "rótulos|rotulagem", "proxies|proxy|atributos", "discriminação|equidade|discriminatório"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Fundamenta a revisão no art. 20 da LGPD (decisões unicamente automatizadas, informação sobre critérios; a exigência de revisão por pessoa natural foi vetada) e na LC estadual 205/2025, que assegura revisão humana de decisões automatizadas da administração que afetem direitos significativos, além da explicabilidade.",
+            "pontos": 8,
+            "palavrasChave": ["art. 20|artigo 20", "205/2025", "revisão humana", "explicabilidade|explicável|SHAP|LIME"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Aplica as métricas ao caso: um classificador trivial teria 94% de acurácia; a revocação de 45% deixa 55% das denúncias graves na fila de 60 dias, perdendo o prazo de 5 dias; aceita-se menor precisão para elevar a revocação.",
+            "pontos": 10,
+            "palavrasChave": ["94%|classificador trivial", "45%", "55%|denúncias graves", "60 dias", "precisão"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Aponta o viés concreto contra manifestações do interior, com erros de ortografia ou enviadas por aplicativo, que afasta do controle social quem tem menos recursos, e propõe medir a revocação por subgrupo.",
+            "pontos": 10,
+            "palavrasChave": ["interior", "ortografia|ortográficos|escrita", "aplicativo|canal", "por subgrupo|cada grupo|por grupo", "controle social"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Rejeita o arquivamento automático de 40% do volume: o modelo pode apenas priorizar a fila, e nenhum arquivamento ocorre sem decisão humana.",
+            "pontos": 8,
+            "palavrasChave": ["arquivamento automático|arquivar automaticamente", "40%", "priorizar|priorização|ordenar", "inadequado|rejeitado|vedado|não pode"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Recomenda não implantar a versão atual e só usar o modelo, após recalibração e mitigação do viés, como apoio, em piloto paralelo à triagem manual.",
+            "pontos": 8,
+            "palavrasChave": ["não implantar|não deve ser implantado|não recomendo", "apoio", "piloto|paralelo", "recalibrar|recalibração|novo limiar"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Prevê monitoramento contínuo: deriva dos dados, métricas por subgrupo, documentação do modelo e retreinamento periódico.",
+            "pontos": 6,
+            "palavrasChave": ["monitoramento|monitorar", "drift|deriva", "retreinamento|retreinar|reavaliação", "documentação|model card"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "Com 6% de casos prioritários, as classes são desbalanceadas e a acurácia engana: um classificador trivial que marcasse tudo como comum teria 94%, perto dos 95% obtidos. Precisão mede quantos alertas são graves; revocação, quantos casos graves o modelo encontra. O falso negativo é o erro mais caro, pois a denúncia grave iria para a fila de 60 dias; a revocação de 45% deixa escapar 55% delas. Deve-se priorizar a revocação, baixando o limiar e aceitando menor precisão.",
+    "Há viés histórico: o modelo aprendeu com rótulos de arquivamentos passados e penaliza manifestações do interior, com erros de ortografia ou vindas por aplicativo, atributos que agem como proxies socioeconômicos e geram discriminação indireta, afastando do controle social quem tem menos recursos. Mitiga-se revisando os rótulos, neutralizando esses atributos e medindo a revocação por subgrupo.",
+    "O art. 20 da LGPD assegura revisão de decisões tomadas unicamente por tratamento automatizado e informação sobre os critérios; vetada a revisão por pessoa natural, a LC estadual 205/2025 garante revisão humana quando a decisão da administração afeta direitos significativos. A explicabilidade (por exemplo, valores SHAP) deve mostrar ao analista os fatores do escore.",
+    "Por isso, o arquivamento automático de 40% do volume é inadequado: o modelo deve apenas priorizar a fila, e nenhum arquivamento ocorre sem decisão humana.",
+    "Recomendo não implantar a versão atual. Recalibrado o limiar e mitigado o viés, o modelo servirá de apoio, em piloto paralelo à triagem manual, com monitoramento de drift e de métricas por subgrupo, documentação do modelo e retreinamento periódico."
+  ],
+  "errosComuns": [
+    "Elogiar a acurácia de 95% sem perceber que as classes são desbalanceadas e que um classificador trivial chegaria a 94%.",
+    "Priorizar a precisão, ignorando que deixar passar uma denúncia grave (falso negativo) custa mais do que revisar um alarme falso.",
+    "Afirmar que a LGPD exige revisão por pessoa natural, quando esse dispositivo do art. 20 foi vetado; a garantia de revisão humana na administração estadual vem da LC 205/2025.",
+    "Tratar o viés como problema exclusivo do algoritmo, sem identificar a origem nos rótulos históricos e nos atributos que funcionam como proxies.",
+    "Aceitar o arquivamento automático por considerar o modelo “objetivo”."
+  ],
+  "fundamentacao": [
+    "Lei 13.709/2018 (LGPD), art. 6º, IX (não discriminação) e art. 20, caput e § 1º (revisão de decisões automatizadas; § 3º vetado)",
+    "Lei Complementar estadual nº 205/2025 (Política Estadual de Fomento à Inovação em IA): revisão humana de decisões automatizadas da administração que afetem direitos significativos e transparência nas decisões automatizadas",
+    "Métricas de classificação: matriz de confusão, precisão, revocação, F-beta e curva precisão-revocação",
+    "Lundberg e Lee (2017), SHAP: A Unified Approach to Interpreting Model Predictions"
+  ],
+  "revisarFonteOficial": false
+}

@@ -1,0 +1,114 @@
+{
+  "id": "caso-10",
+  "titulo": "Acesso remoto seguro para auditores em fiscalização de campo",
+  "materiasRelacionadas": ["seguranca-informacao", "so-redes-nuvem", "desenvolvimento-sistemas"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. Nas fiscalizações in loco, cerca de 120 auditores do Tribunal passam semanas em prefeituras e câmaras municipais, conectando notebooks corporativos às redes sem fio dos próprios jurisdicionados ou de hotéis. Para acessar o sistema de papéis de trabalho, o repositório de evidências e o correio eletrônico, usam uma VPN SSL que, após login com usuário e senha do Active Directory, libera o acesso a toda a rede interna, sem segmentação, inclusive aos servidores de banco de dados e de arquivos.",
+    "No último trimestre, três auditores relataram ter recebido por SMS códigos de verificação que não haviam solicitado, e um deles digitou a senha em uma página falsa idêntica ao portal da VPN. O equipamento de VPN está com o firmware desatualizado há 14 meses e no limite de 80 conexões simultâneas, e seus logs ficam apenas no próprio equipamento, por 7 dias. Os auditores também fotografam documentos com celulares pessoais e os enviam aos colegas por aplicativo de mensagens.",
+    "O Comitê de Segurança da Informação solicitou uma proposta de arquitetura de acesso remoto."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Explique os princípios de Zero Trust e compare a VPN tradicional com o acesso de rede Zero Trust (ZTNA).",
+    "b) Proponha a solução de autenticação, justificando o uso de MFA resistente a phishing diante dos episódios relatados.",
+    "c) Indique as medidas de gestão de identidades e acessos (IAM) e de proteção dos dispositivos.",
+    "d) Proponha o registro e o monitoramento dos acessos e conclua com um plano de transição."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 27,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Explica o Zero Trust (NIST SP 800-207): nenhuma confiança implícita pela localização na rede; acesso a cada recurso autorizado por sessão, com política dinâmica (identidade, dispositivo, contexto), menor privilégio e monitoramento contínuo.",
+            "pontos": 10,
+            "palavrasChave": ["Zero Trust|confiança zero", "800-207", "localização|perímetro", "por sessão|cada acesso|por recurso", "política dinâmica|postura|contexto"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Compara VPN tradicional (coloca o dispositivo na rede e permite movimentação lateral) e ZTNA (acesso apenas a aplicações específicas, sem expor a rede), com microssegmentação.",
+            "pontos": 9,
+            "palavrasChave": ["ZTNA", "movimentação lateral|movimento lateral", "aplicações específicas|por aplicação", "microssegmentação|segmentação", "rede inteira|toda a rede"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Fundamenta o MFA resistente a phishing: FIDO2/WebAuthn (passkeys ou chaves de segurança) vincula a autenticação à origem e não funciona em domínio falso; SMS e códigos digitáveis podem ser interceptados ou repassados.",
+            "pontos": 8,
+            "palavrasChave": ["FIDO2|WebAuthn|passkeys|chave de segurança", "resistente a phishing", "SMS", "origem|domínio falso"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Diagnostica o caso: rede sem segmentação com login só por senha, credencial capturada na página falsa, códigos não solicitados indicando senhas já comprometidas (redefinição e investigação) e firmware desatualizado há 14 meses.",
+            "pontos": 9,
+            "palavrasChave": ["sem segmentação|rede plana", "página falsa", "redefinição|redefinir", "firmware", "14 meses"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Propõe IAM e proteção de dispositivos: SSO integrado ao diretório (por exemplo, com OpenID Connect), perfis por papel (RBAC) com menor privilégio, revisão periódica de acessos, notebooks gerenciados (MDM/EDR) com criptografia de disco e postura verificada, e fim do envio de evidências por celulares pessoais em aplicativo de mensagens.",
+            "pontos": 11,
+            "palavrasChave": ["SSO|login único|OpenID Connect|OIDC", "RBAC|papel|perfis", "MDM|EDR|gerenciados", "criptografia de disco|criptografia", "celulares pessoais|aplicativo de mensagens"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Propõe registro e monitoramento: logs centralizados em SIEM, retenção superior aos 7 dias atuais e alertas de anomalias.",
+            "pontos": 8,
+            "palavrasChave": ["SIEM", "centralizados|centralização", "retenção", "alertas|anomalias"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 15,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Apresenta transição em fases: medidas imediatas (firmware, MFA, segmentação), piloto de ZTNA com as aplicações críticas e desativação da VPN ampla.",
+            "pontos": 9,
+            "palavrasChave": ["imediato|de imediato|imediata", "piloto", "fases|etapas", "desativar|desativação"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Submete a proposta ao Comitê de Segurança da Informação, em linha com a PSI (RA 17/2024), e prevê capacitação dos auditores.",
+            "pontos": 6,
+            "palavrasChave": ["Comitê de Segurança", "17/2024|PSI", "capacitação|treinamento|conscientização"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "O Zero Trust (NIST SP 800-207) nega confiança implícita pela localização na rede: cada acesso a um recurso é autorizado por sessão, segundo política dinâmica que considera identidade, postura do dispositivo e contexto, com menor privilégio e monitoramento contínuo. A VPN tradicional, após o login, põe o notebook na rede inteira e permite movimentação lateral; o ZTNA libera só aplicações específicas, sem expor a rede, e combina com microssegmentação.",
+    "No caso, com rede sem segmentação e login só por senha, a credencial digitada na página falsa abre bancos e arquivos; os códigos não solicitados indicam senhas já comprometidas, o que exige redefinição imediata e investigação, e o firmware de 14 meses agrava a exposição. A autenticação deve usar MFA resistente a phishing, com FIDO2/WebAuthn (passkeys ou chave de segurança), vinculado à origem e inútil em domínio falso; SMS e códigos digitáveis podem ser interceptados.",
+    "Na gestão de identidades, cabem SSO com OpenID Connect integrado ao diretório, perfis por papel (RBAC) com menor privilégio por aplicação e revisão periódica de acessos. Os notebooks devem ser gerenciados (MDM e EDR), com criptografia de disco e postura verificada. As evidências seguem por aplicativo corporativo ao repositório, vedado o uso de celulares pessoais e aplicativo de mensagens.",
+    "Os logs de acesso devem ser centralizados em SIEM, com retenção bem superior a 7 dias e alertas de anomalias, como viagem impossível.",
+    "A transição seria em fases: de imediato, atualizar o firmware, exigir MFA e segmentar a rede; depois, piloto de ZTNA com papéis de trabalho e evidências; por fim, desativar a VPN ampla. A proposta vai ao Comitê de Segurança da Informação, em linha com a PSI (RA 17/2024), com capacitação dos auditores."
+  ],
+  "errosComuns": [
+    "Manter o SMS como segundo fator, apesar dos códigos não solicitados e da página falsa, que mostram o risco de phishing e interceptação.",
+    "Definir Zero Trust como um produto ou como “VPN mais forte”, sem explicar a verificação contínua por recurso e a ausência de confiança pela localização.",
+    "Propor apenas aumentar o número de conexões da VPN, tratando capacidade como se fosse o problema central.",
+    "Esquecer os celulares pessoais e o aplicativo de mensagens, que tiram as evidências de auditoria do controle do Tribunal.",
+    "Sugerir desligar a VPN de imediato, sem fase de transição, interrompendo as fiscalizações em curso."
+  ],
+  "fundamentacao": [
+    "NIST SP 800-207 (Zero Trust Architecture), seção 2.1 (princípios)",
+    "NIST SP 800-63B-4 (autenticadores; SMS como autenticador restrito) e especificações FIDO2/WebAuthn",
+    "CISA Zero Trust Maturity Model 2.0 (identidade, dispositivos, redes, aplicações e dados)",
+    "ABNT NBR ISO/IEC 27002:2022, controles 5.15 a 5.18 (controle de acesso e identidades), 8.5 (autenticação segura) e 8.15 a 8.16 (registros e monitoramento)",
+    "Resolução Administrativa TCE-GO nº 17/2024 (Política de Segurança da Informação) e Portaria nº 56/2025 (Comitê de Segurança da Informação)"
+  ],
+  "revisarFonteOficial": false
+}

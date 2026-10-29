@@ -1,0 +1,113 @@
+{
+  "id": "caso-01",
+  "titulo": "Assistente de IA com RAG sobre acórdãos e pareceres do Tribunal",
+  "materiasRelacionadas": ["engenharia-software-ia-agentes", "ia-ciencia-dados-automacao", "legislacao-aplicada-ti"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. A Gerência de Soluções Inteligentes (GSI) do Tribunal de Contas do Estado de Goiás desenvolve o assistente “Consulta Contas”, que responderá a perguntas de auditores e assessores de gabinete sobre a jurisprudência da Corte. A solução adota geração aumentada por recuperação (RAG): cerca de 48 mil acórdãos, 15 mil pareceres e 3 mil despachos, de 2010 a 2025, foram divididos em trechos, convertidos em embeddings e gravados em um banco vetorial. A cada pergunta, os trechos mais semelhantes são enviados, como contexto, a um modelo de linguagem contratado como serviço de um provedor externo.",
+    "Na prova de conceito, a equipe constatou que muitos documentos trazem nomes, CPFs, endereços e informações de saúde, como laudos juntados a processos de aposentadoria por invalidez, além de dados de responsáveis em processos que ainda tramitam sob sigilo. O índice foi montado com a íntegra dos autos, sem nenhum filtro por perfil, e o protótipo foi aberto aos 600 usuários internos do Tribunal.",
+    "Em uma bateria de 250 perguntas de teste, o assistente citou número de acórdão inexistente ou atribuiu à Corte entendimento contrário ao do julgado recuperado em 12% das respostas. Mesmo assim, a unidade demandante quer liberar a ferramenta em 60 dias e sugeriu que as respostas sejam coladas diretamente nas minutas de voto."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação designado para emitir parecer sobre a solução, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Explique o funcionamento da geração aumentada por recuperação e por que ela reduz, mas não elimina, o risco de alucinação.",
+    "b) Identifique os riscos à proteção de dados pessoais presentes no protótipo e indique a base legal e os princípios da LGPD aplicáveis ao tratamento.",
+    "c) Proponha medidas técnicas e de governança para a liberação da ferramenta, considerando a Resolução Administrativa nº 24/2024 do TCE-GO.",
+    "d) Conclua indicando as condições para que o assistente entre em produção."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Explica o RAG: o acervo é dividido em trechos, convertido em embeddings e armazenado em banco vetorial; a cada pergunta, os trechos mais semelhantes são recuperados e entregues ao modelo como contexto, ancorando a resposta em fontes do próprio Tribunal.",
+            "pontos": 10,
+            "palavrasChave": ["RAG|geração aumentada por recuperação", "embeddings|vetorial|vetores", "trechos|chunks|fragmentos", "recupera|recuperação|recuperados", "como contexto|contexto do modelo|ao modelo|prompt"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Reconhece que o RAG reduz, mas não elimina, a alucinação: o modelo ainda pode inventar citações ou distorcer o trecho recuperado, o que exige citação obrigatória da fonte e verificação.",
+            "pontos": 8,
+            "palavrasChave": ["alucinação|alucinar|alucina", "citação|citar|cite|citações", "verificação|verificar|conferência|conferir", "inexistente|inventar|inventa|fabricada", "não elimina|sem eliminar|reduz"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Identifica dados pessoais e sensíveis (saúde) nos autos e fundamenta o tratamento pelo poder público no art. 23 da LGPD (finalidade pública, execução de competências legais) e no art. 11 para os sensíveis, sob os princípios da finalidade e da necessidade (minimização).",
+            "pontos": 10,
+            "palavrasChave": ["dados pessoais", "sensíveis|sensível|saúde", "art. 23|artigo 23|competências legais|finalidade pública", "necessidade|minimização|minimizar", "finalidade"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Aponta os riscos concretos do protótipo: índice com a íntegra dos autos, inclusive processos sigilosos e laudos de saúde, sem controle de acesso por perfil e aberto a todos os usuários.",
+            "pontos": 8,
+            "palavrasChave": ["controle de acesso|perfil de acesso|permissões|perfil", "sigilo|sigilosos|sigilosas", "íntegra|integral|todos os autos", "600 usuários|todos os usuários"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Propõe medidas técnicas: filtrar a recuperação pelas permissões do usuário, excluir do índice os autos sigilosos, pseudonimizar ou mascarar identificadores antes da indexação, exigir citação da fonte (ou recusa quando não houver) e registrar as consultas em log.",
+            "pontos": 10,
+            "palavrasChave": ["filtrar|filtro|filtragem", "pseudonimização|anonimização|mascaramento|mascarar", "excluir|exclusão|retirar|remover", "logs|registro|trilha de auditoria", "sem fonte|recusar|recusando"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Propõe governança coerente com a RA 24/2024 (precisão e veracidade, proteção de dados, uso responsável): revisão humana obrigatória antes de qualquer uso em minuta, RIPD com o encarregado e cláusulas com o provedor do modelo na condição de operador, vedando uso dos dados para treino.",
+            "pontos": 10,
+            "palavrasChave": ["24/2024", "revisão humana|validação humana|supervisão humana", "RIPD|relatório de impacto", "operador|cláusulas|contrato", "veracidade|precisão"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Conclui que a liberação em 60 dias não é recomendável e condiciona a produção a piloto restrito com métricas de aceite (por exemplo, taxa de citações corretas).",
+            "pontos": 8,
+            "palavrasChave": ["não deve ser liberada|não recomendo|condicionada|condicionar|somente após", "piloto|projeto-piloto", "métricas|indicadores|taxa"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Encaminha o uso como ferramenta de apoio, com responsabilidade de quem assina o documento e monitoramento contínuo dos erros após a implantação.",
+            "pontos": 6,
+            "palavrasChave": ["apoio|ferramenta de apoio", "responsabilidade|responsável", "monitoramento|monitorar|acompanhamento"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "O RAG (geração aumentada por recuperação) divide o acervo em trechos, converte-os em embeddings e os grava em banco vetorial; a cada pergunta, recupera os trechos mais semelhantes e os entrega ao modelo como contexto. A resposta passa a se apoiar em fontes do Tribunal, o que reduz, sem eliminar, a alucinação: o modelo ainda pode inventar acórdão inexistente ou distorcer o trecho, como mostram os 12% de erros.",
+    "O protótipo trata dados pessoais e sensíveis, como laudos de saúde, e indexou a íntegra dos autos, inclusive os sob sigilo, sem controle de acesso, para 600 usuários. O tratamento pelo poder público apoia-se no art. 23 da LGPD, para executar competências legais, e no art. 11 quanto aos sensíveis, mas deve respeitar a finalidade e a necessidade: explicar a jurisprudência não exige CPF nem diagnóstico.",
+    "Proponho filtrar a recuperação pelo perfil do usuário, herdando as permissões do sistema processual; excluir do índice os autos sigilosos; aplicar pseudonimização ou mascaramento antes da indexação; obrigar a citação do acórdão usado, recusando resposta sem fonte; e manter logs das consultas.",
+    "A RA 24/2024 busca precisão, veracidade e proteção de dados, o que impõe revisão humana obrigatória: nenhuma resposta entra em minuta de voto sem conferência. Cabe ainda elaborar o RIPD com o encarregado e firmar cláusulas com o provedor, como operador, vedando o uso dos dados em treino.",
+    "Concluo que a ferramenta não deve ser liberada em 60 dias. A produção fica condicionada a piloto restrito, com métricas de aceite como a taxa de citações corretas, ao uso só como ferramenta de apoio, sob responsabilidade de quem assina, e ao monitoramento contínuo dos erros."
+  ],
+  "errosComuns": [
+    "Descrever RAG e modelos de linguagem de forma genérica, sem relacionar a explicação ao acervo de acórdãos e aos 12% de citações inexistentes do caso.",
+    "Afirmar que o RAG elimina a alucinação ou que basta trocar o modelo por outro maior para resolver o problema.",
+    "Indicar o consentimento dos titulares como base legal para o Tribunal tratar dados dos próprios processos, ignorando o art. 23 da LGPD.",
+    "Admitir que respostas do assistente sejam coladas em minutas de voto sem revisão humana, o que contraria a precisão e a veracidade buscadas pela RA 24/2024.",
+    "Reproduzir os números e as falas do enunciado em vez de analisá-los e transformá-los em medidas concretas."
+  ],
+  "fundamentacao": [
+    "Lei 13.709/2018 (LGPD), arts. 6º, I e III (finalidade e necessidade), 11 (dados sensíveis), 23 (tratamento pelo poder público), 38 (RIPD), 39 (operador) e 46 (medidas de segurança)",
+    "Resolução Administrativa TCE-GO nº 24/2024: uso de ferramentas de IA com precisão e veracidade, proteção de dados pessoais e sensíveis e adoção responsável",
+    "Resolução Normativa TCE-GO nº 5/2024: tratamento de dados pessoais no Tribunal; encarregado indicado pelo Presidente",
+    "Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+  ],
+  "revisarFonteOficial": false
+}

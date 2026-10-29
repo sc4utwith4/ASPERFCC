@@ -1,0 +1,111 @@
+{
+  "id": "caso-07",
+  "titulo": "Modernização do sistema legado de tramitação de processos",
+  "materiasRelacionadas": ["engenharia-software", "devops-engenharia-entrega"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. O sistema de tramitação de processos de controle externo do Tribunal é um monólito de 2009, com cerca de 600 mil linhas em Java 6 e regras de negócio espalhadas por 900 stored procedures. Uma única base de dados atende a autuação, a distribuição, a instrução, o julgamento e a publicação. As implantações exigem janela de fim de semana e ocorrem a cada três meses; no último ano, quatro das cinco versões precisaram de correção emergencial. A cobertura de testes automatizados é de 3%, e dois dos três desenvolvedores que conhecem o núcleo do sistema vão se aposentar em 2027.",
+    "Uma consultoria propôs reescrever tudo do zero em 40 microsserviços, com 18 meses de congelamento de novas funcionalidades e substituição em virada única (big bang). A Gerência de Arquitetura de Software, por sua vez, sugere adotar um monólito modular como etapa intermediária. A equipe de TI tem 9 desenvolvedores, nenhum com experiência em Kubernetes, e, quando há lentidão, dispõe apenas de logs em arquivo texto gravados no próprio servidor de aplicação."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Compare as arquiteturas de microsserviços e de monólito modular, considerando o porte da equipe e as características do sistema.",
+    "b) Explique a estratégia strangler fig e como aplicá-la ao sistema de tramitação.",
+    "c) Indique as práticas de testes automatizados e de observabilidade necessárias à migração.",
+    "d) Conclua com recomendação sobre a proposta da consultoria e sobre o tratamento da dívida técnica."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 50,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 26,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Compara as arquiteturas: microsserviços oferecem implantação independente e escalabilidade por serviço, mas trazem complexidade operacional (rede, consistência eventual, orquestração); o monólito modular mantém uma unidade de implantação com módulos de fronteiras explícitas (contextos delimitados).",
+            "pontos": 9,
+            "palavrasChave": ["microsserviços", "monólito modular", "implantação independente|independentes", "complexidade operacional|custo operacional|complexidade", "contextos delimitados|bounded context|fronteiras"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Explica o strangler fig: substituição incremental, com uma fachada que roteia cada funcionalidade migrada para o novo código até que o legado possa ser desligado, evitando a virada big bang.",
+            "pontos": 9,
+            "palavrasChave": ["strangler|estrangulamento|estrangulador", "incremental|gradual", "fachada|proxy|roteia|roteamento", "big bang|virada única", "desligado|desligar|desativado"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Conhece os pilares da observabilidade (métricas, logs e traces, por exemplo com OpenTelemetry) e a pirâmide de testes (unitários, integração, contrato).",
+            "pontos": 8,
+            "palavrasChave": ["métricas", "logs", "traces|tracing|rastreamento distribuído", "OpenTelemetry|correlação", "pirâmide|unitários"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 30,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Aplica a comparação ao caso: com 9 desenvolvedores, sem domínio de Kubernetes e regras presas em stored procedures sobre base única, 40 microsserviços multiplicariam riscos; o monólito modular, com módulos de autuação, distribuição, instrução, julgamento e publicação, é o caminho adequado.",
+            "pontos": 10,
+            "palavrasChave": ["9 desenvolvedores|nove desenvolvedores|equipe pequena", "Kubernetes", "stored procedures|procedures", "autuação|distribuição|julgamento", "40 microsserviços"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Aplica o strangler fig ao sistema: começa por um módulo de menor risco (como a publicação), avança por etapas com entregas menores e frequentes e documenta o conhecimento de quem vai se aposentar.",
+            "pontos": 10,
+            "palavrasChave": ["publicação", "etapas|por etapa|fases", "frequentes|menores", "aposentar|aposentadoria|conhecimento"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Concretiza testes e observabilidade: testes de caracterização antes de alterar o legado, cobertura crescente a partir dos 3% nas áreas migradas, execução na integração contínua e troca dos logs em arquivo por logs estruturados e centralizados.",
+            "pontos": 10,
+            "palavrasChave": ["caracterização|regressão", "3%", "estruturados|centralizados|centralização", "integração contínua|CI|esteira|pipeline"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Recomenda rejeitar a reescrita big bang com 18 meses de congelamento e adotar monólito modular com strangler fig.",
+            "pontos": 8,
+            "palavrasChave": ["rejeitar|não recomendo|desaconselho", "18 meses|congelamento", "monólito modular", "strangler|incremental"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Trata a dívida técnica: inventário, priorização por impacto, capacidade reservada a cada sprint e acompanhamento por métricas DORA.",
+            "pontos": 6,
+            "palavrasChave": ["dívida técnica", "inventariada|inventário|priorizada|priorização", "capacidade|sprint", "DORA|taxa de falha|lead time"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "Microsserviços permitem implantação independente e escalabilidade por serviço, mas trazem complexidade operacional: rede, consistência eventual e orquestração, que exigem maturidade DevOps. O monólito modular mantém uma unidade de implantação, organizada em módulos com fronteiras explícitas (contextos delimitados), o que reduz o acoplamento sem esse custo. Com 9 desenvolvedores, sem domínio de Kubernetes e regras presas em stored procedures sobre base única, 40 microsserviços multiplicariam riscos; convém o monólito modular, com módulos de autuação, distribuição, instrução, julgamento e publicação.",
+    "O strangler fig substitui o legado de forma incremental: uma fachada (proxy) recebe as requisições e roteia para o novo código cada funcionalidade migrada, até que o antigo possa ser desligado, sem virada big bang. Começaria pela publicação, de menor risco, e avançaria por etapas, com entregas menores e frequentes, documentando o conhecimento de quem vai se aposentar.",
+    "Antes de mexer no legado, testes de caracterização registram o comportamento atual e servem de regressão; a cobertura de 3% deve crescer nas áreas migradas, em pirâmide (unitários, integração e contrato), rodando na integração contínua. Os logs em arquivo dão lugar a logs estruturados e centralizados, métricas e traces (OpenTelemetry), para comparar legado e novo.",
+    "Recomendo rejeitar a proposta da consultoria, pois 18 meses de congelamento e virada única concentram risco, e adotar monólito modular com strangler fig. A dívida técnica deve ser inventariada, priorizada pelo impacto e paga com capacidade reservada a cada sprint, medida por métricas DORA, como taxa de falha em mudanças e lead time."
+  ],
+  "errosComuns": [
+    "Defender microsserviços como solução moderna em qualquer cenário, sem considerar a equipe de 9 pessoas, a ausência de Kubernetes e a base de dados única.",
+    "Confundir strangler fig com reescrita completa ou com congelamento do legado.",
+    "Propor migrar sem antes criar testes que registrem o comportamento atual do sistema.",
+    "Tratar observabilidade como simples monitoramento de servidor, omitindo logs estruturados, métricas e traces.",
+    "Ignorar o risco de perda de conhecimento com a aposentadoria dos desenvolvedores do núcleo."
+  ],
+  "fundamentacao": [
+    "Martin Fowler, StranglerFigApplication (2004) e MonolithFirst (2015)",
+    "Sam Newman, Building Microservices e Monolith to Microservices",
+    "Michael Feathers, Working Effectively with Legacy Code (testes de caracterização)",
+    "OpenTelemetry (métricas, logs e traces) e métricas DORA (frequência de implantação, lead time, taxa de falha em mudanças, tempo de recuperação)"
+  ],
+  "revisarFonteOficial": false
+}

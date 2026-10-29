@@ -1,0 +1,113 @@
+{
+  "id": "caso-03",
+  "titulo": "Contratação de solução SaaS de gestão de pessoas",
+  "materiasRelacionadas": ["governanca-ti", "legislacao-aplicada-ti", "so-redes-nuvem"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. O Tribunal pretende substituir o sistema próprio de gestão de pessoas, hoje mantido por dois desenvolvedores, por uma solução de RH e folha de pagamento no modelo SaaS. A Coordenação de Gestão de Pessoas assistiu à demonstração de um fornecedor e sugeriu “contratar logo a mesma solução usada por outro órgão”, com vigência de 12 meses e valor estimado de R$ 2,4 milhões por ano. A base terá dados de 1.100 servidores ativos e inativos e de seus dependentes, inclusive atestados médicos e filiação sindical.",
+    "A minuta enviada pela área demandante tem duas páginas: lista funcionalidades desejadas e prevê que “a contratada será responsável por toda a segurança da solução”. Não trata da localização dos dados, da exportação ao fim do contrato, de níveis de serviço nem do papel de cada parte perante a LGPD. O fornecedor informou que hospeda os dados em data centers no Brasil e nos Estados Unidos e que o backup “é responsabilidade do cliente”.",
+    "A Gerência de Contratações de TIC solicitou manifestação técnica antes do início da fase preparatória."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Indique os artefatos de planejamento exigidos pela Lei 14.133/2021 e o que deles deve constar neste caso.",
+    "b) Explique o modelo de responsabilidade compartilhada em SaaS e corrija a premissa adotada na minuta.",
+    "c) Aponte as cláusulas de proteção de dados e de segurança necessárias, considerando o papel do fornecedor perante a LGPD e a hospedagem no exterior.",
+    "d) Proponha medidas contra o aprisionamento tecnológico e para a gestão e a fiscalização do contrato, concluindo com o encaminhamento da demanda."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 27,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Indica o ETP (art. 6º, XX, e art. 18, § 1º: necessidade, levantamento de mercado, estimativas, solução como um todo, alinhamento ao planejamento) e o termo de referência (art. 6º, XXIII: requisitos, modelo de execução e de gestão, critérios de medição e pagamento), sem aceitar a escolha prévia de marca por mera referência a outro órgão.",
+            "pontos": 10,
+            "palavrasChave": ["ETP|estudo técnico preliminar", "termo de referência", "levantamento de mercado", "art. 18|artigo 18", "PDTI|plano de contratações"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Explica a responsabilidade compartilhada no SaaS: o provedor responde por infraestrutura, plataforma e aplicação; o cliente mantém a responsabilidade pelos dados, pelas identidades e acessos e pelas configurações, que não se transfere por cláusula genérica.",
+            "pontos": 9,
+            "palavrasChave": ["responsabilidade compartilhada", "SaaS", "identidades|gestão de acessos|controle de acesso", "configurações|configuração", "não se transfere|não transfere|continua responsável"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Enquadra o Tribunal como controlador e o fornecedor como operador (art. 39: tratamento segundo instruções do controlador), reconhece dados sensíveis (saúde e filiação sindical) e condiciona a transferência internacional às hipóteses do art. 33.",
+            "pontos": 8,
+            "palavrasChave": ["operador", "controlador", "art. 33|artigo 33|transferência internacional", "sensíveis|sindical|saúde", "art. 39|artigo 39|instruções"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 29,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Corrige a minuta: a segurança deve ser detalhada em requisitos, com níveis de serviço (SLA) e glosas, e a política de backup não pode ficar indefinida.",
+            "pontos": 9,
+            "palavrasChave": ["níveis de serviço|SLA|ANS", "glosas|glosa|penalidades|sanções", "backup|cópias de segurança", "requisitos de segurança|requisitos"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Propõe cláusulas de proteção de dados: confidencialidade, comunicação imediata de incidentes ao Tribunal, direito de auditoria, subcontratação só autorizada, eliminação ou devolução dos dados ao final e preferência pela hospedagem no Brasil.",
+            "pontos": 10,
+            "palavrasChave": ["incidentes|incidente", "auditoria|auditar", "subcontratação|suboperador", "eliminação|devolução|eliminar", "Brasil|território nacional|localização"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Mitiga o lock-in: exportação integral em formato aberto e documentado, APIs, plano de saída com período de transição e transferência de conhecimento.",
+            "pontos": 10,
+            "palavrasChave": ["lock-in|aprisionamento", "plano de saída|estratégia de saída", "formato aberto|formatos abertos", "transição|transferência de conhecimento", "exportação|exportar"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Organiza a gestão e a fiscalização: gestor do contrato e fiscais técnico, requisitante e administrativo designados (art. 117), com segregação de funções.",
+            "pontos": 8,
+            "palavrasChave": ["art. 117|artigo 117", "fiscais|fiscal|fiscalização", "gestor do contrato|gestão do contrato", "segregação de funções|segregação"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Encaminha a devolução da demanda para instrução do ETP, com participação do encarregado e RIPD, e vigência compatível com serviço contínuo (art. 106).",
+            "pontos": 6,
+            "palavrasChave": ["devolver|instrução|reformular|refazer", "RIPD|relatório de impacto|encarregado", "art. 106|serviço contínuo|cinco anos"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "A contratação exige fase preparatória completa. O ETP (art. 6º, XX, e art. 18, § 1º, da Lei 14.133/2021) deve demonstrar a necessidade, o levantamento de mercado, as estimativas e a solução como um todo, alinhada ao PDTI e ao plano de contratações; o uso por outro órgão não dispensa a análise nem justifica indicar marca. O termo de referência fixa requisitos, modelo de execução e de gestão e critérios de medição.",
+    "No SaaS vale a responsabilidade compartilhada: o provedor cuida da infraestrutura, da plataforma e da aplicação, mas o Tribunal segue responsável pelos dados, pelas identidades e acessos e pelas configurações. Essa responsabilidade não se transfere por cláusula genérica; a minuta deve detalhar requisitos de segurança, níveis de serviço (SLA) com glosas e a política de backup.",
+    "Perante a LGPD, o Tribunal é controlador e o fornecedor, operador, que trata os dados segundo as instruções do controlador (art. 39). Como há dados sensíveis (saúde e filiação sindical), o contrato deve prever confidencialidade, aviso imediato de incidentes, auditoria, subcontratação só autorizada e eliminação ou devolução dos dados ao final. A hospedagem deve ser preferencialmente no Brasil; a transferência aos EUA só cabe nas hipóteses do art. 33.",
+    "Contra o lock-in, exigem-se exportação integral em formato aberto e documentado, APIs e plano de saída com transição e transferência de conhecimento. A gestão caberá a gestor do contrato e a fiscais técnico, requisitante e administrativo designados (art. 117), com segregação de funções.",
+    "Recomendo devolver a demanda para instrução do ETP, com o encarregado e o RIPD, e prever vigência de serviço contínuo (art. 106)."
+  ],
+  "errosComuns": [
+    "Aceitar a contratação direta da “mesma solução de outro órgão” sem ETP, levantamento de mercado e justificativa para eventual indicação de marca.",
+    "Concordar que, no SaaS, toda a segurança é do fornecedor, esquecendo que dados, identidades e configurações continuam sob responsabilidade do Tribunal.",
+    "Classificar o fornecedor como controlador ou ignorar os dados sensíveis (saúde e filiação sindical) da base.",
+    "Proibir de forma absoluta qualquer transferência internacional, ou admiti-la livremente, sem mencionar as hipóteses do art. 33 da LGPD.",
+    "Esquecer o plano de saída e a exportação em formato aberto, o que perpetua a dependência do fornecedor."
+  ],
+  "fundamentacao": [
+    "Lei 14.133/2021, arts. 6º, XX e XXIII, 7º (segregação de funções), 18, § 1º (ETP), 106 (serviços contínuos) e 117 (fiscalização)",
+    "Lei 13.709/2018 (LGPD), arts. 5º, II (dado sensível), 33 (transferência internacional), 38 (RIPD), 39 (operador) e 46",
+    "ABNT NBR ISO/IEC 27002:2022, controles 5.19 a 5.23 (fornecedores e serviços em nuvem)",
+    "IN SGD/ME nº 94/2022 e Guia de Requisitos de Privacidade e Segurança da SGD (referências federais de boas práticas, não vinculantes para o TCE-GO)"
+  ],
+  "revisarFonteOficial": false
+}

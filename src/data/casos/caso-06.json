@@ -1,0 +1,114 @@
+{
+  "id": "caso-06",
+  "titulo": "Vazamento de planilha com dados pessoais de servidores",
+  "materiasRelacionadas": ["legislacao-aplicada-ti", "seguranca-informacao"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. Numa sexta-feira, às 16h, um servidor da Coordenação de Folha de Pagamento do Tribunal compartilhou por engano, em um grupo de mensagens com 230 participantes externos, um link de nuvem para a planilha “Consignados_2026.xlsx”. O arquivo trazia nome, CPF, matrícula, salário, descontos de pensão alimentícia, conta bancária e o CID dos afastamentos médicos de 1.340 servidores e estagiários. Na segunda-feira, às 9h, um participante avisou a Ouvidoria. O painel da nuvem registra 37 downloads feitos de endereços não identificados.",
+    "A planilha não tinha nenhum rótulo de classificação, podia ser editada por 19 pessoas e estava em pasta compartilhada com a opção “qualquer pessoa com o link”. O chefe da unidade propõe apagar o arquivo, pedir ao grupo que desconsidere a mensagem e “não fazer alarde”, já que tudo foi acidental e não houve ataque de hacker.",
+    "Você integra a equipe que assessora o encarregado pelo tratamento de dados pessoais do Tribunal."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Caracterize juridicamente o evento e avalie a proposta da chefia.",
+    "b) Descreva as medidas imediatas de contenção e de avaliação do incidente.",
+    "c) Indique a quem, como e em que prazo comunicar o ocorrido, considerando a LGPD, a regulamentação da ANPD e a Resolução Normativa nº 5/2024 do TCE-GO.",
+    "d) Proponha lições aprendidas e controles preventivos, incluindo a classificação da informação."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 50,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Caracteriza o evento como incidente de segurança com dados pessoais, que abrange situações acidentais (art. 46 da LGPD) e não depende de ataque, e identifica o dever de comunicação do art. 48 quando há risco ou dano relevante.",
+            "pontos": 10,
+            "palavrasChave": ["incidente de segurança|incidente", "acidental|acidentais", "art. 46|artigo 46", "art. 48|artigo 48", "risco ou dano relevante|dano relevante|risco relevante"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Aplica a Resolução CD/ANPD 15/2024: comunicação em três dias úteis contados do conhecimento, inclusive aos titulares, em linguagem simples, e registro do incidente.",
+            "pontos": 10,
+            "palavrasChave": ["três dias úteis|3 dias úteis", "15/2024", "linguagem simples|linguagem clara", "registrado|registro|registrar", "conhecimento"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Situa o encarregado, indicado pelo Presidente do Tribunal nos termos da RN 5/2024 e do art. 41 da LGPD, como canal de comunicação com a ANPD e com os titulares.",
+            "pontos": 8,
+            "palavrasChave": ["encarregado", "Presidente|Presidência", "5/2024", "art. 41|artigo 41|Secretaria-Geral"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Rejeita a proposta da chefia: os 37 downloads já ocorreram, apagar o arquivo destrói evidências, e a omissão viola o dever legal de comunicar; o caráter acidental não afasta o incidente.",
+            "pontos": 8,
+            "palavrasChave": ["37 downloads|37", "evidências|preservar", "omissão|ocultar|alarde", "inadequada|rejeitada|não pode"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Descreve a contenção e a avaliação: revogar o link, restringir a pasta, preservar registros de acesso, pedir formalmente a exclusão aos participantes e avaliar escopo e risco (1.340 titulares, dados de saúde e financeiros).",
+            "pontos": 10,
+            "palavrasChave": ["revogar|revogação|desativar o link", "registros de acesso|logs", "1.340|1340", "CID|saúde|sensíveis", "bancária|bancários|financeiros"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Concretiza a comunicação: o Tribunal, como controlador, comunica a ANPD e os titulares, de forma individualizada, a partir do conhecimento na segunda-feira, informando riscos (como golpes com dados bancários) e medidas adotadas.",
+            "pontos": 10,
+            "palavrasChave": ["segunda-feira", "titulares", "ANPD|autoridade nacional", "golpes|fraudes|phishing", "individualizada|individual|e-mail"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Propõe controles: classificação da informação com rótulos, bloqueio de links públicos para conteúdo restrito, DLP, menor privilégio, minimização dos dados e treinamento.",
+            "pontos": 8,
+            "palavrasChave": ["classificação da informação|rótulos|rótulo", "links públicos|link público|qualquer pessoa com o link", "DLP|prevenção contra perda", "menor privilégio|necessidade de conhecer", "treinamento|capacitação|conscientização"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Encaminha o relatório pós-incidente com lições aprendidas, a revisão dos procedimentos de resposta e a apuração proporcional de responsabilidades.",
+            "pontos": 6,
+            "palavrasChave": ["lições aprendidas", "relatório|pós-incidente", "procedimentos|plano de resposta", "apuração|responsabilidades"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "Trata-se de incidente de segurança com dados pessoais: houve comunicação acidental e acesso não autorizado a dados de 1.340 pessoas, situação que o art. 46 da LGPD abrange sem exigir ataque. Como há dados sensíveis (CID) e financeiros (salário, conta bancária, pensão), existe risco ou dano relevante e incide o dever de comunicar do art. 48. A proposta da chefia é inadequada: os 37 downloads já ocorreram, apagar o arquivo destrói evidências e a omissão violaria a lei.",
+    "Na contenção, cabe revogar o link de imediato, restringir a pasta, preservar os registros de acesso e uma cópia do arquivo, identificar os endereços dos downloads e pedir formalmente ao grupo a exclusão, documentando as respostas. Depois, avaliam-se o escopo, a natureza dos dados e o risco aos titulares.",
+    "Pela Resolução CD/ANPD 15/2024, o Tribunal, como controlador, deve comunicar a ANPD em três dias úteis contados do conhecimento, isto é, de segunda-feira, e os titulares no mesmo prazo, de forma individualizada e em linguagem simples, com os riscos, como golpes com dados bancários, e as medidas adotadas. Quem conduz é o encarregado, indicado pelo Presidente (RN 5/2024 e art. 41 da LGPD), e o incidente deve ser registrado.",
+    "Como controles, proponho classificação da informação com rótulos (informação pessoal de acesso restrito, art. 31 da LAI), bloqueio de links públicos para esse conteúdo, DLP, menor privilégio (19 editores é excessivo), minimização (o CID era desnecessário) e treinamento.",
+    "Por fim, o relatório pós-incidente deve registrar as lições aprendidas, revisar os procedimentos de resposta e permitir apuração proporcional de responsabilidades."
+  ],
+  "errosComuns": [
+    "Afirmar que não houve incidente porque não existiu ataque de hacker, ignorando que a LGPD abrange situações acidentais.",
+    "Aceitar apagar o arquivo e silenciar, sem preservar evidências nem comunicar ANPD e titulares.",
+    "Contar o prazo de três dias úteis a partir do compartilhamento, e não do conhecimento do incidente, ou citar 72 horas, que é regra do GDPR.",
+    "Atribuir a comunicação ao servidor que errou ou à área de TI, e não ao controlador por meio do encarregado indicado pelo Presidente.",
+    "Propor apenas punição do servidor, sem controles como classificação da informação, restrição de links públicos e minimização."
+  ],
+  "fundamentacao": [
+    "Lei 13.709/2018 (LGPD), arts. 5º, II (dado sensível), 6º, III (necessidade), 41 (encarregado), 46 e 48",
+    "Resolução CD/ANPD nº 15/2024 (Regulamento de Comunicação de Incidente de Segurança): três dias úteis do conhecimento; comunicação aos titulares; registro do incidente",
+    "Resolução Normativa TCE-GO nº 5/2024: encarregado indicado pelo Presidente do Tribunal",
+    "Lei 12.527/2011 (LAI), art. 31 (informações pessoais)",
+    "ABNT NBR ISO/IEC 27002:2022, controles 5.12 (classificação da informação), 5.13 (rotulagem) e 8.12 (prevenção de vazamento de dados)"
+  ],
+  "revisarFonteOficial": false
+}

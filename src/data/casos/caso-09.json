@@ -1,0 +1,111 @@
+{
+  "id": "caso-09",
+  "titulo": "Priorização de demandas de TI concorrentes e o papel do CETI",
+  "materiasRelacionadas": ["governanca-ti", "legislacao-aplicada-ti"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. A área de TI do Tribunal recebeu, para o segundo semestre, cinco demandas que somam 14 mil horas de trabalho, enquanto a capacidade disponível é de 6 mil horas e restam R$ 1,5 milhão de orçamento de investimento: (1) adequação do sistema de prestação de contas a um novo leiaute exigido por ato normativo do Tribunal, com vigência em janeiro; (2) aplicativo de agenda para gabinetes, pedido pessoalmente por um Conselheiro; (3) painel de BI sobre obras paralisadas, previsto como meta do PDTI 2025–2026; (4) renovação da licença do antivírus corporativo, que vence em 45 dias; (5) chatbot para o portal institucional, sugerido por um fornecedor que ofereceu demonstração gratuita.",
+    "Hoje as demandas são atendidas pela ordem de chegada, e cada unidade pressiona diretamente o diretor de TI. Não há indicadores de entrega, e três projetos iniciados em 2025 estão parados por falta de equipe. Na última reunião do Comitê Estratégico de TI (CETI), um dos membros sugeriu que a própria área de TI decida sozinha a ordem de execução, “por ser assunto técnico”."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Explique a distinção entre governança e gestão de TI no COBIT 2019, incluindo o ciclo avaliar-dirigir-monitorar.",
+    "b) Identifique o papel do CETI, conforme a Resolução Normativa nº 13/2016, e avalie a sugestão feita na reunião.",
+    "c) Proponha critérios de priorização e aplique-os às cinco demandas, considerando o alinhamento ao PDTI e a gestão de portfólio.",
+    "d) Conclua com o encaminhamento da decisão e as métricas para monitorar a execução."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 50,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Distingue governança (EDM: avaliar, dirigir e monitorar, a cargo da alta administração) de gestão (domínios APO, BAI, DSS e MEA) no COBIT 2019.",
+            "pontos": 10,
+            "palavrasChave": ["COBIT", "EDM|avaliar, dirigir e monitorar|avaliar-dirigir-monitorar", "APO|BAI|DSS|MEA", "alta administração|alta direção", "gestão"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Descreve o CETI conforme a RN 13/2016: colegiado consultivo e permanente, com competências para coordenar políticas de TI, analisar planos e indicadores, validar o orçamento de TI e priorizar ações e investimentos; aprova o PDTI.",
+            "pontos": 10,
+            "palavrasChave": ["CETI|Comitê Estratégico", "13/2016", "priorizar|prioriza|priorização", "orçamento", "PDTI"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Fundamenta a gestão de portfólio (APO05): investimentos avaliados por valor, risco e alinhamento estratégico, com critérios como obrigação normativa, prazo e esforço.",
+            "pontos": 8,
+            "palavrasChave": ["portfólio", "obrigação normativa|obrigação legal|normativa", "alinhamento", "valor|benefício|benefícios", "risco"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Rejeita a decisão unilateral da área de TI, porque priorizar é ato de governança, e atribui à TI o papel de subsidiar o comitê com estimativas (6 mil horas de capacidade contra 14 mil demandadas); critica a ordem de chegada e a pressão direta.",
+            "pontos": 9,
+            "palavrasChave": ["sozinha|unilateral|isoladamente", "6 mil|capacidade", "ordem de chegada", "pressão|pressiona"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Aplica os critérios às demandas: leiaute (obrigação com prazo) e antivírus (risco, vencimento e pouco esforço) primeiro; painel de obras paralisadas, meta do PDTI, em seguida; agenda sem precedência pelo cargo; chatbot fora da prioridade por ter origem em oferta de fornecedor.",
+            "pontos": 12,
+            "palavrasChave": ["leiaute", "antivírus", "obras paralisadas|painel de BI", "agenda", "chatbot"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Trata os projetos parados e o fluxo: limitar o trabalho em andamento, retomar o que ainda tem valor e submeter todas as demandas aos mesmos critérios.",
+            "pontos": 7,
+            "palavrasChave": ["parados|retomar", "trabalho em andamento|WIP", "mesmos critérios|mesmo fluxo|transparência"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Encaminha a proposta pontuada ao CETI para deliberação registrada, enviando ao backlog as demandas não contempladas.",
+            "pontos": 8,
+            "palavrasChave": ["submete|submeter|deliberação", "backlog|próximo ciclo", "ata|registro|registrada"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Indica métricas de monitoramento: entregas no prazo, horas planejadas e realizadas, metas do PDTI atingidas e benefícios obtidos.",
+            "pontos": 6,
+            "palavrasChave": ["indicadores|métricas", "no prazo|prazo", "metas do PDTI|metas", "realizadas|benefícios obtidos"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "O COBIT 2019 separa governança e gestão. A governança, exercida pela alta administração, avalia necessidades e opções, dirige por prioridades e decisões e monitora o desempenho (objetivos EDM). A gestão planeja, constrói, executa e monitora (domínios APO, BAI, DSS e MEA), o que inclui a gestão de portfólio (APO05), que avalia investimentos por valor, risco e alinhamento estratégico.",
+    "Pela RN 13/2016, o CETI é colegiado consultivo e permanente, que coordena as políticas de TI, analisa planos e indicadores, valida o orçamento de TI e prioriza ações e investimentos, além de aprovar o PDTI. A sugestão de a TI decidir sozinha deve ser rejeitada: priorizar é ato de governança, e à TI cabe subsidiar o comitê com estimativas, pois a capacidade de 6 mil horas não cobre as 14 mil pedidas. Também devem cessar a ordem de chegada e a pressão direta sobre o diretor.",
+    "Proponho critérios ponderados: obrigação normativa e prazo, risco, alinhamento ao PDTI, valor e esforço. Assim, o novo leiaute, obrigação com vigência em janeiro, e o antivírus, risco de segurança com vencimento em 45 dias e pouco esforço, vêm primeiro; o painel de obras paralisadas, meta do PDTI, usa a capacidade restante. A agenda segue os mesmos critérios, sem precedência pelo cargo, e o chatbot, oferta de fornecedor, vai ao backlog, sujeito a estudo prévio. Convém limitar o trabalho em andamento e retomar os projetos parados que ainda tenham valor.",
+    "A TI submete a proposta pontuada ao CETI, cuja deliberação fica registrada em ata. O monitoramento usará indicadores de entregas no prazo, horas planejadas e realizadas, metas do PDTI atingidas e benefícios obtidos."
+  ],
+  "errosComuns": [
+    "Inverter os papéis, atribuindo à gestão de TI a decisão de prioridades e ao comitê apenas a execução.",
+    "Dizer que MEA é domínio de governança; no COBIT 2019, só os objetivos EDM são de governança.",
+    "Priorizar a agenda pedida pelo Conselheiro apenas pelo cargo do solicitante, ou o chatbot apenas pela demonstração gratuita.",
+    "Enunciar critérios de priorização sem aplicá-los às cinco demandas do caso.",
+    "Confundir portfólio com catálogo de serviços ou com a simples lista de projetos em andamento."
+  ],
+  "fundamentacao": [
+    "COBIT 2019 (ISACA): governança (EDM) e gestão (APO, BAI, DSS e MEA); APO05 — portfólio gerenciado",
+    "Resolução Normativa TCE-GO nº 13/2016 (CETI), arts. 1º e 2º",
+    "PDTI 2025–2026 do TCE-GO, aprovado pela Ordem de Serviço nº 001/2025-CETI",
+    "ABNT NBR ISO/IEC 38500 (avaliar, dirigir e monitorar)"
+  ],
+  "revisarFonteOficial": false
+}
