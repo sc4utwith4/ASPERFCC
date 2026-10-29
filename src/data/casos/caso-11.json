@@ -1,0 +1,114 @@
+{
+  "id": "caso-11",
+  "titulo": "Portal de dados abertos de contratações dos jurisdicionados",
+  "materiasRelacionadas": ["governanca-ti", "legislacao-aplicada-ti", "desenvolvimento-sistemas", "banco-de-dados"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. O Tribunal recebe mensalmente, dos 246 municípios goianos e de cerca de 300 órgãos e entidades estaduais, dados de licitações e contratos que somam 1,2 milhão de registros por ano. A Coordenação de Dados e Transparência (CDT) pretende publicá-los em um portal de dados abertos, voltado à imprensa, a pesquisadores e aos cidadãos, com uma API pública para consulta.",
+    "A extração preliminar revelou datas de assinatura posteriores ao fim da vigência, CNPJs com dígito verificador inválido, valores com o separador decimal trocado (o que gerou contratos de R$ 3 bilhões em municípios de 5 mil habitantes) e o mesmo fornecedor grafado de 14 formas diferentes. A tabela de contratos também traz, para fornecedores pessoas físicas, CPF completo e endereço residencial e, em contratações de saúde, o CID de pacientes atendidos em tratamento fora do domicílio.",
+    "A equipe propôs publicar todos os campos “em nome da transparência” e, para os CPFs, aplicar hash SHA-256 sem sal, afirmando que os dados ficariam “anonimizados”. A API seria documentada apenas por um arquivo PDF com exemplos de chamadas."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Fundamente a abertura dos dados na Lei de Acesso à Informação e na Lei 14.129/2021, indicando os atributos de dados abertos.",
+    "b) Distinga anonimização de pseudonimização e avalie a proposta de hash dos CPFs e de publicação de todos os campos.",
+    "c) Proponha ações de qualidade de dados para os problemas encontrados.",
+    "d) Indique como documentar e disponibilizar a API e conclua com as condições para a publicação."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 55,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 28,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Fundamenta a abertura na transparência ativa da LAI (art. 8º: divulgação de licitações e contratos e acesso automatizado em formatos abertos, estruturados e legíveis por máquina) e na Lei 14.129/2021 (dados abertos: formato aberto, legíveis por máquina, licença aberta), observando que esta alcança o Estado se adotada por ato próprio.",
+            "pontos": 10,
+            "palavrasChave": ["transparência ativa", "art. 8º|artigo 8º", "legíveis por máquina|legível por máquina", "formato aberto|formatos abertos", "licença aberta"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Distingue anonimização (dado não associável ao titular com esforços razoáveis, que deixa de ser pessoal, art. 12 da LGPD) de pseudonimização (associação possível com informação adicional mantida à parte; continua sendo dado pessoal).",
+            "pontos": 10,
+            "palavrasChave": ["anonimização|anonimizar|anonimizado", "pseudonimização|pseudonimizar|pseudonimizado", "art. 12|artigo 12", "esforços razoáveis|esforço razoável", "continua sendo dado pessoal|dado pessoal"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Compatibiliza transparência e privacidade: informação pessoal tem acesso restrito (LAI, art. 31), a LGPD impõe necessidade e o dado de saúde é sensível.",
+            "pontos": 8,
+            "palavrasChave": ["art. 31|artigo 31", "necessidade|minimização", "sensível|sensíveis", "privacidade|intimidade|não autoriza"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 29,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Avalia a proposta: SHA-256 sem sal de CPF é reversível por força bruta (cerca de um bilhão de combinações), logo não é anonimização; publicar nome e CPF mascarado do fornecedor pessoa física, omitir endereço residencial e nunca divulgar o CID.",
+            "pontos": 10,
+            "palavrasChave": ["sem sal", "força bruta|enumeração|dicionário", "mascarado|mascaramento|ocultar", "endereço residencial", "CID"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Propõe qualidade de dados: regras de validação na recepção (dígito verificador, coerência de datas, faixas de valor), deduplicação de fornecedores pelo CNPJ como dado mestre, devolução de erros ao jurisdicionado e dicionário de dados com indicadores de exatidão, completude e consistência.",
+            "pontos": 11,
+            "palavrasChave": ["validação|regras", "dígito verificador", "deduplicação|padronização|dado mestre", "jurisdicionado|devolução", "exatidão|completude|consistência"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Documenta a API com especificação OpenAPI versionada, esquemas, filtros, paginação, códigos de erro e limites de requisições, além de downloads em lote em formatos abertos.",
+            "pontos": 8,
+            "palavrasChave": ["OpenAPI|Swagger", "paginação", "versionada|versionamento", "limites de requisições|rate limiting|limite de taxa", "CSV|JSON"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 13,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Condiciona a publicação a saneamento mínimo, exclusão dos campos pessoais excessivos, RIPD com o encarregado, licença aberta, atualização periódica e indicadores de qualidade visíveis.",
+            "pontos": 7,
+            "palavrasChave": ["saneamento|saneados", "RIPD|encarregado", "atualização periódica|periodicidade", "indicadores de qualidade|qualidade visíveis"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Encaminha a coerência com o PNCP (art. 174 da Lei 14.133/2021) e um canal para o usuário reportar erros.",
+            "pontos": 6,
+            "palavrasChave": ["PNCP|Portal Nacional de Contratações", "art. 174|artigo 174", "canal|reportar"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "A abertura decorre da transparência ativa da LAI, cujo art. 8º manda divulgar licitações e contratos e exige acesso automatizado em formatos abertos, estruturados e legíveis por máquina. A Lei 14.129/2021, que alcança o Estado se adotada por ato próprio e serve ao menos de referência, consagra dados abertos: formato aberto, legíveis por máquina e com licença aberta. Transparência, porém, não autoriza expor dados pessoais desnecessários: a informação pessoal tem acesso restrito (LAI, art. 31) e a LGPD impõe necessidade.",
+    "Anonimizar torna o dado não associável ao titular com esforços razoáveis, e ele deixa de ser pessoal (art. 12 da LGPD); pseudonimizar o desassocia só enquanto a informação adicional fica guardada à parte, e ele continua sendo dado pessoal. O SHA-256 sem sal de CPF é reversível por força bruta, pois há cerca de um bilhão de combinações: não anonimiza. Deve-se publicar nome e CPF mascarado do fornecedor pessoa física, omitir o endereço residencial e jamais divulgar o CID, dado sensível.",
+    "Na qualidade, cabem regras de validação na recepção (dígito verificador do CNPJ, datas coerentes, faixas de valor contra outliers), deduplicação dos fornecedores pelo CNPJ como dado mestre, devolução dos erros ao jurisdicionado e dicionário de dados com indicadores de exatidão, completude e consistência.",
+    "A API deve ter especificação OpenAPI versionada, com esquemas, filtros, paginação, códigos de erro e limites de requisições, além de downloads em lote em CSV e JSON.",
+    "A publicação depende de saneamento mínimo, exclusão dos campos pessoais excessivos, RIPD com o encarregado, licença aberta, atualização periódica, indicadores de qualidade visíveis e coerência com o PNCP (art. 174 da Lei 14.133/2021), com canal para reportar erros."
+  ],
+  "errosComuns": [
+    "Aceitar o hash sem sal como anonimização, ignorando que o CPF tem poucas combinações possíveis e pode ser revertido por força bruta.",
+    "Tratar pseudonimização e anonimização como sinônimos, ou afirmar que dado pseudonimizado deixa de ser pessoal.",
+    "Defender a publicação de todos os campos em nome da transparência, inclusive o CID de pacientes e o endereço residencial.",
+    "Afirmar que a Lei 14.129/2021 obriga diretamente o Tribunal, sem mencionar que Estados só se vinculam se a adotarem por ato próprio.",
+    "Publicar os dados sem tratar os erros de qualidade, o que gera conclusões falsas, como contratos bilionários em municípios pequenos."
+  ],
+  "fundamentacao": [
+    "Lei 12.527/2011 (LAI), arts. 8º (transparência ativa e requisitos dos sítios) e 31 (informações pessoais)",
+    "Lei 14.129/2021 (Governo Digital): princípio de interoperabilidade e dados abertos; definição de dados abertos; aplicação a Estados mediante adoção por ato próprio",
+    "Lei 13.709/2018 (LGPD), arts. 5º, II e XI, 6º, III, 12 e 13, § 4º",
+    "Lei 14.133/2021, art. 174 (Portal Nacional de Contratações Públicas)",
+    "Especificação OpenAPI (OpenAPI Initiative)"
+  ],
+  "revisarFonteOficial": false
+}
