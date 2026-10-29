@@ -69,12 +69,33 @@ Confirmado em fonte oficial ou documento público, o que tirou o selo de 17 ques
 - **Lei 15.122/2005 (PCCR):** a **Lei 22.973/2024** (DOE-GO de 5/9/2024) renomeou o cargo de Analista para **Auditor de Controle Externo**. O cargo de Técnico de Controle Externo é de nível médio (Edital 01/2026, Anexo I).
 - **LC 205/2025:**
   - texto literal: "Fica assegurada a possibilidade de revisão humana para decisões automatizadas da administração pública que afetem direitos significativos";
-  - NEI-IA consultivo e vinculado à Secretaria-Geral de Governo (art. 27); Sandbox (art. 32).
-  - **Atenção:** uma notícia da Alego fala de uma lei posterior (citada como LC 215/2026) que altera a política e cria uma premiação. O número e o conteúdo não foram confirmados, e o edital cita a LC 205 "de 19 de maio de 2025".
+  - NEI-IA consultivo, na estrutura da Secretaria-Geral de Governo, que o preside (art. 27, redação original); Sandbox (art. 32).
+  - **Alteração posterior ao edital:** a **LC 215, de 10/9/2026**, transferiu o NEI-IA para a estrutura da SECTI e criou o Prêmio Anual Goiás Aberto para a IA (notícias da Alego sobre o PL 16854/26 e texto compilado da Casa Civil). O edital considera a legislação vigente até a sua publicação (Obs. 1 do Anexo II), então a prova cobra a redação original. As questões trazem essa nota.
 - **Lei federal 15.352, de 25/2/2026:** converteu a MP 1.317/2025 e transformou a ANPD em Agência Nacional de Proteção de Dados (planalto.gov.br).
 
+### Segunda rodada (29/10/2026, buscas pelo número do ato e "GNOI")
+Esta rodada tirou o selo de mais 8 questões:
+- **RA 14/2025** (de 02/10/2025, D.E.C. de 03/10/2025; GNOI, ato 25999):
+  - define a estrutura organizacional e as competências;
+  - revogou as RAs 19/2022, 15/2023, 23/2024 e 6/2025;
+  - a **Diretoria de Tecnologia da Informação** fica na Secretaria Executiva da Presidência, com quatro serviços: Sistemas de Informação, Suporte Técnico de TI, Infraestrutura e Segurança de TI e **Inteligência Artificial**.
+- **RA 14/2024** (portal do TCE-GO): Política de Governança Organizacional, parte do SGO/TCE-GO.
+  - O glossário define governança organizacional como "mecanismos de liderança, estratégia e controle" para avaliar, direcionar e monitorar a gestão.
+  - O preâmbulo cita a **Resolução TCU 320/2020**.
+- **RA 19/2024**: Política de Comunicação, aprovada em 10/10/2024 e publicada no D.E.C. de 15/10/2024. Revogou a Resolução 7/2019, invoca o princípio da publicidade e atribui a gestão da política à Diretoria de Comunicação (art. 3º).
+- **RA 5/2024**: Política de Gestão de Pessoas, em vigor desde 30/4/2024.
+  - Traz diretrizes ligadas aos objetivos estratégicos e evolução na carreira por indicadores de desempenho e mérito.
+  - A RN 12/2024 regula a avaliação de desempenho.
+  - O portal de governança lista a política ao lado do Plano Diretor de Desenvolvimento de Competências.
+  - O texto sobre "gestão por competências" na própria RA **não foi visto**, por isso a leg-inst-040 mantém o selo.
+- **Código de Ética:**
+  - RA 1/2014: o Anexo I trata dos membros e o Anexo II, dos servidores;
+  - foi alterado pela RA 3/2016 e pela **RA 6/2026**, de 05/03/2026 (anterior ao edital, portanto cobrável). A RA 6/2026 estendeu o alcance a cedidos, estagiários, aprendizes e prestadores e ampliou as vedações a assédio e discriminação;
+  - o sigilo profissional está entre os princípios;
+  - a regra específica sobre presentes não foi vista. A questão sobre o tema tem gabarito pela Lei 8.429, art. 9º, I.
+
 ## Não verificado (usar só com selo, ou cobrar o princípio geral)
-- Texto integral de: RA 14/2025 (estrutura e competências, inclusive da Diretoria de TI), RA 14/2024 (Governança Organizacional), RA 15/2024 (Sistema de Planejamento e Gestão), RA 5/2024 (Gestão de Pessoas), RA 19/2024 (Comunicação), Código de Ética e PDTI 2025–2026. Nenhuma busca de 29/10 encontrou esses textos. As 9 questões que ainda têm selo dependem deles.
+- Texto integral dos atos acima (as buscas devolvem trechos) e do PDTI 2025–2026; texto da RA 15/2024 (Sistema de Planejamento e Gestão). Só a leg-inst-040 ainda tem selo.
 - Numeração exata dos artigos da Lei 20.756/2020 (fontes divergem) e o texto integral da Lei 15.122/2005.
 - Classificação de risco de sistemas de IA na LC 205/2025: **não encontrada** nas fontes consultadas.
 

@@ -470,8 +470,7 @@
         "resposta": "Mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a atuação da gestão, na linha da Resolução TCU 320/2020 e do Decreto 9.203/2017 (art. 2º, I)."
       },
       "conceitosChave": ["Governança organizacional"],
-      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (conceito de governança organizacional e SGO/TCE-GO, conforme o portal do TCE-GO; conferir no texto oficial); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; TCU, Referencial Básico de Governança Organizacional.",
-      "revisarFonteOficial": true
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (Política de Governança Organizacional: o glossário define governança organizacional como mecanismos de liderança, estratégia e controle para avaliar, direcionar e monitorar a gestão, e o preâmbulo cita a Resolução TCU nº 320/2020 como boa prática de referência; texto no portal do TCE-GO); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; TCU, Referencial Básico de Governança Organizacional."
     },
     {
       "id": "leg-ti-029",
@@ -577,8 +576,7 @@
         "resposta": "Segundo a estrutura divulgada no GNOI: Serviço de Sistemas de Informação, Serviço de Suporte Técnico de TI, Serviço de Infraestrutura e Segurança de TI e Serviço de Inteligência Artificial. Conferir no texto oficial."
       },
       "conceitosChave": ["Estrutura da DTI (RA 14/2025)"],
-      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025, anexos da estrutura organizacional (unidades vinculadas à Diretoria de TI, conforme resumo do GNOI, ato 25999; conferir no texto oficial); TCE-GO, RN 13/2016 (CETI).",
-      "revisarFonteOficial": true
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025, de 02/10/2025 (D.E.C. de 03/10/2025; GNOI, ato 25999): a Diretoria de Tecnologia da Informação, na Secretaria Executiva da Presidência, reúne os Serviços de Sistemas de Informação, de Suporte Técnico de TI, de Infraestrutura e Segurança de TI e de Inteligência Artificial; TCE-GO, RN 13/2016 (CETI)."
     }
   ]
 }

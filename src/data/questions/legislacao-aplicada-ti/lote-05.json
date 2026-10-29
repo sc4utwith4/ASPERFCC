@@ -409,7 +409,7 @@
         {
           "texto": "O Núcleo de Ética e Inovação em IA (NEI-IA) é órgão de natureza deliberativa, integrante do Poder Judiciário estadual, com competência para aplicar sanções a desenvolvedores privados.",
           "verdadeira": false,
-          "explicacao": "Falsa. O NEI-IA foi criado na estrutura da Secretaria-Geral de Governo, com natureza consultiva, multissetorial e permanente; não é órgão do Judiciário nem tem função sancionatória."
+          "explicacao": "Falsa. O NEI-IA foi criado na estrutura da Secretaria-Geral de Governo (redação original, vigente na publicação do edital; a LC 215/2026 o transferiu para a SECTI), com natureza consultiva, multissetorial e permanente; não é órgão do Judiciário nem tem função sancionatória."
         }
       ],
       "comandoFinal": "Está correto o que se afirma em",
@@ -452,7 +452,7 @@
         "resposta": "Pessoa humana como diretriz central; liberdade do setor privado com intervenção estatal excepcional e subsidiária; auditoria algorítmica só quando absolutamente necessária e tecnicamente viável; NEI-IA consultivo e multissetorial (na SGG); Sandbox Estadual Permanente de IA; possibilidade de revisão humana na administração pública."
       },
       "conceitosChave": ["LC-GO 205/2025", "NEI-IA", "Sandbox de IA"],
-      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025: a pessoa humana como foco central e a livre iniciativa do setor privado para desenvolver e operar IA para fins lícitos, com intervenção estatal excepcional e subsidiária (resumos de escritórios sobre o texto publicado no DOE-GO de 19/5/2025); NEI-IA de caráter consultivo, vinculado à Secretaria-Geral de Governo (art. 27), e Sandbox Estadual Permanente de IA (art. 32), conforme goias.gov.br/governo/go-ia."
+      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025: a pessoa humana como foco central e a livre iniciativa do setor privado para desenvolver e operar IA para fins lícitos, com intervenção estatal excepcional e subsidiária (resumos de escritórios sobre o texto publicado no DOE-GO de 19/5/2025); NEI-IA de caráter consultivo, vinculado à Secretaria-Geral de Governo na redação original (art. 27; a LC 215, de 10/9/2026, posterior ao edital, transferiu-o para a SECTI), e Sandbox Estadual Permanente de IA (art. 32), conforme goias.gov.br/governo/go-ia."
     },
     {
       "id": "leg-ti-049",
@@ -581,8 +581,7 @@
         "resposta": "A segregação de funções (ISO/IEC 27002:2022, 5.3): separar quem desenvolve, quem aprova e quem implanta, com ambientes distintos de desenvolvimento, teste e produção (8.31), gestão de mudanças (8.32) e credenciais individuais com privilégio mínimo (8.2)."
       },
       "conceitosChave": ["Estrutura da DTI (RA 14/2025)", "Segregação de funções"],
-      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025 (unidades vinculadas à Diretoria de TI, conforme resumo do GNOI; conferir no texto oficial); ABNT NBR ISO/IEC 27002:2022, controles 5.3, 8.2, 8.31 e 8.32; TCE-GO, RN 13/2016.",
-      "revisarFonteOficial": true
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2025 (GNOI, ato 25999: Serviços de Sistemas de Informação, de Suporte Técnico de TI, de Infraestrutura e Segurança de TI e de Inteligência Artificial na Diretoria de TI); ABNT NBR ISO/IEC 27002:2022, controles 5.3, 8.2, 8.31 e 8.32; TCE-GO, RN 13/2016."
     }
   ]
 }

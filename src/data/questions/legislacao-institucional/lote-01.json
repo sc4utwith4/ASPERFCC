@@ -500,8 +500,7 @@
         "resposta": "Não. O acesso privilegiado serve ao serviço; usá-lo por curiosidade viola o dever de sigilo, a moralidade e a impessoalidade, e pode gerar responsabilização ética e disciplinar, além de configurar incidente de segurança."
       },
       "conceitosChave": ["Ética no serviço público: sigilo", "TCE-GO: PSI"],
-      "fundamentacao": "Código de Ética dos Servidores do TCE-GO (dever de sigilo; texto não conferido); CF/88, art. 37, caput; Lei 13.709/2018, art. 6º, III; RA TCE-GO nº 17/2024 (confidencialidade).",
-      "revisarFonteOficial": true
+      "fundamentacao": "Código de Ética dos Servidores do TCE-GO (Resolução Administrativa nº 1/2014, Anexo II, alterada pelas RAs nº 3/2016 e nº 6/2026; o sigilo profissional figura entre os princípios); CF/88, art. 37, caput; Lei 13.709/2018, art. 6º, III; RA TCE-GO nº 17/2024 (confidencialidade)."
     },
     {
       "id": "leg-inst-010",

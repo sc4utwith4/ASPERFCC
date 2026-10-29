@@ -574,8 +574,7 @@
         "resposta": "Governança avalia, direciona e monitora a gestão, por meio de mecanismos de liderança, estratégia e controle (Decreto 9.203/2017; ISO/IEC 38500). Gestão planeja, constrói, executa e monitora as operações (no COBIT 2019, domínios APO, BAI, DSS e MEA)."
       },
       "conceitosChave": ["Governança organizacional", "Governança × gestão"],
-      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (conferir no texto oficial); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; ABNT NBR ISO/IEC 38500 (modelo avaliar–dirigir–monitorar); COBIT 2019 (domínios EDM, APO, BAI, DSS e MEA); TCE-GO, RN 13/2016.",
-      "revisarFonteOficial": true
+      "fundamentacao": "TCE-GO, Resolução Administrativa nº 14/2024 (governança organizacional como mecanismos de liderança, estratégia e controle, no Sistema de Governança Organizacional, SGO/TCE-GO; o preâmbulo cita a Resolução TCU nº 320/2020); Resolução TCU nº 320/2020; Decreto federal 9.203/2017, art. 2º, I; ABNT NBR ISO/IEC 38500 (modelo avaliar–dirigir–monitorar); COBIT 2019 (domínios EDM, APO, BAI, DSS e MEA); TCE-GO, RN 13/2016."
     },
     {
       "id": "leg-ti-040",

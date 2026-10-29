@@ -72,7 +72,7 @@
           "id": "opt-1",
           "texto": "criou o Núcleo de Ética e Inovação em IA (NEI-IA), órgão consultivo e multissetorial que regulamenta, coordena e supervisiona o Sandbox Estadual Permanente de IA.",
           "correta": true,
-          "explicacaoDetalhada": "CORRETA. A LC 205/2025 criou o NEI-IA, órgão de natureza consultiva e multissetorial na estrutura da Secretaria-Geral de Governo, e instituiu o Sandbox Estadual Permanente de IA (capítulo VIII, art. 32 e seguintes), ambiente regulatório experimental para desenvolver, testar e implementar soluções de IA. Cabe ao NEI-IA regulamentar, coordenar e supervisionar o sandbox.",
+          "explicacaoDetalhada": "CORRETA. A LC 205/2025 criou o NEI-IA, órgão de natureza consultiva e multissetorial na estrutura da Secretaria-Geral de Governo (redação original, vigente na publicação do edital; a LC 215/2026 transferiu o NEI-IA para a estrutura da SECTI), e instituiu o Sandbox Estadual Permanente de IA (capítulo VIII, art. 32 e seguintes), ambiente regulatório experimental para desenvolver, testar e implementar soluções de IA. Cabe ao NEI-IA regulamentar, coordenar e supervisionar o sandbox.",
           "versaoInvertidaFalsa": "A LC 205/2025 criou o NEI-IA como agência reguladora com poder sancionatório, à qual cabe autorizar previamente o funcionamento de todo sistema de IA privado em Goiás."
         },
         {
@@ -106,7 +106,7 @@
         "resposta": "O Núcleo de Ética e Inovação em IA (NEI-IA), órgão consultivo, multissetorial e permanente, e o Sandbox Estadual Permanente de IA, ambiente regulatório experimental. O NEI-IA regulamenta, coordena e supervisiona o sandbox."
       },
       "conceitosChave": ["LC-GO 205/2025", "NEI-IA", "Sandbox de IA"],
-      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025, arts. 1º, 6º, 27 e 32 e seguintes (fatos em docs/pesquisa/_normativos-tce-go.md e docs/pesquisa/legislacao-aplicada-ti.md)."
+      "fundamentacao": "Lei Complementar estadual (GO) nº 205/2025, arts. 1º, 6º, 27 e 32 e seguintes (fatos em docs/pesquisa/_normativos-tce-go.md e docs/pesquisa/legislacao-aplicada-ti.md). A LC 215, de 10/9/2026, posterior ao edital, transferiu o NEI-IA da Secretaria-Geral de Governo para a SECTI (notícias da Alego e texto compilado)."
     },
     {
       "id": "leg-ti-013",
