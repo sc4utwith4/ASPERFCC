@@ -1,0 +1,569 @@
+{
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "ing-tec-001",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t01",
+      "enunciadoBase": "De acordo com o texto, que apresenta a Contracts Data API, um token de acesso emitido pelo portal do desenvolvedor",
+      "variantesEnunciado": [
+        "Segundo o 2º parágrafo da documentação, o token de acesso utilizado nas requisições à Contracts Data API",
+        "Conforme a seção “Authentication” do texto, o token emitido pelo portal do desenvolvedor da API"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pode ser compartilhado entre aplicações do mesmo titular, desde que dentro do prazo de validade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto proíbe o compartilhamento: “Each token is bound to a single application; sharing it with other applications violates the terms of use”. A ressalva ‘do mesmo titular’ não existe na documentação e foi criada para parecer razoável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "deixa de ser válido 60 minutos após ser criado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 2º parágrafo informa que os tokens “expire 60 minutes after they are created”. É uma questão de scanning: basta localizar o número associado ao verbo ‘expire’ (expirar) na seção de autenticação.",
+          "versaoInvertidaFalsa": "Segundo a documentação, o token de acesso permanece válido até que a aplicação atinja o limite de 600 requisições por minuto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "expira após 600 requisições, quando a aplicação atinge o limite por minuto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O número 600 aparece na seção de rate limiting (“Each application may send up to 600 requests per minute”) e não guarda relação com a validade do token. A alternativa mistura dados de seções diferentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deve ser enviado no corpo de cada requisição, e não em um cabeçalho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto exige o token em um cabeçalho: “Every request must include a bearer token in the Authorization header”. Header é cabeçalho, e não corpo (body) da requisição."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é renovado automaticamente pelo servidor sempre que a API retorna o código 401.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Quem obtém um novo token é o cliente, e não o servidor: “the client is expected to obtain a new one with its refresh credential”. A alternativa inverte o agente da ação."
+        }
+      ],
+      "pegadinhaFCC": "A banca espalha números do próprio texto (600, 401) pelos distratores. Só a leitura atenta da frase com ‘expire’ separa a validade do token do limite de requisições.",
+      "resumoFlashcard": {
+        "pergunta": "Na Contracts Data API, quando expira o token de acesso e como ele deve ser enviado?",
+        "resposta": "O token expira 60 minutos após ser criado e deve seguir no cabeçalho Authorization como bearer token. Ao receber 401, o cliente obtém um novo token com sua credencial de renovação."
+      },
+      "conceitosChave": ["Scanning: informação específica", "Documentação de API: autenticação"],
+      "fundamentacao": "Texto ing-tec-t01 (Contracts Data API v2), 2º parágrafo: “expire 60 minutes after they are created”."
+    },
+    {
+      "id": "ing-tec-002",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t01",
+      "enunciadoBase": "Segundo a documentação da API, uma aplicação que receber a resposta 429 Too Many Requests deve",
+      "variantesEnunciado": [
+        "De acordo com a seção “Rate limiting”, ao exceder o limite de requisições e receber o código 429, o cliente deve",
+        "Conforme o 4º parágrafo do texto, a conduta esperada de um cliente que recebe a resposta 429 do servidor é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "repetir a requisição imediatamente, pois o bloqueio é removido assim que o cabeçalho X-RateLimit-Reset é lido.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto adverte justamente o contrário: “retrying immediately in a tight loop will only extend the block”. O cabeçalho X-RateLimit-Reset apenas informa quando a janela será renovada; lê-lo não remove o bloqueio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "solicitar um novo token com sua credencial de renovação, já que o código indica expiração da autenticação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A renovação do token com a refresh credential é a conduta prevista para o código 401 Unauthorized, descrito na seção de autenticação. O 429 indica excesso de requisições, e não token expirado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "migrar para a versão 1 da API, que não está sujeita ao limite de 600 requisições por minuto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não afirma que a versão 1 esteja livre do limite. Ao contrário, informa que ela foi descontinuada (“Version 1 of the API was deprecated”) e que novas integrações devem usar apenas a versão 2."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aguardar, no mínimo, o número de segundos indicado no cabeçalho Retry-After antes de tentar de novo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 4º parágrafo determina: “Clients should wait at least the number of seconds indicated before trying again”, e esses segundos vêm no cabeçalho Retry-After enviado com o 429. A expressão ‘at least’ equivale a ‘no mínimo’.",
+          "versaoInvertidaFalsa": "Segundo a documentação, o cliente que recebe o código 429 deve aguardar, no máximo, os segundos indicados no cabeçalho Retry-After, podendo repetir a chamada imediatamente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "reduzir o tamanho das páginas para menos de 100 itens, o que libera novas chamadas na janela atual.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O limite de 100 itens por página pertence à seção de paginação e não interfere na contagem de requisições por minuto. Nada no texto relaciona o tamanho da página à liberação de chamadas."
+        }
+      ],
+      "pegadinhaFCC": "Os códigos 401 e 429 aparecem em seções diferentes e exigem condutas diferentes. A banca troca a reação prevista para um pelo outro e explora ‘at least’ (no mínimo).",
+      "resumoFlashcard": {
+        "pergunta": "Como o cliente da Contracts Data API deve reagir ao código 429 Too Many Requests?",
+        "resposta": "Deve aguardar pelo menos os segundos indicados no cabeçalho Retry-After antes de tentar de novo. Repetir a chamada imediatamente, em loop, apenas prolonga o bloqueio."
+      },
+      "conceitosChave": ["Documentação de API: rate limiting", "Scanning: informação específica"],
+      "fundamentacao": "Texto ing-tec-t01, 4º parágrafo: “Clients should wait at least the number of seconds indicated before trying again”; RFC 6585, seção 4 (código 429)."
+    },
+    {
+      "id": "ing-tec-003",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "textoApoioId": "ing-tec-t01",
+      "enunciadoBase": "Considere o trecho do último parágrafo da documentação: “Version 1 of the API was deprecated in March and will eventually be shut down”. Mantendo-se o sentido original, uma tradução adequada é: ‘A versão 1 da API foi …… em março e …… será desativada’. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na seção “Versioning”, lê-se: “Version 1 of the API was deprecated in March and will eventually be shut down”. A tradução ‘A versão 1 da API foi …… em março e …… será desativada’ preserva o sentido do original quando as lacunas são preenchidas, correta e respectivamente, por:",
+        "Para traduzir o trecho “will eventually be shut down”, precedido de “was deprecated in March”, um analista redigiu: ‘A versão 1 da API foi …… em março e …… será desativada’. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "declarada obsoleta − por fim",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em software, ‘to deprecate’ é declarar um recurso obsoleto e desaconselhado, embora ele ainda funcione, tanto que o texto acrescenta “Although it still answers requests”. E “eventually” é falso cognato: significa ‘por fim’, ‘mais cedo ou mais tarde’, e não ‘eventualmente’.",
+          "versaoInvertidaFalsa": "No trecho, “deprecated” significa que a versão 1 já foi desativada, e “eventually” equivale a ‘eventualmente’, isto é, talvez venha a ser desligada."
+        },
+        {
+          "id": "opt-2",
+          "texto": "desvalorizada − eventualmente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas traduções caem em armadilhas. ‘Desvalorizada’ evoca a depreciação contábil, sentido que não se aplica a versões de API. ‘Eventualmente’, em português, quer dizer ‘ocasionalmente’, ‘por acaso’, sentido diferente de “eventually”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "declarada obsoleta − eventualmente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna está certa, mas a segunda cai no falso cognato clássico. “eventually” indica um desfecho certo, ainda que sem data (‘por fim’). Já ‘eventualmente’ sugeriria que o desligamento talvez nem ocorra."
+        },
+        {
+          "id": "opt-4",
+          "texto": "desativada − futuramente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Futuramente’ é aceitável para “eventually”, mas ‘desativada’ não traduz “deprecated”. A própria frase seguinte prova que a versão 1 continua no ar: “Although it still answers requests, it no longer receives bug fixes”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "atualizada − imediatamente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto diz que a versão 1 não recebe mais correções (“it no longer receives bug fixes”), o que exclui ‘atualizada’. Além disso, “eventually” indica algo que ocorrerá mais adiante, e não ‘imediatamente’."
+        }
+      ],
+      "pegadinhaFCC": "Dois falsos amigos na mesma frase: ‘deprecate’ não é ‘depreciar’ nem ‘desativar’, e ‘eventually’ não é ‘eventualmente’. A alternativa que acerta só a primeira lacuna é a isca.",
+      "resumoFlashcard": {
+        "pergunta": "O que significam ‘deprecated’ e ‘eventually’ em documentação de software?",
+        "resposta": "‘Deprecated’ indica recurso declarado obsoleto e desaconselhado, mas ainda em funcionamento. ‘Eventually’ significa ‘por fim’, ‘mais cedo ou mais tarde’, e é falso cognato de ‘eventualmente’."
+      },
+      "conceitosChave": ["Falsos cognatos", "Ciclo de vida: deprecation"],
+      "fundamentacao": "Texto ing-tec-t01, 5º parágrafo: “Version 1 of the API was deprecated in March and will eventually be shut down. Although it still answers requests”; Cambridge Dictionary, verbetes ‘deprecate’ e ‘eventually’."
+    },
+    {
+      "id": "ing-tec-004",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t01",
+      "enunciadoBase": "No 3º parágrafo, no trecho “each response includes a next_cursor field, which must be sent unchanged in the following request”, o pronome “which” refere-se a",
+      "variantesEnunciado": [
+        "Na seção “Pagination”, o pronome relativo “which”, em “which must be sent unchanged in the following request”, retoma",
+        "Considerando a descrição da paginação baseada em cursor, o termo “which”, no segmento “a next_cursor field, which must be sent unchanged”, tem como referente"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“each response”, ou seja, à resposta inteira, que deve ser reenviada ao servidor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O cliente não reenvia a resposta inteira. O pronome vem logo após “a next_cursor field”, separado por vírgula, como é típico da oração adjetiva explicativa, e retoma o termo imediatamente anterior."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“page numbers”, que o cliente deve informar sem alterações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto afirma que a API dispensa números de página: “Instead of page numbers, the API uses cursor-based pagination”. Seria contraditório exigir que números de página fossem enviados sem alteração."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“the following request”, isto é, à requisição seguinte.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “the following request” aparece depois do pronome, como local onde algo deve ser enviado (‘na requisição seguinte’). Não faz sentido dizer que a requisição deve ser enviada inalterada dentro dela mesma."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“List endpoints”, que devem ser chamados sempre na mesma ordem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “List endpoints” é sujeito de outra frase, a que trata do limite de 100 itens por página. O texto nada diz sobre a ordem de chamada dos endpoints."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“a next_cursor field”, isto é, ao campo que indica a continuação da lista.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O relativo “which” retoma “a next_cursor field”: é esse campo que deve ser devolvido sem alteração na próxima chamada. A frase seguinte confirma a leitura, pois “When next_cursor is null, there are no further results”.",
+          "versaoInvertidaFalsa": "No trecho, o pronome “which” retoma “each response”, indicando que a resposta inteira deve ser reenviada sem alterações na requisição seguinte."
+        }
+      ],
+      "pegadinhaFCC": "A FCC oferece como referentes outros substantivos próximos, antes e depois do pronome. O relativo explicativo, após vírgula, retoma o núcleo imediatamente anterior que faça sentido.",
+      "resumoFlashcard": {
+        "pergunta": "Na paginação por cursor da Contracts Data API, o que deve ser enviado sem alteração na requisição seguinte?",
+        "resposta": "O valor do campo next_cursor, retomado pelo pronome ‘which’. Quando next_cursor vem nulo, não há mais resultados, e os cursores não devem ser decodificados nem montados pelo cliente."
+      },
+      "conceitosChave": ["Referência pronominal", "Documentação de API: paginação"],
+      "fundamentacao": "Texto ing-tec-t01, 3º parágrafo: “each response includes a next_cursor field, which must be sent unchanged in the following request”."
+    },
+    {
+      "id": "ing-tec-005",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t01",
+      "enunciadoBase": "Considere a situação hipotética: uma equipe integra seu sistema à Contracts Data API usando uma URL iniciada por http://, monta manualmente os cursores de paginação a partir do formato observado nas respostas e, ao receber o código 401, exibe ao usuário a tela de login. À luz da documentação, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um desenvolvedor configurou um cliente da Contracts Data API para chamar endereços http://, decodificar e construir cursores por conta própria e pedir novo login ao usuário sempre que a API retornar 401. Com base no texto, conclui-se que",
+        "Em uma revisão de código, verificou-se que a integração com a Contracts Data API usa HTTP simples, gera cursores manualmente e trata o código 401 solicitando nova autenticação do usuário. De acordo com a documentação, é correto concluir que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apenas a montagem manual dos cursores contraria a documentação, pois o servidor redireciona chamadas HTTP para HTTPS e o código 401 exige novo login do usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta quanto aos cursores, mas erra nas outras duas premissas. O texto diz que chamadas HTTP “are rejected rather than redirected” e que, diante do 401, o cliente deve obter novo token “instead of asking the user to log in again”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "apenas o uso de http:// contraria a documentação; montar cursores é aceitável enquanto o formato interno não mudar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A documentação desaconselha decodificar ou montar cursores sem ressalva temporal: “clients should not attempt to decode or build them, since their internal format may change without notice”. Além disso, o tratamento do 401 também está errado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "as três práticas contrariam a documentação: chamadas HTTP são rejeitadas, os cursores não devem ser decodificados nem construídos e o código 401 deve ser tratado com a credencial de renovação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Cada prática esbarra em um trecho: “Calls made over plain HTTP are rejected rather than redirected”, “clients should not attempt to decode or build them” e “the client is expected to obtain a new one with its refresh credential instead of asking the user to log in again”.",
+          "versaoInvertidaFalsa": "Segundo a documentação, a equipe só erra ao montar os cursores, porque chamadas HTTP são redirecionadas para HTTPS e o código 401 exige que o usuário faça login novamente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o tratamento do código 401 está correto, já que o token expirado só pode ser substituído mediante nova autenticação do usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A documentação prevê a renovação sem envolver o usuário, com a refresh credential do cliente. Pedir novo login é exatamente o que o texto manda evitar (“instead of asking the user to log in again”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma das práticas é vedada, pois a documentação apenas recomenda (should) condutas, sem impor obrigações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Há obrigação expressa com “must”: “All requests must be sent over HTTPS”. Mesmo as condutas descritas com “should” e “is expected to” fazem parte do uso correto da API, e chamadas HTTP são efetivamente rejeitadas."
+        }
+      ],
+      "pegadinhaFCC": "Questão com três objetos de avaliação. Os distratores acertam um ou dois pontos e erram os demais, principalmente ao supor redirecionamento automático para HTTPS e novo login diante do 401.",
+      "resumoFlashcard": {
+        "pergunta": "Quais três condutas a documentação da Contracts Data API exige do cliente quanto a protocolo, cursores e código 401?",
+        "resposta": "Usar sempre HTTPS, porque chamadas HTTP são rejeitadas, sem redirecionamento. Tratar cursores como strings opacas, sem decodificá-los ou montá-los. Diante do 401, obter novo token com a refresh credential, sem pedir novo login ao usuário."
+      },
+      "conceitosChave": ["Documentação de API: autenticação", "Documentação de API: paginação", "Inferência"],
+      "fundamentacao": "Texto ing-tec-t01, 1º a 3º parágrafos: “Calls made over plain HTTP are rejected rather than redirected”; “instead of asking the user to log in again”; “clients should not attempt to decode or build them”."
+    },
+    {
+      "id": "ing-tec-006",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t02",
+      "enunciadoBase": "O objetivo principal da especificação de formato de eventos de auditoria apresentada no texto é",
+      "variantesEnunciado": [
+        "De acordo com a seção “Introduction”, o documento técnico reproduzido no texto tem como propósito",
+        "Segundo o 1º parágrafo, a finalidade da especificação sobre eventos de auditoria é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "definir um formato comum para eventos de auditoria, de modo que registros de fornecedores distintos possam ser coletados, correlacionados e preservados por um único serviço de arquivamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A introdução afirma: “This document defines a common format for audit events” e “Its purpose is to allow logs produced by different vendors to be collected, correlated and preserved by a single archiving service”. As demais seções detalham esse formato.",
+          "versaoInvertidaFalsa": "O objetivo principal da especificação é regulamentar o transporte de eventos de auditoria entre sistemas, padronizando a forma de envio dos registros ao serviço de arquivamento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "regulamentar o transporte de eventos de auditoria entre sistemas financeiros, fixando protocolos e portas de comunicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O transporte é expressamente excluído: “The transport of events between systems is outside the scope of this document and is addressed in a separate specification”. A alternativa apresenta como objetivo o que o texto declara fora do escopo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "estabelecer procedimentos de resposta a intrusões em serviços de arquivamento de registros financeiros.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Intrusões são mencionadas apenas nas considerações de segurança, para justificar a restrição de acesso aos logs (“audit logs frequently become targets after an intrusion”). Não há procedimentos de resposta a incidentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "padronizar a criptografia de registros financeiros para garantir que os eventos gravados sejam exatos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não trata de criptografia e ressalva que seguir o formato não garante a exatidão: “compliance with this format does not, by itself, guarantee that the recorded events are accurate”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "orientar fornecedores sobre a substituição de seus sistemas por soluções de um único fabricante.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O propósito é o oposto: permitir que logs de fornecedores diferentes (“different vendors”) convivam e sejam centralizados em um único serviço de arquivamento, sem exigir que os sistemas sejam trocados."
+        }
+      ],
+      "pegadinhaFCC": "O distrator mais atraente usa um tema citado na introdução (o transporte de eventos), mas que o texto declara fora do escopo. Atenção a ‘outside the scope’.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o propósito da especificação Audit Event Format e o que fica fora de seu escopo?",
+        "resposta": "Definir um formato comum de eventos de auditoria, para que logs de fornecedores diferentes sejam coletados, correlacionados e preservados por um único serviço de arquivamento. O transporte dos eventos fica fora do escopo e é tratado em outra especificação."
+      },
+      "conceitosChave": ["Ideia principal do texto", "Especificação: escopo"],
+      "fundamentacao": "Texto ing-tec-t02 (Audit Event Format), 1º parágrafo: “Its purpose is to allow logs produced by different vendors to be collected, correlated and preserved by a single archiving service”."
+    },
+    {
+      "id": "ing-tec-007",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t02",
+      "enunciadoBase": "Na especificação, o emprego de “MAY” em “Producers MAY add custom fields” indica que a inclusão de campos personalizados pelos produtores",
+      "variantesEnunciado": [
+        "Considerando as convenções da seção 2, a palavra-chave “MAY”, no trecho “Producers MAY add custom fields”, significa que acrescentar campos personalizados",
+        "No 3º parágrafo, o nível de exigência expresso por “MAY”, em “Producers MAY add custom fields, but these MUST be placed under the ext object”, revela que a adição de campos próprios"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é obrigatória para todo produtor, sob pena de não conformidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A obrigatoriedade corresponde a MUST: “An implementation that fails to satisfy a MUST requirement is not compliant”. MAY indica faculdade, sem qualquer consequência para quem não usa o recurso."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é recomendada, podendo ser dispensada apenas mediante justificativa válida e documentada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Recomendação que só se afasta com razão válida documentada é a definição de SHOULD: “may still be compliant, provided that it has a valid reason and documents that reason”. Não é o caso de MAY."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é facultativa, desde que tais campos sejam colocados sob o objeto ext.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A seção 2 define: “MAY identifies a truly optional feature”. A faculdade, porém, vem com uma condição obrigatória: se houver campos personalizados, “these MUST be placed under the ext object”, para não colidirem com campos de revisões futuras.",
+          "versaoInvertidaFalsa": "Na especificação, o termo “MAY” indica que a inclusão de campos personalizados é recomendada e só pode ser dispensada mediante justificativa documentada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é proibida até que futuras revisões definam os campos permitidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Proibição seria expressa por MUST NOT. As revisões futuras são citadas apenas como motivo para isolar os campos personalizados no objeto ext (“so that they do not collide with fields defined in future revisions”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é permitida apenas a serviços de arquivamento, e não aos produtores dos eventos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O sujeito da frase é “Producers”, ou seja, os produtores dos eventos. Os serviços de arquivamento aparecem na seção 4, com deveres de verificação e rejeição de lotes, e não com permissão para acrescentar campos."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as definições das palavras-chave: MAY (facultativo), SHOULD (recomendado, afastável com justificativa) e MUST (obrigatório). Além disso, a faculdade do MAY vem acompanhada de um MUST.",
+      "resumoFlashcard": {
+        "pergunta": "Em especificações no estilo RFC, o que indicam MUST, SHOULD e MAY?",
+        "resposta": "MUST indica requisito obrigatório, cujo descumprimento gera não conformidade. SHOULD é uma recomendação forte, que só pode ser afastada com razão válida e documentada. MAY indica recurso verdadeiramente opcional."
+      },
+      "conceitosChave": ["Modais em especificações (MUST/SHOULD/MAY)"],
+      "fundamentacao": "Texto ing-tec-t02, 2º e 3º parágrafos: “MAY identifies a truly optional feature”; “Producers MAY add custom fields, but these MUST be placed under the ext object”; RFC 2119 (BCP 14)."
+    },
+    {
+      "id": "ing-tec-008",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "textoApoioId": "ing-tec-t02",
+      "enunciadoBase": "Com base nas seções 3 e 4 da especificação, que tratam da estrutura e da integridade dos eventos de auditoria, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um analista leu as seções “Event Structure” e “Integrity” da especificação para verificar a conformidade de um sistema de registro de auditoria. Considere as afirmativas abaixo.",
+        "A respeito das regras de estrutura dos eventos e de integridade dos lotes estabelecidas no 3º e no 4º parágrafos do texto, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O registro de data e hora deve estar em UTC, no formato ISO 8601, e a inclusão de milissegundos é obrigatória para a conformidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. UTC e ISO 8601 são exigidos com MUST, mas os milissegundos vêm com SHOULD: “SHOULD include milliseconds”. É recomendação, e não obrigação."
+        },
+        {
+          "texto": "Campos personalizados podem ser acrescentados pelos produtores, desde que fiquem sob o objeto ext.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Producers MAY add custom fields, but these MUST be placed under the ext object”."
+        },
+        {
+          "texto": "Um evento já gravado não pode ser alterado; a correção é feita por meio de um novo evento que referencia o original.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Once written, an event MUST NOT be modified. Corrections are made by appending a new event that references the original one.”"
+        },
+        {
+          "texto": "O serviço de arquivamento deve rejeitar todo lote com lacuna na cadeia de hashes, ainda que o produtor tenha declarado previamente uma janela de manutenção para aquele intervalo.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A rejeição comporta exceção: “unless the producer has previously declared a maintenance window covering that interval”. A afirmativa elimina justamente essa ressalva."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa I, que transforma em obrigação a recomendação sobre milissegundos (“SHOULD include milliseconds”), e deixa de fora a III, que reproduz fielmente a regra de imutabilidade dos eventos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa porque ignora a exceção introduzida por “unless” (janela de manutenção previamente declarada). A alternativa também omite a II, que está correta quanto ao objeto ext."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II e a III estão corretas, mas a I não: em especificações, SHOULD é recomendação e não torna os milissegundos condição de conformidade, ao contrário do MUST que rege UTC e ISO 8601."
+        },
+        {
+          "id": "opt-4",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV generaliza indevidamente a rejeição de lotes com lacuna (‘todo lote’, ‘ainda que’), quando o texto ressalva a janela de manutenção declarada previamente pelo produtor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Apenas II e III são verdadeiras. A I erra ao tornar obrigatórios os milissegundos, regidos por SHOULD, e a IV erra ao suprimir a exceção da janela de manutenção (“unless the producer has previously declared a maintenance window”).",
+          "versaoInvertidaFalsa": "Segundo a especificação, um evento de auditoria já gravado pode ser corrigido diretamente, desde que a alteração seja registrada no objeto ext."
+        }
+      ],
+      "pegadinhaFCC": "As afirmativas falsas trocam SHOULD por obrigação e apagam a exceção introduzida por ‘unless’. São as duas armadilhas mais comuns em especificações.",
+      "resumoFlashcard": {
+        "pergunta": "Na especificação Audit Event Format, como se corrige um evento e quando um lote com lacuna pode deixar de ser rejeitado?",
+        "resposta": "O evento gravado não pode ser modificado; corrige-se acrescentando um novo evento que referencia o original. O lote com lacuna na cadeia de hashes deve ser rejeitado, salvo se o produtor tiver declarado previamente uma janela de manutenção para aquele intervalo."
+      },
+      "conceitosChave": ["Modais em especificações (MUST/SHOULD/MAY)", "Scanning: informação específica", "Conectivos: condição"],
+      "fundamentacao": "Texto ing-tec-t02, 3º e 4º parágrafos: “SHOULD include milliseconds”; “Corrections are made by appending a new event that references the original one”; “unless the producer has previously declared a maintenance window covering that interval”."
+    },
+    {
+      "id": "ing-tec-009",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t02",
+      "enunciadoBase": "No 2º parágrafo, o conectivo “whereas”, em “whereas an implementation that ignores a SHOULD requirement may still be compliant”, estabelece com a oração anterior uma relação de",
+      "variantesEnunciado": [
+        "Na seção “Conventions”, a palavra “whereas”, que liga as duas orações sobre requisitos MUST e SHOULD, introduz uma ideia de",
+        "O termo “whereas”, empregado na frase que compara o descumprimento de requisitos MUST e SHOULD, expressa, no contexto, uma relação de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "causa, explicando por que uma implementação deixa de ser conforme.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conectivos de causa seriam ‘because’, ‘since’ ou ‘as’. “whereas” não explica o motivo da não conformidade; ele contrapõe a situação de quem descumpre MUST à de quem ignora SHOULD."
+        },
+        {
+          "id": "opt-2",
+          "texto": "contraste, opondo o efeito do descumprimento de um requisito MUST ao de um requisito SHOULD.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “whereas” equivale a ‘ao passo que’, ‘enquanto’ (com valor adversativo). Opõe-se “is not compliant” (para MUST) a “may still be compliant” (para SHOULD). Sinônimos possíveis no contexto: ‘while’ e ‘whilst’.",
+          "versaoInvertidaFalsa": "No 2º parágrafo, “whereas” introduz uma conclusão, indicando que ignorar um requisito SHOULD tem o mesmo efeito de descumprir um requisito MUST."
+        },
+        {
+          "id": "opt-3",
+          "texto": "condição, indicando a única hipótese em que uma implementação pode ser considerada conforme à especificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A condição está em outro conectivo da mesma frase: “provided that it has a valid reason and documents that reason” (‘desde que’). “whereas” não é condicional; é contrastivo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "conclusão, deduzindo que requisitos SHOULD são equivalentes a requisitos MUST.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Conclusão seria marcada por ‘therefore’, ‘thus’ ou ‘hence’. Além disso, o conteúdo está invertido: o texto diferencia os dois níveis de exigência, e não os equipara."
+        },
+        {
+          "id": "opt-5",
+          "texto": "finalidade, apontando o objetivo de documentar as razões de cada escolha.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Finalidade seria expressa por ‘in order to’ ou ‘so that’. A documentação da razão é condição para afastar um SHOULD, introduzida por “provided that”, e não o valor semântico de “whereas”."
+        }
+      ],
+      "pegadinhaFCC": "Na mesma frase há dois conectivos: ‘whereas’ (contraste) e ‘provided that’ (condição). A banca oferece o valor de um como se fosse do outro.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o valor semântico de ‘whereas’ e quais são seus equivalentes?",
+        "resposta": "‘Whereas’ expressa contraste entre duas situações, como ‘ao passo que’ ou ‘enquanto’. Equivale a ‘while’ ou ‘whilst’ em sentido adversativo e não expressa causa, condição nem conclusão."
+      },
+      "conceitosChave": ["Conectivos: contraste"],
+      "fundamentacao": "Texto ing-tec-t02, 2º parágrafo: “An implementation that fails to satisfy a MUST requirement is not compliant, whereas an implementation that ignores a SHOULD requirement may still be compliant”; Cambridge Dictionary, verbete ‘whereas’."
+    },
+    {
+      "id": "ing-tec-010",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t02",
+      "enunciadoBase": "Considere duas implementações hipotéticas da especificação: a implementação X registra horários em UTC, no formato ISO 8601, sem milissegundos, e documenta um motivo válido para isso; a implementação Y usa o nome completo do servidor responsável como identificador do ator. De acordo com o texto, é correto concluir que",
+      "variantesEnunciado": [
+        "Em uma auditoria de conformidade, constatou-se que o sistema X omite os milissegundos dos timestamps em UTC, com justificativa válida documentada, e que o sistema Y grava o nome do usuário no identificador do ator. À luz da especificação, conclui-se que",
+        "Dois fornecedores adotaram a especificação: o primeiro (X) não inclui milissegundos nos horários, mas registra e justifica a escolha; o segundo (Y) identifica o ator pelo nome completo da pessoa. Segundo o texto, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "ambas são não conformes, pois qualquer desvio em relação ao formato especificado impede a conformidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indevida: o texto admite que quem ignora um SHOULD “may still be compliant, provided that it has a valid reason and documents that reason”. Nem todo desvio gera não conformidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "X é não conforme e Y é conforme, porque a inclusão de milissegundos é exigida em todos os casos e o identificador do ator pode ser escolhido livremente pelo produtor.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte as duas conclusões. Milissegundos são SHOULD, e não MUST, e o identificador do ator tem restrição expressa: “The actor identifier MUST NOT contain personal data, such as names”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "ambas podem ser conformes, desde que documentem as razões de suas escolhas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A justificativa documentada só afasta requisitos SHOULD. Y viola um MUST NOT, e para requisitos MUST o texto é categórico: “fails to satisfy a MUST requirement is not compliant”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "X pode ser conforme, pois descumpre apenas um requisito SHOULD com justificativa, mas Y não é, pois viola um requisito MUST NOT.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os milissegundos são recomendação (“SHOULD include milliseconds”), e X tem razão válida documentada, o que preserva a conformidade. Y grava dado pessoal no identificador do ator, vedado por “MUST NOT contain personal data, such as names”.",
+          "versaoInvertidaFalsa": "Segundo a especificação, Y pode ser conforme se documentar sua escolha, ao passo que X é necessariamente não conforme por omitir os milissegundos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhuma conclusão é possível, pois a especificação não trata de horários nem de identificadores de ator.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A seção 3 (“Event Structure”) trata expressamente dos dois pontos: exige UTC e ISO 8601, recomenda milissegundos e proíbe dados pessoais no identificador do ator."
+        }
+      ],
+      "pegadinhaFCC": "Aplicação combinada das convenções: a justificativa documentada salva o descumprimento de SHOULD, mas nunca o de MUST NOT. Os distratores tratam todos os níveis como iguais ou os invertem.",
+      "resumoFlashcard": {
+        "pergunta": "Na especificação Audit Event Format, uma justificativa documentada torna conforme qualquer desvio?",
+        "resposta": "Não. Apenas o descumprimento de SHOULD pode ser compatível com a conformidade, se houver razão válida documentada. Violar MUST ou MUST NOT, como gravar nomes no identificador do ator, torna a implementação não conforme."
+      },
+      "conceitosChave": ["Modais em especificações (MUST/SHOULD/MAY)", "Inferência"],
+      "fundamentacao": "Texto ing-tec-t02, 2º e 3º parágrafos: “may still be compliant, provided that it has a valid reason and documents that reason”; “The actor identifier MUST NOT contain personal data”; RFC 2119 (BCP 14)."
+    }
+  ]
+}
