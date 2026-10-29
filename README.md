@@ -73,6 +73,13 @@ Os atalhos ficam desligados enquanto você digita.
 
 ## Banco de questões
 
+**Estado atual:**
+- 700 questões inéditas: 14 matérias × 50, todas com `bank:validate` sem erros nem avisos;
+- 12 estudos de caso com espelho;
+- 14 notas Cornell de exemplo, que geram flashcards;
+- 20 textos-base originais: 10 em português e 10 em inglês técnico;
+- 26 questões com o selo "conferir no texto oficial", 17 delas em Legislação Institucional.
+
 - Arquivos: `src/data/questions/<materia>/lote-NN.json`, com 10 questões por lote, ids `prefixo-001…` e faixa fixa por lote.
 - Textos de apoio de Português e Inglês: `src/data/textos/<materia>.json`.
 - Estudos de caso: `src/data/casos/caso-NN.json`.
