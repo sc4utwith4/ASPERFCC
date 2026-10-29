@@ -102,6 +102,8 @@ export function Shell() {
 
   useEffect(() => {
     if (window.innerWidth < 1024) ui.definir({ navAberta: false });
+    // Abaixo de xl o painel de apoio é gaveta sobre o conteúdo: começa fechado e fecha ao trocar de rota.
+    if (window.innerWidth < 1280) ui.definir({ painelAberto: false });
     // Fecha a navegação ao trocar de rota em telas pequenas.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
@@ -126,6 +128,9 @@ export function Shell() {
             <Outlet />
           </div>
         </main>
+        {!zen && ui.painelAberto && (
+          <div className="fixed inset-0 top-12 z-10 bg-canvas/70 xl:hidden" onClick={() => ui.definir({ painelAberto: false })} aria-hidden />
+        )}
         {!zen && ui.painelAberto && (
           <aside aria-label="Apoio cognitivo" className="fixed top-12 right-0 bottom-0 z-20 w-[300px] overflow-y-auto border-l border-line bg-surface xl:sticky xl:h-[calc(100dvh-48px)]">
             <PainelApoio />

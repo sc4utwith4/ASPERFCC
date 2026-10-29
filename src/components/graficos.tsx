@@ -77,10 +77,10 @@ export function BarrasDominio({ dados, titulo = "Domínio por subtópico", subti
           <div className="grid grid-cols-[minmax(0,1fr)_minmax(120px,1.1fr)_auto] items-center gap-x-3 gap-y-2">
             <span />
             <div className="relative h-4 text-[10.5px] text-ink-2" aria-hidden>
-              <span className="tabular absolute -translate-x-1/2" style={{ left: `${LIMIAR_CRITICO * 100}%` }}>
+              <span className="tabular absolute -translate-x-full pr-1" style={{ left: `${LIMIAR_CRITICO * 100}%` }}>
                 70%
               </span>
-              <span className="tabular absolute -translate-x-1/2" style={{ left: `${LIMIAR_DOMINADO * 100}%` }}>
+              <span className="tabular absolute pl-1" style={{ left: `${LIMIAR_DOMINADO * 100}%` }}>
                 85%
               </span>
             </div>
