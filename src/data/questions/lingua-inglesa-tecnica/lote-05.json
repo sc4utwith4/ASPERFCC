@@ -1,0 +1,599 @@
+{
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "lote": 5,
+  "questoes": [
+    {
+      "id": "ing-tec-041",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t09",
+      "enunciadoBase": "A política de retenção e acesso a dados reproduzida no texto tem como finalidade principal",
+      "variantesEnunciado": [
+        "De acordo com a seção “Purpose and scope”, o documento normativo sobre a plataforma interna de análise tem por objetivo",
+        "Segundo o 1º parágrafo, a política sobre dados pessoais na plataforma de analytics se destina a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "definir as penalidades aplicáveis a prestadores de serviço que violem contratos de tecnologia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A política menciona sanção apenas de forma genérica e final (“may result in disciplinary action”), e não se restringe a contratos de tecnologia. Penalidades não são seu objeto principal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "descrever a arquitetura técnica da plataforma interna de análise de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não descreve componentes, servidores ou fluxos técnicos da plataforma. Trata de regras de coleta, acesso, retenção e incidentes envolvendo dados pessoais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "regulamentar a contratação de terceiros para o tratamento de dados pessoais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Terceiros e prestadores aparecem no escopo de aplicação (“third-party service providers who handle data”), mas a política não trata de como contratá-los."
+        },
+        {
+          "id": "opt-4",
+          "texto": "fixar os requisitos de qualidade e de documentação exigidos dos curadores de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Qualidade e documentação são mencionadas apenas para caracterizar o papel do data steward (“whose role is to maintain its quality and documentation”), em contraste com o data owner."
+        },
+        {
+          "id": "opt-5",
+          "texto": "estabelecer como os dados pessoais são coletados, armazenados e acessados na plataforma interna de análise.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A primeira frase declara o propósito: “This policy establishes how personal data is collected, stored and accessed on the internal analytics platform”. As seções seguintes (princípios, controle de acesso, retenção e incidentes) desenvolvem esse objetivo.",
+          "versaoInvertidaFalsa": "A política tem como finalidade principal descrever a arquitetura técnica da plataforma de análise, sem disciplinar coleta, acesso ou retenção de dados pessoais."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores ampliam elementos periféricos (sanção disciplinar, terceiros, papel do steward) como se fossem o objetivo. Em políticas, o propósito vem declarado na seção ‘Purpose and scope’.",
+      "resumoFlashcard": {
+        "pergunta": "Onde localizar o objetivo de uma política corporativa em inglês e qual é o da política do texto?",
+        "resposta": "Na seção ‘Purpose and scope’. No texto, a política estabelece como os dados pessoais são coletados, armazenados e acessados na plataforma interna de análise e se aplica a empregados, contratados e terceiros."
+      },
+      "conceitosChave": [
+        "Ideia principal do texto",
+        "Governança de dados"
+      ],
+      "fundamentacao": "Texto ing-tec-t09 (Data Retention and Access Policy), 1º parágrafo: “This policy establishes how personal data is collected, stored and accessed on the internal analytics platform”."
+    },
+    {
+      "id": "ing-tec-042",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t09",
+      "enunciadoBase": "Segundo a política, a suspeita de violação de dados deve ser comunicada ao encarregado de proteção de dados",
+      "variantesEnunciado": [
+        "De acordo com a seção “Incidents and compliance”, o prazo e a condição para reportar uma suspeita de incidente ao data protection officer são:",
+        "Conforme o último parágrafo da política, qualquer suspeita de violação deve chegar ao encarregado de proteção de dados"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "somente após a confirmação do impacto do incidente pelo responsável pelo conjunto de dados afetado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto dispensa a confirmação do impacto: o reporte é devido “even if its impact is still unclear”. Esperar a confirmação contraria a regra e atrasa a resposta ao incidente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "em até seis meses, por ocasião da revisão periódica dos acessos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Seis meses é a periodicidade de revisão dos direitos de acesso (“Access rights are reviewed every six months”), sem relação com o prazo para reportar incidentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "em até 24 horas de sua descoberta, mesmo que o impacto ainda não esteja claro.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto determina: “Any suspected breach must be reported to the data protection officer within 24 hours of its discovery, even if its impact is still unclear”. ‘Within’ indica prazo máximo (‘em até’), e ‘even if’ equivale a ‘mesmo que’.",
+          "versaoInvertidaFalsa": "Segundo a política, a suspeita de violação só deve ser comunicada ao encarregado depois que o impacto do incidente estiver confirmado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "anualmente, por ocasião da revisão da política.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Anualmente’ é a periodicidade de revisão da própria política (“This policy will be reviewed annually”), e não o prazo para comunicar incidentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "imediatamente, mas apenas quando houver dados de terceiros envolvidos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto fala em “Any suspected breach”, sem restringir a dados de terceiros, e fixa prazo de 24 horas. A alternativa cria uma condição inexistente e troca o prazo."
+        }
+      ],
+      "pegadinhaFCC": "O texto tem vários prazos (24 horas, seis meses, anual). A banca troca os prazos e inverte ‘even if its impact is still unclear’, exigindo confirmação prévia.",
+      "resumoFlashcard": {
+        "pergunta": "Pela política do texto, quando e a quem se comunica uma suspeita de violação de dados?",
+        "resposta": "Ao encarregado de proteção de dados (data protection officer), em até 24 horas da descoberta, mesmo que o impacto ainda não esteja claro."
+      },
+      "conceitosChave": [
+        "Scanning: informação específica",
+        "Governança de dados"
+      ],
+      "fundamentacao": "Texto ing-tec-t09, 5º parágrafo: “Any suspected breach must be reported to the data protection officer within 24 hours of its discovery, even if its impact is still unclear”."
+    },
+    {
+      "id": "ing-tec-043",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t09",
+      "enunciadoBase": "No último parágrafo da política, o termo “breach”, em “Any suspected breach must be reported to the data protection officer”, pode ser traduzido, no contexto, por",
+      "variantesEnunciado": [
+        "Na seção “Incidents and compliance”, o substantivo “breach”, relativo ao que deve ser comunicado ao encarregado de proteção de dados, equivale a",
+        "Considerando que a política trata de dados pessoais, a palavra “breach”, no trecho “Any suspected breach must be reported”, significa"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "vulnerabilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Vulnerabilidade é uma fraqueza que pode ser explorada (‘vulnerability’, ‘weakness’). “breach” designa o incidente em si, a violação efetiva da segurança ou da confidencialidade dos dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "auditoria.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Auditoria seria ‘audit’. O texto exige que se reporte o incidente suspeito, e não um procedimento de verificação, e a semelhança de contexto (conformidade) é o que torna o distrator atraente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "advertência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Advertência corresponderia a ‘warning’. A sanção mencionada no parágrafo é a “disciplinary action”, consequência do descumprimento da política, e não o significado de “breach”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "violação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em privacidade e segurança, “breach” (ou ‘data breach’) é a violação de dados pessoais: acesso, divulgação ou perda não autorizados. Por isso o reporte é dirigido ao “data protection officer”, o encarregado.",
+          "versaoInvertidaFalsa": "No trecho, “breach” significa ‘vulnerabilidade’, isto é, uma fraqueza ainda não explorada que deve ser comunicada ao encarregado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "quebra de contrato.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Breach of contract’ é, de fato, quebra de contrato, mas o contexto é de proteção de dados: o destinatário do reporte é o encarregado, e o prazo de 24 horas é típico de incidente de segurança."
+        }
+      ],
+      "pegadinhaFCC": "‘Breach’ tem sentido amplo (quebra, infração), mas em política de privacidade designa a violação de dados. A banca oferece o sentido jurídico genérico e o conceito vizinho de vulnerabilidade.",
+      "resumoFlashcard": {
+        "pergunta": "O que significa ‘data breach’ e como difere de ‘vulnerability’?",
+        "resposta": "‘Data breach’ é a violação de dados: um incidente efetivo de acesso, divulgação ou perda não autorizados. ‘Vulnerability’ é uma fraqueza que pode, ou não, ser explorada."
+      },
+      "conceitosChave": [
+        "Vocabulário de segurança",
+        "Governança de dados"
+      ],
+      "fundamentacao": "Texto ing-tec-t09, 5º parágrafo: “Any suspected breach must be reported to the data protection officer within 24 hours of its discovery”; Cambridge Dictionary, verbete ‘breach’."
+    },
+    {
+      "id": "ing-tec-044",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t09",
+      "enunciadoBase": "No 3º parágrafo da política, os termos “those”, em “those that are no longer justified are revoked”, e “its”, em “whose role is to maintain its quality and documentation”, referem-se, respectivamente, a",
+      "variantesEnunciado": [
+        "Na seção “Access control”, o pronome demonstrativo “those” e o possessivo “its” retomam, respectivamente,",
+        "Quanto à coesão do parágrafo que trata do controle de acesso, os referentes de “those” (na frase sobre a revisão semestral) e de “its” (na frase sobre o data steward) são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“six months” e “the data steward”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não se revogam ‘seis meses’; revogam-se direitos de acesso. E “its” não retoma o data steward, que é pessoa e é retomado por “whose”; o possessivo neutro se refere a uma coisa, o conjunto de dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“Access rights” e “the dataset”.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “those” retoma “Access rights”: os direitos de acesso revisados a cada seis meses que deixam de ser justificados são revogados. “its” retoma “the dataset”: o steward cuida da qualidade e da documentação do conjunto de dados pelo qual o owner responde.",
+          "versaoInvertidaFalsa": "No 3º parágrafo, “those” retoma “six months”, e “its” retoma “the data owner”, que seria o responsável pela qualidade do próprio cargo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“Access rights” e “the data owner”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “those”, mas erra “its”. O data owner é pessoa (retomada por “who”) e é “accountable for the dataset”; o que tem qualidade e documentação mantidas pelo steward é o conjunto de dados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“the data owner” e “the dataset”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “its”, mas erra “those”, que é plural e retoma um substantivo plural. “the data owner” é singular e não é objeto de revogação; revogados são os direitos de acesso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“contractors” e “the internal analytics platform”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os contratados são tratados na frase seguinte, sobre a expiração automática do acesso, e não são ‘revogados’. A plataforma de análise é citada no 1º parágrafo, distante demais e sem relação com qualidade e documentação do steward."
+        }
+      ],
+      "pegadinhaFCC": "Dois referentes avaliados ao mesmo tempo, com distratores que acertam um e erram o outro. As pistas são o número (‘those’ é plural) e o gênero neutro de ‘its’, que exclui pessoas.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar os referentes de ‘those’ e ‘its’ em ‘Access rights are reviewed […], and those that are no longer justified are revoked’ e ‘whose role is to maintain its quality’?",
+        "resposta": "‘Those’ é plural e retoma ‘Access rights’. ‘Its’ é possessivo neutro (coisa) e retoma ‘the dataset’; owner e steward são pessoas, retomadas por ‘who’ e ‘whose’."
+      },
+      "conceitosChave": [
+        "Referência pronominal",
+        "Governança de dados"
+      ],
+      "fundamentacao": "Texto ing-tec-t09, 3º parágrafo: “the data owner, who is accountable for the dataset, rather than by the data steward, whose role is to maintain its quality and documentation. Access rights are reviewed every six months, and those that are no longer justified are revoked”."
+    },
+    {
+      "id": "ing-tec-045",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "textoApoioId": "ing-tec-t09",
+      "enunciadoBase": "De acordo com a política de dados, completa-se corretamente: o acesso deve ser aprovado pelo ……, e não pelo ……; e dados anonimizados podem ser mantidos ……, desde que os indivíduos não possam mais ser identificados. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Um servidor resumiu a política assim: ‘quem aprova o acesso é o ……, e não o ……; dados anonimizados podem ser guardados ……, se a reidentificação não for mais possível’. Preenchem, correta e respectivamente, as lacunas:",
+        "Com base no 3º e no 4º parágrafos da política, completa-se adequadamente: a aprovação de acesso cabe ao ……, e não ao ……, e os dados anonimizados podem ser conservados ……, desde que ninguém possa ser identificado. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "proprietário dos dados − curador dos dados − por tempo indeterminado",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O acesso “must be approved by the data owner, who is accountable for the dataset, rather than by the data steward”. Quanto à retenção, “Anonymized data may be kept indefinitely, provided that individuals can no longer be identified”.",
+          "versaoInvertidaFalsa": "Segundo a política, o acesso deve ser aprovado pelo curador dos dados (data steward), e não pelo proprietário, e dados anonimizados devem ser excluídos ao fim de seis meses."
+        },
+        {
+          "id": "opt-2",
+          "texto": "curador dos dados − proprietário dos dados − por tempo indeterminado",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os papéis. “rather than” (‘e não’, ‘em vez de’) exclui o data steward, cujo papel é cuidar da qualidade e da documentação; quem aprova é o data owner, que responde pelo conjunto de dados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "proprietário dos dados − curador dos dados − por até seis meses",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta os papéis, mas seis meses é a periodicidade de revisão dos direitos de acesso. Para dados anonimizados, o texto admite guarda “indefinitely”, isto é, por tempo indeterminado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "encarregado de proteção de dados − proprietário dos dados − por 24 horas",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O encarregado (data protection officer) recebe comunicações de incidentes em até 24 horas, mas não aprova acessos. Além disso, o prazo de 24 horas não tem relação com a retenção."
+        },
+        {
+          "id": "opt-5",
+          "texto": "curador dos dados − encarregado de proteção de dados − por um ano, até a revisão da política",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O curador não aprova acessos, e a revisão anual é da própria política (“reviewed annually”), não um limite de retenção para dados anonimizados, que podem ser mantidos por tempo indeterminado."
+        }
+      ],
+      "pegadinhaFCC": "‘Rather than’ define quem não aprova (o steward), e a banca inverte os papéis. Nas lacunas de prazo, aparecem os outros números do texto (seis meses, 24 horas, revisão anual).",
+      "resumoFlashcard": {
+        "pergunta": "Na política do texto, quem aprova o acesso aos dados e por quanto tempo dados anonimizados podem ser mantidos?",
+        "resposta": "O data owner (proprietário), que responde pelo conjunto de dados; o data steward cuida da qualidade e da documentação. Dados anonimizados podem ser mantidos por tempo indeterminado, desde que ninguém possa ser reidentificado."
+      },
+      "conceitosChave": [
+        "Governança de dados",
+        "Conectivos: condição"
+      ],
+      "fundamentacao": "Texto ing-tec-t09, 3º e 4º parágrafos: “must be approved by the data owner, who is accountable for the dataset, rather than by the data steward”; “Anonymized data may be kept indefinitely, provided that individuals can no longer be identified”."
+    },
+    {
+      "id": "ing-tec-046",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t10",
+      "enunciadoBase": "Segundo o 2º parágrafo do artigo sobre observabilidade, as métricas são adequadas à geração de alertas porque",
+      "variantesEnunciado": [
+        "De acordo com a descrição dos três sinais de telemetria no artigo, o que torna as métricas apropriadas para alertas é o fato de que",
+        "Conforme o artigo sobre observabilidade para equipes pequenas, a característica das métricas que as torna boas candidatas a alertas é que elas"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "registram eventos discretos com grande nível de detalhe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a definição de logs: “Logs record discrete events in detail”. A alternativa atribui às métricas a característica de outro sinal."
+        },
+        {
+          "id": "opt-2",
+          "texto": "acompanham uma única requisição ao longo de vários serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa é a definição de traces: “traces follow a single request as it travels through multiple services”. O conectivo “while” contrapõe logs e traces, e nenhum dos dois é a métrica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "dispensam o uso de logs e traces durante uma investigação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto diz o contrário: “None of these signals is sufficient on its own”. O valor está em passar de um sinal a outro durante a investigação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "são medições numéricas agregadas ao longo do tempo, de armazenamento barato.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto explica: “Metrics are numerical measurements aggregated over time, which makes them cheap to store and well suited to alerting”. O relativo “which” retoma toda a definição e introduz sua consequência.",
+          "versaoInvertidaFalsa": "Segundo o artigo, as métricas são adequadas a alertas porque registram eventos discretos com grande nível de detalhe."
+        },
+        {
+          "id": "opt-5",
+          "texto": "são produzidas exclusivamente por ferramentas baseadas em padrões abertos, como o OpenTelemetry.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O OpenTelemetry é citado no 4º parágrafo como forma de evitar dependência de fornecedor, e não como fonte exclusiva de métricas. O advérbio ‘exclusivamente’ generaliza indevidamente."
+        }
+      ],
+      "pegadinhaFCC": "As definições dos três sinais estão no mesmo parágrafo, e a banca troca uma pela outra. A causa da adequação a alertas vem na oração introduzida por ‘which makes them’.",
+      "resumoFlashcard": {
+        "pergunta": "Como o artigo define métricas, logs e traces?",
+        "resposta": "Métricas são medições numéricas agregadas no tempo, baratas de armazenar e boas para alertas. Logs registram eventos discretos em detalhe. Traces acompanham uma requisição por vários serviços."
+      },
+      "conceitosChave": [
+        "Observabilidade",
+        "Scanning: informação específica"
+      ],
+      "fundamentacao": "Texto ing-tec-t10 (Beyond Dashboards), 2º parágrafo: “Metrics are numerical measurements aggregated over time, which makes them cheap to store and well suited to alerting”."
+    },
+    {
+      "id": "ing-tec-047",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t10",
+      "enunciadoBase": "No 1º parágrafo do artigo, em “Many teams assume that observability is simply a new name for monitoring”, o verbo “assume” pode ser traduzido, no contexto, por",
+      "variantesEnunciado": [
+        "Na frase de abertura do artigo sobre observabilidade, o verbo “assume”, que descreve o que muitas equipes pensam sobre observabilidade e monitoramento, equivale a",
+        "Considerando que o autor contesta a ideia em seguida com “Monitoring, however, answers questions that were defined in advance”, o verbo “assume”, na primeira frase, significa"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "supõem.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “assume” é falso cognato frequente: significa ‘supor’, ‘presumir’. O autor relata uma suposição equivocada das equipes e a refuta logo depois com “however” e “Observability goes further”.",
+          "versaoInvertidaFalsa": "No trecho, “assume” significa ‘assumem a responsabilidade de’, indicando que as equipes se encarregam de renomear o monitoramento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "assumem a responsabilidade de.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Assumir a responsabilidade’ traduz ‘take responsibility for’ ou ‘take on’. A semelhança gráfica entre “assume” e ‘assumir’ é a armadilha; no texto, as equipes apenas supõem algo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "recusam.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Recusar’ seria ‘refuse’ ou ‘reject’ e inverteria o sentido. As equipes acreditam na equivalência entre observabilidade e monitoramento; quem a recusa é o autor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "comprovam.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Comprovar’ seria ‘prove’ ou ‘demonstrate’. O texto não atribui às equipes nenhuma demonstração; ao contrário, mostra que a ideia delas é equivocada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "exigem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Exigir’ corresponderia a ‘require’ ou ‘demand’. A frase descreve uma crença (que observabilidade seria só um novo nome), e não uma exigência."
+        }
+      ],
+      "pegadinhaFCC": "Falso cognato: ‘assume’ é ‘supor’, e não ‘assumir’ (take on). O contexto confirma, porque a ideia é imediatamente contestada por ‘however’.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o sentido de ‘assume’ em inglês e como se diz ‘assumir (uma tarefa)’?",
+        "resposta": "‘Assume’ significa ‘supor’, ‘presumir’ (‘assumption’ é suposição). ‘Assumir uma tarefa ou responsabilidade’ traduz-se por ‘take on’ ou ‘take responsibility for’."
+      },
+      "conceitosChave": [
+        "Falsos cognatos"
+      ],
+      "fundamentacao": "Texto ing-tec-t10, 1º parágrafo: “Many teams assume that observability is simply a new name for monitoring. Monitoring, however, answers questions that were defined in advance”; Cambridge Dictionary, verbete ‘assume’."
+    },
+    {
+      "id": "ing-tec-048",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t10",
+      "enunciadoBase": "De acordo com o artigo, para evitar o fenômeno chamado “alert fatigue”, recomenda-se",
+      "variantesEnunciado": [
+        "Segundo o 3º parágrafo do texto sobre observabilidade, a abordagem considerada melhor para que engenheiros não passem a ignorar notificações consiste em",
+        "Conforme o autor, a alternativa ao “common mistake” de alertar sobre toda métrica coletável é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "configurar alertas para todas as métricas coletáveis, de modo que nenhum sinal seja perdido.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É exatamente o erro apontado pelo texto: “A common mistake is to alert on every metric that can be collected”. Esse excesso gera dezenas de notificações e leva à fadiga de alertas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "alertar sobre sintomas efetivamente percebidos pelos usuários e definir objetivos de nível de serviço (SLOs).",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto propõe: “A better approach is to alert on symptoms that users actually experience, such as error rates and latency, and to define service level objectives (SLOs)”. Os SLOs explicitam quanta falha é aceitável.",
+          "versaoInvertidaFalsa": "Segundo o artigo, a fadiga de alertas se evita configurando alertas para todas as métricas coletáveis, para que nenhum sinal seja perdido."
+        },
+        {
+          "id": "opt-3",
+          "texto": "substituir alertas por painéis (dashboards), consultados diariamente pelos engenheiros responsáveis por cada serviço.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não recomenda trocar alertas por dashboards. Ao contrário, o título e a conclusão criticam plataformas que se tornam “just another set of dashboards that no one looks at”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reduzir o número de engenheiros de plantão que recebem notificações diárias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A solução proposta atua sobre o conteúdo dos alertas (sintomas percebidos e SLOs), e não sobre a quantidade de pessoas notificadas. O texto não menciona escalas de plantão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "eliminar os logs estruturados, que geram dezenas de notificações por dia.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os logs estruturados são recomendados no 4º parágrafo como primeiro passo para equipes pequenas. As dezenas de notificações decorrem de alertas sobre toda métrica, e não dos logs."
+        }
+      ],
+      "pegadinhaFCC": "A banca apresenta como solução o próprio erro descrito (alertar sobre tudo) e mistura recomendações de outros parágrafos (logs estruturados, dashboards).",
+      "resumoFlashcard": {
+        "pergunta": "O que é alert fatigue e como o artigo propõe evitá-la?",
+        "resposta": "É a tendência de engenheiros passarem a ignorar alertas quando recebem notificações demais. Evita-se alertando sobre sintomas percebidos pelos usuários, como erros e latência, e definindo SLOs."
+      },
+      "conceitosChave": [
+        "Observabilidade",
+        "SRE: SLO"
+      ],
+      "fundamentacao": "Texto ing-tec-t10, 3º parágrafo: “A better approach is to alert on symptoms that users actually experience, such as error rates and latency, and to define service level objectives (SLOs)”; Google SRE Book, cap. 6 (Monitoring Distributed Systems)."
+    },
+    {
+      "id": "ing-tec-049",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t10",
+      "enunciadoBase": "O último parágrafo do artigo, iniciado por “Ultimately”, apresenta a conclusão do autor, segundo a qual",
+      "variantesEnunciado": [
+        "Na frase “Ultimately, observability is less about tools than about culture”, e na que a segue, o autor conclui que",
+        "Considerando a estrutura comparativa “less about tools than about culture” e a condição introduzida por “Unless”, a conclusão do artigo é a de que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "plataformas sofisticadas de telemetria tornam desnecessária a mudança de cultura das equipes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a conclusão. O texto afirma que, sem uso regular da telemetria, “even the most sophisticated platform will become just another set of dashboards that no one looks at”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "painéis (dashboards) são o principal produto de uma estratégia de observabilidade bem-sucedida.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto usa os dashboards como imagem do fracasso: plataformas que se tornam “just another set of dashboards that no one looks at”. O título do artigo, ‘Beyond Dashboards’ (‘além dos painéis’), reforça a crítica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a observabilidade depende menos de ferramentas do que de uma cultura de uso regular da telemetria para formular novas perguntas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A estrutura “less about tools than about culture” (‘menos de ferramentas do que de cultura’) é explicada pela frase seguinte: “Unless teams regularly use their telemetry to ask new questions”, a plataforma vira apenas mais um conjunto de painéis ignorados.",
+          "versaoInvertidaFalsa": "Segundo a conclusão do artigo, a observabilidade depende mais de ferramentas sofisticadas do que da cultura das equipes no uso da telemetria."
+        },
+        {
+          "id": "opt-4",
+          "texto": "equipes pequenas devem adotar todas as ferramentas de observabilidade de uma só vez.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Contraria o 4º parágrafo: “Small teams do not need to adopt every tool at once”. O texto recomenda adoção gradual, começando por logs estruturados e identificadores de correlação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a cultura de observabilidade só se desenvolve após a adoção de padrões abertos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Padrões abertos como o OpenTelemetry são citados para evitar dependência de fornecedor, e não como pré-requisito de cultura. A condição do último parágrafo é o uso regular da telemetria."
+        }
+      ],
+      "pegadinhaFCC": "A comparação ‘less about X than about Y’ costuma ser lida às avessas. A banca inverte os termos e transforma os dashboards, imagem de fracasso no texto, em produto principal.",
+      "resumoFlashcard": {
+        "pergunta": "Como interpretar a estrutura ‘less about X than about Y’ na conclusão do artigo?",
+        "resposta": "Significa que Y importa mais que X. No texto, a observabilidade depende menos de ferramentas do que de cultura: sem o uso regular da telemetria para fazer novas perguntas, a plataforma vira painéis que ninguém consulta."
+      },
+      "conceitosChave": [
+        "Observabilidade",
+        "Conectivos: condição",
+        "Ideia principal do texto"
+      ],
+      "fundamentacao": "Texto ing-tec-t10, 5º parágrafo: “Ultimately, observability is less about tools than about culture. Unless teams regularly use their telemetry to ask new questions, even the most sophisticated platform will become just another set of dashboards that no one looks at”."
+    },
+    {
+      "id": "ing-tec-050",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "ing-tec-t10",
+      "enunciadoBase": "Com base nas recomendações do artigo para equipes pequenas e na descrição dos sinais de telemetria, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma equipe de TI com poucos integrantes leu o artigo sobre observabilidade para planejar a adoção de observabilidade em seus sistemas. De acordo com o texto, considere as afirmativas abaixo.",
+        "A respeito do 2º e do 4º parágrafos do artigo, que tratam dos sinais de telemetria e da adoção gradual de ferramentas, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Equipes pequenas podem começar adicionando logs estruturados e um identificador de correlação a cada requisição.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “They can start by adding structured logs and a correlation ID to each request”."
+        },
+        {
+          "texto": "Recomenda-se introduzir o rastreamento (tracing) de forma gradual, começando pelos caminhos mais críticos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Tracing can then be introduced gradually, beginning with the most critical paths”."
+        },
+        {
+          "texto": "Padrões abertos, como o OpenTelemetry, ajudam a evitar a dependência de um único fornecedor.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Open standards such as OpenTelemetry help teams avoid vendor lock-in, since the same instrumentation can send data to different back ends”."
+        },
+        {
+          "texto": "Cada um dos três sinais, isoladamente, é suficiente para conduzir uma investigação completa.",
+          "verdadeira": false,
+          "explicacao": "Falsa. “None of these signals is sufficient on its own; their value comes from the ability to move from one to another during an investigation”."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão corretas, mas a III também está: o texto afirma que padrões abertos “help teams avoid vendor lock-in”, isto é, a dependência de um único fornecedor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a II, verdadeira, já que o texto recomenda introduzir o tracing gradualmente, começando pelos caminhos mais críticos (“beginning with the most critical paths”)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que contraria o texto (“None of these signals is sufficient on its own”), e omite a I, que reproduz o primeiro passo recomendado para equipes pequenas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa: o valor dos sinais está na possibilidade de passar de um a outro durante a investigação. A alternativa ainda omite a III, verdadeira quanto ao OpenTelemetry."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, II e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I, II e III reproduzem as recomendações do 4º parágrafo: logs estruturados e correlation ID como ponto de partida, tracing gradual pelos caminhos críticos e padrões abertos contra o vendor lock-in. A IV contraria o 2º parágrafo (“None of these signals is sufficient on its own”).",
+          "versaoInvertidaFalsa": "Segundo o artigo, cada sinal de telemetria (métricas, logs ou traces) é, isoladamente, suficiente para conduzir uma investigação completa."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa falsa nega o ‘None… on its own’ do 2º parágrafo. Expressões como ‘vendor lock-in’ e ‘correlation ID’ testam vocabulário técnico de DevOps.",
+      "resumoFlashcard": {
+        "pergunta": "Que passos o artigo recomenda para equipes pequenas adotarem observabilidade?",
+        "resposta": "Começar por logs estruturados e um correlation ID por requisição, introduzir tracing gradualmente pelos caminhos críticos e usar padrões abertos como o OpenTelemetry para evitar vendor lock-in. Nenhum sinal basta sozinho."
+      },
+      "conceitosChave": [
+        "Observabilidade",
+        "Vocabulário de DevOps"
+      ],
+      "fundamentacao": "Texto ing-tec-t10, 2º e 4º parágrafos: “None of these signals is sufficient on its own”; “They can start by adding structured logs and a correlation ID to each request”; “Open standards such as OpenTelemetry help teams avoid vendor lock-in”; especificação OpenTelemetry (CNCF)."
+    }
+  ]
+}

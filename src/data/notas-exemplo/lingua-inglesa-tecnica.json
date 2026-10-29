@@ -1,0 +1,49 @@
+{
+  "id": "nota-ing-tec-01",
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "titulo": "Estratégias de leitura técnica em inglês",
+  "subtopico": "Inferência, referência e conectivos",
+  "pistas": [
+    {
+      "pergunta": "Qual é a diferença entre skimming e scanning?",
+      "resposta": "Skimming é a leitura rápida para captar a ideia geral (título, primeira frase de cada parágrafo, conclusão). Scanning é a busca dirigida de uma informação específica, como um número, um prazo ou um nome."
+    },
+    {
+      "pergunta": "O que significam ‘actually’ e ‘eventually’?",
+      "resposta": "‘Actually’ significa ‘na verdade’, ‘de fato’ (e não ‘atualmente’, que é ‘currently’). ‘Eventually’ significa ‘por fim’, ‘mais cedo ou mais tarde’ (e não ‘eventualmente’, que é ‘occasionally’)."
+    },
+    {
+      "pergunta": "O que indica ‘deprecated’ em documentação de software?",
+      "resposta": "Indica um recurso declarado obsoleto e desaconselhado, que ainda funciona, mas será removido no futuro. Não é ‘removed’ (removido) nem ‘depreciado’ no sentido contábil."
+    },
+    {
+      "pergunta": "Como identificar o referente de ‘it’, ‘they’ ou ‘which’?",
+      "resposta": "Procure, antes do pronome, um termo compatível em número (it × they) e em sentido com o verbo da oração. O termo mais próximo nem sempre é o referente, e ‘which’ pode retomar uma oração inteira."
+    },
+    {
+      "pergunta": "Qual é o valor de ‘unless’ e como parafraseá-lo?",
+      "resposta": "‘Unless’ expressa condição negativa: ‘a menos que’, ‘salvo se’, equivalente a ‘if… not’. ‘X will not happen unless Y’ significa que X só acontece se Y ocorrer."
+    },
+    {
+      "pergunta": "Quais conectivos expressam contraste e quais expressam conclusão?",
+      "resposta": "Contraste: however, nevertheless, whereas, while, yet, but, although (concessão). Conclusão: therefore, thus, hence, consequently. Adição: moreover, furthermore, in addition."
+    },
+    {
+      "pergunta": "O que indicam MUST, SHOULD e MAY em uma especificação?",
+      "resposta": "MUST (e REQUIRED, SHALL) indica obrigação absoluta. SHOULD (RECOMMENDED) indica recomendação que só pode ser afastada com motivo válido e ponderado. MAY (OPTIONAL) indica faculdade."
+    },
+    {
+      "pergunta": "O que significam ‘roll back’, ‘set up’ e ‘phase out’?",
+      "resposta": "‘Roll back’ é reverter para a versão anterior. ‘Set up’ é configurar, montar, implantar. ‘Phase out’ é eliminar gradualmente, descontinuar por etapas."
+    }
+  ],
+  "conteudoMarkdown": "## Ler com estratégia, não palavra por palavra\n\nNa prova de Inglês da FCC para a área de TI, o texto de apoio costuma ser um trecho de documentação, um alerta de segurança, notas de versão ou um artigo técnico. O candidato não precisa traduzir tudo: precisa **localizar** a informação pedida e **interpretar** os poucos elementos que mudam o sentido da frase, como pronomes, conectivos, modais e falsos cognatos. ==Quem domina esses marcadores resolve a maior parte das questões sem dicionário.==\n\n## Skimming e scanning\n\nAntes de ler as questões, faça um **skimming**: título, primeira frase de cada parágrafo e última frase do texto. Em gêneros técnicos, o propósito costuma vir explícito logo no início (“This chapter explains how to…”, “This document defines…”, “This policy establishes…”). Isso responde às questões de ideia principal e evita distratores que apresentam um detalhe periférico como se fosse o objetivo do texto.\n\nDepois, use o **scanning** para cada questão de localização: identifique a palavra-chave do enunciado (um número, um código de status, um prazo, um papel) e procure-a no texto. Atenção: a FCC espalha pelos distratores outros números do mesmo parágrafo. Se o texto diz que a retenção padrão é de sete dias, extensível até 35, uma alternativa trará “35 dias, reduzível para sete”.\n\n- Seções com rótulo (Authentication, Breaking changes, Remediation) funcionam como índice.\n- Negações e qualificadores mudam tudo: *not*, *only*, *at least*, *up to*, *cannot be matched*.\n- Desconfie de alternativas com ‘sempre’, ‘exclusivamente’ e ‘em qualquer hipótese’.\n\n## Cognatos e falsos cognatos de TI\n\nA maior parte do vocabulário técnico é transparente: *authentication*, *replica*, *vulnerability*, *pipeline*. O perigo está nos **falsos cognatos**, palavras parecidas com o português, mas de sentido diferente:\n\n- **actually**: na verdade (não ‘atualmente’, que é *currently*);\n- **eventually**: por fim, mais cedo ou mais tarde (não ‘eventualmente’);\n- **pretend**: fingir (não ‘pretender’, que é *intend*);\n- **assume**: supor, presumir (não ‘assumir uma tarefa’, que é *take on*);\n- **issue**: problema, questão; como verbo, emitir (*tokens issued by*);\n- **deprecate**: declarar obsoleto, ainda funcionando (não ‘depreciar’ nem ‘remover’);\n- **breach**: violação, incidente (não ‘brecha’ ou vulnerabilidade).\n\nOs **phrasal verbs** também não se traduzem palavra por palavra: *roll back* (reverter), *set up* (configurar, implantar), *phase out* (eliminar gradualmente), *run into* (deparar-se com).\n\n## Referência pronominal\n\nQuestões de referência perguntam a que termo se refere *it*, *they*, *this*, *those*, *which* ou *its*. O método é sempre o mesmo:\n\n1. olhe para trás: o referente quase sempre vem antes;\n2. confira o número: *it* e *its* são singulares; *they* e *those* são plurais;\n3. teste o sentido: substitua o pronome pelo candidato e veja se a frase faz sentido com o verbo.\n\n> Em “the certificate will be locked, and you will have to contact the issuing authority to unlock it”, o termo mais próximo é *the issuing authority*, mas o que se desbloqueia é o certificado.\n\nO relativo *which* após vírgula pode retomar um substantivo ou uma **oração inteira**. Em “our runbook did not require responders to check recent changes […], which it now does”, *which* retoma a exigência de verificar mudanças, e *it* retoma *our runbook*. O possessivo neutro *its* não se refere a pessoas, que são retomadas por *who* e *whose*.\n\n## Conectivos e seus valores\n\nOs conectivos são o alvo preferido das questões de inferência. Memorize os grupos:\n\n- **contraste**: *however*, *nevertheless*, *yet*, *but*, *whereas*, *while*;\n- **concessão**: *although*, *even though*, *even if*;\n- **condição**: *if*, *unless* (= *if… not*), *provided that* (desde que), *otherwise* (caso contrário);\n- **causa**: *because*, *since*, *as*, *given that*;\n- **conclusão**: *therefore*, *thus*, *hence*, *consequently*;\n- **adição**: *moreover*, *furthermore*, *in addition*;\n- **substituição**: *instead of*, *rather than* (em vez de).\n\nA armadilha mais frequente é **unless**. “Unless an immediate upgrade is feasible, the console should be disabled” significa ‘se não for viável atualizar já, desative o console’. A banca oferece paráfrases com ‘desde que’, ‘caso seja viável’ ou ‘embora’, que invertem a instrução. Outra armadilha comum é *since*, que pode ser causal (‘já que’) ou temporal (‘desde’): em textos técnicos, prevalece o valor causal.\n\n## Modais em especificações: MUST, SHOULD e MAY\n\nDocumentos no estilo RFC usam palavras-chave em maiúsculas com sentido técnico definido pelo BCP 14 (RFC 2119 e RFC 8174):\n\n- **MUST**, **REQUIRED**, **SHALL**: obrigação absoluta; **MUST NOT** e **SHALL NOT**: proibição absoluta;\n- **SHOULD**, **RECOMMENDED**: recomendação forte, que pode ser afastada se houver motivo válido e as consequências forem ponderadas;\n- **MAY**, **OPTIONAL**: faculdade, recurso verdadeiramente opcional.\n\n==Descumprir MUST torna a implementação não conforme; ignorar SHOULD com justificativa, não.== A FCC costuma trocar SHOULD por obrigação ou MAY por recomendação. Fora das especificações, os modais seguem o uso comum: *can* (capacidade ou possibilidade), *may* (possibilidade ou permissão), *should* (conselho) e *must* (obrigação ou dedução).\n\n## Roteiro para a prova\n\n- Leia o enunciado antes do texto e sublinhe o que é pedido: ideia geral, dado específico, palavra ou conectivo.\n- Para vocabulário, volte ao trecho e teste cada alternativa no contexto, nunca isoladamente.\n- Para referência, confira número e sentido; para conectivo, classifique o valor antes de olhar as opções.\n- Em assertivas, procure a palavra que torna a afirmativa falsa: um ‘sempre’, uma exceção suprimida, uma inversão de papéis.",
+  "sintese": "Leio primeiro o geral (skimming) e depois caço o dado pedido (scanning), atento a números e negações. Desconfio de palavras parecidas com o português: actually, eventually, pretend, assume, issue e deprecate enganam. Para pronomes, olho para trás e confiro número e sentido. Para conectivos, classifico o valor (contraste, condição, causa, conclusão), lembrando que unless é ‘a menos que’. Em especificações, MUST obriga, SHOULD recomenda e MAY faculta.",
+  "fontes": [
+    "IETF, RFC 2119 — Key words for use in RFCs to Indicate Requirement Levels (BCP 14)",
+    "IETF, RFC 8174 — Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words (BCP 14)",
+    "Michael Swan, Practical English Usage, 4ª ed., Oxford University Press, seções sobre discourse markers, unless e modal verbs",
+    "Cambridge Dictionary (dictionary.cambridge.org), verbetes actually, eventually, pretend, assume, issue, deprecate e breach",
+    "Textos de apoio ing-tec-t01 a ing-tec-t10 desta plataforma (elaborados para fins didáticos)"
+  ]
+}

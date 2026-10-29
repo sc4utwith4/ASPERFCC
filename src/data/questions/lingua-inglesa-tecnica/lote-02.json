@@ -1,0 +1,569 @@
+{
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "ing-tec-011",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t03",
+      "enunciadoBase": "De acordo com o 1º parágrafo, o relatório de pós-incidente adota um formato “blameless”, o que significa que seu propósito é",
+      "variantesEnunciado": [
+        "Ao declarar que “This report follows a blameless format”, o postmortem sobre a indisponibilidade do portal de pagamentos indica que sua finalidade é",
+        "Segundo o resumo inicial do postmortem, a adoção de um formato sem atribuição de culpa revela que o objetivo do relatório é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "identificar o engenheiro responsável pela falha, para que ele seja afastado das implantações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o oposto do formato blameless, que, segundo o texto, não busca “to assign individual fault”. O relatório trata de processos (pipeline, runbook, testes de carga), e não de punição individual."
+        },
+        {
+          "id": "opt-2",
+          "texto": "comprovar que nenhum dado foi perdido, eximindo a equipe de qualquer revisão de processos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto registra que “No data was lost”, mas esse é um dado do resumo, e não o propósito do relatório. Além disso, a seção “Lessons learned” prevê várias revisões de processo, o que contradiz a ideia de eximir a equipe."
+        },
+        {
+          "id": "opt-3",
+          "texto": "compreender o que ocorreu e como evitar a repetição do problema, sem atribuir culpa individual.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto define o formato: “its goal is to understand what happened and how to prevent it from happening again, not to assign individual fault”. Postmortems blameless focam causas sistêmicas e ações de melhoria.",
+          "versaoInvertidaFalsa": "Segundo o texto, o formato blameless tem como objetivo apontar o responsável individual pela falha, para que ele responda pelo incidente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "registrar o prejuízo financeiro do incidente para fins de responsabilização do fornecedor de rede.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não menciona prejuízo financeiro. O fornecedor de rede aparece só como origem da suposição equivocada (“a provider failure the previous week”), e não como responsável pelo incidente."
+        },
+        {
+          "id": "opt-5",
+          "texto": "justificar a decisão de reverter a implantação, demonstrando que ela foi tomada com atraso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A reversão (“roll back the release”) é um fato narrado na seção de resposta. O atraso de cerca de 40 minutos é atribuído a uma suposição, e não é o objetivo do documento justificar decisões."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores usam fatos verdadeiros do texto (nenhum dado perdido, rollback, fornecedor de rede) como se fossem o propósito do relatório. A definição está no próprio texto, após os dois-pontos.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza um postmortem no formato blameless?",
+        "resposta": "É um relatório pós-incidente que busca entender o que aconteceu e como evitar a repetição, sem atribuir culpa individual. O foco recai sobre causas sistêmicas e ações de melhoria de processo."
+      },
+      "conceitosChave": ["Postmortem blameless", "Ideia principal do texto"],
+      "fundamentacao": "Texto ing-tec-t03 (Postmortem), 1º parágrafo: “its goal is to understand what happened and how to prevent it from happening again, not to assign individual fault”; Google SRE Book, cap. 15 (Postmortem Culture)."
+    },
+    {
+      "id": "ing-tec-012",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t03",
+      "enunciadoBase": "No 2º parágrafo, no trecho “a value that had actually been intended for the staging environment only”, o advérbio “actually” pode ser traduzido, sem prejuízo do sentido, por",
+      "variantesEnunciado": [
+        "Na seção “Root cause”, a palavra “actually”, que qualifica a destinação do valor de 20 conexões, equivale, no contexto, a",
+        "Considerando a explicação da causa raiz do incidente, o termo “actually”, em “had actually been intended for the staging environment only”, tem sentido equivalente a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "na verdade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “actually” é falso cognato: significa ‘na verdade’, ‘de fato’, ‘na realidade’. No texto, enfatiza que o valor de 20 conexões fora pensado, na verdade, apenas para o ambiente de homologação (staging).",
+          "versaoInvertidaFalsa": "No trecho, “actually” significa ‘atualmente’, indicando que o valor de 20 conexões vale hoje apenas para o ambiente de homologação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "atualmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Atualmente’ traduz ‘currently’ ou ‘nowadays’. A semelhança gráfica entre “actually” e ‘atualmente’ é a armadilha clássica de falso cognato explorada em provas de leitura técnica."
+        },
+        {
+          "id": "opt-3",
+          "texto": "eventualmente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Eventualmente’ significa ‘ocasionalmente’, ‘por acaso’, e corresponderia a ‘occasionally’ ou ‘possibly’. Não há ideia de ocasionalidade no trecho, mas de ênfase na real destinação do valor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "provisoriamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Provisoriamente’ corresponderia a ‘temporarily’ ou ‘provisionally’. O texto não diz que o valor era provisório, e sim que se destinava, de fato, somente ao ambiente de homologação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "oportunamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Oportunamente’ equivale a ‘in due course’ ou ‘timely’, ideia de momento adequado ausente do trecho. “actually” tem valor enfático de realidade, e não temporal."
+        }
+      ],
+      "pegadinhaFCC": "Falso cognato clássico: ‘actually’ parece ‘atualmente’, mas significa ‘na verdade’. A FCC costuma acrescentar ‘eventualmente’ entre os distratores, outro falso amigo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o significado de ‘actually’ e como se diz ‘atualmente’ em inglês?",
+        "resposta": "‘Actually’ significa ‘na verdade’, ‘de fato’. ‘Atualmente’ se traduz por ‘currently’ ou ‘nowadays’. É um dos falsos cognatos mais cobrados em leitura técnica."
+      },
+      "conceitosChave": ["Falsos cognatos"],
+      "fundamentacao": "Texto ing-tec-t03, 2º parágrafo: “a value that had actually been intended for the staging environment only”; Cambridge Dictionary, verbete ‘actually’."
+    },
+    {
+      "id": "ing-tec-013",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t03",
+      "enunciadoBase": "Segundo o relatório, o erro de configuração que reduziu o pool de conexões não foi detectado antes de chegar à produção porque",
+      "variantesEnunciado": [
+        "De acordo com a seção “Root cause”, a alteração do número máximo de conexões passou despercebida pelo pipeline de implantação porque",
+        "Conforme o 2º parágrafo do postmortem, o motivo pelo qual a mudança de 200 para 20 conexões não foi identificada antes do incidente é que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o pipeline de implantação foi executado sem os testes automatizados, a fim de acelerar a entrega da nova versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto afirma o contrário: “the deployment pipeline ran all automated tests successfully”. Os testes foram executados e aprovados; o problema estava no que eles deixavam de simular."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a revisão de código foi dispensada, já que se tratava de uma implantação de rotina.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não diz que a revisão de código foi dispensada. A lição aprendida é que valores de configuração devem ser validados “during deployment, not only during code review”, o que sugere que a revisão existia, mas não bastou."
+        },
+        {
+          "id": "opt-3",
+          "texto": "os alertas de monitoramento estavam desativados durante a janela de implantação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os alertas funcionaram: “Monitoring alerts fired at 09:19”. O problema foi a interpretação equivocada dos alertas, classificados inicialmente como falha de rede, já depois de o erro ter chegado à produção."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o valor de 20 conexões já era o padrão adotado em produção na semana anterior.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor anterior em produção era 200: “reduced the maximum number of database connections from 200 to 20”. O valor de 20 se destinava ao ambiente de homologação (staging)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "nenhum dos testes automatizados, embora todos tenham sido aprovados, simulava a carga de produção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto explica: “Although the deployment pipeline ran all automated tests successfully, none of them simulated production load, so the error went unnoticed”. Por isso, uma das ações previstas é criar uma etapa de teste de carga no pipeline.",
+          "versaoInvertidaFalsa": "Segundo o relatório, o erro passou despercebido porque os testes automatizados foram suprimidos do pipeline para acelerar a implantação."
+        }
+      ],
+      "pegadinhaFCC": "A frase decisiva começa com ‘Although’ (concessão): os testes passaram, mas não simulavam carga. Distratores negam a execução dos testes ou culpam alertas e revisão de código.",
+      "resumoFlashcard": {
+        "pergunta": "No postmortem do portal de pagamentos, por que os testes automatizados não detectaram a redução do pool de conexões?",
+        "resposta": "Porque nenhum deles simulava a carga de produção, embora todos tenham sido aprovados. Daí a ação de criar uma etapa de teste de carga no pipeline."
+      },
+      "conceitosChave": ["Postmortem blameless", "Conectivos: concessão"],
+      "fundamentacao": "Texto ing-tec-t03, 2º parágrafo: “Although the deployment pipeline ran all automated tests successfully, none of them simulated production load, so the error went unnoticed”."
+    },
+    {
+      "id": "ing-tec-014",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t03",
+      "enunciadoBase": "No último parágrafo, em “our runbook did not require responders to check recent changes before investigating infrastructure, which it now does”, os termos “which” e “it” referem-se, respectivamente, a",
+      "variantesEnunciado": [
+        "Na seção “Lessons learned”, o segmento “which it now does” contém dois termos de referência. “which” e “it” retomam, respectivamente,",
+        "Considerando a segunda lição aprendida descrita no postmortem, os referentes de “which” e de “it”, no trecho “which it now does”, são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“infrastructure” e “our runbook”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o referente de “it”, mas erra o de “which”. Não faz sentido dizer que o runbook ‘agora faz a infraestrutura’; o que ele passou a fazer é exigir a verificação de mudanças recentes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a exigência de verificar mudanças recentes antes de investigar a infraestrutura e “our runbook”.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “which” retoma toda a ideia anterior (exigir que os responsáveis verifiquem mudanças recentes antes de investigar a infraestrutura), e “it” retoma “our runbook”. Assim: o runbook não exigia isso, mas agora exige (‘now does’).",
+          "versaoInvertidaFalsa": "No trecho, “it” retoma a exigência de verificar mudanças recentes, e “which” retoma “our runbook”, indicando que a exigência agora inclui o runbook."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“recent changes” e “infrastructure”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nem as mudanças recentes nem a infraestrutura ‘fazem’ algo no sentido do trecho. O auxiliar “does” substitui o verbo “require” da oração anterior, cujo sujeito é “our runbook”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a investigação da infraestrutura feita antes da verificação de mudanças recentes e “responders”, isto é, os responsáveis pelo atendimento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a ordem prevista no texto (verificar mudanças antes de investigar a infraestrutura) e erra o referente de “it”. Os responsáveis seriam retomados por ‘they’, pronome plural, e não por “it”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“our runbook” e a exigência de verificar mudanças recentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os referentes. “it” é o sujeito de “does” e retoma o sujeito da oração anterior, “our runbook”. Já “which” retoma a ação que o runbook passou a exigir."
+        }
+      ],
+      "pegadinhaFCC": "O relativo ‘which’ pode retomar uma oração inteira, e não só o substantivo anterior. O auxiliar ‘does’ substitui ‘require’, o que identifica ‘it’ como o runbook.",
+      "resumoFlashcard": {
+        "pergunta": "No trecho ‘our runbook did not require responders to check recent changes […], which it now does’, a que se referem ‘which’ e ‘it’?",
+        "resposta": "‘Which’ retoma a exigência de verificar mudanças recentes antes de investigar a infraestrutura, e ‘it’ retoma ‘our runbook’. O auxiliar ‘does’ substitui o verbo ‘require’."
+      },
+      "conceitosChave": ["Referência pronominal"],
+      "fundamentacao": "Texto ing-tec-t03, 4º parágrafo: “Second, our runbook did not require responders to check recent changes before investigating infrastructure, which it now does”."
+    },
+    {
+      "id": "ing-tec-015",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "textoApoioId": "ing-tec-t03",
+      "enunciadoBase": "Considere os verbos frasais do postmortem: “roll back”, em “the team decided to roll back the release”; “set up”, em “we will set up a load testing stage in the pipeline”; e “phase out”, em “phase out manual edits to configuration files”. Mantido o sentido do texto, eles podem ser traduzidos, respectivamente, por ……, …… e ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "No 3º e no 4º parágrafos do relatório, os phrasal verbs “roll back”, “set up” e “phase out” equivalem, no contexto, a ……, …… e ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao traduzir o postmortem, um técnico precisou verter as expressões “roll back the release”, “set up a load testing stage” e “phase out manual edits”, usando, respectivamente, os verbos ……, …… e ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "lançar − desmontar − intensificar",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As três traduções contrariam o contexto. A equipe desfez a versão (não a lançou), vai criar uma etapa de testes (não desmontá-la) e pretende reduzir as edições manuais até eliminá-las (não intensificá-las)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "reverter − suspender − adiar",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta “roll back”, mas “set up” não é ‘suspender’ (seria ‘suspend’ ou ‘put on hold’), e “phase out” não é ‘adiar’ (seria ‘postpone’ ou ‘put off’). ‘Phase out’ indica eliminação gradual."
+        },
+        {
+          "id": "opt-3",
+          "texto": "reiniciar − configurar − documentar",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. “roll back” não é ‘reiniciar’ (restart), mas voltar a uma versão anterior. ‘Configurar’ seria aceitável para “set up”, mas “phase out” não significa ‘documentar’."
+        },
+        {
+          "id": "opt-4",
+          "texto": "reverter − implantar − eliminar gradualmente",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “roll back” é reverter para a versão anterior, o que restaurou o serviço às 10:47. “set up” é implantar, montar ou configurar a etapa de teste de carga. “phase out” é eliminar gradualmente as edições manuais até o fim do trimestre.",
+          "versaoInvertidaFalsa": "No postmortem, “phase out” significa intensificar o uso de edições manuais nos arquivos de configuração até o fim do trimestre."
+        },
+        {
+          "id": "opt-5",
+          "texto": "reverter − implantar − acompanhar periodicamente",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras traduções estão corretas, mas “phase out” não é ‘acompanhar periodicamente’. A expressão indica retirada progressiva, coerente com a meta de abandonar as edições manuais até o fim do trimestre."
+        }
+      ],
+      "pegadinhaFCC": "Phrasal verbs não se traduzem palavra por palavra. A banca acerta os dois primeiros e erra o terceiro para atrair quem desconhece ‘phase out’ (eliminar gradualmente).",
+      "resumoFlashcard": {
+        "pergunta": "O que significam os phrasal verbs ‘roll back’, ‘set up’ e ‘phase out’ em textos de TI?",
+        "resposta": "‘Roll back’ é reverter para uma versão anterior. ‘Set up’ é configurar, montar ou implantar. ‘Phase out’ é eliminar gradualmente, descontinuar por etapas."
+      },
+      "conceitosChave": ["Phrasal verbs"],
+      "fundamentacao": "Texto ing-tec-t03, 3º e 4º parágrafos: “the team decided to roll back the release”; “we will set up a load testing stage in the pipeline and phase out manual edits to configuration files”; Cambridge Dictionary, verbetes ‘roll back’, ‘set up’ e ‘phase out’."
+    },
+    {
+      "id": "ing-tec-016",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t04",
+      "enunciadoBase": "O principal achado relatado no resumo do artigo, que avalia classificadores de documentos usados em auditorias públicas, é o de que",
+      "variantesEnunciado": [
+        "De acordo com as conclusões do abstract sobre a avaliação de modelos de classificação de documentos, a mensagem central dos autores é a de que",
+        "Considerando o resumo como um todo, a ideia principal defendida pelos autores do estudo sobre classificadores em auditorias é a de que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "os três modelos avaliados apresentaram acurácia global inferior a 91%, o que inviabiliza seu uso em auditorias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto afirma o contrário: “All models achieved an overall accuracy above 91%”. A crítica dos autores não recai sobre a acurácia global, que foi alta, mas sobre as disparidades que ela esconde."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o reconhecimento óptico de caracteres eliminou as diferenças de desempenho entre os grupos de emissores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os erros de OCR foram apontados como a principal explicação da diferença: “The gap was largely explained by optical character recognition errors”. O OCR, portanto, gerou a disparidade, em vez de eliminá-la."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a revisão humana pode ser dispensada sempre que o modelo atingir acurácia global elevada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os autores defendem que “human review should remain mandatory for low-confidence predictions”. Dispensar a revisão com base na acurácia global contraria a própria tese de que esse número pode ocultar falhas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "documentos de agências estaduais foram sinalizados com menor frequência do que os de pequenos municípios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o resultado. A revocação foi menor para pequenos municípios (“up to 18 percentage points lower”), de modo que documentos irregulares desses emissores tinham mais chance de não ser sinalizados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma pontuação agregada elevada pode ocultar disparidades relevantes de desempenho entre grupos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A conclusão sintetiza o estudo: “a high aggregate score may conceal significant disparities between groups”. Acurácia global acima de 91% conviveu com revocação até 18 pontos menor para pequenos municípios.",
+          "versaoInvertidaFalsa": "O principal achado do estudo é que uma acurácia global elevada garante desempenho homogêneo entre os diferentes grupos de emissores."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores invertem dados verdadeiros do texto (quem teve menor revocação, o papel do OCR, a acurácia acima de 91%). A ideia principal está na conclusão, em ‘may conceal significant disparities’.",
+      "resumoFlashcard": {
+        "pergunta": "Por que reportar apenas a acurácia global de um modelo pode ser enganoso?",
+        "resposta": "Porque um número agregado alto pode ocultar desempenho muito pior em grupos específicos. Por isso os autores defendem métricas como precisão e revocação desagregadas por grupo."
+      },
+      "conceitosChave": ["Viés e avaliação de modelos", "Ideia principal do texto"],
+      "fundamentacao": "Texto ing-tec-t04 (abstract), 4º parágrafo: “These findings indicate that a high aggregate score may conceal significant disparities between groups”."
+    },
+    {
+      "id": "ing-tec-017",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t04",
+      "enunciadoBase": "De acordo com a seção de métodos do resumo, para avaliar os três modelos de classificação de texto, os autores",
+      "variantesEnunciado": [
+        "Segundo o 2º parágrafo do abstract, a metodologia adotada pelos autores na avaliação dos classificadores consistiu em",
+        "Conforme a parte “Methods” do resumo, os pesquisadores avaliaram os modelos de classificação e, para isso,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "relataram um único valor de acurácia para todo o conjunto de 48.000 documentos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto rejeita expressamente essa abordagem: “Rather than reporting a single accuracy figure”. ‘Rather than’ significa ‘em vez de’, e o número 48.000 aparece apenas como tamanho do conjunto de dados."
+        },
+        {
+          "id": "opt-2",
+          "texto": "mediram precisão e revocação separadamente para cada grupo de emissores.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 2º parágrafo informa: “we measured precision and recall separately for each group of issuers, defined by population size and level of digitization”. Precision é precisão, e recall é revocação, ou sensibilidade.",
+          "versaoInvertidaFalsa": "Segundo a seção de métodos, os autores relataram um único valor de acurácia para todos os documentos, sem separar os grupos de emissores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "rotularam os documentos com o auxílio dos próprios modelos de classificação avaliados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os rótulos foram atribuídos por pessoas: “documents labeled by experienced auditors”. Usar os próprios modelos para rotular os dados de avaliação comprometeria a validade do estudo."
+        },
+        {
+          "id": "opt-4",
+          "texto": "acrescentaram timbres aos documentos para verificar se o desempenho melhorava.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O procedimento foi o inverso: os autores removeram características espúrias, como o timbre (letterhead), “by systematically removing those features from the input”, para testar se os modelos dependiam delas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "agruparam os emissores segundo o volume de notas fiscais emitidas por ano.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os grupos foram definidos “by population size and level of digitization”, ou seja, por porte populacional e nível de digitalização. O volume de notas fiscais não é critério mencionado."
+        }
+      ],
+      "pegadinhaFCC": "‘Rather than’ (em vez de) nega a abordagem da acurácia única, e ‘removing’ indica retirada, não acréscimo. Os distratores invertem essas duas informações.",
+      "resumoFlashcard": {
+        "pergunta": "Como os autores do abstract avaliaram os classificadores de documentos?",
+        "resposta": "Mediram precisão e revocação separadamente por grupo de emissores (porte populacional e nível de digitalização), em vez de uma acurácia única. Também removeram características espúrias, como o timbre, para testar dependências indevidas."
+      },
+      "conceitosChave": ["Scanning: informação específica", "Viés e avaliação de modelos"],
+      "fundamentacao": "Texto ing-tec-t04, 2º parágrafo: “Rather than reporting a single accuracy figure, we measured precision and recall separately for each group of issuers”."
+    },
+    {
+      "id": "ing-tec-018",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t04",
+      "enunciadoBase": "No 3º parágrafo do abstract, a expressão “go unflagged”, em “irregular documents from these issuers were more likely to go unflagged”, significa, no contexto, que os documentos irregulares",
+      "variantesEnunciado": [
+        "Na seção de resultados, o segmento “were more likely to go unflagged”, referente aos documentos irregulares de pequenos municípios, indica que esses documentos",
+        "Considerando o sentido do verbo “flag” no 1º parágrafo do resumo, a expressão “go unflagged”, no 3º parágrafo, revela que os documentos irregulares"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "eram descartados antes de chegarem à análise automatizada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os documentos passaram pelos modelos; o problema é que não foram marcados como suspeitos. Descartar seria ‘discard’ ou ‘drop’, ideia ausente do trecho."
+        },
+        {
+          "id": "opt-2",
+          "texto": "eram sinalizados com mais frequência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o sentido. O prefixo ‘un-’ nega o particípio ‘flagged’ (sinalizado). Além disso, a revocação menor indica justamente que menos documentos irregulares foram detectados."
+        },
+        {
+          "id": "opt-3",
+          "texto": "recebiam bandeiras de prioridade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É tradução literal de ‘flag’ como ‘bandeira’, que ignora o sentido técnico de ‘sinalizar, marcar para atenção’ e o prefixo negativo ‘un-’. O texto trata de falha de detecção, e não de priorização."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deixavam de ser sinalizados para inspeção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No 1º parágrafo, “flag” é usado no sentido de marcar documentos “that deserve closer inspection”. “go unflagged” é, portanto, passar sem ser sinalizado. Isso é coerente com a revocação até 18 pontos menor para pequenos municípios.",
+          "versaoInvertidaFalsa": "No trecho, “go unflagged” indica que os documentos irregulares de pequenos municípios eram sinalizados para inspeção com mais frequência que os demais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "eram digitalizados em baixa resolução.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A baixa resolução é citada no 1º parágrafo como característica dos documentos de pequenos municípios (“often scanned at low resolution”), e não como significado de “go unflagged”."
+        }
+      ],
+      "pegadinhaFCC": "O prefixo ‘un-’ inverte o sentido de ‘flagged’, e ‘flag’ tem sentido técnico (sinalizar), não literal (bandeira). A banca oferece a tradução literal e a inversão.",
+      "resumoFlashcard": {
+        "pergunta": "O que significa ‘to flag’ em textos de IA e auditoria e o que é ‘go unflagged’?",
+        "resposta": "‘To flag’ é sinalizar ou marcar um item para atenção ou inspeção. ‘Go unflagged’ é passar sem ser sinalizado; em modelos, está associado à baixa revocação (falsos negativos)."
+      },
+      "conceitosChave": ["Vocabulário de IA", "Viés e avaliação de modelos"],
+      "fundamentacao": "Texto ing-tec-t04, 1º e 3º parágrafos: “to flag those that deserve closer inspection”; “irregular documents from these issuers were more likely to go unflagged”; Cambridge Dictionary, verbete ‘flag’."
+    },
+    {
+      "id": "ing-tec-019",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t04",
+      "enunciadoBase": "No 3º parágrafo do resumo, o pronome “it”, em “suggesting that it had learned to associate certain layouts with risk”, e o conectivo “However”, que inicia a segunda frase do parágrafo, expressam, respectivamente,",
+      "variantesEnunciado": [
+        "Na seção “Results”, considere o termo “it”, no segmento “it had learned to associate certain layouts with risk”, e a palavra “However”, que abre a frase sobre a revocação. Esses elementos indicam, respectivamente,",
+        "Quanto à coesão do 3º parágrafo do abstract, o referente do pronome “it”, na última frase, e o valor do conectivo “However”, na segunda frase, são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a retomada de “one model” e a oposição entre a acurácia global elevada e a revocação inferior para pequenos municípios.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Quem ‘aprendeu’ a associar layouts a risco foi “one model”, cujo desempenho caiu quando o timbre foi removido. “However” é adversativo (‘no entanto’): opõe “overall accuracy above 91%” à revocação “up to 18 percentage points lower”.",
+          "versaoInvertidaFalsa": "No 3º parágrafo, “it” retoma “the letterhead”, e “However” acrescenta um resultado que confirma a acurácia global dos modelos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a retomada de “the letterhead” e a adição de um resultado que confirma a acurácia global.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O timbre não ‘aprende’ nada; ele foi removido para testar o modelo. E “However” não é aditivo (como ‘moreover’ ou ‘in addition’): introduz um resultado que contrasta com a acurácia global."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a retomada de “the performance” e a conclusão extraída da acurácia global.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O desempenho (performance) caiu, mas quem aprendeu foi o modelo. Conclusão seria marcada por ‘therefore’ ou ‘thus’, e não por “However”, que tem valor de oposição."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a retomada de “one model” e a causa da diferença de revocação entre os grupos de emissores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o referente de “it”, mas atribui a “However” valor causal. A causa da diferença aparece em outra frase (“largely explained by optical character recognition errors”); “However” marca contraste."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a retomada de “optical character recognition” e a oposição entre erros de OCR e falhas dos classificadores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O OCR é citado na frase anterior, mas não é o sujeito que ‘aprendeu’ a associar layouts a risco. Quem aprende padrões é o modelo, e a frase trata do efeito da remoção do timbre sobre ‘one model’."
+        }
+      ],
+      "pegadinhaFCC": "Dois objetos de avaliação: referente de ‘it’ e valor de ‘However’. Há substantivos próximos (‘the letterhead’, ‘the performance’) e um distrator que acerta o pronome e erra o conectivo.",
+      "resumoFlashcard": {
+        "pergunta": "Que valor tem ‘However’ e como identificar o referente de ‘it’ em ‘it had learned to associate certain layouts with risk’?",
+        "resposta": "‘However’ é adversativo (‘no entanto’) e opõe ideias. O referente de ‘it’ é o termo compatível com o verbo: quem ‘aprende’ é o modelo (‘one model’), e não o timbre nem o desempenho."
+      },
+      "conceitosChave": ["Referência pronominal", "Conectivos: contraste"],
+      "fundamentacao": "Texto ing-tec-t04, 3º parágrafo: “All models achieved an overall accuracy above 91%. However, recall for documents from small municipalities was up to 18 percentage points lower”; “the performance of one model dropped sharply, suggesting that it had learned to associate certain layouts with risk”."
+    },
+    {
+      "id": "ing-tec-020",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "ing-tec-t04",
+      "enunciadoBase": "Considerando os resultados e as conclusões apresentados no resumo do artigo sobre a avaliação de classificadores de documentos em auditorias públicas, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um auditor leu o abstract sobre classificadores de documentos para decidir como avaliar uma ferramenta semelhante. Com base nos resultados e nas conclusões do texto, considere as afirmativas abaixo.",
+        "A respeito do que os autores constataram e recomendaram no 3º e no 4º parágrafos do resumo, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Os autores recomendam que relatórios de avaliação de ferramentas de auditoria apresentem resultados desagregados por grupos relevantes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “evaluation reports for audit tools should present results disaggregated by relevant groups”."
+        },
+        {
+          "texto": "A diferença de revocação entre os grupos foi atribuída principalmente aos próprios classificadores, e não a erros de reconhecimento óptico de caracteres.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Inverte o texto: “The gap was largely explained by optical character recognition errors rather than by the classifiers themselves”."
+        },
+        {
+          "texto": "Segundo os autores, a revisão humana deve permanecer obrigatória para predições de baixa confiança.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “human review should remain mandatory for low-confidence predictions”."
+        },
+        {
+          "texto": "Os autores concluíram que melhorar a qualidade das imagens é suficiente para eliminar a diferença de desempenho entre os grupos.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Isso ainda será investigado: “Future work will assess whether improving image quality is sufficient to close the gap”. Trata-se de hipótese para estudo futuro, e não de conclusão."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I está correta, mas a III também está, pois reproduz a recomendação de manter a revisão humana obrigatória para predições de baixa confiança (“should remain mandatory”)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas falsas. A II inverte a explicação da diferença (“rather than by the classifiers themselves”), e a IV transforma em conclusão o que é apenas objeto de trabalho futuro (“Future work will assess”)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I e III reproduzem as duas recomendações da conclusão: resultados desagregados por grupo e revisão humana obrigatória para baixa confiança. A II inverte a causa da diferença, atribuída aos erros de OCR, e a IV antecipa uma conclusão que o texto deixa para estudo futuro.",
+          "versaoInvertidaFalsa": "Segundo o resumo, a diferença de revocação entre os grupos decorreu principalmente dos próprios classificadores, e não de erros de reconhecimento óptico de caracteres."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a IV, que é falsa: o verbo ‘assess’ (avaliar) no futuro (“will assess whether”) indica que a suficiência da melhoria das imagens ainda será verificada, e não que já foi comprovada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a I, que está correta, e inclui a IV, falsa. A IV confunde uma pergunta de pesquisa futura (“whether improving image quality is sufficient”) com um resultado já obtido."
+        }
+      ],
+      "pegadinhaFCC": "‘Rather than’ (em vez de) define a causa da diferença, e ‘Future work will assess whether’ indica hipótese, não conclusão. A banca troca hipótese por resultado.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as recomendações dos autores do abstract sobre ferramentas de IA em auditoria?",
+        "resposta": "Apresentar resultados de avaliação desagregados por grupos relevantes e manter obrigatória a revisão humana das predições de baixa confiança. A suficiência de melhorar a qualidade das imagens fica para trabalho futuro."
+      },
+      "conceitosChave": ["Viés e avaliação de modelos", "Inferência"],
+      "fundamentacao": "Texto ing-tec-t04, 3º e 4º parágrafos: “largely explained by optical character recognition errors rather than by the classifiers themselves”; “human review should remain mandatory for low-confidence predictions”; “Future work will assess whether improving image quality is sufficient to close the gap”."
+    }
+  ]
+}

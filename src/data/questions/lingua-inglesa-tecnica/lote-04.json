@@ -1,0 +1,599 @@
+{
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "ing-tec-031",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t07",
+      "enunciadoBase": "As notas de versão do DataSync CLI 5.0 reproduzidas no texto têm como objetivo principal",
+      "variantesEnunciado": [
+        "Considerando a organização do texto em seções (New features, Breaking changes, Deprecations e Fixed and known issues), sua finalidade é",
+        "O propósito do documento sobre a versão 5.0 da ferramenta de linha de comando DataSync é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "informar os usuários sobre novos recursos, mudanças incompatíveis, descontinuações e problemas corrigidos ou conhecidos da versão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Release notes comunicam o que muda em uma versão, e o texto se organiza exatamente assim: “New features”, “Breaking changes”, “Deprecations” e “Fixed and known issues”, além da recomendação inicial de lê-las antes de atualizar ambientes de produção.",
+          "versaoInvertidaFalsa": "As notas de versão têm como objetivo principal ensinar a instalar o DataSync CLI pela primeira vez, sem tratar de mudanças em relação às versões anteriores."
+        },
+        {
+          "id": "opt-2",
+          "texto": "ensinar o usuário a instalar o DataSync CLI pela primeira vez em ambientes de produção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto pressupõe usuários que já usam a ferramenta e vão atualizá-la (“before upgrading production environments”). Não há instruções de primeira instalação, típicas de um guia de instalação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "justificar a remoção definitiva da autenticação por senha já nesta versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autenticação por senha não foi removida na 5.0: “It still works in this release”. Ela está apenas descontinuada (deprecated) e será removida na versão 6.0."
+        },
+        {
+          "id": "opt-4",
+          "texto": "comparar o desempenho do DataSync CLI com o de ferramentas concorrentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O único dado de desempenho compara a própria ferramenta antes e depois das transferências paralelas (“reduces synchronization time by up to 40%”). Não há menção a concorrentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "anunciar o fim do suporte a todas as versões anteriores à 5.0.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto prevê caminhos de atualização a partir da 4.x e até o retorno à 4.9 (“you can roll back to 4.9”). Não há anúncio de fim de suporte às versões anteriores."
+        }
+      ],
+      "pegadinhaFCC": "A banca usa fatos parciais do texto (autenticação por senha, ganho de 40%) como se fossem o objetivo geral. A estrutura em seções típicas de release notes revela o propósito.",
+      "resumoFlashcard": {
+        "pergunta": "Quais seções são típicas de release notes e para que servem?",
+        "resposta": "Novos recursos (new features), mudanças incompatíveis (breaking changes), descontinuações (deprecations) e problemas corrigidos ou conhecidos (fixed/known issues). Servem para informar o que muda em uma versão antes da atualização."
+      },
+      "conceitosChave": [
+        "Release notes",
+        "Ideia principal do texto"
+      ],
+      "fundamentacao": "Texto ing-tec-t07 (DataSync CLI 5.0 — Release Notes), estrutura de seções e 1º parágrafo: “we recommend reading these notes in full before upgrading production environments”."
+    },
+    {
+      "id": "ing-tec-032",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t07",
+      "enunciadoBase": "De acordo com as notas de versão, um usuário que ainda utilize a versão 3.8 da ferramenta e queira passar para a 5.0 deve",
+      "variantesEnunciado": [
+        "Segundo o 1º parágrafo das release notes, uma equipe que opera o DataSync CLI na versão 3.8 e pretende adotar a 5.0 precisa",
+        "Conforme o texto, o caminho de atualização correto para quem usa uma versão anterior à 4.x, como a 3.8, é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "atualizar diretamente para a 5.0, pois todas as versões anteriores podem ser atualizadas no local.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A atualização no local (“upgrade in place”) vale apenas para quem está na 4.x. A 3.8 se enquadra em “earlier versions”, que precisam passar antes pela 4.9."
+        },
+        {
+          "id": "opt-2",
+          "texto": "reinstalar o pacote da versão 4.x e, em seguida, converter os repositórios para o novo formato.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A reinstalação do pacote anterior é o procedimento de reversão (roll back) da 5.0 para a 4.9. Além disso, a 5.0 “does not change the format of existing repositories”, de modo que não há conversão de repositórios."
+        },
+        {
+          "id": "opt-3",
+          "texto": "executar o comando sync-all antes da atualização, para preservar as regras de exclusão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O comando sync-all foi removido (“has been removed; use sync --recursive instead”). A preservação das regras de exclusão depende da conversão da configuração com datasync migrate-config."
+        },
+        {
+          "id": "opt-4",
+          "texto": "aguardar a versão 6.0, que será a primeira compatível com versões anteriores à 4.x.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A versão 6.0 é citada apenas como aquela em que a autenticação por senha será removida. O texto não diz que ela trará compatibilidade com versões antigas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "atualizar primeiro para a versão 4.9 e só então para a 5.0.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto distingue dois casos: “Users of version 4.x can upgrade in place, but earlier versions must first be upgraded to 4.9”. A 3.8 é anterior à 4.x, portanto exige a etapa intermediária na 4.9.",
+          "versaoInvertidaFalsa": "Segundo as notas de versão, usuários da versão 3.8 podem atualizar diretamente para a 5.0, pois qualquer versão anterior admite atualização no local."
+        }
+      ],
+      "pegadinhaFCC": "O conectivo ‘but’ separa dois públicos: 4.x (atualiza no local) e versões anteriores (passam pela 4.9). O distrator generaliza a regra da 4.x para todas as versões.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o caminho de atualização para o DataSync CLI 5.0?",
+        "resposta": "Quem está na 4.x pode atualizar no local; versões anteriores precisam passar primeiro pela 4.9. Antes de atualizar, os arquivos INI devem ser convertidos para YAML com datasync migrate-config."
+      },
+      "conceitosChave": [
+        "Scanning: informação específica",
+        "Release notes"
+      ],
+      "fundamentacao": "Texto ing-tec-t07, 1º parágrafo: “Users of version 4.x can upgrade in place, but earlier versions must first be upgraded to 4.9”."
+    },
+    {
+      "id": "ing-tec-033",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t07",
+      "enunciadoBase": "No último parágrafo das notas de versão, a palavra “issue”, em “this issue does not affect data integrity”, pode ser traduzida, no contexto, por",
+      "variantesEnunciado": [
+        "Na seção “Fixed and known issues”, o substantivo “issue”, empregado em referência aos timestamps informados incorretamente, equivale a",
+        "Considerando o trecho “timestamps may be reported incorrectly; this issue does not affect data integrity”, a tradução adequada de “issue” é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "edição.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Issue’ pode significar ‘edição’ ou ‘número’ de uma publicação periódica (‘the May issue of a magazine’), mas esse sentido não se aplica a timestamps registrados incorretamente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "problema.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em textos de TI, “issue” é ‘problema’, ‘falha’ ou ‘questão pendente’, como em ‘known issues’ e ‘issue tracker’. O trecho se refere ao problema de timestamps incorretos em alguns sistemas de arquivos de rede.",
+          "versaoInvertidaFalsa": "No trecho, “issue” significa ‘emissão’, referindo-se à geração dos timestamps pelos sistemas de arquivos de rede."
+        },
+        {
+          "id": "opt-3",
+          "texto": "emissão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Emissão’ corresponde ao verbo ‘to issue’ em contextos como ‘tokens issued by external identity providers’, presente no próprio texto. Como substantivo em “this issue”, o sentido é de problema."
+        },
+        {
+          "id": "opt-4",
+          "texto": "versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Versão’ traduz ‘version’ ou ‘release’, palavras usadas no texto em outros pontos. “this issue” retoma a informação imediatamente anterior sobre timestamps incorretos, e não uma versão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "publicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Publicação’ seria ‘publication’ ou ‘release’. A palavra “issue” atrai pela semelhança com ‘emitir’ e ‘edição’, mas o contexto (“does not affect data integrity”) indica um problema técnico."
+        }
+      ],
+      "pegadinhaFCC": "‘Issue’ é polissêmico. O próprio texto usa o verbo ‘issued’ (emitidos) em outro trecho, o que reforça a armadilha de ‘emissão’. O contexto de ‘known issues’ define o sentido de ‘problema’.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os sentidos de ‘issue’ e qual prevalece em textos de TI?",
+        "resposta": "Como substantivo, ‘issue’ é sobretudo ‘problema’ ou ‘questão’ (known issues, issue tracker); pode ser ainda ‘edição’ de periódico. Como verbo, ‘to issue’ é ‘emitir’ (tokens issued by…)."
+      },
+      "conceitosChave": [
+        "Falsos cognatos",
+        "Release notes"
+      ],
+      "fundamentacao": "Texto ing-tec-t07, 5º parágrafo: “On some network file systems, timestamps may be reported incorrectly; this issue does not affect data integrity”; Cambridge Dictionary, verbete ‘issue’."
+    },
+    {
+      "id": "ing-tec-034",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t07",
+      "enunciadoBase": "Segundo as notas de versão, caso o usuário atualize para a 5.0 sem antes converter seus arquivos de configuração no formato INI legado,",
+      "variantesEnunciado": [
+        "De acordo com a seção “Breaking changes”, a consequência de não executar o comando datasync migrate-config antes da atualização é que",
+        "Conforme o 3º parágrafo das release notes, se os arquivos de configuração INI não forem convertidos para YAML antes do upgrade,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a atualização será bloqueada até que o comando datasync migrate-config seja executado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não prevê bloqueio da atualização. Ao contrário, a ferramenta inicia normalmente, porém com configurações padrão, o que é justamente o risco destacado com “otherwise”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a ferramenta converterá automaticamente os arquivos para YAML na primeira execução.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A conversão é manual, feita pelo usuário com “Run datasync migrate-config to convert them to YAML before upgrading”. Arquivos INI “are no longer read”, logo não há conversão automática."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a ferramenta exibirá um aviso a cada uso, mas continuará lendo os arquivos INI até a versão 6.0.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Confunde a mudança incompatível com a descontinuação da autenticação por senha, essa sim com aviso a cada uso e remoção na 6.0. O formato INI já deixou de ser lido na 5.0."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a ferramenta iniciará com configurações padrão e poderá ignorar as regras de exclusão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto adverte: “otherwise, the tool will start with default settings and may ignore your exclusion rules”. “otherwise” equivale a ‘caso contrário’, isto é, se a conversão não for feita antes do upgrade.",
+          "versaoInvertidaFalsa": "Segundo as notas, se os arquivos INI não forem convertidos, a ferramenta os converterá automaticamente para YAML, preservando as regras de exclusão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os repositórios existentes terão seu formato alterado, impedindo o retorno à versão 4.9.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto afirma que “version 5.0 does not change the format of existing repositories”, motivo pelo qual o retorno (roll back) à 4.9 continua possível."
+        }
+      ],
+      "pegadinhaFCC": "‘Otherwise’ (caso contrário) introduz a consequência de não converter os arquivos. O distrator mistura essa breaking change com a deprecation da autenticação por senha.",
+      "resumoFlashcard": {
+        "pergunta": "No DataSync CLI 5.0, o que acontece se os arquivos INI não forem convertidos antes da atualização?",
+        "resposta": "A ferramenta inicia com configurações padrão e pode ignorar as regras de exclusão, porque o formato INI deixou de ser lido. A conversão para YAML é feita com datasync migrate-config."
+      },
+      "conceitosChave": [
+        "Release notes",
+        "Breaking changes"
+      ],
+      "fundamentacao": "Texto ing-tec-t07, 3º parágrafo: “Run datasync migrate-config to convert them to YAML before upgrading; otherwise, the tool will start with default settings and may ignore your exclusion rules”."
+    },
+    {
+      "id": "ing-tec-035",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "textoApoioId": "ing-tec-t07",
+      "enunciadoBase": "Com base nas seções “Deprecations” e “Fixed and known issues” das notas de versão, completa-se corretamente a síntese: a autenticação por senha …… nesta versão; o suporte ao TLS 1.1 ……; e, em caso de problemas após a atualização, o usuário pode …… para a versão 4.9. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Um analista resumiu o 4º e o 5º parágrafos das release notes assim: ‘a autenticação por senha …… nesta versão; o suporte ao TLS 1.1 ……; e o usuário pode …… para a 4.9 se houver problemas’. Preenchem, correta e respectivamente, as lacunas:",
+        "Considerando as informações sobre descontinuações e sobre o retorno à versão anterior, completa-se corretamente: a autenticação por senha ……; o suporte ao TLS 1.1 ……; diante de problemas, é possível …… para a 4.9. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "foi removida − será eliminado gradualmente − reverter",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A primeira lacuna contraria o texto: a autenticação por senha “is deprecated and will be removed in version 6.0” e “still works in this release”. Estar descontinuada não é estar removida."
+        },
+        {
+          "id": "opt-2",
+          "texto": "continua funcionando, com aviso a cada uso − foi removido nesta versão − migrar seus repositórios",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a primeira lacuna, mas o TLS 1.1 não foi removido; o plano é eliminá-lo ao longo das duas próximas versões menores. O retorno à 4.9 também não exige migração, pois a 5.0 não altera o formato dos repositórios."
+        },
+        {
+          "id": "opt-3",
+          "texto": "continua funcionando, com aviso a cada uso − será eliminado gradualmente nas próximas duas versões menores − reverter",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A senha “still works in this release, but a warning is displayed every time it is used”; o TLS 1.1 terá o suporte retirado gradualmente (“phase out support for TLS 1.1 over the next two minor releases”); e é possível “roll back to 4.9 by reinstalling the previous package”.",
+          "versaoInvertidaFalsa": "Segundo as notas, a autenticação por senha já foi removida na versão 5.0, e o suporte ao TLS 1.1 será mantido por tempo indeterminado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "continua funcionando, sem exibição de avisos − será eliminado gradualmente nas próximas duas versões menores − fazer upgrade",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 5.0 exibe aviso a cada uso de senha (“a warning is displayed every time it is used”). Além disso, voltar para a 4.9 é reverter (roll back), e não fazer upgrade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "será removida na versão 5.1 − foi mantido por tempo indeterminado − reverter",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A remoção da autenticação por senha está prevista para a 6.0, e não para a 5.1. O TLS 1.1 não foi mantido por tempo indeterminado: seu suporte será eliminado (phase out) nas próximas duas versões menores."
+        }
+      ],
+      "pegadinhaFCC": "‘Deprecated’ não é ‘removed’, e ‘phase out’ indica retirada gradual. Os distratores combinam lacunas certas e erradas para premiar a leitura parcial.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre um recurso ‘deprecated’ e um ‘removed’ em release notes?",
+        "resposta": "‘Deprecated’ é o recurso que ainda funciona, muitas vezes com aviso, mas será removido no futuro. ‘Removed’ é o recurso que deixou de existir. No DataSync 5.0, a senha está deprecated e será removida na 6.0."
+      },
+      "conceitosChave": [
+        "Ciclo de vida: deprecation",
+        "Release notes",
+        "Phrasal verbs"
+      ],
+      "fundamentacao": "Texto ing-tec-t07, 4º e 5º parágrafos: “It still works in this release, but a warning is displayed every time it is used”; “phase out support for TLS 1.1 over the next two minor releases”; “you can roll back to 4.9 by reinstalling the previous package”."
+    },
+    {
+      "id": "ing-tec-036",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t08",
+      "enunciadoBase": "A ideia central da documentação do serviço gerenciado de banco de dados é a de que backups automatizados e alta disponibilidade",
+      "variantesEnunciado": [
+        "Considerando o 1º e o último parágrafos da documentação de nuvem, a mensagem principal sobre backups e alta disponibilidade (HA) é a de que esses recursos",
+        "Segundo o texto sobre o serviço gerenciado de banco de dados, backups automatizados e high availability"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "são mecanismos equivalentes, de modo que a habilitação de um torna o outro dispensável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto enfatiza que os mecanismos “address different risks” e recomenda combiná-los em produção. Considerá-los equivalentes contraria a tese central da documentação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "são mecanismos complementares, que tratam de riscos distintos e devem ser combinados em produção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O 1º parágrafo apresenta “two complementary mechanisms” que “address different risks”: backup recupera dados apagados ou corrompidos, e HA mantém o banco no ar diante de falhas de infraestrutura. O último parágrafo recomenda “combining HA with backups” em produção.",
+          "versaoInvertidaFalsa": "Segundo a documentação, backups e alta disponibilidade tratam do mesmo risco, de modo que, habilitado um deles, o outro se torna dispensável."
+        },
+        {
+          "id": "opt-3",
+          "texto": "dependem de réplicas de leitura, atualizadas de forma síncrona com a instância primária.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Réplicas de leitura são atualizadas de forma assíncrona (“updated asynchronously”) e não sustentam backups nem HA. A replicação síncrona é característica da réplica standby."
+        },
+        {
+          "id": "opt-4",
+          "texto": "protegem igualmente contra erros lógicos, como a exclusão acidental de uma tabela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto afirma que “HA does not protect against logical errors”: a exclusão de uma tabela é replicada para a standby em milissegundos. Apenas o backup permite recuperar esse tipo de perda."
+        },
+        {
+          "id": "opt-5",
+          "texto": "devem ser evitados em cargas de trabalho de produção, uma vez que dobram o custo de computação da instância.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Apenas a HA “roughly doubles the compute cost”, e, mesmo assim, o texto a recomenda para produção: “we nevertheless recommend combining HA with backups”. O conectivo ‘nevertheless’ desfaz a objeção do custo."
+        }
+      ],
+      "pegadinhaFCC": "A tese central está no par ‘complementary mechanisms’/‘different risks’. O distrator do custo ignora o ‘nevertheless’ (ainda assim) da recomendação final.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre backup e alta disponibilidade em um banco de dados gerenciado?",
+        "resposta": "O backup permite recuperar dados apagados ou corrompidos, inclusive por erro lógico. A HA mantém o banco em funcionamento quando a infraestrutura falha, por meio de failover para uma réplica standby. São complementares e devem ser combinados em produção."
+      },
+      "conceitosChave": [
+        "Backup × alta disponibilidade",
+        "Ideia principal do texto"
+      ],
+      "fundamentacao": "Texto ing-tec-t08 (Managed Database Service), 1º e 5º parágrafos: “two complementary mechanisms”; “they address different risks”; “we nevertheless recommend combining HA with backups”."
+    },
+    {
+      "id": "ing-tec-037",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t08",
+      "enunciadoBase": "De acordo com o 2º parágrafo da documentação, o período de retenção padrão dos backups automatizados",
+      "variantesEnunciado": [
+        "Segundo a documentação do serviço gerenciado, quanto à retenção dos backups automatizados, o período padrão",
+        "Conforme o texto, o prazo de retenção definido por padrão para os backups automáticos do banco de dados"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "é de cinco minutos, intervalo em que os logs de transação são arquivados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cinco minutos é o intervalo de arquivamento dos logs de transação (“archived every five minutes”), que viabiliza a recuperação para um ponto no tempo. Não se trata do período de retenção."
+        },
+        {
+          "id": "opt-2",
+          "texto": "é de 35 dias, podendo ser reduzido para sete dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os números: sete dias é o padrão, e 35 dias é o máximo admitido mediante extensão (“can be extended to up to 35 days”)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é de um dia, coincidente com a janela de manutenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Uma vez por dia’ é a frequência dos backups automatizados (“run once a day during a maintenance window”), e não o tempo de retenção das cópias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "é de sete dias, podendo ser estendido para até 35 dias.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto informa: “The default retention period is seven days and can be extended to up to 35 days”. Questão típica de scanning, em que os demais números do parágrafo (cinco minutos, uma vez por dia) servem de distratores.",
+          "versaoInvertidaFalsa": "Segundo a documentação, o período de retenção padrão dos backups é de 35 dias, podendo ser reduzido para sete dias."
+        },
+        {
+          "id": "opt-5",
+          "texto": "é ilimitado, desde que as cópias entre regiões estejam habilitadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As cópias entre regiões (“cross-region copies”) tratam do local de armazenamento, para além da mesma região, e não do tempo de retenção, que tem limite máximo de 35 dias."
+        }
+      ],
+      "pegadinhaFCC": "Vários números no mesmo parágrafo (uma vez por dia, cinco minutos, sete e 35 dias). A banca inverte padrão e máximo e associa números a conceitos errados.",
+      "resumoFlashcard": {
+        "pergunta": "Na documentação do banco gerenciado, quais são a frequência e a retenção dos backups?",
+        "resposta": "Backups diários na janela de manutenção e logs de transação arquivados a cada cinco minutos, para recuperação a um ponto no tempo. A retenção padrão é de sete dias, extensível até 35."
+      },
+      "conceitosChave": [
+        "Scanning: informação específica",
+        "Backup × alta disponibilidade"
+      ],
+      "fundamentacao": "Texto ing-tec-t08, 2º parágrafo: “The default retention period is seven days and can be extended to up to 35 days”."
+    },
+    {
+      "id": "ing-tec-038",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t08",
+      "enunciadoBase": "No 2º parágrafo, o conectivo “however”, em “Backups are stored in a different zone from the primary instance; however, they remain in the same region”, poderia ser substituído, sem prejuízo do sentido, por",
+      "variantesEnunciado": [
+        "Na frase sobre o local de armazenamento dos backups, a palavra “however”, que liga as informações sobre zona e região, equivale, no contexto, a",
+        "O conectivo “however”, empregado na documentação para relacionar o armazenamento em outra zona à permanência na mesma região, pode ser trocado, mantendo-se o sentido, por"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "consequently.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Consequently’ é conclusivo (‘consequentemente’, ‘portanto’). Permanecer na mesma região não é consequência de estar em outra zona; o texto apresenta uma ressalva, e não uma conclusão."
+        },
+        {
+          "id": "opt-2",
+          "texto": "moreover.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Moreover’ é aditivo (‘além disso’) e reforçaria a ideia anterior. O trecho limita o alcance da proteção: apesar da outra zona, os backups ficam na mesma região."
+        },
+        {
+          "id": "opt-3",
+          "texto": "nevertheless.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “however” tem valor adversativo (‘no entanto’, ‘contudo’), assim como “nevertheless”. O texto contrapõe a vantagem (outra zona) à limitação (mesma região), salvo se houver cópias entre regiões.",
+          "versaoInvertidaFalsa": "No trecho, “however” poderia ser substituído por ‘consequently’, pois a permanência na mesma região é consequência do armazenamento em outra zona."
+        },
+        {
+          "id": "opt-4",
+          "texto": "because.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Because’ é causal (‘porque’). A permanência na mesma região não explica o armazenamento em outra zona; trata-se de uma limitação contraposta à informação anterior."
+        },
+        {
+          "id": "opt-5",
+          "texto": "otherwise.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Otherwise’ significa ‘caso contrário’, ‘senão’, e introduz consequência de condição não cumprida. A ideia de exceção condicional do trecho está em outro conectivo, “unless you enable cross-region copies”."
+        }
+      ],
+      "pegadinhaFCC": "‘However’ e ‘nevertheless’ são adversativos. A banca oferece conectivos de conclusão, adição, causa e condição, e a frase ainda traz ‘unless’ para confundir.",
+      "resumoFlashcard": {
+        "pergunta": "Quais conectivos ingleses têm valor adversativo equivalente a ‘however’?",
+        "resposta": "‘Nevertheless’, ‘nonetheless’, ‘yet’, ‘still’ e ‘but’ expressam oposição, como ‘no entanto’ e ‘contudo’. Não se confundem com ‘therefore’ (conclusão), ‘moreover’ (adição) e ‘otherwise’ (caso contrário)."
+      },
+      "conceitosChave": [
+        "Conectivos: contraste"
+      ],
+      "fundamentacao": "Texto ing-tec-t08, 2º parágrafo: “Backups are stored in a different zone from the primary instance; however, they remain in the same region unless you enable cross-region copies”; Cambridge Dictionary, verbetes ‘however’ e ‘nevertheless’."
+    },
+    {
+      "id": "ing-tec-039",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t08",
+      "enunciadoBase": "Considere que, em uma instância com alta disponibilidade habilitada, um usuário exclui acidentalmente uma tabela e, minutos depois, a equipe precisa recuperá-la. Segundo a documentação, essa recuperação",
+      "variantesEnunciado": [
+        "Em um banco gerenciado com HA ativa, um operador executou por engano um comando que apagou uma tabela de produção. De acordo com o texto, para restaurar a tabela,",
+        "Suponha que uma tabela tenha sido descartada por erro em uma instância que mantém réplica standby síncrona. À luz da documentação, a recuperação dos dados excluídos"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "pode ser feita pela promoção da réplica standby, que mantém uma cópia anterior à exclusão por até 120 segundos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A standby recebe toda gravação de forma síncrona, inclusive a exclusão, “replicated to the standby within milliseconds”. Os 60 a 120 segundos referem-se ao tempo de failover, e não a um atraso de replicação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "deve ser feita a partir da réplica de leitura, pois, sendo síncrona, ela ainda contém a tabela excluída.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A réplica de leitura é assíncrona (“updated asynchronously”), e não síncrona. Seu pequeno atraso não é mecanismo confiável de recuperação, e o texto não a indica para esse fim."
+        },
+        {
+          "id": "opt-3",
+          "texto": "é impossível, já que logs de transação só são arquivados uma vez por dia, na janela de manutenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Uma vez por dia é a frequência do backup completo; os logs de transação são arquivados “every five minutes”, o que permite a recuperação para um ponto no tempo dentro do período de retenção."
+        },
+        {
+          "id": "opt-4",
+          "texto": "dispensa qualquer ação, pois o failover automático desfaz operações que causem perda de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O failover só ocorre quando a primária fica indisponível e não desfaz operações. O texto é explícito: “HA does not protect against logical errors”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "depende dos backups e da recuperação para um ponto no tempo, pois a exclusão é replicada para a standby em milissegundos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Exclusão acidental é erro lógico, e “HA does not protect against logical errors: if a user drops a table, the deletion is replicated to the standby within milliseconds”. A saída é o backup com logs arquivados a cada cinco minutos, que permite “point-in-time recovery”.",
+          "versaoInvertidaFalsa": "Segundo a documentação, a tabela excluída pode ser recuperada com a promoção da réplica standby, que não recebe exclusões feitas por usuários."
+        }
+      ],
+      "pegadinhaFCC": "Confusão entre HA (disponibilidade diante de falha de infraestrutura) e backup (recuperação de dados). Os distratores trocam síncrono por assíncrono e o tempo de failover por atraso de replicação.",
+      "resumoFlashcard": {
+        "pergunta": "Por que a alta disponibilidade não recupera uma tabela apagada por engano?",
+        "resposta": "Porque a standby replica cada gravação de forma síncrona, inclusive a exclusão, em milissegundos. Erros lógicos se recuperam com backup e recuperação para um ponto no tempo (point-in-time recovery)."
+      },
+      "conceitosChave": [
+        "Backup × alta disponibilidade",
+        "Inferência"
+      ],
+      "fundamentacao": "Texto ing-tec-t08, 2º e 4º parágrafos: “transaction logs are archived every five minutes, which allows point-in-time recovery”; “HA does not protect against logical errors”."
+    },
+    {
+      "id": "ing-tec-040",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Documentação de software e de APIs",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "ing-tec-t08",
+      "enunciadoBase": "Sobre a réplica standby, as réplicas de leitura e o endpoint da instância descritos na documentação do serviço gerenciado de banco de dados, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Uma equipe planeja a arquitetura de um sistema hipotético sobre o serviço gerenciado de banco de dados descrito no texto. Quanto a réplicas e conexões, considere as afirmativas abaixo.",
+        "Com base no 3º e no 4º parágrafos da documentação de nuvem, que tratam de failover, réplicas e conexões das aplicações, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Réplicas de leitura são atualizadas de forma assíncrona e, por isso, podem ficar ligeiramente defasadas em relação à primária.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Read replicas are updated asynchronously and may therefore lag slightly behind the primary”."
+        },
+        {
+          "texto": "As aplicações devem conectar-se pelo endpoint da instância, e não por endereços IP, já que o endpoint é atualizado após um failover.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Applications should connect through the instance endpoint rather than through IP addresses, since the endpoint is updated to point to the new primary after a failover”."
+        },
+        {
+          "texto": "A réplica standby pode ser usada para descarregar consultas de leitura da instância primária.",
+          "verdadeira": false,
+          "explicacao": "Falsa. “The standby replica cannot be used to serve read traffic”. Para descarregar consultas, o texto indica criar uma réplica de leitura."
+        },
+        {
+          "texto": "Se a instância primária ficar indisponível, a standby é promovida automaticamente, em geral entre 60 e 120 segundos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “the service promotes the standby automatically, usually within 60 to 120 seconds”."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I, II e IV reproduzem o texto: réplica de leitura assíncrona e possivelmente defasada, conexão pelo endpoint (atualizado após o failover) e promoção automática da standby em 60 a 120 segundos. A III é falsa, pois a standby “cannot be used to serve read traffic”.",
+          "versaoInvertidaFalsa": "Segundo a documentação, a réplica standby pode atender ao tráfego de leitura, dispensando a criação de réplicas de leitura para descarregar consultas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e II estão corretas, mas a IV também está: a promoção da standby é automática e ocorre “usually within 60 to 120 seconds”. A alternativa omite uma afirmativa verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, que contraria o texto (a standby não atende leituras), e omite a I e a IV, ambas fiéis à documentação sobre réplicas de leitura e promoção automática."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa: quem descarrega consultas é a réplica de leitura (“create a read replica instead”). A alternativa ainda omite a II, verdadeira quanto ao uso do endpoint."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a III, falsa, e omite a I e a II, que descrevem corretamente a replicação assíncrona das réplicas de leitura e a conexão pelo endpoint da instância."
+        }
+      ],
+      "pegadinhaFCC": "Troca de papéis entre réplica standby (síncrona, só para failover, não atende leitura) e réplica de leitura (assíncrona, para descarregar consultas). É a confusão clássica em documentação de nuvem.",
+      "resumoFlashcard": {
+        "pergunta": "No banco gerenciado, qual é a diferença entre réplica standby e réplica de leitura?",
+        "resposta": "A standby recebe gravações de forma síncrona, serve apenas ao failover automático e não atende leituras. A réplica de leitura é assíncrona, pode ficar levemente defasada e serve para descarregar consultas."
+      },
+      "conceitosChave": [
+        "Backup × alta disponibilidade",
+        "Scanning: informação específica"
+      ],
+      "fundamentacao": "Texto ing-tec-t08, 3º e 4º parágrafos: “usually within 60 to 120 seconds”; “The standby replica cannot be used to serve read traffic”; “Read replicas are updated asynchronously and may therefore lag slightly behind the primary”."
+    }
+  ]
+}

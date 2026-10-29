@@ -1,0 +1,569 @@
+{
+  "materiaSlug": "lingua-inglesa-tecnica",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "ing-tec-021",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t05",
+      "enunciadoBase": "O trecho do manual do usuário do e-Docs Desktop Client reproduzido no texto tem como finalidade principal",
+      "variantesEnunciado": [
+        "De acordo com a frase inicial do capítulo, o objetivo do trecho do guia do usuário apresentado no texto é",
+        "Considerando o conteúdo do capítulo 3 do guia do e-Docs Desktop Client como um todo, seu propósito central é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "comparar diferentes tipos de certificado digital disponíveis no mercado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto apenas pressupõe que o certificado esteja instalado (“make sure that your digital certificate is installed”). Não há comparação entre tipos ou fornecedores de certificado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "explicar à autoridade emissora como desbloquear certificados digitais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O manual se dirige ao usuário do cliente e apenas o orienta a procurar a autoridade emissora em caso de bloqueio (“you will have to contact the issuing authority to unlock it”). O público não é a autoridade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "descrever a política de retenção de documentos nos processos eletrônicos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O histórico de versões é mencionado como garantia de rastreabilidade (“every change can be traced”), mas o texto não trata de prazos de retenção nem de políticas de guarda de documentos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "orientar o usuário sobre como assinar digitalmente documentos e enviá-los a um processo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A primeira frase anuncia o propósito: “This chapter explains how to sign documents digitally and submit them to a case file”. Os parágrafos seguintes detalham assinatura, edição, envio e automação, sempre em tom instrucional (imperativos como “click Sign” e “Keep it”).",
+          "versaoInvertidaFalsa": "O trecho do manual tem como finalidade principal orientar a autoridade emissora sobre o desbloqueio de certificados digitais dos usuários."
+        },
+        {
+          "id": "opt-5",
+          "texto": "apresentar as novidades da versão mais recente do cliente e-Docs Desktop.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Apresentar novidades de versão é função de release notes. O texto é um capítulo de guia do usuário, com procedimentos passo a passo, e não menciona versões do software."
+        }
+      ],
+      "pegadinhaFCC": "Em manuais, o propósito costuma vir explícito na frase de abertura (‘This chapter explains…’). Os distratores ampliam detalhes periféricos, como a autoridade emissora e o histórico de versões.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar rapidamente o propósito de um capítulo de manual do usuário em inglês?",
+        "resposta": "Pela frase de abertura, que costuma anunciar o objetivo (‘This chapter explains how to…’), e pelo uso de imperativos nas instruções. No texto, o capítulo ensina a assinar documentos e enviá-los a um processo."
+      },
+      "conceitosChave": ["Ideia principal do texto", "Skimming"],
+      "fundamentacao": "Texto ing-tec-t05 (e-Docs Desktop Client), 1º parágrafo: “This chapter explains how to sign documents digitally and submit them to a case file”."
+    },
+    {
+      "id": "ing-tec-022",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t05",
+      "enunciadoBase": "Segundo o manual do e-Docs Desktop Client, se o usuário digitar o PIN do certificado incorretamente três vezes seguidas,",
+      "variantesEnunciado": [
+        "De acordo com o 2º parágrafo do manual, a consequência de errar o PIN do certificado três vezes consecutivas é que",
+        "Conforme o guia do usuário, caso o PIN do certificado digital seja informado de forma errada três vezes em sequência,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o cliente redefinirá o PIN automaticamente e enviará o novo código ao e-mail cadastrado pelo usuário.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O manual é taxativo: “The client cannot reset the PIN on your behalf”. A expressão ‘on your behalf’ significa ‘em seu nome’, e o texto não menciona envio de código por e-mail."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o certificado será bloqueado, e o desbloqueio dependerá de contato com a autoridade emissora.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto informa: “If you enter an incorrect PIN three times in a row, the certificate will be locked, and you will have to contact the issuing authority to unlock it”. ‘In a row’ equivale a ‘seguidas’, e ‘locked’ a ‘bloqueado’.",
+          "versaoInvertidaFalsa": "Segundo o manual, após três tentativas incorretas de PIN, o próprio cliente e-Docs redefine o PIN do usuário, sem necessidade de contato externo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o documento selecionado será excluído do painel de anexos do processo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nada no texto relaciona erro de PIN à exclusão de documentos. A exclusão é tratada em outro parágrafo, e só é possível enquanto o processo está em rascunho (“still in draft status”)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o botão Sign deixará de ser exibido até que o computador seja reiniciado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O botão Sign só deixa de aparecer quando não há certificado válido detectado (“unless a valid certificate is detected”). O texto não fala em reiniciar o computador."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o processo retornará ao status de rascunho, o que permitirá editar os documentos já assinados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Documentos assinados nunca podem ser editados (“Signed documents cannot be edited”), e o texto não prevê retorno do processo ao status de rascunho por erro de PIN."
+        }
+      ],
+      "pegadinhaFCC": "O distrator mais atraente promete solução automática pelo próprio cliente, contrariando ‘The client cannot reset the PIN on your behalf’. Atenção a ‘in a row’ (seguidas).",
+      "resumoFlashcard": {
+        "pergunta": "No e-Docs Desktop Client, o que acontece após três erros seguidos de PIN?",
+        "resposta": "O certificado é bloqueado, e o usuário precisa contatar a autoridade emissora para desbloqueá-lo. O cliente não pode redefinir o PIN em nome do usuário."
+      },
+      "conceitosChave": ["Scanning: informação específica", "Manual do usuário"],
+      "fundamentacao": "Texto ing-tec-t05, 2º parágrafo: “the certificate will be locked, and you will have to contact the issuing authority to unlock it. The client cannot reset the PIN on your behalf”."
+    },
+    {
+      "id": "ing-tec-023",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t05",
+      "enunciadoBase": "De acordo com o manual, um usuário que precise alterar o conteúdo de um documento já assinado no e-Docs Desktop Client deve",
+      "variantesEnunciado": [
+        "Conforme o 3º parágrafo do guia, para modificar o conteúdo de um documento após assiná-lo, o procedimento correto é",
+        "Segundo as instruções do manual sobre documentos assinados, quem precisar corrigir um arquivo depois da assinatura deve"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "editar o arquivo diretamente no painel de anexos, pois a assinatura é refeita automaticamente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O manual veda a edição: “Signed documents cannot be edited”. Não existe reassinatura automática; a nova versão precisa ser assinada pelo próprio usuário (“sign it again”)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "excluir o documento assinado a qualquer tempo e anexar a versão corrigida sem nova assinatura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Há dois erros. A exclusão só é possível “while the case file is still in draft status”, e não a qualquer tempo. Além disso, a nova versão deve ser assinada novamente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "carregar uma nova versão e assiná-la novamente, permanecendo a versão anterior no histórico.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O texto orienta: “upload a new version and sign it again. The previous version remains in the file history, which ensures that every change can be traced”. O histórico garante a rastreabilidade das alterações.",
+          "versaoInvertidaFalsa": "Segundo o manual, para alterar um documento assinado, basta editá-lo no painel de anexos, e a versão anterior é descartada do histórico."
+        },
+        {
+          "id": "opt-4",
+          "texto": "solicitar à autoridade emissora a revogação da assinatura antes de editar o documento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autoridade emissora só é mencionada para desbloquear certificados após três erros de PIN. O texto não prevê revogação de assinatura nem permite editar documentos assinados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "configurar uma pasta monitorada, que assina automaticamente as novas versões dos arquivos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pasta monitorada apenas anexa arquivos automaticamente; a assinatura continua manual: “they still have to be signed one by one”. A alternativa atribui à automação uma função que o texto nega."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores combinam informações verdadeiras de outros parágrafos (exclusão em rascunho, pasta monitorada, autoridade emissora) com generalizações ou funções que o texto não prevê.",
+      "resumoFlashcard": {
+        "pergunta": "Como alterar um documento já assinado no e-Docs Desktop Client?",
+        "resposta": "Carregando uma nova versão e assinando-a novamente, já que documentos assinados não podem ser editados. A versão anterior permanece no histórico, o que garante a rastreabilidade."
+      },
+      "conceitosChave": ["Manual do usuário"],
+      "fundamentacao": "Texto ing-tec-t05, 3º parágrafo: “Signed documents cannot be edited. If you need to change the content of a document after signing it, upload a new version and sign it again”."
+    },
+    {
+      "id": "ing-tec-024",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t05",
+      "enunciadoBase": "No 2º parágrafo do manual, no trecho “you will have to contact the issuing authority to unlock it”, o pronome “it” refere-se a",
+      "variantesEnunciado": [
+        "Na instrução sobre o bloqueio após três erros de PIN, o pronome “it”, em “to unlock it”, retoma",
+        "O termo “it”, no segmento “contact the issuing authority to unlock it”, tem como referente, no contexto do manual,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "“the certificate”.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na mesma frase, o texto diz que “the certificate will be locked”; o verbo “unlock” (desbloquear) retoma esse bloqueio. Logo, “it” é o certificado, que deve ser desbloqueado pela autoridade emissora.",
+          "versaoInvertidaFalsa": "No trecho, o pronome “it” retoma “the issuing authority”, indicando que a autoridade emissora é que precisa ser desbloqueada."
+        },
+        {
+          "id": "opt-2",
+          "texto": "“the issuing authority”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A autoridade emissora é quem desbloqueia, e não o que é desbloqueado. Ela é o objeto de ‘contact’; o pronome “it” é objeto de ‘unlock’ e retoma o elemento bloqueado."
+        },
+        {
+          "id": "opt-3",
+          "texto": "“the Attachments panel”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O painel de anexos aparece na frase anterior, apenas como local onde o documento é selecionado. Nada indica que ele seja bloqueado ou precise ser desbloqueado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "“the case file”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O processo (case file) não é bloqueado por erro de PIN. O verbo ‘locked’ refere-se expressamente a “the certificate”, que é o antecedente lógico de “it”."
+        },
+        {
+          "id": "opt-5",
+          "texto": "“an incorrect PIN”.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não se ‘desbloqueia’ um PIN incorreto. O PIN errado é a causa do bloqueio, e o objeto bloqueado (e depois desbloqueado) é o certificado."
+        }
+      ],
+      "pegadinhaFCC": "O substantivo mais próximo do pronome (‘the issuing authority’) não é o referente. A pista está no par ‘locked’/‘unlock’: desbloqueia-se o que foi bloqueado.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar o referente de ‘it’ em ‘contact the issuing authority to unlock it’?",
+        "resposta": "Pelo sentido do verbo: desbloqueia-se o que foi bloqueado, e a frase diz que ‘the certificate will be locked’. Logo, ‘it’ é o certificado, e não a autoridade emissora, mesmo sendo ela o termo mais próximo."
+      },
+      "conceitosChave": ["Referência pronominal"],
+      "fundamentacao": "Texto ing-tec-t05, 2º parágrafo: “the certificate will be locked, and you will have to contact the issuing authority to unlock it”."
+    },
+    {
+      "id": "ing-tec-025",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "lacunas",
+      "textoApoioId": "ing-tec-t05",
+      "enunciadoBase": "Considere os trechos do manual “The client will not display the Sign button unless a valid certificate is detected” e “they still have to be signed one by one”. Mantido o sentido original, as palavras “unless” e “still” podem ser traduzidas, respectivamente, por …… e ……. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "No 1º e no 5º parágrafos do guia, as palavras “unless”, em “unless a valid certificate is detected”, e “still”, em “they still have to be signed one by one”, equivalem, no contexto, a …… e ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao traduzir o manual, um técnico verteu “unless a valid certificate is detected” por ‘…… seja detectado um certificado válido’ e “they still have to be signed one by one” por ‘eles …… precisam ser assinados um a um’. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a menos que − agora",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘A menos que’ traduz bem “unless”, mas “still” não significa ‘agora’ (now). No contexto, “still” indica que a exigência de assinatura individual continua valendo apesar da automação."
+        },
+        {
+          "id": "opt-2",
+          "texto": "desde que − ainda",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Desde que’ (provided that) inverte o sentido. O botão não aparece ‘desde que’ haja certificado; ele só aparece se houver certificado. “unless” equivale a ‘a menos que’, ‘se não’."
+        },
+        {
+          "id": "opt-3",
+          "texto": "porque − ainda",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Porque’ (because) atribui valor causal a “unless”, que é condicional negativo. O botão não deixa de aparecer ‘porque’ um certificado é detectado; o texto diz o oposto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "embora − mesmo assim",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Embora’ traduz ‘although’ (concessão), e não “unless” (condição negativa). Ainda que ‘mesmo assim’ pudesse aproximar-se de “still”, a primeira lacuna invalida a alternativa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a menos que − ainda",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “unless” é condicional negativo (‘a menos que’, ‘salvo se’): sem certificado válido detectado, o botão Sign não aparece. “still” significa ‘ainda’: mesmo com a pasta monitorada, os arquivos ainda precisam ser assinados um a um.",
+          "versaoInvertidaFalsa": "No manual, “unless” equivale a ‘desde que’, de modo que o botão Sign deixa de aparecer quando um certificado válido é detectado."
+        }
+      ],
+      "pegadinhaFCC": "‘Unless’ é condição negativa (‘a menos que’) e costuma ser confundido com ‘desde que’ (provided that) ou com ‘embora’ (although). A troca inverte o sentido da instrução.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o sentido de ‘unless’ e como reescrever ‘X will not happen unless Y’?",
+        "resposta": "‘Unless’ significa ‘a menos que’, ‘salvo se’, equivalente a ‘if… not’. ‘X will not happen unless Y’ quer dizer que X só acontece se Y ocorrer."
+      },
+      "conceitosChave": ["Conectivos: condição", "Falsos cognatos"],
+      "fundamentacao": "Texto ing-tec-t05, 1º e 5º parágrafos: “The client will not display the Sign button unless a valid certificate is detected”; “they still have to be signed one by one”; Cambridge Dictionary, verbetes ‘unless’ e ‘still’."
+    },
+    {
+      "id": "ing-tec-026",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Ideia principal e propósito do texto",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t06",
+      "enunciadoBase": "O alerta de segurança sobre o Tollbridge Gateway reproduzido no texto tem como propósito central",
+      "variantesEnunciado": [
+        "Considerando as quatro seções do advisory (Summary, Impact, Remediation e Detection), a finalidade principal do texto é",
+        "O objetivo do documento de segurança publicado sobre o console de administração do gateway é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "anunciar o lançamento da versão 3.4.2 do gateway, destacando seus novos recursos de roteamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A versão 3.4.2 é citada apenas como correção (“which fixes the issue”). O texto não é uma nota de lançamento de recursos; é um alerta sobre uma vulnerabilidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "relatar a exploração em massa de uma falha já corrigida em todas as versões do gateway.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto declara que “We are not aware of any active exploitation at the time of publication”. Além disso, a falha atinge as versões 3.2.0 a 3.4.1 e só está corrigida na 3.4.2."
+        },
+        {
+          "id": "opt-3",
+          "texto": "informar sobre uma vulnerabilidade de desvio de autenticação no console de administração e orientar sua correção e detecção.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O advisory descreve a falha (“A vulnerability has been identified in the administration console”), avalia o impacto, recomenda atualização ou contorno (Remediation) e indica como detectar comprometimento (Detection). Essa é a estrutura típica de um alerta de segurança.",
+          "versaoInvertidaFalsa": "O alerta tem como propósito central divulgar os novos recursos de roteamento da versão 3.4.2 do gateway, sem relação com falhas de segurança."
+        },
+        {
+          "id": "opt-4",
+          "texto": "comunicar que o código de prova de conceito da falha já foi publicado por pesquisadores independentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto apenas prevê que isso possa ocorrer em breve: “we expect proof-of-concept code to become public soon”. A expectativa de publicação não equivale a publicação já ocorrida."
+        },
+        {
+          "id": "opt-5",
+          "texto": "recomendar a desativação definitiva do console de administração em todas as instalações.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A desativação ou restrição do console é uma medida temporária (“as a temporary workaround”), recomendada apenas se a atualização imediata não for viável. A solução definitiva é atualizar para a 3.4.2."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores transformam previsões em fatos (código de prova de conceito publicado), medidas temporárias em definitivas e a correção em lançamento de recursos.",
+      "resumoFlashcard": {
+        "pergunta": "Quais seções costuma ter um security advisory e qual é sua finalidade?",
+        "resposta": "Resumo da vulnerabilidade, impacto, correção ou contorno (remediation) e detecção de comprometimento. A finalidade é informar a falha e orientar os administradores a corrigi-la e a verificar se foram afetados."
+      },
+      "conceitosChave": ["Advisory de segurança", "Ideia principal do texto"],
+      "fundamentacao": "Texto ing-tec-t06 (Security Advisory SA-2026-07), 1º a 4º parágrafos, em especial: “A vulnerability has been identified in the administration console of Tollbridge Gateway”."
+    },
+    {
+      "id": "ing-tec-027",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Localização de informações específicas",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t06",
+      "enunciadoBase": "De acordo com o alerta, administradores que queiram verificar se um sistema pode ter sido comprometido devem procurar, nos registros de acesso,",
+      "variantesEnunciado": [
+        "Segundo a seção “Detection” do advisory, o indício a ser buscado nos logs de acesso para identificar possível comprometimento consiste em",
+        "Conforme o último parágrafo do alerta de segurança, para determinar se o gateway foi comprometido, deve-se pesquisar nos access logs"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "requisições ao caminho /admin com senhas em branco no corpo da mensagem.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor vazio buscado está no cabeçalho X-Forwarded-User, e não em senha no corpo da requisição. A falha, aliás, dispensa senha: o atacante finge ser um usuário legítimo “without knowing any password”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "tentativas de login malsucedidas repetidas a partir de endereços IP confiáveis.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ataque não envolve tentativas de login, mas o desvio da verificação de login (“bypass the login check”). Os IPs confiáveis aparecem apenas na solução de contorno, como restrição de acesso."
+        },
+        {
+          "id": "opt-3",
+          "texto": "alterações de regras de roteamento que estejam associadas a chamados de mudança devidamente autorizados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o critério. Suspeitas são as alterações que não podem ser associadas a um chamado autorizado: “Any change to routing rules that cannot be matched to an authorized change ticket should be treated as suspicious”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "códigos de prova de conceito enviados ao console antes da data de publicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O texto não manda buscar códigos de prova de conceito nos logs; apenas prevê que esse código possa tornar-se público em breve (“we expect proof-of-concept code to become public soon”)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "requisições ao caminho /admin que contenham o cabeçalho X-Forwarded-User com valor vazio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A seção de detecção orienta a busca de “requests to the /admin path that contain the X-Forwarded-User header with an empty value”. Esse é o rastro característico da exploração descrita no resumo, feita com o cabeçalho manipulado.",
+          "versaoInvertidaFalsa": "Segundo o alerta, o indício de comprometimento a ser buscado nos logs são tentativas repetidas de login malsucedidas a partir de endereços IP confiáveis."
+        }
+      ],
+      "pegadinhaFCC": "O distrator mais perigoso inverte a negação de ‘cannot be matched to an authorized change ticket’. Questões de scanning exigem atenção a negações e qualificadores.",
+      "resumoFlashcard": {
+        "pergunta": "Segundo o advisory SA-2026-07, que indícios sugerem comprometimento do Tollbridge Gateway?",
+        "resposta": "Requisições ao caminho /admin com o cabeçalho X-Forwarded-User vazio e alterações de regras de roteamento sem chamado de mudança autorizado. Nesse caso, todas as credenciais armazenadas devem ser trocadas."
+      },
+      "conceitosChave": ["Scanning: informação específica", "Advisory de segurança"],
+      "fundamentacao": "Texto ing-tec-t06, 4º parágrafo: “search the access logs for requests to the /admin path that contain the X-Forwarded-User header with an empty value”."
+    },
+    {
+      "id": "ing-tec-028",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Vocabulário técnico de TI",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t06",
+      "enunciadoBase": "No 1º parágrafo do alerta, em “the attacker can pretend to be a legitimate user without knowing any password”, o verbo “pretend” equivale, no contexto, a",
+      "variantesEnunciado": [
+        "Na seção “Summary” do advisory, o verbo “pretend”, usado para descrever a ação do atacante em relação a um usuário legítimo, pode ser traduzido por",
+        "Considerando o trecho “In other words, the attacker can pretend to be a legitimate user”, a tradução adequada de “pretend” é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "fingir.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “pretend” é falso cognato e significa ‘fingir’, ‘fazer-se passar por’. O atacante finge ser um usuário legítimo, o que é coerente com a falha descrita, em que o console o trata como “an already authenticated administrator”.",
+          "versaoInvertidaFalsa": "No trecho, “pretend” significa ‘pretender’, indicando que o atacante apenas planeja tornar-se um usuário legítimo no futuro."
+        },
+        {
+          "id": "opt-2",
+          "texto": "pretender.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a armadilha do falso cognato. ‘Pretender’, no sentido de ‘ter a intenção de’, traduz-se por ‘intend’ ou ‘plan’. O texto descreve um disfarce, e não uma intenção."
+        },
+        {
+          "id": "opt-3",
+          "texto": "tentar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Tentar’ corresponderia a ‘try’ ou ‘attempt’. O texto não fala em tentativa, mas em êxito: o console efetivamente trata o atacante como administrador autenticado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "precisar.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Precisar’ traduz ‘need’. Não há ideia de necessidade no trecho; a expressão “In other words” introduz uma reformulação da falha, que permite ao atacante se passar por usuário legítimo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "deixar de.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ‘Deixar de’ corresponderia a ‘stop’ ou ‘fail to’ e inverteria o sentido. O atacante não deixa de ser usuário legítimo; ele se faz passar por um sem conhecer senha alguma."
+        }
+      ],
+      "pegadinhaFCC": "Falso cognato clássico: ‘pretend’ é ‘fingir’, e não ‘pretender’ (to intend). A FCC coloca a tradução enganosa como segunda opção mais atraente.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o significado de ‘pretend’ e como se diz ‘pretender’ em inglês?",
+        "resposta": "‘Pretend’ significa ‘fingir’, ‘fazer-se passar por’. ‘Pretender’ (ter a intenção) traduz-se por ‘intend’ ou ‘plan’."
+      },
+      "conceitosChave": ["Falsos cognatos"],
+      "fundamentacao": "Texto ing-tec-t06, 1º parágrafo: “In other words, the attacker can pretend to be a legitimate user without knowing any password”; Cambridge Dictionary, verbete ‘pretend’."
+    },
+    {
+      "id": "ing-tec-029",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Inferência, referência e conectivos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "textoApoioId": "ing-tec-t06",
+      "enunciadoBase": "No 3º parágrafo do alerta, a frase “Unless an immediate upgrade is feasible, the console should be disabled or restricted to trusted IP addresses as a temporary workaround” pode ser corretamente compreendida como:",
+      "variantesEnunciado": [
+        "Na seção “Remediation”, a orientação iniciada por “Unless an immediate upgrade is feasible” mantém seu sentido original na seguinte paráfrase:",
+        "Considerando o valor do conectivo “Unless” na recomendação sobre o console de administração, a interpretação correta da frase em que ele aparece é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Caso seja viável atualizar imediatamente, o console deve ser desativado ou restrito a endereços IP confiáveis.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte a condição. “Unless” equivale a ‘if… not’: a medida de contorno é para quem não consegue atualizar já. Quem pode atualizar deve simplesmente instalar a versão 3.4.2."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Mesmo que a atualização imediata seja viável, o console deve ser desativado de forma permanente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atribui a “Unless” valor concessivo (‘even if’) e transforma em permanente uma medida descrita como “a temporary workaround”. As duas interpretações contrariam o texto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Como a atualização imediata é inviável, o console deve ser restrito a endereços IP confiáveis em caráter definitivo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atribui a “Unless” valor causal, afirmando como fato que a atualização é inviável. O texto apresenta uma hipótese, e a restrição é temporária, e não definitiva."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Se não for viável atualizar imediatamente, o console deve ser desativado ou restrito a endereços IP confiáveis, como paliativo temporário.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. “Unless” expressa condição negativa (‘a menos que’, ‘se não’). Se a atualização imediata não for possível, aplica-se o contorno temporário (“temporary workaround”), que, segundo o texto, “only reduces the attack surface”.",
+          "versaoInvertidaFalsa": "A frase significa que, caso a atualização imediata seja viável, o console deve ser desativado ou restrito a endereços IP confiáveis em caráter temporário."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Desde que a atualização imediata seja viável, a solução de contorno temporária elimina a vulnerabilidade, dispensando a instalação da nova versão.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Além de trocar “Unless” por ‘desde que’, contraria o texto, segundo o qual o contorno “does not remove the vulnerability; it only reduces the attack surface”. Só a versão 3.4.2 corrige a falha."
+        }
+      ],
+      "pegadinhaFCC": "‘Unless’ (condição negativa) é confundido com ‘if’ (condição positiva), ‘even if’ (concessão) e ‘because’ (causa). Há ainda a troca de ‘temporary’ por ‘definitivo’.",
+      "resumoFlashcard": {
+        "pergunta": "Como parafrasear ‘Unless an immediate upgrade is feasible, the console should be disabled’?",
+        "resposta": "‘Se não for viável atualizar imediatamente, o console deve ser desativado’. ‘Unless’ equivale a ‘if… not’ (a menos que), e o contorno é temporário: reduz a superfície de ataque, mas não elimina a falha."
+      },
+      "conceitosChave": ["Conectivos: condição", "Advisory de segurança"],
+      "fundamentacao": "Texto ing-tec-t06, 3º parágrafo: “Unless an immediate upgrade is feasible, the console should be disabled or restricted to trusted IP addresses as a temporary workaround. Note that the workaround does not remove the vulnerability”."
+    },
+    {
+      "id": "ing-tec-030",
+      "materiaSlug": "lingua-inglesa-tecnica",
+      "subtopico": "Manuais e artigos técnicos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "textoApoioId": "ing-tec-t06",
+      "enunciadoBase": "A respeito da vulnerabilidade descrita no alerta de segurança, de seu impacto e das medidas de correção recomendadas, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico de infraestrutura leu o advisory SA-2026-07 para avaliar o risco de um gateway hipotético da organização. Com base no texto, considere as afirmativas abaixo.",
+        "Considerando as seções “Summary”, “Impact” e “Remediation” do alerta de segurança, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A falha permite que um atacante não autenticado altere regras de roteamento e leia credenciais armazenadas.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “Successful exploitation allows the attacker to change routing rules and read stored credentials”, e o atacante é descrito como “An unauthenticated attacker”."
+        },
+        {
+          "texto": "Instalações cujo console só é acessível a partir de uma rede de gerenciamento isolada estão imunes à vulnerabilidade.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Elas são apenas “less exposed; nevertheless, they remain vulnerable to attackers who have already gained a foothold inside that network”."
+        },
+        {
+          "texto": "A solução de contorno reduz a superfície de ataque, mas não elimina a vulnerabilidade.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “the workaround does not remove the vulnerability; it only reduces the attack surface”."
+        },
+        {
+          "texto": "Diante da facilidade de reprodução da falha, os autores esperam que código de prova de conceito se torne público em breve.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. “given how easily the flaw can be reproduced, we expect proof-of-concept code to become public soon”."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. I e III estão corretas, mas a alternativa omite a IV, também verdadeira, pois o texto prevê que o código de prova de conceito se torne público em breve (“we expect proof-of-concept code to become public soon”)."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I, III e IV reproduzem o texto: o atacante não autenticado altera rotas e lê credenciais, o contorno só reduz a superfície de ataque e a prova de conceito deve surgir em breve. A II é falsa porque “nevertheless” introduz a ressalva de que essas instalações continuam vulneráveis.",
+          "versaoInvertidaFalsa": "Segundo o alerta, instalações cujo console só é acessível por uma rede de gerenciamento isolada estão imunes à vulnerabilidade, dispensando qualquer medida."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a II, que ignora o conectivo “nevertheless” (‘ainda assim’): estar menos exposto não é estar imune. E omite I e III, ambas fiéis ao texto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A II é falsa: o texto distingue ‘less exposed’ (menos exposto) de imune e afirma que tais instalações “remain vulnerable”. A alternativa também omite a IV, que é verdadeira."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Omite a I, que está correta: o resumo afirma que a exploração permite alterar regras de roteamento e ler credenciais armazenadas, por atacante não autenticado com acesso de rede ao console."
+        }
+      ],
+      "pegadinhaFCC": "A afirmativa falsa ignora o conectivo ‘nevertheless’ e transforma ‘less exposed’ (menos exposto) em ‘imune’. Graduações de risco são alvo frequente em advisories.",
+      "resumoFlashcard": {
+        "pergunta": "No advisory SA-2026-07, consoles acessíveis só por rede isolada estão protegidos e o que faz a solução de contorno?",
+        "resposta": "Não estão protegidos: estão menos expostos, mas continuam vulneráveis a atacantes já presentes na rede. A solução de contorno só reduz a superfície de ataque; a correção exige a versão 3.4.2."
+      },
+      "conceitosChave": ["Advisory de segurança", "Conectivos: contraste"],
+      "fundamentacao": "Texto ing-tec-t06, 1º a 3º parágrafos: “less exposed; nevertheless, they remain vulnerable”; “we expect proof-of-concept code to become public soon”; “the workaround does not remove the vulnerability; it only reduces the attack surface”."
+    }
+  ]
+}
