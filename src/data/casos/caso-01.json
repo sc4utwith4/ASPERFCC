@@ -27,19 +27,19 @@
             "id": "f1",
             "descricao": "Explica o RAG: o acervo é dividido em trechos, convertido em embeddings e armazenado em banco vetorial; a cada pergunta, os trechos mais semelhantes são recuperados e entregues ao modelo como contexto, ancorando a resposta em fontes do próprio Tribunal.",
             "pontos": 10,
-            "palavrasChave": ["RAG|geração aumentada por recuperação", "embeddings|vetorial|vetores", "trechos|chunks|fragmentos", "recupera|recuperação|recuperados", "como contexto|contexto do modelo|ao modelo|prompt"]
+            "palavrasChave": ["similaridade|busca semântica|busca vetorial", "ancora|ancorada|ancorar|apoiar|apoia|fundamenta|embasada|baseada", "fontes|fonte", "acervo|base de conhecimento", "RAG|geração aumentada por recuperação"]
           },
           {
             "id": "f2",
             "descricao": "Reconhece que o RAG reduz, mas não elimina, a alucinação: o modelo ainda pode inventar citações ou distorcer o trecho recuperado, o que exige citação obrigatória da fonte e verificação.",
             "pontos": 8,
-            "palavrasChave": ["alucinação|alucinar|alucina", "citação|citar|cite|citações", "verificação|verificar|conferência|conferir", "inexistente|inventar|inventa|fabricada", "não elimina|sem eliminar|reduz"]
+            "palavrasChave": ["alucinação|alucinar|alucina", "probabilístico|probabilística|plausível|plausíveis|estatístico|estatística", "distorcer|distorce|distorção", "citação|citar|cite|citações", "verificação|verificar|conferência|conferir"]
           },
           {
             "id": "f3",
             "descricao": "Identifica dados pessoais e sensíveis (saúde) nos autos e fundamenta o tratamento pelo poder público no art. 23 da LGPD (finalidade pública, execução de competências legais) e no art. 11 para os sensíveis, sob os princípios da finalidade e da necessidade (minimização).",
             "pontos": 10,
-            "palavrasChave": ["dados pessoais", "sensíveis|sensível|saúde", "art. 23|artigo 23|competências legais|finalidade pública", "necessidade|minimização|minimizar", "finalidade"]
+            "palavrasChave": ["art. 23|artigo 23|competências legais|finalidade pública", "art. 11|artigo 11|sensíveis", "necessidade|minimização", "finalidade"]
           }
         ]
       },
@@ -52,19 +52,19 @@
             "id": "a1",
             "descricao": "Aponta os riscos concretos do protótipo: índice com a íntegra dos autos, inclusive processos sigilosos e laudos de saúde, sem controle de acesso por perfil e aberto a todos os usuários.",
             "pontos": 8,
-            "palavrasChave": ["controle de acesso|perfil de acesso|permissões|perfil", "sigilo|sigilosos|sigilosas", "íntegra|integral|todos os autos", "600 usuários|todos os usuários"]
+            "palavrasChave": ["acesso indevido|acesso não autorizado|exposição|vazamento", "controle de acesso|permissões", "sigilo|sigilosos|sigilosas", "dados sensíveis|sensíveis"]
           },
           {
             "id": "a2",
             "descricao": "Propõe medidas técnicas: filtrar a recuperação pelas permissões do usuário, excluir do índice os autos sigilosos, pseudonimizar ou mascarar identificadores antes da indexação, exigir citação da fonte (ou recusa quando não houver) e registrar as consultas em log.",
             "pontos": 10,
-            "palavrasChave": ["filtrar|filtro|filtragem", "pseudonimização|anonimização|mascaramento|mascarar", "excluir|exclusão|retirar|remover", "logs|registro|trilha de auditoria", "sem fonte|recusar|recusando"]
+            "palavrasChave": ["pseudonimização|anonimização|mascaramento|mascarar", "excluir|exclusão|retirar|remover", "logs|trilha de auditoria|registro das consultas", "sem fonte|recusar|recusando|recusa|não encontrou|informar que não", "permissões|herdando|herdar"]
           },
           {
             "id": "a3",
             "descricao": "Propõe governança coerente com a RA 24/2024 (precisão e veracidade, proteção de dados, uso responsável): revisão humana obrigatória antes de qualquer uso em minuta, RIPD com o encarregado e cláusulas com o provedor do modelo na condição de operador, vedando uso dos dados para treino.",
             "pontos": 10,
-            "palavrasChave": ["24/2024", "revisão humana|validação humana|supervisão humana", "RIPD|relatório de impacto", "operador|cláusulas|contrato", "veracidade|precisão"]
+            "palavrasChave": ["24/2024", "revisão humana|validação humana|supervisão humana", "RIPD|relatório de impacto|encarregado", "operador|cláusulas", "veracidade|precisão"]
           }
         ]
       },
@@ -83,17 +83,17 @@
             "id": "c2",
             "descricao": "Encaminha o uso como ferramenta de apoio, com responsabilidade de quem assina o documento e monitoramento contínuo dos erros após a implantação.",
             "pontos": 6,
-            "palavrasChave": ["apoio|ferramenta de apoio", "responsabilidade|responsável", "monitoramento|monitorar|acompanhamento"]
+            "palavrasChave": ["apoio|ferramenta de apoio", "quem assina|responsabilidade do servidor|responsabilidade de quem", "monitoramento|monitorar|acompanhamento"]
           }
         ]
       }
     ]
   },
   "respostaPadrao": [
-    "O RAG (geração aumentada por recuperação) divide o acervo em trechos, converte-os em embeddings e os grava em banco vetorial; a cada pergunta, recupera os trechos mais semelhantes e os entrega ao modelo como contexto. A resposta passa a se apoiar em fontes do Tribunal, o que reduz, sem eliminar, a alucinação: o modelo ainda pode inventar acórdão inexistente ou distorcer o trecho, como mostram os 12% de erros.",
+    "O RAG (geração aumentada por recuperação) divide o acervo em trechos, converte-os em embeddings e os grava em banco vetorial; a cada pergunta, recupera por similaridade os trechos mais próximos e os entrega ao modelo como contexto. A resposta passa a se apoiar em fontes do Tribunal, o que reduz, sem eliminar, a alucinação: o modelo segue probabilístico e pode inventar acórdão ou distorcer o trecho, como mostram os 12% de erros.",
     "O protótipo trata dados pessoais e sensíveis, como laudos de saúde, e indexou a íntegra dos autos, inclusive os sob sigilo, sem controle de acesso, para 600 usuários. O tratamento pelo poder público apoia-se no art. 23 da LGPD, para executar competências legais, e no art. 11 quanto aos sensíveis, mas deve respeitar a finalidade e a necessidade: explicar a jurisprudência não exige CPF nem diagnóstico.",
     "Proponho filtrar a recuperação pelo perfil do usuário, herdando as permissões do sistema processual; excluir do índice os autos sigilosos; aplicar pseudonimização ou mascaramento antes da indexação; obrigar a citação do acórdão usado, recusando resposta sem fonte; e manter logs das consultas.",
-    "A RA 24/2024 busca precisão, veracidade e proteção de dados, o que impõe revisão humana obrigatória: nenhuma resposta entra em minuta de voto sem conferência. Cabe ainda elaborar o RIPD com o encarregado e firmar cláusulas com o provedor, como operador, vedando o uso dos dados em treino.",
+    "A RA 24/2024 busca precisão, veracidade e proteção de dados, objetivos que exigem revisão humana obrigatória: nenhuma resposta entra em minuta de voto sem conferência. Cabe ainda elaborar o RIPD com o encarregado e firmar cláusulas com o provedor, como operador, vedando o uso dos dados em treino.",
     "Concluo que a ferramenta não deve ser liberada em 60 dias. A produção fica condicionada a piloto restrito, com métricas de aceite como a taxa de citações corretas, ao uso só como ferramenta de apoio, sob responsabilidade de quem assina, e ao monitoramento contínuo dos erros."
   ],
   "errosComuns": [

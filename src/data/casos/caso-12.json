@@ -1,0 +1,113 @@
+{
+  "id": "caso-12",
+  "titulo": "Implantação de sexta-feira que derrubou o portal do Tribunal",
+  "materiasRelacionadas": ["devops-engenharia-entrega", "engenharia-software", "governanca-ti"],
+  "contexto": [
+    "Considere a seguinte situação hipotética. Numa sexta-feira, às 17h30, a equipe do portal do Tribunal implantou manualmente, direto no servidor de produção, a versão 4.2, que trazia uma nova busca de processos e uma migração de banco de dados que renomeava a coluna “numero_processo”. Às 17h50, o portal passou a retornar erro 500 em todas as buscas e na consulta pública às pautas de julgamento. O único desenvolvedor que conhecia o roteiro de implantação já tinha saído, e o portal só voltou a funcionar às 22h: a reversão levou 4 horas e 10 minutos, porque a migração não tinha script de volta e foi preciso restaurar o backup do banco.",
+    "A esteira de integração contínua executa testes unitários, mas o teste que falhou havia sido marcado como “ignorado” para não atrasar a entrega, e não existe ambiente de homologação com dados representativos. O objetivo de nível de serviço (SLO) do portal é de 99,5% de disponibilidade mensal. Na segunda-feira, a chefia determinou a abertura de processo disciplinar contra o desenvolvedor que executou a implantação e proibiu qualquer implantação às sextas-feiras."
+  ],
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "itensComando": [
+    "a) Calcule o error budget mensal do portal (considere mês de 30 dias), avalie o impacto do incidente sobre ele e indique a consequência para as próximas entregas.",
+    "b) Explique como CI/CD e as estratégias blue-green, canary e feature flags teriam reduzido o impacto, incluindo o tratamento da migração de banco e o rollback.",
+    "c) Avalie as medidas adotadas pela chefia à luz da prática de postmortem sem culpados.",
+    "d) Conclua com um plano de ação."
+  ],
+  "limiteLinhas": 30,
+  "tempoSugeridoMin": 50,
+  "espelho": {
+    "pilares": [
+      {
+        "id": "fundamento",
+        "titulo": "Fundamento técnico e normativo",
+        "pontos": 27,
+        "itens": [
+          {
+            "id": "f1",
+            "descricao": "Define SLO e error budget (1 − SLO, a indisponibilidade tolerada no período) e a política de error budget: esgotado o orçamento, congelam-se novas funcionalidades e prioriza-se a confiabilidade.",
+            "pontos": 9,
+            "palavrasChave": ["indisponibilidade tolerada|tolerância|1 − SLO", "política de error budget|política", "congeladas|congelar|congelamento", "confiabilidade"]
+          },
+          {
+            "id": "f2",
+            "descricao": "Explica CI/CD e as estratégias de implantação: blue-green (ambiente paralelo e troca de tráfego), canary (fração do tráfego com monitoramento), feature flags (desligar a funcionalidade sem reimplantar) e rollback rápido.",
+            "pontos": 10,
+            "palavrasChave": ["ambiente paralelo|dois ambientes", "fração do tráfego|parcela do tráfego", "sem reimplantar|desligada", "processo reproduzível|reproduzível|automatizada", "volta ao antigo|troca de tráfego|em segundos"]
+          },
+          {
+            "id": "f3",
+            "descricao": "Conceitua o postmortem sem culpados: foco nas causas sistêmicas, linha do tempo e ações corretivas com responsáveis e prazos, preservando a segurança para relatar falhas.",
+            "pontos": 8,
+            "palavrasChave": ["linha do tempo", "ações corretivas", "sistêmica|sistêmicas", "inibe relatos|segurança psicológica|relatar", "responsáveis e prazos"]
+          }
+        ]
+      },
+      {
+        "id": "aplicacao",
+        "titulo": "Aplicação ao caso do TCE-GO",
+        "pontos": 29,
+        "itens": [
+          {
+            "id": "a1",
+            "descricao": "Calcula: 0,5% de 720 horas = 3,6 horas (216 minutos); a indisponibilidade de 250 minutos esgotou o orçamento e violou o SLO (cerca de 99,42% no mês).",
+            "pontos": 10,
+            "palavrasChave": ["720 horas", "3,6 horas|216 minutos", "250 minutos", "esgotou|esgotado|99,42"]
+          },
+          {
+            "id": "a2",
+            "descricao": "Aplica as práticas ao caso: gates que impedem o teste ignorado, fim da implantação manual, homologação com dados representativos, canary que detectaria o erro 500 e migração no padrão expandir e contrair, com script de reversão.",
+            "pontos": 11,
+            "palavrasChave": ["barrado|barrar|gates", "expandir e contrair|expand-contract", "compatível com ambas|retrocompatível", "script de reversão", "impacto mínimo|detectado"]
+          },
+          {
+            "id": "a3",
+            "descricao": "Avalia a chefia: o processo disciplinar como primeira reação contraria o postmortem sem culpados, pois a falha é do processo, e inibe relatos; proibir sextas-feiras trata o sintoma.",
+            "pontos": 8,
+            "palavrasChave": ["primeira reação|primeira resposta|bode expiatório|culpar", "sintoma", "punição|punir", "qualquer dia|não resolve|não ataca a causa", "depender de uma pessoa|uma só pessoa|conhecimento concentrado"]
+          }
+        ]
+      },
+      {
+        "id": "conclusao",
+        "titulo": "Conclusão e encaminhamento",
+        "pontos": 14,
+        "itens": [
+          {
+            "id": "c1",
+            "descricao": "Propõe plano de ação: postmortem com ações, esteira com gates, canary com rollback automático, migrações reversíveis e runbook documentado.",
+            "pontos": 8,
+            "palavrasChave": ["runbook|roteiro documentado", "rollback automático|reversão automática", "gates", "responsáveis e prazos|prazos"]
+          },
+          {
+            "id": "c2",
+            "descricao": "Prevê monitoramento com alertas baseados no SLI e métricas DORA, como taxa de falha em mudanças e tempo de recuperação.",
+            "pontos": 6,
+            "palavrasChave": ["alertas|alerta", "SLI", "DORA|taxa de falha|tempo de recuperação"]
+          }
+        ]
+      }
+    ]
+  },
+  "respostaPadrao": [
+    "Com SLO de 99,5% ao mês, o error budget, indisponibilidade tolerada, é 0,5% de 720 horas (30 dias), ou seja, 3,6 horas, 216 minutos. A queda das 17h50 às 22h00, 250 minutos, esgotou o orçamento e violou o SLO, que ficou em cerca de 99,42%. Pela política de error budget, novas funcionalidades devem ser congeladas e a equipe deve priorizar a confiabilidade da entrega até que o orçamento se recomponha.",
+    "Uma esteira de CI/CD automatizada teria barrado, por gates, o teste ignorado e substituído a implantação manual por processo reproduzível, validado antes em homologação com dados representativos. No blue-green, a versão nova sobe em ambiente paralelo e o tráfego volta ao antigo em segundos; no canary, só uma fração do tráfego a recebe, e o erro 500 seria detectado com impacto mínimo; com feature flags, a busca nova seria desligada sem reimplantar.",
+    "A migração deveria seguir o padrão expandir e contrair: criar a coluna nova, manter o código compatível com ambas e remover a antiga só depois, com script de reversão, o que dispensaria restaurar backup no rollback.",
+    "O processo disciplinar como primeira reação contraria o postmortem sem culpados: a falha é sistêmica, porque o processo permitia ignorar testes, implantar à mão e depender de uma pessoa, e a punição inibe relatos. Proibir sextas-feiras trata o sintoma; a meta é implantar com segurança em qualquer dia.",
+    "Plano de ação: postmortem com linha do tempo e ações corretivas com responsáveis e prazos; esteira com gates; canary com rollback automático; migrações reversíveis; runbook documentado; e alertas por SLI, com métricas DORA como taxa de falha em mudanças e tempo de recuperação."
+  ],
+  "errosComuns": [
+    "Errar o cálculo do error budget (por exemplo, usar 0,5% de 24 horas) ou não confrontá-lo com os 250 minutos de indisponibilidade.",
+    "Citar blue-green, canary e feature flags apenas como definições, sem mostrar como cada uma teria limitado o erro 500 do caso.",
+    "Ignorar a migração que renomeou a coluna, que foi a causa do rollback demorado.",
+    "Apoiar a punição do desenvolvedor como solução, contrariando a lógica do postmortem sem culpados.",
+    "Tratar a proibição de implantações às sextas-feiras como solução definitiva para a falta de automação e de testes."
+  ],
+  "fundamentacao": [
+    "Google, Site Reliability Engineering (SLO, error budget e política de error budget; cultura de postmortem sem culpados)",
+    "Humble e Farley, Continuous Delivery (pipeline de implantação, blue-green e rollback)",
+    "Padrão expandir e contrair (parallel change) para migrações de banco de dados compatíveis",
+    "Métricas DORA (frequência de implantação, lead time, taxa de falha em mudanças e tempo de recuperação)",
+    "ITIL 4: práticas de habilitação de mudanças e de gerenciamento de incidentes e de problemas"
+  ],
+  "revisarFonteOficial": false
+}

@@ -27,19 +27,19 @@
             "id": "f1",
             "descricao": "Explica que, com classes desbalanceadas, a acurácia engana; define precisão e revocação; identifica o falso negativo como o erro mais caro e conclui pela priorização da revocação, com ajuste do limiar de decisão.",
             "pontos": 10,
-            "palavrasChave": ["desbalanceadas|desbalanceamento|desbalanceada", "acurácia", "revocação|recall|sensibilidade", "falso negativo|falsos negativos", "limiar|threshold|ponto de corte"]
+            "palavrasChave": ["desbalanceadas|desbalanceamento|desbalanceada", "falso negativo|falsos negativos", "limiar|threshold|ponto de corte", "classificador trivial|tudo como comum", "revocação|recall"]
           },
           {
             "id": "f2",
             "descricao": "Caracteriza o viés histórico: o modelo aprende com rótulos que refletem decisões passadas e usa atributos que funcionam como proxies, gerando discriminação indireta; mitigação por revisão de rótulos, neutralização de atributos e métricas por subgrupo.",
             "pontos": 10,
-            "palavrasChave": ["viés|enviesado", "histórico|históricos", "rótulos|rotulagem", "proxies|proxy|atributos", "discriminação|equidade|discriminatório"]
+            "palavrasChave": ["viés histórico", "proxies|proxy", "discriminação indireta|discriminação|discriminatório", "revisando os rótulos|revisão dos rótulos|reanotar", "neutralizar|neutralizando"]
           },
           {
             "id": "f3",
             "descricao": "Fundamenta a revisão no art. 20 da LGPD (decisões unicamente automatizadas, informação sobre critérios; a exigência de revisão por pessoa natural foi vetada) e na LC estadual 205/2025, que assegura revisão humana de decisões automatizadas da administração que afetem direitos significativos, além da explicabilidade.",
             "pontos": 8,
-            "palavrasChave": ["art. 20|artigo 20", "205/2025", "revisão humana", "explicabilidade|explicável|SHAP|LIME"]
+            "palavrasChave": ["art. 20|artigo 20", "unicamente|exclusivamente automatizado", "vetado|vetada|veto|pessoa natural", "revisão humana", "SHAP|LIME|fatores"]
           }
         ]
       },
@@ -52,19 +52,19 @@
             "id": "a1",
             "descricao": "Aplica as métricas ao caso: um classificador trivial teria 94% de acurácia; a revocação de 45% deixa 55% das denúncias graves na fila de 60 dias, perdendo o prazo de 5 dias; aceita-se menor precisão para elevar a revocação.",
             "pontos": 10,
-            "palavrasChave": ["94%|classificador trivial", "45%", "55%|denúncias graves", "60 dias", "precisão"]
+            "palavrasChave": ["94%|classificador trivial", "55%|deixa escapar", "perderia o prazo|prazo de 5 dias|fora do prazo|atraso", "menor precisão|falsos positivos|alarmes falsos", "fila de 60 dias"]
           },
           {
             "id": "a2",
             "descricao": "Aponta o viés concreto contra manifestações do interior, com erros de ortografia ou enviadas por aplicativo, que afasta do controle social quem tem menos recursos, e propõe medir a revocação por subgrupo.",
             "pontos": 10,
-            "palavrasChave": ["interior", "ortografia|ortográficos|escrita", "aplicativo|canal", "por subgrupo|cada grupo|por grupo", "controle social"]
+            "palavrasChave": ["socioeconômicos|socioeconômico|escolaridade", "controle social", "por subgrupo|cada grupo|por grupo", "menos recursos|vulneráveis|desigualdade|exclusão", "interior"]
           },
           {
             "id": "a3",
             "descricao": "Rejeita o arquivamento automático de 40% do volume: o modelo pode apenas priorizar a fila, e nenhum arquivamento ocorre sem decisão humana.",
             "pontos": 8,
-            "palavrasChave": ["arquivamento automático|arquivar automaticamente", "40%", "priorizar|priorização|ordenar", "inadequado|rejeitado|vedado|não pode"]
+            "palavrasChave": ["decisão humana|análise humana|leitura humana", "apenas priorizar|só priorizar|priorizar a fila|ordenar a fila", "inadequado|rejeitado|vedado|não pode", "direitos significativos|afeta direitos", "40%"]
           }
         ]
       },
@@ -83,14 +83,14 @@
             "id": "c2",
             "descricao": "Prevê monitoramento contínuo: deriva dos dados, métricas por subgrupo, documentação do modelo e retreinamento periódico.",
             "pontos": 6,
-            "palavrasChave": ["monitoramento|monitorar", "drift|deriva", "retreinamento|retreinar|reavaliação", "documentação|model card"]
+            "palavrasChave": ["drift|deriva", "retreinamento|retreinar|reavaliação", "documentação|model card", "métricas por subgrupo"]
           }
         ]
       }
     ]
   },
   "respostaPadrao": [
-    "Com 6% de casos prioritários, as classes são desbalanceadas e a acurácia engana: um classificador trivial que marcasse tudo como comum teria 94%, perto dos 95% obtidos. Precisão mede quantos alertas são graves; revocação, quantos casos graves o modelo encontra. O falso negativo é o erro mais caro, pois a denúncia grave iria para a fila de 60 dias; a revocação de 45% deixa escapar 55% delas. Deve-se priorizar a revocação, baixando o limiar e aceitando menor precisão.",
+    "Com 6% de casos prioritários, as classes são desbalanceadas e a acurácia engana: um classificador trivial que marcasse tudo como comum teria 94%, perto dos 95% obtidos. Precisão mede quantos alertas são graves; revocação, quantos casos graves o modelo encontra. O falso negativo é o erro mais caro, pois a denúncia grave iria para a fila de 60 dias e perderia o prazo de 5 dias; a revocação de 45% deixa escapar 55% delas. Deve-se priorizar a revocação, baixando o limiar e aceitando menor precisão.",
     "Há viés histórico: o modelo aprendeu com rótulos de arquivamentos passados e penaliza manifestações do interior, com erros de ortografia ou vindas por aplicativo, atributos que agem como proxies socioeconômicos e geram discriminação indireta, afastando do controle social quem tem menos recursos. Mitiga-se revisando os rótulos, neutralizando esses atributos e medindo a revocação por subgrupo.",
     "O art. 20 da LGPD assegura revisão de decisões tomadas unicamente por tratamento automatizado e informação sobre os critérios; vetada a revisão por pessoa natural, a LC estadual 205/2025 garante revisão humana quando a decisão da administração afeta direitos significativos. A explicabilidade (por exemplo, valores SHAP) deve mostrar ao analista os fatores do escore.",
     "Por isso, o arquivamento automático de 40% do volume é inadequado: o modelo deve apenas priorizar a fila, e nenhum arquivamento ocorre sem decisão humana.",

@@ -33,7 +33,7 @@
             "id": "f2",
             "descricao": "Distingue anonimização (dado não associável ao titular com esforços razoáveis, que deixa de ser pessoal, art. 12 da LGPD) de pseudonimização (associação possível com informação adicional mantida à parte; continua sendo dado pessoal).",
             "pontos": 10,
-            "palavrasChave": ["anonimização|anonimizar|anonimizado", "pseudonimização|pseudonimizar|pseudonimizado", "art. 12|artigo 12", "esforços razoáveis|esforço razoável", "continua sendo dado pessoal|dado pessoal"]
+            "palavrasChave": ["esforços razoáveis|esforço razoável", "art. 12|artigo 12", "continua sendo dado pessoal", "informação adicional", "deixa de ser pessoal|deixa de ser dado pessoal"]
           },
           {
             "id": "f3",
@@ -52,13 +52,13 @@
             "id": "a1",
             "descricao": "Avalia a proposta: SHA-256 sem sal de CPF é reversível por força bruta (cerca de um bilhão de combinações), logo não é anonimização; publicar nome e CPF mascarado do fornecedor pessoa física, omitir endereço residencial e nunca divulgar o CID.",
             "pontos": 10,
-            "palavrasChave": ["sem sal", "força bruta|enumeração|dicionário", "mascarado|mascaramento|ocultar", "endereço residencial", "CID"]
+            "palavrasChave": ["força bruta|enumeração|dicionário", "um bilhão|bilhão de combinações|poucas combinações", "mascarado|mascaramento|ocultar", "omitir|omissão|não publicar", "não anonimiza|não é anonimização"]
           },
           {
             "id": "a2",
             "descricao": "Propõe qualidade de dados: regras de validação na recepção (dígito verificador, coerência de datas, faixas de valor), deduplicação de fornecedores pelo CNPJ como dado mestre, devolução de erros ao jurisdicionado e dicionário de dados com indicadores de exatidão, completude e consistência.",
             "pontos": 11,
-            "palavrasChave": ["validação|regras", "dígito verificador", "deduplicação|padronização|dado mestre", "jurisdicionado|devolução", "exatidão|completude|consistência"]
+            "palavrasChave": ["validação|regras de validação", "deduplicação|dado mestre", "devolução|devolvidos", "dicionário de dados", "exatidão|consistência|unicidade"]
           },
           {
             "id": "a3",

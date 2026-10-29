@@ -33,13 +33,13 @@
             "id": "f2",
             "descricao": "Compara VPN tradicional (coloca o dispositivo na rede e permite movimentação lateral) e ZTNA (acesso apenas a aplicações específicas, sem expor a rede), com microssegmentação.",
             "pontos": 9,
-            "palavrasChave": ["ZTNA", "movimentação lateral|movimento lateral", "aplicações específicas|por aplicação", "microssegmentação|segmentação", "rede inteira|toda a rede"]
+            "palavrasChave": ["movimentação lateral|movimento lateral", "aplicações específicas|por aplicação", "microssegmentação", "rede inteira|dentro da rede", "sem expor"]
           },
           {
             "id": "f3",
             "descricao": "Fundamenta o MFA resistente a phishing: FIDO2/WebAuthn (passkeys ou chaves de segurança) vincula a autenticação à origem e não funciona em domínio falso; SMS e códigos digitáveis podem ser interceptados ou repassados.",
             "pontos": 8,
-            "palavrasChave": ["FIDO2|WebAuthn|passkeys|chave de segurança", "resistente a phishing", "SMS", "origem|domínio falso"]
+            "palavrasChave": ["FIDO2|WebAuthn|passkeys|chave de segurança", "vinculado à origem|origem", "domínio falso", "interceptados|interceptação|repassados"]
           }
         ]
       },
@@ -52,7 +52,7 @@
             "id": "a1",
             "descricao": "Diagnostica o caso: rede sem segmentação com login só por senha, credencial capturada na página falsa, códigos não solicitados indicando senhas já comprometidas (redefinição e investigação) e firmware desatualizado há 14 meses.",
             "pontos": 9,
-            "palavrasChave": ["sem segmentação|rede plana", "página falsa", "redefinição|redefinir", "firmware", "14 meses"]
+            "palavrasChave": ["senhas já comprometidas|comprometidas|comprometida", "redefinição|redefinir", "investigação|investigar", "agrava|vulnerabilidades|exposição", "bancos e arquivos|acesso amplo"]
           },
           {
             "id": "a2",

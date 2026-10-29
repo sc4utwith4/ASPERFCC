@@ -33,13 +33,13 @@
             "id": "f2",
             "descricao": "Explica a responsabilidade compartilhada no SaaS: o provedor responde por infraestrutura, plataforma e aplicação; o cliente mantém a responsabilidade pelos dados, pelas identidades e acessos e pelas configurações, que não se transfere por cláusula genérica.",
             "pontos": 9,
-            "palavrasChave": ["responsabilidade compartilhada", "SaaS", "identidades|gestão de acessos|controle de acesso", "configurações|configuração", "não se transfere|não transfere|continua responsável"]
+            "palavrasChave": ["responsabilidade compartilhada", "infraestrutura", "identidades|gestão de acessos|controle de acesso", "configurações|configuração", "não se transfere|não transfere|continua responsável"]
           },
           {
             "id": "f3",
             "descricao": "Enquadra o Tribunal como controlador e o fornecedor como operador (art. 39: tratamento segundo instruções do controlador), reconhece dados sensíveis (saúde e filiação sindical) e condiciona a transferência internacional às hipóteses do art. 33.",
             "pontos": 8,
-            "palavrasChave": ["operador", "controlador", "art. 33|artigo 33|transferência internacional", "sensíveis|sindical|saúde", "art. 39|artigo 39|instruções"]
+            "palavrasChave": ["operador", "controlador", "art. 33|artigo 33|transferência internacional", "dados sensíveis|sensíveis|art. 11", "art. 39|artigo 39|instruções"]
           }
         ]
       },
@@ -52,19 +52,19 @@
             "id": "a1",
             "descricao": "Corrige a minuta: a segurança deve ser detalhada em requisitos, com níveis de serviço (SLA) e glosas, e a política de backup não pode ficar indefinida.",
             "pontos": 9,
-            "palavrasChave": ["níveis de serviço|SLA|ANS", "glosas|glosa|penalidades|sanções", "backup|cópias de segurança", "requisitos de segurança|requisitos"]
+            "palavrasChave": ["glosas|glosa|penalidades|sanções", "requisitos de segurança", "política de backup|retenção das cópias", "disponibilidade|indicadores de serviço", "níveis de serviço|SLA"]
           },
           {
             "id": "a2",
             "descricao": "Propõe cláusulas de proteção de dados: confidencialidade, comunicação imediata de incidentes ao Tribunal, direito de auditoria, subcontratação só autorizada, eliminação ou devolução dos dados ao final e preferência pela hospedagem no Brasil.",
             "pontos": 10,
-            "palavrasChave": ["incidentes|incidente", "auditoria|auditar", "subcontratação|suboperador", "eliminação|devolução|eliminar", "Brasil|território nacional|localização"]
+            "palavrasChave": ["incidentes|incidente", "auditoria|auditar", "subcontratação|suboperador", "eliminação|devolução|eliminar", "preferencialmente no Brasil|hospedagem no Brasil|território nacional"]
           },
           {
             "id": "a3",
             "descricao": "Mitiga o lock-in: exportação integral em formato aberto e documentado, APIs, plano de saída com período de transição e transferência de conhecimento.",
             "pontos": 10,
-            "palavrasChave": ["lock-in|aprisionamento", "plano de saída|estratégia de saída", "formato aberto|formatos abertos", "transição|transferência de conhecimento", "exportação|exportar"]
+            "palavrasChave": ["lock-in|aprisionamento", "plano de saída|estratégia de saída", "formato aberto|formatos abertos", "transição|transferência de conhecimento", "APIs|API"]
           }
         ]
       },
@@ -77,7 +77,7 @@
             "id": "c1",
             "descricao": "Organiza a gestão e a fiscalização: gestor do contrato e fiscais técnico, requisitante e administrativo designados (art. 117), com segregação de funções.",
             "pontos": 8,
-            "palavrasChave": ["art. 117|artigo 117", "fiscais|fiscal|fiscalização", "gestor do contrato|gestão do contrato", "segregação de funções|segregação"]
+            "palavrasChave": ["art. 117|artigo 117", "fiscais técnico|fiscal técnico|fiscais designados", "gestor do contrato|gestão do contrato", "segregação de funções|segregação"]
           },
           {
             "id": "c2",

@@ -7,15 +7,15 @@
     "O backup é um dump lógico (pg_dump) diário, iniciado às 2h, que já leva 5 horas e começa a coincidir com o expediente; nunca se fez teste de restauração. A Presidência quer garantia de que, se o servidor falhar, o sistema volte em até 30 minutos, com perda máxima de 5 minutos de dados. Um analista sugeriu criar imediatamente, em horário comercial, cinco índices, um em cada coluna da tabela.",
     "A Gerência de Banco de Dados solicitou sua avaliação técnica."
   ],
-  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 25 linhas, que atenda ao que se pede a seguir.",
   "itensComando": [
     "a) Descreva o diagnóstico da lentidão, indicando como usar o EXPLAIN e o papel das estatísticas e dos índices.",
     "b) Proponha a solução para a consulta e avalie a sugestão do analista, considerando a janela de manutenção.",
     "c) Proponha estratégia de backup com recuperação a um ponto no tempo (PITR) e de alta disponibilidade que atenda aos objetivos fixados pela Presidência.",
     "d) Conclua com o plano de execução e de verificação das medidas."
   ],
-  "limiteLinhas": 30,
-  "tempoSugeridoMin": 50,
+  "limiteLinhas": 25,
+  "tempoSugeridoMin": 45,
   "espelho": {
     "pilares": [
       {
@@ -27,7 +27,7 @@
             "id": "f1",
             "descricao": "Explica o diagnóstico com EXPLAIN ANALYZE: mostra o plano de execução escolhido pelo otimizador baseado em custo e compara linhas estimadas e reais; divergência indica estatísticas desatualizadas.",
             "pontos": 10,
-            "palavrasChave": ["EXPLAIN", "ANALYZE", "plano de execução|plano", "Seq Scan|varredura sequencial|full scan", "estatísticas"]
+            "palavrasChave": ["otimizador|baseado em custo", "estimadas e reais|linhas estimadas", "Seq Scan|varredura sequencial|full scan", "defasadas|desatualizadas|desatualizada", "EXPLAIN ANALYZE"]
           },
           {
             "id": "f2",
@@ -52,19 +52,19 @@
             "id": "a1",
             "descricao": "Aplica o diagnóstico: provável varredura sequencial sobre 85 milhões de linhas, seguida de ordenação, e estatísticas de 7 meses que não refletem a carga de 30 milhões; executar ANALYZE e revisar o autovacuum.",
             "pontos": 9,
-            "palavrasChave": ["85 milhões", "7 meses|sete meses", "30 milhões", "autovacuum|vacuum", "sort|ordenação"]
+            "palavrasChave": ["85 milhões", "autovacuum|vacuum", "sort|ordenação", "rodar ANALYZE|executar ANALYZE|novo ANALYZE"]
           },
           {
             "id": "a2",
             "descricao": "Propõe índice composto em (cod_municipio, exercicio, dt_envio DESC), criado com CREATE INDEX CONCURRENTLY em janela de menor uso, e rejeita os cinco índices de uma coluna, que pouco ajudam e encarecem as inserções no pico.",
             "pontos": 10,
-            "palavrasChave": ["cod_municipio", "dt_envio", "CONCURRENTLY", "janela de manutenção|janela", "cinco índices|5 índices|cada coluna"]
+            "palavrasChave": ["CONCURRENTLY", "colunas de igualdade|igualdade", "pouco seletivos|encarecem|não atendem", "colunas necessárias", "rejeitados|rejeitar|rejeitada"]
           },
           {
             "id": "a3",
             "descricao": "Substitui o pg_dump diário (RPO de até 24 horas) por backup físico com arquivamento de WAL, atendendo ao RPO de 5 minutos, e réplica com failover automatizado para RTO inferior a 30 minutos.",
             "pontos": 8,
-            "palavrasChave": ["pg_dump|dump lógico", "pg_basebackup|backup físico", "failover", "5 minutos|cinco minutos", "30 minutos|trinta minutos"]
+            "palavrasChave": ["pg_basebackup|backup físico", "failover", "arquivamento contínuo|arquivamento do WAL", "streaming|outro servidor", "complementar"]
           }
         ]
       },
@@ -77,13 +77,13 @@
             "id": "c1",
             "descricao": "Organiza o plano de execução: ANALYZE imediato, índice em janela sob gestão de mudança, medição do tempo de resposta e do plano antes e depois, e implantação da réplica e do PITR antes do próximo prazo.",
             "pontos": 9,
-            "palavrasChave": ["gestão de mudança|mudança", "tempo de resposta", "antes e depois|antes/depois", "próximo prazo|próximo pico"]
+            "palavrasChave": ["gestão de mudança|mudança", "antes e depois|antes/depois", "próximo prazo|próximo pico", "ANALYZE imediato|primeiro passo|de imediato|curto prazo"]
           },
           {
             "id": "c2",
             "descricao": "Prevê a verificação contínua: teste de restauração periódico, simulação de failover e monitoramento do atraso (lag) de replicação.",
             "pontos": 6,
-            "palavrasChave": ["teste de restauração|restauração", "simulação|simular|exercício", "lag|atraso"]
+            "palavrasChave": ["restauração periódico|restauração periódica|periódico", "simulação de failover|simular failover", "lag|atraso de replicação"]
           }
         ]
       }
@@ -91,9 +91,9 @@
   },
   "respostaPadrao": [
     "O diagnóstico começa pelo EXPLAIN ANALYZE da consulta mais frequente, que mostra o plano de execução escolhido pelo otimizador baseado em custo e compara linhas estimadas e reais. O provável é um Seq Scan sobre 85 milhões de linhas seguido de sort, pois só há índice na chave primária. Como o ANALYZE tem 7 meses e é anterior à carga de 30 milhões, as estatísticas estão defasadas e as estimativas falham: cabe rodar ANALYZE e revisar o autovacuum.",
-    "A solução é um índice composto B-tree em (cod_municipio, exercicio, dt_envio DESC), com as colunas de igualdade antes da de ordenação, o que elimina a varredura e o sort; convém também trocar o SELECT * pelas colunas necessárias. O índice deve ser criado com CREATE INDEX CONCURRENTLY, em janela de manutenção de menor uso, sem bloquear escritas. Os cinco índices de uma coluna devem ser rejeitados: são pouco seletivos para a consulta e encarecem cada inserção no pico de envio.",
-    "O pg_dump diário tem RPO de até 24 horas. Proponho backup físico (pg_basebackup) com arquivamento contínuo do WAL, que permite PITR com perda limitada pelo archive_timeout (ajustado abaixo de 5 minutos), dentro do RPO de 5 minutos, e réplica em streaming em outro servidor, com failover automatizado, para RTO abaixo de 30 minutos. O dump lógico pode ficar como cópia complementar.",
-    "O plano é: ANALYZE imediato; índice criado em janela, sob gestão de mudança; medição do tempo de resposta e do plano antes e depois; e réplica e PITR prontos antes do próximo prazo. A verificação inclui teste de restauração periódico, simulação de failover e monitoramento do lag de replicação."
+    "A solução é um índice composto B-tree em (cod_municipio, exercicio, dt_envio DESC), com as colunas de igualdade antes da de ordenação: a combinação município-exercício é seletiva e elimina a varredura e o sort; convém também trocar o SELECT * pelas colunas necessárias. O índice deve ser criado com CREATE INDEX CONCURRENTLY, em janela de manutenção de menor uso, sem bloquear escritas. Os cinco índices de uma coluna devem ser rejeitados: não atendem bem ao filtro combinado com a ordenação e encarecem cada inserção no pico de envio.",
+    "O pg_dump diário tem RPO de até 24 horas. Proponho backup físico (pg_basebackup) com arquivamento contínuo do WAL, que permite PITR e, com archive_timeout inferior a 5 minutos, atende ao RPO; e réplica em streaming em outro servidor, com failover automatizado, para RTO abaixo de 30 minutos. O dump lógico pode ficar como cópia complementar.",
+    "O plano: ANALYZE imediato; índice em janela, sob gestão de mudança; medição do tempo de resposta e do plano antes e depois; réplica e PITR prontos antes do próximo prazo. A verificação inclui teste de restauração periódico, simulação de failover e monitoramento do lag."
   ],
   "errosComuns": [
     "Recomendar apenas mais hardware (CPU e memória) sem diagnosticar o plano de execução da consulta.",

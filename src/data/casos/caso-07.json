@@ -26,19 +26,19 @@
             "id": "f1",
             "descricao": "Compara as arquiteturas: microsserviços oferecem implantação independente e escalabilidade por serviço, mas trazem complexidade operacional (rede, consistência eventual, orquestração); o monólito modular mantém uma unidade de implantação com módulos de fronteiras explícitas (contextos delimitados).",
             "pontos": 9,
-            "palavrasChave": ["microsserviços", "monólito modular", "implantação independente|independentes", "complexidade operacional|custo operacional|complexidade", "contextos delimitados|bounded context|fronteiras"]
+            "palavrasChave": ["implantação independente|independentes", "complexidade operacional|custo operacional", "consistência eventual|orquestração", "contextos delimitados|bounded context|fronteiras", "acoplamento"]
           },
           {
             "id": "f2",
             "descricao": "Explica o strangler fig: substituição incremental, com uma fachada que roteia cada funcionalidade migrada para o novo código até que o legado possa ser desligado, evitando a virada big bang.",
             "pontos": 9,
-            "palavrasChave": ["strangler|estrangulamento|estrangulador", "incremental|gradual", "fachada|proxy|roteia|roteamento", "big bang|virada única", "desligado|desligar|desativado"]
+            "palavrasChave": ["incremental|gradual", "fachada|proxy", "roteia|roteamento|redireciona", "desligado|desligar|desativado", "cada funcionalidade|funcionalidade por funcionalidade"]
           },
           {
             "id": "f3",
             "descricao": "Conhece os pilares da observabilidade (métricas, logs e traces, por exemplo com OpenTelemetry) e a pirâmide de testes (unitários, integração, contrato).",
             "pontos": 8,
-            "palavrasChave": ["métricas", "logs", "traces|tracing|rastreamento distribuído", "OpenTelemetry|correlação", "pirâmide|unitários"]
+            "palavrasChave": ["métricas", "logs estruturados|logs centralizados", "traces|tracing|rastreamento distribuído", "OpenTelemetry|correlação", "pirâmide|unitários"]
           }
         ]
       },
@@ -51,19 +51,19 @@
             "id": "a1",
             "descricao": "Aplica a comparação ao caso: com 9 desenvolvedores, sem domínio de Kubernetes e regras presas em stored procedures sobre base única, 40 microsserviços multiplicariam riscos; o monólito modular, com módulos de autuação, distribuição, instrução, julgamento e publicação, é o caminho adequado.",
             "pontos": 10,
-            "palavrasChave": ["9 desenvolvedores|nove desenvolvedores|equipe pequena", "Kubernetes", "stored procedures|procedures", "autuação|distribuição|julgamento", "40 microsserviços"]
+            "palavrasChave": ["9 desenvolvedores|nove desenvolvedores", "multiplicariam riscos|riscos", "base única|banco único|dados compartilhados|banco compartilhado|mesma base", "módulos de autuação|módulos de negócio", "maturidade DevOps|maturidade"]
           },
           {
             "id": "a2",
             "descricao": "Aplica o strangler fig ao sistema: começa por um módulo de menor risco (como a publicação), avança por etapas com entregas menores e frequentes e documenta o conhecimento de quem vai se aposentar.",
             "pontos": 10,
-            "palavrasChave": ["publicação", "etapas|por etapa|fases", "frequentes|menores", "aposentar|aposentadoria|conhecimento"]
+            "palavrasChave": ["menor risco|baixo risco", "entregas menores|entregas frequentes", "documentando|documentar|transferência de conhecimento", "começaria|começar pela|primeiro módulo|iniciar por|iniciando por", "publicação"]
           },
           {
             "id": "a3",
             "descricao": "Concretiza testes e observabilidade: testes de caracterização antes de alterar o legado, cobertura crescente a partir dos 3% nas áreas migradas, execução na integração contínua e troca dos logs em arquivo por logs estruturados e centralizados.",
             "pontos": 10,
-            "palavrasChave": ["caracterização|regressão", "3%", "estruturados|centralizados|centralização", "integração contínua|CI|esteira|pipeline"]
+            "palavrasChave": ["caracterização", "regressão", "estruturados|centralizados|centralização", "integração contínua|CI|esteira|pipeline", "comparar legado e novo|comparar o legado"]
           }
         ]
       },
@@ -76,13 +76,13 @@
             "id": "c1",
             "descricao": "Recomenda rejeitar a reescrita big bang com 18 meses de congelamento e adotar monólito modular com strangler fig.",
             "pontos": 8,
-            "palavrasChave": ["rejeitar|não recomendo|desaconselho", "18 meses|congelamento", "monólito modular", "strangler|incremental"]
+            "palavrasChave": ["rejeitar|não recomendo|desaconselho", "concentram risco|concentra risco|risco concentrado|alto risco|arriscada|arriscado", "18 meses|congelamento", "adotar monólito modular|adotar o monólito"]
           },
           {
             "id": "c2",
             "descricao": "Trata a dívida técnica: inventário, priorização por impacto, capacidade reservada a cada sprint e acompanhamento por métricas DORA.",
             "pontos": 6,
-            "palavrasChave": ["dívida técnica", "inventariada|inventário|priorizada|priorização", "capacidade|sprint", "DORA|taxa de falha|lead time"]
+            "palavrasChave": ["inventariada|inventário", "priorizada pelo impacto|impacto", "capacidade reservada|sprint", "DORA|taxa de falha|lead time"]
           }
         ]
       }

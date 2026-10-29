@@ -7,15 +7,15 @@
     "Para isso, o agente usaria três servidores MCP já instalados: um com permissão de escrita em todos os 140 repositórios da organização, outro que executa comandos de shell no runner da esteira e um terceiro que consulta o banco de produção com usuário administrador, “para entender os dados”. Uma revisão encontrou chaves de API e a senha desse usuário no arquivo config.yml, versionado no repositório. A equipe argumenta que a revisão humana de código “anula o ganho de produtividade”.",
     "No piloto, o agente resolveu 70% dos chamados. Em dois casos, porém, acrescentou ao projeto uma dependência que não existia no repositório público de pacotes, sugerida pelo próprio modelo; em um terceiro, obedeceu a uma instrução escondida no comentário de uma issue aberta por usuário externo, que pedia para imprimir as variáveis de ambiente no log da esteira."
   ],
-  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 30 linhas, que atenda ao que se pede a seguir.",
+  "comando": "Na qualidade de Técnico de Controle Externo da área de Tecnologia da Informação, redija um texto dissertativo, com até 25 linhas, que atenda ao que se pede a seguir.",
   "itensComando": [
     "a) Explique o que é o MCP e os riscos de conceder ao agente as permissões descritas, relacionando-os aos incidentes do piloto.",
     "b) Indique como tratar os segredos encontrados e como eles devem ser fornecidos à esteira.",
     "c) Proponha os controles da esteira para o código gerado pelo agente, incluindo revisão humana, SAST e SCA.",
     "d) Conclua com o modelo de operação recomendado para o agente."
   ],
-  "limiteLinhas": 30,
-  "tempoSugeridoMin": 50,
+  "limiteLinhas": 25,
+  "tempoSugeridoMin": 45,
   "espelho": {
     "pilares": [
       {
@@ -27,7 +27,7 @@
             "id": "f1",
             "descricao": "Define o MCP como protocolo aberto que padroniza a conexão de agentes de IA a ferramentas e fontes de dados por meio de servidores, e reconhece que cada servidor amplia a superfície de ataque, impondo o menor privilégio.",
             "pontos": 10,
-            "palavrasChave": ["MCP|Model Context Protocol", "protocolo", "ferramentas", "menor privilégio|privilégio mínimo", "superfície de ataque"]
+            "palavrasChave": ["MCP|Model Context Protocol", "padroniza|padronizar|padrão aberto", "ferramentas", "menor privilégio|privilégio mínimo", "superfície de ataque"]
           },
           {
             "id": "f2",
@@ -39,7 +39,7 @@
             "id": "f3",
             "descricao": "Distingue SAST (análise do código sem executá-lo) de SCA (análise de dependências, vulnerabilidades conhecidas e licenças, com geração de SBOM).",
             "pontos": 8,
-            "palavrasChave": ["SAST", "SCA", "dependências|dependência", "SBOM|CVE|vulnerabilidades conhecidas"]
+            "palavrasChave": ["sem executá-lo|sem executar|análise estática", "CVE|CVEs|vulnerabilidades conhecidas", "SBOM", "licenças", "SAST|SCA"]
           }
         ]
       },
@@ -52,13 +52,13 @@
             "id": "a1",
             "descricao": "Reduz as permissões do caso: acesso só ao repositório do protocolo com token de escopo mínimo e curta duração, comandos em sandbox efêmero e nenhum acesso administrativo à produção (no máximo, base de homologação anonimizada em somente leitura).",
             "pontos": 10,
-            "palavrasChave": ["140 repositórios|repositório do protocolo|todos os repositórios", "sandbox|efêmero|isolado|contêiner", "produção", "somente leitura|homologação|anonimizada", "token|escopo mínimo|curta duração"]
+            "palavrasChave": ["sandbox|efêmero|isolado|contêiner", "somente leitura|homologação|anonimizada", "token|escopo mínimo|curta duração", "excessivos|excessivas|excesso|desproporcionais|amplas demais", "repositório do protocolo|um único repositório"]
           },
           {
             "id": "a2",
             "descricao": "Trata os segredos: considerá-los comprometidos, revogar e rotacionar, limpar o histórico do Git, ativar varredura de segredos e injetá-los por cofre ou pelos secrets da plataforma, mascarados em log e fora do alcance do agente.",
             "pontos": 10,
-            "palavrasChave": ["comprometidas|comprometidos", "rotacionar|rotação|revogar", "histórico", "cofre|vault|gerenciador de segredos", "variáveis de ambiente|secrets|mascaradas"]
+            "palavrasChave": ["comprometidas|comprometidos", "rotacionar|rotação|revogar", "histórico", "cofre|vault|gerenciador de segredos", "secrets da plataforma|mascaradas|mascarados"]
           },
           {
             "id": "a3",
@@ -77,7 +77,7 @@
             "id": "c1",
             "descricao": "Recomenda operar o agente como assistente que propõe o pull request, mantendo a responsabilidade do desenvolvedor que aprova e rebatendo a tese de que a revisão anula o ganho.",
             "pontos": 8,
-            "palavrasChave": ["assistente", "pull request|PR", "responsabilidade|responsável", "não anula|retrabalho"]
+            "palavrasChave": ["assistente", "propõe o PR|propõe o pull request|abre o PR", "responsabilidade|responsável", "não anula|retrabalho|defeitos"]
           },
           {
             "id": "c2",
@@ -93,7 +93,7 @@
     "O MCP (Model Context Protocol) é um protocolo aberto que padroniza a conexão de agentes de IA a ferramentas e fontes de dados por meio de servidores. Cada servidor amplia a superfície de ataque, pois o agente age com as permissões recebidas e pode ser manipulado por injeção de prompt em conteúdo não confiável, como a issue do usuário externo, ou alucinar uma dependência inexistente, nome que um atacante pode registrar. Vale, portanto, o menor privilégio.",
     "Escrita nos 140 repositórios, shell no runner e administrador da produção são excessivos. O agente deve atuar só no repositório do protocolo, com token de escopo mínimo e curta duração, executar comandos em sandbox efêmero e, se precisar de dados, consultar homologação anonimizada em somente leitura.",
     "As chaves e a senha versionadas devem ser tratadas como comprometidas: revogá-las e rotacioná-las, limpar o histórico do Git e ativar varredura de segredos. Elas passam a vir de cofre (vault) ou dos secrets da plataforma, em variáveis de ambiente mascaradas no log, fora do alcance do agente, o que evita nova exfiltração.",
-    "Na esteira, o merge automático deve ser vedado: a branch protegida exige aprovação humana no pull request. O SAST analisa o código sem executá-lo; o SCA verifica dependências, CVEs e licenças, gera o SBOM e barra pacotes inexistentes ou não aprovados; testes e gates bloqueiam a implantação.",
+    "Na esteira, o merge automático deve ser vedado: a branch protegida exige aprovação humana do PR. O SAST analisa o código sem executá-lo; o SCA verifica dependências, CVEs e licenças, gera o SBOM e barra pacotes inexistentes ou não aprovados; gates bloqueiam a implantação.",
     "Recomendo operar o agente como assistente: ele propõe o PR, e a responsabilidade é de quem aprova. A revisão não anula o ganho, evita retrabalho. As ações do agente devem ter logs para auditoria, e métricas de defeitos orientarão a ampliação gradual."
   ],
   "errosComuns": [

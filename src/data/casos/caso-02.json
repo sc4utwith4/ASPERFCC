@@ -25,15 +25,15 @@
         "itens": [
           {
             "id": "f1",
-            "descricao": "Estrutura a resposta pelo ciclo de tratamento de incidentes (NIST SP 800-61): detecção e análise, contenção, erradicação, recuperação e pós-incidente, isolando os sistemas sem desligá-los, para preservar evidências.",
+            "descricao": "Estrutura a resposta pelo ciclo de tratamento de incidentes (NIST SP 800-61, Rev. 2; a Rev. 3 reorganiza o tema sob o CSF 2.0): detecção e análise, contenção, erradicação, recuperação e pós-incidente, isolando os sistemas sem desligá-los, para preservar evidências.",
             "pontos": 10,
-            "palavrasChave": ["contenção|conter", "erradicação|erradicar", "recuperação|restauração|restaurar", "isolar|isolamento|desconectar", "evidências|forense|preservar"]
+            "palavrasChave": ["erradicação|erradicar", "isolar|isolamento|desconectar", "evidências|forense|preservar", "detecção", "NIST|800-61|27035"]
           },
           {
             "id": "f2",
             "descricao": "Domina os conceitos de backup e continuidade: regra 3-2-1 (três cópias, duas mídias, uma fora do local), cópia imutável ou offline, RPO como perda máxima de dados e RTO como prazo de retomada.",
             "pontos": 10,
-            "palavrasChave": ["3-2-1|três cópias", "imutável|offline|imutabilidade|air gap", "RPO", "RTO", "fora do local|outro local|off-site|externa"]
+            "palavrasChave": ["duas mídias|dois tipos de mídia|mídias diferentes", "imutável|offline|imutabilidade|air gap", "perda máxima|perda de dados", "prazo de retomada|tempo de retomada|retomada|retomar", "fora do local|off-site"]
           },
           {
             "id": "f3",
@@ -52,19 +52,19 @@
             "id": "a1",
             "descricao": "Aplica a resposta ao caso: isolar servidor e storage, revogar a credencial de VPN do terceirizado, redefinir contas privilegiadas, verificar movimentação lateral e desaconselhar o pagamento do resgate (não garante a chave nem a não publicação e financia o crime).",
             "pontos": 10,
-            "palavrasChave": ["VPN", "credencial|credenciais|conta", "revogar|bloquear|desativar|suspender", "resgate", "não deve ser pago|não pagar|desaconselhado|não é recomendável"]
+            "palavrasChave": ["revogar|bloquear|desativar|suspender", "não deve ser pago|não pagar|desaconselhado|não é recomendável", "movimentação lateral|movimento lateral", "contas privilegiadas|privilegiadas|redefinir", "não garante|financia|incentiva|não há garantia"]
           },
           {
             "id": "a2",
             "descricao": "Avalia o backup do caso: storage montado como unidade de rede ficou ao alcance do malware; a cópia a cada 24 horas não atende ao RPO de quatro horas; a fita semanal implica grande perda e restauração lenta, ameaçando o RTO de 24 horas.",
             "pontos": 10,
-            "palavrasChave": ["unidade de rede|montado|mapeado", "quatro horas|4 horas|4h", "24 horas|24h|diária|diário", "fita|semanal", "não atende|incompatível|insuficiente"]
+            "palavrasChave": ["ao alcance|alcançável|mesma superfície|acessível|mesma rede|exposto", "não atende|incompatível|insuficiente", "restaurar devagar|restauração lenta|demorada|lenta|lento|demorado", "dias de trabalho|perder dias|vários dias|uma semana", "quatro horas|4 horas"]
           },
           {
             "id": "a3",
             "descricao": "Reconhece dados financeiros em larga escala (CPF e dados bancários de 9 mil pessoas) como risco relevante e relaciona a PSI (RA 17/2024), que protege disponibilidade, integridade, confidencialidade e autenticidade, ao acompanhamento pelo Comitê de Segurança da Informação.",
             "pontos": 8,
-            "palavrasChave": ["dados bancários|dados financeiros|financeiros", "17/2024|PSI|política de segurança", "comitê de segurança", "disponibilidade|integridade|confidencialidade"]
+            "palavrasChave": ["larga escala", "risco relevante|dano relevante", "comitê de segurança", "disponibilidade|integridade|confidencialidade", "controlador"]
           }
         ]
       },
@@ -83,15 +83,15 @@
             "id": "c2",
             "descricao": "Encaminha o relatório pós-incidente com lições aprendidas, a atualização do plano de continuidade e o registro do incidente.",
             "pontos": 6,
-            "palavrasChave": ["lições aprendidas|pós-incidente|postmortem", "continuidade", "registro|registrar|relatório"]
+            "palavrasChave": ["lições aprendidas|postmortem|post-mortem", "plano de continuidade|continuidade", "registro do incidente|registrar o incidente|base de conhecimento"]
           }
         ]
       }
     ]
   },
   "respostaPadrao": [
-    "A resposta segue o ciclo do NIST SP 800-61: detecção e análise, contenção, erradicação, recuperação e pós-incidente. De imediato, cabe isolar servidor e storage da rede, sem desligá-los, para preservar evidências; revogar a credencial de VPN do terceirizado; redefinir as contas privilegiadas; e verificar movimentação lateral. O resgate não deve ser pago: não garante a chave, não impede a publicação e financia o crime.",
-    "O backup viola a regra 3-2-1 (três cópias, duas mídias, uma fora do local, de preferência imutável ou offline). O storage montado como unidade de rede ficou ao alcance do malware. A cópia a cada 24 horas não atende ao RPO de quatro horas, e a fita semanal implica perder dias de trabalho e restaurar devagar, o que ameaça o RTO de 24 horas. A restauração deve partir da cópia íntegra mais recente, após a erradicação.",
+    "A resposta segue o ciclo do NIST SP 800-61 (Rev. 2): detecção e análise, contenção, erradicação, recuperação e pós-incidente. De imediato, cabe isolar servidor e storage da rede, sem desligá-los, para preservar evidências; revogar a credencial de VPN do terceirizado; redefinir as contas privilegiadas; e verificar movimentação lateral. O resgate não deve ser pago: não garante a chave, não impede a publicação e financia o crime.",
+    "O backup viola a regra 3-2-1 (três cópias, duas mídias, uma fora do local, de preferência imutável ou offline). O storage montado como unidade de rede ficou ao alcance do malware. A cópia a cada 24 horas não atende ao RPO (perda máxima de dados) de quatro horas, e a fita semanal implica perder dias de trabalho e restaurar devagar, o que ameaça o RTO (prazo de retomada) de 24 horas. A restauração deve partir da cópia íntegra mais recente, após a erradicação.",
     "As planilhas têm CPF e dados bancários de 9 mil pessoas: dados financeiros em larga escala, com risco relevante. Pelo art. 48 da LGPD, o Tribunal, como controlador, deve comunicar a ANPD e os titulares, por meio do encarregado, em três dias úteis do conhecimento de que o incidente afetou dados pessoais (Res. CD/ANPD 15/2024). A PSI (RA 17/2024) orienta a resposta ao tutelar disponibilidade, integridade e confidencialidade, e o Comitê de Segurança da Informação deve acompanhar o caso.",
     "Para evitar recorrência: MFA na VPN, inclusive para terceiros; menor privilégio e segmentação da rede; backup imutável e offline, com testes de restauração periódicos; e monitoramento de comportamento nos servidores.",
     "Por fim, o relatório pós-incidente, com lições aprendidas, deve atualizar o plano de continuidade e o registro do incidente."
