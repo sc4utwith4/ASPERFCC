@@ -78,4 +78,20 @@ describe("regras de conjunto da matéria", () => {
     const r = validarLotes(curtas, { exigirCompleto: false, materias: ["banco-de-dados"] });
     expect(r.problemas.some((p) => /viés inverso/.test(p.mensagem))).toBe(true);
   });
+
+  it("deixa as assertivas fora da métrica de tamanho", () => {
+    const questoes = Array.from({ length: 20 }, (_, k) => {
+      const n = k + 1;
+      const enunciadoBase = `Cenário ${n}: questão independente sobre o assunto ${n * 17} do banco.`;
+      if (n > 10) return { ...questaoFake(n, "banco-de-dados", { enunciadoBase }), alternativas: questaoFake(n).alternativas.map((a) => (a.correta ? { ...a, texto: `Curta ${n}` } : a)) };
+      // Assertivas em que a correta ("I, III e IV") é sempre a alternativa mais longa.
+      const q = assertivas([true, false, true, true], "I, III e IV, apenas.", ["I e II, apenas.", "II e IV, apenas.", "III e IV, apenas.", "I e III, apenas."]);
+      return { ...q, id: questaoFake(n, "banco-de-dados").id, enunciadoBase };
+    });
+    const r = validarLotes([entrada(questoes.slice(0, 10), 1), entrada(questoes.slice(10), 2)], { exigirCompleto: false, materias: ["banco-de-dados"] });
+    const resumo = r.resumos.find((x) => x.materiaSlug === "banco-de-dados")!;
+    expect(resumo.total).toBe(20);
+    expect(resumo.elegiveisTamanho).toBe(10);
+    expect(resumo.corretaMaisLonga).toBe(0);
+  });
 });

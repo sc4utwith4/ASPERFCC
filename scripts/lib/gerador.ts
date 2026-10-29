@@ -24,7 +24,7 @@ import {
   type Questao,
   type TextoApoio,
 } from "../../src/data/schema";
-import { corretaEhAMaisLonga, formatarCaminho, validarLotes, type EntradaLote, type Problema } from "../../src/data/validacao";
+import { corretaEhAMaisLonga, entraNaMetricaDeTamanho, formatarCaminho, validarLotes, type EntradaLote, type Problema } from "../../src/data/validacao";
 
 export const QUESTOES_POR_LOTE = 10;
 export const NIVEIS_POR_LOTE: Readonly<Record<Nivel, number>> = { "Básico": 2, "Intermediário": 5, "Avançado": 3 };
@@ -422,9 +422,10 @@ export function avaliarRascunho(texto: string, plano: PlanoLote, ctx: ContextoMa
   const lote = LoteSchema.safeParse(nova.conteudo);
   if (lote.success) {
     const qs = lote.data.questoes;
-    const longas = qs.filter(corretaEhAMaisLonga).length;
-    if (longas > MAX_CORRETA_MAIS_LONGA) erro(plano.arquivo, `a correta é a alternativa mais longa em ${longas} de ${qs.length} questões (máx. ${MAX_CORRETA_MAIS_LONGA}): viés explorável`);
-    else if (longas === MAX_CORRETA_MAIS_LONGA) aviso(plano.arquivo, `a correta é a mais longa em ${longas} de ${qs.length} questões`);
+    const elegiveis = qs.filter(entraNaMetricaDeTamanho);
+    const longas = elegiveis.filter(corretaEhAMaisLonga).length;
+    if (longas > MAX_CORRETA_MAIS_LONGA) erro(plano.arquivo, `a correta é a alternativa mais longa em ${longas} de ${elegiveis.length} questões sem assertivas (máx. ${MAX_CORRETA_MAIS_LONGA}): viés explorável`);
+    else if (longas === MAX_CORRETA_MAIS_LONGA) aviso(plano.arquivo, `a correta é a mais longa em ${longas} de ${elegiveis.length} questões sem assertivas`);
     const usados = new Set(qs.map((q) => q.textoApoioId).filter(Boolean));
     for (const t of textosNovos) if (!usados.has(t.id)) erro(`textosNovos (${t.id})`, "texto novo não é usado por nenhuma questão");
     for (const s of plano.subtopicos) {

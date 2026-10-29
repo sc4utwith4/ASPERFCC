@@ -23,7 +23,8 @@ for (const r of resumos) {
   console.log(`\n${materia.nome} — ${r.total} questões`);
   console.log(`  nível:   ${Object.entries(r.porNivel).map(([k, v]) => `${k} ${v} (${pct(v)})`).join(" · ")}`);
   console.log(`  formato: ${Object.entries(r.porFormato).map(([k, v]) => `${k} ${v} (${pct(v)})`).join(" · ")}`);
-  console.log(`  correta é a mais longa: ${r.corretaMaisLonga} (${pct(r.corretaMaisLonga)}) · com selo: ${r.comSelo}`);
+  const pctLonga = r.elegiveisTamanho ? `${((r.corretaMaisLonga / r.elegiveisTamanho) * 100).toFixed(0)}%` : "—";
+  console.log(`  correta é a mais longa: ${r.corretaMaisLonga} de ${r.elegiveisTamanho} sem assertivas (${pctLonga}) · com selo: ${r.comSelo}`);
   const doMateria = questoes.filter((q) => q.materiaSlug === r.materiaSlug);
   const media = (xs: number[]) => (xs.length ? Math.round(xs.reduce((a, b) => a + b, 0) / xs.length) : 0);
   console.log(`  tamanho médio: enunciado ${media(doMateria.map((q) => q.enunciadoBase.length))} · explicação ${media(doMateria.flatMap((q) => q.alternativas.map((a) => a.explicacaoDetalhada.length)))} caracteres`);

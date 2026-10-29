@@ -247,7 +247,7 @@
         },
         {
           "id": "opt-4",
-          "texto": "a camada de transporte forma o segmento TCP, que é encapsulado em um pacote IP e, depois, em um quadro na camada de enlace.",
+          "texto": "a camada de transporte forma o segmento TCP, encapsulado em um pacote IP e, depois, em um quadro de enlace.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. Os dados da aplicação recebem o cabeçalho TCP (portas, números de sequência) e formam o segmento; a camada internet acrescenta o cabeçalho IP (endereços de origem e destino) e forma o pacote; a camada de enlace o envolve em um quadro (por exemplo, Ethernet, com endereços MAC). No destino, cada camada remove o seu cabeçalho, no processo inverso de desencapsulamento.",
           "versaoInvertidaFalsa": "a camada de transporte forma o pacote IP, que é encapsulado em um segmento TCP e, depois, em um quadro na camada de enlace."

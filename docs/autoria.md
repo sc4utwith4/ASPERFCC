@@ -33,7 +33,7 @@ Não use "INCORRETA/EXCETO" em mais de 10% das questões da matéria. Quando usa
 
 ## 3. Alternativas (exatamente 5, ids `opt-1` a `opt-5`)
 
-- Todas plausíveis, com o mesmo registro e tamanho comparável. **A correta não pode ser sistematicamente a mais longa**: o validador barra a matéria acima de 45% e avisa acima de 35%. Varie a posição do detalhe decisivo.
+- Todas plausíveis, com o mesmo registro e tamanho comparável. **A correta não pode ser sistematicamente a mais longa**: o validador barra a matéria acima de 45% e avisa acima de 35% (as questões de assertivas ficam fora dessa conta). Varie a posição do detalhe decisivo.
 - Cada distrator deve explorar um equívoco real. Repertório típico da FCC:
   - troca de um termo-chave ("deverá" ↔ "poderá", "autenticação" ↔ "autorização", "integridade" ↔ "disponibilidade");
   - prazo, número ou limite alterado (prazo legal, porta, tamanho de campo, máximo do time-box);

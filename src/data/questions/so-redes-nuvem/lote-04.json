@@ -492,7 +492,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "um balanceador de camada 7, que termina o TLS, inspeciona o caminho da URL para escolher o grupo de servidores e faz verificações de saúde.",
+          "texto": "um balanceador de camada 7, que termina o TLS, lê o caminho da URL para escolher o grupo de servidores e faz verificações de saúde.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. Para rotear pelo caminho da URL, o balanceador precisa entender HTTP, o que caracteriza a camada 7. Como o tráfego é HTTPS, ele termina o TLS (certificado em um só lugar) e então aplica regras de roteamento por conteúdo, como /api para um grupo e o restante para outro. As verificações de saúde retiram da rotação os servidores com falha.",
           "versaoInvertidaFalsa": "um balanceador de camada 4, que termina o TLS, inspeciona o caminho da URL para escolher o grupo de servidores e faz verificações de saúde."

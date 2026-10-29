@@ -409,7 +409,7 @@
       "alternativas": [
         {
           "id": "opt-1",
-          "texto": "autenticar cada usuário ou dispositivo com credenciais individuais, validadas por um servidor de autenticação, em geral RADIUS, integrado ao diretório.",
+          "texto": "autenticar cada usuário ou dispositivo com credencial própria, validada por um servidor de autenticação (em geral RADIUS) integrado ao diretório.",
           "correta": true,
           "explicacaoDetalhada": "CORRETA. No 802.1X há três papéis: o suplicante (dispositivo), o autenticador (ponto de acesso ou controladora) e o servidor de autenticação, em geral RADIUS, que valida as credenciais via EAP, muitas vezes consultando o diretório (AD/LDAP) ou usando certificados (EAP-TLS). Cada usuário tem credencial própria, o que permite revogar acessos individualmente e registrar quem se conectou.",
           "versaoInvertidaFalsa": "autenticar todos os usuários com uma única chave pré-compartilhada, configurada no ponto de acesso, dispensando servidor de autenticação."

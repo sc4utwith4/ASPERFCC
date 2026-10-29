@@ -101,7 +101,7 @@ O validador reprova:
 - correta sem versão invertida;
 - gabarito de assertivas que não bate com as afirmativas verdadeiras;
 - enunciados quase idênticos;
-- viés de tamanho (a correta como a mais longa em mais de 45%).
+- viés de tamanho (a correta como a mais longa em mais de 45% das questões, sem contar as de assertivas).
 
 Ele avisa sobre o viés inverso (a correta quase nunca é a mais longa) e sobre a distribuição de nível fora do alvo.
 

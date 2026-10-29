@@ -24,6 +24,8 @@ export interface ResumoMateria {
   porSubtopico: Record<string, number>;
   porNivel: Record<string, number>;
   porFormato: Record<string, number>;
+  /** Questões em que o tamanho da alternativa é escolha do autor (ver `entraNaMetricaDeTamanho`). */
+  elegiveisTamanho: number;
   corretaMaisLonga: number;
   comSelo: number;
 }
@@ -194,9 +196,19 @@ function resumir(materiaSlug: MateriaSlug, questoes: readonly Questao[]): Resumo
     porSubtopico: contar((q) => q.subtopico),
     porNivel: contar((q) => q.nivel),
     porFormato: contar((q) => q.formato),
-    corretaMaisLonga: questoes.filter(corretaEhAMaisLonga).length,
+    elegiveisTamanho: questoes.filter(entraNaMetricaDeTamanho).length,
+    corretaMaisLonga: questoes.filter((q) => entraNaMetricaDeTamanho(q) && corretaEhAMaisLonga(q)).length,
     comSelo: questoes.filter((q) => q.revisarFonteOficial).length,
   };
+}
+
+/**
+ * Nas assertivas, o tamanho da alternativa só reflete quantos itens ela lista
+ * ("II, III e IV, apenas"), então essas questões ficam fora da métrica de
+ * "correta é a mais longa": contá-las só diluiria a proporção.
+ */
+export function entraNaMetricaDeTamanho(q: Questao): boolean {
+  return q.formato !== "assertivas";
 }
 
 export function corretaEhAMaisLonga(q: Questao): boolean {
@@ -219,15 +231,18 @@ function validarConjuntoMateria(slug: MateriaSlug, questoes: readonly Questao[],
     const n = resumo.porSubtopico[sub] ?? 0;
     if (n < 2) problemas.push({ severidade: sevCompleto, local, mensagem: `subtópico "${sub}" com ${n} questão(ões) (mínimo 2)` });
   }
-  if (resumo.total >= 10) {
-    const proporcao = resumo.corretaMaisLonga / resumo.total;
+  if (resumo.elegiveisTamanho >= 10) {
+    const proporcao = resumo.corretaMaisLonga / resumo.elegiveisTamanho;
+    const base = `das ${resumo.elegiveisTamanho} questões sem assertivas`;
     if (proporcao > 0.45) {
-      problemas.push({ severidade: "erro", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% das questões (máx. 35%): viés explorável` });
+      problemas.push({ severidade: "erro", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% ${base} (máx. 35%): viés explorável` });
     } else if (proporcao > 0.35) {
-      problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% das questões (alvo ≤ 35%)` });
-    } else if (resumo.total >= 30 && proporcao < 0.1) {
-      problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em só ${(proporcao * 100).toFixed(0)}% das questões: viés inverso ("nunca é a mais longa"); alvo entre 10% e 35%` });
+      problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em ${(proporcao * 100).toFixed(0)}% ${base} (alvo ≤ 35%)` });
+    } else if (resumo.elegiveisTamanho >= 30 && proporcao < 0.1) {
+      problemas.push({ severidade: "aviso", local, mensagem: `alternativa correta é a mais longa em só ${(proporcao * 100).toFixed(0)}% ${base}: viés inverso ("nunca é a mais longa"); alvo entre 10% e 35%` });
     }
+  }
+  if (resumo.total >= 10) {
     for (const [nivel, alvo] of Object.entries(ALVO_NIVEL)) {
       const real = (resumo.porNivel[nivel] ?? 0) / resumo.total;
       if (Math.abs(real - alvo) > 0.12) {
