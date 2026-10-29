@@ -1,0 +1,564 @@
+{
+  "materiaSlug": "engenharia-software",
+  "lote": 4,
+  "questoes": [
+    {
+      "id": "eng-sw-031",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Scrum",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No último dia de uma Sprint, os Developers do Time Scrum responsável pelo sistema de fiscalização de um Tribunal de Contas concluíram a codificação do item 'Emitir relatório de achados', mas não executaram os testes de integração exigidos pela Definição de Pronto, que é padrão da organização. Algumas partes interessadas pedem que o item seja mostrado na Sprint Review como 'quase pronto', e um dos Developers sugere que o time adote, apenas nesse caso, uma Definição de Pronto menos rigorosa. Segundo o Guia do Scrum (2020),",
+      "variantesEnunciado": [
+        "Considere que, ao fim de uma Sprint, um item do Sprint Backlog de um sistema de prestação de contas foi implementado, mas não passou pela revisão de segurança prevista na Definição de Pronto adotada como padrão pela organização. O Product Owner cogita apresentá-lo na Sprint Review como trabalho parcialmente concluído, e um Developer propõe flexibilizar a Definição de Pronto do time para incluir o item no Incremento. Segundo o Guia do Scrum (2020),",
+        "Em um projeto hipotético, um item do Sprint Backlog do portal de serviços de um tribunal ficou sem a documentação técnica exigida pela Definição de Pronto organizacional quando a Sprint terminou. Há pressão para exibi-lo na Sprint Review e para que o Time Scrum use, naquela Sprint, critérios de pronto mais brandos que os da organização. Segundo o Guia do Scrum (2020),"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o item pode ser apresentado na Sprint Review como trabalho parcialmente concluído, desde que a pendência fique registrada, e o Time Scrum pode adotar uma Definição de Pronto menos rigorosa que a da organização, se houver consenso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Guia é expresso: item que não atende à Definição de Pronto não pode ser liberado nem sequer apresentado na Sprint Review. E, quando a Definição de Pronto faz parte dos padrões da organização, todos os Times Scrum devem segui-la como mínimo; podem torná-la mais rigorosa, nunca mais branda."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a Sprint deve ser prorrogada pelo tempo necessário para concluir os testes, de modo que o item integre o Incremento e seja apresentado na Sprint Review.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As Sprints têm duração fixa, de um mês ou menos, e uma nova Sprint começa imediatamente após o fim da anterior. Prorrogar a Sprint para acomodar trabalho inacabado contraria o timebox e a previsibilidade do framework."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o item integra o Incremento, porque a codificação foi concluída, e a Definição de Pronto serve apenas como referência de qualidade, sem efeito sobre o que é apresentado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A Definição de Pronto é o compromisso do Incremento: só quando um item a satisfaz é que nasce um Incremento. Codificação concluída sem os testes exigidos não basta, e a Definição de Pronto tem efeito direto sobre o que pode ser apresentado e liberado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "cabe ao Scrum Master decidir se o item será apresentado na Sprint Review, e o Product Owner pode dispensar a Definição de Pronto da organização para itens de alta prioridade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum papel tem poder de dispensar a Definição de Pronto organizacional, que é o padrão mínimo, e a regra sobre a apresentação na Sprint Review decorre do Guia, não de decisão do Scrum Master. A alternativa inventa competências."
+        },
+        {
+          "id": "opt-5",
+          "texto": "o item não pode ser liberado nem apresentado na Sprint Review e volta ao Product Backlog para consideração futura; a Definição de Pronto da organização deve ser seguida pelo Time Scrum como padrão mínimo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o Guia de 2020, se um item do Product Backlog não atende à Definição de Pronto, ele não pode ser liberado nem apresentado na Sprint Review; retorna ao Product Backlog para consideração futura. Além disso, se a Definição de Pronto integra os padrões da organização, todos os Times Scrum devem segui-la como mínimo, podendo apenas torná-la mais exigente.",
+          "versaoInvertidaFalsa": "o item pode ser apresentado na Sprint Review como trabalho parcialmente concluído, e o Time Scrum pode adotar uma Definição de Pronto menos rigorosa que a da organização, se houver consenso entre os Developers."
+        }
+      ],
+      "pegadinhaFCC": "A banca aposta na flexibilidade: mostrar o item como 'quase pronto', prorrogar a Sprint ou abrandar a Definição de Pronto. O Guia é rígido: item fora da Definição de Pronto não é liberado nem apresentado, volta ao Product Backlog, e a Definição de Pronto organizacional é o mínimo.",
+      "resumoFlashcard": {
+        "pergunta": "O que acontece com um item que não atende à Definição de Pronto ao fim da Sprint?",
+        "resposta": "Não pode ser liberado nem apresentado na Sprint Review e retorna ao Product Backlog para consideração futura. Se a Definição de Pronto faz parte dos padrões da organização, todos os Times Scrum devem segui-la como mínimo."
+      },
+      "conceitosChave": ["Scrum: Definição de Pronto", "Scrum: artefatos e compromissos"],
+      "fundamentacao": "Guia do Scrum (2020), seção 'Incremento' (Compromisso: Definição de Pronto) e seção 'Sprint' (duração fixa de um mês ou menos)."
+    },
+    {
+      "id": "eng-sw-032",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Kanban, Lean Software Development e XP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe que mantém os sistemas de uma unidade técnica de um Tribunal de Contas usa Kanban e, em regime estável, apresenta em média 12 itens em andamento (WIP) e vazão média de 4 itens concluídos por semana. Para reduzir o tempo de entrega, a equipe passa a limitar o WIP a 8 itens, e a vazão média se mantém em 4 itens por semana. O tempo médio de ciclo antes e depois da mudança e a relação que fundamenta o cálculo são, respectivamente,",
+      "variantesEnunciado": [
+        "Considere uma equipe hipotética de sustentação que, de forma estável, mantém em média 12 demandas em andamento e conclui em média 4 demandas por semana. Após adotar um limite de WIP de 8 demandas, a vazão média continua em 4 por semana. O tempo médio de ciclo antes e depois da mudança e a relação que fundamenta o cálculo são, respectivamente,",
+        "Ao analisar métricas de fluxo de uma equipe de desenvolvimento, um técnico constata, em período estável, WIP médio de 12 itens e vazão média de 4 itens por semana; depois da introdução de um limite de WIP de 8 itens, a vazão média permaneceu em 4 itens por semana. O tempo médio de ciclo antes e depois da mudança e a relação que fundamenta o cálculo são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "48 semanas e 32 semanas, pela Lei de Little, segundo a qual o tempo médio de ciclo é o produto do WIP médio pela vazão média.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Multiplicar WIP por vazão (12 × 4 = 48; 8 × 4 = 32) não produz tempo; o resultado nem tem unidade de semanas. A Lei de Little relaciona as grandezas por divisão: tempo médio de ciclo = WIP médio ÷ vazão média."
+        },
+        {
+          "id": "opt-2",
+          "texto": "3 semanas e 2 semanas, pela Lei de Little, segundo a qual o tempo médio de ciclo é a razão entre o WIP médio e a vazão média.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pela Lei de Little, em sistema estável, tempo médio de ciclo = WIP médio ÷ vazão média. Antes: 12 itens ÷ 4 itens/semana = 3 semanas. Depois: 8 ÷ 4 = 2 semanas. Com a vazão constante, limitar o WIP reduz o tempo que cada item passa no sistema, que é o argumento central do Kanban para limitar o trabalho em progresso.",
+          "versaoInvertidaFalsa": "3 semanas nos dois casos, pois, pela Lei de Little, o tempo médio de ciclo depende apenas da vazão média, e não da quantidade de itens em andamento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "1/3 de semana e 1/2 semana, pela Lei de Little, segundo a qual o tempo médio de ciclo é a razão entre a vazão média e o WIP médio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A fórmula está invertida (4 ÷ 12 = 1/3; 4 ÷ 8 = 1/2). Além do erro de unidade, o resultado sugeriria que reduzir o WIP aumenta o tempo de ciclo, o contrário do que a lei estabelece."
+        },
+        {
+          "id": "opt-4",
+          "texto": "3 semanas nos dois casos, pois o limite de WIP afeta apenas a vazão, e não o tempo de ciclo, segundo a Lei de Little.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor inicial está certo, mas a premissa é falsa. Mantida a vazão, o tempo médio de ciclo é proporcional ao WIP: reduzindo-o de 12 para 8, o ciclo cai de 3 para 2 semanas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "2 semanas e 3 semanas, pois reduzir o WIP aumenta a fila de itens à espera e alonga o ciclo, conforme a Lei de Little.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte o efeito. O tempo de ciclo conta a partir do início do trabalho; itens que aguardam fora do sistema não entram no WIP. Com menos itens em andamento e a mesma vazão, cada item termina mais rápido."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece a fórmula invertida, o produto no lugar da razão e a ideia de que o WIP não afeta o ciclo. Pela Lei de Little, com vazão constante, reduzir o WIP de 12 para 8 reduz o tempo de ciclo de 3 para 2 semanas.",
+      "resumoFlashcard": {
+        "pergunta": "O que diz a Lei de Little aplicada ao Kanban?",
+        "resposta": "Em um sistema estável, tempo médio de ciclo = WIP médio ÷ vazão média. Com vazão constante, limitar o WIP reduz o tempo de ciclo: 12 itens ÷ 4 itens por semana = 3 semanas; 8 ÷ 4 = 2 semanas."
+      },
+      "conceitosChave": ["Lei de Little", "Kanban: limite de WIP"],
+      "fundamentacao": "Little, 'A Proof for the Queuing Formula: L = λW' (Operations Research, 1961); Vacanti & Coleman, The Kanban Guide (2020), seção 'Flow Metrics'; Vacanti, Actionable Agile Metrics for Predictability (2015). Contas conferidas por script."
+    },
+    {
+      "id": "eng-sw-033",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Modelagem com UML e BPMN",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A UML 2.5 organiza seus diagramas em duas grandes categorias: estruturais, que representam elementos estáticos do sistema, e comportamentais, que representam o comportamento dinâmico. São todos diagramas estruturais os diagramas de",
+      "variantesEnunciado": [
+        "Ao documentar a arquitetura de um sistema hipotético de controle de processos, a equipe decidiu, numa primeira etapa, produzir apenas diagramas estruturais da UML 2.5. Para isso, pode utilizar os diagramas de",
+        "Considere que um técnico de um Tribunal de Contas precisa separar, em um repositório de modelos UML 2.5, os diagramas estruturais dos comportamentais. Pertencem todos à categoria dos diagramas estruturais os diagramas de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "classes, sequência e implantação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Classes e implantação são estruturais, mas o diagrama de sequência é comportamental: pertence ao grupo dos diagramas de interação e mostra a troca de mensagens ao longo do tempo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "atividades, máquina de estados e casos de uso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os três são diagramas comportamentais: atividades modela fluxos de ações, máquina de estados modela estados e transições, e casos de uso modela as interações entre atores e sistema."
+        },
+        {
+          "id": "opt-3",
+          "texto": "pacotes, comunicação e objetos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Pacotes e objetos são estruturais, mas o diagrama de comunicação é comportamental, da família dos diagramas de interação, com foco nas ligações entre objetos e nas mensagens trocadas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "classes, componentes e implantação.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na UML 2.5, são estruturais os diagramas de classes, objetos, componentes, estrutura composta, pacotes, implantação e perfil. São comportamentais os de casos de uso, atividades e máquina de estados, além dos de interação (sequência, comunicação, visão geral de interação e tempo).",
+          "versaoInvertidaFalsa": "classes, sequência e máquina de estados, todos estruturais por representarem elementos estáticos do sistema."
+        },
+        {
+          "id": "opt-5",
+          "texto": "componentes, tempo e pacotes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Componentes e pacotes são estruturais, mas o diagrama de tempo (timing) é comportamental: é um diagrama de interação que mostra mudanças de estado ao longo de um eixo temporal."
+        }
+      ],
+      "pegadinhaFCC": "Cada distrator mistura diagramas estruturais com um comportamental, especialmente os de interação (sequência, comunicação, tempo), que são comportamentais.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os diagramas estruturais e comportamentais da UML 2.5?",
+        "resposta": "Estruturais (7): classes, objetos, componentes, estrutura composta, pacotes, implantação e perfil. Comportamentais (7): casos de uso, atividades, máquina de estados e os de interação (sequência, comunicação, visão geral de interação e tempo)."
+      },
+      "conceitosChave": ["UML: classificação dos diagramas"],
+      "fundamentacao": "OMG, Unified Modeling Language (UML) 2.5.1 (2017), Anexo A (Diagrams): taxonomia de diagramas estruturais e comportamentais."
+    },
+    {
+      "id": "eng-sw-034",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Testes de software e automação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "A equipe de qualidade de software de um Tribunal de Contas está revisando sua estratégia de testes para o sistema de processos eletrônicos. A respeito de técnicas e tipos de teste, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar o plano de testes de um sistema hipotético de gestão de auditorias, um técnico reuniu algumas afirmações para discussão com a equipe. A respeito de técnicas e tipos de teste de software, considere as afirmativas abaixo.",
+        "Considere que um órgão de controle externo pretende automatizar os testes do seu portal de serviços e precisa alinhar conceitos entre as equipes. A respeito de técnicas e tipos de teste, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Nos testes caixa-preta, os casos de teste são derivados da especificação, sem considerar a estrutura interna do código, com técnicas como partição de equivalência e análise de valor-limite.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Caixa-preta baseia-se no comportamento especificado; partição de equivalência e valor-limite são técnicas típicas dessa abordagem."
+        },
+        {
+          "texto": "Atingir 100% de cobertura de comandos garante 100% de cobertura de decisões, pois executar todos os comandos implica percorrer todos os desvios.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Vale o inverso: 100% de decisões garante 100% de comandos. Um if sem else pode ter todos os comandos executados sem que o resultado falso seja exercitado."
+        },
+        {
+          "texto": "Testes de regressão são reexecutados após mudanças para detectar defeitos introduzidos em partes já testadas e, por serem repetitivos, são fortes candidatos à automação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A regressão verifica se a mudança quebrou o que já funcionava; como a suíte cresce e é executada a cada alteração, automatizá-la é prática recomendada."
+        },
+        {
+          "texto": "No TDD, o ciclo começa pela implementação mínima do código de produção, seguida da escrita do teste que a valida e, por fim, da refatoração.",
+          "verdadeira": false,
+          "explicacao": "Falsa. No TDD, o teste vem primeiro: escreve-se um teste que falha (vermelho), implementa-se o mínimo para passar (verde) e, então, refatora-se."
+        },
+        {
+          "texto": "O BDD descreve o comportamento esperado em linguagem próxima do negócio, frequentemente no formato Dado/Quando/Então, favorecendo a colaboração entre negócio, desenvolvimento e testes.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O BDD, proposto por Dan North, expressa cenários executáveis em linguagem de negócio, frequentemente com a estrutura Dado/Quando/Então."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, III e V, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (caixa-preta parte da especificação), a III (regressão após mudanças, candidata à automação) e a V (BDD em linguagem de negócio, no formato Dado/Quando/Então). A II é falsa porque a implicação vale no sentido inverso, e a IV é falsa porque no TDD o teste é escrito antes do código.",
+          "versaoInvertidaFalsa": "Nos testes caixa-preta, os casos de teste são derivados da estrutura interna do código, buscando cobrir todos os comandos e desvios do programa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: cobertura total de comandos não garante cobertura total de decisões. Além disso, a alternativa omite a V, que descreve corretamente o BDD."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as duas afirmativas falsas: a II inverte a relação entre coberturas, e a IV inverte a ordem do TDD, em que o teste vem antes da implementação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e III são verdadeiras, mas a V também é: o BDD descreve comportamentos em linguagem de negócio, frequentemente com Dado/Quando/Então, e aproxima negócio, desenvolvimento e testes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa, pois o ciclo do TDD é vermelho (teste que falha), verde (código mínimo) e refatoração. A alternativa também omite a I, que é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte a relação entre coberturas (decisão implica comando, e não o contrário) e a ordem do TDD (o teste vem antes do código). As demais afirmativas descrevem corretamente caixa-preta, regressão e BDD.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a relação entre cobertura de comandos e cobertura de decisões?",
+        "resposta": "100% de cobertura de decisões garante 100% de cobertura de comandos, mas o inverso não vale: um if sem else pode ter todos os comandos executados sem que o desvio falso seja exercitado."
+      },
+      "conceitosChave": ["Testes: caixa-branca × caixa-preta", "TDD × BDD", "Cobertura de código"],
+      "fundamentacao": "ISTQB, Syllabus CTFL 4.0 (2023), seções 2.2.3 (teste de confirmação e de regressão), 4.2 (técnicas caixa-preta) e 4.3 (técnicas caixa-branca: comandos e ramos); Beck, Test-Driven Development: By Example (2002); North, 'Introducing BDD' (2006)."
+    },
+    {
+      "id": "eng-sw-035",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Engenharia de requisitos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Na engenharia de requisitos, a rastreabilidade bidirecional de requisitos permite",
+      "variantesEnunciado": [
+        "Ao implantar uma matriz de rastreabilidade no sistema de prestação de contas de um Tribunal de Contas, a equipe de TI busca a rastreabilidade bidirecional dos requisitos. Esse tipo de rastreabilidade permite",
+        "Considere que um técnico, em auditoria de um projeto de software, verifica se os requisitos estão rastreados de forma bidirecional. A rastreabilidade bidirecional de requisitos permite"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "verificar, antes da implementação, se os requisitos são consistentes, completos e realistas, atividade que dispensa a análise de impacto de mudanças.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Verificar consistência, completude e realismo é validação de requisitos, atividade distinta. E nada dispensa a análise de impacto de mudanças, que é justamente apoiada pela rastreabilidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "vincular cada requisito apenas aos casos de teste que o verificam, pois a ligação com a origem do requisito é objeto exclusivo da gerência de configuração.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ligar requisito a testes é só um dos sentidos. A rastreabilidade inclui também a ligação para trás, com a fonte do requisito (parte interessada, norma, documento), e essa ligação faz parte da gerência de requisitos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "identificar, a partir de um requisito, os artefatos que o implementam e testam e, a partir de um artefato, o requisito e a fonte que o originaram, apoiando a análise de impacto de mudanças.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A rastreabilidade bidirecional liga cada requisito para a frente (projeto, código, testes) e para trás (origem: partes interessadas, normas, documentos). Com isso, é possível avaliar o impacto de uma mudança, confirmar que todo requisito foi implementado e testado e justificar a existência de cada artefato.",
+          "versaoInvertidaFalsa": "identificar, a partir de um requisito, apenas os casos de teste que o verificam, sem permitir o caminho inverso, do artefato até o requisito ou a fonte que o originou."
+        },
+        {
+          "id": "opt-4",
+          "texto": "classificar os requisitos por prioridade, segundo categorias como 'deve ter', 'deveria ter', 'poderia ter' e 'não terá desta vez'.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A classificação descrita é a técnica MoSCoW de priorização de requisitos. Priorizar é atividade útil, mas diferente de rastrear a relação entre requisitos, origens e artefatos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "restringir o acesso ao documento de requisitos aos usuários autorizados, garantindo a integridade e a confidencialidade da especificação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Controle de acesso é medida de segurança da informação aplicada a documentos, sem relação com o conceito de rastreabilidade, que trata dos vínculos entre requisitos e demais artefatos."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece conceitos vizinhos: validação de requisitos (consistência, completude, realismo), priorização MoSCoW e controle de acesso. Rastreabilidade bidirecional é o vínculo nos dois sentidos, da origem ao código e aos testes e de volta, base da análise de impacto.",
+      "resumoFlashcard": {
+        "pergunta": "O que é rastreabilidade bidirecional de requisitos e para que serve?",
+        "resposta": "É a capacidade de seguir cada requisito para a frente (até o projeto, o código e os testes) e para trás (até sua origem: partes interessadas, normas, documentos). Serve para avaliar o impacto de mudanças, verificar cobertura e justificar cada artefato."
+      },
+      "conceitosChave": ["Requisitos: rastreabilidade"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., cap. 4, seção 4.6 (mudança de requisitos: gerenciamento, rastreabilidade e análise de impacto); IEEE, SWEBOK Guide v4.0 (2024), área Software Requirements (rastreamento de requisitos)."
+    },
+    {
+      "id": "eng-sw-036",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Padrões de projeto (criacionais, estruturais e comportamentais)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No projeto de um sistema de gestão de processos de um Tribunal de Contas, a equipe enfrenta dois problemas. Primeiro, a exportação de relatórios deve poder receber, de forma combinada e em tempo de execução, registro em log, compressão e criptografia, sem a criação de uma subclasse para cada combinação possível. Segundo, quando a situação de um processo muda, módulos como o painel, as notificações e a trilha de auditoria devem ser avisados automaticamente, sem que a classe do processo conheça as classes concretas desses módulos. Os padrões de projeto mais adequados para o primeiro e para o segundo problema são, respectivamente,",
+      "variantesEnunciado": [
+        "Considere um sistema hipotético de prestação de contas em que: (i) o envio de arquivos deve poder ganhar, dinamicamente e em qualquer combinação, validação de assinatura, compactação e cifragem, sem uma subclasse por combinação; e (ii) a alteração do status de uma prestação deve ser comunicada automaticamente a vários módulos interessados, que podem ser incluídos ou removidos sem alterar a classe da prestação. Os padrões de projeto mais adequados para (i) e (ii) são, respectivamente,",
+        "Em uma revisão de arquitetura, um técnico identifica duas necessidades: acrescentar responsabilidades a objetos de exportação de dados, empilhando-as dinamicamente sem explosão de subclasses, e fazer com que diversos objetos dependentes sejam atualizados automaticamente quando um objeto central muda de estado, com baixo acoplamento entre eles. Os padrões de projeto mais adequados para a primeira e para a segunda necessidade são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Composite e Mediator.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Composite organiza objetos em estruturas de árvore para tratar parte e todo de modo uniforme, e não empilha responsabilidades. Mediator centraliza a comunicação entre objetos em um intermediário, e não define a notificação um-para-muitos de dependentes."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Strategy e Observer.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Observer resolve o segundo problema, mas o Strategy encapsula algoritmos intercambiáveis e escolhe um de cada vez. Ele não permite empilhar comportamentos como log, compressão e criptografia sobre o mesmo objeto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Decorator e Chain of Responsibility.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Decorator resolve o primeiro problema, mas a Chain of Responsibility passa uma requisição ao longo de uma cadeia até que algum objeto a trate. Ela não notifica todos os interessados sobre uma mudança de estado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Decorator e Observer.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Decorator (estrutural) acrescenta responsabilidades a um objeto dinamicamente, envolvendo-o em objetos com a mesma interface, que podem ser combinados em qualquer ordem, como alternativa flexível às subclasses. O Observer (comportamental) define dependência um-para-muitos: quando o sujeito muda de estado, todos os observadores registrados são notificados, sem que o sujeito conheça suas classes concretas.",
+          "versaoInvertidaFalsa": "Observer e Decorator, pois é o Observer que empilha responsabilidades dinamicamente e o Decorator que notifica os objetos dependentes."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Proxy e Command.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Proxy controla o acesso a um objeto com a mesma interface, mas não foi concebido para combinar várias responsabilidades em camadas. O Command encapsula uma requisição como objeto (para enfileirar ou desfazer), sem relação com a notificação de dependentes."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece padrões vizinhos: Strategy (troca um algoritmo inteiro, sem empilhar comportamentos), Chain of Responsibility (passa a requisição até alguém tratá-la) e Mediator (centraliza a comunicação). Empilhar responsabilidades é Decorator; avisar dependentes é Observer.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as intenções dos padrões Decorator e Observer?",
+        "resposta": "Decorator (estrutural): acrescentar responsabilidades a um objeto dinamicamente, envolvendo-o em objetos com a mesma interface, como alternativa flexível às subclasses. Observer (comportamental): definir dependência um-para-muitos, de modo que, quando um objeto muda de estado, seus dependentes são notificados automaticamente."
+      },
+      "conceitosChave": ["GoF: Decorator", "GoF: Observer"],
+      "fundamentacao": "Gamma, Helm, Johnson & Vlissides, Design Patterns (1994), cap. 4 (Decorator, Composite, Proxy) e cap. 5 (Observer, Strategy, Chain of Responsibility, Mediator, Command)."
+    },
+    {
+      "id": "eng-sw-037",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Atributos de qualidade de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "No modelo de qualidade do produto da norma ISO/IEC 25010, tanto na edição de 2011 quanto na de 2023, a disponibilidade é tratada como",
+      "variantesEnunciado": [
+        "Ao redigir requisitos de qualidade para a contratação de um sistema, a equipe de TI de um Tribunal de Contas adotou o modelo de qualidade do produto da ISO/IEC 25010. Nesse modelo, a disponibilidade é tratada como",
+        "Considere que um técnico precisa enquadrar o requisito 'o sistema deve estar operacional e acessível 99,9% do tempo' no modelo de qualidade do produto da ISO/IEC 25010. Nesse modelo, a disponibilidade é tratada como"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "subcaracterística da confiabilidade, ao lado da tolerância a falhas e da recuperabilidade.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na ISO/IEC 25010, a confiabilidade (grau em que o sistema executa funções especificadas, sob condições especificadas, por um período) tem como subcaracterísticas a maturidade (na edição de 2023, isenção de falhas), a disponibilidade, a tolerância a falhas e a recuperabilidade. A disponibilidade expressa o grau em que o sistema está operacional e acessível quando requerido.",
+          "versaoInvertidaFalsa": "subcaracterística da segurança, ao lado da confidencialidade e da integridade, e não da confiabilidade."
+        },
+        {
+          "id": "opt-2",
+          "texto": "subcaracterística da segurança, ao lado da confidencialidade e da integridade, por compor a tríade clássica da segurança da informação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na segurança da informação, a tríade CID inclui a disponibilidade, mas o modelo da ISO/IEC 25010 a classifica na confiabilidade. A segurança, nessa norma, reúne confidencialidade, integridade, não repúdio, responsabilização e autenticidade (e resistência, na edição de 2023)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "subcaracterística da eficiência de desempenho, ao lado do comportamento em relação ao tempo e da capacidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A eficiência de desempenho trata de tempo de resposta, utilização de recursos e capacidade (limites máximos de operação). Estar operacional e acessível quando requerido é disponibilidade, parte da confiabilidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "característica de primeiro nível do modelo, independente da confiabilidade e sem subcaracterísticas próprias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Disponibilidade não é característica de primeiro nível em nenhuma das duas edições. As características de 2011 são oito, e as de 2023 são nove; em ambas, a disponibilidade figura como subcaracterística da confiabilidade."
+        },
+        {
+          "id": "opt-5",
+          "texto": "subcaracterística da manutenibilidade, ao lado da modificabilidade e da testabilidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Manutenibilidade trata da facilidade de modificar o produto, com modularidade, reusabilidade, analisabilidade, modificabilidade e testabilidade. Disponibilidade não integra esse grupo, embora boa manutenibilidade ajude a reduzir o tempo de reparo."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a tríade CID da segurança da informação, em que a disponibilidade aparece ao lado da confidencialidade e da integridade. Na ISO/IEC 25010, porém, a disponibilidade é subcaracterística da confiabilidade.",
+      "resumoFlashcard": {
+        "pergunta": "Em qual característica da ISO/IEC 25010 está a disponibilidade?",
+        "resposta": "Na confiabilidade, ao lado da tolerância a falhas e da recuperabilidade, e da maturidade, chamada isenção de falhas na edição de 2023. Na segurança ficam confidencialidade, integridade, não repúdio, responsabilização e autenticidade, além de resistência na edição de 2023."
+      },
+      "conceitosChave": ["ISO/IEC 25010: confiabilidade"],
+      "fundamentacao": "ISO/IEC 25010:2011, item 4.2.5 (Reliability: maturity, availability, fault tolerance, recoverability); ISO/IEC 25010:2023 (2ª ed.), característica Reliability (faultlessness, availability, fault tolerance, recoverability)."
+    },
+    {
+      "id": "eng-sw-038",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Fundamentos e ciclo de vida de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O modelo espiral, proposto por Barry Boehm, caracteriza-se por",
+      "variantesEnunciado": [
+        "Na escolha do modelo de processo para um projeto de alto risco técnico, a equipe de TI de um Tribunal de Contas considerou o modelo espiral de Boehm. Esse modelo caracteriza-se por",
+        "Considere que um técnico deve explicar a colegas o que distingue o modelo espiral de Boehm dos demais modelos de processo de software. Esse modelo caracteriza-se por"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "executar as fases de requisitos, projeto, implementação e testes uma única vez, em sequência, com aprovação formal ao fim de cada uma.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A descrição corresponde ao modelo cascata, linear e sequencial. O espiral é evolucionário: repete ciclos, e cada volta amplia o sistema e reavalia os riscos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "organizar o desenvolvimento em ciclos sucessivos, cada um com definição de objetivos, avaliação e redução de riscos, desenvolvimento e planejamento do ciclo seguinte.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O espiral de Boehm é orientado a riscos. Cada volta passa por quatro setores: definição de objetivos, alternativas e restrições; avaliação das alternativas, com identificação e redução de riscos (inclusive por protótipos); desenvolvimento e verificação; e planejamento da volta seguinte.",
+          "versaoInvertidaFalsa": "organizar o desenvolvimento em ciclos sucessivos, cada um com definição de objetivos, desenvolvimento e planejamento do ciclo seguinte, sem etapa específica de análise de riscos."
+        },
+        {
+          "id": "opt-3",
+          "texto": "associar cada fase de desenvolvimento a um nível de teste correspondente, como a especificação de requisitos ao teste de aceitação e a codificação ao teste de unidade.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa correspondência entre fases de desenvolvimento e níveis de teste define o modelo em V, uma variação do cascata, e não o espiral."
+        },
+        {
+          "id": "opt-4",
+          "texto": "dispensar a análise de riscos, substituída pela entrega frequente de incrementos ao cliente em iterações de duração fixa.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A análise de riscos é o traço central do espiral, e não algo dispensável. Iterações de duração fixa com entregas frequentes lembram métodos ágeis como o Scrum."
+        },
+        {
+          "id": "opt-5",
+          "texto": "construir um protótipo descartável no início do projeto e, após sua aprovação, seguir integralmente o modelo cascata.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O espiral pode usar protótipos em qualquer volta, como meio de reduzir riscos, mas não se resume a um protótipo inicial seguido de cascata. Seu desenvolvimento é cíclico do começo ao fim."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve outros modelos (cascata, em V, ágil) como se fossem o espiral. A marca do espiral é ser orientado a riscos: cada volta inclui identificar e reduzir riscos antes de prosseguir.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza o modelo espiral de Boehm?",
+        "resposta": "É um modelo evolucionário orientado a riscos: o desenvolvimento avança em voltas sucessivas, e cada volta passa por definição de objetivos e alternativas, avaliação e redução de riscos (com protótipos, se preciso), desenvolvimento e verificação, e planejamento da volta seguinte."
+      },
+      "conceitosChave": ["Modelo espiral", "Ciclo de vida de software"],
+      "fundamentacao": "Boehm, 'A Spiral Model of Software Development and Enhancement' (IEEE Computer, 1988); Sommerville, Engenharia de Software, 10ª ed., cap. 2; Pressman & Maxim, Engenharia de Software, 9ª ed., cap. 4."
+    },
+    {
+      "id": "eng-sw-039",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Princípios SOLID, DRY, KISS, YAGNI, coesão e acoplamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A classe ServicoPrestacaoContas, do sistema de um Tribunal de Contas, valida os dados recebidos, calcula indicadores, grava o resultado criando internamente, com new, um objeto da classe concreta RepositorioOracle e ainda envia e-mails ao jurisdicionado. Qualquer mudança na regra de cálculo, no banco ou no leiaute do e-mail obriga a alterar essa classe, e os testes de unidade exigem um banco real. A equipe propõe dividir as atividades em classes distintas e fazer o serviço receber, pelo construtor, uma interface Repositorio. Os princípios que fundamentam, respectivamente, a divisão das atividades e o recebimento da interface pelo construtor, bem como o efeito esperado no projeto, são",
+      "variantesEnunciado": [
+        "Considere a classe hipotética GeradorRelatorioAuditoria, que consulta dados, aplica regras de materialidade, formata o documento e o grava usando uma instância de ArquivoServidorLocal criada internamente. Cada alteração em qualquer dessas atividades exige mexer na mesma classe, e os testes dependem do servidor real. A equipe decide separar as atividades em classes próprias e injetar no gerador, pelo construtor, uma interface de armazenamento. Os princípios que fundamentam, respectivamente, a separação das atividades e a injeção da interface pelo construtor, bem como o efeito esperado no projeto, são",
+        "Na revisão de código de um sistema de protocolo, um técnico aponta que a classe ServicoProtocolo concentra validação, numeração, persistência (instanciando diretamente um repositório concreto) e notificação, o que a torna difícil de testar e de manter. Propõe-se dividir essas atividades em classes distintas e fornecer ao serviço, pelo construtor, uma abstração de repositório. Os princípios que fundamentam, respectivamente, a divisão das atividades e o fornecimento da abstração pelo construtor, bem como o efeito esperado no projeto, são"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Segregação de Interface e Aberto/Fechado; aumento da coesão e do acoplamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não havia interface extensa a dividir (ISP), e o recebimento de uma abstração pelo construtor concretiza a Inversão de Dependência. Além disso, a mudança reduz o acoplamento em vez de aumentá-lo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Inversão de Dependência e Responsabilidade Única; aumento da coesão e redução do acoplamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os princípios e os efeitos estão certos, mas a ordem não. O enunciado pede, respectivamente, o princípio da divisão das atividades (Responsabilidade Única) e o do recebimento da interface (Inversão de Dependência)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Responsabilidade Única e Substituição de Liskov; redução da coesão e do acoplamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O LSP trata da substituição de subtipos sem quebrar clientes, e não da dependência de abstrações em vez de classes concretas. E separar responsabilidades aumenta a coesão, não a reduz."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Responsabilidade Única e Inversão de Dependência; redução da coesão e aumento do acoplamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta os princípios e inverte os efeitos. Classes com um único motivo para mudar são mais coesas, e depender de uma interface injetada, e não de uma classe concreta criada internamente, diminui o acoplamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Responsabilidade Única e Inversão de Dependência; aumento da coesão e redução do acoplamento.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Dividir validação, cálculo, persistência e notificação em classes distintas aplica o SRP: cada classe passa a ter um único motivo para mudar, o que eleva a coesão. Receber a interface Repositorio pelo construtor, em vez de criar internamente a classe concreta, aplica o DIP: o serviço depende de abstração, o que reduz o acoplamento e permite testar com dublês, sem banco real.",
+          "versaoInvertidaFalsa": "Responsabilidade Única e Inversão de Dependência; redução da coesão e aumento do acoplamento, pois separar classes espalha a lógica e cria mais dependências."
+        }
+      ],
+      "pegadinhaFCC": "A alternativa 'Inversão de Dependência e Responsabilidade Única' tem os princípios certos na ordem errada, e outras invertem o efeito. Separar responsabilidades aumenta a coesão; depender de uma abstração injetada reduz o acoplamento.",
+      "resumoFlashcard": {
+        "pergunta": "Como SRP e DIP afetam a coesão e o acoplamento?",
+        "resposta": "O SRP faz cada classe ter um único motivo para mudar, o que aumenta a coesão. O DIP faz módulos de alto nível dependerem de abstrações, como interfaces injetadas pelo construtor, e não de classes concretas, o que reduz o acoplamento e facilita testes com dublês."
+      },
+      "conceitosChave": ["SOLID: Responsabilidade Única", "SOLID: Inversão de Dependência", "Coesão e acoplamento"],
+      "fundamentacao": "Martin, Agile Software Development: Principles, Patterns, and Practices (2002), caps. 8 (SRP) e 11 (DIP); Martin, Clean Architecture (2017), parte III (princípios de projeto)."
+    },
+    {
+      "id": "eng-sw-040",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Scrum",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "De acordo com o Guia do Scrum (2020), o …… é responsável por maximizar o valor do produto resultante do trabalho do Time Scrum; o …… é responsável pela eficácia do Time Scrum; e os …… são responsáveis, entre outras coisas, por criar o plano da Sprint, o Sprint Backlog. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Ao elaborar uma cartilha sobre Scrum para as equipes de TI de um Tribunal de Contas, com base no Guia de 2020, um técnico escreveu: maximizar o valor do produto é responsabilidade do ……; zelar pela eficácia do Time Scrum é responsabilidade do ……; e elaborar o Sprint Backlog, plano da Sprint, cabe aos ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere as seguintes responsabilidades definidas no Guia do Scrum (2020): a maximização do valor do produto cabe ao ……; a eficácia do Time Scrum cabe ao ……; e a criação do plano para a Sprint, o Sprint Backlog, cabe aos ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Scrum Master − Product Owner − Developers",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras responsabilidades estão trocadas. Maximizar o valor do produto cabe ao Product Owner; a eficácia do Time Scrum cabe ao Scrum Master, que estabelece o Scrum como definido no Guia."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Product Owner − gerente de projeto − Developers",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Guia do Scrum não prevê gerente de projeto no Time Scrum, composto apenas por Product Owner, Scrum Master e Developers. A eficácia do time é responsabilidade do Scrum Master."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Product Owner − Scrum Master − Developers",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Guia de 2020 define três responsabilidades: o Product Owner maximiza o valor do produto e gerencia o Product Backlog; o Scrum Master responde pela eficácia do Time Scrum; e os Developers criam o plano da Sprint (Sprint Backlog), instilam qualidade aderindo à Definição de Pronto, adaptam o plano diariamente e se responsabilizam mutuamente.",
+          "versaoInvertidaFalsa": "Scrum Master − Product Owner − Developers, pois é o Scrum Master quem responde pela maximização do valor do produto."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Product Owner − Scrum Master − líderes técnicos",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não existe a figura do líder técnico no Guia do Scrum. Quem cria o plano da Sprint são os Developers, de forma autogerenciada, sem hierarquia interna no Time Scrum."
+        },
+        {
+          "id": "opt-5",
+          "texto": "gerente de produto − Scrum Master − Developers",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A responsabilidade pela maximização do valor do produto é do Product Owner, uma pessoa, e não de um cargo organizacional como gerente de produto, que o Guia não menciona."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as responsabilidades do Product Owner e do Scrum Master e insere figuras que não existem no Guia, como gerente de projeto, gerente de produto e líder técnico.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as três responsabilidades (accountabilities) do Time Scrum no Guia de 2020?",
+        "resposta": "Product Owner: maximizar o valor do produto e gerenciar o Product Backlog. Scrum Master: eficácia do Time Scrum, estabelecendo o Scrum como definido no Guia. Developers: criar o plano da Sprint (Sprint Backlog), instilar qualidade pela Definição de Pronto, adaptar o plano diariamente e responsabilizar-se mutuamente."
+      },
+      "conceitosChave": ["Scrum: responsabilidades do Time Scrum", "Scrum: Product Owner"],
+      "fundamentacao": "Guia do Scrum (2020), seção 'Time Scrum' (subseções Developers, Product Owner e Scrum Master)."
+    }
+  ]
+}

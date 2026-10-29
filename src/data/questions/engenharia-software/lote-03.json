@@ -1,0 +1,564 @@
+{
+  "materiaSlug": "engenharia-software",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "eng-sw-021",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Scrum",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Um Time Scrum que desenvolve o sistema de gestão de processos de um Tribunal de Contas trabalha com Sprints de um mês e quer conferir se seus eventos seguem o Guia do Scrum (2020). Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Considere que a equipe de TI de um órgão de controle externo adotou Sprints de um mês e elaborou um resumo dos eventos do Scrum para orientar novos integrantes, com base no Guia de 2020. Considere as afirmativas abaixo.",
+        "Ao auditar a adoção do Scrum em um projeto hipotético com Sprints de um mês, um técnico compara a prática da equipe com o Guia do Scrum (2020). A respeito dos eventos, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "A Sprint Planning tem duração máxima de oito horas para uma Sprint de um mês; para Sprints mais curtas, o evento costuma ser mais curto.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É o timebox previsto no Guia de 2020 para a Sprint Planning de uma Sprint de um mês."
+        },
+        {
+          "texto": "A Daily Scrum é um evento de 15 minutos para os Developers; se o Product Owner ou o Scrum Master estiverem trabalhando ativamente em itens do Sprint Backlog, participam como Developers.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O Guia de 2020 destina a Daily Scrum aos Developers e prevê essa participação do Product Owner e do Scrum Master."
+        },
+        {
+          "texto": "O refinamento do Product Backlog é o quinto evento formal do Scrum, com timebox de até 10% da capacidade da Sprint.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Refinamento é atividade contínua, e não evento. Os cinco eventos são Sprint, Sprint Planning, Daily Scrum, Sprint Review e Sprint Retrospective."
+        },
+        {
+          "texto": "A Sprint Retrospective encerra a Sprint e tem duração máxima de três horas para uma Sprint de um mês.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A Retrospectiva conclui a Sprint, e seu timebox é de até três horas para Sprints de um mês."
+        },
+        {
+          "texto": "A Sprint Review funciona como portão de liberação: Incrementos só podem ser entregues aos usuários depois de aprovados nesse evento.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Segundo o Guia, um Incremento pode ser entregue antes do fim da Sprint, e a Sprint Review não deve ser considerada um portão para liberar valor."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas I e II são verdadeiras, mas a IV também é: a Sprint Retrospective encerra a Sprint e tem timebox de até três horas para Sprints de um mês."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I, II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. São verdadeiras a I (Sprint Planning de até 8 horas), a II (Daily Scrum de 15 minutos para os Developers) e a IV (Retrospective de até 3 horas, encerrando a Sprint). A III é falsa porque o refinamento é atividade contínua, e não evento; a V é falsa porque a Sprint Review não é portão de liberação.",
+          "versaoInvertidaFalsa": "A Daily Scrum é um evento de até 15 minutos destinado ao Scrum Master, que nele cobra de cada Developer o andamento das tarefas que lhe foram atribuídas."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II, III e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as duas afirmativas falsas. O refinamento não é evento (III), e o Guia afirma que a Sprint Review não deve ser tratada como portão para liberar valor (V)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, II, IV e V, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa V é falsa. O Guia de 2020 admite que Incrementos sejam entregues aos usuários antes do fim da Sprint; a Sprint Review é uma sessão de trabalho para inspecionar o resultado e adaptar, não um portão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é falsa, pois o refinamento do Product Backlog é atividade contínua. A alternativa ainda omite a I e a II, que descrevem corretamente a Sprint Planning e a Daily Scrum."
+        }
+      ],
+      "pegadinhaFCC": "A banca transforma o refinamento do Product Backlog em evento formal e trata a Sprint Review como portão de liberação. No Guia de 2020, o refinamento é atividade contínua, e Incrementos podem ser entregues antes do fim da Sprint.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os eventos do Scrum e seus timeboxes máximos para uma Sprint de um mês?",
+        "resposta": "Sprint (até um mês, contém os demais), Sprint Planning (até 8 h), Daily Scrum (15 min), Sprint Review (até 4 h) e Sprint Retrospective (até 3 h). Em Sprints mais curtas, os eventos costumam ser mais curtos. O refinamento é atividade contínua, e não evento."
+      },
+      "conceitosChave": ["Scrum: eventos e timeboxes"],
+      "fundamentacao": "Guia do Scrum (2020), seções 'Eventos Scrum', 'Sprint Planning', 'Daily Scrum', 'Sprint Review', 'Sprint Retrospective', 'Product Backlog' (refinamento) e 'Incremento'."
+    },
+    {
+      "id": "eng-sw-022",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Engenharia de requisitos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas vai desenvolver um sistema de apoio à análise de editais de licitação. Nas entrevistas, os auditores mais experientes descrevem o trabalho de forma genérica e omitem verificações que fazem automaticamente, por já estarem incorporadas à rotina. Para captar esse conhecimento tácito, o analista passa a acompanhar os auditores em seu ambiente de trabalho, registrando como de fato executam as tarefas. A técnica de elicitação adotada e uma limitação reconhecida dessa técnica são, respectivamente,",
+      "variantesEnunciado": [
+        "Em um projeto hipotético de sistema para a central de serviços de TI de um tribunal, os atendentes não conseguem explicar em reuniões os atalhos e as conferências informais que usam no dia a dia. O analista decide passar alguns dias no setor, observando o atendimento real e anotando as práticas efetivamente adotadas. A técnica de elicitação adotada e uma limitação reconhecida dessa técnica são, respectivamente,",
+        "Considere que, ao levantar requisitos para um módulo de instrução processual, um técnico percebe que os servidores descrevem nas entrevistas o procedimento formal, e não o que realmente fazem. Ele então acompanha a rotina da unidade por uma semana, observando e registrando o trabalho como efetivamente ocorre. A técnica de elicitação adotada e uma limitação reconhecida dessa técnica são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "entrevista fechada; depende de um roteiro de perguntas predefinidas, o que dificulta a descoberta de requisitos não previstos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A limitação descrita é real para entrevistas fechadas, mas a técnica do caso não é entrevista: o analista abandonou as entrevistas justamente porque não captavam o conhecimento tácito e passou a acompanhar o trabalho."
+        },
+        {
+          "id": "opt-2",
+          "texto": "workshop de requisitos (JAD); exige reunir todos os interessados ao mesmo tempo, o que dificulta a conciliação de agendas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Workshops reúnem usuários e desenvolvedores em sessões estruturadas para definir requisitos em conjunto. No caso, não há sessão coletiva: o analista observa individualmente o trabalho no próprio ambiente dos auditores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "prototipação descartável; o código produzido costuma ser reaproveitado indevidamente como base do produto final.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A prototipação apresenta versões simuladas do sistema para obter reação dos usuários. No cenário, nenhum protótipo foi construído; o que se fez foi acompanhar a execução real das tarefas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "observação (etnografia); exige que os usuários verbalizem previamente todo o conhecimento tácito, o que a torna dependente de entrevistas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A técnica está certa, mas a limitação contradiz seu propósito. A observação é escolhida justamente porque capta o conhecimento tácito sem exigir que o usuário o verbalize. É a alternativa atraente com final errado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "observação (etnografia); por se concentrar nas práticas existentes, é pouco eficaz para identificar funcionalidades inovadoras ou mudanças radicais no processo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na observação (etnografia), o analista se insere no ambiente de trabalho e registra como as tarefas são realmente executadas, captando conhecimento tácito e práticas informais que as pessoas não descrevem em entrevistas. Sommerville aponta como limitação o foco nas práticas atuais: a técnica ajuda pouco a conceber inovações e deve ser combinada com outras, como a prototipação.",
+          "versaoInvertidaFalsa": "observação (etnografia); por se concentrar nas práticas existentes, é a técnica mais indicada para identificar funcionalidades inovadoras e mudanças radicais no processo."
+        }
+      ],
+      "pegadinhaFCC": "A alternativa atraente acerta a técnica, mas erra a limitação. A observação capta o conhecimento tácito sem depender de verbalização; sua fraqueza é estar ancorada no processo atual, o que pouco ajuda a conceber inovações.",
+      "resumoFlashcard": {
+        "pergunta": "Quando usar a observação (etnografia) na elicitação de requisitos e qual é a sua limitação?",
+        "resposta": "É útil para captar o conhecimento tácito e o modo real de trabalho, que os usuários não conseguem ou não pensam em descrever em entrevistas. Por se basear nas práticas existentes, é fraca para identificar funcionalidades inovadoras."
+      },
+      "conceitosChave": ["Elicitação de requisitos: técnicas"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., cap. 4, seção 4.3 (elicitação de requisitos: entrevistas e etnografia)."
+    },
+    {
+      "id": "eng-sw-023",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Padrões de projeto (criacionais, estruturais e comportamentais)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "O catálogo de padrões de projeto de Gamma, Helm, Johnson e Vlissides (GoF) classifica seus 23 padrões, quanto ao propósito, em criacionais, estruturais e comportamentais. Segundo essa classificação, é correto associar",
+      "variantesEnunciado": [
+        "Na documentação de arquitetura de um sistema hipotético de fiscalização, os padrões de projeto utilizados devem ser agrupados conforme a classificação por propósito do catálogo GoF. Segundo essa classificação, é correto associar",
+        "Considere que um técnico de um Tribunal de Contas está preparando material de estudo sobre os padrões GoF, divididos em criacionais, estruturais e comportamentais. Nessa classificação, é correto associar"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Builder e Prototype aos criacionais; Composite e Flyweight aos estruturais; Memento e Visitor aos comportamentais.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Builder e Prototype tratam da criação de objetos (criacionais); Composite e Flyweight tratam da composição de classes e objetos em estruturas maiores (estruturais); Memento e Visitor tratam da distribuição de responsabilidades e da interação entre objetos (comportamentais). O catálogo tem 5 criacionais, 7 estruturais e 11 comportamentais.",
+          "versaoInvertidaFalsa": "Builder e Prototype aos estruturais; Composite e Flyweight aos criacionais; Memento e Visitor aos comportamentais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Singleton e Adapter aos criacionais; Decorator e Proxy aos estruturais; Observer e Strategy aos comportamentais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Singleton é criacional, mas Adapter é estrutural: ele compõe objetos para converter interfaces, sem tratar da criação. As demais associações estão certas, o que torna o erro fácil de passar despercebido."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Factory Method e Abstract Factory aos criacionais; Facade e Iterator aos estruturais; Command e State aos comportamentais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Iterator é comportamental: define como percorrer os elementos de um agregado sem expor sua representação. Facade, ao seu lado, é de fato estrutural."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Prototype e Singleton aos criacionais; Bridge e Composite aos estruturais; Template Method e Decorator aos comportamentais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Decorator é estrutural: acrescenta responsabilidades a um objeto envolvendo-o em outro com a mesma interface. Template Method, sim, é comportamental."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Builder e Facade aos criacionais; Adapter e Flyweight aos estruturais; Mediator e Chain of Responsibility aos comportamentais.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Facade é estrutural: oferece interface simplificada a um subsistema, sem relação com a criação de objetos. Builder, ao seu lado, é de fato criacional."
+        }
+      ],
+      "pegadinhaFCC": "Cada distrator tem um único padrão fora do lugar, em meio a associações corretas. Os deslocados mais comuns são Adapter, Decorator e Facade (estruturais) e Iterator (comportamental).",
+      "resumoFlashcard": {
+        "pergunta": "Como se distribuem os 23 padrões GoF por propósito?",
+        "resposta": "Criacionais (5): Abstract Factory, Builder, Factory Method, Prototype, Singleton. Estruturais (7): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. Comportamentais (11): Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor."
+      },
+      "conceitosChave": ["GoF: classificação por propósito"],
+      "fundamentacao": "Gamma, Helm, Johnson & Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software (1994), cap. 1, seção 1.5 ('Organizing the Catalog', classificação por propósito e escopo)."
+    },
+    {
+      "id": "eng-sw-024",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Atributos de qualidade de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A arquitetura de um sistema de consulta processual de um Tribunal de Contas tem três elementos em série: um balanceador de carga com disponibilidade de 99,99%; um conjunto de dois servidores de aplicação idênticos, em redundância ativa, cada um com disponibilidade de 99%, bastando um deles operante para o serviço funcionar; e um servidor de banco de dados com disponibilidade de 99,9%. Considerando falhas independentes, a disponibilidade aproximada do sistema e o elemento que mais limita essa disponibilidade são, respectivamente,",
+      "variantesEnunciado": [
+        "Considere um portal hipotético de serviços ao jurisdicionado cuja requisição passa, em sequência, por um balanceador (99,99% de disponibilidade), por um par de servidores de aplicação redundantes, cada qual com 99% de disponibilidade e capaz de atender sozinho, e por um banco de dados (99,9%). Supondo falhas independentes, a disponibilidade aproximada do conjunto e o elemento que mais a limita são, respectivamente,",
+        "Em uma auditoria de infraestrutura de TI, um técnico analisa um serviço composto por balanceador de carga (99,99%), dois servidores web em redundância ativa (99% cada; um basta para atender) e servidor de banco de dados (99,9%), todos necessários em série. Admitindo independência entre as falhas, a disponibilidade aproximada do serviço e o elemento que mais a limita são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "98,89% e o par de servidores redundantes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor 98,89% (0,9999 × 0,99 × 0,999) desconsidera a redundância e trata o par como um único servidor de 99%. Com redundância ativa, o par atinge 1 − 0,01² = 99,99% e deixa de ser o limitador."
+        },
+        {
+          "id": "opt-2",
+          "texto": "99,90% e o servidor de banco de dados.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o limitador, mas aplica a falsa regra de que o sistema tem a disponibilidade do elo mais fraco. Em série, as disponibilidades se multiplicam, e o resultado é sempre menor que a do pior componente: cerca de 99,88%."
+        },
+        {
+          "id": "opt-3",
+          "texto": "99,88% e o servidor de banco de dados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Par redundante: 1 − (1 − 0,99)² = 1 − 0,0001 = 0,9999. Em série: 0,9999 × 0,9999 × 0,999 ≈ 0,99880, ou seja, cerca de 99,88%. Com a redundância, o par passa a ter a mesma disponibilidade do balanceador (99,99%), e o banco de dados, com indisponibilidade de 0,1%, torna-se o principal limitador; replicá-lo seria o próximo passo.",
+          "versaoInvertidaFalsa": "98,89% e o par de servidores redundantes, pois a redundância ativa não altera a disponibilidade do conjunto, que continua igual à de cada servidor, 99%."
+        },
+        {
+          "id": "opt-4",
+          "texto": "99,98% e o balanceador de carga.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 99,98% (0,9999 × 0,9999) omite o banco de dados, que também está em série. E o balanceador, com 99,99%, não é o elemento mais frágil; o banco, com 99,9%, é."
+        },
+        {
+          "id": "opt-5",
+          "texto": "97,90% e o par de servidores redundantes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 97,90% resulta de tratar os dois servidores como se estivessem em série (0,99 × 0,99), quando bastaria um deles. Redundância ativa é composição em paralelo: multiplicam-se as indisponibilidades, e não as disponibilidades."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece o valor que ignora a redundância (98,89%), o da falsa regra do elo mais fraco (99,90%) e o dos servidores calculados em série (97,90%). Em paralelo, multiplicam-se as indisponibilidades; em série, as disponibilidades.",
+      "resumoFlashcard": {
+        "pergunta": "Como se calcula a disponibilidade de componentes em série e em paralelo?",
+        "resposta": "Em série, todos precisam funcionar: A = A1 × A2 × … × An. Em paralelo (redundância ativa, basta um), A = 1 − (1 − A1) × (1 − A2) × …. Dois servidores de 99% em paralelo resultam em 99,99%."
+      },
+      "conceitosChave": ["Disponibilidade: série e paralelo", "Disponibilidade: cálculo de noves"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., caps. 10 e 11 (disponibilidade, redundância e métricas de confiabilidade). Fórmulas: série A = ΠAi; paralelo A = 1 − Π(1 − Ai). Valores conferidos por script."
+    },
+    {
+      "id": "eng-sw-025",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Histórias de usuário, casos de uso e critérios de aceite",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na modelagem de casos de uso do sistema de protocolo eletrônico de um Tribunal de Contas, todo protocolo de documento exige que o jurisdicionado se autentique com certificado digital, comportamento também reutilizado por outros casos de uso. Além disso, apenas quando o documento se refere a medida cautelar, o jurisdicionado pode solicitar tramitação urgente durante o protocolo. Na UML, os relacionamentos adequados entre o caso de uso 'Protocolar documento' e os casos de uso 'Autenticar com certificado' e 'Solicitar tramitação urgente' são, respectivamente,",
+      "variantesEnunciado": [
+        "No sistema de peticionamento de um tribunal, o caso de uso 'Protocolar documento' sempre executa 'Autenticar com certificado', que também é usado por outros casos de uso, e, em situação específica (documento relativo a medida cautelar), pode ser complementado por 'Solicitar tramitação urgente', a partir de um ponto de extensão. Na UML, os relacionamentos adequados entre 'Protocolar documento' e esses dois casos de uso são, respectivamente,",
+        "Considere que, em um sistema hipotético de comunicação processual, 'Protocolar documento' não pode ser concluído sem 'Autenticar com certificado', passo compartilhado com outros serviços, ao passo que 'Solicitar tramitação urgente' só é acionado de forma condicional, quando o documento trata de medida cautelar. Na UML, os relacionamentos adequados entre 'Protocolar documento' e esses dois casos de uso são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "«extend», de 'Autenticar com certificado' para 'Protocolar documento', e «include», de 'Protocolar documento' para 'Solicitar tramitação urgente'.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os estereótipos estão trocados. A autenticação é obrigatória e reutilizada, o que pede «include»; a tramitação urgente é condicional, o que pede «extend». Modelar o obrigatório como extensão inverte a semântica."
+        },
+        {
+          "id": "opt-2",
+          "texto": "«include», de 'Autenticar com certificado' para 'Protocolar documento', e «extend», de 'Protocolar documento' para 'Solicitar tramitação urgente'.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os estereótipos estão certos, mas os sentidos estão invertidos. No «include», a seta parte do caso base ('Protocolar documento') para o incluído; no «extend», parte do caso que estende ('Solicitar tramitação urgente') para o caso base."
+        },
+        {
+          "id": "opt-3",
+          "texto": "generalização, em que 'Autenticar com certificado' é especialização de 'Protocolar documento', e «include», de 'Solicitar tramitação urgente' para 'Protocolar documento'.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Generalização indica que um caso de uso é variação especializada de outro, o que não ocorre: autenticar não é um tipo de protocolo. E a tramitação urgente é opcional, o que exige «extend», e não «include»."
+        },
+        {
+          "id": "opt-4",
+          "texto": "«include», de 'Protocolar documento' para 'Autenticar com certificado', e «extend», de 'Solicitar tramitação urgente' para 'Protocolar documento'.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O «include» modela comportamento que o caso base sempre executa, frequentemente reutilizado; a seta vai do caso base para o incluído. O «extend» modela comportamento opcional ou condicional, inserido em um ponto de extensão do caso base, que é completo sem ele; a seta vai do caso que estende para o caso base.",
+          "versaoInvertidaFalsa": "«include», de 'Protocolar documento' para 'Solicitar tramitação urgente', e «extend», de 'Autenticar com certificado' para 'Protocolar documento', pois o comportamento obrigatório deve ser modelado por extensão."
+        },
+        {
+          "id": "opt-5",
+          "texto": "«include» nos dois casos, partindo de 'Protocolar documento', pois tanto a autenticação quanto a tramitação urgente ocorrem dentro do protocolo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O «include» indica execução obrigatória do comportamento incluído. A tramitação urgente só ocorre em uma condição específica (medida cautelar); por isso é modelada com «extend», a partir de um ponto de extensão."
+        }
+      ],
+      "pegadinhaFCC": "A banca acerta os estereótipos e inverte o sentido das setas. No «include», a seta parte do caso base para o incluído (obrigatório); no «extend», parte do caso que estende para o caso base (opcional, em ponto de extensão).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre «include» e «extend» em casos de uso?",
+        "resposta": "«include»: o caso base sempre executa o comportamento incluído, em geral reutilizado; a seta vai do base para o incluído. «extend»: comportamento opcional ou condicional inserido em um ponto de extensão; a seta vai do caso que estende para o caso base, que é completo sem ele."
+      },
+      "conceitosChave": ["Casos de uso: include × extend"],
+      "fundamentacao": "OMG, UML 2.5.1 (2017), cláusula 18 (Use Cases: Include, Extend e ExtensionPoint); Booch, Rumbaugh & Jacobson, UML: Guia do Usuário, 2ª ed. (2005), capítulo sobre casos de uso."
+    },
+    {
+      "id": "eng-sw-026",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Abordagens preditiva, iterativa, incremental e adaptativa",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um Tribunal de Contas contratará o desenvolvimento de um sistema com dois componentes. O primeiro calcula prazos processuais segundo regras detalhadas em regimento, estáveis e já conhecidas; o segundo é um painel analítico para auditores, cujos requisitos são incertos e devem emergir do uso. O gerente propõe planejar e executar o primeiro componente com escopo, cronograma e custo definidos no início, e desenvolver o segundo em ciclos curtos, com entregas frequentes e ajustes a partir do feedback dos auditores. A proposta caracteriza",
+      "variantesEnunciado": [
+        "Considere um projeto hipotético de TI em que o módulo de integração com um sistema federal tem especificação fechada e estável, enquanto o portal de transparência voltado ao cidadão tem requisitos pouco claros. A equipe decide conduzir o módulo de integração com planejamento detalhado antecipado e entregá-lo de uma só vez, e o portal em iterações curtas, com incrementos validados pelos usuários. A proposta caracteriza",
+        "Na elaboração do plano de um projeto de sistema para fiscalização de obras, o gerente identificou uma parte regida por norma técnica rígida, com requisitos estáveis, e outra, de visualização de dados, com alta incerteza. Ele sugere tratar a primeira com abordagem orientada a plano e a segunda com ciclos curtos de entrega e feedback. A proposta caracteriza"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "uma abordagem híbrida, que combina elementos preditivos, adequados ao componente de requisitos estáveis, com elementos adaptativos, adequados ao componente de alta incerteza, escolha justificada pelo grau de incerteza de cada parte.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Agile Practice Guide e o PMBOK reconhecem ciclos de vida híbridos, que combinam elementos preditivos e adaptativos (iterativos e incrementais) em um mesmo projeto. Requisitos estáveis e bem conhecidos favorecem o planejamento antecipado; requisitos incertos favorecem ciclos curtos com feedback. Escolher a abordagem por componente, conforme a incerteza, é exatamente o raciocínio esperado.",
+          "versaoInvertidaFalsa": "uma abordagem híbrida, que aplica elementos adaptativos ao componente de requisitos estáveis e elementos preditivos ao componente de alta incerteza, escolha justificada pela previsibilidade de cada parte."
+        },
+        {
+          "id": "opt-2",
+          "texto": "uma abordagem puramente preditiva, pois a existência de um cronograma definido no início para parte do sistema impõe esse modelo a todo o projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Ter cronograma para parte do sistema não torna preditivo o projeto inteiro. O segundo componente seguirá ciclos curtos com feedback, característica adaptativa; a combinação das duas lógicas é o que define o híbrido."
+        },
+        {
+          "id": "opt-3",
+          "texto": "uma abordagem incremental pura, já que haverá entregas parciais, o que exige que os requisitos de ambos os componentes sejam congelados antes do início.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Entregas parciais não bastam para caracterizar a proposta como incremental pura, e a abordagem incremental não exige congelar todos os requisitos. O painel terá requisitos que emergem do uso, o que contraria a premissa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o modelo espiral, porque combinar abordagens em um mesmo projeto implica, necessariamente, análise formal de riscos a cada volta do ciclo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O espiral é um modelo específico, orientado a riscos, com voltas sucessivas de planejamento, análise de riscos, engenharia e avaliação. Combinar abordagens não implica adotá-lo; a palavra 'necessariamente' é a generalização indevida."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma combinação inadmissível, pois as boas práticas exigem adotar uma única abordagem de ciclo de vida por projeto, sob pena de perda de controle.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Não há essa vedação. O próprio edital menciona as combinações de abordagens, e os guias do PMI tratam os ciclos híbridos como opção legítima, inclusive para projetos com componentes de naturezas distintas."
+        }
+      ],
+      "pegadinhaFCC": "A banca sugere que um cronograma inicial torna todo o projeto preditivo ou que é vedado combinar abordagens. O Agile Practice Guide e o PMBOK admitem expressamente ciclos híbridos, escolhidos conforme a incerteza de cada componente.",
+      "resumoFlashcard": {
+        "pergunta": "O que é uma abordagem híbrida de ciclo de vida?",
+        "resposta": "É a combinação de elementos preditivos e adaptativos (iterativos e incrementais) no mesmo projeto, escolhidos conforme as características de cada parte: requisitos estáveis favorecem o planejamento antecipado; alta incerteza favorece ciclos curtos com feedback."
+      },
+      "conceitosChave": ["Abordagem híbrida", "Abordagem adaptativa (ágil)"],
+      "fundamentacao": "PMI & Agile Alliance, Agile Practice Guide (2017), cap. 3 (ciclos de vida híbridos e combinações de abordagens); PMI, Guia PMBOK, 7ª ed. (2021), domínio de desempenho 'Abordagem de desenvolvimento e ciclo de vida'."
+    },
+    {
+      "id": "eng-sw-027",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Princípios SOLID, DRY, KISS, YAGNI, coesão e acoplamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Em um sistema orientado a objetos, a classe RelatorioSomenteLeitura herda de Relatorio e sobrescreve o método salvar() para lançar uma exceção de operação não suportada. Desde então, rotinas que recebem objetos do tipo Relatorio e chamam salvar() passaram a falhar quando recebem uma instância da subclasse. O princípio de projeto violado e uma correção adequada são, respectivamente,",
+      "variantesEnunciado": [
+        "Na revisão de código do sistema de gestão documental de um tribunal, um técnico verifica que a subclasse RelatorioSomenteLeitura, filha de Relatorio, anula o comportamento de salvar() lançando exceção, e que os clientes escritos para Relatorio quebram ao receber essa subclasse. O princípio de projeto violado e uma correção adequada são, respectivamente,",
+        "Considere o seguinte problema de projeto: rotinas escritas para operar sobre a classe Relatorio chamam o método salvar(), mas falham quando recebem a subclasse RelatorioSomenteLeitura, que sobrescreve esse método apenas para lançar exceção. O princípio de projeto violado e uma correção adequada são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Aberto/Fechado; incluir nas rotinas clientes um teste do tipo concreto do objeto, para que salvar() só seja chamado quando o objeto não for somente leitura.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O princípio violado não é o Aberto/Fechado, e a correção sugerida piora o projeto: testar o tipo concreto nos clientes obriga a alterá-los a cada nova subclasse, o que fere justamente o Aberto/Fechado."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Responsabilidade Única; transformar salvar() em método estático de uma classe utilitária, chamada diretamente pelas rotinas clientes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O problema não é a classe acumular motivos de mudança, e sim a subclasse não honrar o contrato do tipo base. Um método estático utilitário aumenta o acoplamento e não resolve a quebra de substituição."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Substituição de Liskov; rever a hierarquia, de modo que apenas os tipos que realmente suportam gravação exponham salvar(), por exemplo em uma abstração própria.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelo Princípio da Substituição de Liskov, um subtipo deve poder substituir o tipo base sem quebrar os clientes. Ao anular salvar() com exceção, a subclasse entrega menos do que o contrato do tipo base promete. A correção é ajustar a hierarquia, por exemplo separando uma abstração 'gravável', para que só tipos que suportam a gravação ofereçam salvar().",
+          "versaoInvertidaFalsa": "Substituição de Liskov; manter a hierarquia e tratar em cada cliente a exceção lançada por salvar(), pois subclasses podem restringir livremente o comportamento herdado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Inversão de Dependência; fazer as rotinas clientes instanciarem diretamente RelatorioSomenteLeitura, eliminando a dependência da classe Relatorio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fazer clientes dependerem de uma classe concreta é o oposto do que o DIP recomenda, que é depender de abstrações. A medida apenas esconde o problema de substituição e aumenta o acoplamento."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Substituição de Liskov; envolver cada chamada a salvar() em tratamento de exceção e verificar o tipo concreto do objeto antes de invocá-lo nas rotinas clientes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o princípio, mas propõe uma correção que mantém a violação: os clientes passam a conhecer a subclasse e a tratá-la de forma especial, o que espalha a lógica e fere o Aberto/Fechado. É a alternativa atraente com final errado."
+        }
+      ],
+      "pegadinhaFCC": "A armadilha é a alternativa que acerta o princípio (Liskov), mas propõe como correção testar o tipo concreto nos clientes, o que mantém a violação e ainda fere o Aberto/Fechado. A correção é ajustar a hierarquia para que o subtipo cumpra o contrato do tipo base.",
+      "resumoFlashcard": {
+        "pergunta": "O que diz o Princípio da Substituição de Liskov (LSP)?",
+        "resposta": "Objetos de um subtipo devem poder substituir objetos do tipo base sem alterar a correção do programa: a subclasse não pode exigir mais (pré-condições mais fortes) nem entregar menos (pós-condições mais fracas). Subclasse que anula um método herdado com exceção viola o LSP."
+      },
+      "conceitosChave": ["SOLID: Substituição de Liskov"],
+      "fundamentacao": "Liskov & Wing, 'A Behavioral Notion of Subtyping' (ACM TOPLAS, 1994); Martin, Agile Software Development: Principles, Patterns, and Practices (2002), cap. 10 (The Liskov Substitution Principle)."
+    },
+    {
+      "id": "eng-sw-028",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Revisão de código, refatoração e dívida técnica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Na obra Refactoring, de Martin Fowler, a refatoração, entendida como substantivo, é definida como",
+      "variantesEnunciado": [
+        "Em uma revisão de código do sistema de gestão de processos de um Tribunal de Contas, o revisor recomendou refatorar um módulo. Segundo Martin Fowler, refatoração é",
+        "Considere que um técnico precisa explicar a gestores a diferença entre refatorar e corrigir defeitos. Conforme a definição de Martin Fowler, refatoração é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "a reescrita completa de um sistema em nova tecnologia, preservando os requisitos funcionais originais, mas substituindo toda a arquitetura e o modelo de dados existentes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reescrever o sistema em nova tecnologia é reconstrução ou migração, não refatoração. A refatoração ocorre em passos pequenos e seguros sobre o código existente, mantendo o sistema funcionando o tempo todo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "a correção de defeitos encontrados em produção, realizada com testes automatizados que comprovem a mudança de comportamento.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corrigir defeito altera o comportamento observável do sistema, e é isso que se quer. A refatoração, por definição, preserva o comportamento; Fowler recomenda não misturar as duas atividades no mesmo passo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a inclusão de novas funcionalidades acompanhada da melhoria da legibilidade do código, para reduzir o custo de manutenção.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acrescentar funcionalidade muda o comportamento e, portanto, não é refatoração. Fowler usa a metáfora dos 'dois chapéus': ou se adiciona funcionalidade, ou se refatora, alternando conscientemente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "a otimização de desempenho que pode alterar os resultados produzidos, desde que aprovada pelos usuários e documentada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Otimização de desempenho também muda a estrutura sem buscar mudar o resultado, mas seu objetivo é velocidade, e não clareza. Admitir alteração dos resultados contraria o ponto central: comportamento observável preservado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "uma alteração na estrutura interna do software que o torna mais fácil de entender e mais barato de modificar, sem alterar seu comportamento observável.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. É a definição de Fowler: mudança na estrutura interna para tornar o software mais fácil de entender e mais barato de modificar, sem alterar o comportamento observável. Ela é feita em pequenos passos, cada um mantendo o sistema funcionando, com o apoio de testes automatizados que comprovam que nada mudou para o usuário.",
+          "versaoInvertidaFalsa": "uma alteração na estrutura interna do software que o torna mais fácil de entender e mais barato de modificar, podendo alterar seu comportamento observável quando isso simplificar o código."
+        }
+      ],
+      "pegadinhaFCC": "A banca confunde refatoração com reescrita, correção de defeito, nova funcionalidade ou otimização. O traço que define a refatoração é melhorar a estrutura interna sem mudar o comportamento observável.",
+      "resumoFlashcard": {
+        "pergunta": "Como Martin Fowler define refatoração?",
+        "resposta": "É uma alteração na estrutura interna do software para torná-lo mais fácil de entender e mais barato de modificar, sem alterar seu comportamento observável. Faz-se em pequenos passos, apoiada por testes automatizados."
+      },
+      "conceitosChave": ["Refatoração: definição"],
+      "fundamentacao": "Fowler, Refactoring: Improving the Design of Existing Code, 2ª ed. (2018), cap. 2 ('Principles in Refactoring': definição de refatoração e 'dois chapéus')."
+    },
+    {
+      "id": "eng-sw-029",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Arquitetura: camadas, SOA, microsserviços e eventos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No sistema de processos de um Tribunal de Contas, a autuação de um processo deve disparar diversas ações em outros sistemas: notificar o jurisdicionado, atualizar o painel estatístico e iniciar a distribuição ao relator. Em vez de o módulo de autuação chamar diretamente cada sistema, a equipe adota uma arquitetura orientada a eventos com publicação e assinatura (pub/sub): o módulo publica o evento ProcessoAutuado em um intermediador de mensagens, e os sistemas interessados o assinam. Sobre essa solução, é correto afirmar que",
+      "variantesEnunciado": [
+        "Considere que, em um sistema hipotético de prestação de contas, o recebimento de uma prestação deve acionar a geração de recibo, a atualização de indicadores e a abertura de análise. A equipe passa a publicar o evento PrestacaoRecebida em um intermediador de mensagens, no qual os demais sistemas se inscrevem, em vez de chamá-los um a um. Sobre essa solução, é correto afirmar que",
+        "Em um projeto de integração de sistemas de controle externo, o registro de uma denúncia passa a ser comunicado por meio do evento DenunciaRegistrada, publicado em um intermediador de mensagens; os sistemas de triagem, de estatística e de ouvidoria assinam esse evento e reagem a ele. Sobre essa solução, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o produtor do evento deve aguardar a resposta síncrona de todos os consumidores antes de concluir a operação, o que garante consistência imediata entre os sistemas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esperar a resposta síncrona de cada consumidor recria o acoplamento temporal das chamadas diretas, que a solução quis eliminar. No pub/sub, o produtor publica e segue adiante; os consumidores processam de forma assíncrona."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o produtor não precisa conhecer os consumidores, novos assinantes podem ser incluídos sem alterar o produtor, e os dados derivados nos consumidores ficam sujeitos a consistência eventual.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na arquitetura orientada a eventos com pub/sub, o produtor publica o fato ocorrido sem saber quem o consumirá, e cada assinante recebe sua cópia. Incluir um novo consumidor é só criar nova assinatura. Como o processamento é assíncrono, os dados derivados ficam temporariamente defasados, até convergirem: é a consistência eventual.",
+          "versaoInvertidaFalsa": "o produtor precisa conhecer cada consumidor, a inclusão de novos assinantes exige alterar o produtor, e os dados derivados nos consumidores ficam imediata e fortemente consistentes."
+        },
+        {
+          "id": "opt-3",
+          "texto": "o intermediador garante, em qualquer configuração, entrega exatamente uma vez, o que dispensa consumidores idempotentes e tratamento de mensagens duplicadas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Muitos intermediadores operam com entrega 'pelo menos uma vez', e duplicatas podem ocorrer em falhas e reenvios. Por isso recomenda-se que os consumidores sejam idempotentes. A expressão 'em qualquer configuração' é a generalização falsa."
+        },
+        {
+          "id": "opt-4",
+          "texto": "no modelo de publicação e assinatura, cada evento é entregue a apenas um dos assinantes, que o retira da fila e impede que os demais o recebam.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Entregar cada mensagem a um único consumidor descreve o canal ponto a ponto (fila com consumidores concorrentes). No pub/sub, todos os assinantes recebem o evento, o que permite que notificação, painel e distribuição reajam ao mesmo fato."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a adoção de eventos aumenta o acoplamento entre os sistemas, pois o produtor passa a depender da disponibilidade de cada consumidor no momento da publicação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O intermediador armazena o evento, e consumidores indisponíveis podem processá-lo depois. Assim, o produtor não depende da disponibilidade dos consumidores; a solução reduz o acoplamento, inclusive temporal."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui à arquitetura orientada a eventos propriedades de chamadas síncronas (consistência imediata, acoplamento temporal) ou confunde pub/sub com fila ponto a ponto. No pub/sub, todos os assinantes recebem o evento, e o produtor não os conhece.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as consequências do modelo de publicação e assinatura (pub/sub)?",
+        "resposta": "Desacopla produtor e consumidores: o produtor publica sem conhecer os assinantes, e todos os assinantes recebem o evento, inclusive novos, sem mudança no produtor. Em troca, a comunicação é assíncrona, os dados derivados têm consistência eventual e os consumidores devem ser idempotentes."
+      },
+      "conceitosChave": ["Arquitetura orientada a eventos: pub/sub", "Consistência eventual"],
+      "fundamentacao": "Hohpe & Woolf, Enterprise Integration Patterns (2003), padrões 'Publish-Subscribe Channel', 'Point-to-Point Channel' e 'Idempotent Receiver'; Richards & Ford, Fundamentals of Software Architecture (2020), capítulo sobre o estilo orientado a eventos."
+    },
+    {
+      "id": "eng-sw-030",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Histórias de usuário, casos de uso e critérios de aceite",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Histórias de usuário costumam seguir o modelo 'Como <papel>, quero <objetivo>, para <benefício>'. Segundo Ron Jeffries, uma história reúne três aspectos: o cartão, a …… e a ……, esta última normalmente expressa pelos critérios de aceite. Pelo critério INVEST, a letra N indica que a história deve ser ……, isto é, seus detalhes são acertados em colaboração, e não fixados como contrato. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um treinamento para a equipe de TI de um Tribunal de Contas, explicou-se que, nos 3 Cs de Ron Jeffries, além do cartão, a história de usuário envolve a …… entre equipe e usuários e a ……, materializada nos critérios de aceite; e que, no acrônimo INVEST, a história deve ser ……, pois seus detalhes permanecem abertos à discussão. Preenchem, correta e respectivamente, as lacunas:",
+        "Considere a seguinte explicação sobre histórias de usuário: o cartão é apenas um lembrete; os detalhes surgem da …… entre o time e as partes interessadas; a …… ocorre por meio dos critérios de aceite, que permitem verificar se a história foi atendida; e, conforme o INVEST, a história é ……, já que não constitui um contrato fechado. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "documentação − validação − necessária",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhum termo corresponde aos 3 Cs ou ao INVEST. A história privilegia a conversa, e não a documentação extensa; o terceiro C é a confirmação; e o N do INVEST é de negociável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "conversa − confirmação − necessária",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas primeiras lacunas estão certas, mas o N do INVEST significa negociável (Negotiable). Uma história desnecessária nem deveria estar no backlog, mas não é isso que a letra expressa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "colaboração − certificação − negociável",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A terceira lacuna está certa, mas os 3 Cs são Card, Conversation e Confirmation: cartão, conversa e confirmação. 'Colaboração' e 'certificação' são termos próximos que a banca usa como distratores."
+        },
+        {
+          "id": "opt-4",
+          "texto": "conversa − confirmação − negociável",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Nos 3 Cs de Ron Jeffries, o cartão é um lembrete curto, a conversa é onde os detalhes são discutidos entre equipe e usuários, e a confirmação são os critérios de aceite que permitem verificar se a história foi atendida. No INVEST, o N indica que a história é negociável, um convite ao diálogo, e não um contrato fechado.",
+          "versaoInvertidaFalsa": "confirmação − conversa − negociável, pois é a conversa que se expressa formalmente nos critérios de aceite."
+        },
+        {
+          "id": "opt-5",
+          "texto": "confirmação − conversa − negociável",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os termos estão certos, mas a ordem das duas primeiras lacunas está trocada. O enunciado diz que a segunda é expressa pelos critérios de aceite, o que corresponde à confirmação."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a ordem entre conversa e confirmação e substitui 'negociável' por 'necessária'. Nos 3 Cs, a confirmação corresponde aos critérios de aceite; no INVEST, o N é de negociável.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os 3 Cs de uma história de usuário?",
+        "resposta": "Cartão (Card), lembrete curto da necessidade; Conversa (Conversation), em que os detalhes são discutidos entre equipe e usuários; e Confirmação (Confirmation), os critérios de aceite que permitem verificar se a história foi atendida."
+      },
+      "conceitosChave": ["Histórias de usuário: 3 Cs", "Histórias de usuário: INVEST"],
+      "fundamentacao": "Jeffries, 'Essential XP: Card, Conversation, Confirmation' (2001); Wake, 'INVEST in Good Stories, and SMART Tasks' (2003); Cohn, User Stories Applied (2004), cap. 1."
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "materiaSlug": "matematica-raciocinio-logico",
+  "lote": 3,
+  "questoes": [
+    {
+      "id": "mat-021",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Frações e operações com frações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O resultado da expressão (2/3 + 1/4) ÷ (5/6 − 1/2) é",
+      "variantesEnunciado": [
+        "Ao conferir o cálculo de uma fração do orçamento, um técnico precisou resolver (2/3 + 1/4) ÷ (5/6 − 1/2). O resultado correto, na forma de fração irredutível, é",
+        "Efetuando-se as operações com frações indicadas em (2/3 + 1/4) ÷ (5/6 − 1/2), obtém-se a fração irredutível"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "11/36",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os parênteses foram resolvidos corretamente (11/12 e 1/3), mas a divisão foi feita como multiplicação direta: 11/12 × 1/3 = 11/36. Dividir por 1/3 é multiplicar pelo inverso, 3."
+        },
+        {
+          "id": "opt-2",
+          "texto": "4/11",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverteu-se o dividendo, e não o divisor: 12/11 × 1/3 = 4/11. Na divisão de frações, conserva-se a primeira e multiplica-se pelo inverso da segunda: 11/12 × 3/1."
+        },
+        {
+          "id": "opt-3",
+          "texto": "3/7",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de somar numeradores e denominadores separadamente: 2/3 + 1/4 viraria 3/7, e 5/6 − 1/2 viraria 4/4 = 1. Para somar ou subtrair frações, é preciso reduzi-las ao mesmo denominador (MMC)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "11/6",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Houve erro na redução do divisor ao denominador comum: 1/2 foi escrito como 2/6, e não 3/6, o que dá 5/6 − 2/6 = 1/2 e 11/12 ÷ 1/2 = 11/6. O correto é 5/6 − 3/6 = 1/3."
+        },
+        {
+          "id": "opt-5",
+          "texto": "11/4",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Dividendo: 2/3 + 1/4 = 8/12 + 3/12 = 11/12. Divisor: 5/6 − 1/2 = 5/6 − 3/6 = 2/6 = 1/3. Divisão: 11/12 ÷ 1/3 = 11/12 × 3 = 33/12 = 11/4.",
+          "versaoInvertidaFalsa": "O resultado de (2/3 + 1/4) ÷ (5/6 − 1/2) é 11/36, pois dividir por 1/3 equivale a multiplicar por 1/3."
+        }
+      ],
+      "pegadinhaFCC": "A FCC testa duas regras de frações ao mesmo tempo: denominador comum na soma e na subtração, e multiplicação pelo inverso do divisor na divisão. Cada distrator corresponde à quebra de uma delas.",
+      "resumoFlashcard": {
+        "pergunta": "Como somar, subtrair e dividir frações?",
+        "resposta": "Para somar ou subtrair, reduza ao mesmo denominador pelo MMC e opere os numeradores. Para dividir, conserve a primeira fração e multiplique pelo inverso da segunda: a/b ÷ c/d = a/b × d/c."
+      },
+      "conceitosChave": ["Operações com frações"],
+      "fundamentacao": "Números racionais na forma fracionária: adição e subtração com denominadores diferentes (MMC) e divisão pela multiplicação do inverso; Anexo II do edital, Frações e operações com frações."
+    },
+    {
+      "id": "mat-022",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Orientação espacial e temporal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Sabendo-se que 17 de janeiro de 2027 é um domingo, o dia 17 de abril de 2027 será",
+      "variantesEnunciado": [
+        "Uma prova de concurso está marcada para 17 de janeiro de 2027, um domingo. A reunião de avaliação dos resultados foi agendada para 17 de abril de 2027. Essa reunião ocorrerá em",
+        "Em um calendário de 2027, o dia 17 de janeiro cai em um domingo. Consultando-se o mesmo calendário, verifica-se que o dia 17 de abril de 2027 corresponde a"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "domingo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de contar 91 dias, como se fevereiro de 2027 tivesse 29 dias, ou de supor que três meses equivalem a 13 semanas exatas. 2027 não é bissexto (não é divisível por 4), e o intervalo é de 90 dias."
+        },
+        {
+          "id": "opt-2",
+          "texto": "segunda-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando o resto de 90 ÷ 7 é contado para trás a partir do domingo (domingo − 6 dias = segunda-feira). Como 17 de abril é posterior a 17 de janeiro, os 6 dias de resto devem ser contados para frente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "terça-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde a considerar todos os meses com 31 dias (93 dias, resto 2). Fevereiro de 2027 tem 28 dias, e o intervalo real é de 14 + 28 + 31 + 17 = 90 dias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "sexta-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de contar 89 dias, por exemplo, tomando janeiro com 30 dias (13 dias restantes em vez de 14). De 17 a 31 de janeiro são 14 dias, e o total chega a 90."
+        },
+        {
+          "id": "opt-5",
+          "texto": "sábado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Dias de 17/01 a 17/04: 14 (restantes de janeiro) + 28 (fevereiro, pois 2027 não é bissexto) + 31 (março) + 17 (abril) = 90. Como 90 = 7 × 12 + 6, avançam-se 6 dias a partir do domingo e chega-se ao sábado.",
+          "versaoInvertidaFalsa": "Se 17 de janeiro de 2027 é domingo, 17 de abril de 2027 também é domingo, pois entre as duas datas há exatamente 13 semanas."
+        }
+      ],
+      "pegadinhaFCC": "A FCC explora quem supõe que datas separadas por meses inteiros caem no mesmo dia da semana e quem não verifica se fevereiro tem 28 ou 29 dias.",
+      "resumoFlashcard": {
+        "pergunta": "Como achar o dia da semana de uma data futura a partir de outra conhecida?",
+        "resposta": "Conte os dias corridos entre as datas, divida por 7 e avance, a partir do dia da semana conhecido, tantos dias quanto o resto. Confira se fevereiro tem 28 ou 29 dias no ano considerado."
+      },
+      "conceitosChave": ["Contagem de dias da semana", "Calendário e ano bissexto"],
+      "fundamentacao": "Orientação temporal: aritmética com período 7 (semana) e número de dias dos meses no calendário gregoriano; 2027 não é ano bissexto."
+    },
+    {
+      "id": "mat-023",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Razões, proporções e divisão proporcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma gratificação de R$ 3.510,00 será dividida entre três servidores em partes inversamente proporcionais ao número de faltas de cada um no semestre: 2, 3 e 4 faltas. O servidor que teve 3 faltas receberá",
+      "variantesEnunciado": [
+        "Um bônus de assiduidade de R$ 3.510,00 deve ser repartido entre três técnicos de forma inversamente proporcional às faltas registradas: um faltou 2 dias, outro 3 dias e o terceiro 4 dias. A parte do técnico que faltou 3 dias é",
+        "A quantia de R$ 3.510,00 será distribuída a três equipes em partes inversamente proporcionais ao número de falhas apontadas pela auditoria interna: 2, 3 e 4 falhas. A equipe com 3 falhas receberá"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 810,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a parte do servidor com 4 faltas (3 × 270), o que mais faltou e, por isso, o que menos recebe na divisão inversa. O comando pede a parte de quem teve 3 faltas."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 1.080,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Inversamente proporcional a 2, 3 e 4 significa diretamente proporcional a 1/2, 1/3 e 1/4. Com denominador 12: 6/12, 4/12 e 3/12, ou seja, proporcional a 6, 4 e 3, que somam 13. Constante: 3.510 ÷ 13 = 270. Quem teve 3 faltas recebe 4 × 270 = 1.080.",
+          "versaoInvertidaFalsa": "Na divisão inversamente proporcional a 2, 3 e 4, o servidor com 3 faltas recebe R$ 1.170,00, a mesma parte que receberia na divisão direta."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 1.170,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a parte do servidor com 3 faltas na divisão diretamente proporcional (3.510 ÷ 9 × 3), que coincide com a divisão em partes iguais. Na divisão inversa, quem falta mais recebe menos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 1.560,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Seria a parte de quem teve 4 faltas numa divisão diretamente proporcional (4 × 390). Além de usar a proporção direta, a alternativa troca o servidor indicado no comando."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 1.620,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a parte do servidor com 2 faltas (6 × 270), a maior da divisão inversa. Corresponde a atribuir a razão 6 ao servidor com 3 faltas, quando ela pertence a quem faltou menos."
+        }
+      ],
+      "pegadinhaFCC": "Na divisão inversamente proporcional, as razões viram 1/2, 1/3 e 1/4, e quem tem mais faltas recebe menos. Os distratores são as partes da divisão direta e as dos outros servidores.",
+      "resumoFlashcard": {
+        "pergunta": "Como dividir um valor em partes inversamente proporcionais a 2, 3 e 4?",
+        "resposta": "Tome os inversos (1/2, 1/3 e 1/4), reduza-os ao mesmo denominador (6/12, 4/12 e 3/12) e divida o valor em partes diretamente proporcionais aos numeradores 6, 4 e 3. A maior parte vai para o menor número."
+      },
+      "conceitosChave": ["Divisão proporcional"],
+      "fundamentacao": "Números e grandezas proporcionais: divisão em partes inversamente proporcionais, equivalente à divisão proporcional aos inversos; Anexo II do edital, Divisão em partes proporcionais."
+    },
+    {
+      "id": "mat-024",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Frações e operações com frações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No primeiro mês de execução de um projeto, foi gasto 1/3 do orçamento. No segundo mês, gastaram-se 2/5 do que restava, e sobraram R$ 12.000,00. O orçamento total do projeto era de",
+      "variantesEnunciado": [
+        "Um setor usou 1/3 da verba anual de capacitação no primeiro semestre e, no segundo semestre, 2/5 do saldo remanescente, terminando o ano com R$ 12.000,00 não utilizados. A verba anual de capacitação era de",
+        "De uma dotação para aquisição de equipamentos, 1/3 foi empenhado em março e 2/5 do restante, em abril, ficando um saldo de R$ 12.000,00. O valor inicial da dotação era de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 18.000,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desfaz apenas o primeiro gasto, como se R$ 12.000,00 fossem os 2/3 restantes após o primeiro mês (12.000 ÷ 2/3). Faltou considerar os 2/5 gastos no segundo mês."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 20.000,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera apenas o segundo gasto e trata R$ 12.000,00 como 3/5 do orçamento total (12.000 ÷ 3/5). Os 3/5 referem-se ao que restou depois do primeiro mês, e não ao total."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 22.500,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aplica os 2/5 sobre a parte gasta no primeiro mês (2/5 × 1/3 = 2/15), e não sobre o restante. Com isso, sobraria 1 − 1/3 − 2/15 = 8/15 do total, e 12.000 ÷ 8/15 = 22.500."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 30.000,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Após o 1º mês, restam 2/3 do orçamento. No 2º mês, gastam-se 2/5 desse resto, e sobram 3/5 de 2/3 = 6/15 = 2/5 do total. Se 2/5 do orçamento valem 12.000, o orçamento é 12.000 × 5/2 = 30.000.",
+          "versaoInvertidaFalsa": "O orçamento total era de R$ 45.000,00, pois no segundo mês foram gastos 2/5 do orçamento total, e não do que restava."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 45.000,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Toma os 2/5 do segundo mês como fração do orçamento total: 1 − 1/3 − 2/5 = 4/15, e 12.000 ÷ 4/15 = 45.000. O enunciado diz que os 2/5 incidem sobre o que restava."
+        }
+      ],
+      "pegadinhaFCC": "A expressão “do que restava” muda a base da segunda fração. A FCC explora quem aplica os 2/5 sobre o total ou sobre a parte já gasta.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver problemas de “fração do que restou”?",
+        "resposta": "Trabalhe com o que sobra a cada etapa: após gastar 1/3, sobram 2/3; após gastar 2/5 do resto, sobram 3/5 de 2/3 = 2/5 do total. Depois, divida o valor final por essa fração."
+      },
+      "conceitosChave": ["Frações: partes do restante"],
+      "fundamentacao": "Operações com frações: fração de fração (multiplicação) e complemento para a unidade; Anexo II do edital, Frações e operações com frações."
+    },
+    {
+      "id": "mat-025",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Estruturas lógicas e associação de informações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Ana, Breno e Caio são personagens de um jogo de lógica: um deles é o veraz, que sempre diz a verdade; outro é o mentiroso, que sempre mente; e o terceiro é o diplomata, que ora diz a verdade, ora mente. Ana afirma: “Breno é o mentiroso”. Breno afirma: “Eu sou o diplomata”. Caio afirma: “Breno é o veraz”. O veraz, o mentiroso e o diplomata são, respectivamente,",
+      "variantesEnunciado": [
+        "Em uma dinâmica de raciocínio lógico, três servidores, Ana, Breno e Caio, receberam papéis secretos: veraz (sempre fala a verdade), mentiroso (sempre mente) e diplomata (pode falar a verdade ou mentir). Ana disse: “Breno é o mentiroso”. Breno disse: “Eu sou o diplomata”. Caio disse: “Breno é o veraz”. Os papéis de veraz, mentiroso e diplomata cabem, respectivamente, a",
+        "Considere três pessoas, Ana, Breno e Caio, das quais uma sempre diz a verdade (veraz), uma sempre mente (mentiroso) e uma pode dizer a verdade ou mentir (diplomata). As declarações foram: Ana: “Breno é o mentiroso”; Breno: “Eu sou o diplomata”; Caio: “Breno é o veraz”. Veraz, mentiroso e diplomata são, nessa ordem,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Ana, Breno e Caio.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Breno não pode ser o veraz, pois o veraz não diria “Eu sou o diplomata”. Então a fala de Caio (“Breno é o veraz”) é falsa, e Caio também não é o veraz. Logo, Ana é a veraz, e sua fala é verdadeira: Breno é o mentiroso. Resta a Caio o papel de diplomata, que, nesse caso, mentiu.",
+          "versaoInvertidaFalsa": "A veraz é Ana, o mentiroso é Caio e o diplomata é Breno, que disse a verdade sobre o próprio papel."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Ana, Caio e Breno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se Ana é a veraz, sua fala “Breno é o mentiroso” é verdadeira, o que impede Breno de ser o diplomata. A alternativa contradiz a declaração de quem ela mesma aponta como veraz."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Breno, Caio e Ana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Breno não pode ser o veraz: se fosse, sua afirmação “Eu sou o diplomata” seria verdadeira, o que é contraditório. Essa é a primeira hipótese a descartar."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Caio, Ana e Breno.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se Caio fosse o veraz, Breno também seria o veraz, segundo a fala de Caio, o que é impossível, pois cada papel cabe a uma só pessoa. A fala de Caio é necessariamente falsa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Caio, Breno e Ana.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Caio não pode ser o veraz, porque afirma que Breno é o veraz, e só existe um veraz. A hipótese cai já na análise da fala de Caio, antes mesmo de examinar as demais."
+        }
+      ],
+      "pegadinhaFCC": "A chave é a autodeclaração de Breno: o veraz nunca diria que é o diplomata. A partir daí, a fala de Caio fica falsa e o restante se encadeia. Quem começa pelo diplomata, que pode dizer qualquer coisa, se perde.",
+      "resumoFlashcard": {
+        "pergunta": "Por onde começar problemas com veraz, mentiroso e diplomata?",
+        "resposta": "Procure a fala que algum papel não pode emitir: o veraz não faz afirmação falsa, e o mentiroso não faz afirmação verdadeira. Descarte essas hipóteses e deixe o diplomata, que pode dizer qualquer coisa, por último."
+      },
+      "conceitosChave": ["Verdade e mentira"],
+      "fundamentacao": "Lógica proposicional: análise de consistência de hipóteses, em que cada papel impõe um valor lógico às falas; Anexo II do edital, Estrutura lógica de relações arbitrárias."
+    },
+    {
+      "id": "mat-026",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Uma proposição logicamente equivalente a “Se o sistema está atualizado, então o backup foi feito” é:",
+      "variantesEnunciado": [
+        "A política de TI de um órgão estabelece a regra “Se o sistema está atualizado, então o backup foi feito”. Do ponto de vista lógico, essa regra é equivalente a:",
+        "Considere a condicional “Se o sistema está atualizado, então o backup foi feito”. A proposição que tem exatamente a mesma tabela-verdade dessa condicional é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Se o backup foi feito, então o sistema está atualizado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a recíproca (q → p), que troca antecedente e consequente e não é equivalente à original. Se o backup foi feito e o sistema não está atualizado, a original é verdadeira, e a recíproca, falsa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Se o sistema não está atualizado, então o backup não foi feito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a inversa (¬p → ¬q), equivalente à recíproca, e não à original. Quando o sistema não está atualizado e o backup foi feito, a original é verdadeira, e a inversa, falsa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O sistema não está atualizado ou o backup foi feito.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Vale a equivalência p → q ≡ ¬p ∨ q: a condicional só é falsa quando p é verdadeira e q é falsa, e a disjunção “não p ou q” também só é falsa nesse caso. Outra forma equivalente é a contrapositiva: “Se o backup não foi feito, então o sistema não está atualizado”.",
+          "versaoInvertidaFalsa": "A condicional “Se o sistema está atualizado, então o backup foi feito” equivale a “O sistema está atualizado ou o backup não foi feito”."
+        },
+        {
+          "id": "opt-4",
+          "texto": "O sistema está atualizado e o backup foi feito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A conjunção p ∧ q exige que as duas partes sejam verdadeiras, enquanto a condicional é verdadeira também quando o sistema não está atualizado. Com p e q falsas, a original é verdadeira e a conjunção, falsa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "O sistema não está atualizado e o backup foi feito.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ¬p ∧ q só é verdadeira quando o sistema não está atualizado e o backup foi feito. A condicional original é verdadeira também em outros casos, como quando p e q são verdadeiras; por isso, as duas não são equivalentes."
+        }
+      ],
+      "pegadinhaFCC": "A FCC troca “ou” por “e” e embaralha as negações. A forma equivalente nega o antecedente, mantém o consequente e usa “ou”: p → q ≡ ¬p ∨ q.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as duas equivalências clássicas da condicional p → q?",
+        "resposta": "A contrapositiva, ¬q → ¬p, e a disjunção ¬p ∨ q. A recíproca (q → p) e a inversa (¬p → ¬q) não são equivalentes à condicional original."
+      },
+      "conceitosChave": ["Equivalências lógicas"],
+      "fundamentacao": "Lógica proposicional: equivalências p → q ≡ ¬q → ¬p ≡ ¬p ∨ q, verificáveis por tabela-verdade."
+    },
+    {
+      "id": "mat-027",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Múltiplos e divisores (MMC e MDC)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Três rotinas de auditoria contínua são executadas a cada 18, 24 e 30 dias, respectivamente. Ao analisar esses números, um técnico registrou algumas conclusões. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Três servidores fazem plantões periódicos: o primeiro a cada 18 dias, o segundo a cada 24 dias e o terceiro a cada 30 dias. Sobre os números 18, 24 e 30, considere as afirmativas abaixo.",
+        "Em um estudo sobre a periodicidade de três relatórios de monitoramento, emitidos a cada 18, 24 e 30 dias, foram feitas algumas afirmações sobre múltiplos e divisores desses números. Considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O MMC de 18, 24 e 30 é 360, de modo que as três rotinas voltam a coincidir a cada 360 dias.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. 18 = 2 × 3², 24 = 2³ × 3 e 30 = 2 × 3 × 5; tomando cada fator com o maior expoente, MMC = 2³ × 3² × 5 = 360."
+        },
+        {
+          "texto": "O MDC de 18, 24 e 30 é 6.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Os fatores comuns aos três números, com o menor expoente, são 2 e 3, logo MDC = 2 × 3 = 6."
+        },
+        {
+          "texto": "O produto do MMC pelo MDC desses três números é igual ao produto 18 × 24 × 30.",
+          "verdadeira": false,
+          "explicacao": "Falsa. 360 × 6 = 2.160, enquanto 18 × 24 × 30 = 12.960. A propriedade MMC × MDC = produto vale apenas para dois números."
+        },
+        {
+          "texto": "As rotinas de 18 e de 30 dias coincidem a cada 180 dias, pois esse é o MMC de 18 e 30.",
+          "verdadeira": false,
+          "explicacao": "Falsa. 18 = 2 × 3² e 30 = 2 × 3 × 5, logo MMC(18, 30) = 2 × 3² × 5 = 90. Elas coincidem a cada 90 dias; 180 é múltiplo comum, mas não o mínimo."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa III, que generaliza indevidamente a propriedade MMC × MDC = produto. Para três números, 360 × 6 = 2.160, bem diferente de 18 × 24 × 30 = 12.960."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II está certa, mas a IV está errada: o MMC de 18 e 30 é 90, e não 180. Além disso, a alternativa deixa de fora a afirmativa I, que é verdadeira."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. I é verdadeira (MMC = 2³ × 3² × 5 = 360) e II também (MDC = 2 × 3 = 6). III é falsa, porque MMC × MDC = produto só vale para dois números, e IV é falsa, porque MMC(18, 30) = 90.",
+          "versaoInvertidaFalsa": "O MMC de 18, 24 e 30 é 180, de modo que as três rotinas voltam a coincidir a cada 180 dias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui III e IV, ambas falsas, e exclui II, que é verdadeira. Quem aplica a propriedade de dois números a três e confunde múltiplo comum com mínimo múltiplo comum chega a essa combinação."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas. III generaliza uma propriedade válida só para pares de números, e IV toma 180, múltiplo comum de 18 e 30, como se fosse o mínimo (90)."
+        }
+      ],
+      "pegadinhaFCC": "A propriedade MMC × MDC = produto é verdadeira para dois números, e a FCC a estende a três para pegar o candidato. A banca também confunde múltiplo comum com mínimo múltiplo comum.",
+      "resumoFlashcard": {
+        "pergunta": "A relação MMC(a, b) × MDC(a, b) = a × b vale para três números?",
+        "resposta": "Não. Ela vale apenas para dois números naturais. Para 18, 24 e 30, MMC × MDC = 360 × 6 = 2.160, enquanto o produto dos três é 12.960."
+      },
+      "conceitosChave": ["Propriedades do MMC e do MDC", "MMC: coincidência de eventos"],
+      "fundamentacao": "Teoria elementar dos números: MMC e MDC por fatoração e a propriedade MMC(a, b) × MDC(a, b) = a × b, válida para dois números; Anexo II do edital, Múltiplos e divisores."
+    },
+    {
+      "id": "mat-028",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Porcentagem, acréscimos e descontos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O valor da diária de viagem de um órgão foi reajustado em 25% em janeiro e, em julho, sofreu redução de 10%, passando a R$ 450,00. O valor da diária antes do reajuste de janeiro era",
+      "variantesEnunciado": [
+        "O preço anual de uma licença de software subiu 25% na renovação e, depois de negociação com o fornecedor, foi reduzido em 10%, ficando em R$ 450,00. O preço da licença antes do aumento era",
+        "Uma taxa de inscrição foi aumentada em 25% e, meses depois, diminuída em 10%, chegando a R$ 450,00. Antes das duas alterações, a taxa era de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 360,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desfaz apenas o reajuste de 25% (450 ÷ 1,25 = 360) e esquece a redução de 10%, que também precisa ser desfeita: antes da redução, a diária valia 450 ÷ 0,90 = 500."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 371,25",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Tenta desfazer as variações aplicando os percentuais opostos: 450 × 1,10 × 0,75 = 371,25. Um desconto de 10% não é anulado por um aumento de 10%, nem um aumento de 25% por um desconto de 25%; é preciso dividir pelos fatores."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 382,50",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Soma as variações (+25% − 10% = +15%) e ainda retira 15% do valor final (450 × 0,85). Percentuais sucessivos se multiplicam (1,25 × 0,90 = 1,125), e o caminho de volta é a divisão pelo fator."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 400,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Sendo x o valor original: x × 1,25 × 0,90 = 450, isto é, 1,125x = 450, logo x = 400. Conferindo: 400 × 1,25 = 500 e 500 × 0,90 = 450. A variação líquida é de +12,5%, e não de +15%.",
+          "versaoInvertidaFalsa": "Antes do reajuste de janeiro, a diária era de R$ 382,50, pois as variações de +25% e −10% equivalem a um aumento único de 15%."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 500,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Desfaz apenas a redução de 10% (450 ÷ 0,90 = 500). Esse é o valor depois do reajuste de janeiro; ainda falta dividir por 1,25 para chegar ao valor original."
+        }
+      ],
+      "pegadinhaFCC": "O cálculo é de trás para a frente: dividir pelos fatores, e não aplicar percentuais opostos. A FCC também explora a soma ingênua dos percentuais (+25% − 10% = +15%).",
+      "resumoFlashcard": {
+        "pergunta": "Como recuperar o valor original após variações percentuais sucessivas?",
+        "resposta": "Escreva valor final = original × (1 + i₁)(1 + i₂) e divida o valor final pelo produto dos fatores. Com +25% e −10%: 450 ÷ (1,25 × 0,90) = 450 ÷ 1,125 = 400."
+      },
+      "conceitosChave": ["Porcentagens sucessivas", "Valor original a partir do final"],
+      "fundamentacao": "Matemática comercial: fatores de multiplicação para acréscimos e descontos sucessivos e operação inversa (divisão pelo fator); Anexo II do edital, Porcentagem, acréscimos e descontos."
+    },
+    {
+      "id": "mat-029",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio verbal, formação de conceitos e discriminação de elementos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "As palavras ACENO, AFINS, BEIJO e BELOS foram agrupadas segundo um mesmo critério, relacionado à disposição de suas letras. Das palavras a seguir, a única que também atende a esse critério é",
+      "variantesEnunciado": [
+        "Um técnico montou um grupo de senhas fáceis de memorizar com as palavras ACENO, AFINS, BEIJO e BELOS, todas escolhidas segundo uma mesma regra sobre a ordem de suas letras. Para incluir mais uma palavra no grupo, respeitando a regra, ele deve escolher",
+        "Observe o conjunto de palavras ACENO, AFINS, BEIJO e BELOS, formado com base em uma característica comum à sequência das letras de cada uma. A palavra que poderia integrar esse conjunto é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "NUVEM",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. NUVEM começa em ordem (N, U, V), mas a letra E, que vem depois do V na palavra, é anterior a ele no alfabeto. A sequência das letras não é alfabética, o que viola o critério do grupo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "DEMOS",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em todas as palavras do grupo, as letras aparecem em ordem alfabética: A-C-E-N-O, A-F-I-N-S, B-E-I-J-O e B-E-L-O-S. Em DEMOS também: D (4ª letra), E (5ª), M (13ª), O (15ª) e S (19ª), sempre avançando no alfabeto.",
+          "versaoInvertidaFalsa": "A palavra que atende ao critério do grupo é CERTO, pois suas letras estão em ordem alfabética."
+        },
+        {
+          "id": "opt-3",
+          "texto": "CERTO",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. CERTO segue a ordem alfabética até o T (C, E, R, T), mas termina com O, que vem antes de T no alfabeto. Basta uma inversão para a palavra sair do critério, e é essa quase coincidência que a torna atraente."
+        },
+        {
+          "id": "opt-4",
+          "texto": "LIMÃO",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Já nas duas primeiras letras a ordem se quebra: I vem antes de L no alfabeto, mas aparece depois dele na palavra. LIMÃO não tem as letras em ordem alfabética."
+        },
+        {
+          "id": "opt-5",
+          "texto": "FUGIR",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Depois de F e U aparece G, que é anterior a U no alfabeto. A ordem alfabética das letras, presente em todas as palavras do grupo, é quebrada logo na terceira letra."
+        }
+      ],
+      "pegadinhaFCC": "O critério não é o número de letras (todas têm cinco) nem a letra inicial, e sim a ordem alfabética das letras dentro de cada palavra. CERTO quase atende e serve de isca para quem confere só o começo.",
+      "resumoFlashcard": {
+        "pergunta": "Como identificar o critério em questões de formação de conceitos com palavras?",
+        "resposta": "Teste características além do significado: número de letras, vogais, letra inicial e, sobretudo, a ordem das letras. Descarte critérios que valham para todas as alternativas, porque eles não discriminam nenhuma."
+      },
+      "conceitosChave": ["Formação de conceitos", "Discriminação de elementos"],
+      "fundamentacao": "Raciocínio verbal: formação de conceitos e discriminação de elementos com base em critério comum (ordenação alfabética das letras); Anexo II do edital."
+    },
+    {
+      "id": "mat-030",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Orientação espacial e temporal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Seis servidores, Ana, Bia, Caio, Davi, Eva e Fábio, sentam-se em torno de uma mesa circular com seis lugares igualmente espaçados, todos voltados para o centro da mesa. Sabe-se que: Ana senta-se em frente a Caio; Bia senta-se imediatamente à direita de Ana; Davi não se senta ao lado de Caio; Fábio não se senta ao lado de Bia. As pessoas sentadas imediatamente à direita e imediatamente à esquerda de Caio são, respectivamente,",
+      "variantesEnunciado": [
+        "Em uma reunião, seis auditores, Ana, Bia, Caio, Davi, Eva e Fábio, ocupam os seis lugares, igualmente espaçados, de uma mesa redonda, todos de frente para o centro. Ana está diante de Caio; Bia está imediatamente à direita de Ana; Davi não está ao lado de Caio; Fábio não está ao lado de Bia. Quem está imediatamente à direita e quem está imediatamente à esquerda de Caio são, respectivamente,",
+        "Ana, Bia, Caio, Davi, Eva e Fábio participam de uma sessão de trabalho em uma mesa circular de seis lugares igualmente espaçados, sentados de frente para o centro. Considere: Caio senta-se em frente a Ana; Bia ocupa o lugar imediatamente à direita de Ana; Davi não é vizinho de Caio; Fábio não é vizinho de Bia. Os vizinhos imediatos de Caio, à sua direita e à sua esquerda, são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Fábio e Eva.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Ana e Caio ficam frente a frente, e Bia, à direita de Ana. Como Davi não pode ser vizinho de Caio, ocupa o único lugar livre vizinho de Ana, à esquerda dela. Os lugares ao lado de Caio ficam para Eva e Fábio; como Fábio não pode ser vizinho de Bia, Eva fica ao lado de Bia. Quem está frente a frente tem os lados espelhados: o lado de Bia (direita de Ana) é a esquerda de Caio. Logo, Fábio está à direita de Caio, e Eva, à esquerda.",
+          "versaoInvertidaFalsa": "À direita de Caio senta-se Eva e, à sua esquerda, Fábio, pois o lado direito de Ana coincide com o lado direito de Caio."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Eva e Fábio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os vizinhos de Caio são, de fato, Eva e Fábio, mas a ordem está trocada. Quem está frente a frente tem os lados espelhados: o lado de Bia, que é a direita de Ana, corresponde à esquerda de Caio, onde fica Eva."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Davi e Eva.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Davi não pode ser vizinho de Caio, por restrição expressa do enunciado. Ele ocupa o lugar à esquerda de Ana, entre Ana e Fábio, longe de Caio."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Fábio e Davi.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Fábio está mesmo à direita de Caio, mas Davi não pode estar à sua esquerda, pois o enunciado proíbe que Davi seja vizinho de Caio. À esquerda de Caio está Eva."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Bia e Eva.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Bia é vizinha de Ana, e não de Caio: Ana e Caio estão em lugares opostos, e Bia ocupa o lugar imediatamente à direita de Ana. Entre Bia e Caio está Eva."
+        }
+      ],
+      "pegadinhaFCC": "Em mesa circular com todos voltados para o centro, pessoas frente a frente têm direita e esquerda espelhadas. A FCC explora quem transfere a direita de Ana diretamente para Caio e quem esquece as restrições de vizinhança.",
+      "resumoFlashcard": {
+        "pergunta": "Como lidar com direita e esquerda em mesa circular com todos voltados para o centro?",
+        "resposta": "Fixe uma pessoa e desenhe a mesa vista de cima: para quem olha o centro, a direita fica no sentido anti-horário. Quem está frente a frente tem os lados espelhados, isto é, a direita de um é a esquerda do outro."
+      },
+      "conceitosChave": ["Orientação espacial", "Associação lógica"],
+      "fundamentacao": "Orientação espacial: posições relativas em disposição circular (lugares opostos e adjacentes) e lateralidade de observadores voltados para o centro; Anexo II do edital."
+    }
+  ]
+}

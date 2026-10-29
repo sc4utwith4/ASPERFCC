@@ -1,0 +1,536 @@
+{
+  "materiaSlug": "matematica-raciocinio-logico",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "mat-011",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Razões, proporções e divisão proporcional",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "Um prêmio de produtividade de R$ 4.680,00 será dividido entre três equipes em partes diretamente proporcionais ao número de processos que cada uma analisou: 20, 30 e 40. A equipe que analisou mais processos receberá",
+      "variantesEnunciado": [
+        "A quantia de R$ 4.680,00 deve ser repartida entre três setores em partes diretamente proporcionais a 20, 30 e 40, números que correspondem aos servidores de cada setor. O setor com 40 servidores receberá",
+        "Dividindo-se R$ 4.680,00 em partes diretamente proporcionais aos números 20, 30 e 40, a maior das partes obtidas é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 1.040,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a menor parte da divisão diretamente proporcional (20 × 52 = 1.040), destinada à equipe que analisou 20 processos. O enunciado pede a parte da equipe com 40 processos, que é a maior."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 1.080,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Seria a parte da equipe com 40 processos se a divisão fosse inversamente proporcional (razões 1/20, 1/30 e 1/40, equivalentes a 6, 4 e 3, com constante 360). Na divisão direta, quem analisou mais recebe mais."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 1.560,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde à divisão em partes iguais (4.680 ÷ 3), que aqui coincide com a parte da equipe intermediária (30 × 52). A divisão proporcional não reparte igualmente: cada parte acompanha o número de processos da equipe."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 2.080,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Soma das razões: 20 + 30 + 40 = 90. Constante de proporcionalidade: 4.680 ÷ 90 = 52. Partes: 20 × 52 = 1.040, 30 × 52 = 1.560 e 40 × 52 = 2.080, que somam 4.680. A equipe com 40 processos recebe R$ 2.080,00.",
+          "versaoInvertidaFalsa": "Na divisão de R$ 4.680,00 em partes diretamente proporcionais a 20, 30 e 40, a maior parte é R$ 2.160,00."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 2.160,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a maior parte de uma divisão inversamente proporcional (6 × 360), que caberia à equipe com 20 processos. Trocar a divisão direta pela inversa é o erro que leva a esse valor."
+        }
+      ],
+      "pegadinhaFCC": "A FCC coloca entre as alternativas as partes da divisão inversamente proporcional e a divisão igualitária. Antes de calcular, confirme se a divisão é direta ou inversa e qual parte o comando pede.",
+      "resumoFlashcard": {
+        "pergunta": "Como dividir um valor em partes diretamente proporcionais a números dados?",
+        "resposta": "Some os números, divida o valor pela soma para obter a constante e multiplique cada número por ela. Para 4.680 e 20, 30 e 40: k = 4.680 ÷ 90 = 52, e as partes são 1.040, 1.560 e 2.080."
+      },
+      "conceitosChave": ["Divisão proporcional"],
+      "fundamentacao": "Números e grandezas proporcionais: divisão em partes diretamente proporcionais, com constante k = total ÷ soma das razões; Anexo II do edital, Divisão em partes proporcionais."
+    },
+    {
+      "id": "mat-012",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A negação lógica da afirmação “Todos os processos da pauta foram julgados” é:",
+      "variantesEnunciado": [
+        "Um servidor afirmou: “Todos os processos da pauta foram julgados”. Para mostrar que essa afirmação é falsa, basta que seja verdadeira a proposição:",
+        "Considere a proposição universal “Todos os processos da pauta foram julgados”. Do ponto de vista lógico, sua negação é a proposição:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Pelo menos um processo da pauta não foi julgado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A negação de “todo A é B” é “algum A não é B”, isto é, existe pelo menos um A que não é B. Para desmentir que todos foram julgados, basta um processo da pauta sem julgamento; “pelo menos um” e “algum” têm o mesmo sentido lógico.",
+          "versaoInvertidaFalsa": "A negação de “Todos os processos da pauta foram julgados” é “Nenhum processo da pauta foi julgado”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Nenhum processo da pauta foi julgado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a pegadinha mais cobrada: “nenhum A é B” é a contrária de “todo A é B”, e não a negação. As duas podem ser falsas ao mesmo tempo, por exemplo, quando parte dos processos foi julgada e parte não."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Algum processo da pauta foi julgado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa proposição é compatível com a original: se todos foram julgados, também é verdade que algum foi. A negação precisa ser falsa sempre que a original for verdadeira, o que não ocorre aqui."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Se um processo está na pauta, então ele não foi julgado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa condicional equivale a “nenhum processo da pauta foi julgado”, e não à negação. Ela é falsa quando apenas parte dos processos foi julgada, situação em que a original também é falsa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Alguns processos da pauta foram julgados, e outros não.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Exige mais do que a negação: além de algum processo não julgado, afirma que outros foram julgados. Se nenhum processo tivesse sido julgado, a original seria falsa, mas essa proposição também seria."
+        }
+      ],
+      "pegadinhaFCC": "Negar “todo” não é dizer “nenhum”. A FCC sempre oferece a contrária (“nenhum”) como distrator, mas a negação exige apenas um contraexemplo: “algum… não” ou “pelo menos um… não”.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são as negações de “todo”, “algum” e “nenhum”?",
+        "resposta": "A negação de “todo A é B” é “algum A não é B”. A de “algum A é B” é “nenhum A é B”. A de “nenhum A é B” é “algum A é B”."
+      },
+      "conceitosChave": ["Negação de quantificadores"],
+      "fundamentacao": "Lógica de predicados: negação de proposições categóricas, ¬(∀x P(x)) ≡ ∃x ¬P(x); quadrado lógico das oposições (contraditórias × contrárias)."
+    },
+    {
+      "id": "mat-013",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Números inteiros e racionais, operações e expressões",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "O valor da expressão (0,5 + 1/4) ÷ 0,15 − 2,5 × 0,4 é",
+      "variantesEnunciado": [
+        "Em um exercício de conferência de cálculos, um técnico deve resolver, sem calculadora, a expressão (0,5 + 1/4) ÷ 0,15 − 2,5 × 0,4. O resultado correto é",
+        "Resolvendo-se a expressão (0,5 + 1/4) ÷ 0,15 − 2,5 × 0,4, que mistura números decimais e fracionários, e respeitando-se a prioridade das operações, obtém-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "−0,5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de errar a divisão de decimais, fazendo 0,75 ÷ 0,15 = 0,5 em vez de 5. Multiplicando dividendo e divisor por 100, tem-se 75 ÷ 15 = 5; com o erro, 0,5 − 1 = −0,5."
+        },
+        {
+          "id": "opt-2",
+          "texto": "1",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando se opera da esquerda para a direita: (5 − 2,5) × 0,4 = 1. A multiplicação 2,5 × 0,4 deve ser feita antes da subtração, o que dá 5 − 1 = 4."
+        },
+        {
+          "id": "opt-3",
+          "texto": "4",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No parêntese: 0,5 + 1/4 = 0,5 + 0,25 = 0,75. Divisão: 0,75 ÷ 0,15 = 75 ÷ 15 = 5. Multiplicação: 2,5 × 0,4 = 1. Por fim, 5 − 1 = 4, já que multiplicações e divisões vêm antes da subtração.",
+          "versaoInvertidaFalsa": "O valor de (0,5 + 1/4) ÷ 0,15 − 2,5 × 0,4 é 5, pois a fração 1/4 corresponde ao decimal 0,4."
+        },
+        {
+          "id": "opt-4",
+          "texto": "5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Surge ao converter 1/4 em 0,4, confundindo o denominador com a parte decimal: (0,5 + 0,4) ÷ 0,15 = 6 e 6 − 1 = 5. A fração 1/4 equivale a 0,25."
+        },
+        {
+          "id": "opt-5",
+          "texto": "49",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Decorre de errar a posição da vírgula na divisão, tomando 0,75 ÷ 0,15 como 50 em vez de 5. Igualar as casas decimais (75 ÷ 15) evita o erro; com ele, 50 − 1 = 49."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura fração e decimal e cobra divisão entre decimais. Converter 1/4 em 0,4 e deslocar a vírgula na divisão são os erros que geram os distratores.",
+      "resumoFlashcard": {
+        "pergunta": "Como dividir números decimais sem calculadora?",
+        "resposta": "Multiplique dividendo e divisor pela mesma potência de 10 até eliminar as vírgulas: 0,75 ÷ 0,15 = 75 ÷ 15 = 5. O quociente não se altera com essa multiplicação."
+      },
+      "conceitosChave": ["Operações com decimais", "Ordem das operações"],
+      "fundamentacao": "Números racionais: conversão entre fração e decimal, propriedade fundamental da divisão (multiplicar dividendo e divisor pelo mesmo número não altera o quociente) e prioridade das operações; Anexo II do edital."
+    },
+    {
+      "id": "mat-014",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Múltiplos e divisores (MMC e MDC)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um técnico vai arquivar em pastas 84 processos de licitação, 120 processos de pessoal e 156 processos de contratos. Todas as pastas devem conter o mesmo número de processos, sem misturar tipos diferentes na mesma pasta, e esse número deve ser o maior possível. O número total de pastas utilizadas será",
+      "variantesEnunciado": [
+        "Para organizar o arquivo de uma unidade, serão acondicionados em caixas 84 processos de licitação, 120 de pessoal e 156 de contratos. Cada caixa deve ter a mesma quantidade de processos, todos de um só tipo, e essa quantidade deve ser a maior possível. O total de caixas necessárias é",
+        "Uma servidora precisa distribuir 84 relatórios de auditoria, 120 de inspeção e 156 de monitoramento em lotes com o mesmo número de relatórios, sem misturar espécies e com o maior número possível de relatórios por lote. O total de lotes formados é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "7",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 7 é apenas o número de pastas de licitação (84 ÷ 12). O comando pede o total de pastas, que inclui também as 10 de pessoal e as 13 de contratos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "12",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 12 é o MDC de 84, 120 e 156, ou seja, o número de processos em cada pasta, e não o número de pastas. Confundir o MDC com a resposta final é um erro frequente nesse tipo de problema."
+        },
+        {
+          "id": "opt-3",
+          "texto": "13",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 13 é o número de pastas apenas dos processos de contratos (156 ÷ 12). Faltou somar as pastas de licitação (7) e de pessoal (10) para chegar ao total."
+        },
+        {
+          "id": "opt-4",
+          "texto": "30",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O maior número de processos por pasta que divide exatamente as três quantidades é o MDC: 84 = 2² × 3 × 7, 120 = 2³ × 3 × 5 e 156 = 2² × 3 × 13, logo MDC = 2² × 3 = 12. Pastas: 84 ÷ 12 + 120 ÷ 12 + 156 ÷ 12 = 7 + 10 + 13 = 30.",
+          "versaoInvertidaFalsa": "Serão usadas 60 pastas, pois o maior número de processos que cabe igualmente em cada pasta é 6."
+        },
+        {
+          "id": "opt-5",
+          "texto": "60",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde a usar 6 processos por pasta (14 + 20 + 26 = 60). O 6 é divisor comum, mas não o maior: o MDC é 12, e um divisor menor aumenta o número de pastas."
+        }
+      ],
+      "pegadinhaFCC": "“Maior número possível por pasta” aponta para o MDC, mas a pergunta é o número de pastas. A FCC coloca o próprio MDC e as pastas de um só tipo entre os distratores.",
+      "resumoFlashcard": {
+        "pergunta": "Quando um problema pede grupos iguais, sem sobras e com o maior tamanho possível, o que se calcula?",
+        "resposta": "O MDC das quantidades, que dá o tamanho de cada grupo. O número de grupos é a soma dos quocientes de cada quantidade pelo MDC."
+      },
+      "conceitosChave": ["MDC: divisão em grupos iguais"],
+      "fundamentacao": "Teoria elementar dos números: máximo divisor comum por decomposição em fatores primos (fatores comuns com o menor expoente); Anexo II do edital, Múltiplos e divisores de números naturais."
+    },
+    {
+      "id": "mat-015",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Porcentagem, acréscimos e descontos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Sobre o valor de R$ 2.400,00 de um serviço incidem dois descontos sucessivos: o primeiro de 10% e o segundo de 5%, este aplicado sobre o valor já reduzido pelo primeiro desconto. O valor final do serviço é",
+      "variantesEnunciado": [
+        "Uma empresa ofereceu a um órgão público, para um serviço orçado em R$ 2.400,00, um desconto de 10% e, sobre o valor resultante, um desconto adicional de 5%. Após os dois descontos, o valor a pagar é",
+        "Um equipamento de R$ 2.400,00 recebeu desconto de 10% na negociação e, no pagamento à vista, mais 5% sobre o preço já descontado. O valor pago pelo equipamento foi"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 2.040,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de somar os percentuais (10% + 5% = 15%) e aplicar um desconto único: 2.400 × 0,85 = 2.040. Descontos sucessivos se multiplicam, porque o segundo incide sobre uma base menor."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 2.052,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Primeiro desconto: 2.400 × 0,90 = 2.160. Segundo desconto, sobre 2.160: 2.160 × 0,95 = 2.052. O fator único é 0,90 × 0,95 = 0,855, equivalente a um desconto total de 14,5%, e não de 15%.",
+          "versaoInvertidaFalsa": "Dois descontos sucessivos de 10% e de 5% sobre R$ 2.400,00 equivalem a um desconto único de 15%, e o valor final é R$ 2.040,00."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 2.160,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o valor após apenas o primeiro desconto (2.400 × 0,90). Faltou aplicar os 5% sobre R$ 2.160,00, que reduzem o valor em mais R$ 108,00."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 2.268,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando o segundo percentual é aplicado como acréscimo: 2.160 × 1,05 = 2.268. O enunciado trata de dois descontos, e ambos reduzem o valor."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 2.280,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o valor após apenas o desconto de 5% sobre o preço original (2.400 × 0,95), ignorando o desconto de 10%. Os dois descontos devem ser aplicados em sequência."
+        }
+      ],
+      "pegadinhaFCC": "Somar percentuais sucessivos (10% + 5% = 15%) é o erro que a FCC explora. O desconto equivalente é 1 − 0,90 × 0,95 = 14,5%.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular o efeito de descontos sucessivos?",
+        "resposta": "Multiplicam-se os fatores (1 − d₁)(1 − d₂). Para 10% e 5%: 0,90 × 0,95 = 0,855, um desconto equivalente de 14,5%, e não a soma dos percentuais."
+      },
+      "conceitosChave": ["Porcentagens sucessivas"],
+      "fundamentacao": "Matemática comercial: descontos sucessivos calculados pelo produto dos fatores (1 − d₁)(1 − d₂); Anexo II do edital, Porcentagem, acréscimos e descontos."
+    },
+    {
+      "id": "mat-016",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio verbal, formação de conceitos e discriminação de elementos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considere os pares de letras BX, DW, GT, HS e KP, formados com base nas posições das letras no alfabeto de 26 letras. Quatro deles obedecem a um mesmo critério. O par que destoa dos demais é",
+      "variantesEnunciado": [
+        "Em um código interno, pares de letras foram criados segundo uma regra baseada nas posições das letras no alfabeto de 26 letras. Dos pares BX, DW, GT, HS e KP, apenas um foi formado em desacordo com essa regra. Esse par é",
+        "Os pares de letras BX, DW, GT, HS e KP foram escritos por um técnico que seguiu uma regra relacionada às posições das letras no alfabeto de 26 letras, mas errou em um dos pares. O par em desacordo com a regra seguida nos demais é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "BX",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Em DW, GT, HS e KP, as letras são simétricas no alfabeto: D (4) e W (23), G (7) e T (20), H (8) e S (19), K (11) e P (16) somam 27, ou seja, uma está tão longe do início quanto a outra do fim. Em BX, B (2) e X (24) somam 26; a simétrica de B seria Y.",
+          "versaoInvertidaFalsa": "O par que destoa é KP, pois é o único em que a soma das posições das letras no alfabeto é 27."
+        },
+        {
+          "id": "opt-2",
+          "texto": "DW",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. D ocupa a 4ª posição e W a 23ª: 4 + 23 = 27. O par segue o critério das letras simétricas em relação às extremidades do alfabeto, como a maioria dos pares."
+        },
+        {
+          "id": "opt-3",
+          "texto": "GT",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. G é a 7ª letra e T a 20ª, e 7 + 20 = 27. G está a 7 posições do início, e T a 7 posições do fim, o que obedece ao critério dos demais pares."
+        },
+        {
+          "id": "opt-4",
+          "texto": "HS",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. H (8ª) e S (19ª) somam 27: H está a 8 posições contadas a partir do A, e S, a 8 posições contadas a partir do Z. É um par simétrico, como DW, GT e KP."
+        },
+        {
+          "id": "opt-5",
+          "texto": "KP",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. K (11ª) e P (16ª) somam 27, e o par segue o critério. Quem desconsidera K, W e Y no alfabeto erra a contagem das posições e pode julgá-lo fora do padrão."
+        }
+      ],
+      "pegadinhaFCC": "O critério só aparece quando as letras são convertidas em posições no alfabeto de 26 letras. Quem conta sem K, W e Y altera as posições e confunde os pares.",
+      "resumoFlashcard": {
+        "pergunta": "Como reconhecer letras simétricas no alfabeto de 26 letras?",
+        "resposta": "Duas letras são simétricas quando a soma de suas posições é 27 (A e Z, B e Y, C e X, D e W…). Cada uma está à mesma distância de uma das extremidades do alfabeto."
+      },
+      "conceitosChave": ["Discriminação de elementos", "Sequências de letras"],
+      "fundamentacao": "Raciocínio lógico: discriminação de elementos por critério de formação; posições das letras no alfabeto de 26 letras (Acordo Ortográfico da Língua Portuguesa de 1990, Base I)."
+    },
+    {
+      "id": "mat-017",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Orientação espacial e temporal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Um relógio atrasa 3 minutos a cada 2 horas. Ele foi acertado às 8 h de uma segunda-feira. Às 20 h da terça-feira, dia seguinte, no horário correto, esse relógio estará marcando",
+      "variantesEnunciado": [
+        "O relógio de parede de uma sala de sessões atrasa 3 minutos a cada 2 horas de funcionamento. Foi ajustado às 8 h de uma segunda-feira e não foi mais mexido. Quando forem, de fato, 20 h da terça-feira, dia seguinte, o relógio indicará",
+        "Um cronômetro de controle de prazos, que funciona como relógio, perde 3 minutos a cada 2 horas. Ajustado às 8 h de uma segunda-feira, ele mostrará, às 20 h reais da terça-feira imediatamente seguinte, o horário"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "18 h 12 min.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera atraso de 3 minutos por hora, e não a cada 2 horas: 36 × 3 = 108 minutos, e 20 h − 1 h 48 min = 18 h 12 min. A taxa correta é de 1,5 minuto por hora."
+        },
+        {
+          "id": "opt-2",
+          "texto": "19 h 06 min.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Das 8 h de segunda às 20 h de terça passam 24 + 12 = 36 horas, ou seja, 18 períodos de 2 horas. Atraso acumulado: 18 × 3 = 54 minutos. O relógio marca 20 h − 54 min = 19 h 06 min.",
+          "versaoInvertidaFalsa": "Às 20 h de terça-feira, o relógio estará marcando 20 h 54 min, pois o atraso acumulado deve ser somado ao horário correto."
+        },
+        {
+          "id": "opt-3",
+          "texto": "19 h 24 min.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de supor atraso de 1 minuto por hora (36 minutos em 36 horas). O enunciado fixa 3 minutos a cada 2 horas, isto é, 1,5 minuto por hora, o que dá 54 minutos."
+        },
+        {
+          "id": "opt-4",
+          "texto": "19 h 42 min.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera apenas as 12 horas da terça-feira (6 períodos × 3 = 18 minutos) e esquece as 24 horas entre segunda e terça. O intervalo total é de 36 horas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "20 h 54 min.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O atraso de 54 minutos está certo, mas foi somado ao horário. Relógio que atrasa marca um horário anterior ao correto, então o atraso deve ser subtraído: 19 h 06 min."
+        }
+      ],
+      "pegadinhaFCC": "A FCC combina o intervalo entre dias (36 horas, e não 12) com o sentido do erro: relógio que atrasa marca menos que o horário real. Trocar a taxa de 3 min a cada 2 h por 3 min por hora também leva a distrator.",
+      "resumoFlashcard": {
+        "pergunta": "Como calcular o horário marcado por um relógio que atrasa?",
+        "resposta": "Conte o tempo real decorrido, multiplique pela taxa de atraso e subtraia o resultado do horário correto (se o relógio adianta, some). Com 36 h e 3 min a cada 2 h, o atraso é de 54 min."
+      },
+      "conceitosChave": ["Relógios e intervalos de tempo"],
+      "fundamentacao": "Orientação temporal: cálculo de intervalos de tempo e regra de três simples aplicada à taxa de atraso; Anexo II do edital, Orientação espacial e temporal."
+    },
+    {
+      "id": "mat-018",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Estruturas lógicas e associação de informações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Lia, Marcos, Nádia e Otávio trabalham, cada um, em um setor diferente de um Tribunal (Auditoria, Contabilidade, Jurídico e TI) e dão plantão, cada um, em um dia diferente, de segunda a quinta-feira. Sabe-se que: Lia não trabalha em TI nem no Jurídico; quem trabalha na Contabilidade dá plantão na quarta-feira; Marcos dá plantão na segunda-feira e não trabalha na Auditoria; Nádia dá plantão no dia seguinte ao de quem trabalha em TI; Otávio não trabalha no Jurídico nem na Contabilidade; Lia dá plantão em dia posterior ao de Otávio. Com base nessas informações, é correto concluir que",
+      "variantesEnunciado": [
+        "Quatro analistas, Lia, Marcos, Nádia e Otávio, atuam em setores distintos (Auditoria, Contabilidade, Jurídico e TI) e têm, cada um, um dia de plantão diferente, entre segunda e quinta-feira. Lia não é de TI nem do Jurídico; o plantão da Contabilidade é na quarta-feira; Marcos faz plantão na segunda-feira e não é da Auditoria; o plantão de Nádia é no dia seguinte ao do servidor de TI; Otávio não é do Jurídico nem da Contabilidade; o plantão de Lia é posterior ao de Otávio. Conclui-se corretamente que",
+        "Em uma escala de plantões de segunda a quinta-feira, cada um dos servidores Lia, Marcos, Nádia e Otávio ocupa um dia diferente e pertence a um setor diferente: Auditoria, Contabilidade, Jurídico ou TI. Considere: Lia não trabalha em TI nem no Jurídico; o servidor da Contabilidade fica com a quarta-feira; Marcos fica com a segunda-feira e não é da Auditoria; Nádia fica com o dia seguinte ao do servidor de TI; Otávio não é do Jurídico nem da Contabilidade; Lia fica com um dia posterior ao de Otávio. A partir dessas informações, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Lia trabalha na Auditoria e dá plantão na quarta-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Lia trabalha de fato na Auditoria, mas seu plantão é na quinta-feira. A quarta-feira é o dia de quem trabalha na Contabilidade, que é Nádia; a primeira parte verdadeira serve de isca."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Nádia trabalha em TI e dá plantão na quarta-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nádia não pode trabalhar em TI, pois seu plantão é no dia seguinte ao de quem trabalha em TI. Ela dá plantão na quarta-feira, mas trabalha na Contabilidade."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Otávio trabalha na Contabilidade e dá plantão na terça-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A quinta pista exclui a Contabilidade para Otávio, que trabalha em TI. O dia está certo (terça-feira), o que torna a alternativa atraente para quem confere apenas uma das informações."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Marcos trabalha em TI e dá plantão na segunda-feira.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se Marcos fosse de TI, Nádia ficaria com a terça, e Lia e Otávio com quarta e quinta, com Otávio antes de Lia. Otávio seria então da quarta, dia da Contabilidade, setor vedado a ele. A hipótese é impossível, e Marcos é do Jurídico."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Marcos trabalha no Jurídico e Otávio dá plantão na terça-feira.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. TI não é de Lia (1ª pista) nem de Nádia (4ª pista). Se fosse de Marcos, Otávio cairia na quarta, dia da Contabilidade, o que é vedado. Logo, Otávio é de TI; Nádia vem no dia seguinte e Lia depois de Otávio, então Otávio fica na terça, Nádia na quarta (Contabilidade) e Lia na quinta (Auditoria). Resta o Jurídico para Marcos.",
+          "versaoInvertidaFalsa": "Das informações conclui-se que Marcos trabalha em TI e que Otávio dá plantão na quarta-feira."
+        }
+      ],
+      "pegadinhaFCC": "Os distratores combinam uma informação verdadeira com outra falsa. A hipótese “Marcos em TI” só cai ao cruzar a quarta-feira com o setor de Otávio, e é aí que a FCC pega quem para antes de esgotar os casos.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a estratégia para problemas de associação com dois atributos, como setor e dia?",
+        "resposta": "Monte a tabela, marque as exclusões diretas e teste por hipótese o atributo com menos possibilidades (aqui, quem é de TI). Descarte a hipótese que contradiz alguma pista e preencha o restante por eliminação."
+      },
+      "conceitosChave": ["Associação lógica"],
+      "fundamentacao": "Raciocínio lógico: estrutura lógica de relações arbitrárias entre pessoas, lugares e eventos e dedução por eliminação de hipóteses; Anexo II do edital."
+    },
+    {
+      "id": "mat-019",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio sequencial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Em uma sequência de figuras, cada figura é um quadrado com um ponto em um de seus cantos e uma seta no centro. Na figura 1, o ponto está no canto superior esquerdo, e a seta aponta para cima. De uma figura para a seguinte, o ponto avança um canto no sentido horário, e a seta gira 45° no sentido anti-horário. Nessas condições, a posição do ponto e a direção da seta na figura 30 são:",
+      "variantesEnunciado": [
+        "Um painel exibe uma sequência de quadros. Em cada quadro há um quadrado com uma luz em um dos cantos e uma seta no centro. No quadro 1, a luz está no canto superior esquerdo, e a seta aponta para cima. A cada novo quadro, a luz passa ao canto seguinte no sentido horário, e a seta gira 45° no sentido anti-horário. No quadro 30, a posição da luz e a direção da seta são:",
+        "Considere uma sequência de figuras em que, na primeira, um quadrado tem um ponto no canto superior esquerdo e uma seta central apontando para cima. A cada figura seguinte, o ponto se desloca um canto no sentido horário, e a seta gira 45° no sentido anti-horário. A trigésima figura apresenta o ponto e a seta da seguinte forma:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "No canto superior direito, com a seta apontando para baixo e para a direita.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Da figura 1 à 30 há 29 mudanças. O ponto tem ciclo de 4: 29 = 4 × 7 + 1, então avança 1 canto no sentido horário a partir do superior esquerdo e fica no superior direito. A seta tem ciclo de 8 (8 × 45° = 360°): 29 = 8 × 3 + 5, ou seja, 225° anti-horários a partir de “para cima”, o que dá “para baixo e para a direita”.",
+          "versaoInvertidaFalsa": "Na figura 30, o ponto está no canto inferior direito e a seta aponta para a direita, pois da figura 1 à figura 30 ocorrem 30 mudanças."
+        },
+        {
+          "id": "opt-2",
+          "texto": "No canto superior direito, com a seta apontando para baixo e para a esquerda.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ponto está correto, mas a seta foi girada no sentido horário: 225° horários a partir de “para cima” levam a “para baixo e para a esquerda”. No sentido anti-horário, os mesmos 225° levam a “para baixo e para a direita”."
+        },
+        {
+          "id": "opt-3",
+          "texto": "No canto inferior esquerdo, com a seta apontando para baixo e para a direita.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A seta está correta, mas o ponto foi movido no sentido anti-horário: 1 canto anti-horário a partir do superior esquerdo leva ao inferior esquerdo. O enunciado manda deslocar o ponto no sentido horário."
+        },
+        {
+          "id": "opt-4",
+          "texto": "No canto inferior direito, com a seta apontando para a direita.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de contar 30 mudanças em vez de 29: 30 = 4 × 7 + 2 e 30 = 8 × 3 + 6. A figura 1 já é o ponto de partida, de modo que até a figura 30 ocorrem 29 transformações."
+        },
+        {
+          "id": "opt-5",
+          "texto": "No canto inferior esquerdo, com a seta apontando para baixo e para a esquerda.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois sentidos de rotação: o ponto andou no sentido anti-horário (inferior esquerdo) e a seta girou no horário (para baixo e para a esquerda). Com os sentidos do enunciado, a figura 30 é outra."
+        }
+      ],
+      "pegadinhaFCC": "São dois ciclos de tamanhos diferentes (4 posições para o ponto e 8 para a seta) e dois sentidos de rotação opostos. A FCC também testa o erro de contar 30 mudanças, quando a figura 1 é o ponto de partida e há apenas 29.",
+      "resumoFlashcard": {
+        "pergunta": "Como encontrar a figura de ordem n em sequências cíclicas?",
+        "resposta": "Conte as mudanças a partir da figura 1 (n − 1) e divida pelo tamanho de cada ciclo; o resto indica a posição. Com ciclos diferentes, faça uma divisão para cada elemento da figura."
+      },
+      "conceitosChave": ["Sequências cíclicas", "Orientação espacial"],
+      "fundamentacao": "Raciocínio sequencial e orientação espacial: periodicidade (resto da divisão pelo tamanho do ciclo) e rotações de 45°, com 8 posições por volta completa; Anexo II do edital."
+    },
+    {
+      "id": "mat-020",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Regra de três simples e composta",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Uma equipe de 10 servidores, de mesma produtividade, concluiria o inventário patrimonial de um Tribunal em 18 dias. Após 6 dias de trabalho, 2 servidores foram remanejados para outra unidade, e os demais continuaram no mesmo ritmo. Contados desde o início, o inventário foi concluído em",
+      "variantesEnunciado": [
+        "Dez técnicos, com o mesmo rendimento, fariam a migração de um acervo digital em 18 dias. Depois de 6 dias, 2 técnicos foram deslocados para outro projeto, e os restantes mantiveram o ritmo. O tempo total gasto na migração, desde o primeiro dia, foi de",
+        "Uma força-tarefa de 10 auditores, todos com igual produtividade, terminaria a análise de um conjunto de processos em 18 dias. Passados 6 dias, 2 auditores deixaram a equipe, e os outros prosseguiram no mesmo ritmo. A análise foi concluída, contando-se desde o início, em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "15 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 15 dias é apenas o tempo gasto pelos 8 servidores no trabalho restante (120 ÷ 8). O comando pede o tempo total desde o início, que inclui os 6 dias iniciais: 6 + 15 = 21."
+        },
+        {
+          "id": "opt-2",
+          "texto": "15,6 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de tratar servidores e prazo como diretamente proporcionais: 12 × 8/10 = 9,6 dias restantes, e 6 + 9,6 = 15,6. Com menos servidores, o prazo restante aumenta, e não diminui."
+        },
+        {
+          "id": "opt-3",
+          "texto": "21 dias.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O trabalho total equivale a 10 × 18 = 180 servidor-dias. Em 6 dias foram feitos 10 × 6 = 60, e restam 120. Com 8 servidores, isso leva 120 ÷ 8 = 15 dias. Total: 6 + 15 = 21 dias. Pela regra de três inversa, os 12 dias restantes viram 12 × 10/8 = 15.",
+          "versaoInvertidaFalsa": "O inventário foi concluído em 22,5 dias, pois todo o prazo de 18 dias deve ser multiplicado pela razão 10/8."
+        },
+        {
+          "id": "opt-4",
+          "texto": "22,5 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aplica a razão inversa 10/8 a todo o prazo (18 × 10/8 = 22,5), como se a equipe tivesse 8 servidores desde o início. Nos 6 primeiros dias havia 10 servidores, e só os 12 dias restantes devem ser ajustados."
+        },
+        {
+          "id": "opt-5",
+          "texto": "24 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Soma os 6 dias iniciais aos 18 dias do prazo original, como se o trabalho recomeçasse do zero. Um terço do serviço já estava feito, e os 8 servidores só precisam completar o que falta."
+        }
+      ],
+      "pegadinhaFCC": "A mudança na equipe ocorre no meio do trabalho. A FCC explora quem aplica a regra de três ao prazo inteiro, quem esquece os dias já trabalhados e quem trata a relação como direta.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver regra de três quando a equipe muda no meio do trabalho?",
+        "resposta": "Calcule o trabalho total em pessoa-dias (pessoas × dias), desconte o que já foi feito e divida o restante pela nova equipe. Depois, some os dias já trabalhados."
+      },
+      "conceitosChave": ["Regra de três inversa"],
+      "fundamentacao": "Grandezas inversamente proporcionais (número de servidores × prazo) e regra de três simples inversa; Anexo II do edital, Regra de três."
+    }
+  ]
+}

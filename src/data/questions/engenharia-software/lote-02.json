@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "engenharia-software",
+  "lote": 2,
+  "questoes": [
+    {
+      "id": "eng-sw-011",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Abordagens preditiva, iterativa, incremental e adaptativa",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A respeito das abordagens de ciclo de vida de software, é correto afirmar que",
+      "variantesEnunciado": [
+        "Ao comparar abordagens de ciclo de vida para novos projetos, a equipe de TI de um Tribunal de Contas precisa distinguir corretamente seus conceitos. Nesse sentido, é correto afirmar que",
+        "Sobre as abordagens preditiva, iterativa, incremental e adaptativa de desenvolvimento de software, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "na abordagem preditiva, o escopo é redefinido a cada ciclo curto com base no feedback dos usuários, e as entregas ocorrem com alta frequência.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa descreve a abordagem adaptativa (ágil). Na preditiva, escopo, prazo e custo são definidos nas fases iniciais, as atividades são executadas uma vez para todo o produto e a entrega costuma ser única, ao final."
+        },
+        {
+          "id": "opt-2",
+          "texto": "iterativo e incremental são sinônimos, pois ambos os termos designam a entrega única do produto completo ao final do projeto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os termos não são sinônimos, e nenhum deles designa entrega única ao final. Iterativo refere-se a ciclos repetidos de refinamento; incremental, a entregas de partes utilizáveis. As abordagens ágeis combinam as duas ideias."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a abordagem adaptativa exige que todos os requisitos sejam detalhados e aprovados antes do início da construção, para reduzir mudanças.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Detalhar e aprovar todos os requisitos antes da construção é traço da abordagem preditiva. A adaptativa trabalha com requisitos que evoluem, detalhados pouco antes de serem implementados, e acolhe mudanças a partir do feedback."
+        },
+        {
+          "id": "opt-4",
+          "texto": "na abordagem incremental, o produto é entregue em partes utilizáveis sucessivas, ao passo que, na iterativa, ele é desenvolvido em ciclos que refinam a solução com base em feedback.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Segundo o Agile Practice Guide, o ciclo incremental entrega partes concluídas e utilizáveis em sequência, buscando velocidade; o iterativo repete atividades até chegar à solução correta, usando o feedback sobre versões parciais. A abordagem adaptativa (ágil) combina as duas: itera e incrementa ao mesmo tempo.",
+          "versaoInvertidaFalsa": "na abordagem iterativa, o produto é entregue em partes utilizáveis sucessivas, ao passo que, na incremental, ele é desenvolvido em ciclos que refinam a mesma solução com base em feedback."
+        },
+        {
+          "id": "opt-5",
+          "texto": "na abordagem incremental, as partes do produto são construídas em paralelo por equipes distintas e integradas em uma única entrega ao final, sem qualquer uso intermediário pelos clientes.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O que define o incremental é justamente a entrega sucessiva de partes que o cliente já pode usar. Construir módulos em paralelo para integrá-los em uma entrega única é organização do trabalho, e não ciclo incremental."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca as definições ou trata iterativo e incremental como sinônimos. Incremental é entregar partes utilizáveis em sequência; iterativo é repetir ciclos para refinar a solução. A abordagem adaptativa (ágil) combina as duas.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre desenvolvimento iterativo e incremental?",
+        "resposta": "Incremental: o produto é entregue em partes utilizáveis, cada uma acrescentando funcionalidade. Iterativo: o trabalho passa por ciclos repetidos que refinam a solução a partir de feedback. As abordagens ágeis (adaptativas) são iterativas e incrementais ao mesmo tempo."
+      },
+      "conceitosChave": ["Ciclos de vida: iterativo × incremental", "Abordagem adaptativa (ágil)"],
+      "fundamentacao": "PMI & Agile Alliance, Agile Practice Guide (2017), cap. 3, Tabela 3-1 (características dos ciclos de vida preditivo, iterativo, incremental e ágil); Sommerville, Engenharia de Software, 10ª ed., cap. 2."
+    },
+    {
+      "id": "eng-sw-012",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Scrum",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Na terceira semana de uma Sprint de um mês, o Time Scrum responsável pelo sistema de prestação de contas de um Tribunal de Contas é informado de que uma nova resolução extinguiu o formulário eletrônico cuja automação era o objeto da Meta da Sprint, tornando-a obsoleta. O diretor da área, que não integra o Time Scrum, solicita que a Sprint seja encerrada imediatamente. Segundo o Guia do Scrum (2020),",
+      "variantesEnunciado": [
+        "Considere que, no meio de uma Sprint, uma decisão normativa torna sem utilidade o módulo de cálculo de prazos que constituía a Meta da Sprint de um Time Scrum. Um gestor do órgão, que não integra o Time Scrum, pede o cancelamento imediato da Sprint. Segundo o Guia do Scrum (2020),",
+        "Em um projeto hipotético, o Time Scrum que desenvolve um painel de fiscalização descobre, na metade da Sprint, que o indicador objeto da Meta da Sprint foi abandonado pela área demandante, o que torna a meta obsoleta. A chefia da unidade, externa ao Time Scrum, requer o encerramento antecipado da Sprint. Segundo o Guia do Scrum (2020),"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "apenas o Product Owner tem autoridade para cancelar a Sprint, providência cabível quando a Meta da Sprint se torna obsoleta; a solicitação de outras pessoas pode influenciar, mas não substitui essa decisão.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Guia do Scrum 2020 prevê que a Sprint pode ser cancelada se a Meta da Sprint se tornar obsoleta e que apenas o Product Owner tem autoridade para cancelá-la. Pessoas de fora do Time Scrum podem levar informações e pedidos ao Product Owner, mas a decisão é dele.",
+          "versaoInvertidaFalsa": "apenas o Scrum Master tem autoridade para cancelar a Sprint, providência cabível quando a Meta da Sprint se torna obsoleta; o Product Owner pode sugerir o cancelamento, mas não decide."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o Scrum Master deve cancelar a Sprint, pois é o responsável pela eficácia do Time Scrum e pela remoção de impedimentos ao progresso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Scrum Master é responsável pela eficácia do Time Scrum e ajuda a remover impedimentos, mas o Guia não lhe dá autoridade para cancelar a Sprint. A alternativa usa uma responsabilidade verdadeira para justificar uma conclusão errada."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a Sprint não pode ser cancelada em hipótese alguma, cabendo ao Time Scrum concluí-la e tratar a mudança somente na Sprint Review.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Guia admite expressamente o cancelamento quando a Meta da Sprint se torna obsoleta. Insistir em uma meta sem valor contraria o empirismo. A generalização 'em hipótese alguma' é a armadilha."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o cancelamento pode ser determinado por qualquer gestor com autoridade hierárquica sobre o Time Scrum, desde que registrado no Sprint Backlog.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Guia atribui a autoridade de cancelar a Sprint exclusivamente ao Product Owner, independentemente da hierarquia da organização. Além disso, o Sprint Backlog é o plano dos Developers, e não um registro de decisões gerenciais."
+        },
+        {
+          "id": "opt-5",
+          "texto": "os Developers decidem o cancelamento por consenso, pois são responsáveis pelo plano da Sprint e pela adaptação diária do Sprint Backlog.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os Developers de fato criam o plano da Sprint e o adaptam diariamente rumo à Meta da Sprint, mas não têm autoridade para cancelar a Sprint. Essa decisão cabe somente ao Product Owner."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui o cancelamento ao Scrum Master, aos Developers ou à hierarquia da organização, ou nega que ele exista. Pelo Guia, só o Product Owner pode cancelar a Sprint, e a hipótese típica é a Meta da Sprint tornar-se obsoleta.",
+      "resumoFlashcard": {
+        "pergunta": "Quem pode cancelar uma Sprint e em que hipótese?",
+        "resposta": "Somente o Product Owner, e a hipótese prevista no Guia do Scrum 2020 é a Meta da Sprint tornar-se obsoleta. Outras pessoas podem levar o pedido ao Product Owner, mas a decisão é dele."
+      },
+      "conceitosChave": ["Scrum: Sprint", "Scrum: Product Owner"],
+      "fundamentacao": "Guia do Scrum (2020), seção 'Sprint': uma Sprint pode ser cancelada se a Meta da Sprint se tornar obsoleta, e apenas o Product Owner tem autoridade para cancelá-la."
+    },
+    {
+      "id": "eng-sw-013",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Histórias de usuário, casos de uso e critérios de aceite",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O acrônimo INVEST, proposto por Bill Wake, é usado para avaliar a qualidade de histórias de usuário. Segundo esse acrônimo, uma boa história deve ser",
+      "variantesEnunciado": [
+        "Na revisão do Product Backlog de um sistema de fiscalização, uma equipe usa o acrônimo INVEST para verificar se as histórias de usuário estão bem escritas. As letras desse acrônimo indicam que a história deve ser",
+        "Considere que um técnico de um Tribunal de Contas está treinando colegas na escrita de histórias de usuário com base no critério INVEST. De acordo com esse critério, cada história deve ser"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "independente, negociável, verificável, específica, sustentável e temporal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Mistura o INVEST com o acrônimo SMART (específico, mensurável, atingível, relevante, temporal), usado para metas e tarefas. No INVEST, o V é valiosa, o E é estimável, o S é pequena (small) e o T é testável."
+        },
+        {
+          "id": "opt-2",
+          "texto": "integrada, necessária, valiosa, executável, simples e testável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O I significa independente, e não integrada: histórias devem poder ser priorizadas e implementadas com o mínimo de dependências entre si. O N é negociável, o E é estimável e o S é pequena."
+        },
+        {
+          "id": "opt-3",
+          "texto": "incremental, normatizada, visível, estimável, sequencial e testável.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Só o E (estimável) e o T (testável) estão certos. 'Sequencial' contraria a ideia de independência, e 'normatizada' contraria a de negociável: a história é um convite à conversa, e não um contrato fechado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "independente, negociável, valiosa, estável, sequencial e temporal.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os três primeiros termos estão certos, mas o E é estimável (a equipe consegue dimensionar o esforço), o S é pequena (cabe em uma iteração) e o T é testável (há critérios para confirmar que está pronta)."
+        },
+        {
+          "id": "opt-5",
+          "texto": "independente, negociável, valiosa, estimável, pequena e testável.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. INVEST significa Independent, Negotiable, Valuable, Estimable, Small e Testable. A história deve ter o mínimo de dependências, admitir negociação dos detalhes, gerar valor para o usuário, permitir estimativa, caber em uma iteração e ser verificável por critérios de aceite.",
+          "versaoInvertidaFalsa": "integrada às demais, negociável, valiosa, estimável, pequena e testável, pois o I do INVEST indica que a história deve depender das outras."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca letras do INVEST por palavras de outros acrônimos, como o SMART (específica, temporal). O I é independente, o E é estimável e o S é pequena (small).",
+      "resumoFlashcard": {
+        "pergunta": "O que significa INVEST para histórias de usuário?",
+        "resposta": "Independente, Negociável, Valiosa, Estimável, Pequena (Small) e Testável. O critério, de Bill Wake, ajuda a verificar se a história pode ser planejada, priorizada e confirmada por critérios de aceite."
+      },
+      "conceitosChave": ["Histórias de usuário: INVEST"],
+      "fundamentacao": "Wake, 'INVEST in Good Stories, and SMART Tasks' (xp123.com, 2003); Cohn, User Stories Applied: For Agile Software Development (2004), cap. 2."
+    },
+    {
+      "id": "eng-sw-014",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Princípios SOLID, DRY, KISS, YAGNI, coesão e acoplamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No sistema de cálculo de multas de um Tribunal de Contas, a classe CalculadoraMulta contém um longo encadeamento de comandos if/else, um para cada tipo de infração. Sempre que surge um novo tipo, a classe precisa ser alterada e retestada por completo. A equipe refatora o código, criando a interface RegraMulta e uma implementação para cada tipo de infração; a calculadora passa a receber uma lista de regras e a delegar o cálculo a elas. O princípio de projeto que fundamenta diretamente essa refatoração é o",
+      "variantesEnunciado": [
+        "Em um sistema hipotético de emissão de relatórios, a classe GeradorRelatorio usa um switch sobre o formato (PDF, planilha, HTML) e precisa ser modificada a cada novo formato. A equipe cria a interface FormatoRelatorio, com uma implementação por formato, e o gerador passa a delegar a geração a ela, de modo que novos formatos não exigem mudar a classe existente. O princípio de projeto que fundamenta diretamente essa refatoração é o",
+        "Considere que, no módulo de distribuição de processos de um tribunal, cada novo critério de distribuição exigia editar um método extenso, repleto de condicionais. Após a refatoração, cada critério passou a ser uma classe que implementa a interface CriterioDistribuicao, e o módulo apenas invoca os critérios configurados. O princípio de projeto que fundamenta diretamente essa refatoração é o"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "da Responsabilidade Única, pois a classe original deixa de ter qualquer motivo para mudar, já que toda a lógica passa a residir fora dela.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SRP pede que um módulo tenha um único motivo para mudar, e não nenhum. A classe original continua tendo responsabilidade (coordenar as regras). O ganho central do caso é poder acrescentar variações sem editar o código existente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Aberto/Fechado, pois novas variações passam a ser incluídas por meio de novas implementações da interface, sem modificar o código já existente e testado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Princípio Aberto/Fechado (OCP), formulado por Bertrand Meyer e popularizado por Robert Martin, diz que entidades de software devem estar abertas para extensão e fechadas para modificação. Ao trocar a cadeia de condicionais por uma abstração com implementações polimórficas, novos casos entram como novas classes, e o código testado não é alterado.",
+          "versaoInvertidaFalsa": "Aberto/Fechado, pois novas variações passam a ser incluídas modificando-se a classe original, que deve permanecer aberta a alterações e fechada a extensões."
+        },
+        {
+          "id": "opt-3",
+          "texto": "da Substituição de Liskov, pois cada implementação da interface pode substituir a classe original em qualquer ponto do sistema, inclusive em contextos sem relação com o cálculo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O LSP exige que subtipos possam substituir o tipo base sem quebrar os clientes que dependem desse tipo. As implementações substituem umas às outras onde a interface é esperada, e não a classe original 'em qualquer ponto'. A refatoração mira a extensão sem modificação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "da Segregação de Interface, pois a refatoração divide uma interface extensa em várias interfaces menores, cada uma usada por um cliente diferente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O ISP trata de não forçar clientes a depender de métodos que não usam, dividindo interfaces 'gordas'. No caso, não havia interface extensa a dividir: foi criada uma única abstração para as variações."
+        },
+        {
+          "id": "opt-5",
+          "texto": "da Inversão de Dependência, pois a classe original passa a instanciar diretamente cada implementação concreta, conhecendo todas elas em tempo de compilação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Instanciar e conhecer diretamente cada classe concreta é o oposto do DIP, que manda depender de abstrações. No caso, a classe recebe as regras pela interface, sem conhecer as implementações concretas."
+        }
+      ],
+      "pegadinhaFCC": "Vários princípios SOLID aparecem com justificativas plausíveis. O núcleo do caso é acrescentar comportamento sem modificar o código existente, definição do Aberto/Fechado; a interface e o polimorfismo são o meio.",
+      "resumoFlashcard": {
+        "pergunta": "O que estabelece o Princípio Aberto/Fechado (OCP)?",
+        "resposta": "Entidades de software devem estar abertas para extensão e fechadas para modificação: novo comportamento entra por novas classes ou implementações, sem alterar código já testado. Abstrações e polimorfismo substituem cadeias de condicionais por tipo."
+      },
+      "conceitosChave": ["SOLID: Aberto/Fechado"],
+      "fundamentacao": "Meyer, Object-Oriented Software Construction (1988); Martin, Agile Software Development: Principles, Patterns, and Practices (2002), cap. 9 (The Open-Closed Principle)."
+    },
+    {
+      "id": "eng-sw-015",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Revisão de código, refatoração e dívida técnica",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um Tribunal de Contas, duas equipes registraram situações de dívida técnica. A equipe A, para cumprir um prazo legal de entrega, implementou conscientemente uma solução simplificada, registrou a pendência no backlog e planejou refatorá-la na Sprint seguinte. A equipe B, após um ano de evolução do sistema, percebeu que o modelo de dados adotado no início, escolhido com cuidado, não era o mais adequado e concluiu: 'agora sabemos como deveríamos ter feito'. De acordo com o quadrante de dívida técnica proposto por Martin Fowler, as dívidas das equipes A e B classificam-se, respectivamente, como",
+      "variantesEnunciado": [
+        "Considere duas equipes hipotéticas de desenvolvimento de sistemas de controle externo. A equipe A opta, de forma consciente e documentada, por um atalho técnico para lançar a tempo um módulo exigido por norma, com plano de correção já definido. A equipe B só descobre, depois de meses de aprendizado sobre o domínio, que a arquitetura escolhida poderia ter sido melhor, embora tivesse feito o melhor possível com o conhecimento da época. De acordo com o quadrante de Martin Fowler, as dívidas das equipes A e B classificam-se, respectivamente, como",
+        "Em uma auditoria de sistemas, um técnico identifica duas dívidas técnicas. A primeira foi assumida deliberadamente pela equipe A, que registrou o débito e agendou o pagamento para cumprir um prazo de publicação. A segunda surgiu na equipe B, que, com o amadurecimento do projeto, reconheceu que o desenho inicial não era o mais adequado, embora tenha sido feito com cuidado. Segundo o quadrante de dívida técnica de Martin Fowler, as dívidas das equipes A e B são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "deliberada e imprudente; inadvertida e imprudente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Atalho assumido com consciência, registrado e com plano de pagamento é prudente, não imprudente; imprudente seria 'não temos tempo para design'. E a equipe B agiu com cuidado e aprendeu depois, o que é prudente."
+        },
+        {
+          "id": "opt-2",
+          "texto": "inadvertida e prudente; deliberada e prudente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte o eixo deliberada/inadvertida. A equipe A decidiu conscientemente assumir o débito (deliberada); a equipe B só percebeu o problema depois, com o aprendizado (inadvertida)."
+        },
+        {
+          "id": "opt-3",
+          "texto": "deliberada e prudente; inadvertida e prudente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O quadrante de Fowler cruza deliberada × inadvertida com imprudente × prudente. A equipe A sabia do débito e decidiu assumi-lo com plano de pagamento: 'precisamos entregar agora e lidar com as consequências' (deliberada e prudente). A equipe B fez o melhor possível e só depois aprendeu a solução melhor: 'agora sabemos como deveríamos ter feito' (inadvertida e prudente).",
+          "versaoInvertidaFalsa": "deliberada e imprudente; inadvertida e imprudente, pois toda dívida assumida para cumprir prazo é imprudente e toda dívida descoberta depois decorre de descuido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "deliberada e imprudente; deliberada e prudente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Nenhuma das duas classificações está certa. A dívida da equipe A é prudente porque foi registrada e planejada; a da equipe B é inadvertida porque o problema só ficou evidente com o aprendizado posterior."
+        },
+        {
+          "id": "opt-5",
+          "texto": "inadvertida e imprudente; deliberada e imprudente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte os dois eixos. Inadvertida e imprudente é a dívida de quem desconhece boas práticas ('o que é separação em camadas?'), situação que não aparece no caso; nenhuma das equipes agiu com descuido."
+        }
+      ],
+      "pegadinhaFCC": "A banca associa 'prazo' a imprudência e 'descoberta tardia' a descuido. No quadrante de Fowler, o atalho consciente com plano de pagamento é deliberado e prudente, e o aprendizado posterior ('agora sabemos como deveríamos ter feito') é inadvertido e prudente.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os quadrantes da dívida técnica segundo Martin Fowler?",
+        "resposta": "Combinam deliberada × inadvertida com imprudente × prudente. Deliberada e prudente: 'precisamos entregar agora e lidar com as consequências'. Deliberada e imprudente: 'não temos tempo para design'. Inadvertida e imprudente: desconhecimento de boas práticas. Inadvertida e prudente: 'agora sabemos como deveríamos ter feito'."
+      },
+      "conceitosChave": ["Dívida técnica: quadrante de Fowler"],
+      "fundamentacao": "Fowler, 'TechnicalDebtQuadrant' (martinfowler.com, 2009); Cunningham, 'The WyCash Portfolio Management System' (OOPSLA, 1992), origem da metáfora da dívida técnica."
+    },
+    {
+      "id": "eng-sw-016",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Modelagem com UML e BPMN",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na documentação de um sistema hipotético de gestão de auditorias, a equipe de TI de um Tribunal de Contas utilizará diferentes diagramas da UML 2.5. A respeito da finalidade desses diagramas, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico precisa escolher diagramas da UML 2.5 para documentar o sistema de controle de prazos processuais. Sobre o propósito de cada diagrama, considere as afirmativas abaixo.",
+        "Considere que, em um projeto de modernização do sistema de protocolo de um órgão de controle externo, a especificação técnica exige modelos em UML 2.5. Quanto ao uso dos diagramas, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O diagrama de implantação representa a ordem temporal das mensagens trocadas entre objetos durante a execução de um cenário.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A ordem temporal das mensagens é o foco do diagrama de sequência. O diagrama de implantação mostra a distribuição dos artefatos em nós físicos ou ambientes de execução."
+        },
+        {
+          "texto": "O diagrama de máquina de estados descreve os estados de um objeto ao longo de seu ciclo de vida e as transições disparadas por eventos.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. A máquina de estados modela estados, eventos, condições de guarda e transições, como os estados de um processo (autuado, em instrução, julgado)."
+        },
+        {
+          "texto": "O diagrama de casos de uso detalha a estrutura interna das classes do sistema, com seus atributos, operações e associações.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Atributos, operações e associações são o conteúdo do diagrama de classes. O diagrama de casos de uso mostra atores, casos de uso e seus relacionamentos."
+        },
+        {
+          "texto": "O diagrama de atividades pode representar fluxos com decisões, paralelismo por bifurcação e junção e partições que indicam os responsáveis pelas ações.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O diagrama de atividades tem nós de decisão e fusão, de bifurcação (fork) e junção (join) e partições (raias) para atribuir ações a responsáveis."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa I é falsa porque atribui ao diagrama de implantação a finalidade do diagrama de sequência. Além disso, a alternativa omite a IV, que descreve corretamente o diagrama de atividades."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: estrutura interna de classes (atributos, operações, associações) é representada no diagrama de classes, e não no de casos de uso, que modela a interação entre atores e sistema."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne as duas afirmativas falsas (I e III), que trocam a finalidade dos diagramas, e omite a II, que descreve corretamente o diagrama de máquina de estados."
+        },
+        {
+          "id": "opt-4",
+          "texto": "IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é verdadeira, mas a II também é: o diagrama de máquina de estados representa os estados de um objeto e as transições provocadas por eventos ao longo do seu ciclo de vida."
+        },
+        {
+          "id": "opt-5",
+          "texto": "II e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A II descreve corretamente a máquina de estados, e a IV, o diagrama de atividades, com decisões, bifurcação e junção e partições. A I é falsa porque a ordem temporal das mensagens é objeto do diagrama de sequência; a III é falsa porque atributos e operações pertencem ao diagrama de classes.",
+          "versaoInvertidaFalsa": "O diagrama de máquina de estados descreve a estrutura estática das classes, com atributos e associações, sem representar eventos nem transições."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a finalidade dos diagramas: atribui ao de implantação o papel do diagrama de sequência e ao de casos de uso o papel do diagrama de classes.",
+      "resumoFlashcard": {
+        "pergunta": "Para que servem os diagramas de sequência, de máquina de estados e de atividades na UML?",
+        "resposta": "Sequência: ordem temporal das mensagens entre linhas de vida em um cenário. Máquina de estados: estados de um objeto e transições disparadas por eventos. Atividades: fluxo de ações com decisões, paralelismo (bifurcação e junção) e partições."
+      },
+      "conceitosChave": ["UML: diagramas comportamentais"],
+      "fundamentacao": "OMG, Unified Modeling Language (UML) 2.5.1 (2017), cláusulas 14 (State Machines), 15 (Activities), 17 (Interactions), 18 (Use Cases) e 19 (Deployments), e Anexo A (Diagrams)."
+    },
+    {
+      "id": "eng-sw-017",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Kanban, Lean Software Development e XP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Mary e Tom Poppendieck, em Lean Software Development: an Agile Toolkit (2003), adaptaram ao software princípios do pensamento enxuto. Entre os sete princípios propostos pelos autores, incluem-se",
+      "variantesEnunciado": [
+        "Ao estudar o Lean Software Development, na formulação original de Mary e Tom Poppendieck (2003), um técnico deve reconhecer, entre os sete princípios da abordagem,",
+        "Considere que a equipe de TI de um Tribunal de Contas pretende adotar práticas enxutas no desenvolvimento de sistemas, tomando como referência os sete princípios descritos por Mary e Tom Poppendieck em 2003. Entre esses princípios, incluem-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "eliminar desperdícios, maximizar a utilização individual de cada desenvolvedor e otimizar cada etapa do processo de forma isolada.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Eliminar desperdícios é princípio, mas os outros dois contrariam o Lean. A abordagem manda 'ver o todo', otimizando o fluxo completo de valor, e não etapas isoladas ou a ocupação máxima de cada pessoa, que gera filas e trabalho parcialmente feito."
+        },
+        {
+          "id": "opt-2",
+          "texto": "amplificar o aprendizado, congelar os requisitos no início do projeto e empoderar a equipe.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Amplificar o aprendizado e empoderar a equipe são princípios, mas congelar requisitos no início contraria 'decidir o mais tarde possível', que preserva opções até que haja informação suficiente."
+        },
+        {
+          "id": "opt-3",
+          "texto": "construir integridade, documentar exaustivamente antes de codificar e ver o todo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Construir integridade e ver o todo são princípios. A documentação exaustiva prévia, ao contrário, é tratada como fonte de desperdício (processos e artefatos que não agregam valor ao cliente)."
+        },
+        {
+          "id": "opt-4",
+          "texto": "eliminar desperdícios, decidir o mais tarde possível e entregar o mais rápido possível.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Os sete princípios da obra de 2003 são: eliminar desperdícios, amplificar o aprendizado, decidir o mais tarde possível, entregar o mais rápido possível, empoderar a equipe, construir integridade e ver o todo. Decidir tarde significa adiar decisões irreversíveis até o último momento responsável; entregar rápido encurta o ciclo de feedback.",
+          "versaoInvertidaFalsa": "eliminar desperdícios, decidir o mais cedo possível e entregar o mais rápido possível, pois decisões antecipadas reduzem a incerteza do projeto."
+        },
+        {
+          "id": "opt-5",
+          "texto": "entregar o mais rápido possível, decidir o mais cedo possível para reduzir incertezas e eliminar desperdícios.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inverte um princípio: o Lean recomenda decidir o mais tarde possível, mantendo opções abertas enquanto a incerteza é alta. Decidir cedo, sem informação, tende a gerar retrabalho, que é desperdício."
+        }
+      ],
+      "pegadinhaFCC": "A banca mistura princípios verdadeiros com práticas contrárias ao Lean, como decidir o mais cedo possível, congelar requisitos ou otimizar partes isoladas. O Lean adia decisões irreversíveis e otimiza o todo.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os sete princípios do Lean Software Development (Poppendieck, 2003)?",
+        "resposta": "Eliminar desperdícios, amplificar o aprendizado, decidir o mais tarde possível, entregar o mais rápido possível, empoderar a equipe, construir integridade e ver o todo."
+      },
+      "conceitosChave": ["Lean Software Development: princípios"],
+      "fundamentacao": "Poppendieck & Poppendieck, Lean Software Development: An Agile Toolkit (2003), caps. 1 a 7, um para cada princípio."
+    },
+    {
+      "id": "eng-sw-018",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Testes de software e automação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Antes do prazo final de envio das prestações de contas anuais, a equipe de TI de um Tribunal de Contas executou dois testes no sistema de recebimento. No primeiro, simulou 2.000 usuários simultâneos, volume correspondente ao pico esperado, para verificar se os tempos de resposta permaneciam dentro do acordado. No segundo, aumentou progressivamente a quantidade de usuários além da capacidade prevista, até o sistema falhar, para identificar o ponto de ruptura e observar como ele se recuperava. Os testes descritos são, respectivamente, de",
+      "variantesEnunciado": [
+        "Na preparação para a abertura do período de envio de declarações, um técnico conduz um teste que reproduz o número de acessos simultâneos previsto para o dia de maior movimento e verifica os tempos de resposta; depois, conduz outro em que a carga é elevada continuamente acima do limite projetado até a degradação total, analisando o comportamento na falha e na recuperação. Esses testes são, respectivamente, de",
+        "Considere que, para homologar um portal de consultas processuais, a equipe aplicou primeiro um teste com o volume de requisições estimado para o horário de pico, a fim de confirmar o atendimento aos requisitos de desempenho, e em seguida um teste que extrapolou deliberadamente essa capacidade, a fim de descobrir onde e como o sistema quebra. Os testes são, respectivamente, de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "carga e estresse.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O teste de carga submete o sistema à carga esperada, inclusive ao pico previsto, para verificar se atende aos requisitos de desempenho. O teste de estresse vai além da capacidade especificada para descobrir o ponto de ruptura, o modo de falha e a capacidade de recuperação.",
+          "versaoInvertidaFalsa": "estresse e carga, pois o teste com o volume esperado de pico é o de estresse, e o que ultrapassa a capacidade até a falha é o de carga."
+        },
+        {
+          "id": "opt-2",
+          "texto": "estresse e carga.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A ordem está invertida. Simular o pico esperado é teste de carga; ultrapassar deliberadamente a capacidade até a falha é teste de estresse. O 'respectivamente' é a armadilha."
+        },
+        {
+          "id": "opt-3",
+          "texto": "regressão e desempenho.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Teste de regressão é a reexecução de testes após uma mudança, para verificar que nada que funcionava deixou de funcionar. Não há mudança de código no cenário, e os dois testes são variações de teste de desempenho."
+        },
+        {
+          "id": "opt-4",
+          "texto": "integração e aceitação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Teste de integração verifica a interação entre componentes, e teste de aceitação verifica se o sistema atende às necessidades do usuário para aceite. O cenário trata de comportamento sob volume de usuários."
+        },
+        {
+          "id": "opt-5",
+          "texto": "resistência (soak) e volume.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Teste de resistência mantém carga por longo período para detectar degradação, como vazamento de memória; teste de volume avalia grandes quantidades de dados. Nenhum dos dois corresponde a simular o pico e, depois, superar a capacidade."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte carga e estresse. O teste de carga usa a carga esperada (inclusive o pico previsto); o de estresse vai além da capacidade para achar o ponto de ruptura e avaliar a recuperação.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre teste de carga e teste de estresse?",
+        "resposta": "Teste de carga verifica o comportamento sob a carga esperada, normal e de pico, contra os requisitos de desempenho. Teste de estresse submete o sistema a cargas além da capacidade prevista para identificar o ponto de ruptura e como ele falha e se recupera."
+      },
+      "conceitosChave": ["Testes: carga × estresse"],
+      "fundamentacao": "ISTQB, Syllabus CTFL 4.0 (2023), seção 2.2.2 (tipos de teste não funcionais) e Glossário ISTQB (load testing, stress testing); Sommerville, Engenharia de Software, 10ª ed., cap. 8 (testes de desempenho)."
+    },
+    {
+      "id": "eng-sw-019",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Arquitetura: camadas, SOA, microsserviços e eventos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "assertivas",
+      "enunciadoBase": "Um Tribunal de Contas avalia se a integração de seus sistemas deve seguir uma arquitetura orientada a serviços (SOA) tradicional ou uma arquitetura de microsserviços. A respeito dessas abordagens, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Ao elaborar o plano de modernização dos sistemas de um órgão de controle externo, a equipe de arquitetura compara a SOA tradicional com os microsserviços. Sobre as duas abordagens, considere as afirmativas abaixo.",
+        "Considere que um técnico precisa emitir parecer sobre a substituição de uma integração baseada em SOA por microsserviços em um sistema hipotético de fiscalização. A respeito dessas arquiteturas, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Em implementações típicas de SOA, é comum o uso de um barramento de serviços corporativo (ESB), que concentra funções como roteamento, transformação de mensagens e orquestração.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O ESB é peça frequente em SOA corporativa e centraliza mediação, roteamento, transformação e, muitas vezes, orquestração de serviços."
+        },
+        {
+          "texto": "Os microsserviços privilegiam pontos de extremidade inteligentes e canais simples, evitando concentrar lógica de negócio na infraestrutura de comunicação.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. É a ideia de 'smart endpoints and dumb pipes' descrita por Lewis e Fowler: a lógica fica nos serviços, e a comunicação usa mecanismos leves."
+        },
+        {
+          "texto": "Para preservar a governança centralizada, a abordagem de microsserviços exige que todos os serviços adotem a mesma linguagem de programação e o mesmo SGBD.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Microsserviços favorecem governança e dados descentralizados: cada equipe pode escolher a tecnologia e o armazenamento mais adequados ao seu serviço."
+        },
+        {
+          "texto": "Por serem implantáveis de forma independente, os microsserviços reduzem a complexidade operacional, dispensando monitoramento distribuído e automação de infraestrutura.",
+          "verdadeira": false,
+          "explicacao": "Falsa. A distribuição aumenta a complexidade operacional; microsserviços dependem de automação de infraestrutura, observabilidade e projeto para falhas."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa III é falsa: os microsserviços adotam governança descentralizada e admitem tecnologias e bancos diferentes por serviço. Padronização tecnológica obrigatória é traço de governança centralizada."
+        },
+        {
+          "id": "opt-2",
+          "texto": "I e II, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I descreve o papel usual do ESB na SOA corporativa, e a II, o princípio 'smart endpoints and dumb pipes' dos microsserviços. A III é falsa porque microsserviços descentralizam governança e dados. A IV é falsa porque a implantação independente vem acompanhada de mais complexidade operacional, que exige automação e monitoramento distribuído.",
+          "versaoInvertidaFalsa": "Os microsserviços privilegiam canais inteligentes e pontos de extremidade simples, concentrando a lógica de negócio e a orquestração em um barramento corporativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa IV é falsa: um sistema distribuído em muitos serviços é mais complexo de operar. Monitoramento, rastreamento distribuído e automação de implantação são pré-requisitos, e não dispensáveis."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui as duas afirmativas falsas (III e IV) e omite a II, que é verdadeira. Os microsserviços concentram a lógica nos serviços e usam canais de comunicação simples."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne apenas as afirmativas falsas. A III contraria a governança descentralizada dos microsserviços, e a IV ignora o aumento da complexidade operacional em sistemas distribuídos."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui aos microsserviços características da SOA tradicional (governança centralizada, padronização tecnológica) e vende a implantação independente como redução de complexidade operacional, quando ela exige mais monitoramento e automação.",
+      "resumoFlashcard": {
+        "pergunta": "Como os microsserviços se diferenciam da SOA tradicional quanto à comunicação e à governança?",
+        "resposta": "Na SOA tradicional é comum um ESB central com roteamento, transformação e orquestração. Os microsserviços preferem pontos de extremidade inteligentes e canais simples, com governança e dados descentralizados, o que exige automação e monitoramento distribuído."
+      },
+      "conceitosChave": ["SOA × microsserviços"],
+      "fundamentacao": "Lewis & Fowler, 'Microservices' (martinfowler.com, 2014), seções 'Smart endpoints and dumb pipes', 'Decentralized Governance' e 'Infrastructure Automation'; Erl, SOA: Principles of Service Design (2007)."
+    },
+    {
+      "id": "eng-sw-020",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Fundamentos e ciclo de vida de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere a descrição de modelos de processo de software. No modelo ……, as fases ocorrem em sequência, e cada uma começa somente após a conclusão e aprovação da anterior. No modelo ……, cada fase de desenvolvimento está associada a um nível de teste correspondente, como a especificação de requisitos ao teste de aceitação. No modelo ……, o software é entregue em partes operacionais sucessivas, e a primeira costuma corresponder ao núcleo do produto. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Em um treinamento sobre processos de software, um técnico apresentou três modelos: o ……, em que as etapas seguem uma sequência rígida, cada qual iniciada após a aprovação da anterior; o ……, que vincula cada etapa de desenvolvimento a uma etapa de teste correspondente; e o ……, em que o sistema é liberado em partes funcionais, começando pelo núcleo. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao analisar os planos de projeto de três contratações hipotéticas de software, um auditor identificou: no primeiro, fases estritamente sequenciais com aprovação formal ao fim de cada uma, característica do modelo ……; no segundo, a correspondência entre cada fase de especificação e um nível de teste, característica do modelo ……; no terceiro, entregas parciais operacionais a partir do núcleo do produto, característica do modelo ……. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "espiral − em V − incremental",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O espiral não se caracteriza por fases rigidamente sequenciais com aprovação, e sim por ciclos orientados a riscos, com planejamento e avaliação a cada volta. A sequência rígida descrita é a do cascata."
+        },
+        {
+          "id": "opt-2",
+          "texto": "cascata − espiral − iterativo",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A correspondência entre fases de desenvolvimento e níveis de teste é a marca do modelo em V, e não do espiral. E 'entregas operacionais sucessivas a partir do núcleo' define o incremental, não o iterativo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "cascata − em V − incremental",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. No cascata, as fases seguem em sequência, cada uma iniciada após a aprovação da anterior. O modelo em V, variação do cascata, associa cada fase de desenvolvimento a um nível de teste (requisitos ↔ aceitação, projeto ↔ integração, codificação ↔ unidade). O incremental entrega partes operacionais sucessivas, e o primeiro incremento costuma ser o núcleo do produto.",
+          "versaoInvertidaFalsa": "espiral − em V − incremental, pois as fases sequenciais com aprovação ao fim de cada uma são a marca do modelo espiral."
+        },
+        {
+          "id": "opt-4",
+          "texto": "incremental − em V − cascata",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro e o último modelos estão trocados. Entregar partes operacionais começando pelo núcleo é o incremental; a sequência rígida de fases, com aprovação de cada uma, é o cascata."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cascata − incremental − em V",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O segundo e o terceiro estão invertidos. O modelo em V vincula desenvolvimento e testes; o incremental entrega o produto em partes. O 'respectivamente' é o detalhe decisivo."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca os modelos de lugar e insere o espiral, cuja marca é a análise de riscos a cada volta, e não a sequência rígida de fases ou a correspondência entre desenvolvimento e testes.",
+      "resumoFlashcard": {
+        "pergunta": "O que caracteriza os modelos cascata, em V e incremental?",
+        "resposta": "Cascata: fases sequenciais, cada uma iniciada após a aprovação da anterior. Em V: cada fase de desenvolvimento tem um nível de teste correspondente (requisitos ↔ aceitação, projeto ↔ integração, codificação ↔ unidade). Incremental: entregas operacionais sucessivas, começando pelo núcleo."
+      },
+      "conceitosChave": ["Ciclo de vida de software", "Modelos cascata, em V e incremental"],
+      "fundamentacao": "Pressman & Maxim, Engenharia de Software, 9ª ed., cap. 4 (modelo cascata, modelo V e modelo incremental); Sommerville, Engenharia de Software, 10ª ed., cap. 2."
+    }
+  ]
+}

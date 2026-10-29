@@ -1,0 +1,536 @@
+{
+  "materiaSlug": "matematica-raciocinio-logico",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "mat-001",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Números inteiros e racionais, operações e expressões",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O valor da expressão numérica (−3)² − 2 × [5 − (−1)³] ÷ 4 + 2³ é",
+      "variantesEnunciado": [
+        "Ao revisar uma planilha de controle de estoque, um técnico encontrou a fórmula (−3)² − 2 × [5 − (−1)³] ÷ 4 + 2³. Respeitada a ordem convencional das operações, o resultado dessa fórmula é",
+        "Efetuando-se, na ordem correta (potências, colchetes, multiplicações e divisões e, por fim, adições e subtrações), as operações indicadas em (−3)² − 2 × [5 − (−1)³] ÷ 4 + 2³, obtém-se"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "−4",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Chega a −4 quem lê (−3)² como −9, confundindo (−3)² = 9 com −3² = −9: −9 − 3 + 8 = −4. Com parênteses, o sinal faz parte da base, e base negativa com expoente par dá resultado positivo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "−2",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de somar 3 + 8 antes de subtrair, fazendo 9 − (3 + 8) = −2. Adições e subtrações de mesma prioridade são feitas da esquerda para a direita: 9 − 3 = 6 e, depois, 6 + 8 = 14."
+        },
+        {
+          "id": "opt-3",
+          "texto": "14",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Potências primeiro: (−3)² = 9, (−1)³ = −1 e 2³ = 8. No colchete: 5 − (−1) = 6. Multiplicação e divisão, da esquerda para a direita: 2 × 6 = 12 e 12 ÷ 4 = 3. Por fim: 9 − 3 + 8 = 14.",
+          "versaoInvertidaFalsa": "Como (−1)³ = 1, o colchete [5 − (−1)³] vale 4, e a expressão (−3)² − 2 × [5 − (−1)³] ÷ 4 + 2³ resulta em 15."
+        },
+        {
+          "id": "opt-4",
+          "texto": "15",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando se toma (−1)³ = +1. Expoente ímpar preserva o sinal da base: (−1)³ = −1, logo 5 − (−1) = 6, e não 4. Com o erro, 2 × 4 ÷ 4 = 2 e 9 − 2 + 8 = 15."
+        },
+        {
+          "id": "opt-5",
+          "texto": "18,5",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o resultado de operar da esquerda para a direita sem respeitar a prioridade: (9 − 2) × 6 = 42, 42 ÷ 4 = 10,5 e 10,5 + 8 = 18,5. A multiplicação e a divisão vêm antes da subtração."
+        }
+      ],
+      "pegadinhaFCC": "A banca combina base negativa com expoente par e com expoente ímpar, (−3)² e (−1)³, e cobra a prioridade das operações. Errar um sinal ou operar da esquerda para a direita leva direto a um distrator.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a diferença entre (−3)² e −3², e qual é o sinal de (−1)³?",
+        "resposta": "(−3)² = 9, pois o sinal faz parte da base; já −3² = −(3²) = −9. Base negativa com expoente ímpar mantém o sinal: (−1)³ = −1."
+      },
+      "conceitosChave": ["Ordem das operações", "Potenciação com base negativa"],
+      "fundamentacao": "Aritmética dos números inteiros: prioridade das operações (potências, sinais de associação, multiplicação e divisão, adição e subtração) e regra de sinais da potenciação; Anexo II do edital, Números inteiros e racionais."
+    },
+    {
+      "id": "mat-002",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Múltiplos e divisores (MMC e MDC)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Três rotinas automáticas de verificação do sistema de processo eletrônico de um Tribunal são executadas em intervalos fixos: a primeira, a cada 6 horas; a segunda, a cada 8 horas; e a terceira, a cada 10 horas. Às 8 h de uma segunda-feira, as três rotinas foram executadas simultaneamente. Mantidos os intervalos, a próxima execução simultânea das três rotinas ocorrerá",
+      "variantesEnunciado": [
+        "Na central de serviços de TI de um Tribunal, três alertas de monitoramento disparam periodicamente: um a cada 6 horas, outro a cada 8 horas e o terceiro a cada 10 horas. Os três dispararam juntos às 8 h de uma segunda-feira. Sem alteração na periodicidade, os três voltarão a disparar juntos",
+        "Três servidores fazem rondas de conferência no arquivo de um Tribunal, sem interrupção: o primeiro a cada 6 horas, o segundo a cada 8 horas e o terceiro a cada 10 horas. Se os três se encontraram no arquivo às 8 h de uma segunda-feira, o próximo encontro dos três no arquivo, nessas condições, será"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "na terça-feira, às 8 h.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde a 24 horas, que é o MMC apenas de 6 e 8. A rotina de 10 horas não executa nesse instante, pois 24 não é múltiplo de 10. O tempo de coincidência precisa ser múltiplo dos três intervalos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "na quarta-feira, à 0 h.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde a 40 horas depois (8 h + 40 h = 48 h, meia-noite de quarta-feira), o MMC só de 8 e 10. Como 40 não é múltiplo de 6, a primeira rotina não coincide com as outras nesse momento."
+        },
+        {
+          "id": "opt-3",
+          "texto": "na sexta-feira, às 8 h.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O MMC de 120 horas (5 dias) está certo, mas houve erro de contagem: a segunda-feira foi tomada como o 1º dos 5 dias. Somar 5 dias à segunda-feira leva a sábado; sexta-feira corresponde a apenas 96 horas."
+        },
+        {
+          "id": "opt-4",
+          "texto": "no sábado, às 8 h.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O instante de coincidência é o MMC dos intervalos: 6 = 2 × 3, 8 = 2³ e 10 = 2 × 5, logo MMC = 2³ × 3 × 5 = 120 horas = 5 dias exatos. Somando 5 dias às 8 h de segunda-feira, chega-se às 8 h de sábado.",
+          "versaoInvertidaFalsa": "As três rotinas voltam a coincidir na sexta-feira, às 8 h, pois o MMC de 6, 8 e 10 é 96 horas."
+        },
+        {
+          "id": "opt-5",
+          "texto": "na quinta-feira da semana seguinte, às 8 h.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Corresponde a 240 horas, obtidas ao tomar 2⁴ no MMC (somando os expoentes do fator 2 de 6 e de 8) em vez do maior expoente, 2³. É uma coincidência válida, mas não a próxima: a primeira ocorre em 120 horas."
+        }
+      ],
+      "pegadinhaFCC": "Duas armadilhas em cascata: calcular o MMC de apenas dois intervalos ou com expoentes errados e, depois, converter horas em dias contando o dia de partida como o primeiro dia.",
+      "resumoFlashcard": {
+        "pergunta": "Como descobrir quando eventos periódicos voltam a coincidir?",
+        "resposta": "Calcula-se o MMC dos períodos, tomando cada fator primo com o maior expoente. Para 6, 8 e 10 horas, MMC = 2³ × 3 × 5 = 120 horas, ou seja, 5 dias depois, no mesmo horário."
+      },
+      "conceitosChave": ["MMC: coincidência de eventos", "Contagem de dias da semana"],
+      "fundamentacao": "Teoria elementar dos números: mínimo múltiplo comum por decomposição em fatores primos (maior expoente de cada fator); Anexo II do edital, Múltiplos e divisores de números naturais."
+    },
+    {
+      "id": "mat-003",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Porcentagem, acréscimos e descontos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "O preço de um equipamento era de R$ 2.500,00. Ele sofreu um aumento de 20% e, um mês depois, um desconto de 20% sobre o novo valor. O preço final do equipamento passou a ser",
+      "variantesEnunciado": [
+        "Um contrato de manutenção custava R$ 2.500,00 por mês. Após um reajuste de 20%, a administração negociou um desconto de 20% sobre o valor reajustado. O valor mensal resultante é",
+        "O pacote de inscrições de uma equipe em um congresso custava R$ 2.500,00. O organizador majorou o preço em 20% e, depois, concedeu um abatimento de 20% sobre o valor majorado. O valor final do pacote é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "R$ 2.000,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o valor obtido aplicando apenas o desconto de 20% sobre o preço original (0,8 × 2.500 = 2.000), como se o aumento não tivesse ocorrido. O desconto incide sobre o valor já aumentado, R$ 3.000,00."
+        },
+        {
+          "id": "opt-2",
+          "texto": "R$ 2.400,00",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Aumento de 20%: 2.500 × 1,20 = 3.000. Desconto de 20% sobre 3.000: 3.000 × 0,80 = 2.400. O fator total é 1,20 × 0,80 = 0,96, ou seja, o preço final fica 4% abaixo do inicial, porque os 20% do desconto incidem sobre uma base maior.",
+          "versaoInvertidaFalsa": "O preço final volta a R$ 2.500,00, porque um aumento de 20% seguido de um desconto de 20% sempre se anulam."
+        },
+        {
+          "id": "opt-3",
+          "texto": "R$ 2.500,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a pegadinha clássica: supor que +20% e −20% se anulam. O desconto de 20% sobre R$ 3.000,00 vale R$ 600,00, mais que os R$ 500,00 do aumento, e o preço termina em R$ 2.400,00."
+        },
+        {
+          "id": "opt-4",
+          "texto": "R$ 2.600,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a variação de 4%, mas erra o sentido, como se o preço final fosse 4% maior (2.500 × 1,04). O fator 1,20 × 0,80 = 0,96 é menor que 1 e, portanto, indica redução."
+        },
+        {
+          "id": "opt-5",
+          "texto": "R$ 3.000,00",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É apenas o preço após o aumento (2.500 × 1,20), esquecendo a segunda etapa. Faltou aplicar o desconto de 20% sobre esse valor, o que leva a R$ 2.400,00."
+        }
+      ],
+      "pegadinhaFCC": "Aumento e desconto de mesmo percentual não se anulam, porque o desconto incide sobre uma base maior. A FCC coloca o valor inicial entre as alternativas para atrair quem cancela os percentuais.",
+      "resumoFlashcard": {
+        "pergunta": "Um aumento de x% seguido de um desconto de x% devolve o preço inicial?",
+        "resposta": "Não. O fator é (1 + x)(1 − x) = 1 − x², sempre menor que 1. Com 20%: 1,2 × 0,8 = 0,96, uma perda de 4% sobre o preço inicial."
+      },
+      "conceitosChave": ["Porcentagens sucessivas"],
+      "fundamentacao": "Matemática comercial: variações percentuais sucessivas calculadas pelo produto dos fatores de multiplicação (1 + i₁)(1 + i₂); Anexo II do edital, Porcentagem, acréscimos e descontos."
+    },
+    {
+      "id": "mat-004",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Regra de três simples e composta",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Em um projeto de digitalização do acervo de um Tribunal, 6 técnicos, trabalhando 8 horas por dia, digitalizam 4.800 páginas em 5 dias. Mantida a mesma produtividade de cada técnico, 4 técnicos, trabalhando 6 horas por dia, digitalizarão 3.840 páginas em",
+      "variantesEnunciado": [
+        "Na conferência de documentos de prestação de contas, 6 servidores, com jornada de 8 horas diárias, analisam 4.800 páginas em 5 dias. Com o mesmo rendimento por servidor, 4 servidores, com jornada de 6 horas diárias, analisarão 3.840 páginas em",
+        "Uma equipe de 6 estagiários, cumprindo 8 horas por dia, cadastra 4.800 fichas em 5 dias. Considerando o mesmo ritmo individual, uma equipe de 4 estagiários, cumprindo 6 horas por dia, cadastrará 3.840 fichas em"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "2 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de tratar todas as grandezas como diretamente proporcionais aos dias: 5 × 4/6 × 6/8 × 0,8 = 2. Menos técnicos e menos horas por dia exigem mais dias, e não menos: essas grandezas são inversamente proporcionais ao prazo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "4,5 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Aparece quando as horas diárias são tratadas como diretamente proporcionais aos dias (5 × 6/4 × 6/8 × 0,8 = 4,5). Com menos horas por dia, o prazo aumenta, então a razão correta é 8/6."
+        },
+        {
+          "id": "opt-3",
+          "texto": "6 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o resultado de esquecer a redução da jornada de 8 para 6 horas: 5 × 6/4 × 0,8 = 6. A jornada menor exige mais dias, e o fator 8/6 leva o prazo a 8 dias."
+        },
+        {
+          "id": "opt-4",
+          "texto": "8 dias.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na regra de três composta, compara-se cada grandeza com os dias: técnicos (6 → 4) e horas por dia (8 → 6) são inversamente proporcionais ao prazo, e páginas (4.800 → 3.840), diretamente. Dias = 5 × 6/4 × 8/6 × 3.840/4.800 = 5 × 1,5 × 4/3 × 0,8 = 8.",
+          "versaoInvertidaFalsa": "Os 4 técnicos, trabalhando 6 horas por dia, digitalizam as 3.840 páginas em 6 dias, pois a jornada diária não interfere no prazo."
+        },
+        {
+          "id": "opt-5",
+          "texto": "10 dias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Considera a redução de técnicos e de horas (5 × 6/4 × 8/6 = 10), mas ignora que a quantidade de páginas caiu de 4.800 para 3.840, o que reduz o prazo na razão 0,8."
+        }
+      ],
+      "pegadinhaFCC": "Na regra de três composta, a FCC mistura grandezas diretas (páginas) e inversas (técnicos e horas por dia). Os distratores correspondem a errar o sentido de uma delas ou a esquecer uma grandeza.",
+      "resumoFlashcard": {
+        "pergunta": "Como montar uma regra de três composta em que se procura o prazo em dias?",
+        "resposta": "Compara-se cada grandeza isoladamente com os dias. Mais trabalho exige mais dias (direta); mais pessoas ou mais horas diárias exigem menos dias (inversa). Multiplica-se o prazo inicial pelas razões ajustadas a cada sentido."
+      },
+      "conceitosChave": ["Regra de três composta"],
+      "fundamentacao": "Grandezas direta e inversamente proporcionais e regra de três composta; Anexo II do edital, Números e grandezas proporcionais e regra de três."
+    },
+    {
+      "id": "mat-005",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Estruturas lógicas e associação de informações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um processo deixou de ser despachado no prazo, e a responsabilidade é de um, e somente um, dos cinco técnicos de uma unidade. Questionados, eles afirmaram: Dora: “Foi Fábio ou Gil.”; Elias: “Foi Dora.”; Fábio: “Não foi Helena.”; Gil: “Fábio está mentindo.”; Helena: “Foi Elias.”. Sabendo que apenas uma dessas afirmações é verdadeira, o responsável pelo atraso é",
+      "variantesEnunciado": [
+        "Um dos cinco auditores de uma equipe, e apenas um, esqueceu de anexar um papel de trabalho ao processo. Sobre isso, declararam: Dora: “Foi Fábio ou Gil.”; Elias: “Foi Dora.”; Fábio: “Não foi Helena.”; Gil: “Fábio está mentindo.”; Helena: “Foi Elias.”. Se somente uma das cinco declarações é verdadeira, quem esqueceu o documento foi",
+        "Cinco servidores, Dora, Elias, Fábio, Gil e Helena, disputam a autoria de uma sugestão premiada que teve um único autor. Eles disseram: Dora: “Foi Fábio ou Gil.”; Elias: “Foi Dora.”; Fábio: “Não foi Helena.”; Gil: “Fábio está mentindo.”; Helena: “Foi Elias.”. Sabendo que exatamente uma das afirmações é verdadeira, o autor da sugestão é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Dora.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se Dora fosse a responsável, seriam verdadeiras a afirmação de Elias (“Foi Dora”) e a de Fábio (“Não foi Helena”). São duas verdades, o que contraria a condição de haver apenas uma."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Elias.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com Elias responsável, seriam verdadeiras a afirmação de Fábio (“Não foi Helena”) e a de Helena (“Foi Elias”). Duas afirmações verdadeiras contrariam o enunciado, que admite apenas uma."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Fábio.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se fosse Fábio, a afirmação de Dora (“Foi Fábio ou Gil”) seria verdadeira, e a do próprio Fábio (“Não foi Helena”) também. Com duas verdades, a hipótese é descartada."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Gil.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Com Gil responsável, Dora (“Foi Fábio ou Gil”) e Fábio (“Não foi Helena”) diriam a verdade. Novamente são duas afirmações verdadeiras, e o enunciado admite apenas uma."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Helena.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. As falas de Fábio e de Gil são contraditórias (Gil nega o que Fábio diz), então exatamente uma delas é verdadeira. Logo, Dora, Elias e Helena mentem: não foi Fábio nem Gil, nem Dora, nem Elias. Resta Helena, e com ela só a fala de Gil é verdadeira.",
+          "versaoInvertidaFalsa": "O responsável é Gil, pois nessa hipótese apenas a afirmação de Dora seria verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A fala de Gil é a negação da fala de Fábio, então uma delas é necessariamente verdadeira e as outras três são falsas. Quem não percebe esse par contraditório testa hipóteses às cegas e pode parar na primeira que parece funcionar.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o atalho em problemas de verdade e mentira quando duas falas são contraditórias?",
+        "resposta": "Se uma afirmação é a negação da outra, exatamente uma delas é verdadeira. Com a condição de apenas uma verdade, todas as demais falas são falsas, e basta negá-las para identificar o responsável."
+      },
+      "conceitosChave": ["Verdade e mentira", "Proposições contraditórias"],
+      "fundamentacao": "Lógica proposicional: princípios da não contradição e do terceiro excluído (p e ¬p têm valores lógicos opostos) e análise exaustiva de hipóteses; Anexo II do edital, Estrutura lógica de relações arbitrárias."
+    },
+    {
+      "id": "mat-006",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Raciocínio sequencial",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "Considerando o alfabeto oficial de 26 letras, a letra que dá continuidade lógica à sequência A, C, F, J, O, … é",
+      "variantesEnunciado": [
+        "Os códigos das caixas de um arquivo seguem a sequência de letras A, C, F, J, O, … Considerando o alfabeto de 26 letras, que inclui K, W e Y, o próximo código da sequência é",
+        "Na sequência A, C, F, J, O, …, formada segundo um padrão lógico, e considerando a ordem alfabética das 26 letras, o termo seguinte é"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "S",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. S fica 4 posições depois de O, como se a diferença voltasse a 4. As distâncias entre letras consecutivas crescem uma unidade a cada passo (2, 3, 4, 5) e, por isso, a próxima distância é 6."
+        },
+        {
+          "id": "opt-2",
+          "texto": "T",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. T resulta de repetir a última diferença (+5). O padrão não é constante: as distâncias formam 2, 3, 4, 5, …, e a próxima distância é 6, que leva de O à letra U."
+        },
+        {
+          "id": "opt-3",
+          "texto": "U",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Pelas posições no alfabeto, A = 1, C = 3, F = 6, J = 10 e O = 15. As diferenças são 2, 3, 4 e 5, crescendo uma unidade por vez. A próxima diferença é 6: 15 + 6 = 21, posição da letra U.",
+          "versaoInvertidaFalsa": "A letra seguinte da sequência A, C, F, J, O é T, porque a diferença entre as posições de letras consecutivas é sempre 5."
+        },
+        {
+          "id": "opt-4",
+          "texto": "V",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. V está 7 posições depois de O, o que pularia a diferença 6. O padrão de diferenças é formado por inteiros consecutivos (2, 3, 4, 5, 6, …) e não admite saltos."
+        },
+        {
+          "id": "opt-5",
+          "texto": "X",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. X está 9 posições depois de O, como se cada diferença fosse a soma das duas anteriores (4 + 5 = 9). Esse padrão não vale desde o início da sequência, pois 2 + 3 = 5, e a terceira diferença é 4."
+        }
+      ],
+      "pegadinhaFCC": "A banca exige a contagem pelo alfabeto de 26 letras e explora quem repete a última diferença em vez de perceber que as diferenças crescem uma unidade a cada termo.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver sequências de letras em provas de raciocínio lógico?",
+        "resposta": "Converta as letras em posições no alfabeto de 26 letras (A = 1, …, Z = 26) e procure o padrão nas diferenças. Em A, C, F, J, O, as diferenças são 2, 3, 4 e 5; a próxima é 6, que leva a U (21)."
+      },
+      "conceitosChave": ["Sequências de letras"],
+      "fundamentacao": "Raciocínio sequencial: sequências cujas diferenças formam progressão aritmética; alfabeto de 26 letras (Acordo Ortográfico da Língua Portuguesa de 1990, Base I)."
+    },
+    {
+      "id": "mat-007",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Orientação espacial e temporal",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um sistema do Tribunal gera automaticamente um relatório de conformidade a cada 45 dias. O primeiro relatório foi gerado em 15 de janeiro de 2028. O segundo e o terceiro relatórios serão gerados, respectivamente, em",
+      "variantesEnunciado": [
+        "Uma rotina de backup completo dos servidores de um Tribunal é executada a cada 45 dias. A primeira execução ocorreu em 15 de janeiro de 2028. A segunda e a terceira execuções ocorrerão, respectivamente, em",
+        "Um fiscal de contrato deve apresentar relatórios de acompanhamento a cada 45 dias, e o primeiro foi entregue em 15 de janeiro de 2028. As datas de entrega do segundo e do terceiro relatórios são, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "28 de fevereiro e 13 de abril.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de contar o próprio dia 15 de janeiro como o 1º dos 45 dias (contagem inclusiva), o que avança apenas 44 dias a cada etapa. Gerar “a cada 45 dias” significa somar 45 dias à data anterior."
+        },
+        {
+          "id": "opt-2",
+          "texto": "29 de fevereiro e 14 de abril.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. 2028 é bissexto (divisível por 4 e não secular), então fevereiro tem 29 dias. De 15/01 a 31/01 são 16 dias; faltam 29, que levam a 29/02. A partir de 29/02, somam-se mais 45: os 31 dias de março e mais 14 dias, chegando a 14/04.",
+          "versaoInvertidaFalsa": "O segundo relatório é gerado em 1º de março de 2028, porque fevereiro de 2028 tem apenas 28 dias."
+        },
+        {
+          "id": "opt-3",
+          "texto": "29 de fevereiro e 15 de abril.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta o segundo relatório, mas trata 90 dias como três meses (15/01 + 3 meses = 15/04). Os 16 dias restantes de janeiro, os 29 de fevereiro e os 31 de março somam 76 dias; faltam 14, e o terceiro relatório cai em 14/04."
+        },
+        {
+          "id": "opt-4",
+          "texto": "1º de março e 15 de abril.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o cálculo com fevereiro de 28 dias, que ignora que 2028 é bissexto: 15/01 + 45 = 1º/03 e 1º/03 + 45 = 15/04. São bissextos os anos divisíveis por 4, exceto os seculares não divisíveis por 400."
+        },
+        {
+          "id": "opt-5",
+          "texto": "1º de março e 16 de abril.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Provém da aproximação de todos os meses por 30 dias: 15/01 + 45 cairia num inexistente “30 de fevereiro”, empurrado para 1º/03, e 1º/03 + 45 daria 16/04. Para contar dias corridos, é preciso usar o tamanho real de cada mês."
+        }
+      ],
+      "pegadinhaFCC": "O segundo relatório cai justamente em 29 de fevereiro, data que só existe em ano bissexto. A FCC explora quem esquece o bissexto, conta o dia inicial ou aproxima os meses por 30 dias.",
+      "resumoFlashcard": {
+        "pergunta": "Quando um ano é bissexto no calendário gregoriano?",
+        "resposta": "Quando é divisível por 4, exceto os anos seculares (terminados em 00), que só são bissextos se divisíveis por 400. Assim, 2028 e 2000 são bissextos, e 2100 não será."
+      },
+      "conceitosChave": ["Calendário e ano bissexto"],
+      "fundamentacao": "Calendário gregoriano (bula Inter Gravissimas, 1582): regra dos anos bissextos; contagem de dias corridos pelo número real de dias de cada mês."
+    },
+    {
+      "id": "mat-008",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "direta",
+      "enunciadoBase": "A negação lógica da proposição “Se o relatório foi homologado, então o processo foi arquivado” é:",
+      "variantesEnunciado": [
+        "Um auditor precisa descrever a única situação que torna falsa a regra “Se o relatório foi homologado, então o processo foi arquivado”. Logicamente, essa situação corresponde à proposição:",
+        "Considere a proposição condicional “Se o relatório foi homologado, então o processo foi arquivado”. Uma proposição que expressa a negação lógica dessa condicional é:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "O relatório foi homologado e o processo não foi arquivado.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A condicional p → q só é falsa quando o antecedente é verdadeiro e o consequente é falso. Por isso, ¬(p → q) ≡ p ∧ ¬q: o relatório foi homologado e o processo não foi arquivado. A negação de uma condicional não é outra condicional, e sim uma conjunção.",
+          "versaoInvertidaFalsa": "A negação de “Se o relatório foi homologado, então o processo foi arquivado” é “Se o relatório não foi homologado, então o processo não foi arquivado”."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Se o relatório não foi homologado, então o processo não foi arquivado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a inversa (¬p → ¬q), que apenas nega antecedente e consequente e mantém a condicional. Ela não é a negação: quando p e q são ambos falsos, a original e a inversa são verdadeiras ao mesmo tempo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "O relatório não foi homologado e o processo foi arquivado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ¬p ∧ q nega o termo errado: é verdadeira quando o relatório não foi homologado e o processo foi arquivado, situação em que a condicional original também é verdadeira. Logo, não pode ser sua negação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Se o processo não foi arquivado, então o relatório não foi homologado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É a contrapositiva (¬q → ¬p), equivalente à proposição original, e não sua negação. As duas têm a mesma tabela-verdade: só são falsas quando o relatório foi homologado e o processo não foi arquivado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "O relatório não foi homologado ou o processo não foi arquivado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. ¬p ∨ ¬q equivale a ¬(p ∧ q), a negação da conjunção, e não da condicional. Ela é verdadeira, por exemplo, quando p é falso e q verdadeiro, caso em que a condicional original também é verdadeira."
+        }
+      ],
+      "pegadinhaFCC": "A FCC oferece a inversa e a contrapositiva para atrair quem acha que negar uma condicional é negar suas partes. A negação correta troca o “se… então” por “e”, mantém o antecedente e nega o consequente.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a negação de “Se p, então q”?",
+        "resposta": "É “p e não q”, pois ¬(p → q) ≡ p ∧ ¬q. A condicional só é falsa quando o antecedente ocorre e o consequente não ocorre."
+      },
+      "conceitosChave": ["Negação da condicional"],
+      "fundamentacao": "Lógica proposicional: tabela-verdade da condicional e equivalência ¬(p → q) ≡ p ∧ ¬q; Anexo II do edital, processo lógico que conduz de hipóteses a conclusões válidas."
+    },
+    {
+      "id": "mat-009",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Frações e operações com frações",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Para conferir um lote de prestações de contas, o servidor A, trabalhando sozinho, gastaria 12 dias, e o servidor B, também sozinho, gastaria 18 dias. A e B trabalharam juntos durante 4 dias; a partir daí, o servidor C passou a ajudá-los, e os três concluíram a conferência em mais 2 dias. Considerando-se que cada servidor manteve ritmo constante, a fração do lote conferida pelo servidor C foi",
+      "variantesEnunciado": [
+        "Na digitalização de um acervo, a técnica A faria o trabalho sozinha em 12 dias, e o técnico B, sozinho, em 18 dias. Os dois começaram juntos e, após 4 dias, receberam a ajuda do técnico C; os três terminaram o serviço 2 dias depois. Mantidos ritmos constantes, a fração do acervo digitalizada por C corresponde a",
+        "O analista A conclui a revisão de um conjunto de contratos em 12 dias, e o analista B, em 18 dias, cada um trabalhando sozinho. Eles revisaram juntos durante 4 dias e, com a entrada do analista C, os três concluíram a revisão em mais 2 dias. Com ritmos constantes, a parte do conjunto revisada por C foi"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "1/12",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 1/12 é a fração que C confere por dia (1/6 em 2 dias), e não o total que ele conferiu. O enunciado pede a parte do lote feita por C nos 2 dias em que trabalhou."
+        },
+        {
+          "id": "opt-2",
+          "texto": "1/6",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Por dia, A confere 1/12 e B, 1/18; juntos, 3/36 + 2/36 = 5/36 do lote. A e B trabalharam os 6 dias (4 sozinhos e 2 com C) e conferiram 6 × 5/36 = 30/36 = 5/6. O restante, 1 − 5/6 = 1/6, foi conferido por C.",
+          "versaoInvertidaFalsa": "O servidor C conferiu 4/9 do lote, pois tudo o que restava após os 4 primeiros dias ficou a cargo dele."
+        },
+        {
+          "id": "opt-3",
+          "texto": "2/9",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Resulta de dividir o restante após 4 dias (4/9) igualmente entre C e a dupla A e B. A divisão não é igual: nos 2 dias finais, a dupla conferiu 10/36 = 5/18 do lote, e C apenas 1/6."
+        },
+        {
+          "id": "opt-4",
+          "texto": "5/18",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 5/18 = 10/36 é o que A e B conferiram juntos nos 2 dias finais (2 × 5/36), e não a parte de C. Subtraindo essa parcela do que restava após 4 dias (4/9 − 5/18), obtém-se 1/6."
+        },
+        {
+          "id": "opt-5",
+          "texto": "4/9",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 4/9 é o que faltava após os 4 primeiros dias (1 − 4 × 5/36 = 16/36). Atribuir tudo a C ignora que A e B continuaram trabalhando nos 2 dias finais."
+        }
+      ],
+      "pegadinhaFCC": "O detalhe decisivo é que A e B continuam trabalhando depois da chegada de C. Os distratores correspondem a atribuir todo o restante a C, a dividi-lo igualmente ou a dar a taxa diária como resposta.",
+      "resumoFlashcard": {
+        "pergunta": "Como resolver problemas de trabalho conjunto com frações?",
+        "resposta": "Converta o tempo de cada um em fração do serviço por dia (1/12, 1/18…), some as frações de quem trabalha junto e multiplique pelos dias trabalhados. O que falta para completar o inteiro é a parte de quem entrou depois."
+      },
+      "conceitosChave": ["Frações: trabalho conjunto"],
+      "fundamentacao": "Operações com frações: adição com denominadores diferentes (por MMC), multiplicação por inteiro e complemento para a unidade; Anexo II do edital, Frações e operações com frações."
+    },
+    {
+      "id": "mat-010",
+      "materiaSlug": "matematica-raciocinio-logico",
+      "subtopico": "Lógica dedutiva e argumentação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "direta",
+      "enunciadoBase": "Considere verdadeiras as seguintes premissas: ou Rui é auditor, ou Sara é analista, mas não ambos; se Sara é analista, então Téo é técnico; se Rui é auditor, então Vera é gestora ou Ulisses é contador; Téo não é técnico, e Vera não é gestora. A partir dessas premissas, conclui-se corretamente que",
+      "variantesEnunciado": [
+        "Sabe-se que: ou Rui é auditor, ou Sara é analista (exatamente uma dessas afirmações é verdadeira); se Sara é analista, Téo é técnico; se Rui é auditor, Vera é gestora ou Ulisses é contador; Téo não é técnico e Vera não é gestora. Com base nessas informações, é necessariamente verdadeiro que",
+        "Em um exercício de dedução, foram dadas como verdadeiras as proposições: “Ou Rui é auditor, ou Sara é analista”; “Se Sara é analista, então Téo é técnico”; “Se Rui é auditor, então Vera é gestora ou Ulisses é contador”; “Téo não é técnico, e Vera não é gestora”. Uma conclusão válida a partir delas é que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Sara é analista e Ulisses é contador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Se Sara fosse analista, Téo seria técnico (segunda premissa), o que contradiz “Téo não é técnico”. Por modus tollens, Sara não é analista, e a conjunção é falsa."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Rui é auditor e Ulisses não é contador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Rui é auditor, mas, nesse caso, Vera é gestora ou Ulisses é contador. Como Vera não é gestora, Ulisses tem de ser contador (silogismo disjuntivo), e a segunda parte da conjunção é falsa."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Rui não é auditor e Sara não é analista.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A disjunção exclusiva “ou Rui é auditor, ou Sara é analista” exige que exatamente uma das partes seja verdadeira. Como Sara não é analista, Rui obrigatoriamente é auditor."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Sara é analista ou Vera é gestora.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As duas partes dessa disjunção são falsas: Sara não é analista (modus tollens com a segunda premissa) e Vera não é gestora (premissa dada). Uma disjunção com as duas partes falsas é falsa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Rui é auditor e Ulisses é contador.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Encadeamento: (1) Téo não é técnico, então Sara não é analista (modus tollens); (2) pela disjunção exclusiva, Rui é auditor; (3) então Vera é gestora ou Ulisses é contador (modus ponens); (4) como Vera não é gestora, Ulisses é contador (silogismo disjuntivo).",
+          "versaoInvertidaFalsa": "Das premissas conclui-se que Rui é auditor e que Ulisses não é contador."
+        }
+      ],
+      "pegadinhaFCC": "A dedução exige quatro passos encadeados (modus tollens, disjunção exclusiva, modus ponens e silogismo disjuntivo). A FCC monta distratores que acertam um passo e erram o seguinte.",
+      "resumoFlashcard": {
+        "pergunta": "Por onde começar a resolver uma cadeia de premissas em lógica de argumentação?",
+        "resposta": "Pela proposição simples dada como verdadeira (como “Téo não é técnico”). A partir dela, aplicam-se as regras de inferência: modus tollens nas condicionais, exclusão na disjunção exclusiva e silogismo disjuntivo na disjunção inclusiva."
+      },
+      "conceitosChave": ["Regras de inferência", "Disjunção exclusiva"],
+      "fundamentacao": "Lógica proposicional: regras de inferência modus ponens, modus tollens e silogismo disjuntivo; tabela-verdade da disjunção exclusiva (ou… ou)."
+    }
+  ]
+}

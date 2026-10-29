@@ -1,0 +1,582 @@
+{
+  "materiaSlug": "engenharia-software",
+  "lote": 1,
+  "questoes": [
+    {
+      "id": "eng-sw-001",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Scrum",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "No Scrum, segundo o Guia de 2020, cada artefato contém um compromisso que reforça o empirismo e os valores do framework. Os compromissos associados ao Product Backlog, ao Sprint Backlog e ao Incremento são, respectivamente,",
+      "variantesEnunciado": [
+        "De acordo com o Guia do Scrum (2020), os artefatos Product Backlog, Sprint Backlog e Incremento estão vinculados, nessa ordem, aos seguintes compromissos:",
+        "Considere que a equipe de TI de um Tribunal de Contas está implantando o Scrum conforme o Guia de 2020 e precisa registrar, em seu manual interno, o compromisso de cada artefato. Para o Product Backlog, o Sprint Backlog e o Incremento, devem constar, respectivamente,"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Meta da Sprint, Definição de Pronto e Meta do Produto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os três compromissos existem no Guia de 2020, mas estão deslocados. A Meta da Sprint pertence ao Sprint Backlog, a Definição de Pronto ao Incremento e a Meta do Produto ao Product Backlog. A banca testa se o candidato associa cada compromisso ao artefato certo."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Definição de Preparado, Meta da Sprint e Definição de Pronto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A 'Definição de Preparado' (Definition of Ready) é prática adotada por algumas equipes, mas não existe no Guia do Scrum. O compromisso do Product Backlog é a Meta do Produto, objetivo de longo prazo do Time Scrum."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Meta do Produto, Meta da Sprint e Definição de Pronto.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Guia de 2020 introduziu um compromisso para cada artefato: a Meta do Produto (Product Backlog) é o objetivo de longo prazo; a Meta da Sprint (Sprint Backlog) é o objetivo único da Sprint, definido na Sprint Planning; e a Definição de Pronto (Incremento) descreve o estado que o trabalho precisa atingir, com as medidas de qualidade exigidas, para fazer parte do Incremento.",
+          "versaoInvertidaFalsa": "Meta do Produto, Definição de Pronto e Meta da Sprint, pois a Definição de Pronto é o compromisso do Sprint Backlog e a Meta da Sprint, o do Incremento."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Visão do Produto, Plano da Sprint e Critérios de Aceite.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Visão do produto e critérios de aceite são termos usuais em times ágeis, mas não são os compromissos definidos no Guia. O plano da Sprint é parte do Sprint Backlog (o 'como'), e não o seu compromisso, que é a Meta da Sprint."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Meta do Produto, Definição de Pronto e Meta da Sprint.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro compromisso está certo, mas os dois últimos foram invertidos. A Definição de Pronto está ligada ao Incremento, e a Meta da Sprint, ao Sprint Backlog. É a meia-verdade típica: começo correto e final trocado."
+        }
+      ],
+      "pegadinhaFCC": "A banca embaralha a ordem dos compromissos e insere a 'Definição de Preparado' (Definition of Ready), prática comum em equipes, mas que não existe no Guia do Scrum.",
+      "resumoFlashcard": {
+        "pergunta": "Quais são os compromissos de cada artefato no Guia do Scrum 2020?",
+        "resposta": "Product Backlog → Meta do Produto; Sprint Backlog → Meta da Sprint; Incremento → Definição de Pronto. Os compromissos foram introduzidos no Guia de 2020 para dar transparência e foco à medição do progresso de cada artefato."
+      },
+      "conceitosChave": ["Scrum: artefatos e compromissos"],
+      "fundamentacao": "Guia do Scrum (2020), seção 'Artefatos do Scrum': Product Backlog e Meta do Produto; Sprint Backlog e Meta da Sprint; Incremento e Definição de Pronto."
+    },
+    {
+      "id": "eng-sw-002",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Fundamentos e ciclo de vida de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "A equipe de TI de um Tribunal de Contas vai desenvolver um painel para apoiar auditores na seleção de jurisdicionados a fiscalizar, mas os próprios auditores não conseguem descrever com clareza quais indicadores e filtros desejam. O analista propõe construir rapidamente telas simuladas, com dados fictícios e sem preocupação com arquitetura ou desempenho, apenas para discutir e validar os requisitos com os usuários; concluída essa etapa, o material será abandonado e o sistema será construído sobre uma base técnica adequada. A abordagem proposta corresponde à",
+      "variantesEnunciado": [
+        "Em um projeto hipotético de sistema para acompanhamento de auditorias, os usuários têm dificuldade em definir o leiaute dos relatórios gerenciais. A equipe decide montar, em poucos dias, telas navegáveis sem banco de dados real, exclusivamente para esclarecer requisitos, com a decisão já tomada de não reaproveitar esse código na versão definitiva. Essa estratégia corresponde à",
+        "Considere que, para levantar os requisitos de um módulo de consulta a processos de contas, um técnico produz telas provisórias, feitas com ferramenta de construção rápida, que serão apresentadas aos usuários para coleta de opiniões e depois descartadas, sem servir de base para o produto final. A técnica adotada corresponde à"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "prototipação descartável, cujo objetivo é esclarecer e validar requisitos, sem que o protótipo seja aproveitado como base do produto final.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Na prototipação descartável (throwaway), o protótipo é construído rapidamente para explorar e validar requisitos mal compreendidos e depois é abandonado. Como foi feito sem cuidado com arquitetura, desempenho ou manutenibilidade, aproveitá-lo como base do sistema traria problemas de qualidade. O produto final é desenvolvido com o entendimento obtido.",
+          "versaoInvertidaFalsa": "prototipação descartável, cujo objetivo é servir de primeira versão do produto, de modo que o protótipo deve ser refinado até se tornar o sistema final."
+        },
+        {
+          "id": "opt-2",
+          "texto": "prototipação evolutiva, em que o protótipo inicial é refinado sucessivamente até se tornar o sistema entregue aos usuários.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na prototipação evolutiva, o protótipo é a semente do sistema e vai sendo refinado até a versão final. O cenário diz expressamente que o material será abandonado após a validação dos requisitos, o que caracteriza a variante descartável."
+        },
+        {
+          "id": "opt-3",
+          "texto": "modelo em cascata, pois as telas simuladas equivalem à fase de projeto, que precede a codificação e só começa após a aprovação dos requisitos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. No cascata, os requisitos são fechados antes do projeto, e as fases seguem em sequência. No caso, as telas servem justamente para descobrir e validar requisitos que os usuários não conseguem expressar, o que é o propósito da prototipação."
+        },
+        {
+          "id": "opt-4",
+          "texto": "abordagem incremental, já que cada tela simulada constitui um incremento operacional entregue em produção aos auditores.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um incremento é uma parte operacional do produto, entregue para uso. As telas do cenário usam dados fictícios, não vão para produção e serão descartadas; não são incrementos do sistema."
+        },
+        {
+          "id": "opt-5",
+          "texto": "modelo espiral, porque qualquer protótipo construído no início do projeto caracteriza uma volta da espiral com análise formal de riscos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O modelo espiral pode usar protótipos para reduzir riscos, mas o que o define são os ciclos orientados a riscos, com planejamento e avaliação a cada volta. Construir um protótipo não transforma o projeto em espiral; a generalização 'qualquer protótipo' é a armadilha."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca descartável por evolutiva. O detalhe decisivo é a decisão prévia de abandonar o protótipo após validar os requisitos, típica da prototipação descartável (throwaway).",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre prototipação descartável e evolutiva?",
+        "resposta": "Na descartável, o protótipo serve para esclarecer e validar requisitos e depois é abandonado; o sistema é construído sobre base técnica adequada. Na evolutiva, o protótipo é refinado continuamente até se tornar o produto final."
+      },
+      "conceitosChave": ["Prototipação: descartável × evolutiva", "Ciclo de vida de software"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., cap. 2 (prototipação de software) e cap. 4 (validação de requisitos); Pressman & Maxim, Engenharia de Software, 9ª ed., cap. 4 (modelo de prototipação)."
+    },
+    {
+      "id": "eng-sw-003",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Engenharia de requisitos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "Na especificação de requisitos de um sistema hipotético de protocolo eletrônico de um Tribunal de Contas constam, entre outros, os seguintes itens: (1) o sistema deve permitir ao jurisdicionado anexar documentos em PDF a um processo; (2) as consultas ao andamento processual devem ser respondidas em até 2 segundos em 95% das requisições; (3) o tratamento de dados pessoais deve observar a Lei Geral de Proteção de Dados. Considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Um técnico revisa o documento de requisitos de um sistema de recebimento de prestações de contas, no qual figuram: (1) o sistema deve permitir ao jurisdicionado anexar documentos em PDF a um processo; (2) as consultas ao andamento processual devem ser respondidas em até 2 segundos em 95% das requisições; (3) o tratamento de dados pessoais deve observar a Lei Geral de Proteção de Dados. Considere as afirmativas abaixo.",
+        "Considere os seguintes itens extraídos da especificação de um sistema de processos eletrônicos: (1) o sistema deve permitir ao jurisdicionado anexar documentos em PDF a um processo; (2) as consultas ao andamento processual devem ser respondidas em até 2 segundos em 95% das requisições; (3) o tratamento de dados pessoais deve observar a Lei Geral de Proteção de Dados. A respeito da classificação desses requisitos, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "O item (1) é um requisito funcional, pois descreve um serviço que o sistema deve oferecer ao usuário.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Requisitos funcionais descrevem serviços e comportamentos do sistema; anexar documentos é uma função oferecida ao jurisdicionado."
+        },
+        {
+          "texto": "O item (2) é um requisito funcional, porque estabelece um comportamento do sistema diante de uma entrada do usuário.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O item fixa um limite de tempo de resposta, uma restrição de desempenho; é requisito não funcional de produto, ainda que mencione uma interação do usuário."
+        },
+        {
+          "texto": "O item (3) é um requisito não funcional de natureza externa, decorrente de exigência legal aplicável ao sistema.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Sommerville classifica como externos os requisitos não funcionais que vêm de fatores alheios ao sistema e ao processo, como leis e regulamentos."
+        },
+        {
+          "texto": "A falha em atender a um requisito não funcional, como um de confiabilidade ou de desempenho, pode tornar todo o sistema inutilizável.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. Como os requisitos não funcionais costumam valer para o sistema como um todo, descumpri-los pode inviabilizar o uso, por exemplo, quando a confiabilidade exigida não é alcançada."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I e II, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Inclui a afirmativa II, que é falsa porque tempo de resposta é restrição de desempenho (não funcional), e deixa de fora as afirmativas III e IV, que são verdadeiras."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Acerta a III, mas inclui a II, que confunde desempenho com funcionalidade, e omite a I e a IV, ambas verdadeiras. Anexar documentos é função; falhar em RNF pode inutilizar o sistema."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I, II, III e IV.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: o limite de 2 segundos em 95% das requisições é um requisito não funcional de desempenho. Mencionar uma ação do usuário não torna funcional uma restrição de qualidade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "I, III e IV, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I é verdadeira (anexar documentos é serviço do sistema); a III também (exigência legal é RNF externo); e a IV também (falhar em RNF pode inutilizar o sistema). Só a II é falsa, pois tempo de resposta é restrição de desempenho, e não função.",
+          "versaoInvertidaFalsa": "O item (3) é um requisito funcional, pois a exigência de observar a LGPD descreve um serviço específico que o sistema deve oferecer ao jurisdicionado."
+        },
+        {
+          "id": "opt-5",
+          "texto": "III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. As afirmativas III e IV são verdadeiras, mas a I também é: permitir anexar documentos descreve um serviço oferecido ao usuário, que é o conceito de requisito funcional."
+        }
+      ],
+      "pegadinhaFCC": "A banca tenta fazer o candidato classificar como funcional o requisito de tempo de resposta só porque ele menciona uma interação do usuário. Prazo de resposta é restrição de desempenho, portanto não funcional.",
+      "resumoFlashcard": {
+        "pergunta": "Como distinguir requisito funcional de requisito não funcional?",
+        "resposta": "Funcional descreve serviços e comportamentos que o sistema deve oferecer (o que ele faz). Não funcional impõe restrições ou qualidades, como desempenho, confiabilidade, segurança e exigências legais, e muitas vezes vale para o sistema como um todo."
+      },
+      "conceitosChave": ["Requisitos: funcionais × não funcionais"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., cap. 4, seção 4.1 (requisitos funcionais e não funcionais; requisitos de produto, organizacionais e externos)."
+    },
+    {
+      "id": "eng-sw-004",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Arquitetura: camadas, SOA, microsserviços e eventos",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Avançado",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Considere que a equipe de TI de um Tribunal de Contas decidiu decompor um sistema monolítico em microsserviços, entre eles o de Processos e o de Multas, cada um com seu próprio banco de dados. Uma operação de negócio precisa registrar o pagamento de uma multa e, em seguida, atualizar a situação do processo correspondente. Um analista propõe uma transação distribuída com confirmação em duas fases; outro sugere encadear transações locais em cada serviço, com ações compensatórias em caso de falha. Sobre esse cenário, é correto afirmar que",
+      "variantesEnunciado": [
+        "Um sistema hipotético de fiscalização foi dividido nos microsserviços Auditorias e Achados, e cada serviço mantém base de dados exclusiva. Ao encerrar uma auditoria, é preciso consolidar os achados e alterar o status da auditoria. Parte da equipe defende uma transação distribuída com confirmação em duas fases; outra parte prefere uma sequência de transações locais com compensações. Considerando que Processos e Multas correspondem, aqui, a Auditorias e Achados, é correto afirmar que",
+        "Na modernização de um sistema de prestação de contas, os módulos Recebimento e Análise passaram a ser microsserviços independentes, cada qual com seu banco. Uma funcionalidade precisa gravar o recebimento de uma prestação e abrir a respectiva análise. Discute-se usar confirmação em duas fases ou uma cadeia de transações locais com operações de compensação. Considerando que Processos e Multas correspondem, aqui, a Análise e Recebimento, é correto afirmar que"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "o banco por serviço deve ser substituído por um banco compartilhado entre Processos e Multas, solução que garante transações ACID e preserva integralmente a independência de implantação dos serviços.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Um banco compartilhado até simplifica transações ACID, mas acopla os serviços pelo esquema de dados: mudar uma tabela pode exigir implantar vários serviços juntos. Dizer que isso 'preserva integralmente' a independência de implantação é o erro."
+        },
+        {
+          "id": "opt-2",
+          "texto": "o banco por serviço favorece a implantação e a evolução independentes, mas impõe consistência eventual entre os serviços; a segunda proposta corresponde ao padrão saga, em que cada etapa é uma transação local e falhas são tratadas por transações compensatórias.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A gestão descentralizada de dados (banco por serviço) é característica dos microsserviços: cada serviço evolui e é implantado sem depender do esquema dos outros. O preço é abrir mão de transações ACID entre serviços e aceitar consistência eventual. A saga coordena a operação como uma sequência de transações locais; se uma etapa falha, transações compensatórias desfazem semanticamente as anteriores.",
+          "versaoInvertidaFalsa": "o banco por serviço garante consistência forte e imediata entre os serviços; a segunda proposta corresponde ao padrão saga, que dispensa transações compensatórias porque cada etapa é desfeita automaticamente pelo banco."
+        },
+        {
+          "id": "opt-3",
+          "texto": "a segunda proposta corresponde ao padrão saga, que assegura isolamento ACID entre os serviços, de modo que nenhum outro processo consegue observar os estados intermediários da operação.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A identificação da saga está certa, mas a saga não oferece isolamento: cada transação local é confirmada logo, e outros processos podem ver estados intermediários. Por isso usam-se contramedidas, como bloqueio semântico e leituras tolerantes. É meia-verdade."
+        },
+        {
+          "id": "opt-4",
+          "texto": "o uso de bancos distintos assegura, por si só, consistência forte e imediata entre os serviços, tornando desnecessária qualquer coordenação entre Processos e Multas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. É o contrário: com bancos distintos, nenhuma transação local abrange os dois serviços, e a consistência entre eles precisa ser coordenada (sagas, eventos) e costuma ser eventual. Separar bancos não cria consistência forte."
+        },
+        {
+          "id": "opt-5",
+          "texto": "a confirmação em duas fases é a solução recomendada para microsserviços, pois aumenta a disponibilidade, já que nenhum participante fica bloqueado aguardando o coordenador.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Na confirmação em duas fases, os participantes ficam bloqueados aguardando a decisão do coordenador, e a falha deste pode travar recursos. Isso reduz a disponibilidade e acopla os serviços, razão pela qual a literatura de microsserviços prefere sagas."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece o banco compartilhado como solução 'segura' e atribui à saga um isolamento que ela não tem. Banco por serviço implica consistência eventual, e a saga recupera falhas com compensações, sem isolamento ACID global.",
+      "resumoFlashcard": {
+        "pergunta": "Como se coordena uma operação que envolve vários microsserviços com bancos próprios?",
+        "resposta": "Tipicamente com o padrão saga: uma sequência de transações locais, cada uma em seu serviço, com transações compensatórias que desfazem os efeitos se uma etapa falhar. O resultado é consistência eventual, sem isolamento ACID entre os serviços."
+      },
+      "conceitosChave": ["Microsserviços: banco por serviço", "Padrão saga", "Consistência eventual"],
+      "fundamentacao": "Lewis & Fowler, 'Microservices' (martinfowler.com, 2014), seção 'Decentralized Data Management'; Richardson, Microservices Patterns (2018), cap. 4 (sagas); Garcia-Molina & Salem, 'Sagas' (ACM SIGMOD, 1987)."
+    },
+    {
+      "id": "eng-sw-005",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Padrões de projeto (criacionais, estruturais e comportamentais)",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "Um novo sistema de análise de licitações, em desenvolvimento pela equipe de TI de um Tribunal de Contas, espera uma interface ConsultaFornecedor com o método buscarPorCnpj(cnpj). Os dados, porém, vêm de um componente legado que não pode ser alterado e oferece apenas o método consultarPessoaJuridica(documento, formato), com parâmetros e retorno em formatos diferentes. A equipe cria uma classe que implementa ConsultaFornecedor e, internamente, traduz cada chamada para o componente legado. O padrão de projeto aplicado é o",
+      "variantesEnunciado": [
+        "Em um projeto hipotético, o módulo de prestação de contas foi escrito para consumir a interface ServicoCotacao, com o método obterTaxa(moeda). A biblioteca de terceiros contratada, que não pode ser modificada, expõe apenas cotacao(codigoIso, dataReferencia), com retorno em estrutura diferente. Para integrá-las, cria-se uma classe que implementa ServicoCotacao e converte as chamadas para a biblioteca. Considerando que o componente legado corresponde, aqui, à biblioteca de terceiros, o padrão de projeto aplicado é o",
+        "Considere que o sistema de protocolo de um tribunal precisa usar um serviço legado de assinatura, cuja interface é incompatível com a interface Assinador esperada pelo código novo. Sem alterar o legado, a equipe escreve uma classe intermediária que implementa Assinador e repassa as solicitações ao serviço antigo, convertendo parâmetros e resultados. O padrão de projeto aplicado é o"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "Facade, pois a classe criada oferece uma interface unificada e simplificada para um conjunto de interfaces de um subsistema complexo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Facade simplifica o uso de um subsistema com várias classes, oferecendo um ponto de entrada de mais alto nível. No cenário, o problema é a incompatibilidade entre uma interface esperada e outra existente, que é o problema resolvido pelo Adapter."
+        },
+        {
+          "id": "opt-2",
+          "texto": "Proxy, pois a classe criada atua como substituto do componente legado, mantendo a mesma interface dele para controlar o acesso.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Proxy tem a mesma interface do objeto real e controla o acesso a ele (carga tardia, controle de permissão, acesso remoto). No caso, a classe expõe uma interface diferente da do legado e converte as chamadas, o que é adaptação."
+        },
+        {
+          "id": "opt-3",
+          "texto": "Decorator, pois a classe criada acrescenta responsabilidades ao componente legado dinamicamente, preservando a interface original.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Decorator envolve um objeto que tem a mesma interface para acrescentar comportamento, como registro de log ou compressão. Não há acréscimo de responsabilidade no cenário, apenas tradução entre interfaces incompatíveis."
+        },
+        {
+          "id": "opt-4",
+          "texto": "Bridge, pois a classe criada separa uma abstração de sua implementação para que ambas possam variar de forma independente.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O Bridge é decidido no projeto, para que hierarquias de abstração e de implementação evoluam separadamente. O Adapter, ao contrário, costuma ser aplicado depois, para fazer funcionar juntas classes já existentes e incompatíveis, como no caso."
+        },
+        {
+          "id": "opt-5",
+          "texto": "Adapter, pois a classe criada converte a interface do componente legado na interface esperada pelo cliente.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O Adapter, padrão estrutural do GoF, converte a interface de uma classe em outra interface esperada pelos clientes, permitindo que classes incompatíveis trabalhem juntas. A classe criada implementa ConsultaFornecedor (alvo) e delega ao componente legado (adaptado), traduzindo parâmetros e retornos, sem alterar o legado.",
+          "versaoInvertidaFalsa": "Adapter, pois a classe criada oferece uma interface unificada e simplificada para todo o subsistema legado, sem converter a interface de nenhuma classe."
+        }
+      ],
+      "pegadinhaFCC": "A banca explora a confusão entre Adapter, Facade e Proxy. O Adapter converte uma interface incompatível na esperada; o Facade simplifica um subsistema; o Proxy mantém a mesma interface do objeto real.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é a intenção do padrão Adapter?",
+        "resposta": "Converter a interface de uma classe em outra interface esperada pelos clientes, permitindo que classes com interfaces incompatíveis trabalhem juntas. É um padrão estrutural do catálogo GoF, muito usado para integrar componentes legados ou de terceiros."
+      },
+      "conceitosChave": ["GoF: Adapter", "GoF: padrões estruturais"],
+      "fundamentacao": "Gamma, Helm, Johnson & Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software (1994), cap. 4 (padrões estruturais: Adapter, Bridge, Decorator, Facade, Proxy)."
+    },
+    {
+      "id": "eng-sw-006",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Testes de software e automação",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "direta",
+      "enunciadoBase": "A pirâmide de testes, popularizada por Mike Cohn, é usada para orientar a distribuição dos testes automatizados de um sistema. De acordo com esse modelo, é recomendável",
+      "variantesEnunciado": [
+        "Ao planejar a automação de testes de um sistema, uma equipe decide seguir a pirâmide de testes proposta por Mike Cohn. Segundo esse modelo, é recomendável",
+        "Considere que a coordenação de TI de um Tribunal de Contas pretende adotar a pirâmide de testes como referência para a suíte automatizada do sistema de processos eletrônicos. Conforme esse modelo, é recomendável"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "concentrar a maior parte dos testes na interface gráfica, pois são os que melhor representam o uso real, deixando poucos testes de unidade na base.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Essa distribuição é a pirâmide invertida, conhecida como 'casquinha de sorvete', um antipadrão. Testes pela interface são lentos, caros e frágeis; concentrá-los torna a suíte demorada e difícil de manter."
+        },
+        {
+          "id": "opt-2",
+          "texto": "manter muitos testes de unidade, rápidos e baratos, na base, uma quantidade intermediária de testes de serviço ou integração e poucos testes de ponta a ponta no topo.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A pirâmide recomenda uma base larga de testes de unidade, que são rápidos, baratos e dão retorno imediato; uma camada intermediária de testes de serviço ou integração; e poucos testes de ponta a ponta pela interface, que são lentos e frágeis. Quanto mais alto o nível, menos testes.",
+          "versaoInvertidaFalsa": "manter muitos testes de ponta a ponta pela interface na base, por serem rápidos e baratos, uma camada intermediária de integração e poucos testes de unidade no topo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "distribuir a mesma quantidade de testes entre as camadas de unidade, integração e interface, para que nenhum nível fique descoberto.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A pirâmide não propõe distribuição igual: o formato expressa justamente que a quantidade deve diminuir conforme o teste fica mais integrado, lento e caro. A ideia de 'equilíbrio' é a armadilha."
+        },
+        {
+          "id": "opt-4",
+          "texto": "substituir os testes de integração por testes manuais exploratórios, reservando a automação aos testes de interface, que são mais estáveis e baratos de manter ao longo do tempo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Testes exploratórios manuais têm valor, mas não substituem a camada automatizada de integração. Além disso, testes de interface são os menos estáveis e os mais caros de manter, ao contrário do que a alternativa afirma."
+        },
+        {
+          "id": "opt-5",
+          "texto": "priorizar testes de ponta a ponta na base da pirâmide, por serem os mais baratos de manter, e poucos testes de unidade no topo.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A alternativa inverte as camadas. Os testes de ponta a ponta ficam no topo por serem os mais caros e lentos; a base é formada por testes de unidade, mais numerosos e baratos."
+        }
+      ],
+      "pegadinhaFCC": "A banca inverte a pirâmide (o antipadrão 'casquinha de sorvete'), atribuindo aos testes de interface rapidez e baixo custo. Eles são os mais lentos, caros e frágeis, por isso ficam em menor número no topo.",
+      "resumoFlashcard": {
+        "pergunta": "O que recomenda a pirâmide de testes?",
+        "resposta": "Muitos testes de unidade na base (rápidos e baratos), uma camada intermediária de testes de serviço ou integração e poucos testes de ponta a ponta pela interface no topo, que são lentos, caros e frágeis."
+      },
+      "conceitosChave": ["Pirâmide de testes"],
+      "fundamentacao": "Cohn, Succeeding with Agile (2009), seção sobre a pirâmide de automação de testes; Vocke, 'The Practical Test Pyramid' (martinfowler.com, 2018)."
+    },
+    {
+      "id": "eng-sw-007",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Kanban, Lean Software Development e XP",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "assertivas",
+      "enunciadoBase": "A unidade de sustentação de sistemas de um Tribunal de Contas passou a gerir suas demandas com um quadro Kanban, em que cada coluna representa uma etapa do fluxo (A fazer, Em análise, Em desenvolvimento, Em teste, Concluído). A respeito do método Kanban aplicado ao desenvolvimento de software, considere as afirmativas abaixo.",
+      "variantesEnunciado": [
+        "Em um projeto hipotético, a equipe que mantém o portal de serviços de um tribunal substituiu as listas de tarefas por um quadro Kanban com limites por coluna. Sobre o Kanban aplicado ao desenvolvimento e à sustentação de software, considere as afirmativas abaixo.",
+        "Considere que a central de serviços de TI de um órgão de controle externo adotou o Kanban para acompanhar correções e pequenas evoluções dos sistemas. A respeito do método, considere as afirmativas abaixo."
+      ],
+      "assertivas": [
+        {
+          "texto": "Ao limitar o trabalho em progresso (WIP) de cada etapa, a equipe só puxa um novo item quando há capacidade liberada, o que caracteriza um sistema puxado.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O limite de WIP é o mecanismo que transforma o quadro em sistema puxado: um item só avança quando a etapa seguinte tem capacidade."
+        },
+        {
+          "texto": "O Kanban prescreve iterações de duração fixa e os papéis de Product Owner e Scrum Master para a operação do quadro.",
+          "verdadeira": false,
+          "explicacao": "Falsa. O Kanban não prescreve iterações fixas nem papéis; parte do processo existente e o melhora de forma evolutiva. Papéis e Sprints são elementos do Scrum."
+        },
+        {
+          "texto": "Na acepção usual, o lead time é contado desde a entrada do pedido até a entrega, ao passo que o cycle time começa quando o trabalho é efetivamente iniciado; por isso, o lead time tende a ser maior ou igual ao cycle time.",
+          "verdadeira": true,
+          "explicacao": "Verdadeira. O lead time inclui o tempo de espera na fila antes do início do trabalho; o cycle time mede do início à conclusão. Logo, o cycle time está contido no lead time."
+        },
+        {
+          "texto": "Quando os itens começam a ficar parados nas colunas, elevar o limite de WIP é a medida recomendada para reduzir o tempo de ciclo, mantida a mesma vazão.",
+          "verdadeira": false,
+          "explicacao": "Falsa. Pela Lei de Little, com vazão constante, mais WIP significa tempo de ciclo maior. Itens parados indicam gargalo, que se trata limitando o WIP e atacando a causa."
+        }
+      ],
+      "comandoFinal": "Está correto o que se afirma em",
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "I, II e III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A afirmativa II é falsa: o Kanban não prescreve iterações de duração fixa nem papéis como Product Owner e Scrum Master. Esses elementos pertencem ao Scrum; o Kanban começa pelo processo atual."
+        },
+        {
+          "id": "opt-2",
+          "texto": "II e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Reúne justamente as duas afirmativas falsas. A II atribui ao Kanban papéis e iterações do Scrum, e a IV inverte o efeito do limite de WIP sobre o tempo de ciclo."
+        },
+        {
+          "id": "opt-3",
+          "texto": "I e III, apenas.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. A I descreve o sistema puxado criado pelo limite de WIP, e a III distingue corretamente lead time (do pedido à entrega) e cycle time (do início do trabalho à conclusão). A II é falsa porque o Kanban não define papéis nem iterações, e a IV é falsa porque aumentar o WIP alonga o ciclo.",
+          "versaoInvertidaFalsa": "Ao limitar o trabalho em progresso (WIP) de cada etapa, a equipe passa a empurrar novos itens para a etapa seguinte assim que são concluídos, o que caracteriza um sistema empurrado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "III, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A III é verdadeira, mas a I também é: o limite de WIP faz com que novos itens só sejam puxados quando há capacidade disponível, o que define o sistema puxado do Kanban."
+        },
+        {
+          "id": "opt-5",
+          "texto": "I, III e IV, apenas.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. A IV é falsa. Pela Lei de Little (tempo médio de ciclo = WIP médio ÷ vazão média), elevar o WIP sem aumentar a vazão alonga o tempo de ciclo, em vez de reduzi-lo."
+        }
+      ],
+      "pegadinhaFCC": "A banca atribui ao Kanban elementos do Scrum (papéis e iterações fixas) e inverte o efeito do limite de WIP. Pela Lei de Little, com vazão constante, mais WIP significa ciclo mais longo.",
+      "resumoFlashcard": {
+        "pergunta": "Qual é o efeito do limite de WIP no Kanban?",
+        "resposta": "Restringe a quantidade de itens simultâneos em cada etapa, de modo que novo trabalho só é puxado quando há capacidade (sistema puxado). Isso expõe gargalos e, mantida a vazão, reduz o tempo de ciclo."
+      },
+      "conceitosChave": ["Kanban: limite de WIP", "Lead time × cycle time"],
+      "fundamentacao": "Vacanti & Coleman, The Kanban Guide (2020), seções 'Kanban Practices' e 'Flow Metrics'; Anderson, Kanban: Successful Evolutionary Change for Your Technology Business (2010)."
+    },
+    {
+      "id": "eng-sw-008",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Princípios SOLID, DRY, KISS, YAGNI, coesão e acoplamento",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Básico",
+      "formato": "lacunas",
+      "enunciadoBase": "Considere os princípios de projeto de software a seguir. O princípio …… recomenda que cada parte do conhecimento tenha uma representação única, inequívoca e autorizada dentro do sistema; o princípio …… orienta a preferir a solução mais simples capaz de resolver o problema; e o princípio …… desaconselha implementar funcionalidades por antecipação, antes que sejam de fato necessárias. Preenchem, correta e respectivamente, as lacunas:",
+      "variantesEnunciado": [
+        "Na revisão de código de um sistema hipotético, um técnico fez três observações: havia regras de cálculo de prazo repetidas em vários módulos, contrariando o princípio ……; uma solução genérica e cheia de camadas fora criada para um problema trivial, contrariando o princípio ……; e havia parâmetros de configuração para cenários que ninguém solicitara, contrariando o princípio ……. Preenchem, correta e respectivamente, as lacunas:",
+        "Ao orientar novos desenvolvedores da equipe de TI de um Tribunal de Contas, um técnico explicou que o princípio …… combate a duplicação de conhecimento no código; que o princípio …… recomenda manter as soluções tão simples quanto possível; e que o princípio …… sugere não construir hoje o que talvez seja necessário apenas no futuro. Preenchem, correta e respectivamente, as lacunas:"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "DRY − KISS − YAGNI",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. DRY (Don't Repeat Yourself), formulado por Hunt e Thomas, pede que cada conhecimento tenha representação única e autorizada. KISS (Keep It Simple, Stupid) recomenda a solução mais simples que funcione. YAGNI (You Aren't Gonna Need It), oriundo do XP, desaconselha construir funcionalidades por antecipação.",
+          "versaoInvertidaFalsa": "KISS − DRY − YAGNI, pois é o KISS que combate a duplicação de conhecimento."
+        },
+        {
+          "id": "opt-2",
+          "texto": "KISS − DRY − YAGNI",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois primeiros acrônimos estão trocados. A representação única do conhecimento, que combate a duplicação, é o DRY; a preferência pela solução mais simples é o KISS."
+        },
+        {
+          "id": "opt-3",
+          "texto": "DRY − YAGNI − KISS",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Os dois últimos estão invertidos. YAGNI trata de não implementar o que ainda não é necessário; KISS trata de manter a solução simples. São ideias próximas, mas não equivalentes."
+        },
+        {
+          "id": "opt-4",
+          "texto": "YAGNI − KISS − DRY",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O primeiro e o terceiro estão trocados. Evitar duplicação de conhecimento é o DRY, e não antecipar funcionalidades é o YAGNI. Só o KISS ocupa a posição certa."
+        },
+        {
+          "id": "opt-5",
+          "texto": "SRP − KISS − YAGNI",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O SRP (Princípio da Responsabilidade Única, do SOLID) diz que um módulo deve ter um único motivo para mudar; não trata da representação única do conhecimento, que é o objeto do DRY."
+        }
+      ],
+      "pegadinhaFCC": "A banca troca a ordem dos acrônimos e insere o SRP, vizinho conceitual. DRY trata de duplicação de conhecimento; KISS, de simplicidade; YAGNI, de não antecipar funcionalidades.",
+      "resumoFlashcard": {
+        "pergunta": "O que dizem os princípios DRY, KISS e YAGNI?",
+        "resposta": "DRY: cada conhecimento deve ter representação única e autorizada no sistema, evitando duplicação. KISS: preferir a solução mais simples que funcione. YAGNI: não implementar algo antes de ser realmente necessário."
+      },
+      "conceitosChave": ["DRY, KISS e YAGNI"],
+      "fundamentacao": "Hunt & Thomas, The Pragmatic Programmer (1999; ed. de 20º aniversário, 2019), tópico 'DRY: os males da duplicação'; Beck, Extreme Programming Explained (design simples); Fowler, 'Yagni' (martinfowler.com, 2015)."
+    },
+    {
+      "id": "eng-sw-009",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Atributos de qualidade de software",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "O contrato de sustentação do sistema de processos eletrônicos de um Tribunal de Contas fixa disponibilidade mensal mínima de 99,9%, apurada sobre um mês de 30 dias. Na primeira quinzena de determinado mês, ocorreram duas interrupções não programadas de 15 minutos cada. Considerando apenas esses dados, o tempo adicional de indisponibilidade que ainda pode ocorrer no mês sem violar o nível de serviço é de",
+      "variantesEnunciado": [
+        "Considere um acordo de nível de serviço que exige 99,9% de disponibilidade mensal para o portal de um tribunal, calculada sobre meses de 30 dias. Até o dia 12, o portal acumulou 30 minutos de indisponibilidade não planejada. O tempo de indisponibilidade que ainda pode ocorrer no restante do mês, sem descumprir o acordo, é de",
+        "Em uma auditoria de contrato de TIC, um técnico verifica que o serviço de hospedagem deve manter disponibilidade de 99,9% ao mês, considerado o mês de 30 dias. Os registros mostram três quedas de 10 minutos cada no mês corrente. Para que o nível contratado não seja violado, a indisponibilidade adicional máxima no mês é de"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "43 minutos e 12 segundos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. 43 min 12 s (43,2 min) é o limite total do mês: 0,1% de 43.200 minutos. A alternativa esquece de descontar os 30 minutos de indisponibilidade já ocorridos."
+        },
+        {
+          "id": "opt-2",
+          "texto": "6 horas e 42 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Esse valor resulta de usar 99% em vez de 99,9%: 1% de 43.200 min = 432 min; 432 − 30 = 402 min = 6 h 42 min. Cada 'nove' a mais divide por dez a indisponibilidade admitida."
+        },
+        {
+          "id": "opt-3",
+          "texto": "nenhum tempo adicional, pois o limite mensal, de cerca de 4 minutos, já foi ultrapassado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. Cerca de 4 minutos (4,32 min) seria o limite mensal de 99,99%, não de 99,9%. Com três noves, o mês de 30 dias admite 43,2 minutos de indisponibilidade, e o nível de serviço ainda não foi violado."
+        },
+        {
+          "id": "opt-4",
+          "texto": "13 minutos e 12 segundos.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. Mês de 30 dias: 30 × 24 × 60 = 43.200 minutos. Indisponibilidade admitida: 0,1% × 43.200 = 43,2 min. Já foram consumidos 2 × 15 = 30 min. Restam 43,2 − 30 = 13,2 min, ou seja, 13 minutos e 12 segundos (0,2 min × 60 = 12 s).",
+          "versaoInvertidaFalsa": "43 minutos e 12 segundos, pois o limite de 0,1% do mês de 30 dias não é reduzido pelas interrupções já ocorridas no próprio mês."
+        },
+        {
+          "id": "opt-5",
+          "texto": "cerca de 8 horas e 15 minutos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O valor vem da base anual: 0,1% de 525.600 min (365 dias) = 525,6 min, e 525,6 − 30 = 495,6 min ≈ 8 h 15 min. O contrato apura a disponibilidade por mês de 30 dias, e não por ano."
+        }
+      ],
+      "pegadinhaFCC": "A banca oferece o limite mensal total, sem descontar o que já foi consumido, e valores obtidos com outra quantidade de 'noves' ou com a base anual. Calcule 0,1% de 43.200 minutos e subtraia os 30 minutos já gastos.",
+      "resumoFlashcard": {
+        "pergunta": "Quanto tempo de indisponibilidade admite um nível de serviço de 99,9% em um mês de 30 dias?",
+        "resposta": "43,2 minutos (0,1% de 43.200 min), isto é, 43 min 12 s. Em um ano de 365 dias, o mesmo percentual admite cerca de 8,76 horas; com 99,99%, o limite mensal cai para cerca de 4,3 minutos."
+      },
+      "conceitosChave": ["Disponibilidade: cálculo de noves"],
+      "fundamentacao": "Sommerville, Engenharia de Software, 10ª ed., caps. 10 e 11 (disponibilidade como probabilidade de o sistema estar operacional; métricas de disponibilidade); ISO/IEC 25010:2023, característica confiabilidade, subcaracterística disponibilidade."
+    },
+    {
+      "id": "eng-sw-010",
+      "materiaSlug": "engenharia-software",
+      "subtopico": "Modelagem com UML e BPMN",
+      "origem": "Inédita padrão FCC",
+      "nivel": "Intermediário",
+      "formato": "caso-pratico",
+      "enunciadoBase": "No mapeamento em BPMN 2.0 do processo de análise de relatórios de auditoria de um Tribunal de Contas, após a tarefa 'Receber relatório', o fluxo deve seguir para 'Emitir parecer jurídico' quando o valor envolvido superar determinado limite e para 'Quantificar dano' quando houver indício de prejuízo ao erário. As duas condições podem ser verdadeiras ao mesmo tempo, e ao menos uma delas sempre ocorre. O processo só prossegue para 'Elaborar relatório final' depois de concluídas as tarefas efetivamente iniciadas. Para a divergência e a convergência desses caminhos, deve-se usar o gateway",
+      "variantesEnunciado": [
+        "Em um processo hipotético de tramitação de denúncias modelado em BPMN 2.0, depois da triagem a denúncia pode exigir 'Diligência ao órgão', 'Consulta à unidade de licitações' ou ambas, conforme condições avaliadas no caso concreto, havendo sempre ao menos uma delas. A etapa seguinte só começa quando terminarem os caminhos que foram de fato ativados. Para a divergência e a convergência desses caminhos, deve-se usar o gateway",
+        "Considere o processo de concessão de acesso a sistemas de um tribunal, modelado em BPMN 2.0: conforme o perfil solicitado, o pedido segue para 'Aprovação da chefia', para 'Aprovação da segurança da informação' ou para as duas, e pelo menos uma aprovação é sempre exigida. A liberação só ocorre depois de concluídas as aprovações efetivamente acionadas. Para a divergência e a convergência desses caminhos, deve-se usar o gateway"
+      ],
+      "alternativas": [
+        {
+          "id": "opt-1",
+          "texto": "exclusivo, que ativa exatamente um dos caminhos de saída e, na convergência, sincroniza todos os fluxos de entrada antes de prosseguir.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gateway exclusivo (XOR) ativa um único caminho, o que não atende ao caso em que as duas tarefas podem ocorrer. Além disso, na convergência ele não sincroniza: cada fluxo que chega segue adiante sem esperar os demais."
+        },
+        {
+          "id": "opt-2",
+          "texto": "paralelo, que ativa todos os caminhos de saída independentemente de condições e, na convergência, aguarda a chegada de todos os fluxos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gateway paralelo (AND) dispara sempre todos os caminhos, sem avaliar condições. No cenário, cada tarefa depende de uma condição própria, e é possível que só uma delas ocorra."
+        },
+        {
+          "id": "opt-3",
+          "texto": "baseado em eventos, em que a escolha do caminho depende de qual evento ocorre primeiro, como o recebimento de uma mensagem externa ou o término de um prazo previamente fixado.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gateway baseado em eventos escolhe um caminho conforme o primeiro evento que acontecer (mensagem, temporizador). No caso, a decisão depende de condições sobre os dados do relatório, e mais de um caminho pode ser seguido."
+        },
+        {
+          "id": "opt-4",
+          "texto": "complexo, que deve ser usado sempre que houver mais de duas saídas condicionais, por ser o único que admite condições em todos os fluxos.",
+          "correta": false,
+          "explicacaoDetalhada": "INCORRETA. O gateway complexo serve a regras de sincronização que os demais não expressam, como 'prosseguir quando 2 de 3 chegarem'. Os gateways exclusivo e inclusivo também admitem condições em todas as saídas; a regra 'sempre que houver mais de duas saídas' é inventada."
+        },
+        {
+          "id": "opt-5",
+          "texto": "inclusivo, que ativa um ou mais caminhos cujas condições sejam verdadeiras e, na convergência, aguarda apenas os fluxos que foram efetivamente ativados.",
+          "correta": true,
+          "explicacaoDetalhada": "CORRETA. O gateway inclusivo (OR) avalia a condição de cada saída e ativa todas as que forem verdadeiras, podendo ser uma ou mais. Na convergência, sincroniza apenas os caminhos que foram de fato ativados, sem esperar os que não foram. É o comportamento descrito: parecer, quantificação de dano ou ambos.",
+          "versaoInvertidaFalsa": "inclusivo, que ativa exatamente um dos caminhos cujas condições sejam verdadeiras e, na convergência, aguarda todos os fluxos de entrada, ativados ou não."
+        }
+      ],
+      "pegadinhaFCC": "A banca descreve o comportamento 'um ou mais caminhos' sem nomear o gateway. O exclusivo escolhe só um, o paralelo ativa todos sem condição, e o inclusivo ativa os caminhos com condição verdadeira e sincroniza apenas os ativados.",
+      "resumoFlashcard": {
+        "pergunta": "Qual a diferença entre os gateways exclusivo, inclusivo e paralelo na BPMN 2.0?",
+        "resposta": "Exclusivo (XOR): exatamente um caminho, conforme a condição. Inclusivo (OR): um ou mais caminhos com condição verdadeira, e a convergência espera só os ativados. Paralelo (AND): todos os caminhos, sem condição, e a convergência espera todos."
+      },
+      "conceitosChave": ["BPMN: gateways"],
+      "fundamentacao": "OMG, Business Process Model and Notation (BPMN) 2.0.2 (2013), equivalente à ISO/IEC 19510:2013, cap. 10 (Process), seção 'Gateways' (Exclusive, Inclusive, Parallel, Event-Based e Complex)."
+    }
+  ]
+}
