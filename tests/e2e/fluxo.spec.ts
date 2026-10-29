@@ -1,6 +1,6 @@
 /// <reference lib="dom" />
 import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { expect, test, type Page } from "@playwright/test";
 
 /** Coleta erros de página e de console para a asserção final de cada teste. */
@@ -197,7 +197,7 @@ test("mobile 390 px: sem rolagem horizontal nas telas principais", async ({ page
   }
 });
 
-const CASO_01 = join(__dirname, "../../src/data/casos/caso-01.json");
+const CASO_01 = fileURLToPath(new URL("../../src/data/casos/caso-01.json", import.meta.url));
 
 test("laboratório discursivo: linhas FCC, excedente desconsiderado e espelho com nota", async ({ page }) => {
   test.skip(!existsSync(CASO_01), "casos discursivos ainda não gerados");
