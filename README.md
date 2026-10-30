@@ -24,6 +24,14 @@ npm run build && npm run preview
 
 Esse é o build de produção, servido em http://localhost:4173.
 
+### Deploy (Vercel)
+
+O app é estático: a Vercel roda `npm run build` e publica `dist/`. O [`vercel.json`](vercel.json) redireciona qualquer rota para o `index.html`, para que recarregar `/materias` não dê 404, e faz cache longo dos arquivos de `/assets/`. Não há backend, e a chave da API nunca entra no deploy.
+
+- **O progresso fica no navegador, separado por domínio.** Use sempre o domínio de produção. Cada URL de preview é outra origem e começa com o banco vazio.
+- **Para trocar de aparelho**, use Exportar e Importar JSON na tela **Banco e backup**.
+- **Limpar os dados do navegador apaga o progresso.** Faça um backup em JSON toda semana.
+
 ## O que tem
 
 | Tela | Para quê |
